@@ -10,10 +10,31 @@
     transition-timing-function: ease-out;
     animation: cursorAnim .5s infinite alternate;
     pointer-events: none;
-  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  &::before {
+    content: "";
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    border: 1px solid $hopr_bright_blue;
+    border-radius: 50%;
+    opacity: .5;
+    animation: cursorAnim 3s infinite alternate;
+}
+}
+@keyframes cursorAnim {
+    from {
+        transform: scale(1.5);
+    }
+    to {
+        transform: scale(1);
+    }
 }
 
-@keyframes cursorAnim3 {
+
+@keyframes cursorAnimClick{
     0% {
         transform: scale(1);
     }
@@ -28,6 +49,6 @@
 }
 
 .expand {
-    animation: cursorAnim3 .5s forwards;
+    animation: cursorAnimClick .5s forwards;
     border: 1px solid $hopr_bright_blue;
 }

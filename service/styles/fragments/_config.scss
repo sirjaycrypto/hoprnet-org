@@ -1,5 +1,67 @@
 *,
 body {
-  
   font-family: "Source Code Pro", monospace;
+}
+
+section{
+  overflow: hidden;
+}
+
+.aux-container {
+  width: 70%;
+  margin: auto;
+  padding: 1em 0 0.5em 0;
+  @media (max-width: 50em) {
+    width: 85%;
+  }
+}
+
+.link-out {
+  font-size: 0.8em;
+  line-height: normal;
+  letter-spacing: 0.116667px;
+  text-decoration-line: underline;
+  color: #0000b4 !important;
+}
+
+.container-center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-bottom {
+  position: absolute;
+  bottom: 5%;
+}
+
+.aux-img-home {
+  height: auto;
+  overflow: hidden;
+  .aux-img-cover {
+    object-fit: cover;
+    width: 80%;
+    margin: auto;
+  }
+}
+
+.global-home-aux {
+  @media (max-width: 50em) {
+    font-size: calc(1em / 1.2);
+  }
+}
+
+.aux-img-home {
+  height: auto;
+  overflow: hidden;
+  div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  img {
+    object-fit: cover;
+    width: 80%;
+    margin: auto;
+  }
 }

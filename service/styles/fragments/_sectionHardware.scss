@@ -1,0 +1,30 @@
+.section-hopr-github {
+  background: $hopr_bright_blue;
+  h2,
+  p {
+    color: #fff;
+  }
+  h2 {
+    margin: 0;
+    padding: 0;
+  }
+  .flex-line-row {
+    display: flex;
+    align-items: center;
+    & > div {
+      width: 50%;
+      overflow: hidden;
+    }
+    img {
+      margin: auto;
+      object-fit: cover;
+      width: 100%;
+    }
+    @media (max-width: 50em) {
+      flex-direction: column;
+      & > div {
+        width: 100%;
+      }
+    }
+  }
+}

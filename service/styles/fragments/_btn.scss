@@ -1,12 +1,32 @@
-.btn-global-style {
-  background: linear-gradient(90deg, $hopr_dark_blue, $hopr_bright_blue);
-  width: fit-content;
-  padding: 0.5em 1em;
-  border-radius: 4px;
-  span {
-    color: #fff;
-    font-weight: 600;
-    font-size: 1em;
-    letter-spacing: 0.3px;
+.type-btn {
+    background: linear-gradient(90deg, #0000db 0%, #292941 100%);
+    transition: all 600ms ease-in-out;
+    padding: 0.5em 1em;
+    border-radius: 7px;
+    width: fit-content;
+    span {
+      font-weight: 600;
+      font-size: 1.34em;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      letter-spacing: 0.2975px;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    @media (max-width: 50em) {
+      padding: 0.5em 0.6em;
+      span {
+        font-size: 1em;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+      transition: all 600ms ease-in-out;
+      background: linear-gradient(90deg, #0000db 100%, #292941 0%);
+      span {
+        color: #ffffa0;
+      }
+    }
   }
-}
