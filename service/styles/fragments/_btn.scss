@@ -1,0 +1,12 @@
+.btn-global-style {
+  background: linear-gradient(90deg, $hopr_dark_blue, $hopr_bright_blue);
+  width: fit-content;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  span {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1em;
+    letter-spacing: 0.3px;
+  }
+}
