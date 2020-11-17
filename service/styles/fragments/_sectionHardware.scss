@@ -1,5 +1,7 @@
 .section-hopr-github {
   background: $hopr_bright_blue;
+  padding-top: 1em;
+  padding-bottom: 2em;
   h2,
   p {
     color: #fff;
@@ -7,6 +9,10 @@
   h2 {
     margin: 0;
     padding: 0;
+  }
+  p{
+    font-size: 1.3em;
+    line-height: 2em;
   }
   .flex-line-row {
     display: flex;

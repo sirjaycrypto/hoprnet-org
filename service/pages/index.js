@@ -14,7 +14,7 @@ export default function Home() {
       <Hero />
       <HomeMatter />
       <section className="aux-img-home">
-        <div>
+        <div className="special-home-img">
           <img src="/assets/images/aux-visual.svg" alt="The HOPR-Token" />
         </div>
       </section>
