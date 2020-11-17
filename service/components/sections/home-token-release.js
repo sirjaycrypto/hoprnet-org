@@ -26,10 +26,8 @@ export default function HomeTokenRelease() {
                   <li>Network: Ethereum</li>
                   <li>Standards: ERC20, ERC777</li>
                   <li>Total supply: X HOPR</li>
-                  <li>
-                    Initial circulating supply: X HOPR• Token price: X USD /
-                    HOPR
-                  </li>
+                  <li>Initial circulating supply: X HOPR</li>
+                  <li>Token price: X USD / HOPR</li>
                 </ul>
               </div>
             </div>
