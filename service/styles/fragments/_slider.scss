@@ -9,6 +9,12 @@
   justify-content: center;
   .main-slide {
     width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
   }
   p {
     padding: 0;
@@ -21,42 +27,20 @@
     letter-spacing: 0.36px;
     color: $hopr_grey;
     margin-bottom: 0.3em;
+    @media (max-width: 50em) {
+      font-size: 1em;
+      font-weight: 400;
+    }
   }
   .text-label-data {
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 1.2em;
     line-height: normal;
     letter-spacing: 0.208333px;
     color: $hopr_grey;
-  }
-  .bullets {
-    display: flex;
-    justify-content: center;
-    span {
-      height: 20px;
-      width: 20px;
-      margin: 0 3px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      border: 2px solid $hopr_bright_blue;
-      border-radius: 100%;
+    @media (max-width: 50em) {
+      font-size: 1em;
     }
-
-    span:hover {
-      background-color: $hopr_steel_blue;
-    }
-    span[data-quote="0"] {
-      background-color:$hopr_bright_blue;
-    }
-    // span[data-quote="1"] {
-    //   background-color:$hopr_grey;
-    // }
-    // span[data-quote="2"] {
-    //   background-color:$hopr_steel_blue;
-    // }
-    
   }
 }
