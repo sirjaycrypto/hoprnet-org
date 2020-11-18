@@ -14,6 +14,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 3em auto;
+  &:first-child,
+  &:last-child {
+    margin: 0em auto;
+  }
   & > div {
     width: 50%;
   }
@@ -32,8 +37,9 @@
   }
   h3 {
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.8em;
     letter-spacing: 0.25px;
+    line-height: 2em;
     @media (max-width: 50em) {
       padding-bottom: 0.3em;
     }

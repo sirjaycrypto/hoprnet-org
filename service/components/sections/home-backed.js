@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 export default function HomeBacked() {
   return (
     <>
-      <section className="section-backed">
+      <section className="section-backed padding-section-aux">
         <div className="aux-container">
           <h2>BACKED BY</h2>
           <div className="item-back-container">

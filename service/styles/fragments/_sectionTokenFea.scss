@@ -15,11 +15,11 @@
     flex-wrap: wrap;
     .item {
       width: 33%;
-      padding:0.5em;
+      padding: 0.5em;
       box-sizing: border-box;
       @media (max-width: 50em) {
         width: 100%;
-        margin: 3em 0;
+        margin: 2em 0;
         align-items: center;
         justify-content: center;
         flex-direction: column;
@@ -29,6 +29,9 @@
       position: relative;
       width: fit-content;
       margin-bottom: 1em;
+      @media (max-width: 50em) {
+        margin:1em  auto;
+      }
       &::before {
         content: "";
         position: absolute;
@@ -50,6 +53,9 @@
         padding: 0;
         margin: 0;
         color: $hopr_grey;
+        @media (max-width: 50em) {
+          text-align: center;
+        }
       }
       h4 {
         font-weight: bold;
