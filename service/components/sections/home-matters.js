@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 export default function HomeMatter() {
   return (
     <>
-      <section className="section-why-matters">
+      <section className="section-why-matters padding-section-aux">
         <div className="aux-container">
           <h2>WHY IT MATTERS…</h2>
 

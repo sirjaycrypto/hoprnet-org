@@ -29,7 +29,7 @@ export default function HomeHomeItWork() {
 
   return (
     <>
-      <section className="section-how-work">
+      <section className="section-how-work padding-section-aux">
         <div className="aux-container">
           <div className="container-center-center">
             <h2>HOW DOES IT WORK?</h2>
@@ -41,7 +41,7 @@ export default function HomeHomeItWork() {
               const { img, title, paragraph, mirrorBox } = e
               return    ( 
               <div key={index} className={'info-box-line ' + (mirrorBox ? 'flex-line' : '')}>
-                <div className="info-cont">
+                <div className="info-cont aux-padding-box-read">
                   <h3>{title}</h3>
                   <p>{paragraph}</p>
                 </div>

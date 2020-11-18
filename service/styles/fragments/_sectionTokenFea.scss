@@ -14,7 +14,9 @@
     justify-content: center;
     flex-wrap: wrap;
     .item {
-      width: 30%;
+      width: 33%;
+      padding:0.5em;
+      box-sizing: border-box;
       @media (max-width: 50em) {
         width: 100%;
         margin: 3em 0;

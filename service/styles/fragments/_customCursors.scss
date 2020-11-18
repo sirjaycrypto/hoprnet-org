@@ -1,17 +1,18 @@
-
 .cursor {
-    width: 34px;
-    height: 34px;
-    background:$hopr_yellow ;
-   
-    border-radius: 50%;
-    position: absolute;
-    transition-duration: 200ms;
-    transition-timing-function: ease-out;
-    pointer-events: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 34px;
+  height: 34px;
+  background: $hopr_yellow;
+  border-radius: 50%;
+  position: absolute;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 50em) {
+    display: none;
+  }
   &::before {
     content: "";
     width: 34px;
@@ -19,35 +20,34 @@
     position: absolute;
     border: 0.5px solid $hopr_bright_blue;
     border-radius: 50%;
-    opacity: .5;
+    opacity: 0.5;
     animation: cursorAnim 1s infinite alternate;
-}
+  }
 }
 @keyframes cursorAnim {
-    from {
-        transform: scale(1.5);
-    }
-    to {
-        transform: scale(1);
-    }
+  from {
+    transform: scale(1.5);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
-
-@keyframes cursorAnimClick{
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.5);
-        filter: invert(1);
-    }
-    100% {
-        transform: scale(1);
-        opacity: 0;
-    }
+@keyframes cursorAnimClick {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1);
+    filter: invert(1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
 }
 
 .expand {
-    animation: cursorAnimClick .5s forwards;
-    border: 0.5px solid $hopr_bright_blue;
+  animation: cursorAnimClick 0.5s forwards;
+  border: 0.5px solid $hopr_bright_blue;
 }
