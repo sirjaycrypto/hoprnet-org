@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 export default function HomeTokenRelease() {
   return (
     <>
-      <section className="section-token-release padding-section-aux">
+      <section className="section-token-release ">
         <div className="aux-container">
           <div>
             <h2>TOKEN RELEASE</h2>

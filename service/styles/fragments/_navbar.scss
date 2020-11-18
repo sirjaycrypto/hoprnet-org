@@ -3,17 +3,25 @@ nav {
   align-items: center;
   justify-content: center;
   width: 100%;
-  background: rgba(255, 255, 255, 0.97);
+  background: #fff;
   top: 0;
-  z-index: 3;
+  position: absolute;
+  z-index: 6;
   transition: all 350ms ease-in-out;
+  &.add-shadow{
+    background: rgba(255, 255, 255, 0.97);
+  }
   &.add-scroll-menu {
     position: fixed;
     box-shadow: $shadow;
     transition: all 350ms ease-in-out;
+    background: rgba(255, 255, 255, 0.97);
   }
   .logo-nav {
     width: 114px;
+    @media (max-width: 50em) {
+      width: 89px;
+    }
   }
   & > div {
     display: flex;
@@ -44,9 +52,13 @@ nav {
 }
 
 .icon-menu {
+  display: none;
+  @media (max-width: 50em) {
+    display: block;
+  }
   &::before {
     content: "";
-    background-color: #ffffff;
+
     width: 53px;
     height: 38px;
     position: absolute;
@@ -122,6 +134,50 @@ nav {
     span:nth-child(6) {
       left: calc(35% - 5px);
       top: 18px;
+    }
+  }
+}
+
+.menu-mobile {
+  display: none;
+  padding-top: 13vh;
+  /* align-items: center;*/
+  justify-content: center;
+  background: rgba($hopr_white, 0.98);
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  z-index: 4;
+  transform: translateY(-100%);
+  transition: all 350ms ease-in-out;
+  &.open {
+    transition: all 350ms ease-in-out;
+    transform: translateY(0%);
+  }
+  @media (max-width: 50em) {
+    display: flex;
+  }
+  .menu-desktop {
+    display: flex;
+    flex-direction: column;
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      margin-bottom: 1em;
+      font-size: 2em;
+      letter-spacing: 0.125px;
+      font-weight: 400;
+      color: $hopr_grey;
+      transition: all 350ms ease-in-out;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:hover {
+        transition: all 350ms ease-in-out;
+        color: $hopr_bright_blue;
+      }
     }
   }
 }

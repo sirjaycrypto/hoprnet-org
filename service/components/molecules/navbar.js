@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+import MenuMobile from "./menu-mobile";
 import Link from "next/link";
+import ItemsMenu from "../atoms/items-menu";
 
 export default function Navbar() {
   const [youDown, setYouDown] = useState(false);
-  const [activaMenu, setactivaMenu] = useState(false)
+  const [activaMenu, setActivaMenu] = useState(false);
 
   useEffect(() => {
     window.onscroll = function () {
@@ -11,22 +13,27 @@ export default function Navbar() {
         setYouDown(false);
       } else {
         setYouDown(true);
+        setActivaMenu(false)
       }
     };
   }, []);
   return (
-    <nav className={youDown ? "add-scroll-menu" : ""}>
-      <div className="aux-container">
-        <div>
-          <Link href="/">
-            <img
-              className="logo-nav"
-              src="/assets/brand/logo.svg"
-              alt="hopr logo"
-            />
-          </Link>
-        </div>
-        <div className={'icon-menu ' + (activaMenu ? 'open' : '')} onClick={() => setactivaMenu(!activaMenu)}>
+    <>
+      <nav className={youDown ? "add-scroll-menu " : ""}>
+        <div className={"aux-container " + (activaMenu ? "add-shadow" : "")} >
+          <div>
+            <Link href="/">
+              <img
+                className="logo-nav"
+                src="/assets/brand/logo.svg"
+                alt="hopr logo"
+              />
+            </Link>
+          </div>
+          <div
+            className={"icon-menu " + (activaMenu ? "open" : "")}
+            onClick={() => setActivaMenu(!activaMenu)}
+          >
             <span></span>
             <span></span>
             <span></span>
@@ -34,14 +41,13 @@ export default function Navbar() {
             <span></span>
             <span></span>
           </div>
-        <div className="menu-desktop">
-          <Link href="/about-us">About us</Link>
-          <Link href="/technology">Technology</Link>
-          <Link href="/token">Token</Link>
-          <Link href="/join-testnet">Join testnet</Link>
-          <Link href="/blog">Blog</Link>
+
+          <div className="menu-desktop">
+           <ItemsMenu/>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+      <MenuMobile activaMenu={activaMenu}/>
+    </>
   );
 }
