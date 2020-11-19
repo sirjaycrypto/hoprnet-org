@@ -11,7 +11,7 @@ export default function Index() {
           <h1>Join The HOPR Community</h1>
         </div>
       </HeroInternal>
-      <section className="continue-hero-internal padding-section-aux">
+      <section className="continue-hero-internal padding-section-aux invert-color ">
         <div className="container">
           <div>
             <h2>Governance</h2>

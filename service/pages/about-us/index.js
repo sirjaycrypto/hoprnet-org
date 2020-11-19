@@ -40,7 +40,7 @@ export default function Index() {
           </p>
         </div>
       </HeroInternal>
-      <section className="continue-hero-internal padding-section-aux">
+      <section className="continue-hero-internal padding-section-aux invert-color ">
         <div className="container">
           <div>
             <h2>Governance</h2>

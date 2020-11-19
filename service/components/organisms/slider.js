@@ -40,7 +40,7 @@ export default function Slide() {
     }, 3000);
   }, []);
   return (
-    <div className="slider ">
+    <div className="slider invert-color ">
       <div className="main-slide container">
         <div>
           <p className="text-info">«{current.paragraph}»</p>

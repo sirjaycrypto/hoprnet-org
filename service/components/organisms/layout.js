@@ -4,13 +4,11 @@ import Navbar from "../molecules/navbar";
 import Footer from "../molecules/footer";
 
 export default function Layout({ children }) {
-    
   return (
-    <>
-      <Cursor />
+    <div className="cursor">
       <Navbar />
       {children}
       <Footer />
-    </>
+    </div>
   );
 }

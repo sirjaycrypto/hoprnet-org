@@ -28,7 +28,7 @@ export default function Index() {
           <p>Your data, your decision.</p>
         </div>
       </HeroInternal>
-      <section className="continue-hero-internal padding-section-aux">
+      <section className="continue-hero-internal padding-section-aux invert-color ">
         <div className="container">
           <div>
             <h2>How? The HOPR Protocol</h2>

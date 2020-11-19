@@ -41,7 +41,7 @@ export default function HomeFurther() {
 
   return (
     <>
-      <section className="section-further padding-section-aux">
+      <section className="section-further padding-section-aux invert-color ">
         <div className="container">
           <h2>FURTHER READING</h2>
           <div className="list-top">
