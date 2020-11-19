@@ -1,18 +1,28 @@
 .section-why-matters {
-    background: $hopr_yellow;
-    h2 {
-      font-weight: normal;
-      font-size: 2em;
-      line-height: normal;
-      text-align: center;
-      letter-spacing: 0.5px;
-      color: $hopr_grey;
-    }
-    p {
-      font-size: 1.3em;
-      line-height: 2em;
+  background: $hopr_yellow;
+  h2 {
+    font-weight: normal;
+    font-size: 2em;
+    line-height: normal;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: $hopr_grey;
+  }
+  p {
+    font-size: 1.3em;
+    line-height: 2em;
 
-      letter-spacing: 0.208333px;
-      color: $hopr_grey;
+    letter-spacing: 0.208333px;
+    color: $hopr_grey;
+  }
+
+  .container-video {
+    position: relative;
+    width: 50%;
+    margin: auto;
+    video {
+      width: 100%;
+      height: 100%;
     }
   }
+}
