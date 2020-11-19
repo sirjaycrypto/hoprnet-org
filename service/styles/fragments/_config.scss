@@ -1,20 +1,10 @@
 *,
 body {
-  font-family: "Source Code Pro", monospace;
+  font-family: 'Source Code Pro', monospace;
 }
 
 section{
   overflow: hidden;
-}
-
-.aux-container {
-  width: 80%;
-  margin: auto;
-  padding: 1em 0 0.5em 0;
-  box-sizing: border-box;
-  @media (max-width: 50em) {
-    width: 85%;
-  }
 }
 
 .link-out {

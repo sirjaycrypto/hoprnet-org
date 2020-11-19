@@ -30,7 +30,7 @@ export default function HomeHomeItWork() {
   return (
     <>
       <section className="section-how-work padding-section-aux">
-        <div className="aux-container">
+        <div className="container">
           <div className="container-center-center">
             <h2>HOW DOES IT WORK?</h2>
             

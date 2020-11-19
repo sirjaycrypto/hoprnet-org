@@ -35,7 +35,7 @@ const dataInfo = [
 export default function Footer() {
   return (
     <footer>
-      <div className="aux-container">
+      <div className="container padding-section-aux">
         <div className="first-line-footer">
           <div className="footer-icon">
             <img

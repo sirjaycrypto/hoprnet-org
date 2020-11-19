@@ -4,7 +4,7 @@ export default function HomeBacked() {
   return (
     <>
       <section className="section-backed padding-section-aux">
-        <div className="aux-container">
+        <div className="container">
           <h2>BACKED BY</h2>
           <div className="item-back-container">
             <div className="item-logo-element">

@@ -4,7 +4,7 @@ export default function HomeTokenRelease() {
   return (
     <>
       <section className="section-token-release ">
-        <div className="aux-container">
+        <div className="container">
           <div>
             <h2>TOKEN RELEASE</h2>
             <p>

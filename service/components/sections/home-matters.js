@@ -4,7 +4,7 @@ export default function HomeMatter() {
   return (
     <>
       <section className="section-why-matters padding-section-aux">
-        <div className="aux-container">
+        <div className="container">
           <h2>WHY IT MATTERS…</h2>
 
           <div>

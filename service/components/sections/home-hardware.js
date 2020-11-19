@@ -5,7 +5,7 @@ export default function HomeHardware() {
   return (
     <>
       <section className="section-hopr-github padding-section-aux">
-        <div className="aux-container">
+        <div className="container">
           <div className="flex-line-row">
             <div className="aux-padding-box-read">
               <h2>HOPR-NODE ON GITHUB</h2>

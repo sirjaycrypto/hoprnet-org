@@ -6,7 +6,6 @@
     justify-content: center;
     position: relative;
     overflow: hidden;
-    display: flex;
     flex-direction: column;
   }
   
@@ -28,7 +27,6 @@
   .section-hero {
     h1,
     h4 {
-      font-family: Source Code Pro;
       line-height: normal;
       text-transform: uppercase;
       color: #ffffff;

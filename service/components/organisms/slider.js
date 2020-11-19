@@ -40,8 +40,8 @@ export default function Slide() {
     }, 3000);
   }, []);
   return (
-    <div className="slider">
-      <div className="main-slide">
+    <div className="slider ">
+      <div className="main-slide container">
         <div>
           <p className="text-info">«{current.paragraph}»</p>
           <p className="text-label-data">{current.title}</p>

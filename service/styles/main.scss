@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;700&display=swap');
 @import "fragments/_normalize.scss";
 @import "fragments/_toolkit.scss";
 @import "fragments/_config.scss";
+@import "fragments/_breakingPoints.scss";
+@import "fragments/_container.scss";
 @import "fragments/_btn.scss";
 @import "fragments/_navbar.scss";
 @import "fragments/_hero.scss";

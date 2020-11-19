@@ -1,0 +1,43 @@
+$container--padding__mobile: 16px; // container, left and right padding (mobile)
+$container--padding__desktop: 24px; // container, left and right padding (desktop)
+
+.container,
+.container-sm,
+.container-xs {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: $container--padding__mobile;
+  padding-right: $container--padding__mobile;
+
+  @include responsive(tablet) {
+    padding-left: $container--padding__desktop;
+    padding-right: $container--padding__desktop;
+  }
+}
+
+.container {
+  max-width: $pc + ($container--padding__desktop * 2);
+}
+
+.container-sm {
+  max-width: $tablet + ($container--padding__desktop * 2);
+}
+
+.container-xs {
+  max-width: $phone + ($container--padding__desktop * 2);
+}
+
+[class*='container'] {
+  [class*='container'] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .container-sm {
+    max-width: $phone;
+  }
+
+  .container-xs {
+    max-width: $phone;
+  }
+}

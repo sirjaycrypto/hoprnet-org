@@ -42,7 +42,7 @@ export default function HomeFurther() {
   return (
     <>
       <section className="section-further padding-section-aux">
-        <div className="aux-container">
+        <div className="container">
           <h2>FURTHER READING</h2>
           <div className="list-top">
           {infoTop.map((e, index) => {
