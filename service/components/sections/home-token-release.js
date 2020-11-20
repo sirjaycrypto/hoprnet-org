@@ -9,12 +9,12 @@ export default function HomeTokenRelease() {
       display: true,
       position: "right",
       labels: {
-        fontFamily:'Source Code Pro',
-        fontSize:14,
+        fontFamily: "Source Code Pro",
+        fontSize: 14,
         fontColor: "#414141",
-        padding:18,
-        boxWidth:47,
-        usePointStyle:false
+        padding: 18,
+        boxWidth: 47,
+        usePointStyle: false,
       },
     },
   };
@@ -49,7 +49,7 @@ export default function HomeTokenRelease() {
 
   return (
     <>
-      <section className="section-token-release ">
+      <section className="section-token-release padding-section-aux">
         <div className="container">
           <div>
             <h2>TOKEN RELEASE</h2>

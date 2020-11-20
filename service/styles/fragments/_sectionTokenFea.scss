@@ -1,11 +1,13 @@
 .section-token-fea {
   h2 {
-    color: #292941;
     font-weight: normal;
-    font-size: 2em;
-    line-height: normal;
-    text-align: center;
-    letter-spacing: 0.5px;
+      font-size: 2em;
+      margin-bottom: 4.625rem;
+      text-align: center;
+      letter-spacing: 0.5px;
+      color: $hopr_grey;
+      margin-top: 0;
+      padding-top: 0;
   }
 
   .element-boxing {
@@ -28,7 +30,7 @@
     .icon-toke-show {
       position: relative;
       width: fit-content;
-      margin-bottom: 1em;
+      margin-bottom: 3.125rem;
       @media (max-width: 50em) {
         margin:1em  auto;
       }
@@ -59,12 +61,13 @@
       }
       h4 {
         font-weight: bold;
-        font-size: 2em;
+        font-size: 1.875rem;
+        margin-bottom: 1.5rem;
         letter-spacing: 0.25px;
       }
       p {
-        font-size: 1em;
-        line-height: 2em;
+        font-size: 1.125rem;
+        line-height: 2.063rem;
         letter-spacing: 0.15px;
       }
     }

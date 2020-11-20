@@ -33,7 +33,6 @@ footer {
   .second-line-footer {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 3em;
     @media (max-width: 50em) {
       flex-direction: column-reverse;
       display: flex;

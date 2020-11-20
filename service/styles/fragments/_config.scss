@@ -1,10 +1,12 @@
 *,
 body {
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   transition: all 350ms ease;
 }
-
-section{
+:root {
+  font-size: 16px;
+}
+section {
   overflow: hidden;
 }
 
@@ -45,7 +47,7 @@ section{
 .aux-img-home {
   height: auto;
   overflow: hidden;
-  div{
+  div {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -57,21 +59,21 @@ section{
   }
 }
 
-// 
-.aux-padding-box-read{
+//
+.aux-padding-box-read {
   padding: 0.5em;
   box-sizing: border-box;
 }
 
-// 
-.padding-section-aux{
-  padding-top: 1em;
-  padding-bottom: 2em;
+//
+.padding-section-aux {
+  padding-top: 4.625rem;
+  padding-bottom: 3.125rem;
 }
 
-.container-char{
+.container-char {
   background: #fff;
-  canvas{
+  canvas {
     padding: 1em;
     box-sizing: border-box;
   }

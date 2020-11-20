@@ -1,12 +1,14 @@
 .section-further {
   background: $hopr_yellow;
   h2 {
-    color: $hopr_grey;
     font-weight: normal;
     font-size: 2em;
-    line-height: normal;
+    margin-bottom: 4.625rem;
     text-align: center;
     letter-spacing: 0.5px;
+    color: $hopr_grey;
+    margin-top: 0;
+    padding-top: 0;
   }
   .list-top,
   .list-down {
@@ -38,19 +40,19 @@
     .info {
       h5 {
         font-weight: normal;
-        font-size: 1.2em;
-        line-height: 2em;
+        font-size: 1.5rem;
+        line-height: 2.313rem;
         text-align: center;
         letter-spacing: 0.2px;
         text-decoration-line: underline;
         color: $hopr_bright_blue;
         width: 70%;
-        margin: 1em auto;
+        margin: 1.5rem auto;
       }
       p {
         font-weight: 400;
-        font-size: 1em;
-        line-height: 2em;
+        font-size: 1.125rem;
+        line-height: 2.063rem;
         letter-spacing: 0.15px;
         color: $hopr_grey;
       }

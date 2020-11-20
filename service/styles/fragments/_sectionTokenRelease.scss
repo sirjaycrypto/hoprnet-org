@@ -1,12 +1,13 @@
 .section-token-release {
   h2 {
-    font-weight: 300;
-    font-size: 3em;
-    line-height: 1.5em;
+    font-weight: normal;
+    font-size: 2em;
+    margin-bottom: 4.625rem;
     text-align: center;
-    letter-spacing: 0.541667px;
+    letter-spacing: 0.5px;
     color: $hopr_grey;
-    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 0;
   }
   h3 {
     font-weight: bold;
@@ -17,8 +18,9 @@
     color: $hopr_grey;
   }
   p {
-    font-size: 1.1em;
-    line-height: 2em;
+    font-size: 1.563rem;
+    line-height: 2.313rem;
+    margin-bottom: 3.125rem;
     color: $hopr_grey;
   }
 }
@@ -27,7 +29,6 @@
   width: 50%;
   margin: auto;
   @include responsive(tablet) {
-
     width: 100%;
   }
   .container-table {
