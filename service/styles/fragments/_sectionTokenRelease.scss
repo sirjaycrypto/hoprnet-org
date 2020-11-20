@@ -1,0 +1,53 @@
+.section-token-release {
+  h2 {
+    font-weight: 300;
+    font-size: 3em;
+    line-height: 1.5em;
+    text-align: center;
+    letter-spacing: 0.541667px;
+    color: $hopr_grey;
+    margin-bottom: 0;
+  }
+  h3 {
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 1.8em;
+    text-align: center;
+    letter-spacing: 0.291667px;
+    color: $hopr_grey;
+  }
+  p {
+    font-size: 1.1em;
+    line-height: 2em;
+    color: $hopr_grey;
+  }
+}
+
+.table-info {
+  width: 50%;
+  margin: auto;
+  @include responsive(tablet) {
+
+    width: 100%;
+  }
+  .container-table {
+    .title {
+      background: $hopr_bright_blue;
+      padding: 0.7em;
+      h4 {
+        margin: 0;
+        color: #fff;
+      }
+    }
+    .list-table {
+      ul {
+        li {
+          font-size: 1em;
+          line-height: 2em;
+          letter-spacing: 0.15px;
+          color: #292941;
+        }
+      }
+    }
+  }
+}

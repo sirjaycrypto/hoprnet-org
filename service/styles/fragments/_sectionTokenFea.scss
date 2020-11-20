@@ -1,0 +1,72 @@
+.section-token-fea {
+  h2 {
+    color: #292941;
+    font-weight: normal;
+    font-size: 2em;
+    line-height: normal;
+    text-align: center;
+    letter-spacing: 0.5px;
+  }
+
+  .element-boxing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    .item {
+      width: 33%;
+      padding: 0.5em;
+      box-sizing: border-box;
+      @media (max-width: 50em) {
+        width: 100%;
+        margin: 2em 0;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+    }
+    .icon-toke-show {
+      position: relative;
+      width: fit-content;
+      margin-bottom: 1em;
+      @media (max-width: 50em) {
+        margin:1em  auto;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 114px;
+        height: 114px;
+        background: $hopr_yellow;
+        z-index: -3;
+        border-radius: 100%;
+      }
+      img {
+        width: 89px;
+      }
+    }
+    .info-cont {
+      h4,
+      p {
+        padding: 0;
+        margin: 0;
+        color: $hopr_grey;
+        @media (max-width: 50em) {
+          text-align: center;
+        }
+      }
+      h4 {
+        font-weight: bold;
+        font-size: 2em;
+        letter-spacing: 0.25px;
+      }
+      p {
+        font-size: 1em;
+        line-height: 2em;
+        letter-spacing: 0.15px;
+      }
+    }
+  }
+}

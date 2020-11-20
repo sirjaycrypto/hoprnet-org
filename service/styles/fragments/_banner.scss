@@ -1,0 +1,24 @@
+.banner-CTA {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      background-attachment: fixed;
+    }
+    .container-btn {
+      padding: 10em 0;
+    }
+  }

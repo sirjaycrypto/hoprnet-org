@@ -1,0 +1,110 @@
+footer {
+  position: relative;
+  color: #fff;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient($hopr_dark_blue, $hopr_bright_blue);
+    z-index: -3;
+  }
+  .footer-icon {
+    img {
+      width: 55px;
+      @media (max-width: 50em) {
+        width: 34px;
+      }
+    }
+  }
+  .first-line-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2em;
+    margin-bottom: 3em;
+    @media (max-width: 50em) {
+      margin-top: 1em;
+      margin-bottom: 0em;
+    }
+  }
+  .second-line-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3em;
+    @media (max-width: 50em) {
+      flex-direction: column-reverse;
+      display: flex;
+      margin-top: 2em;
+      margin-bottom: 0em;
+    }
+    .copy-footer {
+      padding: 0;
+      margin: 0;
+      font-size: 13px;
+      @media (max-width: 50em) {
+        margin-top: 1em;
+        text-align: center;
+      }
+    }
+  }
+  .footer-menu {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+
+      li {
+        margin-right: 1em;
+        &:last-child {
+          margin-right: 0;
+        }
+        @media (max-width: 50em) {
+          margin-right: 0;
+          margin-bottom: 0.5em;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+        a {
+          text-decoration: none;
+          color: #fff;
+          transition: all 350ms ease-in-out;
+
+          &:hover {
+            color: $hopr_yellow;
+            transition: all 350ms ease-in-out;
+          }
+        }
+      }
+    }
+  }
+  .footer-social {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        float: left;
+        margin-right: 1em;
+        &:last-child {
+          margin-right: 0;
+        }
+
+        img {
+          filter: invert(1);
+          width: 27px;
+          @media (max-width: 50em) {
+            width: 1em;
+          }
+        }
+      }
+    }
+  }
+}
