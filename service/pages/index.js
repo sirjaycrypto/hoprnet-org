@@ -15,10 +15,10 @@ export default function Home() {
     <Layout>
       <Hero />
       <HomeMatter />
-      <section className="aux-img-home">
-        <div className="special-home-img">
-          <img src="/assets/images/aux-visual.svg" alt="The HOPR-Token" />
-        </div>
+      <section className="video-home padding-section-aux">
+      <div className="container">
+      <iframe  src="https://www.youtube.com/embed/tMzW64tbUQU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
       </section>
       <HomeHomeItWork />
       <HomeTokenFeatures />

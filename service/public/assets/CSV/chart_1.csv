@@ -1,0 +1,137 @@
+[
+  {
+    "Year": "",
+    "Total IP Traffic": "",
+    "Fixed Internet traffic": "",
+    "Mobile Internet traffic": "",
+    "Consumer IP Traffic": "",
+    "Business IP Traffic": "",
+    "Addressable Market": ""
+  },
+  {
+    "Year": 2009,
+    "Total IP Traffic": "176,232",
+    "Fixed Internet traffic": "131,304",
+    "Mobile Internet traffic": "1,092",
+    "Consumer IP Traffic": "139,224",
+    "Business IP Traffic": "37,008",
+    "Addressable Market": 3700.8
+  },
+  {
+    "Year": 2010,
+    "Total IP Traffic": "241,812",
+    "Fixed Internet traffic": "179,460",
+    "Mobile Internet traffic": "2,844",
+    "Consumer IP Traffic": "198,408",
+    "Business IP Traffic": "43,404",
+    "Addressable Market": 4340.4
+  },
+  {
+    "Year": 2011,
+    "Total IP Traffic": "368,808",
+    "Fixed Internet traffic": "279,456",
+    "Mobile Internet traffic": "7,164",
+    "Consumer IP Traffic": "285,000",
+    "Business IP Traffic": "83,808",
+    "Addressable Market": 8380.8
+  },
+  {
+    "Year": 2012,
+    "Total IP Traffic": "522,840",
+    "Fixed Internet traffic": "376,068",
+    "Mobile Internet traffic": "10,620",
+    "Consumer IP Traffic": "390,540",
+    "Business IP Traffic": "132,300",
+    "Addressable Market": 13230
+  },
+  {
+    "Year": 2013,
+    "Total IP Traffic": "614,016",
+    "Fixed Internet traffic": "419,424",
+    "Mobile Internet traffic": "17,760",
+    "Consumer IP Traffic": "490,860",
+    "Business IP Traffic": "123,156",
+    "Addressable Market": 12315.6
+  },
+  {
+    "Year": 2014,
+    "Total IP Traffic": "718,176",
+    "Fixed Internet traffic": "478,908",
+    "Mobile Internet traffic": "30,168",
+    "Consumer IP Traffic": "572,880",
+    "Business IP Traffic": "145,296",
+    "Addressable Market": 14529.6
+  },
+  {
+    "Year": 2015,
+    "Total IP Traffic": "869,112",
+    "Fixed Internet traffic": "593,928",
+    "Mobile Internet traffic": "44,208",
+    "Consumer IP Traffic": "697,644",
+    "Business IP Traffic": "171,468",
+    "Addressable Market": 17146.8
+  },
+  {
+    "Year": 2016,
+    "Total IP Traffic": "1,152,648",
+    "Fixed Internet traffic": "791,304",
+    "Mobile Internet traffic": "86,412",
+    "Consumer IP Traffic": "939,000",
+    "Business IP Traffic": "213,648",
+    "Addressable Market": 21364.8
+  },
+  {
+    "Year": 2017,
+    "Total IP Traffic": "1,464,000",
+    "Fixed Internet traffic": "1,020,000",
+    "Mobile Internet traffic": "144,000",
+    "Consumer IP Traffic": "1,197,324",
+    "Business IP Traffic": "266,676",
+    "Addressable Market": 26667.6
+  },
+  {
+    "Year": 2018,
+    "Total IP Traffic": "1,810,908",
+    "Fixed Internet traffic": "1,284,000",
+    "Mobile Internet traffic": "228,000",
+    "Consumer IP Traffic": "1,496,268",
+    "Business IP Traffic": "314,640",
+    "Addressable Market": 31464
+  },
+  {
+    "Year": 2019,
+    "Total IP Traffic": "2,237,436",
+    "Fixed Internet traffic": "1,644,000",
+    "Mobile Internet traffic": "348,000",
+    "Consumer IP Traffic": "1,859,220",
+    "Business IP Traffic": "378,216",
+    "Addressable Market": 37821.6
+  },
+  {
+    "Year": 2020,
+    "Total IP Traffic": "2,740,932",
+    "Fixed Internet traffic": "2,088,000",
+    "Mobile Internet traffic": "492,000",
+    "Consumer IP Traffic": "2,285,688",
+    "Business IP Traffic": "455,244",
+    "Addressable Market": 45524.4
+  },
+  {
+    "Year": 2021,
+    "Total IP Traffic": "3,337,284",
+    "Fixed Internet traffic": "2,628,000",
+    "Mobile Internet traffic": "684,000",
+    "Consumer IP Traffic": "2,791,860",
+    "Business IP Traffic": "545,424",
+    "Addressable Market": 54542.4
+  },
+  {
+    "Year": 2022,
+    "Total IP Traffic": "4,200,000",
+    "Fixed Internet traffic": "3,276,000",
+    "Mobile Internet traffic": "924,000",
+    "Consumer IP Traffic": "3,513,576",
+    "Business IP Traffic": "686,424",
+    "Addressable Market": 68642.4
+  }
+]

@@ -1,6 +1,52 @@
 import React, { useEffect, useState } from "react";
+import { Pie } from "react-chartjs-2";
 
 export default function HomeTokenRelease() {
+  const options = {
+    maintainAspectRatio: false,
+
+    legend: {
+      display: true,
+      position: "right",
+      labels: {
+        fontFamily:'Source Code Pro',
+        fontSize:14,
+        fontColor: "#414141",
+        padding:18,
+        boxWidth:47,
+        usePointStyle:false
+      },
+    },
+  };
+
+  const data = {
+    labels: [
+      "Public Sale",
+      "Cover Traffic",
+      "Bounties",
+      "Early Token Buyers",
+      "Team & Advisors",
+      "Treasury",
+    ],
+
+    datasets: [
+      {
+        label: "# of Votes",
+        data: [75000000, 250000000, 56875000, 180000000, 200000000, 238125000],
+        backgroundColor: [
+          "#0B005D",
+          "#2200C2",
+          "#878A01",
+          "#C1C500",
+          "#F8FE00",
+          "#FDFFA2",
+        ],
+
+        borderWidth: 0,
+      },
+    ],
+  };
+
   return (
     <>
       <section className="section-token-release ">
@@ -11,7 +57,7 @@ export default function HomeTokenRelease() {
               Lock HOPR tokens in your node to relay user data and cover
               traffic. The more you stake, the more data you can relay, and the
               more you earn. A quarter of all HOPR tokens are available only to
-              stakers as a reward for relaying cover traffic.
+              stake's as a reward for relaying cover traffic.
             </p>
           </div>
           <div className="table-info">
@@ -34,11 +80,14 @@ export default function HomeTokenRelease() {
           </div>
           <div>
             <h3>Token Allocation (%)</h3>
+            <div>
+              <Pie data={data} width={100} height={539} options={options} />
+            </div>
             <p>
               Lock HOPR tokens in your node to relay user data and cover
               traffic. The more you stake, the more data you can relay, and the
               more you earn. A quarter of all HOPR tokens are available only to
-              stakers as a reward for relaying cover traffic.
+              stake's as a reward for relaying cover traffic.
             </p>
           </div>
           <div>

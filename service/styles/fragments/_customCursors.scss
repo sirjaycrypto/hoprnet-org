@@ -24,3 +24,8 @@ a {
   transition: all 350ms ease;
   cursor: url(getCursorUri('%230000b4', 16)) 16 16, auto !important;
 }
+
+
+canvas{
+  cursor: pointer;  
+}

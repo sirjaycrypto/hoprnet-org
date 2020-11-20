@@ -24,8 +24,12 @@
 }
 
 .table-info {
-  width: fit-content;
+  width: 50%;
   margin: auto;
+  @include responsive(tablet) {
+
+    width: 100%;
+  }
   .container-table {
     .title {
       background: $hopr_bright_blue;

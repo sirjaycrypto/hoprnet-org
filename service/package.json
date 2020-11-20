@@ -12,9 +12,11 @@
     "@emotion/css": "^11.0.0",
     "@zeit/next-css": "1.0.1",
     "@zeit/next-sass": "1.0.1",
+    "chart.js": "^2.9.4",
     "next": "10.0.1",
     "node-sass": "4.14.1",
     "react": "17.0.1",
+    "react-chartjs-2": "^2.11.1",
     "react-dom": "17.0.1"
   }
 }
