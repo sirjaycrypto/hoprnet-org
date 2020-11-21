@@ -17,7 +17,7 @@ export default function Home() {
       <HomeMatter />
       <section className="video-home padding-section-aux">
       <div className="container">
-      <iframe  src="https://www.youtube.com/embed/tMzW64tbUQU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe  src="https://www.youtube.com/embed/tMzW64tbUQU" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
       </div>
       </section>
       <HomeHomeItWork />
