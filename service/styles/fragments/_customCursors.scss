@@ -15,7 +15,7 @@
 
 // overwrite various cursors
 
-a {
+a,.type-btn {
   transition: all 350ms ease;
   cursor: url(getCursorUri('%230000b4', 16)) 16 16, auto !important;
 }
