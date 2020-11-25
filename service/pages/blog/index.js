@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Layout from "../../components/organisms/layout";
 import HeroInternal from "../../components/organisms/hero-internal";
 import { motion } from "framer-motion";
+import insertScript from '../../util/insertScript'
 // Our custom easing
 let easing = [0.25, 0.1, 0.25, 1];
 
@@ -86,6 +87,27 @@ const youtubeIds = [
 ];
 
 export default function Index() {
+  useEffect(() => {
+    const script = insertScript(
+      "https://medium-widget.pixelpoint.io/widget.js"
+    );
+
+    script.onload = () => {
+      // eslint-disable-next-line
+      MediumWidget.Init({
+        renderTo: "#medium-widget",
+        params: {
+          resource: "https://medium.com/hoprnet",
+          postsPerLine: 2,
+          limit: undefined,
+          picture: "big",
+          fields: ["author", "publishAt"],
+          ratio: "landscape",
+        },
+      });
+    };
+  }, []);
+
   return (
     <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
       <Layout>
@@ -164,9 +186,12 @@ export default function Index() {
         </section>
         {/*  */}
         <section className="section-blog  padding-section-aux">
-                <h2 className=" padding-section-aux">
-Blog
-                </h2>
+          <div className="container-sm">
+            <h2 className=" padding-section-aux">Blog</h2>
+            <div>
+              <div id="medium-widget" />
+            </div>
+          </div>
         </section>
       </Layout>
     </motion.div>
