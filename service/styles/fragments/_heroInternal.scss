@@ -17,6 +17,11 @@
     letter-spacing: 0.208333px;
     font-weight: 300;
   }
+  h3 {
+    font-size: 1.313rem;
+    font-weight: 300;
+    color: #414141;
+  }
 }
 
 .continue-hero-internal {
@@ -31,12 +36,24 @@
   }
   h2 {
     font-size: 2em;
-    font-weight: 400;
+    font-weight: 700;
   }
   p {
     font-size: 1.3em;
     line-height: 2em;
     letter-spacing: 0.208333px;
     font-weight: 300;
+  }
+  .block-video {
+    margin: 3rem 0;
+  }
+  .see-my-youtube {
+    color: $hopr_grey;
+    font-size: 1.25rem;
+    a {
+      color: $hopr_bright_blue;
+      margin-left: 1rem;
+      
+    }
   }
 }

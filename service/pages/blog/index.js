@@ -22,6 +22,22 @@ const fadeInUp = {
   },
 };
 
+const fadeInDown = {
+  initial: {
+    y: -80,
+    opacity: 0,
+    transition: { duration: 0.6, ease: easing },
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      ease: easing,
+    },
+  },
+};
+
 const stagger = {
   animate: {
     transition: {
@@ -29,6 +45,46 @@ const stagger = {
     },
   },
 };
+
+const dataInfo = [
+  {
+    img: "assets/images/icons/twitter.svg",
+    link: "https://twitter.com/hoprnet",
+  },
+  {
+    img: "assets/images/icons/telegram.svg",
+    link: "https://t.me/hoprnet",
+  },
+  {
+    img: "assets/images/icons/linkedin.svg",
+    link: "https://www.linkedin.com/company/hoprnet",
+  },
+  {
+    img: "assets/images/icons/github.svg",
+    link: "https://github.com/hoprnet",
+  },
+  {
+    img: "assets/images/icons/medium.svg",
+    link: "https://medium.com/hoprnet",
+  },
+  {
+    img: "assets/images/icons/youtube.svg",
+    link: "https://www.youtube.com/channel/UC2DzUtC90LXdW7TfT3igasA",
+  },
+  {
+    img: "assets/images/icons/discord.svg",
+    link: "https://discord.gg/dEAWC4G",
+  },
+];
+
+const youtubeIds = [
+  "mcnezYJXuXw",
+  "wH48dy6PjVg",
+  "YN8BEF1JIQ0",
+  "lHQBiZmCLBY",
+  "kZiCoR1DYSg",
+];
+
 export default function Index() {
   return (
     <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
@@ -36,47 +92,81 @@ export default function Index() {
         <HeroInternal>
           <motion.div variants={stagger}>
             <motion.h1 animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
-              Join The HOPR Community{" "}
+              Join The HOPR Community
             </motion.h1>
+            <motion.div>
+              <motion.h3 variants={fadeInDown} transition={{ delay: 0.8 }}>
+                You can reach us on any of these channels:
+              </motion.h3>
+              <div>
+                <ul className="social-list-blog">
+                  {dataInfo.map((e, index) => {
+                    const { img, link } = e;
+                    return (
+                      <motion.li
+                        key={index}
+                        variants={fadeInDown}
+                        transition={{ delay: 0.8 }}
+                      >
+                        <a
+                          href={link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img src={img} alt="The HOPR-Token NOW" />
+                        </a>
+                      </motion.li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </motion.div>
           </motion.div>
         </HeroInternal>
         <section className="continue-hero-internal padding-section-aux invert-color ">
           <motion.div variants={stagger} className="container">
             <motion.h2 variants={fadeInUp} transition={{ delay: 0.8 }}>
-              Governance
+              Video
             </motion.h2>
-            <div className="container-block">
-              <div className="block-left">
-                <motion.p variants={fadeInUp} transition={{ delay: 0.9 }}>
-                  At HOPR we're building the foundations for a more private and
-                  resilient web. But to succeed, we also need to challenge the
-                  economic power structures that shackle today's web to
-                  unhealthy and unsustainable business models.
-                </motion.p>
-                <motion.p variants={fadeInUp} transition={{ delay: 1 }}>
-                  We need natively digital organizations to drive the next wave
-                  of inclusive innovation. Open technology platforms rely on and
-                  enable communities instead of emperors and shareholders.
-                </motion.p>
+            <motion.div variants={stagger} div className="container-block">
+              <div className="block-video">
+                {youtubeIds.map((id) => (
+                  <motion.iframe
+                    variants={fadeInUp}
+                    transition={{ delay: 0.8 }}
+                    key={id}
+                    title={id}
+                    width="400"
+                    height="225"
+                    src={`https://www.youtube-nocookie.com/embed/${id}`}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                ))}
               </div>
-              <div className="block-right">
-                <motion.p variants={fadeInUp} transition={{ delay: 1.1 }}>
-                  The recent movement of Decentralized Autonomous Organizations
-                  (DAOs), provides participatory governance and economies for
-                  the blockchain era. However, DAOs cannot reach their full
-                  potential until they can co-exist with existing legal
-                  frameworks.
-                </motion.p>
-                <motion.p variants={fadeInUp} transition={{ delay: 1.2 }}>
-                  HOPR is pioneering decentralized, community-enabling
-                  governance (DecenGov) as a techno-legal framework that
-                  combines the dynamics of communities with the efficiencies of
-                  crypto networks and the advantages of established legal bodies
-                  to govern collective efforts.
-                </motion.p>
+              <div className="see-my-youtube">
+                .. check out more videos in our
+                <motion.a
+                  animate={{ opacity: 1 }}
+                  initial={{ opacity: 0 }}
+                  href="https://www.youtube.com/channel/UC2DzUtC90LXdW7TfT3igasA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-color-high underline"
+                >
+                  youtube channel
+                </motion.a>
+                .
               </div>
-            </div>
+            </motion.div>
           </motion.div>
+        </section>
+        {/*  */}
+        <section className="section-blog  padding-section-aux">
+                <h2 className=" padding-section-aux">
+Blog
+                </h2>
         </section>
       </Layout>
     </motion.div>

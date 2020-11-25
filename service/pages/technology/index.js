@@ -74,11 +74,10 @@ export default function Index() {
         </HeroInternal>
         <section className="continue-hero-internal padding-section-aux invert-color ">
           <motion.div variants={stagger} className="container">
-            
-              <motion.h2 variants={fadeInUp} transition={{ delay: 0.8 }}>
-                How? The HOPR Protocol
-              </motion.h2>
-            
+            <motion.h2 variants={fadeInUp} transition={{ delay: 0.8 }}>
+              How? The HOPR Protocol
+            </motion.h2>
+
             <div>
               <motion.p variants={fadeInUp} transition={{ delay: 0.9 }}>
                 The HOPR protocol provides network-level and metadata privacy
