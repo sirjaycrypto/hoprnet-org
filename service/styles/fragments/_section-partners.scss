@@ -1,0 +1,36 @@
+.section-partners {
+  text-align: center;
+  h2 {
+    font-size: 2.125rem;
+    color: $hopr_grey;
+    font-weight: 500;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      box-sizing: border-box;
+      width: 144px;
+      height: 70px;
+    }
+    img {
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(1);
+    }
+  }
+  .btn-align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+  }
+}

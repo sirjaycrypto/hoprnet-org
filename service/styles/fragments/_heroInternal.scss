@@ -53,7 +53,35 @@
     a {
       color: $hopr_bright_blue;
       margin-left: 1rem;
-      
     }
+  }
+}
+
+.two-block {
+  display: flex;
+  @include responsive(tablet) {
+    flex-direction: row;
+  }
+}
+
+.continue-yellow {
+  background: $hopr_yellow;
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: $hopr_grey;
+  }
+  h2 {
+    font-size: 2em;
+    font-weight: 400;
+  }
+  p {
+    font-size: 1.3em;
+    line-height: 2em;
+    letter-spacing: 0.208333px;
+    font-weight: 300;
   }
 }

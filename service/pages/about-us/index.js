@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../../components/organisms/layout";
 import HeroInternal from "../../components/organisms/hero-internal";
+import SubStrack from "../../components/molecules/sub-strack";
 
 import { motion } from "framer-motion";
 // Our custom easing
@@ -30,6 +31,54 @@ const stagger = {
     },
   },
 };
+
+const dataInfo = [
+  {
+    img: "assets/partners/avado.svg",
+  },
+  {
+    img: "assets/partners/froriep.png",
+  },
+  {
+    img: "assets/partners/elrond.png",
+  },
+  {
+    img: "assets/partners/health_tech_cluster.png",
+  },
+  {
+    img: "assets/partners/sedimentum.png",
+  },
+  {
+    img: "assets/partners/download.png",
+  },
+  {
+    img: "assets/partners/swiss_medtech.png",
+  },
+  {
+    img: "assets/partners/swiss_healthcare_startups.png",
+  },
+];
+
+const dataVALUES = [
+  {
+    img: "assets/icons/with-yellow-ball/protection-shield.png",
+    title: "GUARDIAN OF CHOICES",
+    text:
+      "Everyone should have the chance to make decisions in their lives as freely and uninfluenced as possible. This is exactly what we are committed to - neutrally and transparently.",
+  },
+  {
+    img: "assets/icons/with-yellow-ball/light-bulb-shine.png",
+    title: "CURIOUS PIONEER",
+    text:
+      "We want to improve the privacy standards of the digital world and are always looking for new ways to do so. We boldly go new ways. And when we find a suitable way, we do everything we can to make it work for our community and society.",
+  },
+  {
+    img: "assets/icons/with-yellow-ball/multiple-users-1.png",
+    title: "VIVID ORGANISM",
+    text:
+      "HOPR is a living ecosystem made up of many different people who share the same goal. We want everyone to have the space for their own ideas and to be able to develop freely. To achieve this, we create a climate of fairness and trust in which it is fun to work together towards our goal.",
+  },
+];
 
 export default function Index() {
   return (
@@ -76,7 +125,7 @@ export default function Index() {
             <div>
               <h2>Governance</h2>
             </div>
-            <div className="container-block">
+            <div className="container-block two-block">
               <div className="block-left">
                 <p>
                   At HOPR we're building the foundations for a more private and
@@ -109,6 +158,77 @@ export default function Index() {
             </div>
           </div>
         </section>
+        {/*  */}
+        <section className="section-partners padding-section-aux">
+          <div className="container">
+            <h2>Partners</h2>
+            <div className="container-sm">
+              <ul>
+                {dataInfo.map((e, index) => {
+                  const { img } = e;
+                  return (
+                    <motion.li
+                      key={index}
+                      variants={fadeInUp}
+                      transition={{ delay: 0.8 }}
+                    >
+                      <img src={img} alt="The HOPR-Token NOW" />
+                    </motion.li>
+                  );
+                })}
+              </ul>
+              <div className="btn-align">
+                <div className="type-btn">
+                  <span>Want to become our partner?</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/*  */}
+        <section className="continue-yellow padding-section-aux invert-color ">
+          <div className="container">
+            <div>
+              <h2>HOPR Token</h2>
+              <p>Want to know more about our token sale? Subscribe here:</p>
+            </div>
+            <div className="container-block">
+              <div>
+                <SubStrack />
+              </div>
+            </div>
+          </div>
+        </section>
+        {/*  */}
+        <section className="section-HOPR-values padding-section-aux">
+          <div className="container">
+            <div>
+              <h2>Our HOPR Values</h2>
+            </div>
+            <div className="element-value">
+              {dataVALUES.map((e, index) => {
+                const { img, title, text } = e;
+                return (
+                  <motion.div
+                    key={index}
+                    variants={fadeInUp}
+                    transition={{ delay: 0.8 }}
+                    className="element-item"
+                  >
+                    <img src={img} alt={title} />
+                    <div>
+                      <h4>{title}</h4>
+                      <p>{text}</p>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+        {/*  */}
+        <section className="section-board-association continue-yellow padding-section-aux invert-color"></section>
+        {/*  */}
       </Layout>
     </motion.div>
   );
