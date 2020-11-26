@@ -2,50 +2,13 @@ import React, { useState, useEffect } from "react";
 import Layout from "../../components/organisms/layout";
 import HeroInternal from "../../components/organisms/hero-internal";
 import { motion } from "framer-motion";
-import insertScript from '../../util/insertScript'
-// Our custom easing
-let easing = [0.25, 0.1, 0.25, 1];
-
-// Custom variant
-const fadeInUp = {
-  initial: {
-    y: 80,
-    opacity: 0,
-    transition: { duration: 0.6, ease: easing },
-  },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      ease: easing,
-    },
-  },
-};
-
-const fadeInDown = {
-  initial: {
-    y: -80,
-    opacity: 0,
-    transition: { duration: 0.6, ease: easing },
-  },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      ease: easing,
-    },
-  },
-};
-
-const stagger = {
-  animate: {
-    transition: {
-      staggerChildren: 0.5,
-    },
-  },
-};
+import {
+  stagger,
+  staggerHaft,
+  fadeInUp,
+  fadeInDown,
+} from "../../util/motionConfig";
+import insertScript from "../../util/insertScript";
 
 const dataInfo = [
   {
@@ -112,7 +75,7 @@ export default function Index() {
     <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
       <Layout>
         <HeroInternal>
-          <motion.div variants={stagger}>
+          <motion.div variants={staggerHaft}>
             <motion.h1 animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
               Join The HOPR Community
             </motion.h1>
@@ -150,7 +113,7 @@ export default function Index() {
             <motion.h2 variants={fadeInUp} transition={{ delay: 0.8 }}>
               Video
             </motion.h2>
-            <motion.div variants={stagger} div className="container-block">
+            <motion.div variants={stagger}  className="container-block">
               <div className="block-video">
                 {youtubeIds.map((id) => (
                   <motion.iframe

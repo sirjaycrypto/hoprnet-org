@@ -18,19 +18,15 @@
       justify-content: center;
       padding: 1rem;
       box-sizing: border-box;
-      width: 144px;
       height: 70px;
     }
     img {
       height: 100%;
       object-fit: cover;
-      filter: grayscale(1);
+      filter:contrast(0);
     }
   }
   .btn-align {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin-top: 4rem;
   }
 }

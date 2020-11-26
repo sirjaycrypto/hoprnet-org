@@ -2,38 +2,12 @@ import React, { useState, useEffect } from "react";
 import Layout from "../../components/organisms/layout";
 import HeroInternal from "../../components/organisms/hero-internal";
 import { motion } from "framer-motion";
-
-// Our custom easing
-let easing = [0.25, 0.1, 0.25, 1];
-
-// animate: defines animation
-// initial: defines initial state of animation or stating point.
-// exit: defines animation when component exits
-
-// Custom variant
-const fadeInUp = {
-  initial: {
-    y: 80,
-    opacity: 0,
-    transition: { duration: 0.6, ease: easing },
-  },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      ease: easing,
-    },
-  },
-};
-
-const stagger = {
-  animate: {
-    transition: {
-      staggerChildren: 0.3,
-    },
-  },
-};
+import {
+  stagger,
+  staggerHaft,
+  fadeInUp,
+  fadeInDown,
+} from "../../util/motionConfig";
 
 export default function Index() {
   return (

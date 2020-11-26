@@ -2,35 +2,14 @@ import React, { useState, useEffect } from "react";
 import Layout from "../../components/organisms/layout";
 import HeroInternal from "../../components/organisms/hero-internal";
 import SubStrack from "../../components/molecules/sub-strack";
-
+import ProfileAssociation from "../../components/molecules/profile-association";
 import { motion } from "framer-motion";
-// Our custom easing
-let easing = [0.25, 0.1, 0.25, 1];
-
-// Custom variant
-const fadeInUp = {
-  initial: {
-    y: 80,
-    opacity: 0,
-    transition: { duration: 0.6, ease: easing },
-  },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      ease: easing,
-    },
-  },
-};
-
-const stagger = {
-  animate: {
-    transition: {
-      staggerChildren: 1,
-    },
-  },
-};
+import {
+  stagger,
+  staggerHaft,
+  fadeInUp,
+  fadeInDown,
+} from "../../util/motionConfig";
 
 const dataInfo = [
   {
@@ -227,7 +206,48 @@ export default function Index() {
           </div>
         </section>
         {/*  */}
-        <section className="section-board-association continue-yellow padding-section-aux invert-color"></section>
+        <section className="section-board-association continue-yellow padding-section-aux invert-color">
+          <div>
+            <h2>Board Of Association</h2>
+          </div>
+          <div>
+            <ProfileAssociation />
+            <div>
+              <p>
+                The HOPR protocol is a digital commons that is currently being
+                built by
+                <a href="https://hopr.swiss/who-is-HOPR#team">
+                  HOPR Services AG.
+                </a>
+              </p>
+              <div className="section-receivers">
+                <h3>Grant Receivers</h3>
+
+                <ul>
+                  <li>Avado, CH</li>
+                  <li>Empathy PR, US</li>
+                  <li>S.N. NONI CORPORATION LTD, CY</li>
+                  <li>The Wandering Editor, UK</li>
+                </ul>
+              </div>
+              <div>
+                <p>Do you want to become a member of the association?</p>
+                <div className="btn-align">
+                  <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSeiZ76QfvcbpbBJk-DJDE5IfYmzkuUfUOM-j4btBviTbBNn2w/viewform?hl=en"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-out"
+                  >
+                    <div className="type-btn">
+                      <span>APPLY</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         {/*  */}
       </Layout>
     </motion.div>

@@ -1,0 +1,16 @@
+.section-receivers {
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    color: $hopr_grey;
+    li {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+  }
+}
