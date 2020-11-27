@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import Layout from "../../components/organisms/layout";
 import HeroInternal from "../../components/organisms/hero-internal";
 import SubStrack from "../../components/molecules/sub-strack";
+import Jobs from "../../components/molecules/jobs";
 import ProfileAssociation from "../../components/molecules/profile-association";
+import ContactPlus from "../../components/molecules/contact-plus";
 import { motion } from "framer-motion";
 import {
   stagger,
@@ -100,11 +102,11 @@ export default function Index() {
           </motion.div>
         </HeroInternal>
         <section className="continue-hero-internal padding-section-aux invert-color ">
-          <div className="container">
+          <div className="">
             <div>
               <h2>Governance</h2>
             </div>
-            <div className="container-block two-block">
+            <div className="container-sm two-block">
               <div className="block-left">
                 <p>
                   At HOPR we're building the foundations for a more private and
@@ -212,7 +214,7 @@ export default function Index() {
           </div>
           <div>
             <ProfileAssociation />
-            <div>
+            <div className="container">
               <p>
                 The HOPR protocol is a digital commons that is currently being
                 built by
@@ -249,6 +251,22 @@ export default function Index() {
           </div>
         </section>
         {/*  */}
+        <section className="section-jobs padding-section-aux">
+          <div className="container">
+            <div>
+              <h2>Jobs</h2>
+              <p>Companies building the HOPR ecosystem</p>
+            </div>
+            <Jobs />
+          </div>
+        </section>
+        {/*  */}
+        <section className="section-board-contact continue-yellow padding-section-aux invert-color">
+          <div>
+            <h2>Contact Us</h2>
+          </div>
+          <ContactPlus />
+        </section>
       </Layout>
     </motion.div>
   );

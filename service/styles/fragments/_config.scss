@@ -78,3 +78,14 @@ section {
     box-sizing: border-box;
   }
 }
+
+.block-left,
+.block-right {
+  width: 50%;
+  padding: 1rem;
+  box-sizing: border-box;
+  @include responsive(tablet) {
+    width: 100%;
+    padding: 0.3rem;
+  }
+}

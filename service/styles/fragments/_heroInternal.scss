@@ -35,8 +35,10 @@
     color: $hopr_grey;
   }
   h2 {
-    font-size: 2em;
-    font-weight: 700;
+    font-size: 2.375rem;
+    font-weight: 400;
+    margin-bottom: 4rem;
+    color: $hopr_grey;
   }
   p {
     font-size: 1.3em;
@@ -60,7 +62,7 @@
 .two-block {
   display: flex;
   @include responsive(tablet) {
-    flex-direction: row;
+    flex-direction: column;
   }
 }
 

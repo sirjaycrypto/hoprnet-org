@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;700&display=swap");
+
 @import "fragments/_normalize.scss";
 @import "fragments/_toolkit.scss";
-@import "fragments/_config.scss";
 @import "fragments/_breakingPoints.scss";
 @import "fragments/_container.scss";
 @import "fragments/_transitions.scss";
+@import "fragments/_config.scss";
 @import "fragments/_btn.scss";
 @import "fragments/_navbar.scss";
 @import "fragments/_blog.scss";
@@ -20,9 +21,14 @@
 @import "fragments/_section-backed.scss";
 @import "fragments/_section-partners.scss";
 @import "fragments/_section-board-association.scss";
+@import "fragments/_section-documentation.scss";
+@import "fragments/_section-bounties.scss";
+@import "fragments/_section-source.scss";
 @import "fragments/_customCursors.scss";
+@import "fragments/_section-jobs.scss";
 @import "fragments/_section-HOPR-values.scss";
 @import "fragments/_banner.scss";
 @import "fragments/_section-further.scss";
+@import "fragments/_contact-plus.scss";
 @import "fragments/_heroInternal.scss";
 @import "fragments/_footer.scss";
