@@ -16,7 +16,7 @@ export default function Index() {
         <HeroInternal>
           <motion.div variants={stagger}>
             <motion.h1 animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
-              Enabling Data Privacy
+            Guardians Of Privacy
             </motion.h1>
 
             <div>
@@ -25,24 +25,13 @@ export default function Index() {
                 exit={{ opacity: 0 }}
                 transition={{ delay: 0.2 }}
               >
-                Everything we do, we get tracked–often without even knowing it.
-                And this data is then used to influence us and our decisions. We
-                believe that everyone should have the chance to make their own
-                decisions in their lives, as freely and uninfluenced as
-                possible. HOPR has set out to protect your privacy, data, and
-                ultimately, your identity.
+               To the HOPR Node Runners, we dedicate this page to you. Online privacy, personal data control, and Ethereum blockchain integrity all owe you a debt of gratitude. Although, you’ll get more than just gratitude, as you’ll earn upcoming HOPR token incentives (coming Q4!) from our plug-and-earn mixnet node PC.
               </motion.p>
 
               <motion.p variants={fadeInUp} transition={{ delay: 0.4 }}>
-                The speed of innovation is increasing on a daily basis and so is
-                the amount of data harvested about us. We have the dream that
-                digitalization can improve our lives without costing us all of
-                our privacy. We have the dream that everyone can own their
-                personal data again.
+              HOPR makes no profit from the first-of-its-kind custom node PC. Instead, we thank you for helping ensure a decentralized Web3 future, where everyone has control of their own data.
               </motion.p>
-              <motion.p variants={fadeInUp} transition={{ delay: 0.6 }}>
-                Your data, your decision.
-              </motion.p>
+             
             </div>
           </motion.div>
         </HeroInternal>
