@@ -1,0 +1,19 @@
+
+.help-icon-node {
+  background: #fff;
+  width: 75px;
+  height: 75px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  margin-bottom: 0.75rem;
+  margin: auto;
+  img {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+}
