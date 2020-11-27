@@ -39,7 +39,7 @@
     font-size: 1.8em;
     letter-spacing: 0.25px;
     margin-bottom: 1.5rem;
-    @media (max-width: 50em) {
+    @include responsive(tablet) {
       padding-bottom: 0.3em;
     }
   }
@@ -57,7 +57,7 @@
 }
 .flex-line {
   flex-direction: row-reverse;
-  @media (max-width: 50em) {
+  @include responsive(tablet) {
     flex-direction: column;
   }
 }

@@ -14,7 +14,7 @@ footer {
   .footer-icon {
     img {
       width: 55px;
-      @media (max-width: 50em) {
+      @include responsive(tablet) {
         width: 34px;
       }
     }
@@ -25,7 +25,7 @@ footer {
     justify-content: space-between;
     margin-top: 2em;
     margin-bottom: 3em;
-    @media (max-width: 50em) {
+    @include responsive(tablet) {
       margin-top: 1em;
       margin-bottom: 0em;
     }
@@ -33,7 +33,7 @@ footer {
   .second-line-footer {
     display: flex;
     justify-content: space-between;
-    @media (max-width: 50em) {
+    @include responsive(tablet) {
       flex-direction: column-reverse;
       display: flex;
       margin-top: 2em;
@@ -43,7 +43,7 @@ footer {
       padding: 0;
       margin: 0;
       font-size: 13px;
-      @media (max-width: 50em) {
+      @include responsive(tablet) {
         margin-top: 1em;
         text-align: center;
       }
@@ -64,8 +64,7 @@ footer {
         &:last-child {
           margin-right: 0;
         }
-        @media (max-width: 50em) {
-         
+        @include responsive(tablet) {
           margin-bottom: 0.64em;
           &:last-child {
             margin-right: 0;
@@ -99,7 +98,7 @@ footer {
         img {
           filter: invert(1);
           width: 27px;
-          @media (max-width: 50em) {
+          @include responsive(tablet) {
             width: 1em;
           }
         }

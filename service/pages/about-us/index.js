@@ -173,7 +173,7 @@ export default function Index() {
               <h2>HOPR Token</h2>
               <p>Want to know more about our token sale? Subscribe here:</p>
             </div>
-            <div className="container-block">
+            <div className="container-help-newsletter">
               <div>
                 <SubStrack />
               </div>

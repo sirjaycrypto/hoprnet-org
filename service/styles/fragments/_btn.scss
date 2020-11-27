@@ -16,7 +16,7 @@
     margin: 0;
     padding: 0;
   }
-  @media (max-width: 50em) {
+  @include responsive(tablet) {
     padding: 0.5em 0.6em;
     span {
       font-size: 1em;

@@ -27,7 +27,7 @@
     letter-spacing: 0.36px;
     color: $hopr_grey;
     margin-bottom: 0.3em;
-    @media (max-width: 50em) {
+    @include responsive(tablet) {
       font-size: 1em;
       font-weight: 400;
     }
@@ -39,7 +39,7 @@
     line-height: normal;
     letter-spacing: 0.208333px;
     color: $hopr_grey;
-    @media (max-width: 50em) {
+    @include responsive(tablet) {
       font-size: 1em;
     }
   }

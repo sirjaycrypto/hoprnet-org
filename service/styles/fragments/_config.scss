@@ -39,7 +39,7 @@ section {
 }
 
 .global-home-aux {
-  @media (max-width: 50em) {
+  @include responsive(tablet) {
     font-size: calc(1em / 1.2);
   }
 }

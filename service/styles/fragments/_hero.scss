@@ -41,8 +41,7 @@
     align-items: center;
     text-align: center;
     letter-spacing: 0.833333px;
-
-    @media (max-width: 50em) {
+    @include responsive(tablet) {
       font-size: 2rem;
     }
   }
