@@ -23,7 +23,10 @@ export default function HomeTokenFeatures() {
 
   return (
     <>
-      <section className="section-token-fea padding-section-aux">
+      <section
+        id="TOKEN-FEATURES"
+        className="section-token-fea padding-section-aux"
+      >
         <div className="container">
           <div className="container-center-center">
             <h2>TOKEN FEATURES</h2>

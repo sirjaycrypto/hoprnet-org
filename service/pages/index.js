@@ -17,9 +17,9 @@ export default function Home() {
       <Hero />
       <HomeMatter />
       <section className="video-home padding-section-aux">
-      <div className="container">
-      <iframe  src="https://www.youtube.com/embed/tMzW64tbUQU" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-      </div>
+     
+      <iframe  src="https://www.youtube.com/embed/tMzW64tbUQU?showinfo=0" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+   
       </section>
       <HomeHomeItWork />
       <HomeTokenFeatures />

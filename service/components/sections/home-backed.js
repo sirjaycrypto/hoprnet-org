@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 
 export default function HomeBacked() {
   return (
     <>
-      <section className="section-backed padding-section-aux invert-color ">
+      <section
+        id="BACKED-BY"
+        className="section-backed padding-section-aux invert-color "
+      >
         <div className="container">
           <h2>BACKED BY</h2>
           <div className="item-back-container">
@@ -23,5 +26,5 @@ export default function HomeBacked() {
         </div>
       </section>
     </>
-  )
+  );
 }

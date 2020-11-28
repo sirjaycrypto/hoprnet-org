@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
 
 export default function HomeMatter() {
-
   const data = {
     labels: [
       "2009",
@@ -41,7 +40,6 @@ export default function HomeMatter() {
         fill: false,
         backgroundColor: "rgba(0,0,0,0)",
         borderColor: "#648CFA",
-        
       },
     ],
   };
@@ -49,10 +47,9 @@ export default function HomeMatter() {
   const options = {
     legend: {
       display: false,
-      spanGaps:false
-      
+      spanGaps: false,
     },
-    borderCapStyle:'round',
+    borderCapStyle: "round",
     scales: {
       yAxes: [
         {
@@ -66,12 +63,17 @@ export default function HomeMatter() {
 
   return (
     <>
-      <section className="section-why-matters padding-section-aux invert-color ">
+      <section
+        id="WHY-IT-MATTERS"
+        className="section-why-matters padding-section-aux invert-color "
+      >
         <div className="container">
           <h2>WHY IT MATTERS…</h2>
-         
-          <div className="container-char">
-          <Line data={data} options={options} />
+
+          <div className="container-sm">
+            <div className="container-char">
+              <Line data={data} options={options} />
+            </div>
           </div>
           <div>
             <p className="link-out">Source: Cisco Visual Networking Index</p>

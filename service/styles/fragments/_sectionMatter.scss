@@ -1,7 +1,8 @@
 .section-why-matters {
   background: $hopr_yellow;
   h2 {
-    font-size: 2.375rem;
+    text-align: center;
+    font-size:3.75rem;
     font-weight: 400;
     margin-bottom: 4rem;
     color: $hopr_grey;
@@ -12,5 +13,8 @@
 
     letter-spacing: 0.208333px;
     color: $hopr_grey;
+  }
+  .link-out{
+    font-size: 14px;
   }
 }

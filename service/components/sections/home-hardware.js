@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 
 export default function HomeHardware() {
-    
   return (
     <>
-      <section className="section-hopr-github padding-section-aux">
+      <section
+        id="HOPR-NODE-ON-GITHUB"
+        className="section-hopr-github padding-section-aux"
+      >
         <div className="container">
           <div className="flex-line-row">
             <div className="aux-padding-box-read">
@@ -19,7 +21,7 @@ export default function HomeHardware() {
 
             <div>
               <img
-                src="/assets/images/hardhaer.png"
+                src="/assets/images/banner-ardware.jpg"
                 alt="The HOPR-Token"
                 className="aux-img-cover"
               />

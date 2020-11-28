@@ -6,7 +6,7 @@ nav {
   height: 80px;
   background: #fff;
   top: 0;
-  position: absolute;
+  position: relative;
   z-index: 6;
   transition: all 350ms ease-in-out;
   &.add-shadow{

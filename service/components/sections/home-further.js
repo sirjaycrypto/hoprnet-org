@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 
 export default function HomeFurther() {
   const infoTop = [
@@ -36,48 +36,50 @@ export default function HomeFurther() {
       img: "/assets/brand/logo.svg",
       title: "HOPR in the Media",
     },
-
   ];
 
   return (
     <>
-      <section className="section-further padding-section-aux invert-color ">
+      <section
+        id="FURTHER-READING"
+        className="section-further padding-section-aux invert-color "
+      >
         <div className="container">
           <h2>FURTHER READING</h2>
           <div className="list-top">
-          {infoTop.map((e, index) => {
-                const { img, title, paragraph } = e;
-                return (
-                  <div key={index} className="element-future">
-                    <div className="icon">
-                      <img src={img} alt={title} />
-                    </div>
-                    <div className="info">
-                      <h5>{title}</h5>
-                      <p>{paragraph}</p>
-                    </div>
+            {infoTop.map((e, index) => {
+              const { img, title, paragraph } = e;
+              return (
+                <div key={index} className="element-future">
+                  <div className="icon">
+                    <img src={img} alt={title} />
                   </div>
-                );
-              })}
+                  <div className="info">
+                    <h5>{title}</h5>
+                    <p>{paragraph}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
           <div className="list-down">
-          {infoDown.map((e, index) => {
-                const { img, title } = e;
-                return (
-                  <div key={index} className="element-future">
-                    <div className="icon">
-                      <img src={img} alt={title} />
-                    </div>
-                    <div className="info">
-                      <h5>{title}</h5>
-                    </div>
+            {infoDown.map((e, index) => {
+              const { img, title } = e;
+              return (
+                <div key={index} className="element-future">
+                  <div className="icon">
+                    <img src={img} alt={title} />
                   </div>
-                );
-              })}
+                  <div className="info">
+                    <h5>{title}</h5>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
     </>
-  )
+  );
 }

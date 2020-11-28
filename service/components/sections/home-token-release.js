@@ -49,7 +49,10 @@ export default function HomeTokenRelease() {
 
   return (
     <>
-      <section className="section-token-release padding-section-aux">
+      <section
+        id="TOKEN-RELEASE"
+        className="section-token-release padding-section-aux"
+      >
         <div className="container">
           <div>
             <h2>TOKEN RELEASE</h2>

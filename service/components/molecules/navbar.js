@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import MenuMobile from "./menu-mobile";
 import Link from "next/link";
 import ItemsMenu from "../atoms/items-menu";
+import ChooseLanguage from "./choose-language";
 
 export default function Navbar() {
   const [youDown, setYouDown] = useState(false);
@@ -13,14 +14,14 @@ export default function Navbar() {
         setYouDown(false);
       } else {
         setYouDown(true);
-        setActivaMenu(false)
+        setActivaMenu(false);
       }
     };
   }, []);
   return (
     <>
       <nav className={youDown ? "add-scroll-menu " : ""}>
-        <div className={"container " + (activaMenu ? "add-shadow" : "")} >
+        <div className={"container " + (activaMenu ? "add-shadow" : "")}>
           <div>
             <Link href="/">
               <img
@@ -43,11 +44,13 @@ export default function Navbar() {
           </div>
 
           <div className="menu-desktop">
-           <ItemsMenu/>
+            <ItemsMenu />
           </div>
         </div>
+        <ChooseLanguage/>
       </nav>
-      <MenuMobile activaMenu={activaMenu}/>
+
+      <MenuMobile activaMenu={activaMenu} />
     </>
   );
 }
