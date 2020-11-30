@@ -1,8 +1,38 @@
 .container-languages {
-    position: absolute;
+  position: absolute;
   right: 1.5rem;
-  transform: translateY(70%);
+  transform: translateY(68%);
+  .select-lang {
+    text-transform: uppercase;
+
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    color: #fff;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+
+    &::before {
+      content: "▼";
+      display: block;
+      width: 20px;
+      height: 20px;
+      float: left;
+      margin: 0 6px 0 0;
+      transition: all 350ms ease-in-out;
+    }
+    &:hover {
+      &::before {
+        content: "▲";
+        transition: all 350ms ease-in-out;
+      }
+    }
+  }
+  .box-hidden-info {
+    overflow: hidden;
+  }
   ul {
+    transform: translateY(-102%);
+    width: 144px;
     padding: 0;
     margin: 0;
     list-style: none;
