@@ -1,0 +1,4 @@
+{
+  "locales": ["en", "es", "de", "ma", "rus", "ko", "ja", "pt"],
+  "defaultLocale": "en"
+}

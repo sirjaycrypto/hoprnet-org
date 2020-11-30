@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Layout from "../components/organisms/layout";
 import Hero from "../components/organisms/hero";
 import HomeMatter from "../components/sections/home-matters";
@@ -11,15 +11,16 @@ import HomeFurther from "../components/sections/home-further";
 
 
 import Slide from "../components/organisms/slider";
+import { loadNamespaces } from './_app'
 export default function Home() {
   return (
     <Layout>
       <Hero />
       <HomeMatter />
       <section className="video-home padding-section-aux">
-     
+
       <iframe  src="https://www.youtube.com/embed/tMzW64tbUQU?showinfo=0" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-   
+
       </section>
       <HomeHomeItWork />
       <HomeTokenFeatures />
@@ -38,4 +39,11 @@ export default function Home() {
       <HomeFurther />
     </Layout>
   );
+}
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      _ns: await loadNamespaces(['common'], locale),
+    },
+  }
 }

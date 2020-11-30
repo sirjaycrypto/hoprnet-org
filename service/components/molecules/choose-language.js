@@ -1,53 +1,55 @@
-import React, { useState, useEffect } from "react";
-
+import React from 'react';
+import Link from 'next/link';
+import useTranslation from 'next-translate/useTranslation';
 const listLang = [
   {
-    info: "de",
-    label: "German",
+    info: 'de',
+    label: 'German',
   },
   {
-    info: "en",
-    label: "English",
+    info: 'en',
+    label: 'English',
   },
   {
-    info: "ma",
-    label: "Mandarin",
+    info: 'ma',
+    label: 'Mandarin',
   },
   {
-    info: "de",
-    label: "Portuguese",
+    info: 'pt',
+    label: 'Portuguese',
   },
   {
-    info: "rus",
-    label: "Russian",
+    info: 'rus',
+    label: 'Russian',
   },
   {
-    info: "ko",
-    label: "Korean",
+    info: 'ko',
+    label: 'Korean',
   },
   {
-    info: "es",
-    label: "Spanish",
+    info: 'es',
+    label: 'Spanish',
   },
   {
-    info: "ja",
-    label: "Japanese",
+    info: 'ja',
+    label: 'Japanese',
   },
 ];
 export default function ChooseLanguage() {
-  const [select, setSelect] = useState("ENGLISH");
-
+  const { t, lang } = useTranslation();
   return (
     <div className="container-languages">
       <div>
-        <div>{select}</div>
+        <div>{lang}</div>
         <ul>
-          {listLang.map((e, index) => {
+          {listLang.map((e, i) => {
             const { info, label } = e;
             return (
-              <a key={index}>
-                <li>{label}</li>
-              </a>
+              lang !== info && (
+                <Link href="/" locale={info} key={i}>
+                  <li>{label}</li>
+                </Link>
+              )
             );
           })}
         </ul>
