@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
+import TrackVisibility from "react-on-screen";
 import { Line } from "react-chartjs-2";
 
-export default function HomeMatter() {
+export default function HomeMatter({ isVisible }) {
   const data = {
     labels: [
       "2009",
@@ -60,40 +61,47 @@ export default function HomeMatter() {
       ],
     },
   };
-
   return (
-    <>
-      <section
-        id="WHY-IT-MATTERS"
-        className="section-why-matters padding-section-aux invert-color "
-      >
-        <div className="container">
-          <h2>WHY IT MATTERS…</h2>
+    <section
+            id="WHY-IT-MATTERS"
+            className="section-why-matters padding-section-aux invert-color "
+          >
+    <TrackVisibility partialVisibility>
+{({ isVisible }) =>
+        isVisible && (
+            
+            <div className="container ">
+              <h2>WHY IT MATTERS…</h2>
 
-          <div className="container-sm">
-            <div className="container-char">
-              <Line data={data} options={options} />
+              <div className="container-sm">
+                <div className="container-char">
+                  <Line data={data} options={options} />
+                </div>
+              </div>
+              <div>
+                <p className="link-out">
+                  Source: Cisco Visual Networking Index
+                </p>
+              </div>
+              <p>
+                "Millions of Gigabytes are transmitted across the globe every
+                minute. The global internet bandwidth is still growing
+                exponentially due to new technologies such as 5G. A lot of this
+                massive amount of data is confidentially transmitted by people
+                or corporations that need protection. The HOPR protocol brings
+                metadata privacy on the network level for all of them. The HOPR
+                network is driven by the HOPR token."
+              </p>
+              <div className="container-center-center">
+                <div className="type-btn">
+                  <span>Get HOPR-Token on SECRET</span>
+                </div>
+              </div>
             </div>
-          </div>
-          <div>
-            <p className="link-out">Source: Cisco Visual Networking Index</p>
-          </div>
-          <p>
-            "Millions of Gigabytes are transmitted across the globe every
-            minute. The global internet bandwidth is still growing exponentially
-            due to new technologies such as 5G. A lot of this massive amount of
-            data is confidentially transmitted by people or corporations that
-            need protection. The HOPR protocol brings metadata privacy on the
-            network level for all of them. The HOPR network is driven by the
-            HOPR token."
-          </p>
-          <div className="container-center-center">
-            <div className="type-btn">
-              <span>Get HOPR-Token on SECRET</span>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
+              )
+            }
+          </TrackVisibility>
+          </section>
+      
   );
 }

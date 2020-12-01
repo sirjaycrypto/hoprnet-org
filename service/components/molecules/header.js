@@ -1,9 +1,9 @@
 import Head from "next/head";
-import useTranslation from 'next-translate/useTranslation'
+import useTranslation from "next-translate/useTranslation";
 
 export default function Header() {
-  const { t } = useTranslation()
-  const title = t('common:title')
+  const { t } = useTranslation();
+  const title = t("common:title");
   return (
     <Head>
       <title>{title}</title>

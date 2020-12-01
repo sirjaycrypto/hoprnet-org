@@ -1,4 +1,5 @@
-import React, { useEffect,ref } from "react";
+import React, { useEffect } from "react";
+
 import Layout from "../components/organisms/layout";
 import Hero from "../components/organisms/hero";
 import HomeMatter from "../components/sections/home-matters";
@@ -13,41 +14,40 @@ import Slide from "../components/organisms/slider";
 import { loadNamespaces } from "./_app";
 
 export default function Home() {
-  useEffect(()=>{
 
-  },[])
   return (
     <Layout>
-      <Hero />
-      <HomeMatter />
-      <section className="video-home ">
-        <video controls>
-          <source src="/assets/video/about.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </section>
-      <HomeHomeItWork />
-      <HomeTokenFeatures />
-      <Slide />
-      <HomeHardware />
-      <HomeTokenReleas />
-      <HomeBacked />
-      <section className="banner-CTA">
-        <img src="/assets/images/banner.png" alt="The HOPR-Token NOW" />
-        <div className="container-btn">
-          <div className="type-btn">
-            <span>Get HOPR-Token on SECRET</span>
+        <Hero />
+        <HomeMatter />
+        <section className="video-home ">
+          <video controls>
+            <source src="/assets/video/about.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </section>
+        <HomeHomeItWork />
+        <HomeTokenFeatures />
+        <Slide />
+        <HomeHardware />
+        <HomeTokenReleas />
+        <HomeBacked />
+        <section className="banner-CTA">
+          <img src="/assets/images/banner.png" alt="The HOPR-Token NOW" />
+          <div className="container-btn">
+            <div className="type-btn">
+              <span>Get HOPR-Token on SECRET</span>
+            </div>
           </div>
-        </div>
-      </section>
-      <HomeFurther />
+        </section>
+        <HomeFurther />
+      
     </Layout>
   );
 }
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      _ns: await loadNamespaces(["common"], locale),
+      _ns: await loadNamespaces(["common", "homeHero"], locale),
     },
   };
 }
