@@ -37,17 +37,34 @@ const listLang = [
     label: "Japanese",
   },
 ];
+
 export default function ChooseLanguage() {
-  const [translateY, settranslateY] = useState(102);
+  const [translateY, setTranslateY] = useState(-102);
+  const [flag, setFlag] = useState(false);
   const { t, lang } = useTranslation();
+
+  const clickMenu = ()=>{
+  if(flag==false){
+    setTranslateY(0)
+    setFlag(true)
+  }else{
+    setTranslateY(-102)
+    setFlag(false)
+  }
+  }
+
   return (
     <div className="container-languages">
       <div>
-        <div className="select-lang">{lang}</div>
+        <div className="select-lang" onClick={() => clickMenu()}>
+          {lang}
+        </div>
         <div className="box-hidden-info">
-          <ul   className={css`
-           transform: translateY("${translateY}"%);
-          `}>
+          <ul
+            className={css`
+            transform: translateY(${translateY}%);
+            `}
+          >
             {listLang.map((e, i) => {
               const { info, label } = e;
               return (
