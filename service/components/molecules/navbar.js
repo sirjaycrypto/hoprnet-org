@@ -51,7 +51,7 @@ export default function Navbar() {
 
       <MenuMobile activaMenu={activaMenu} />
       {router.pathname === "/" ? (
-        <div className="section-indicator">
+        <div className={"section-indicator " + (youDown ? "make-visible" : "")}>
           <div className="helper-hr"></div>
           <h4>Our Blog</h4>
 

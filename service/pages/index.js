@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect,ref } from "react";
 import Layout from "../components/organisms/layout";
 import Hero from "../components/organisms/hero";
 import HomeMatter from "../components/sections/home-matters";
@@ -11,7 +11,11 @@ import HomeFurther from "../components/sections/home-further";
 
 import Slide from "../components/organisms/slider";
 import { loadNamespaces } from "./_app";
+
 export default function Home() {
+  useEffect(()=>{
+
+  },[])
   return (
     <Layout>
       <Hero />

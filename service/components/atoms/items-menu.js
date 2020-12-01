@@ -37,7 +37,7 @@ export default function ItemsMenu() {
         {linkLocal.map((e, index) => {
           const { path, name } = e;
           return (
-            <Link href={path}>
+            <Link key={index} href={path}>
               <a className={router.pathname === path ? "active" : ""}>{name}</a>
             </Link>
           );
