@@ -23,16 +23,19 @@
     list-style: none;
     align-items: center;
     justify-content: center;
+    margin-top: 0.5rem;
     li {
       width: 14px;
       height: 14px;
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
       span {
         width: 100%;
         height: 100%;
-        border: 1px solid $hopr_grey;
-        background: transparent;
+        position: absolute;
+        background: #f6f6f6;
         &.active {
-          border: 0px;
           background: $hopr_bright_blue;
         }
       }
