@@ -1,23 +1,22 @@
-import React, { useEffect, useState } from "react";
-
+import React from "react";
+import useTranslation from "next-translate/useTranslation";
 export default function HomeTokenFeatures() {
+  const { t } = useTranslation();
   const dataInfo = [
     {
       img: "/assets/icons/icon-pay.svg",
-      title: "Pay",
-      paragraph:
-        "Spend HOPR tokens to send data through the HOPR network with complete data and metadata privacy. Spent HOPR tokens are paid to the node runners who relay the data as it hops through the network.",
+      title: "homeTokFea:pay",
+      paragraph:"homeTokFea:payMain",
     },
     {
       img: "/assets/icons/icon-stake.svg",
-      title: "Stake",
-      paragraph: `Lock HOPR tokens in your node to relay user data and cover traffic. The more you stake, the more data you can relay, and the more you earn. A quarter of all HOPR tokens are available only to stake's as a reward for relaying cover traffic.`,
+      title: "homeTokFea:stake",
+      paragraph: "homeTokFea:stakeMain",
     },
     {
       img: "/assets/icons/icon-vote.svg",
-      title: "Vote",
-      paragraph:
-        "Participate in decentralized, community-enabling governance decisions to shape the future of HOPR, from technical parameters to the composition of the HOPR Association’s board of directors. ",
+      title: "homeTokFea:vote",
+      paragraph: "homeTokFea:voteMain",
     },
   ];
 
@@ -29,7 +28,7 @@ export default function HomeTokenFeatures() {
       >
         <div className="container">
           <div className="container-center-center">
-            <h2>TOKEN FEATURES</h2>
+            <h2>{t("homeTokFea:title")}</h2>
           </div>
           <div className="container-items">
             <div className="element-boxing">
@@ -38,11 +37,11 @@ export default function HomeTokenFeatures() {
                 return (
                   <div key={index} className="item">
                     <div className="icon-toke-show">
-                      <img src={img} alt={title} />
+                      <img src={img} alt={t(title)} />
                     </div>
                     <div className="info-cont">
-                      <h4>{title}</h4>
-                      <p>{paragraph}</p>
+                      <h4>{t(title)}</h4>
+                      <p>{t(paragraph)}</p>
                     </div>
                   </div>
                 );

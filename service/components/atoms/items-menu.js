@@ -4,33 +4,31 @@ import { useRouter } from "next/router";
 import useTranslation from "next-translate/useTranslation";
 import { listLang } from "../../util/listLanguage";
 
-const linkLocal = [
-  {
-    path: "/about-us",
-    name: "About us",
-  },
-  {
-    path: "/technology",
-    name: "Technology",
-  },
-  {
-    path: "http://saentis.hoprnet.org/",
-    name: "Token",
-  },
-  {
-    path: "http://saentis.hoprnet.org/",
-    name: "Join testnet",
-  },
-  {
-    path: "/blog",
-    name: "Blog",
-  },
-];
-
 export default function ItemsMenu() {
   const router = useRouter();
   const { t, lang } = useTranslation();
-
+  const linkLocal = [
+    {
+      path: "/about-us",
+      name: "menu:aboutUs",
+    },
+    {
+      path: "/technology",
+      name: "menu:technology",
+    },
+    {
+      path: "http://saentis.hoprnet.org/",
+      name: "menu:token",
+    },
+    {
+      path: "http://saentis.hoprnet.org/",
+      name: "menu:joinTestnet",
+    },
+    {
+      path: "/blog",
+      name: "menu:blog",
+    },
+  ];
   return (
     <>
       <div className="menu-desktop">
@@ -38,7 +36,9 @@ export default function ItemsMenu() {
           const { path, name } = e;
           return (
             <Link key={index} href={path}>
-              <a className={router.pathname === path ? "active" : ""}>{name}</a>
+              <a className={router.pathname === path ? "active" : ""}>
+                {t(name)}
+              </a>
             </Link>
           );
         })}

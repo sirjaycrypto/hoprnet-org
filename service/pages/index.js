@@ -47,7 +47,7 @@ export default function Home() {
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      _ns: await loadNamespaces(["common", "homeHero"], locale),
+      _ns: await loadNamespaces(["common", "homeHero", "menu", "homeWhyMatt", "homeHowWor","homeTokFea"], locale),
     },
   };
 }

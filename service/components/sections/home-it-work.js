@@ -1,26 +1,24 @@
-import React, { useEffect, useState } from "react";
-
+import React from "react";
+import useTranslation from "next-translate/useTranslation";
 export default function HomeHomeItWork() {
+  const { t } = useTranslation();
   const dataInfo = [
     {
       img: "/assets/images/how-work-1.svg",
-      title: "Private",
-      paragraph:
-        "Lock HOPR tokens in your node to relay user data and cover traffic. The more you stake, the more data you can relay, and the more you earn. A quarter of all HOPR tokens are available only to stakers as a reward for relaying cover traffic.",
+      title: "homeHowWor:private",
+      paragraph: "homeHowWor:privateMain",
       mirrorBox: false,
     },
     {
       img: "/assets/images/how-work-2.svg",
-      title: "Profitable",
-      paragraph:
-        "Lock HOPR tokens in your node to relay user data and cover traffic. The more you stake, the more data you can relay, and the more you earn. A quarter of all HOPR tokens are available only to stakers as a reward for relaying cover traffic.",
+      title: "homeHowWor:profitable",
+      paragraph:"homeHowWor:profitableMain",
       mirrorBox: true,
     },
     {
       img: "/assets/images/how-work-2.svg",
-      title: "Private",
-      paragraph:
-        "Lock HOPR tokens in your node to relay user data and cover traffic. The more you stake, the more data you can relay, and the more you earn. A quarter of all HOPR tokens are available only to stakers as a reward for relaying cover traffic.",
+      title: "homeHowWor:private",
+      paragraph: "homeHowWor:privateMain",
       mirrorBox: false,
     },
   ];
@@ -33,7 +31,7 @@ export default function HomeHomeItWork() {
       >
         <div className="container">
           <div className="container-center-center">
-            <h2>HOW DOES IT WORK?</h2>
+            <h2>{t("homeHowWor:title")}</h2>
           </div>
           {/*  */}
           <div className="element-boxing">
@@ -45,11 +43,11 @@ export default function HomeHomeItWork() {
                   className={"info-box-line " + (mirrorBox ? "flex-line" : "")}
                 >
                   <div className="info-cont aux-padding-box-read">
-                    <h3>{title}</h3>
-                    <p>{paragraph}</p>
+                    <h3>{t(title)}</h3>
+                    <p>{t(paragraph)}</p>
                   </div>
                   <div>
-                    <img src={img} alt={title} />
+                    <img src={img} alt={t(title)} />
                   </div>
                 </div>
               );
