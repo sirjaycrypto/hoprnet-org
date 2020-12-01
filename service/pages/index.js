@@ -9,18 +9,18 @@ import HomeTokenReleas from "../components/sections/home-token-release";
 import HomeBacked from "../components/sections/home-backed";
 import HomeFurther from "../components/sections/home-further";
 
-
 import Slide from "../components/organisms/slider";
-import { loadNamespaces } from './_app'
+import { loadNamespaces } from "./_app";
 export default function Home() {
   return (
     <Layout>
       <Hero />
       <HomeMatter />
-      <section className="video-home padding-section-aux">
-
-      <iframe  src="https://www.youtube.com/embed/tMzW64tbUQU?showinfo=0" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-
+      <section className="video-home ">
+        <video controls>
+          <source src="/assets/video/about.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </section>
       <HomeHomeItWork />
       <HomeTokenFeatures />
@@ -43,7 +43,7 @@ export default function Home() {
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      _ns: await loadNamespaces(['common'], locale),
+      _ns: await loadNamespaces(["common"], locale),
     },
-  }
+  };
 }

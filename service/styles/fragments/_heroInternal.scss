@@ -9,6 +9,9 @@
   h1 {
     font-size: 6.25rem;
     font-weight: 400;
+    @include responsive(tablet) {
+      font-size: 2.5rem;
+    }
   }
   p {
     font-size: 1.25rem;
@@ -39,6 +42,7 @@
     font-weight: 400;
     margin-bottom: 4rem;
     color: $hopr_grey;
+    
   }
   p {
     font-size: 1.3em;

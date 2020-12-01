@@ -9,7 +9,7 @@ nav {
   position: relative;
   z-index: 6;
   transition: all 350ms ease-in-out;
-  &.add-shadow{
+  &.add-shadow {
     background: rgba(255, 255, 255, 0.97);
   }
   &.add-scroll-menu {
@@ -42,9 +42,7 @@ nav {
       font-weight: 400;
       color: $hopr_grey;
       transition: all 350ms ease-in-out;
-      &:last-child {
-        padding: 0;
-      }
+   
       &:hover {
         transition: all 350ms ease-in-out;
         color: $hopr_bright_blue;
@@ -141,10 +139,12 @@ nav {
 }
 
 .menu-mobile {
-  display: none;
-  padding-top: 13vh;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  background: rgba($hopr_white, 0.98);
+  top: 0;
+  justify-content: center;
+  background: $hopr_yellow;
   height: 100vh;
   box-sizing: border-box;
   overflow: hidden;
@@ -163,7 +163,14 @@ nav {
   .menu-desktop {
     display: flex;
     flex-direction: column;
+    align-items: center;
+
     a {
+      @include responsive(tablet) {
+        &.active {
+          border-bottom: 2px solid #414141;
+        }
+      }
       text-decoration: none;
       text-transform: uppercase;
       margin-bottom: 1em;
@@ -179,6 +186,27 @@ nav {
         transition: all 350ms ease-in-out;
         color: $hopr_bright_blue;
       }
+    }
+  }
+}
+
+.list-lang-sm {
+  list-style: none;
+  display: none;
+  @include responsive(tablet) {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    bottom: 4rem;
+    position: absolute;
+  }
+  li {
+    margin-right: 1rem;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    &:last-child {
+      margin-right: 0;
     }
   }
 }

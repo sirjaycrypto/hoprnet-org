@@ -2,41 +2,8 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { css } from "@emotion/css";
 import useTranslation from "next-translate/useTranslation";
+import {listLang} from '../../util/listLanguage';
 
-const listLang = [
-  {
-    info: "de",
-    label: "German",
-  },
-  {
-    info: "en",
-    label: "English",
-  },
-  {
-    info: "ma",
-    label: "Mandarin",
-  },
-  {
-    info: "pt",
-    label: "Portuguese",
-  },
-  {
-    info: "rus",
-    label: "Russian",
-  },
-  {
-    info: "ko",
-    label: "Korean",
-  },
-  {
-    info: "es",
-    label: "Spanish",
-  },
-  {
-    info: "ja",
-    label: "Japanese",
-  },
-];
 
 export default function ChooseLanguage() {
   const [translateY, setTranslateY] = useState(-102);

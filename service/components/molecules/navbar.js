@@ -7,7 +7,7 @@ import ChooseLanguage from "./choose-language";
 export default function Navbar() {
   const [youDown, setYouDown] = useState(false);
   const [activaMenu, setActivaMenu] = useState(false);
-
+ ;
   useEffect(() => {
     window.onscroll = function () {
       if (window.pageYOffset === 0) {
@@ -18,12 +18,13 @@ export default function Navbar() {
       }
     };
   }, []);
+
   return (
     <>
       <nav className={youDown ? "add-scroll-menu " : ""}>
         <div className={"container " + (activaMenu ? "add-shadow" : "")}>
           <div>
-            <Link href="/">
+            <Link href="/" >
               <img
                 className="logo-nav"
                 src="/assets/brand/logo.svg"
@@ -47,7 +48,7 @@ export default function Navbar() {
             <ItemsMenu />
           </div>
         </div>
-        <ChooseLanguage/>
+        <ChooseLanguage />
       </nav>
 
       <MenuMobile activaMenu={activaMenu} />

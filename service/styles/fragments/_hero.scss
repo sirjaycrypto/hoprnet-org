@@ -44,10 +44,12 @@
     @include responsive(tablet) {
       font-size: 2rem;
     }
+  
   }
   h4 {
     position: absolute;
     top: 20%;
+    left: 0;
     align-items: center;
     justify-content: center;
     width: 100%;
