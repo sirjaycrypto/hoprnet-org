@@ -3,11 +3,11 @@ import MenuMobile from "./menu-mobile";
 import Link from "next/link";
 import ItemsMenu from "../atoms/items-menu";
 import ChooseLanguage from "./choose-language";
-
+import { useRouter } from "next/router";
 export default function Navbar() {
   const [youDown, setYouDown] = useState(false);
   const [activaMenu, setActivaMenu] = useState(false);
- ;
+  const router = useRouter();
   useEffect(() => {
     window.onscroll = function () {
       if (window.pageYOffset === 0) {
@@ -24,7 +24,7 @@ export default function Navbar() {
       <nav className={youDown ? "add-scroll-menu " : ""}>
         <div className={"container " + (activaMenu ? "add-shadow" : "")}>
           <div>
-            <Link href="/" >
+            <Link href="/">
               <img
                 className="logo-nav"
                 src="/assets/brand/logo.svg"
@@ -44,14 +44,22 @@ export default function Navbar() {
             <span></span>
           </div>
 
-          <div className="menu-desktop">
-            <ItemsMenu />
-          </div>
+          <ItemsMenu />
         </div>
         <ChooseLanguage />
       </nav>
 
       <MenuMobile activaMenu={activaMenu} />
+      {router.pathname === "/" ? (
+        <div className="section-indicator">
+          <h4>Our Blog</h4>
+          
+            <ul>
+              <li><span></span></li>
+            </ul>
+        
+        </div>
+      ) : null}
     </>
   );
 }
