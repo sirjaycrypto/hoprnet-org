@@ -1,11 +1,20 @@
 .section-indicator {
   display: none;
   @include responsive(tablet) {
+    top: 80px;
     display: block;
-    width: 85%;
-    border-top: 0.5px solid #eeeeee;
-    padding: 1rem 0;
+    width: 100%;
+
     box-sizing: border-box;
+    margin: auto;
+    position: fixed;
+    background: #fff;
+    z-index: 3;
+  }
+  .helper-hr {
+    background: #eee;
+    height: 1px;
+    width: 89%;
     margin: auto;
   }
   h4 {
@@ -14,7 +23,7 @@
     text-align: center;
     font-size: 1.125rem;
     padding: 0;
-    margin: 0;
+    margin: 0.5rem 0;
   }
   ul {
     display: flex;
@@ -23,7 +32,7 @@
     list-style: none;
     align-items: center;
     justify-content: center;
-    margin-top: 0.5rem;
+    margin: 0.5rem 0;
     li {
       width: 14px;
       height: 14px;
