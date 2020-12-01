@@ -53,11 +53,18 @@ export default function Navbar() {
       {router.pathname === "/" ? (
         <div className="section-indicator">
           <h4>Our Blog</h4>
-          
-            <ul>
-              <li><span></span></li>
-            </ul>
-        
+
+          <ul>
+            <li>
+              <span></span>
+            </li>
+            <li>
+              <span className="active"></span>
+            </li>
+            <li>
+              <span></span>
+            </li>
+          </ul>
         </div>
       ) : null}
     </>
