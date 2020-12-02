@@ -22,7 +22,7 @@ export default function Navbar() {
   return (
     <>
       <nav className={youDown ? "add-scroll-menu " : ""}>
-        <div className={"container " + (activaMenu ? "add-shadow" : "")}>
+        <div className={"container-sm " + (activaMenu ? "add-shadow" : "")}>
           <div>
             <Link href="/">
               <img

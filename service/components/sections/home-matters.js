@@ -84,7 +84,7 @@ export default function HomeMatter({ isVisible }) {
               <p>"{t("homeWhyMatt:mainText")}"</p>
               <div className="container-center-center">
                 <div className="type-btn">
-                  <span>{t("homeWhyMatt:btn-label")}</span>
+                  <span>{t("homeWhyMatt:btnLabel")}</span>
                 </div>
               </div>
             </div>

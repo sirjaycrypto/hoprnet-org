@@ -20,7 +20,7 @@ export default function Hero() {
         </div>
         <div className="container-bottom">
           <div className="type-btn">
-            <span>{t("homeHero:btn-label")}</span>
+            <span>{t("homeHero:btnLabel")}</span>
           </div>
         </div>
        

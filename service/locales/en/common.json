@@ -1,5 +1,19 @@
 {
   "title": "HOPR EN",
   "noSupport": "Your browser does not support the video tag.",
-  "btn-token": "Get HOPR-Token on SECRET"
+  "btn-token": "Get HOPR-Token on SECRET",
+  "hereLabel": " here",
+  "HOPRServices":" HOPR Services AG.",
+  "HOPRToken":"HOPR Token",
+  "subscribeHere":"Want to know more about our token sale? Subscribe here:",
+  "APPLY":"APPLY",
+  "contactUs":"Contact Us",
+  "jobs":"Jobs",
+  "jobsLabel":"Companies building the HOPR ecosystem",
+  "privacyExperts":"Privacy Experts",
+  "cryptographers":"Cryptographers",
+  "techies":"Techies",
+  "entrepreneurs":"Entrepreneurs",
+  "miners&Stakers":"Miners & Stakers",
+  "investors":"Investors"
 }
