@@ -43,8 +43,8 @@ export default function Slide() {
     <div className="slider invert-color ">
       <div className="main-slide container">
         <div>
-          {/* <p className="text-info">«{current.t(title)}»</p> */}
-          {/* <p className="text-label-data">{current.t(paragraph)}</p> */}
+          <p className="text-info">«{t(current.title)}»</p>
+          <p className="text-label-data">{t(current.paragraph)}</p>
         </div>
         <div
           className={css`
