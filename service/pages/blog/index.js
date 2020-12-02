@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Layout from "../../components/organisms/layout";
 import HeroInternal from "../../components/organisms/hero-internal";
 import { motion } from "framer-motion";
@@ -9,7 +9,8 @@ import {
   fadeInDown,
 } from "../../util/motionConfig";
 import insertScript from "../../util/insertScript";
-
+import { loadNamespaces } from "../_app";
+import useTranslation from "next-translate/useTranslation";
 const dataInfo = [
   {
     img: "assets/images/icons/twitter.svg",
@@ -50,6 +51,7 @@ const youtubeIds = [
 ];
 
 export default function Index() {
+  const { t } = useTranslation();
   useEffect(() => {
     const script = insertScript(
       "https://medium-widget.pixelpoint.io/widget.js"
@@ -77,11 +79,11 @@ export default function Index() {
         <HeroInternal>
           <motion.div variants={staggerHaft}>
             <motion.h1 animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
-              Join The HOPR Community
+              {t("blogHero:title")}
             </motion.h1>
             <motion.div>
               <motion.h3 variants={fadeInDown} transition={{ delay: 0.8 }}>
-                You can reach us on any of these channels:
+                {t("blogHero:paragraphA")}
               </motion.h3>
               <div>
                 <ul className="social-list-blog">
@@ -111,9 +113,10 @@ export default function Index() {
         <section className="continue-hero-internal padding-section-aux invert-color ">
           <motion.div variants={stagger} className="container">
             <motion.h2 variants={fadeInUp} transition={{ delay: 0.8 }}>
-              Video
+            
+            {t("blogSecundSec:title")}
             </motion.h2>
-            <motion.div variants={stagger}  className="container-block">
+            <motion.div variants={stagger} className="container-block">
               <div className="block-video">
                 {youtubeIds.map((id) => (
                   <motion.iframe
@@ -131,7 +134,7 @@ export default function Index() {
                 ))}
               </div>
               <div className="see-my-youtube">
-                .. check out more videos in our
+                .. {t("blogSecundSec:subTitle")}
                 <motion.a
                   animate={{ opacity: 1 }}
                   initial={{ opacity: 0 }}
@@ -140,7 +143,7 @@ export default function Index() {
                   rel="noopener noreferrer"
                   className="text-color-high underline"
                 >
-                  youtube channel
+                  {t("blogSecundSec:youtubeChannel")}
                 </motion.a>
                 .
               </div>
@@ -150,7 +153,7 @@ export default function Index() {
         {/*  */}
         <section className="section-blog  padding-section-aux">
           <div className="container-sm">
-            <h2 className=" padding-section-aux">Blog</h2>
+            <h2 className=" padding-section-aux">{t("menu:blog")}</h2>
             <div>
               <div id="medium-widget" />
             </div>
@@ -159,4 +162,15 @@ export default function Index() {
       </Layout>
     </motion.div>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      _ns: await loadNamespaces(
+        ["common", "menu", "blogHero", "blogSecundSec"],
+        locale
+      ),
+    },
+  };
 }
