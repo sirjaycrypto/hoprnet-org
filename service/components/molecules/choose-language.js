@@ -35,11 +35,11 @@ export default function ChooseLanguage() {
             {listLang.map((e, i) => {
               const { info, label } = e;
               return (
-                lang !== info && (
+                
                   <Link href="/" locale={info} key={i}>
                     <li>{label}</li>
                   </Link>
-                )
+                
               );
             })}
           </ul>

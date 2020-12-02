@@ -3,9 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import {
   stagger,
-  staggerHaft,
   fadeInUp,
-  fadeInDown,
 } from "../../util/motionConfig";
 
 const data = [
