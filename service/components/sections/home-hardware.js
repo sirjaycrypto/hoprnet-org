@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
-
+import React from "react";
+import useTranslation from "next-translate/useTranslation";
 export default function HomeHardware() {
+  const { t } = useTranslation();
   return (
     <>
       <section
@@ -10,19 +11,13 @@ export default function HomeHardware() {
         <div className="container">
           <div className="flex-line-row">
             <div className="aux-padding-box-read">
-              <h2>HOPR-NODE ON GITHUB</h2>
-              <p>
-                Anyone can run a HOPR node on their own hardware! We provide
-                easy-to-install software for Linux, macOS, Windows, Docker and
-                Cloud Environments. Furthermore we also sell an dedicated
-                hardware not for faster staking.More at the End of the Page.
-              </p>
+              <h2>{t("homeHard:title")}</h2>
+              <p>{t("homeHard:about")}</p>
             </div>
-
             <div>
               <img
                 src="/assets/images/banner-ardware.jpg"
-                alt="The HOPR-Token"
+                alt={t("homeHard:title")}
                 className="aux-img-cover"
               />
             </div>

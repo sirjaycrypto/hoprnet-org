@@ -1,4 +1,5 @@
-
 {
-  "title": "HOPR EN"
+  "title": "HOPR EN",
+  "noSupport": "Your browser does not support the video tag.",
+  "btn-token": "Get HOPR-Token on SECRET"
 }

@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
-
+import React from "react";
+import useTranslation from "next-translate/useTranslation";
 export default function HomeBacked() {
+  const { t } = useTranslation();
   return (
     <>
       <section
@@ -8,7 +9,7 @@ export default function HomeBacked() {
         className="section-backed padding-section-aux invert-color "
       >
         <div className="container">
-          <h2>BACKED BY</h2>
+          <h2>{t("homeBack:title")}</h2>
           <div className="item-back-container">
             <div className="item-logo-element">
               <p>logo</p>

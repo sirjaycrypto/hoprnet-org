@@ -12,42 +12,58 @@ import HomeFurther from "../components/sections/home-further";
 
 import Slide from "../components/organisms/slider";
 import { loadNamespaces } from "./_app";
+import useTranslation from "next-translate/useTranslation";
 
 export default function Home() {
-
+  const { t } = useTranslation();
   return (
     <Layout>
-        <Hero />
-        <HomeMatter />
-        <section className="video-home ">
-          <video controls>
-            <source src="/assets/video/about.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </section>
-        <HomeHomeItWork />
-        <HomeTokenFeatures />
-        <Slide />
-        <HomeHardware />
-        <HomeTokenReleas />
-        <HomeBacked />
-        <section className="banner-CTA">
-          <img src="/assets/images/banner.png" alt="The HOPR-Token NOW" />
-          <div className="container-btn">
-            <div className="type-btn">
-              <span>Get HOPR-Token on SECRET</span>
-            </div>
+      <Hero />
+      <HomeMatter />
+      <section className="video-home ">
+        <video controls>
+          <source src="/assets/video/about.mp4" type="video/mp4" />
+          {t("common:noSupport")}
+        </video>
+      </section>
+      <HomeHomeItWork />
+      <HomeTokenFeatures />
+      <Slide />
+      <HomeHardware />
+      <HomeTokenReleas />
+      <HomeBacked />
+      <section className="banner-CTA">
+        <img src="/assets/images/banner.png" alt="The HOPR-Token NOW" />
+        <div className="container-btn">
+          <div className="type-btn">
+            <span>{t("common:btn-token")}</span>
           </div>
-        </section>
-        <HomeFurther />
-      
+        </div>
+      </section>
+      <HomeFurther />
     </Layout>
   );
 }
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      _ns: await loadNamespaces(["common", "homeHero", "menu", "homeWhyMatt", "homeHowWor","homeTokFea"], locale),
+      _ns: await loadNamespaces(
+        [
+          "common",
+          "homeHero",
+          "menu",
+          "homeWhyMatt",
+          "homeHowWor",
+          "homeTokFea",
+          "homeSlide",
+          "homeHard",
+          "homeToken",
+          "homeBack",
+          "homeBanner",
+          "homeFut"
+        ],
+        locale
+      ),
     },
   };
 }

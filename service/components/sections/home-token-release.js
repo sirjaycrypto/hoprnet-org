@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import useTranslation from "next-translate/useTranslation";
 import { Pie } from "react-chartjs-2";
 
 export default function HomeTokenRelease() {
+  const { t } = useTranslation();
   const options = {
     maintainAspectRatio: false,
 
@@ -55,46 +57,36 @@ export default function HomeTokenRelease() {
       >
         <div className="container">
           <div>
-            <h2>TOKEN RELEASE</h2>
-            <p>
-              Lock HOPR tokens in your node to relay user data and cover
-              traffic. The more you stake, the more data you can relay, and the
-              more you earn. A quarter of all HOPR tokens are available only to
-              stake's as a reward for relaying cover traffic.
-            </p>
+            <h2>{t("homeToken:title")}</h2>
+            <p>{t("homeToken:about")}</p>
           </div>
           <div className="table-info">
             <div className="container-table">
               <div className="title">
-                <h4>KEY METRICS</h4>
+                <h4>{t("homeToken:subTitle")}</h4>
               </div>
               <div className="list-table">
                 <ul>
-                  <li>Token Name: HOPR Token</li>
-                  <li>Token Symbol: HOPR</li>
-                  <li>Network: Ethereum</li>
-                  <li>Standards: ERC20, ERC777</li>
-                  <li>Total supply: X HOPR</li>
-                  <li>Initial circulating supply: X HOPR</li>
-                  <li>Token price: X USD / HOPR</li>
+                  <li>{t("homeToken:listItemA")}</li>
+                  <li>{t("homeToken:listItemB")}</li>
+                  <li>{t("homeToken:listItemC")}</li>
+                  <li>{t("homeToken:listItemD")}</li>
+                  <li>{t("homeToken:listItemE")}</li>
+                  <li>{t("homeToken:listItemF")}</li>
+                  <li>{t("homeToken:listItemG")}</li>
                 </ul>
               </div>
             </div>
           </div>
           <div>
-            <h3>Token Allocation (%)</h3>
+            <h3>{t("homeToken:secondSubTitle")} (%)</h3>
             <div>
               <Pie data={data} width={100} height={539} options={options} />
             </div>
-            <p>
-              Lock HOPR tokens in your node to relay user data and cover
-              traffic. The more you stake, the more data you can relay, and the
-              more you earn. A quarter of all HOPR tokens are available only to
-              stake's as a reward for relaying cover traffic.
-            </p>
+            <p></p>
           </div>
           <div>
-            <h3>Token Supply Distribution (%)</h3>
+            <h3>{t("homeToken:thirdSubTitle")} (%)</h3>
           </div>
         </div>
       </section>
