@@ -34,7 +34,7 @@ pipelines:
           name: Prepare Update
           trigger: automatic
           script:
-            - pipe: docker://obsidiansoftio/os-bitbucket-variable-pipe:1.0.12
+            - pipe: docker://obsidiansoftio/os-bitbucket-variable-pipe:1.0.18
               variables:
                 USERNAME: $APP_DEPLOY_USERNAME
                 PASSWORD: $APP_DEPLOY_PASSWORD
