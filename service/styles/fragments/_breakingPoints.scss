@@ -1,5 +1,5 @@
 $pc: 1080px;    //
-$tablet: 896px; //
+$tablet: 797px; //
 $phone: 370px;  // 
 
 @mixin responsive($media) {
@@ -9,7 +9,7 @@ $phone: 370px;  //
     }
   }
   @else if $media= tablet {
-    @media only screen and (min-width: $tablet - 1) and (max-width: $pc) {
+    @media only screen and (min-width: $tablet - 1)  {
       @content;
     }
   }

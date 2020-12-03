@@ -19,7 +19,7 @@ nav {
   }
   .logo-nav {
     width: 100px;
-    @media (max-width: 50em) {
+    @include responsive(tablet) {
       width: 89px;
     }
   }
@@ -29,14 +29,14 @@ nav {
     justify-content: space-between;
   }
   .menu-desktop {
-    @media (max-width: 50em) {
+    @include responsive(tablet) {
       display: none;
     }
     a {
       text-decoration: none;
       text-transform: uppercase;
-      padding: 0 32px;
-      font-size: 1.25rem;
+      padding: 0 0.5rem;
+      font-size: 1rem;
       line-height: 1.875rem;
       letter-spacing: -0.1px;
       font-weight: 400;
