@@ -1,11 +1,10 @@
 .section-how-work {
   background: $hopr_bright_blue;
   h2 {
-    font-size: 2.375rem;
+    font-size: 60px;
     font-weight: 400;
     margin-bottom: 4rem;
     color: #ffffff;
-
   }
 }
 
@@ -13,7 +12,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin: 3em auto;
+  margin: 120px 0;
   &:first-child,
   &:last-child {
     margin: 0em auto;
@@ -38,14 +37,14 @@
     font-weight: bold;
     font-size: 1.8em;
     letter-spacing: 0.25px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 24px;
     @include responsive(tablet) {
       padding-bottom: 0.3em;
     }
   }
   p {
     font-weight: normal;
-    font-size:1.125rem;
+    font-size: 1.125rem;
     line-height: 2.063rem;
     letter-spacing: 0.15px;
   }

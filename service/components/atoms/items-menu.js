@@ -42,7 +42,7 @@ export default function ItemsMenu() {
             </Link>
           );
         })}
-        <ul className="list-lang-sm">
+        {/* <ul className="list-lang-sm">
           {listLang.map((e, i) => {
             const { info } = e;
             return (
@@ -53,7 +53,7 @@ export default function ItemsMenu() {
               )
             );
           })}
-        </ul>
+        </ul> */}
       </div>
     </>
   );

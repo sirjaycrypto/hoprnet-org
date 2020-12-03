@@ -2,51 +2,47 @@ import React, { useState, useEffect } from "react";
 import MenuMobile from "./menu-mobile";
 import Link from "next/link";
 import ItemsMenu from "../atoms/items-menu";
-import ChooseLanguage from "./choose-language";
+
 import { useRouter } from "next/router";
 
 const sectionPage = [
   {
-    id: "BACKED-BY",
-    name:"BACKED BY",
-    active: false,
-  },
-  {
-    id: "FURTHER-READING",
-    name:"FURTHER READING",
-    active: false,
-  },
-  {
-    id: "HOPR-NODE-ON-GITHUB",
-    name:"HOPR NODE ON GITHUB",
-    active: true,
+    id: "WHY-IT-MATTERS",
+    name: "WHY IT MATTERS",
   },
   {
     id: "HOW-DOES-IT-WORK",
-    active: false,
-    name:"HOW DOES IT WORK",
+    name: "HOW DOES IT WORK",
   },
   {
-    id: "WHY-IT-MATTERS",
-    name:"WHY IT MATTERS",
-    active: false,
+    id: "FURTHER-READING",
+    name: "FURTHER READING",
   },
+
   {
     id: "TOKEN-FEATURES",
-    name:"TOKEN FEATURES",
-    active: false,
+    name: "TOKEN FEATURES",
   },
   {
+    id: "HOPR-NODE-ON-GITHUB",
+    name: "HOPR NODE ON GITHUB",
+  },
+
+  {
     id: "TOKEN-RELEASE",
-    name:"TOKEN RELEASE",
-    active: false,
+    name: "TOKEN RELEASE",
+  },
+  {
+    id: "BACKED-BY",
+    name: "BACKED BY",
   },
 ];
 
-export default function Navbar() {
+export default function Navbar({ visibleNow }) {
   const [youDown, setYouDown] = useState(false);
   const [activaMenu, setActivaMenu] = useState(false);
   const router = useRouter();
+
   useEffect(() => {
     window.onscroll = function () {
       if (window.pageYOffset === 0) {
@@ -85,27 +81,23 @@ export default function Navbar() {
 
           <ItemsMenu />
         </div>
-        <ChooseLanguage />
+       
       </nav>
 
       <MenuMobile activaMenu={activaMenu} />
       {router.pathname === "/" ? (
         <div className={"section-indicator " + (youDown ? "make-visible" : "")}>
           <div className="helper-hr"></div>
-          
 
           {sectionPage.map((e, index) => {
-              const { active, name } = e;
-              return (
-              <h4> {active ? name : null}</h4>
-              );
-            })}
+            const { name } = e;
+            return <h4 key={index}> {e.id == visibleNow ? name : null}</h4>;
+          })}
           <ul>
             {sectionPage.map((e, index) => {
-              const { active } = e;
               return (
                 <li key={index}>
-                  <span className={(active ? "active" : "")}></span>
+                  <span className={e.id == visibleNow ? "active" : ""}></span>
                 </li>
               );
             })}

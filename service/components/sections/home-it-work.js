@@ -4,19 +4,19 @@ export default function HomeHomeItWork() {
   const { t } = useTranslation();
   const dataInfo = [
     {
-      img: "/assets/images/how-work-1.svg",
+      img: "/assets/images/01_hopr_Private_Animation.gif",
       title: "homeHowWor:private",
       paragraph: "homeHowWor:privateMain",
       mirrorBox: false,
     },
     {
-      img: "/assets/images/how-work-2.svg",
+      img: "/assets/images/02_hopr_Profitable_Animation.gif",
       title: "homeHowWor:profitable",
       paragraph: "homeHowWor:profitableMain",
       mirrorBox: true,
     },
     {
-      img: "/assets/images/how-work-2.svg",
+      img: "/assets/images/03_hopr_Performant.png",
       title: "homeHowWor:private",
       paragraph: "homeHowWor:privateMain",
       mirrorBox: false,

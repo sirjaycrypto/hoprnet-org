@@ -24,6 +24,17 @@ export default function Header() {
       <meta name="robots" content="index,nofollow" />
       <meta http-equiv="cache-control" content="no-cache" />
       <meta http-equiv="expires" content="43200" />
+      <link
+  rel="stylesheet"
+  type="text/css"
+  charset="UTF-8"
+  href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+/>
     </Head>
   );
 }

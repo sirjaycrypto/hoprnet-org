@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import TrackVisibility from "react-on-screen";
 import { Line } from "react-chartjs-2";
 import useTranslation from "next-translate/useTranslation";
-export default function HomeMatter({ isVisible }) {
+export default function HomeMatter({ isVisible, setVisibleNow }) {
   const { t } = useTranslation();
   const data = {
     labels: [
@@ -51,7 +51,7 @@ export default function HomeMatter({ isVisible }) {
       display: false,
       spanGaps: false,
     },
-    responsive:true,
+    responsive: true,
     borderCapStyle: "round",
     scales: {
       yAxes: [
@@ -63,17 +63,23 @@ export default function HomeMatter({ isVisible }) {
       ],
     },
   };
+
+  // {setVisibleNow("WHY-IT-MATTERS")}
+  useEffect(() => {
+    console.log(isVisible)
+    console.log({isVisible})
+  })
   return (
     <section
       id="WHY-IT-MATTERS"
       className="section-why-matters padding-section-aux invert-color "
     >
-      <TrackVisibility partialVisibility>
+      <TrackVisibility offset={1000}>
         {({ isVisible }) =>
           isVisible && (
             <div className="container ">
+              
               <h2>{t("homeWhyMatt:title")}…</h2>
-
               <div className="container">
                 <div className="container-char">
                   <Line data={data} options={optionsLine} />

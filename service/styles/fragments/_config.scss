@@ -70,6 +70,9 @@ section {
 .aux-padding-box-read {
   padding: 0 2rem;
   box-sizing: border-box;
+  @include responsive(tablet) {
+    padding: 0;
+  }
 }
 
 //
@@ -110,5 +113,13 @@ section {
 .padding-bottom {
   @include responsive(tablet) {
     margin-bottom: 2rem !important;
+  }
+}
+///
+.container-chart {
+  height: 50vh;
+  width: 80vw;
+  margin: auto;
+  @include responsive(tablet) {
   }
 }

@@ -1,10 +1,11 @@
 .container-languages {
   position: absolute;
-  right: 1.5rem;
-  transform: translateY(68%);
+  right: 24px;
+  top: 10%;
   .select-lang {
     text-transform: uppercase;
-
+    position: relative;
+    z-index: 3;
     display: flex;
     align-items: center;
     padding: 0.5rem 0;

@@ -42,7 +42,7 @@ nav {
       font-weight: 400;
       color: $hopr_grey;
       transition: all 350ms ease-in-out;
-   
+
       &:hover {
         transition: all 350ms ease-in-out;
         color: $hopr_bright_blue;
@@ -145,7 +145,7 @@ nav {
   top: 0;
   justify-content: center;
   background: $hopr_yellow;
-  height: 100vh;
+  height: 90vh;
   box-sizing: border-box;
   overflow: hidden;
   position: fixed;

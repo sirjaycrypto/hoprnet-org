@@ -7,7 +7,7 @@ export default function HomeTokenRelease() {
   const { t } = useTranslation();
   const options = {
     maintainAspectRatio: false,
-
+    responsive : true,
     legend: {
       display: true,
       position: "right",
@@ -50,17 +50,19 @@ export default function HomeTokenRelease() {
     ],
   };
 
-
-  
   const dataDate = dataSupply.map((item) => item.Date);
-  const dataTreasury = dataSupply.map((item) => item.Treasury).join('');
-  const dataTeamNAdvisors = dataSupply.map((item) => item["Team & Advisors"]).join('');
-  const dataEarlyTokenBuyers = dataSupply.map((item) => item["Early Token Buyers"]).join('');
-  const dataBounties = dataSupply.map((item) => item.Bounties).join('');
-  const dataCoverTraffic = dataSupply.map((item) => item["Cover Traffic"]).join('');
-  const dataPublicSale = dataSupply.map((item) => item["Public Sale"]).join('');
-
-  console.log(dataBounties)
+  const dataTreasury = dataSupply.map((item) => item.Treasury).join("");
+  const dataTeamNAdvisors = dataSupply
+    .map((item) => item["Team & Advisors"])
+    .join("");
+  const dataEarlyTokenBuyers = dataSupply
+    .map((item) => item["Early Token Buyers"])
+    .join("");
+  const dataBounties = dataSupply.map((item) => item.Bounties).join("");
+  const dataCoverTraffic = dataSupply
+    .map((item) => item["Cover Traffic"])
+    .join("");
+  const dataPublicSale = dataSupply.map((item) => item["Public Sale"]).join("");
 
   const dataTokenSupply = {
     labels: dataDate,
@@ -110,18 +112,6 @@ export default function HomeTokenRelease() {
     ],
   };
 
-  // const options = {
-  //   scales: {
-  //     yAxes: [
-  //       {
-  //         ticks: {
-  //           beginAtZero: true,
-  //         },
-  //       },
-  //     ],
-  //   },
-  // }
-
   return (
     <>
       <section
@@ -160,7 +150,9 @@ export default function HomeTokenRelease() {
           </div>
           <div>
             <h3>{t("homeToken:thirdSubTitle")} (%)</h3>
-            <Line data={dataTokenSupply} options={options} />
+            <div className="container-chart">
+              <Line data={dataTokenSupply} options={options} />
+            </div>
           </div>
         </div>
       </section>

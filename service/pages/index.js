@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "../components/organisms/layout";
 import Hero from "../components/organisms/hero";
 import HomeMatter from "../components/sections/home-matters";
@@ -12,16 +12,19 @@ import Slide from "../components/organisms/slider";
 import { loadNamespaces } from "./_app";
 import useTranslation from "next-translate/useTranslation";
 //
-import Zoom from 'react-reveal/Zoom';
-
+import Zoom from "react-reveal/Zoom";
+// 
+import ChooseLanguage from "../components/molecules/choose-language";
 export default function Home() {
+  const [visibleNow, setVisibleNow] = useState("");
   const { t } = useTranslation();
   return (
-    <Layout>
+    <Layout visibleNow={visibleNow}>
+      <ChooseLanguage />
       <Hero />
-      <HomeMatter />
+      <HomeMatter setVisibleNow={setVisibleNow} />
       <section className="video-home ">
-        <video controls>
+        <video autoplay loop muted playsinline>
           <source src="/assets/video/about.mp4" type="video/mp4" />
           {t("common:noSupport")}
         </video>
@@ -35,7 +38,7 @@ export default function Home() {
       <section className="banner-CTA">
         <img src="/assets/images/banner.png" alt="The HOPR-Token NOW" />
         <div className="container-btn">
-        <Zoom bottom>
+          <Zoom bottom>
             <div className="type-btn">
               <span>{t("common:btn-token")}</span>
             </div>
