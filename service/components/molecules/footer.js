@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import useTranslation from "next-translate/useTranslation";
 
 const dataInfo = [
   {
@@ -33,6 +34,7 @@ const dataInfo = [
 ];
 
 export default function Footer() {
+  const { t } = useTranslation();
   return (
     <footer>
       <div className="container padding-section-aux">
@@ -61,29 +63,29 @@ export default function Footer() {
         <div className="second-line-footer">
           <div>
             <p className="copy-footer">
-              &copy;{new Date().getFullYear()} HORP Association, all rights
-              reserved
+              &copy;{new Date().getFullYear()} {t("common:HORPAssociation")},{" "}
+              {t("common:allRights")}
             </p>
           </div>
           <div className="footer-menu">
             <ul>
               <li>
-                <Link href="/about-us">Contact</Link>
+                <Link href="/about-us">{t("common:contact")}</Link>
               </li>
               <li>
-                <Link href="/about-us">About us</Link>
+                <Link href="/about-us">{t("common:aboutUs")}</Link>
               </li>
               <li>
-                <Link href="/about-us">Partners</Link>
+                <Link href="/about-us">{t("common:partners")}</Link>
               </li>
               <li>
-                <Link href="/about-us">Support</Link>
+                <Link href="/about-us">{t("common:support")}</Link>
               </li>
               <li>
-                <Link href="/about-us">FAQ</Link>
+                <Link href="/about-us">{t("common:FAQ")}</Link>
               </li>
               <li>
-                <Link href="/about-us">Disclaimer</Link>
+                <Link href="/about-us">{t("common:disclaimer")}</Link>
               </li>
             </ul>
           </div>

@@ -1,115 +1,261 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Layout from "../../components/organisms/layout";
 import HeroInternal from "../../components/organisms/hero-internal";
-
+import SubStrack from "../../components/molecules/sub-strack";
+import Jobs from "../../components/molecules/jobs";
+import ProfileAssociation from "../../components/molecules/profile-association";
+import ContactPlus from "../../components/molecules/contact-plus";
 import { motion } from "framer-motion";
-// Our custom easing
-let easing = [0.25, 0.1, 0.25, 1];
+import { stagger, fadeInUp } from "../../util/motionConfig";
+import { loadNamespaces } from "../_app";
+import useTranslation from "next-translate/useTranslation";
 
-// Custom variant
-const fadeInUp = {
-  initial: {
-    y: 80,
-    opacity: 0,
-    transition: { duration: 0.6, ease: easing },
+const dataInfo = [
+  {
+    img: "assets/partners/avado.svg",
   },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      ease: easing,
-    },
+  {
+    img: "assets/partners/froriep.png",
   },
-};
+  {
+    img: "assets/partners/elrond.png",
+  },
+  {
+    img: "assets/partners/health_tech_cluster.png",
+  },
+  {
+    img: "assets/partners/sedimentum.png",
+  },
+  {
+    img: "assets/partners/download.png",
+  },
+  {
+    img: "assets/partners/swiss_medtech.png",
+  },
+  {
+    img: "assets/partners/swiss_healthcare_startups.png",
+  },
+];
 
-const stagger = {
-  animate: {
-    transition: {
-      staggerChildren: 1,
-    },
+const dataVALUES = [
+  {
+    img: "assets/icons/with-yellow-ball/protection-shield.png",
+    title: "aboutValu:itemTitleA",
+    text: "aboutValu:itemAboutA",
   },
-};
+  {
+    img: "assets/icons/with-yellow-ball/light-bulb-shine.png",
+    title: "aboutValu:itemTitleB",
+    text: "aboutValu:itemAboutB",
+  },
+  {
+    img: "assets/icons/with-yellow-ball/multiple-users-1.png",
+    title: "aboutValu:itemTitleC",
+    text: "aboutValu:itemAboutC",
+  },
+];
 
 export default function Index() {
+  const { t } = useTranslation();
   return (
     <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
       <Layout>
         <HeroInternal>
           <motion.div variants={stagger}>
             <motion.h1 animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
-              Independent, Incorruptible, And Indestructible
+              {t("aboutHero:title")}
             </motion.h1>
             <div>
               <motion.p variants={fadeInUp} transition={{ delay: 0.2 }}>
-                We're a team of highly motivated experts with a single shared
-                goal: universal data privacy.
+                {t("aboutHero:paragraphA")}
               </motion.p>
               <motion.p variants={fadeInUp} transition={{ delay: 0.4 }}>
-                With the HOPR protocol, companies and users can decide for
-                themselves who can view their data and who can't.
+                {t("aboutHero:paragraphB")}
               </motion.p>
               <motion.p variants={fadeInUp} transition={{ delay: 0.6 }}>
-                With the HOPR protocol, data security is solved, letting
-                everyone focus on helping people through digitalization.
+                {t("aboutHero:paragraphC")}
               </motion.p>
               <motion.p variants={fadeInUp} transition={{ delay: 0.8 }}>
-                The HOPR community is building the digital privacy landscape of
-                tomorrow. We invite everybody to join our movement.
+                {t("aboutHero:paragraphD")}
               </motion.p>
               <motion.p variants={fadeInUp} transition={{ delay: 1 }}>
-                Learn more about the team that builds the HOPR network{" "}
+                {t("aboutHero:paragraphE")}
                 <a
                   className="link-out"
                   href="https://hopr.swiss/who-is-HOPR#team"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  here.
+                  {t("common:hereLabel")}
                 </a>
               </motion.p>
             </div>
           </motion.div>
         </HeroInternal>
         <section className="continue-hero-internal padding-section-aux invert-color ">
-          <div className="container">
+          <div className="">
             <div>
-              <h2>Governance</h2>
+              <h2> {t("aboutSecundSection:title")}</h2>
             </div>
-            <div className="container-block">
+            <div className="container-sm two-block">
               <div className="block-left">
-                <p>
-                  At HOPR we're building the foundations for a more private and
-                  resilient web. But to succeed, we also need to challenge the
-                  economic power structures that shackle today's web to
-                  unhealthy and unsustainable business models.
-                </p>
-                <p>
-                  We need natively digital organizations to drive the next wave
-                  of inclusive innovation. Open technology platforms rely on and
-                  enable communities instead of emperors and shareholders.
-                </p>
+                <p>{t("aboutSecundSection:paragraphLeftA")}</p>
+                <p>{t("aboutSecundSection:paragraphLeftB")}</p>
               </div>
               <div className="block-right">
-                <p>
-                  The recent movement of Decentralized Autonomous Organizations
-                  (DAOs), provides participatory governance and economies for
-                  the blockchain era. However, DAOs cannot reach their full
-                  potential until they can co-exist with existing legal
-                  frameworks.
-                </p>
-                <p>
-                  HOPR is pioneering decentralized, community-enabling
-                  governance (DecenGov) as a techno-legal framework that
-                  combines the dynamics of communities with the efficiencies of
-                  crypto networks and the advantages of established legal bodies
-                  to govern collective efforts.
-                </p>
+                <p>{t("aboutSecundSection:paragraphRightA")}</p>
+                <p>{t("aboutSecundSection:paragraphRightB")}</p>
               </div>
             </div>
           </div>
         </section>
+        {/*  */}
+        <section className="section-partners padding-section-aux">
+          <div className="container">
+            <h2>{t("aboutPart:title")}</h2>
+            <div className="container-sm">
+              <ul>
+                {dataInfo.map((e, index) => {
+                  const { img } = e;
+                  return (
+                    <motion.li
+                      key={index}
+                      variants={fadeInUp}
+                      transition={{ delay: 0.8 }}
+                    >
+                      <img src={img} alt="The HOPR-Token NOW" />
+                    </motion.li>
+                  );
+                })}
+              </ul>
+              <div className="btn-align">
+                <div className="type-btn">
+                  <span>{t("aboutPart:btnLabel")}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/*  */}
+        <section className="continue-yellow padding-section-aux invert-color ">
+          <div className="container">
+            <div>
+              <h2>{t("common:HOPRToken")}</h2>
+              <p>{t("common:subscribeHere")}</p>
+            </div>
+            <div className="container-help-newsletter">
+              <div>
+                <SubStrack />
+              </div>
+            </div>
+          </div>
+        </section>
+        {/*  */}
+        <section className="section-HOPR-values padding-section-aux">
+          <div className="container">
+            <div>
+              <h2>{t("aboutValu:title")}</h2>
+            </div>
+            <div className="element-value">
+              {dataVALUES.map((e, index) => {
+                const { img, title, text } = e;
+                return (
+                  <motion.div
+                    key={index}
+                    variants={fadeInUp}
+                    transition={{ delay: 0.8 }}
+                    className="element-item"
+                  >
+                    <img src={img} alt={t(title)} />
+                    <div>
+                      <h4>{t(title)}</h4>
+                      <p>{t(text)}</p>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+        {/*  */}
+        <section className="section-board-association continue-yellow padding-section-aux invert-color">
+          <div>
+            <h2>{t("aboutAssoci:title")}</h2>
+          </div>
+          <div>
+            <ProfileAssociation />
+            <div className="container">
+              <p>
+                {t("aboutAssoci:paragraphA")}
+                <a href="https://hopr.swiss/who-is-HOPR#team">
+                  {t("common:HOPRServices")}
+                </a>
+              </p>
+              <div className="section-receivers">
+                <h3>{t("aboutAssoci:subtitle")}</h3>
+
+                <ul>
+                  <li>{t("aboutAssoci:itemA")}</li>
+                  <li>{t("aboutAssoci:itemB")}</li>
+                  <li>{t("aboutAssoci:itemC")}</li>
+                  <li>{t("aboutAssoci:itemD")}</li>
+                </ul>
+              </div>
+              <div>
+                <p> {t("aboutAssoci:paragraphB")}</p>
+                <div className="btn-align">
+                  <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSeiZ76QfvcbpbBJk-DJDE5IfYmzkuUfUOM-j4btBviTbBNn2w/viewform?hl=en"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-out"
+                  >
+                    <div className="type-btn">
+                      <span>{t("common:APPLY")}</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/*  */}
+        <section className="section-jobs padding-section-aux">
+          <div className="container">
+            <div>
+              <h2>{t("common:jobs")}</h2>
+              <p>{t("common:jobsLabel")}</p>
+            </div>
+            <Jobs />
+          </div>
+        </section>
+        {/*  */}
+        <section className="section-board-contact continue-yellow padding-section-aux invert-color">
+          <div>
+            <h2>{t("common:contactUs")}</h2>
+          </div>
+          <ContactPlus />
+        </section>
       </Layout>
     </motion.div>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      _ns: await loadNamespaces(
+        [
+          "common",
+          "menu",
+          "aboutHero",
+          "aboutSecundSection",
+          "aboutPart",
+          "aboutAssoci",
+          "aboutValu",
+        ],
+        locale
+      ),
+    },
+  };
 }

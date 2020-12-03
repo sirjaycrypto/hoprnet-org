@@ -1,0 +1,7 @@
+{
+    "title":" How? The HOPR Protocol",
+    "paragraphA":"The HOPR protocol provides network-level and metadata privacy for every kind of data exchange. A mixnet protects the identity of both sender and recipe ent by routing data via multiple intermediate relay hops that mix traffic.",
+    "paragraphB":"Payments are handled via probabilistic micropayments, our custom layer-2 scaling solution on top of the Ethereum blockchain.",
+    "paragraphC":" Relay mix nodes are rewarded for their work in HOPR tokens. Our proof-of-relay mechanism protects everyone from dishonest behaviour.",
+    "paragraphD":" HOPR thus provides economic incentives to run a global privacy network sustainably - and at scale - without compromising privacy."
+}

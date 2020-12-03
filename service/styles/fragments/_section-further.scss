@@ -1,14 +1,11 @@
 .section-further {
   background: $hopr_yellow;
   h2 {
-    font-weight: normal;
-    font-size: 2em;
-    margin-bottom: 4.625rem;
-    text-align: center;
-    letter-spacing: 0.5px;
+    font-size: 2.375rem;
+    font-weight: 400;
+    margin-bottom: 4rem;
     color: $hopr_grey;
-    margin-top: 0;
-    padding-top: 0;
+    text-align: center;
   }
   .list-top,
   .list-down {
@@ -25,7 +22,7 @@
     flex-direction: column;
     box-sizing: border-box;
     padding: 1em;
-    @media (max-width: 50em) {
+    @include responsive(tablet) {
       width: 100%;
     }
     .icon {
@@ -61,7 +58,7 @@
   .list-down {
     .element-future {
       width: 33%;
-      @media (max-width: 50em) {
+      @include responsive(tablet) {
         width: 50%;
         padding: 0.5em;
       }
@@ -76,7 +73,7 @@
     .info {
       h5 {
         width: 100%;
-        @media (max-width: 50em) {
+        @include responsive(tablet) {
           font-size: 1em;
           line-height: normal;
         }

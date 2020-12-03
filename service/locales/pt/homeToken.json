@@ -1,0 +1,14 @@
+{
+    "title": "TOKEN RELEASE",
+    "about": " Bloqueie tokens HOPR em seu nó para retransmitir dados do usuário e cobrir o tráfego. Quanto mais você aposta, mais dados você pode transmitir e mais você ganha. Um quarto de todos os tokens HOPR estão disponíveis apenas para apostas como recompensa por retransmitir o tráfego de cobertura.",
+    "subTitle": "KEY METRICS",
+    "listItemA": "Token Name: HOPR Token",
+    "listItemB": "Token Symbol: HOPR",
+    "listItemC": "Network: Ethereum",
+    "listItemD": "Standards: ERC20, ERC777",
+    "listItemE": "Total supply: X HOPR",
+    "listItemF": "Initial circulating supply: X HOPR",
+    "listItemG": "Token price: X USD / HOPR",
+    "secondSubTitle": "Token Allocation",
+    "thirdSubTitle": "Token Supply Distribution"
+}

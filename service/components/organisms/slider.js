@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { css } from "@emotion/css";
-
+import useTranslation from "next-translate/useTranslation";
 export default function Slide() {
+  const { t } = useTranslation();
   const dataInfo = {
     0: {
-      title: "Name, Position",
-      paragraph:
-        "This is a quote that should address HOPRS’ vision and it’s added value",
+      title: "homeSlide:slideA",
+      paragraph:"homeSlide:slideAMain"
     },
     1: {
-      title: "test-test",
-      paragraph: `Lock HOPR tokens in your node to relay user data and cover traffic. The more you stake, the more data you can relay, and the more you earn.`,
+      title: "homeSlide:slideB",
+      paragraph:"homeSlide:slideBMain"
     },
     2: {
-      title: "test-test-test",
-      paragraph: `A quarter of all HOPR tokens are available only to stake's as a reward for relaying cover traffic.`,
+      title: "homeSlide:slideC",
+      paragraph:"homeSlide:slideCMain"
     },
   };
 
@@ -43,8 +43,8 @@ export default function Slide() {
     <div className="slider invert-color ">
       <div className="main-slide container">
         <div>
-          <p className="text-info">«{current.paragraph}»</p>
-          <p className="text-label-data">{current.title}</p>
+          <p className="text-info">«{t(current.title)}»</p>
+          <p className="text-label-data">{t(current.paragraph)}</p>
         </div>
         <div
           className={css`

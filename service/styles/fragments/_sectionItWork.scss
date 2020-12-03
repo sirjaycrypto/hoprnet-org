@@ -1,21 +1,17 @@
 .section-how-work {
   background: $hopr_bright_blue;
   h2 {
-    font-weight: normal;
-    font-size: 2em;
-    margin-bottom: 4.625rem;
-    text-align: center;
-    letter-spacing: 0.5px;
+    font-size: 2.375rem;
+    font-weight: 400;
+    margin-bottom: 4rem;
     color: #ffffff;
-    margin-top: 0;
-    padding-top: 0;
 
   }
 }
 
 .info-box-line {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   margin: 3em auto;
   &:first-child,
@@ -43,7 +39,7 @@
     font-size: 1.8em;
     letter-spacing: 0.25px;
     margin-bottom: 1.5rem;
-    @media (max-width: 50em) {
+    @include responsive(tablet) {
       padding-bottom: 0.3em;
     }
   }
@@ -61,7 +57,7 @@
 }
 .flex-line {
   flex-direction: row-reverse;
-  @media (max-width: 50em) {
+  @include responsive(tablet) {
     flex-direction: column;
   }
 }

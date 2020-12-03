@@ -1,0 +1,42 @@
+.contact-plus-element {
+  display: flex;
+  flex-wrap: wrap;
+  .item-contact-plus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  a {
+    text-decoration: none;
+    @include responsive(tablet) {
+      width: 100%;
+    }
+  }
+  .bg-img {
+    background: #fff;
+    width: 75px;
+    height: 75px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    margin-bottom: 0.75rem;
+    img {
+      width: 45px;
+      height: 45px;
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+  }
+  h6 {
+    font-size: 1.125rem;
+    font-weight: 300;
+    color: $hopr_grey;
+    padding: 0;
+    margin: 0;
+  }
+}

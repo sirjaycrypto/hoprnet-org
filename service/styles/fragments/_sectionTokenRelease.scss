@@ -1,13 +1,10 @@
 .section-token-release {
   h2 {
-    font-weight: normal;
-    font-size: 2em;
-    margin-bottom: 4.625rem;
-    text-align: center;
-    letter-spacing: 0.5px;
+    font-size: 3.75rem;
+    font-weight: 400;
+    margin-bottom: 4rem;
     color: $hopr_grey;
-    margin-top: 0;
-    padding-top: 0;
+    text-align: center;
   }
   h3 {
     font-weight: bold;
@@ -16,6 +13,8 @@
     text-align: center;
     letter-spacing: 0.291667px;
     color: $hopr_grey;
+    margin-top: 6.25rem;
+    margin-bottom: 3.125rem;
   }
   p {
     font-size: 1.563rem;
@@ -32,6 +31,9 @@
     width: 100%;
   }
   .container-table {
+    box-shadow: 1px 1px 41px -13px rgba(0 ,0 ,0, 0.34);
+    border-radius: 16px;
+    overflow: hidden;
     .title {
       background: $hopr_bright_blue;
       padding: 0.7em;

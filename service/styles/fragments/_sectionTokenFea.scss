@@ -1,13 +1,9 @@
 .section-token-fea {
   h2 {
-    font-weight: normal;
-      font-size: 2em;
-      margin-bottom: 4.625rem;
-      text-align: center;
-      letter-spacing: 0.5px;
-      color: $hopr_grey;
-      margin-top: 0;
-      padding-top: 0;
+    font-size: 2.375rem;
+    font-weight: 400;
+    margin-bottom: 4rem;
+    color: $hopr_grey;
   }
 
   .element-boxing {
@@ -19,7 +15,7 @@
       width: 33%;
       padding: 0.5em;
       box-sizing: border-box;
-      @media (max-width: 50em) {
+      @include responsive(tablet) {
         width: 100%;
         margin: 2em 0;
         align-items: center;
@@ -31,7 +27,7 @@
       position: relative;
       width: fit-content;
       margin-bottom: 3.125rem;
-      @media (max-width: 50em) {
+      @include responsive(tablet) {
         margin:1em  auto;
       }
       &::before {
@@ -55,7 +51,7 @@
         padding: 0;
         margin: 0;
         color: $hopr_grey;
-        @media (max-width: 50em) {
+        @include responsive(tablet) {
           text-align: center;
         }
       }
@@ -69,6 +65,7 @@
         font-size: 1.125rem;
         line-height: 2.063rem;
         letter-spacing: 0.15px;
+      
       }
     }
   }

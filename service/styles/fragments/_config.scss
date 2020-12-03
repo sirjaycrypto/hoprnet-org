@@ -26,20 +26,27 @@ section {
 
 .container-bottom {
   position: absolute;
-  bottom: 5%;
+  bottom: 11vh;
 }
 
 .video-home {
   height: 100%;
   overflow: hidden;
-  iframe {
+  video {
     width: 100%;
     height: 600px;
   }
 }
 
+.ytp-title-text,
+.ytp-chrome-top,
+.ytp-show-cards-title,
+.ytp-gradient-top {
+  display: none !important;
+}
+
 .global-home-aux {
-  @media (max-width: 50em) {
+  @include responsive(tablet) {
     font-size: calc(1em / 1.2);
   }
 }
@@ -61,7 +68,7 @@ section {
 
 //
 .aux-padding-box-read {
-  padding: 0.5em;
+  padding: 0 2rem;
   box-sizing: border-box;
 }
 
@@ -73,8 +80,35 @@ section {
 
 .container-char {
   background: #fff;
+  box-shadow: 1px 1px 41px -13px rgba(0, 0, 0, 0.34);
+  border-radius: 16px;
+  overflow: hidden;
+  height: auto;
+  width: 50vw;
+  margin: auto;
+  @include responsive(tablet) {
+    width: 90vw;
+  }
   canvas {
     padding: 1em;
     box-sizing: border-box;
+  }
+}
+
+.block-left,
+.block-right {
+  width: 50%;
+  padding: 1rem;
+  box-sizing: border-box;
+  @include responsive(tablet) {
+    width: 100%;
+    padding: 0.3rem;
+  }
+}
+
+//
+.padding-bottom {
+  @include responsive(tablet) {
+    margin-bottom: 2rem !important;
   }
 }

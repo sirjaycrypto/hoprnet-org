@@ -1,7 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { Pie } from "react-chartjs-2";
+import React from "react";
+import useTranslation from "next-translate/useTranslation";
+import { Line, Pie } from "react-chartjs-2";
+import dataSupply from "../../public/assets/json/dataSupply.json";
 
 export default function HomeTokenRelease() {
+  const { t } = useTranslation();
   const options = {
     maintainAspectRatio: false,
 
@@ -47,51 +50,117 @@ export default function HomeTokenRelease() {
     ],
   };
 
+
+  
+  const dataDate = dataSupply.map((item) => item.Date);
+  const dataTreasury = dataSupply.map((item) => item.Treasury).join('');
+  const dataTeamNAdvisors = dataSupply.map((item) => item["Team & Advisors"]).join('');
+  const dataEarlyTokenBuyers = dataSupply.map((item) => item["Early Token Buyers"]).join('');
+  const dataBounties = dataSupply.map((item) => item.Bounties).join('');
+  const dataCoverTraffic = dataSupply.map((item) => item["Cover Traffic"]).join('');
+  const dataPublicSale = dataSupply.map((item) => item["Public Sale"]).join('');
+
+  console.log(dataBounties)
+
+  const dataTokenSupply = {
+    labels: dataDate,
+    datasets: [
+      {
+        label: "Treasury",
+        data: dataTreasury,
+        fill: true,
+        backgroundColor: "#FEFFA0",
+        borderWidth: 0,
+      },
+      {
+        label: "Team & Advisors",
+        data: dataTeamNAdvisors,
+        fill: true,
+        backgroundColor: "#FBFB3B",
+        borderWidth: 0,
+      },
+      {
+        label: "Early Token Buyers",
+        data: dataEarlyTokenBuyers,
+        fill: true,
+        backgroundColor: "#BCBC2A",
+        borderWidth: 0,
+      },
+      {
+        label: "Bounties",
+        data: dataBounties,
+        fill: true,
+        backgroundColor: "#7E7E1E",
+        borderWidth: 0,
+      },
+      {
+        label: "Cover Traffic",
+        data: dataCoverTraffic,
+        fill: true,
+        backgroundColor: "#0E01B4",
+        borderWidth: 0,
+      },
+      {
+        label: "Public Sale",
+        data: dataPublicSale,
+        fill: true,
+        backgroundColor: "#020250",
+        borderWidth: 0,
+      },
+    ],
+  };
+
+  // const options = {
+  //   scales: {
+  //     yAxes: [
+  //       {
+  //         ticks: {
+  //           beginAtZero: true,
+  //         },
+  //       },
+  //     ],
+  //   },
+  // }
+
   return (
     <>
-      <section className="section-token-release padding-section-aux">
+      <section
+        id="TOKEN-RELEASE"
+        className="section-token-release padding-section-aux"
+      >
         <div className="container">
           <div>
-            <h2>TOKEN RELEASE</h2>
-            <p>
-              Lock HOPR tokens in your node to relay user data and cover
-              traffic. The more you stake, the more data you can relay, and the
-              more you earn. A quarter of all HOPR tokens are available only to
-              stake's as a reward for relaying cover traffic.
-            </p>
+            <h2>{t("homeToken:title")}</h2>
+            <p>{t("homeToken:about")}</p>
           </div>
           <div className="table-info">
             <div className="container-table">
               <div className="title">
-                <h4>KEY METRICS</h4>
+                <h4>{t("homeToken:subTitle")}</h4>
               </div>
               <div className="list-table">
                 <ul>
-                  <li>Token Name: HOPR Token</li>
-                  <li>Token Symbol: HOPR</li>
-                  <li>Network: Ethereum</li>
-                  <li>Standards: ERC20, ERC777</li>
-                  <li>Total supply: X HOPR</li>
-                  <li>Initial circulating supply: X HOPR</li>
-                  <li>Token price: X USD / HOPR</li>
+                  <li>{t("homeToken:listItemA")}</li>
+                  <li>{t("homeToken:listItemB")}</li>
+                  <li>{t("homeToken:listItemC")}</li>
+                  <li>{t("homeToken:listItemD")}</li>
+                  <li>{t("homeToken:listItemE")}</li>
+                  <li>{t("homeToken:listItemF")}</li>
+                  <li>{t("homeToken:listItemG")}</li>
                 </ul>
               </div>
             </div>
           </div>
           <div>
-            <h3>Token Allocation (%)</h3>
+            <h3>{t("homeToken:secondSubTitle")} (%)</h3>
             <div>
               <Pie data={data} width={100} height={539} options={options} />
             </div>
-            <p>
-              Lock HOPR tokens in your node to relay user data and cover
-              traffic. The more you stake, the more data you can relay, and the
-              more you earn. A quarter of all HOPR tokens are available only to
-              stake's as a reward for relaying cover traffic.
-            </p>
+            <p></p>
           </div>
           <div>
-            <h3>Token Supply Distribution (%)</h3>
+            <h3>{t("homeToken:thirdSubTitle")} (%)</h3>
+            <Line data={dataTokenSupply} options={options} />
           </div>
         </div>
       </section>

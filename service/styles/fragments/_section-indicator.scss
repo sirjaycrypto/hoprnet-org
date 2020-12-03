@@ -1,0 +1,57 @@
+.section-indicator {
+  display: none;
+  @include responsive(tablet) {
+    top: 80px;
+    display: block;
+    width: 100%;
+
+    box-sizing: border-box;
+    margin: auto;
+    position: fixed;
+    background: #fff;
+    z-index: 3;
+  }
+  .helper-hr {
+    background: #eee;
+    height: 1px;
+    width: 89%;
+    margin: auto;
+  }
+  h4 {
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1.125rem;
+    padding: 0;
+    margin: 0.5rem 0;
+  }
+  ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+    li {
+      width: 14px;
+      height: 14px;
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      margin-right: 1rem;
+      &:last-child {
+        margin-right: 0;
+      }
+      span {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: #f6f6f6;
+        &.active {
+          background: $hopr_bright_blue;
+        }
+      }
+    }
+  }
+}

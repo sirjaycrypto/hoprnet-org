@@ -1,0 +1,33 @@
+.section-partners {
+  text-align: center;
+  h2 {
+    font-size: 2.375rem;
+    font-weight: 400;
+    margin-bottom: 4rem;
+    color: $hopr_grey;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      box-sizing: border-box;
+      height: 70px;
+    }
+    img {
+      height: 100%;
+      object-fit: cover;
+      filter:contrast(0);
+    }
+  }
+  .btn-align {
+    margin-top: 4rem;
+  }
+}

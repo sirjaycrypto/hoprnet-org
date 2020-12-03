@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import TrackVisibility from "react-on-screen";
 import { Line } from "react-chartjs-2";
-
-export default function HomeMatter() {
-
+import useTranslation from "next-translate/useTranslation";
+export default function HomeMatter({ isVisible }) {
+  const { t } = useTranslation();
   const data = {
     labels: [
       "2009",
@@ -41,18 +42,17 @@ export default function HomeMatter() {
         fill: false,
         backgroundColor: "rgba(0,0,0,0)",
         borderColor: "#648CFA",
-        
       },
     ],
   };
 
-  const options = {
+  const optionsLine = {
     legend: {
       display: false,
-      spanGaps:false
-      
+      spanGaps: false,
     },
-    borderCapStyle:'round',
+    responsive:true,
+    borderCapStyle: "round",
     scales: {
       yAxes: [
         {
@@ -63,35 +63,35 @@ export default function HomeMatter() {
       ],
     },
   };
-
   return (
-    <>
-      <section className="section-why-matters padding-section-aux invert-color ">
-        <div className="container">
-          <h2>WHY IT MATTERS…</h2>
-         
-          <div className="container-char">
-          <Line data={data} options={options} />
-          </div>
-          <div>
-            <p className="link-out">Source: Cisco Visual Networking Index</p>
-          </div>
-          <p>
-            "Millions of Gigabytes are transmitted across the globe every
-            minute. The global internet bandwidth is still growing exponentially
-            due to new technologies such as 5G. A lot of this massive amount of
-            data is confidentially transmitted by people or corporations that
-            need protection. The HOPR protocol brings metadata privacy on the
-            network level for all of them. The HOPR network is driven by the
-            HOPR token."
-          </p>
-          <div className="container-center-center">
-            <div className="type-btn">
-              <span>Get HOPR-Token on SECRET</span>
+    <section
+      id="WHY-IT-MATTERS"
+      className="section-why-matters padding-section-aux invert-color "
+    >
+      <TrackVisibility partialVisibility>
+        {({ isVisible }) =>
+          isVisible && (
+            <div className="container ">
+              <h2>{t("homeWhyMatt:title")}…</h2>
+
+              <div className="container">
+                <div className="container-char">
+                  <Line data={data} options={optionsLine} />
+                </div>
+              </div>
+              <div>
+                <p className="link-out">{t("homeWhyMatt:labelDate")}</p>
+              </div>
+              <p>"{t("homeWhyMatt:mainText")}"</p>
+              <div className="container-center-center">
+                <div className="type-btn">
+                  <span>{t("homeWhyMatt:btnLabel")}</span>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
-    </>
+          )
+        }
+      </TrackVisibility>
+    </section>
   );
 }

@@ -1,59 +1,61 @@
-import React, { useEffect, useState } from 'react'
-
-
+import React from "react";
+import useTranslation from "next-translate/useTranslation";
 export default function HomeHomeItWork() {
-
+  const { t } = useTranslation();
   const dataInfo = [
     {
-      img: '/assets/images/how-work-1.svg',
-      title: 'Private',
-      paragraph:
-        'Lock HOPR tokens in your node to relay user data and cover traffic. The more you stake, the more data you can relay, and the more you earn. A quarter of all HOPR tokens are available only to stakers as a reward for relaying cover traffic.',
+      img: "/assets/images/how-work-1.svg",
+      title: "homeHowWor:private",
+      paragraph: "homeHowWor:privateMain",
       mirrorBox: false,
     },
     {
-      img: '/assets/images/how-work-2.svg',
-      title: 'Profitable',
-      paragraph:
-        'Lock HOPR tokens in your node to relay user data and cover traffic. The more you stake, the more data you can relay, and the more you earn. A quarter of all HOPR tokens are available only to stakers as a reward for relaying cover traffic.',
+      img: "/assets/images/how-work-2.svg",
+      title: "homeHowWor:profitable",
+      paragraph: "homeHowWor:profitableMain",
       mirrorBox: true,
     },
     {
-      img: '/assets/images/how-work-2.svg',
-      title: 'Private',
-      paragraph:
-        'Lock HOPR tokens in your node to relay user data and cover traffic. The more you stake, the more data you can relay, and the more you earn. A quarter of all HOPR tokens are available only to stakers as a reward for relaying cover traffic.',
+      img: "/assets/images/how-work-2.svg",
+      title: "homeHowWor:private",
+      paragraph: "homeHowWor:privateMain",
       mirrorBox: false,
     },
-  ]
+  ];
 
   return (
     <>
-      <section className="section-how-work padding-section-aux">
+      <section
+        id="HOW-DOES-IT-WORK"
+        className="section-how-work padding-section-aux"
+      >
         <div className="container">
           <div className="container-center-center">
-            <h2>HOW DOES IT WORK?</h2>
-            
+            <h2>{t("homeHowWor:title")}</h2>
           </div>
           {/*  */}
           <div className="element-boxing">
-            {dataInfo.map((e,index) => {
-              const { img, title, paragraph, mirrorBox } = e
-              return    ( 
-              <div key={index} className={'info-box-line ' + (mirrorBox ? 'flex-line' : '')}>
-                <div className="info-cont aux-padding-box-read">
-                  <h3>{title}</h3>
-                  <p>{paragraph}</p>
+            {dataInfo.map((e, index) => {
+              const { img, title, paragraph, mirrorBox } = e;
+              return (
+                <div
+                  key={index}
+                  className={"info-box-line " + (mirrorBox ? "flex-line" : "")}
+                >
+                  <div className="info-cont aux-padding-box-read">
+                    <h3>{t(title)}</h3>
+                    <p className="padding-bottom">{t(paragraph)}</p>
+                  </div>
+                  <div>
+                    <img src={img} alt={t(title)} />
+                  </div>
                 </div>
-                <div>
-                <img src={img} alt={title} /> 
-              </div>
-            </div>)
+              );
             })}
           </div>
           {/*  */}
         </div>
       </section>
     </>
-  )
+  );
 }
