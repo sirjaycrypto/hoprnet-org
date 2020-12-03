@@ -1,6 +1,7 @@
 import React from "react";
 import useTranslation from "next-translate/useTranslation";
-import { Pie } from "react-chartjs-2";
+import { Line, Pie } from "react-chartjs-2";
+import dataSupply from "../../public/assets/json/dataSupply.json";
 
 export default function HomeTokenRelease() {
   const { t } = useTranslation();
@@ -49,6 +50,51 @@ export default function HomeTokenRelease() {
     ],
   };
 
+
+  
+
+  // console.log(dataSupply);
+
+  const dataTokenSupply = {
+    labels: [
+      "Date",
+      "Public",
+      "Cover Traffic",
+      "Bounties",
+      "Early Token Buyers",
+      "Team & Advisors",
+    ],
+    datasets: [
+      {
+        label: "# of Votes",
+        data: [75000000, 250000000, 56875000, 180000000, 200000000, 238125000],
+        fill: false,
+        backgroundColor: [
+          "#0B005D",
+          "#2200C2",
+          "#878A01",
+          "#C1C500",
+          "#F8FE00",
+          "#FDFFA2",
+        ],
+
+        borderColor: "rgba(255, 99, 132, 0.2)",
+      },
+    ],
+  };
+
+  // const options = {
+  //   scales: {
+  //     yAxes: [
+  //       {
+  //         ticks: {
+  //           beginAtZero: true,
+  //         },
+  //       },
+  //     ],
+  //   },
+  // }
+
   return (
     <>
       <section
@@ -87,6 +133,7 @@ export default function HomeTokenRelease() {
           </div>
           <div>
             <h3>{t("homeToken:thirdSubTitle")} (%)</h3>
+            <Line data={dataTokenSupply} options={options} />
           </div>
         </div>
       </section>

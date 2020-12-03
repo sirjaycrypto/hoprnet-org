@@ -11,6 +11,8 @@ import HomeFurther from "../components/sections/home-further";
 import Slide from "../components/organisms/slider";
 import { loadNamespaces } from "./_app";
 import useTranslation from "next-translate/useTranslation";
+//
+import Zoom from 'react-reveal/Zoom';
 
 export default function Home() {
   const { t } = useTranslation();
@@ -33,9 +35,11 @@ export default function Home() {
       <section className="banner-CTA">
         <img src="/assets/images/banner.png" alt="The HOPR-Token NOW" />
         <div className="container-btn">
-          <div className="type-btn">
-            <span>{t("common:btn-token")}</span>
-          </div>
+        <Zoom bottom>
+            <div className="type-btn">
+              <span>{t("common:btn-token")}</span>
+            </div>
+          </Zoom>
         </div>
       </section>
       <HomeFurther />

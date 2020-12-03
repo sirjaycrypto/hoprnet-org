@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import TrackVisibility from "react-on-screen";
 import { Line } from "react-chartjs-2";
 import useTranslation from "next-translate/useTranslation";

@@ -1,8 +1,10 @@
 import React from "react";
 import HeroInfo from "../molecules/hero-info";
 import useTranslation from 'next-translate/useTranslation';
+
 export default function Hero() {
   const { t } = useTranslation();
+
   return (
     <>
       <section className="section-hero">
