@@ -23,7 +23,7 @@ pipelines:
             - VERSION="1.0.$BITBUCKET_BUILD_NUMBER"
             - IMAGE="$DOCKER_ORG/$BITBUCKET_REPO_SLUG"
             # build the Docker image
-            - docker build -t ${IMAGE}:${VERSION} ./site/
+            - docker build -t ${IMAGE}:${VERSION} ./service/
             - docker image tag ${IMAGE}:${VERSION} ${IMAGE}:latest
             # push the new Docker image to the Docker registry
             - docker image push ${IMAGE}
@@ -56,7 +56,7 @@ pipelines:
                 HOST: '$MAIL_HOST'
                 PORT: $MAIL_PORT
                 SUBJECT: 'Bitbucket Pipe Notification'
-                BODY_PLAIN: 'The Image for rd-landing-site was created 1.0.$BITBUCKET_BUILD_NUMBER $BITBUCKET_REPO_OWNER	$BITBUCKET_GIT_HTTP_ORIGIN'
+                BODY_PLAIN: 'The Image for hopr-token-site-service was created 1.0.$BITBUCKET_BUILD_NUMBER $BITBUCKET_REPO_OWNER	$BITBUCKET_GIT_HTTP_ORIGIN'
       - step:
           name: Initiat deployment
           trigger: manual
