@@ -31,12 +31,15 @@ export default function Slide() {
     <div className="slider invert-color ">
       <div className="main-slide ">
         <Slider {...settings}>
-          <div>
-            <h3>1</h3>
-          </div>
-          <div>
-            <h3>1</h3>
-          </div>
+          {dataInfo.map((e, index) => {
+            const { title, paragraph } = e;
+            return (
+              <div key={index}>
+                <p className="text-info">«{t(title)}»</p>
+                <p className="text-label-data">{t(paragraph)}</p>
+              </div>
+            );
+          })}
         </Slider>
       </div>
     </div>
