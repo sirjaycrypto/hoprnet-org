@@ -1,0 +1,64 @@
+image: atlassian/default-image:2
+
+options:
+  size: 2x  # all steps in this repo get 8GB memory
+definitions:
+  services:
+    docker:
+      memory: 4096
+
+pipelines:
+  custom:
+    deployment-to-test:
+      - step:
+          name: Build and Push
+          services:
+            - docker
+          trigger: automatic
+          caches:
+            - docker
+          script:
+            # authenticate with the Docker Hub registry
+            - docker login --username $DOCKERHUB_USERNAME --password $DOCKERHUB_PASSWORD
+            - VERSION="1.0.$BITBUCKET_BUILD_NUMBER"
+            - IMAGE="$DOCKER_ORG/$BITBUCKET_REPO_SLUG"
+            # build the Docker image
+            - docker build -t ${IMAGE}:${VERSION} ./site/
+            - docker image tag ${IMAGE}:${VERSION} ${IMAGE}:latest
+            # push the new Docker image to the Docker registry
+            - docker image push ${IMAGE}
+            # Push tags
+            - git tag -a "${VERSION}" -m "Tagging for release ${VERSION}"
+            - git push origin ${VERSION}
+      - step:
+          name: Prepare Update
+          trigger: automatic
+          script:
+            - pipe: docker://obsidiansoftio/os-bitbucket-variable-pipe:1.0.12
+              variables:
+                USERNAME: $APP_DEPLOY_USERNAME
+                PASSWORD: $APP_DEPLOY_PASSWORD
+                WORKSPACE: $APP_DEPLOY_WORKSPACE
+                PROJECT_SLUG: $DEPLOY_PROJECT_SLUG
+                ENVIROMENT_SLUG: $DEPLOY_ENVIROMENT_SLUG
+                VARIABLE: $DEPLOY_PROJECT_VARIABLE
+                VALUE: 1.0.$BITBUCKET_BUILD_NUMBER
+      - step:
+          name: Send confirmation notification
+          trigger: automatic
+          script:
+            - pipe: atlassian/email-notify:0.3.8
+              variables:
+                USERNAME: '$MAIL_USERNAME'
+                PASSWORD: '$MAIL_PASSWORD'
+                FROM: '$MAIL_FROM'
+                TO: '$MAIL_TO'
+                HOST: '$MAIL_HOST'
+                PORT: $MAIL_PORT
+                SUBJECT: 'Bitbucket Pipe Notification'
+                BODY_PLAIN: 'The Image for rd-landing-site was created 1.0.$BITBUCKET_BUILD_NUMBER $BITBUCKET_REPO_OWNER	$BITBUCKET_GIT_HTTP_ORIGIN'
+      - step:
+          name: Initiat deployment
+          trigger: manual
+          script:
+            - curl -X POST -is -u ${APP_DEPLOY_USERNAME}:${APP_DEPLOY_PASSWORD} -H 'Content-Type:application/json' https://api.bitbucket.org/2.0/repositories/${APP_DEPLOY_WORKSPACE}/${DEPLOY_PROJECT_SLUG}/pipelines/ -d '{"target":{"type":"pipeline_ref_target","ref_type":"branch","ref_name":"development","selector":{"type":"custom","pattern":"deployment-to-test"}}}'
