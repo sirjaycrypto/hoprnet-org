@@ -46,11 +46,12 @@ export default function HomeMatter({ isVisible }) {
     ],
   };
 
-  const options = {
+  const optionsLine = {
     legend: {
       display: false,
       spanGaps: false,
     },
+    responsive:true,
     borderCapStyle: "round",
     scales: {
       yAxes: [
@@ -73,9 +74,9 @@ export default function HomeMatter({ isVisible }) {
             <div className="container ">
               <h2>{t("homeWhyMatt:title")}…</h2>
 
-              <div className="container-sm">
+              <div className="container">
                 <div className="container-char">
-                  <Line data={data} options={options} />
+                  <Line data={data} options={optionsLine} />
                 </div>
               </div>
               <div>
