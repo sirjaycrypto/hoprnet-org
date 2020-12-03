@@ -87,7 +87,7 @@ section {
   width: 50vw;
   margin: auto;
   @include responsive(tablet) {
-    width: 100vw;
+    width: 90vw;
   }
   canvas {
     padding: 1em;
@@ -103,5 +103,12 @@ section {
   @include responsive(tablet) {
     width: 100%;
     padding: 0.3rem;
+  }
+}
+
+//
+.padding-bottom {
+  @include responsive(tablet) {
+    margin-bottom: 2rem !important;
   }
 }

@@ -12,7 +12,7 @@ export default function HomeHomeItWork() {
     {
       img: "/assets/images/how-work-2.svg",
       title: "homeHowWor:profitable",
-      paragraph:"homeHowWor:profitableMain",
+      paragraph: "homeHowWor:profitableMain",
       mirrorBox: true,
     },
     {
@@ -44,7 +44,7 @@ export default function HomeHomeItWork() {
                 >
                   <div className="info-cont aux-padding-box-read">
                     <h3>{t(title)}</h3>
-                    <p>{t(paragraph)}</p>
+                    <p className="padding-bottom">{t(paragraph)}</p>
                   </div>
                   <div>
                     <img src={img} alt={t(title)} />

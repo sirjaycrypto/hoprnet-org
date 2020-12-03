@@ -52,33 +52,60 @@ export default function HomeTokenRelease() {
 
 
   
+  const dataDate = dataSupply.map((item) => item.Date);
+  const dataTreasury = dataSupply.map((item) => item.Treasury).join('');
+  const dataTeamNAdvisors = dataSupply.map((item) => item["Team & Advisors"]).join('');
+  const dataEarlyTokenBuyers = dataSupply.map((item) => item["Early Token Buyers"]).join('');
+  const dataBounties = dataSupply.map((item) => item.Bounties).join('');
+  const dataCoverTraffic = dataSupply.map((item) => item["Cover Traffic"]).join('');
+  const dataPublicSale = dataSupply.map((item) => item["Public Sale"]).join('');
 
-  // console.log(dataSupply);
+  console.log(dataBounties)
 
   const dataTokenSupply = {
-    labels: [
-      "Date",
-      "Public",
-      "Cover Traffic",
-      "Bounties",
-      "Early Token Buyers",
-      "Team & Advisors",
-    ],
+    labels: dataDate,
     datasets: [
       {
-        label: "# of Votes",
-        data: [75000000, 250000000, 56875000, 180000000, 200000000, 238125000],
-        fill: false,
-        backgroundColor: [
-          "#0B005D",
-          "#2200C2",
-          "#878A01",
-          "#C1C500",
-          "#F8FE00",
-          "#FDFFA2",
-        ],
-
-        borderColor: "rgba(255, 99, 132, 0.2)",
+        label: "Treasury",
+        data: dataTreasury,
+        fill: true,
+        backgroundColor: "#FEFFA0",
+        borderWidth: 0,
+      },
+      {
+        label: "Team & Advisors",
+        data: dataTeamNAdvisors,
+        fill: true,
+        backgroundColor: "#FBFB3B",
+        borderWidth: 0,
+      },
+      {
+        label: "Early Token Buyers",
+        data: dataEarlyTokenBuyers,
+        fill: true,
+        backgroundColor: "#BCBC2A",
+        borderWidth: 0,
+      },
+      {
+        label: "Bounties",
+        data: dataBounties,
+        fill: true,
+        backgroundColor: "#7E7E1E",
+        borderWidth: 0,
+      },
+      {
+        label: "Cover Traffic",
+        data: dataCoverTraffic,
+        fill: true,
+        backgroundColor: "#0E01B4",
+        borderWidth: 0,
+      },
+      {
+        label: "Public Sale",
+        data: dataPublicSale,
+        fill: true,
+        backgroundColor: "#020250",
+        borderWidth: 0,
       },
     ],
   };

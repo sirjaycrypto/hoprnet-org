@@ -4,6 +4,45 @@ import Link from "next/link";
 import ItemsMenu from "../atoms/items-menu";
 import ChooseLanguage from "./choose-language";
 import { useRouter } from "next/router";
+
+const sectionPage = [
+  {
+    id: "BACKED-BY",
+    name:"BACKED BY",
+    active: false,
+  },
+  {
+    id: "FURTHER-READING",
+    name:"FURTHER READING",
+    active: false,
+  },
+  {
+    id: "HOPR-NODE-ON-GITHUB",
+    name:"HOPR NODE ON GITHUB",
+    active: true,
+  },
+  {
+    id: "HOW-DOES-IT-WORK",
+    active: false,
+    name:"HOW DOES IT WORK",
+  },
+  {
+    id: "WHY-IT-MATTERS",
+    name:"WHY IT MATTERS",
+    active: false,
+  },
+  {
+    id: "TOKEN-FEATURES",
+    name:"TOKEN FEATURES",
+    active: false,
+  },
+  {
+    id: "TOKEN-RELEASE",
+    name:"TOKEN RELEASE",
+    active: false,
+  },
+];
+
 export default function Navbar() {
   const [youDown, setYouDown] = useState(false);
   const [activaMenu, setActivaMenu] = useState(false);
@@ -53,18 +92,23 @@ export default function Navbar() {
       {router.pathname === "/" ? (
         <div className={"section-indicator " + (youDown ? "make-visible" : "")}>
           <div className="helper-hr"></div>
-          <h4>Our Blog</h4>
+          
 
+          {sectionPage.map((e, index) => {
+              const { active, name } = e;
+              return (
+              <h4> {active ? name : null}</h4>
+              );
+            })}
           <ul>
-            <li>
-              <span></span>
-            </li>
-            <li>
-              <span className="active"></span>
-            </li>
-            <li>
-              <span></span>
-            </li>
+            {sectionPage.map((e, index) => {
+              const { active } = e;
+              return (
+                <li key={index}>
+                  <span className={(active ? "active" : "")}></span>
+                </li>
+              );
+            })}
           </ul>
         </div>
       ) : null}
