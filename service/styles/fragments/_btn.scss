@@ -2,11 +2,11 @@
   background: linear-gradient(90deg, #0000db 0%, #292941 100%);
   transition: all 600ms ease-in-out;
   padding: 0em 1em;
-  border-radius: 100px;
+  border-radius: 8px;
   width: fit-content;
   span {
     font-weight: 600;
-    font-size: 1em;
+    font-size: 17px;
     line-height: 2em;
     display: flex;
     align-items: center;
@@ -42,8 +42,10 @@
 // btn-hero
 
 .btn-hero {
-  font-size: 35.7px;
-  @include responsive(tablet) {
-    font-size: 18px;
+  span {
+    font-size: 35.7px;
+    @include responsive(tablet) {
+      font-size: 18px;
+    }
   }
 }
