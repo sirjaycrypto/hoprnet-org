@@ -13,7 +13,8 @@ import { loadNamespaces } from "./_app";
 import useTranslation from "next-translate/useTranslation";
 //
 import Zoom from "react-reveal/Zoom";
-// 
+import ReactPlayer from "react-player/lazy";
+//
 import ChooseLanguage from "../components/molecules/choose-language";
 export default function Home() {
   const [visibleNow, setVisibleNow] = useState("");
@@ -24,11 +25,17 @@ export default function Home() {
       <Hero />
       <HomeMatter setVisibleNow={setVisibleNow} />
       <section className="video-home ">
-        <video autoplay loop muted playsinline>
-          <source src="/assets/video/about.mp4" type="video/mp4" />
-          {t("common:noSupport")}
-        </video>
+        <ReactPlayer
+          className="react-player"
+          url="/assets/video/about.mp4"
+          width="100%"
+          height="100%"
+          muted={true}
+          playing={true}
+          loop={true}
+        />
       </section>
+
       <HomeHomeItWork />
       <HomeTokenFeatures />
       <Slide />
