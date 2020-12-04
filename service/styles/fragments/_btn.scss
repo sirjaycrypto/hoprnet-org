@@ -1,7 +1,7 @@
 .type-btn {
   background: linear-gradient(90deg, #0000db 0%, #292941 100%);
   transition: all 600ms ease-in-out;
-  padding: 0.6em 1.5em;
+  padding: 0em 1em;
   border-radius: 100px;
   width: fit-content;
   span {
@@ -17,9 +17,9 @@
     padding: 0;
   }
   @include responsive(tablet) {
-    padding: 0.5em 0.6em;
+    padding: 0.5em 1rem;
     span {
-      font-size: 1em;
+      font-size: 18px;
     }
   }
   &:hover {
@@ -38,4 +38,12 @@
 }
 .link-out {
   text-decoration: none;
+}
+// btn-hero
+
+.btn-hero {
+  font-size: 35.7px;
+  @include responsive(tablet) {
+    font-size: 18px;
+  }
 }

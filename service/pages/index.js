@@ -11,15 +11,18 @@ import HomeFurther from "../components/sections/home-further";
 import Slide from "../components/organisms/slider";
 import { loadNamespaces } from "./_app";
 import useTranslation from "next-translate/useTranslation";
-//
-import Zoom from "react-reveal/Zoom";
+
+import ChooseLanguage from "../components/molecules/choose-language";
 import ReactPlayer from "react-player/lazy";
 import useVisibility from "../components/hooks/useVisibility";
 //
-import ChooseLanguage from "../components/molecules/choose-language";
+import { css } from "@emotion/css";
+
 export default function Home() {
   const [visibleNow, setVisibleNow] = useState("");
   const [videoAutoPLay, setVideoAutoPlay] = useState(false);
+  const [translateY, setTranslateY] = useState(-102);
+  //
   const [isVisibleVideo, currentElementVideo] = useVisibility(100);
   const [isVisibleHero, currentElementHero] = useVisibility(100);
   const [isVisibleWhy, currentElement] = useVisibility(100);
@@ -27,7 +30,6 @@ export default function Home() {
   const [isVisibleTokenFea, currentElementTokenFea] = useVisibility(100);
   const [isVisibleNode, currentElementNode] = useVisibility(100);
   const [isVisibleTokenRele, currentElementTokenRele] = useVisibility(100);
-
   const [isVisibleBack, currentElementVisibleBack] = useVisibility(100);
   const [isVisibleTokenFuture, currentElementTokenFuture] = useVisibility(100);
   const { t } = useTranslation();
@@ -98,11 +100,15 @@ export default function Home() {
       <section className="banner-CTA">
         <img src="/assets/images/banner.png" alt="The HOPR-Token NOW" />
         <div className="container-btn">
-          <Zoom bottom>
+          <div
+            className={css`
+              transform: translateY(${translateY}%);
+            `}
+          >
             <div className="type-btn">
               <span>{t("common:btn-token")}</span>
             </div>
-          </Zoom>
+          </div>
         </div>
       </section>
       <HomeFurther
