@@ -19,6 +19,8 @@ import useVisibility from "../components/hooks/useVisibility";
 import ChooseLanguage from "../components/molecules/choose-language";
 export default function Home() {
   const [visibleNow, setVisibleNow] = useState("");
+  const [videoAutoPLay, setVideoAutoPlay] = useState(false);
+  const [isVisibleVideo, currentElementVideo] = useVisibility(100);
   const [isVisibleHero, currentElementHero] = useVisibility(100);
   const [isVisibleWhy, currentElement] = useVisibility(100);
   const [isVisibleHow, currentElementAlt] = useVisibility(100);
@@ -32,13 +34,12 @@ export default function Home() {
 
   useEffect(() => {
     if (isVisibleHero) setVisibleNow("");
+    if (isVisibleVideo) setVideoAutoPlay(true);
     if (isVisibleWhy) setVisibleNow(currentElement.current.id);
     if (isVisibleHow) setVisibleNow(currentElementAlt.current.id);
     if (isVisibleTokenFea) setVisibleNow(currentElementTokenFea.current.id);
-
     if (isVisibleNode) setVisibleNow(currentElementNode.current.id);
     if (isVisibleTokenRele) setVisibleNow(currentElementTokenRele.current.id);
-
     if (isVisibleBack) setVisibleNow(currentElementVisibleBack.current.id);
     if (isVisibleTokenFuture)
       setVisibleNow(currentElementTokenFuture.current.id);
@@ -46,33 +47,35 @@ export default function Home() {
     isVisibleHero,
     isVisibleWhy,
     isVisibleHow,
+    isVisibleVideo,
+    isVisibleTokenFea,
+    isVisibleNode,
+    isVisibleTokenRele,
+    isVisibleBack,
+    isVisibleTokenFuture,
+    currentElementVideo,
     currentElement,
     currentElementAlt,
-    isVisibleTokenFea,
     currentElementTokenFea,
-    isVisibleNode,
     currentElementNode,
-    isVisibleTokenRele,
     currentElementTokenRele,
-    isVisibleBack,
     currentElementVisibleBack,
-    isVisibleTokenFuture,
     currentElementTokenFuture,
   ]);
 
   return (
-    <Layout visibleNow={visibleNow} >
+    <Layout visibleNow={visibleNow}>
       <ChooseLanguage />
       <Hero setVisibleNow={setVisibleNow} ref={currentElementHero} />
       <HomeMatter setVisibleNow={setVisibleNow} ref={currentElement} />
-      <section className="video-home ">
+      <section className="video-home " ref={currentElementVideo}>
         <ReactPlayer
           className="react-player"
           url="/assets/video/about.mp4"
           width="100%"
           height="100%"
           muted={true}
-          playing={true}
+          playing={videoAutoPLay}
           loop={true}
         />
       </section>
