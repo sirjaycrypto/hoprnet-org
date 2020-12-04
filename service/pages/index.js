@@ -61,7 +61,7 @@ export default function Home() {
   ]);
 
   return (
-    <Layout visibleNow={visibleNow}>
+    <Layout visibleNow={visibleNow} >
       <ChooseLanguage />
       <Hero setVisibleNow={setVisibleNow} ref={currentElementHero} />
       <HomeMatter setVisibleNow={setVisibleNow} ref={currentElement} />

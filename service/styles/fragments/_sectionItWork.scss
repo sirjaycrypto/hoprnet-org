@@ -3,7 +3,7 @@
   h2 {
     font-size: 60px;
     font-weight: 400;
-    margin-bottom: 4rem;
+    margin-bottom: 0;
     color: #ffffff;
   }
 }
@@ -16,6 +16,12 @@
   &:first-child,
   &:last-child {
     margin: 0em auto;
+  }
+  &:first-child {
+    margin-top: 120px;
+  }
+  &:last-child {
+    margin-bottom: 120px;
   }
   & > div {
     width: 50%;

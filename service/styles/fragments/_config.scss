@@ -87,7 +87,7 @@ section {
   border-radius: 16px;
   overflow: hidden;
   height: auto;
-  width: 50vw;
+  width: 30vw;
   margin: auto;
   @include responsive(tablet) {
     width: 90vw;
@@ -121,5 +121,7 @@ section {
   width: 80vw;
   margin: auto;
   @include responsive(tablet) {
+    width: 200vw;
+    overflow: scroll;
   }
 }
