@@ -1,10 +1,12 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import useTranslation from "next-translate/useTranslation";
-export default function HomeHardware() {
+
+const HomeHardware = forwardRef(({ setVisibleNow }, ref) => {
   const { t } = useTranslation();
   return (
     <>
       <section
+        ref={ref}
         id="HOPR-NODE-ON-GITHUB"
         className="section-hopr-github padding-section-aux"
       >
@@ -26,4 +28,6 @@ export default function HomeHardware() {
       </section>
     </>
   );
-}
+});
+
+export default HomeHardware;

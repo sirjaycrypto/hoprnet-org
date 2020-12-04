@@ -15,11 +15,6 @@ const sectionPage = [
     name: "HOW DOES IT WORK",
   },
   {
-    id: "FURTHER-READING",
-    name: "FURTHER READING",
-  },
-
-  {
     id: "TOKEN-FEATURES",
     name: "TOKEN FEATURES",
   },
@@ -35,6 +30,10 @@ const sectionPage = [
   {
     id: "BACKED-BY",
     name: "BACKED BY",
+  },
+  {
+    id: "FURTHER-READING",
+    name: "FURTHER READING",
   },
 ];
 
@@ -81,7 +80,6 @@ export default function Navbar({ visibleNow }) {
 
           <ItemsMenu />
         </div>
-       
       </nav>
 
       <MenuMobile activaMenu={activaMenu} />

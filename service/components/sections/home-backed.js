@@ -1,10 +1,12 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import useTranslation from "next-translate/useTranslation";
-export default function HomeBacked() {
+
+const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
   const { t } = useTranslation();
   return (
     <>
       <section
+        ref={ref}
         id="BACKED-BY"
         className="section-backed padding-section-aux invert-color "
       >
@@ -28,4 +30,6 @@ export default function HomeBacked() {
       </section>
     </>
   );
-}
+});
+
+export default HomeBacked;

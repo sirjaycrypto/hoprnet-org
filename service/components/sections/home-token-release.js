@@ -1,13 +1,13 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import useTranslation from "next-translate/useTranslation";
 import { Line, Pie } from "react-chartjs-2";
 import dataSupply from "../../public/assets/json/dataSupply.json";
 
-export default function HomeTokenRelease() {
+const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
   const { t } = useTranslation();
   const options = {
     maintainAspectRatio: false,
-    responsive : true,
+    responsive: true,
     legend: {
       display: true,
       position: "right",
@@ -115,6 +115,7 @@ export default function HomeTokenRelease() {
   return (
     <>
       <section
+        ref={ref}
         id="TOKEN-RELEASE"
         className="section-token-release padding-section-aux"
       >
@@ -158,4 +159,6 @@ export default function HomeTokenRelease() {
       </section>
     </>
   );
-}
+});
+
+export default HomeTokenRelease;

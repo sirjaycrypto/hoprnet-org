@@ -1,8 +1,7 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import useTranslation from "next-translate/useTranslation";
-("react");
 
-export default function HomeFurther() {
+const HomeFurther = forwardRef(({ setVisibleNow }, ref) => {
   const { t } = useTranslation();
   const infoTop = [
     {
@@ -43,6 +42,7 @@ export default function HomeFurther() {
   return (
     <>
       <section
+        ref={ref}
         id="FURTHER-READING"
         className="section-further padding-section-aux invert-color "
       >
@@ -84,4 +84,6 @@ export default function HomeFurther() {
       </section>
     </>
   );
-}
+});
+
+export default HomeFurther;

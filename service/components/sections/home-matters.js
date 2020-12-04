@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import TrackVisibility from "react-on-screen";
-import { Line } from "react-chartjs-2";
+import React, { forwardRef, useEffect } from "react";
 import useTranslation from "next-translate/useTranslation";
-export default function HomeMatter({ isVisible, setVisibleNow }) {
+import { Line } from "react-chartjs-2";
+
+const HomeMatter = forwardRef(({ setVisibleNow }, ref) => {
   const { t } = useTranslation();
   const data = {
     labels: [
@@ -64,34 +64,31 @@ export default function HomeMatter({ isVisible, setVisibleNow }) {
     },
   };
 
-  // {setVisibleNow("WHY-IT-MATTERS")}
-
   return (
     <section
+      ref={ref}
       id="WHY-IT-MATTERS"
       className="section-why-matters padding-section-aux invert-color "
     >
-      <TrackVisibility offset={1000}>
-        {({ isVisible }) => (
-          <div className="container ">
-            <h2>{t("homeWhyMatt:title")}…</h2>
-            <div className="container">
-              <div className="container-char">
-                <Line data={data} options={optionsLine} />
-              </div>
-            </div>
-            <div>
-              <p className="link-out">{t("homeWhyMatt:labelDate")}</p>
-            </div>
-            <p>"{t("homeWhyMatt:mainText")}"</p>
-            <div className="container-center-center">
-              <div className="type-btn">
-                <span>{t("homeWhyMatt:btnLabel")}</span>
-              </div>
-            </div>
+      <div className="container ">
+        <h2>{t("homeWhyMatt:title")}…</h2>
+        <div className="container">
+          <div className="container-char">
+            <Line data={data} options={optionsLine} />
           </div>
-        )}
-      </TrackVisibility>
+        </div>
+        <div>
+          <p className="link-out">{t("homeWhyMatt:labelDate")}</p>
+        </div>
+        <p>"{t("homeWhyMatt:mainText")}"</p>
+        <div className="container-center-center">
+          <div className="type-btn">
+            <span>{t("homeWhyMatt:btnLabel")}</span>
+          </div>
+        </div>
+      </div>
     </section>
   );
-}
+});
+
+export default HomeMatter;

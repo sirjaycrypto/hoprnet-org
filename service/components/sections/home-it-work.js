@@ -1,6 +1,7 @@
-import React from "react";
+import React, { forwardRef} from "react";
 import useTranslation from "next-translate/useTranslation";
-export default function HomeHomeItWork() {
+
+const HomeHomeItWork = forwardRef(({ setVisibleNow }, ref) => {
   const { t } = useTranslation();
   const dataInfo = [
     {
@@ -26,6 +27,7 @@ export default function HomeHomeItWork() {
   return (
     <>
       <section
+        ref={ref}
         id="HOW-DOES-IT-WORK"
         className="section-how-work padding-section-aux"
       >
@@ -58,4 +60,6 @@ export default function HomeHomeItWork() {
       </section>
     </>
   );
-}
+});
+
+export default HomeHomeItWork

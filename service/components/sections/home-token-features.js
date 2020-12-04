@@ -1,12 +1,13 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import useTranslation from "next-translate/useTranslation";
-export default function HomeTokenFeatures() {
+
+const HomeTokenFeatures = forwardRef(({ setVisibleNow }, ref) => {
   const { t } = useTranslation();
   const dataInfo = [
     {
       img: "/assets/icons/icon-pay.svg",
       title: "homeTokFea:pay",
-      paragraph:"homeTokFea:payMain",
+      paragraph: "homeTokFea:payMain",
     },
     {
       img: "/assets/icons/icon-stake.svg",
@@ -23,6 +24,7 @@ export default function HomeTokenFeatures() {
   return (
     <>
       <section
+        ref={ref}
         id="TOKEN-FEATURES"
         className="section-token-fea padding-section-aux"
       >
@@ -52,4 +54,6 @@ export default function HomeTokenFeatures() {
       </section>
     </>
   );
-}
+});
+
+export default HomeTokenFeatures;

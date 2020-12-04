@@ -14,16 +14,54 @@ import useTranslation from "next-translate/useTranslation";
 //
 import Zoom from "react-reveal/Zoom";
 import ReactPlayer from "react-player/lazy";
+import useVisibility from "../components/hooks/useVisibility";
 //
 import ChooseLanguage from "../components/molecules/choose-language";
 export default function Home() {
   const [visibleNow, setVisibleNow] = useState("");
+  const [isVisibleWhy, currentElement] = useVisibility(100);
+  const [isVisibleHow, currentElementAlt] = useVisibility(100);
+  const [isVisibleTokenFea, currentElementTokenFea] = useVisibility(100);
+  const [isVisibleNode, currentElementNode] = useVisibility(100);
+  const [isVisibleTokenRele, currentElementTokenRele] = useVisibility(100);
+
+  const [isVisibleBack, currentElementVisibleBack] = useVisibility(100);
+  const [isVisibleTokenFuture, currentElementTokenFuture] = useVisibility(100);
   const { t } = useTranslation();
+
+  useEffect(() => {
+    if (isVisibleWhy) setVisibleNow(currentElement.current.id);
+    if (isVisibleHow) setVisibleNow(currentElementAlt.current.id);
+    if (isVisibleTokenFea) setVisibleNow(currentElementTokenFea.current.id);
+
+    if (isVisibleNode) setVisibleNow(currentElementNode.current.id);
+    if (isVisibleTokenRele) setVisibleNow(currentElementTokenRele.current.id);
+
+    if (isVisibleBack) setVisibleNow(currentElementVisibleBack.current.id);
+    if (isVisibleTokenFuture)
+      setVisibleNow(currentElementTokenFuture.current.id);
+  }, [
+    isVisibleWhy,
+    isVisibleHow,
+    currentElement,
+    currentElementAlt,
+    isVisibleTokenFea,
+    currentElementTokenFea,
+    isVisibleNode,
+    currentElementNode,
+    isVisibleTokenRele,
+    currentElementTokenRele,
+    isVisibleBack,
+    currentElementVisibleBack,
+    isVisibleTokenFuture,
+    currentElementTokenFuture,
+  ]);
+
   return (
     <Layout visibleNow={visibleNow}>
       <ChooseLanguage />
       <Hero />
-      <HomeMatter setVisibleNow={setVisibleNow} />
+      <HomeMatter setVisibleNow={setVisibleNow} ref={currentElement} />
       <section className="video-home ">
         <ReactPlayer
           className="react-player"
@@ -36,12 +74,21 @@ export default function Home() {
         />
       </section>
 
-      <HomeHomeItWork />
-      <HomeTokenFeatures />
+      <HomeHomeItWork setVisibleNow={setVisibleNow} ref={currentElementAlt} />
+      <HomeTokenFeatures
+        setVisibleNow={setVisibleNow}
+        ref={currentElementTokenFea}
+      />
       <Slide />
-      <HomeHardware />
-      <HomeTokenReleas />
-      <HomeBacked />
+      <HomeHardware setVisibleNow={setVisibleNow} ref={currentElementNode} />
+      <HomeTokenReleas
+        setVisibleNow={setVisibleNow}
+        ref={currentElementTokenRele}
+      />
+      <HomeBacked
+        setVisibleNow={setVisibleNow}
+        ref={currentElementVisibleBack}
+      />
       <section className="banner-CTA">
         <img src="/assets/images/banner.png" alt="The HOPR-Token NOW" />
         <div className="container-btn">
@@ -52,7 +99,10 @@ export default function Home() {
           </Zoom>
         </div>
       </section>
-      <HomeFurther />
+      <HomeFurther
+        setVisibleNow={setVisibleNow}
+        ref={currentElementTokenFuture}
+      />
     </Layout>
   );
 }
