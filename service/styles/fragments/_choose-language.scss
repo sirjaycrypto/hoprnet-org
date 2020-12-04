@@ -32,6 +32,8 @@
     overflow: hidden;
   }
   ul {
+    z-index: 2333;
+    position: relative;
     width: 144px;
     padding: 0;
     margin: 0;

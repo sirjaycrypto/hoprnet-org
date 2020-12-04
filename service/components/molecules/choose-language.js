@@ -10,7 +10,6 @@ export default function ChooseLanguage() {
   const { t, lang } = useTranslation();
 
   const clickMenu = () => {
-    console.log("click");
     if (flag == false) {
       setTranslateY(0);
       setFlag(true);
@@ -22,7 +21,7 @@ export default function ChooseLanguage() {
 
   return (
   
-      <div className="container-languages">
+      <div className="container-languages invert-color">
         <div className="select-lang" onClick={() => clickMenu()}>
           {lang}
         </div>
@@ -36,7 +35,7 @@ export default function ChooseLanguage() {
               const { info, label } = e;
               return (
                 <Link href="/" locale={info} key={i}>
-                  <li onClick={() => clickMenu()}>{label}</li>
+                  <li onClick={() => clickMenu()}><a>{label}</a></li>
                 </Link>
               );
             })}
