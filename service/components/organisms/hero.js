@@ -1,19 +1,19 @@
-import React from "react";
+import React, { forwardRef } from "react";
+import useTranslation from "next-translate/useTranslation";
 import HeroInfo from "../molecules/hero-info";
-import useTranslation from 'next-translate/useTranslation';
 
-export default function Hero() {
+const Hero = forwardRef(({ setVisibleNow }, ref) => {
   const { t } = useTranslation();
 
   return (
     <>
-      <section className="section-hero">
+      <section ref={ref} className="section-hero">
         <HeroInfo />
         <video id="background-video" autoPlay loop muted>
           <source src="/assets/video/hero.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-      
+
         <div className="container">
           <div className="text-wrapper">
             <h4>{t("homeHero:subtitle")}</h4>
@@ -25,8 +25,9 @@ export default function Hero() {
             <span>{t("homeHero:btnLabel")}</span>
           </div>
         </div>
-       
       </section>
     </>
   );
-}
+});
+
+export default Hero;

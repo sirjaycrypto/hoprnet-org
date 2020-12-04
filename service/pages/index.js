@@ -19,6 +19,7 @@ import useVisibility from "../components/hooks/useVisibility";
 import ChooseLanguage from "../components/molecules/choose-language";
 export default function Home() {
   const [visibleNow, setVisibleNow] = useState("");
+  const [isVisibleHero, currentElementHero] = useVisibility(100);
   const [isVisibleWhy, currentElement] = useVisibility(100);
   const [isVisibleHow, currentElementAlt] = useVisibility(100);
   const [isVisibleTokenFea, currentElementTokenFea] = useVisibility(100);
@@ -30,6 +31,7 @@ export default function Home() {
   const { t } = useTranslation();
 
   useEffect(() => {
+    if (isVisibleHero) setVisibleNow("");
     if (isVisibleWhy) setVisibleNow(currentElement.current.id);
     if (isVisibleHow) setVisibleNow(currentElementAlt.current.id);
     if (isVisibleTokenFea) setVisibleNow(currentElementTokenFea.current.id);
@@ -41,6 +43,7 @@ export default function Home() {
     if (isVisibleTokenFuture)
       setVisibleNow(currentElementTokenFuture.current.id);
   }, [
+    isVisibleHero,
     isVisibleWhy,
     isVisibleHow,
     currentElement,
@@ -60,7 +63,7 @@ export default function Home() {
   return (
     <Layout visibleNow={visibleNow}>
       <ChooseLanguage />
-      <Hero />
+      <Hero setVisibleNow={setVisibleNow} ref={currentElementHero} />
       <HomeMatter setVisibleNow={setVisibleNow} ref={currentElement} />
       <section className="video-home ">
         <ReactPlayer
