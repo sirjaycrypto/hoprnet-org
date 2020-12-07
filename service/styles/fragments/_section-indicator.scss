@@ -1,7 +1,8 @@
 .section-indicator {
   display: none;
   @include responsive(tablet) {
-    top: 80px;
+    transition: all 400ms ease-in-out;
+    top: 63px;
     display: block;
     width: 100%;
 

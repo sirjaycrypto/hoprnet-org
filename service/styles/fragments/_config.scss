@@ -24,9 +24,18 @@ section {
   justify-content: center;
 }
 
+.help-flex {
+  display: flex;
+}
+
 .container-bottom {
-  position: absolute;
-  bottom: 11vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  width: 100%;
+  position: fixed;
+  bottom: 10px;
 }
 
 .video-home {

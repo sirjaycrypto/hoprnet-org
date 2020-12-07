@@ -22,8 +22,8 @@ export default function Header() {
       <meta name="author" content="HOPR" />
       <meta name="copyright" content=" HOPR" />
       <meta name="robots" content="index,nofollow" />
-      <meta http-equiv="cache-control" content="no-cache" />
-      <meta http-equiv="expires" content="43200" />
+      <meta httpEquiv="cache-control" content="no-cache" />
+      <meta httpEquiv="expires" content="43200" />
       <link
   rel="stylesheet"
   type="text/css"

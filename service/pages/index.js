@@ -13,6 +13,7 @@ import { loadNamespaces } from "./_app";
 import useTranslation from "next-translate/useTranslation";
 
 import ChooseLanguage from "../components/molecules/choose-language";
+import BtnFollowU from "../components/atoms/btn-followU";
 import ReactPlayer from "react-player/lazy";
 import useVisibility from "../components/hooks/useVisibility";
 
@@ -73,6 +74,7 @@ export default function Home() {
   return (
     <Layout visibleNow={visibleNow}>
       <ChooseLanguage />
+      <BtnFollowU />
       <Hero setVisibleNow={setVisibleNow} ref={currentElementHero} />
       <HomeMatter setVisibleNow={setVisibleNow} ref={currentElement} />
       <section className="video-home " ref={currentElementVideo}>
@@ -102,10 +104,7 @@ export default function Home() {
         setVisibleNow={setVisibleNow}
         ref={currentElementVisibleBack}
       />
-      <section
-        className="banner-CTA"
-        ref={currentElementVisibleBanner}
-      >
+      <section className="banner-CTA" ref={currentElementVisibleBanner}>
         <img src="/assets/images/banner.png" alt="The HOPR-Token NOW" />
         <div className="container-btn">
           <div className="type-btn btn-big">

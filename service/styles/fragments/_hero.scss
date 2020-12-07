@@ -63,10 +63,10 @@
   position: absolute;
   top: 0.875rem;
   left: 1.5rem;
-  @include responsive(tablet) {
-    bottom: 2%;
-    top: auto;
-  }
+  // @include responsive(tablet) {
+  //   bottom: 2%;
+  //   top: auto;
+  // }
   p {
     display: flex;
     align-items: center;

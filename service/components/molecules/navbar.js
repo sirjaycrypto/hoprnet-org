@@ -57,7 +57,7 @@ export default function Navbar({ visibleNow }) {
     <>
       <nav className={youDown ? "add-scroll-menu " : ""}>
         <div className={"container-sm " + (activaMenu ? "add-shadow" : "")}>
-          <div>
+          <div className="help-flex">
             <Link href="/">
               <img
                 className="logo-nav"
