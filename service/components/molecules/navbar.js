@@ -89,15 +89,17 @@ export default function Navbar({ visibleNow }) {
 
           {sectionPage.map((e, index) => {
             const { name } = e;
-            return <h4 key={index}> {e.id == visibleNow ? name : null}</h4>;
+            return visibleNow ? (
+              <h4 key={index}> {e.id == visibleNow ? name : null}</h4>
+            ) : null;
           })}
           <ul>
             {sectionPage.map((e, index) => {
-              return (
+              return visibleNow ? (
                 <li key={index}>
                   <span className={e.id == visibleNow ? "active" : ""}></span>
                 </li>
-              );
+              ) : null;
             })}
           </ul>
         </div>

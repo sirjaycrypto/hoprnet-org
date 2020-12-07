@@ -15,8 +15,8 @@ import useTranslation from "next-translate/useTranslation";
 import ChooseLanguage from "../components/molecules/choose-language";
 import ReactPlayer from "react-player/lazy";
 import useVisibility from "../components/hooks/useVisibility";
-//
-import { css } from "@emotion/css";
+
+// import { css } from "@emotion/css";
 
 export default function Home() {
   const [visibleNow, setVisibleNow] = useState("");
