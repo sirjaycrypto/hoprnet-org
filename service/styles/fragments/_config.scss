@@ -68,7 +68,12 @@ section {
 
 //
 .aux-padding-box-read {
-  padding: 0 2rem;
+  &:first-child {
+    padding: 0 2rem 0 0;
+  }
+  &:last-child {
+    padding: 0 0 0 2rem;
+  }
   box-sizing: border-box;
   @include responsive(tablet) {
     padding: 0;

@@ -21,8 +21,8 @@ import { css } from "@emotion/css";
 export default function Home() {
   const [visibleNow, setVisibleNow] = useState("");
   const [videoAutoPLay, setVideoAutoPlay] = useState(false);
-  const [translateY, setTranslateY] = useState(-102);
-  //
+  const [showBtnBanner, setShowBtnBanner] = useState(false);
+  // className={showBtnBanner ? "active-animate" : null}
   const [isVisibleVideo, currentElementVideo] = useVisibility(100);
   const [isVisibleHero, currentElementHero] = useVisibility(100);
   const [isVisibleWhy, currentElement] = useVisibility(100);
@@ -31,12 +31,15 @@ export default function Home() {
   const [isVisibleNode, currentElementNode] = useVisibility(100);
   const [isVisibleTokenRele, currentElementTokenRele] = useVisibility(100);
   const [isVisibleBack, currentElementVisibleBack] = useVisibility(100);
+
+  const [isVisibleBanner, currentElementVisibleBanner] = useVisibility(100);
   const [isVisibleTokenFuture, currentElementTokenFuture] = useVisibility(100);
   const { t } = useTranslation();
 
   useEffect(() => {
     if (isVisibleHero) setVisibleNow("");
     if (isVisibleVideo) setVideoAutoPlay(true);
+    if (showBtnBanner) setShowBtnBanner(true);
     if (isVisibleWhy) setVisibleNow(currentElement.current.id);
     if (isVisibleHow) setVisibleNow(currentElementAlt.current.id);
     if (isVisibleTokenFea) setVisibleNow(currentElementTokenFea.current.id);
@@ -55,6 +58,8 @@ export default function Home() {
     isVisibleTokenRele,
     isVisibleBack,
     isVisibleTokenFuture,
+    isVisibleBanner,
+    currentElementVisibleBanner,
     currentElementVideo,
     currentElement,
     currentElementAlt,
@@ -97,17 +102,14 @@ export default function Home() {
         setVisibleNow={setVisibleNow}
         ref={currentElementVisibleBack}
       />
-      <section className="banner-CTA">
+      <section
+        className="banner-CTA"
+        ref={currentElementVisibleBanner}
+      >
         <img src="/assets/images/banner.png" alt="The HOPR-Token NOW" />
         <div className="container-btn">
-          <div
-            className={css`
-              transform: translateY(${translateY}%);
-            `}
-          >
-            <div className="type-btn">
-              <span>{t("common:btn-token")}</span>
-            </div>
+          <div className="type-btn btn-big">
+            <span>{t("common:btn-token")}</span>
           </div>
         </div>
       </section>

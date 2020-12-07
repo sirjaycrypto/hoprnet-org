@@ -21,7 +21,7 @@ const Hero = forwardRef(({ setVisibleNow }, ref) => {
           </div>
         </div>
         <div className="container-bottom">
-          <div className="type-btn btn-hero">
+          <div className="type-btn btn-big">
             <span>{t("homeHero:btnLabel")}</span>
           </div>
         </div>

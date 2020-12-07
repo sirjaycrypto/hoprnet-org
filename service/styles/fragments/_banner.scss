@@ -6,7 +6,6 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
-  display: flex;
   flex-direction: column;
   img {
     position: absolute;
@@ -16,9 +15,11 @@
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    background-attachment: fixed;
   }
-  .container-btn {
+
+  .container-btn{
+    position: absolute;
+
     @include responsive(tablet) {
       padding: 0 2rem;
     }

@@ -33,7 +33,7 @@ export default function Slide() {
 
   return (
     <div className="slider invert-color ">
-      <div className="main-slide ">
+      <div className="main-slide container">
         <Slider {...settings}>
           {dataInfo.map((e, index) => {
             const { title, paragraph } = e;
