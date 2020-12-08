@@ -132,10 +132,14 @@ section {
 ///
 .container-chart {
   height: 50vh;
-  width: 80vw;
+  width: 100%;
   margin: auto;
   @include responsive(tablet) {
-    width: 200vw;
+    position: relative;
+  }
+  .help-scroll {
     overflow: scroll;
+    height: 100%;
+    width: auto;
   }
 }

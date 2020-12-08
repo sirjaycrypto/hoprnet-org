@@ -1,6 +1,7 @@
 import React, { forwardRef } from "react";
 import useTranslation from "next-translate/useTranslation";
 import { Line, Pie } from "react-chartjs-2";
+
 import dataSupply from "../../public/assets/json/dataSupply.json";
 
 const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
@@ -10,13 +11,17 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
     responsive: true,
     legend: {
       display: true,
-      position: "right",
+      // position: "right",
+      position: "bottom",
+      responsive: false,
+      maintainAspectRatio: false,
+
       labels: {
         fontFamily: "Source Code Pro",
         fontSize: 14,
         fontColor: "#414141",
         padding: 18,
-        boxWidth: 47,
+        boxWidth: 21,
         usePointStyle: false,
       },
     },
@@ -51,87 +56,98 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
   };
 
   const dataDate = dataSupply.map((item) => item.Date);
-  const dataTreasury = dataSupply.map((item) => item.Treasury).join("");
-  const dataTeamNAdvisors = dataSupply
-    .map((item) => item["Team & Advisors"])
-    .join("");
-  const dataEarlyTokenBuyers = dataSupply
-    .map((item) => item["Early Token Buyers"])
-    .join("");
-  const dataBounties = dataSupply.map((item) => item.Bounties).join("");
-  const dataCoverTraffic = dataSupply
-    .map((item) => item["Cover Traffic"])
-    .join("");
-  const dataPublicSale = dataSupply.map((item) => item["Public Sale"]).join("");
+  const dataTreasury = dataSupply.map((item) => item.Treasury);
+  const dataTeamNAdvisors = dataSupply.map((item) => item["Team & Advisors"]);
+  const dataEarlyTokenBuyers = dataSupply.map(
+    (item) => item["Early Token Buyers"]
+  );
+  const dataBounties = dataSupply.map((item) => item.Bounties);
+  const dataCoverTraffic = dataSupply.map((item) => item["Cover Traffic"]);
+  const dataPublicSale = dataSupply.map((item) => item["Public Sale"]);
+
+  function cleanData(elements) {
+    return elements.map(function (elem) {
+      let aux = elem.split("").join("");
+      aux = aux.split(",").join("");
+      return aux;
+    });
+  }
 
   const dataTokenSupply = {
     labels: dataDate,
 
-
-  
     datasets: [
       {
         label: "Treasury",
-        data: dataTreasury,
+        data: cleanData(dataTreasury),
         fill: true,
-        backgroundColor: "#FEFFA0",
+        backgroundColor: "#FDFFA2",
         borderWidth: 0,
-
-
-        fill: false,
-        lineTension: 0.1,
-        backgroundColor: 'rgba(75,192,192,0.4)',
-        borderColor: 'rgba(75,192,192,1)',
-        borderCapStyle: 'butt',
-        borderDash: [],
-        borderDashOffset: 0.0,
-        borderJoinStyle: 'miter',
-        pointBorderColor: 'rgba(75,192,192,1)',
-        pointBackgroundColor: '#fff',
-        pointBorderWidth: 1,
-        pointHoverRadius: 5,
-        pointHoverBackgroundColor: 'rgba(75,192,192,1)',
-        pointHoverBorderColor: 'rgba(220,220,220,1)',
-        pointHoverBorderWidth: 2,
-        pointRadius: 1,
-        pointHitRadius: 10,
-        data: [65, 59, 80, 81, 56, 55, 40]
-      
+        borderColor: "rgba(0, 0, 0, 0.34)",
+        pointBackgroundColor: "transparent",
+        pointBorderColor: "transparent",
+        pointBorderWidth: 0,
+        lineTension: 0,
       },
       {
         label: "Team & Advisors",
-        data: dataTeamNAdvisors,
+        data: cleanData(dataTeamNAdvisors),
         fill: true,
         backgroundColor: "#FBFB3B",
         borderWidth: 0,
+        borderColor: "rgba(0, 0, 0, 0.34)",
+        pointBackgroundColor: "transparent",
+        pointBorderColor: "transparent",
+        pointBorderWidth: 0,
+        lineTension: 0,
       },
       {
         label: "Early Token Buyers",
-        data: dataEarlyTokenBuyers,
+        data: cleanData(dataEarlyTokenBuyers),
         fill: true,
         backgroundColor: "#BCBC2A",
         borderWidth: 0,
+        borderColor: "rgba(0, 0, 0, 0.34)",
+        pointBackgroundColor: "transparent",
+        pointBorderColor: "transparent",
+        pointBorderWidth: 0,
+        lineTension: 0,
       },
       {
         label: "Bounties",
-        data: dataBounties,
+        data: cleanData(dataBounties),
         fill: true,
         backgroundColor: "#7E7E1E",
         borderWidth: 0,
+        borderColor: "rgba(0, 0, 0, 0.34)",
+        pointBackgroundColor: "transparent",
+        pointBorderColor: "transparent",
+        pointBorderWidth: 0,
+        lineTension: 0,
       },
       {
         label: "Cover Traffic",
-        data: dataCoverTraffic,
+        data: cleanData(dataCoverTraffic),
         fill: true,
         backgroundColor: "#0E01B4",
         borderWidth: 0,
+        borderColor: "rgba(0, 0, 0, 0.34)",
+        pointBackgroundColor: "transparent",
+        pointBorderColor: "transparent",
+        pointBorderWidth: 0,
+        lineTension: 0,
       },
       {
         label: "Public Sale",
-        data: dataPublicSale,
+        data: cleanData(dataPublicSale),
         fill: true,
         backgroundColor: "#020250",
         borderWidth: 0,
+        borderColor: "rgba(0, 0, 0, 0.34)",
+        pointBackgroundColor: "transparent",
+        pointBorderColor: "transparent",
+        pointBorderWidth: 0,
+        lineTension: 0,
       },
     ],
   };
@@ -176,7 +192,9 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
           <div>
             <h3>{t("homeToken:thirdSubTitle")} (%)</h3>
             <div className="container-chart">
-              <Line data={dataTokenSupply} options={options} />
+              <div className="help-scroll">
+                <Line data={dataTokenSupply} options={options} />
+              </div>
             </div>
           </div>
         </div>
