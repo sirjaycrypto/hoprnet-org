@@ -18,8 +18,8 @@ export default function Countdown() {
     return timeLeft;
   };
   return (
-    <>
+    <div className="info-hero-top">
       <p className="help-label-info">COUNTDOWN DD:HH:SS</p>
-    </>
+    </div>
   );
 }

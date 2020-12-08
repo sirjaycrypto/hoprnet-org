@@ -20,28 +20,32 @@ export default function ChooseLanguage() {
   };
 
   return (
-  
-      <div className="container-languages invert-color">
-        <div className="select-lang" onClick={() => clickMenu()}>
-          {lang}
-        </div>
-        <div className="box-hidden-info">
-          <ul
-            className={css`
-              transform: translateY(${translateY}%);
-            `}
-          >
-            {listLang.map((e, i) => {
-              const { info, label } = e;
-              return (
-                <Link href="/" locale={info} key={i}>
-                  <li onClick={() => clickMenu()}><a>{label}</a></li>
-                </Link>
-              );
-            })}
-          </ul>
-        </div>
+    <div className="container-languages invert-color">
+      <div
+        className="select-lang"
+        onMouseEnter={() => clickMenu()}
+        
+      >
+        {lang}
       </div>
-   
+      <div className="box-hidden-info">
+        <ul
+          className={css`
+            transform: translateY(${translateY}%);
+          `}
+        >
+          {listLang.map((e, i) => {
+            const { info, label } = e;
+            return (
+              <Link href="/" locale={info} key={i}>
+                <li onClick={() => clickMenu()}>
+                  <a>{label}</a>
+                </li>
+              </Link>
+            );
+          })}
+        </ul>
+      </div>
+    </div>
   );
 }
