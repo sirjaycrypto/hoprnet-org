@@ -134,12 +134,13 @@ section {
   height: 50vh;
   width: 100%;
   margin: auto;
-  @include responsive(tablet) {
-    position: relative;
-  }
+
   .help-scroll {
-    overflow: scroll;
     height: 100%;
     width: auto;
+  }
+  @include responsive(tablet) {
+    position: relative;
+    overflow: scroll;
   }
 }

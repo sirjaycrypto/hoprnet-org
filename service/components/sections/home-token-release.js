@@ -6,16 +6,25 @@ import dataSupply from "../../public/assets/json/dataSupply.json";
 
 const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
   const { t } = useTranslation();
+
+  var yLabels = {
+    0: "0.00",
+    1: "250,000.000",
+    2: "500.000.000",
+    6: "750.000.000",
+    8: "1000.000.000",
+  };
+
   const options = {
     maintainAspectRatio: false,
     responsive: true,
+    
     legend: {
       display: true,
       // position: "right",
       position: "bottom",
       responsive: false,
       maintainAspectRatio: false,
-
       labels: {
         fontFamily: "Source Code Pro",
         fontSize: 14,
@@ -24,7 +33,21 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
         boxWidth: 21,
         usePointStyle: false,
       },
+      
     },
+    scales: {
+      yAxes: [{
+        ticks: {
+          fontSize:8
+        }
+    }],
+      yAxes: [{
+          ticks: {
+              beginAtZero: false,
+          }
+      }]
+  },
+
   };
 
   const data = {
@@ -72,6 +95,8 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
       return aux;
     });
   }
+
+
 
   const dataTokenSupply = {
     labels: dataDate,
@@ -150,6 +175,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
         lineTension: 0,
       },
     ],
+
   };
 
   return (

@@ -13,7 +13,7 @@ import { loadNamespaces } from "./_app";
 import useTranslation from "next-translate/useTranslation";
 
 import ChooseLanguage from "../components/molecules/choose-language";
-import BtnFollowU from "../components/atoms/btn-followU";
+
 import ReactPlayer from "react-player/lazy";
 import useVisibility from "../components/hooks/useVisibility";
 
@@ -23,7 +23,6 @@ export default function Home() {
   const [visibleNow, setVisibleNow] = useState("");
   const [videoAutoPLay, setVideoAutoPlay] = useState(false);
   const [showBtnBanner, setShowBtnBanner] = useState(false);
-  // className={showBtnBanner ? "active-animate" : null}
   const [isVisibleVideo, currentElementVideo] = useVisibility(100);
   const [isVisibleHero, currentElementHero] = useVisibility(100);
   const [isVisibleWhy, currentElement] = useVisibility(100);
@@ -74,7 +73,7 @@ export default function Home() {
   return (
     <Layout visibleNow={visibleNow}>
       <ChooseLanguage />
-      <BtnFollowU />
+
       <Hero setVisibleNow={setVisibleNow} ref={currentElementHero} />
       <HomeMatter setVisibleNow={setVisibleNow} ref={currentElement} />
       <section className="video-home " ref={currentElementVideo}>

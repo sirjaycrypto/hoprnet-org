@@ -7,6 +7,9 @@
   position: relative;
   overflow: hidden;
   flex-direction: column;
+  @include responsive(tablet) {
+    height: calc(100vh - 52px);
+  }
 }
 
 .text-wrapper {
@@ -75,6 +78,9 @@
   position: absolute;
   top: 0.875rem;
   left: 1.5rem;
+  @include responsive(tablet) {
+    top: 89px;
+  }
 }
 
 .info-hero-bottom {

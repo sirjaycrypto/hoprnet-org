@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import MenuMobile from "./menu-mobile";
 import Link from "next/link";
 import ItemsMenu from "../atoms/items-menu";
-
+import useTranslation from "next-translate/useTranslation";
+import { css } from "@emotion/css";
 import { useRouter } from "next/router";
 
 const sectionPage = [
@@ -38,20 +39,28 @@ const sectionPage = [
 ];
 
 export default function Navbar({ visibleNow }) {
+  const [fontSize, setFontSize] = useState(34);
   const [youDown, setYouDown] = useState(false);
   const [activaMenu, setActivaMenu] = useState(false);
   const router = useRouter();
+  const { t } = useTranslation();
 
   useEffect(() => {
     window.onscroll = function () {
       if (window.pageYOffset === 0) {
         setYouDown(false);
+        setFontSize(34);
       } else {
+        setFontSize(14);
         setYouDown(true);
         setActivaMenu(false);
       }
     };
-  }, []);
+  }, [fontSize, youDown]);
+
+  const clickBtn = () => {
+    console.log("Click");
+  };
 
   return (
     <>
@@ -102,6 +111,42 @@ export default function Navbar({ visibleNow }) {
           </ul>
         </div>
       ) : null}
+      <div className="container-bottom link-special">
+        <div
+          onClick={() => clickBtn()}
+          className={css`
+            background: linear-gradient(90deg, #0000db 0%, #292941 100%);
+            transition: all 600ms ease-in-out;
+            padding: 0em 1.5em;
+            border-radius: 100px;
+            width: fit-content;
+          `}
+        >
+          <span
+            className={css`
+              font-size: ${fontSize}px;
+              transition: all 300ms ease-in-out;
+              font-weight: 600;
+              line-height: 2em;
+              display: flex;
+              align-items: center;
+              text-align: center;
+              letter-spacing: 0.2975px;
+              color: #ffffff;
+              margin: 0;
+              padding: 0;
+              &:hover {
+                color: #ffffa0;
+              }
+              @media screen and (max-width: 600px) {
+                font-size: 14px;
+              }
+            `}
+          >
+            {t("common:btn-token")}
+          </span>
+        </div>
+      </div>
     </>
   );
 }

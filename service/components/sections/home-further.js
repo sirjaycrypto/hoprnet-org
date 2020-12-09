@@ -44,7 +44,7 @@ const HomeFurther = forwardRef(({ setVisibleNow }, ref) => {
       <section
         ref={ref}
         id="FURTHER-READING"
-        className="section-further padding-section-aux invert-color "
+        className="section-further  invert-color "
       >
         <div className="container">
           <h2>{t("homeFut:title")}</h2>

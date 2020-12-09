@@ -3,9 +3,14 @@
   h2 {
     font-size: 2.375rem;
     font-weight: 400;
-    margin-bottom: 4rem;
+
     color: $hopr_grey;
     text-align: center;
+    margin: 74px 0;
+    @include responsive(tablet) {
+      justify-content: space-between;
+      margin: 50px 0;
+    }
   }
   .list-top,
   .list-down {

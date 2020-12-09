@@ -3,7 +3,7 @@
   h2 {
     font-weight: normal;
     font-size: 65px;
-    margin-bottom: 24px;
+    margin-bottom: 0;
     text-align: center;
     letter-spacing: 0.5px;
     color: $hopr_grey;
@@ -20,9 +20,10 @@
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-
-    @media (max-width: 50em) {
+    margin: 74px 0;
+    @include responsive(tablet) {
       justify-content: space-between;
+      margin: 50px 0 182px 0;
     }
     a {
       width: 200px;
@@ -44,7 +45,7 @@
         padding: 0;
         margin: 0;
       }
-      @media (max-width: 50em) {
+      @include responsive(tablet) {
         width: 47%;
       }
     }
