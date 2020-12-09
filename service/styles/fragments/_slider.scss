@@ -2,11 +2,18 @@
   background: $hopr_yellow;
   box-sizing: border-box;
   overflow: hidden;
-  padding: 8rem 0;
+  padding: 74px 0;
+  @include responsive(tablet) {
+    padding: 50px 0;
+  }
+
   .main-slide {
     width: 80%;
     height: 100%;
     margin: auto;
+
+    justify-self: center;
+    text-align: center;
   }
   p {
     padding: 0;
@@ -14,25 +21,26 @@
   }
   .text-info {
     font-weight: 300;
-    font-size: 2em;
+    font-size: 25px;
     line-height: normal;
     letter-spacing: 0.36px;
     color: $hopr_grey;
     margin-bottom: 0.3em;
     @include responsive(tablet) {
-      font-size: 1em;
+      font-size: 18px;
       font-weight: 400;
     }
   }
   .text-label-data {
     font-style: normal;
     font-weight: 600;
-    font-size: 1.2em;
+    font-size: 43.2px;
     line-height: normal;
     letter-spacing: 0.208333px;
     color: $hopr_grey;
+    margin-bottom: 24px;
     @include responsive(tablet) {
-      font-size: 1em;
+      font-size: 25px;
     }
   }
 }
@@ -40,4 +48,36 @@
 .slick-slide div {
   outline: none !important;
 }
-// slick-active slick-current
+
+.slick-dots {
+  li {
+    button {
+      &:before {
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        content: "";
+        text-align: center;
+        border-radius: 100px;
+        background: $hopr_bright_blue;
+  
+      }
+    }
+
+    &.slick-active {
+      button {
+        &:before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 14px;
+          height: 14px;
+          content: "";
+          text-align: center;
+          border-radius: 100px;
+          background: $hopr_bright_blue;
+        }
+      }
+    }
+  }
+}

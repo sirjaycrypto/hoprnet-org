@@ -21,7 +21,7 @@ export default function Slide() {
 
   var settings = {
     arrows: false,
-    autoplay:true,
+    autoplay:false,
     dots: true,
     lazyLoad: true,
     infinite: true,
@@ -39,8 +39,9 @@ export default function Slide() {
             const { title, paragraph } = e;
             return (
               <div key={index}>
-                <p className="text-info">«{t(title)}»</p>
+                
                 <p className="text-label-data">{t(paragraph)}</p>
+                <p className="text-info">«{t(title)}»</p>
               </div>
             );
           })}

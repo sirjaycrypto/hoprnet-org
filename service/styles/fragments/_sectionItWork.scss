@@ -12,7 +12,10 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin: 120px 0;
+  margin: 74px 0;
+  @include responsive(tablet) {
+    margin: 50px 0;
+  }
   &:first-child,
   &:last-child {
     margin: 0em auto;
@@ -34,7 +37,7 @@
     }
     .info-cont {
       padding: 0 0 0 2rem;
-      @media (max-width: 50em) {
+      @include responsive(tablet) {
         padding: 0 2rem 0 0;
       }
     }
@@ -42,7 +45,7 @@
   & > div {
     width: 50%;
   }
-  @media (max-width: 50em) {
+  @include responsive(tablet) {
     flex-direction: column;
     & > div {
       width: 100%;

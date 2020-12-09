@@ -35,20 +35,53 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
       },
       
     },
+
+  
+
+  };
+
+
+  const optionsLine = {
+    maintainAspectRatio: false,
+    responsive: true,
+    
+    legend: {
+      display: true,
+      // position: "right",
+      position: "bottom",
+      responsive: false,
+      maintainAspectRatio: false,
+      labels: {
+        fontFamily: "Source Code Pro",
+        fontSize: 14,
+        fontColor: "#414141",
+        padding: 18,
+        boxWidth: 21,
+        usePointStyle: false,
+      },
+      
+    },
     scales: {
-      yAxes: [{
-        ticks: {
-          fontSize:8
-        }
-    }],
-      yAxes: [{
+
+        y: {
           ticks: {
-              beginAtZero: false,
+            crossAlign: 'far',
+          }
+        },
+      
+      xAxes: [{
+ 
+        distribution: 'series',
+          ticks: {
+            maxRotation:90,
+            minRotation:0
           }
       }]
   },
+  
 
   };
+
 
   const data = {
     labels: [
@@ -100,8 +133,9 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
 
   const dataTokenSupply = {
     labels: dataDate,
-
+    // labels: [  "0.00","250,000.000","500.000.000","750.000.000","1000.000.000",],
     datasets: [
+      
       {
         label: "Treasury",
         data: cleanData(dataTreasury),
@@ -219,7 +253,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
             <h3>{t("homeToken:thirdSubTitle")} (%)</h3>
             <div className="container-chart">
               <div className="help-scroll">
-                <Line data={dataTokenSupply} options={options} />
+                <Line data={dataTokenSupply} options={optionsLine} />
               </div>
             </div>
           </div>
