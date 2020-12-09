@@ -9,22 +9,50 @@
     font-weight: 400;
     margin-bottom: 4rem;
   }
-  p{
+  p {
     margin-top: 0;
     font-size: 1.3rem;
     line-height: 2rem;
   }
+  h3 {
+    margin-top: 0;
+    color: #fff;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: 0.25px;
+    margin-bottom: 24px;
+    @include responsive(tablet) {
+      margin-bottom: 18px;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 77px;
+      letter-spacing: 0.20000000298023224px;
+    }
+    @include responsive(phone) {
+      margin-bottom: 18px;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 45px;
+      letter-spacing: 0.15000000596046448px;
+    }
+  }
   .flex-line-row {
     display: flex;
-    align-items: center;
     & > div {
       width: 50%;
       overflow: hidden;
+      height: 100%;
     }
     img {
       margin: auto;
       object-fit: cover;
-      width: 100%;
+      width: 80%;
+      @include responsive(tablet) {
+        width: 100%;
+      }
     }
     @include responsive(tablet) {
       flex-direction: column;

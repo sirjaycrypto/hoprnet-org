@@ -59,19 +59,49 @@
     color: $hopr_grey;
   }
   h3 {
-    font-weight: bold;
-    font-size: 1.8em;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
     letter-spacing: 0.25px;
     margin-bottom: 24px;
     @include responsive(tablet) {
-      padding-bottom: 0.3em;
+      margin-bottom: 18px;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 77px;
+      letter-spacing: 0.20000000298023224px;
+    }
+    @include responsive(phone) {
+      margin-bottom: 18px;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 45px;
+      letter-spacing: 0.15000000596046448px;
     }
   }
   p {
-    font-weight: normal;
-    font-size: 1.125rem;
-    line-height: 2.063rem;
-    letter-spacing: 0.15px;
+ 
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 0.15000000596046448px;
+    @include responsive(tablet) {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 0.13333334028720856px;
+    }
+    @include responsive(phone) {
+      font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 22px;
+          letter-spacing: 0.13333334028720856px;
+    }
   }
   img {
     width: 100%;

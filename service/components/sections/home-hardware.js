@@ -11,12 +11,16 @@ const HomeHardware = forwardRef(({ setVisibleNow }, ref) => {
         className="section-hopr-github padding-section-aux"
       >
         <div className="container">
+        <div className="container-center-center">
+            <h2>{t("homeHard:title")}</h2>
+          </div>
           <div className="flex-line-row">
             <div className="aux-padding-box-read">
-              <h2>{t("homeHard:title")}</h2>
+              <h3>{t("homeHard:subtitleA")}</h3>
               <p>{t("homeHard:about")}</p>
             </div>
             <div>
+            <h3>{t("homeHard:subtitleB")}</h3>
               <img
                 src="/assets/images/banner-ardware.jpg"
                 alt={t("homeHard:title")}
