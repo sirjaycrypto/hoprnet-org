@@ -18,7 +18,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
   const options = {
     maintainAspectRatio: false,
     responsive: true,
-    
+
     legend: {
       display: true,
       // position: "right",
@@ -33,18 +33,13 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
         boxWidth: 21,
         usePointStyle: false,
       },
-      
     },
-
-  
-
   };
-
 
   const optionsLine = {
     maintainAspectRatio: false,
     responsive: true,
-    
+
     legend: {
       display: true,
       // position: "right",
@@ -59,29 +54,25 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
         boxWidth: 21,
         usePointStyle: false,
       },
-      
     },
     scales: {
-
-        y: {
-          ticks: {
-            crossAlign: 'far',
-          }
+      y: {
+        ticks: {
+          crossAlign: "far",
         },
-      
-      xAxes: [{
- 
-        distribution: 'series',
+      },
+
+      xAxes: [
+        {
+          distribution: "series",
           ticks: {
-            maxRotation:90,
-            minRotation:0
-          }
-      }]
-  },
-  
-
+            maxRotation: 90,
+            minRotation: 0,
+          },
+        },
+      ],
+    },
   };
-
 
   const data = {
     labels: [
@@ -129,18 +120,16 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
     });
   }
 
-
-
   const dataTokenSupply = {
     labels: dataDate,
     // labels: [  "0.00","250,000.000","500.000.000","750.000.000","1000.000.000",],
     datasets: [
-      
+   
       {
-        label: "Treasury",
-        data: cleanData(dataTreasury),
+        label: "Team & Advisors",
+        data: cleanData(dataTeamNAdvisors),
         fill: true,
-        backgroundColor: "#FDFFA2",
+        backgroundColor: "#FBFB3B",
         borderWidth: 0,
         borderColor: "rgba(0, 0, 0, 0.34)",
         pointBackgroundColor: "transparent",
@@ -148,11 +137,12 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
         pointBorderWidth: 0,
         lineTension: 0,
       },
+     
       {
-        label: "Team & Advisors",
-        data: cleanData(dataTeamNAdvisors),
+        label: "Bounties",
+        data: cleanData(dataBounties),
         fill: true,
-        backgroundColor: "#FBFB3B",
+        backgroundColor: "#7E7E1E",
         borderWidth: 0,
         borderColor: "rgba(0, 0, 0, 0.34)",
         pointBackgroundColor: "transparent",
@@ -173,10 +163,22 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
         lineTension: 0,
       },
       {
-        label: "Bounties",
-        data: cleanData(dataBounties),
+        label: "Public Sale",
+        data: cleanData(dataPublicSale),
         fill: true,
-        backgroundColor: "#7E7E1E",
+        backgroundColor: "#020250",
+        borderWidth: 0,
+        borderColor: "rgba(0, 0, 0, 0.34)",
+        pointBackgroundColor: "transparent",
+        pointBorderColor: "transparent",
+        pointBorderWidth: 0,
+        lineTension: 0,
+      },
+      {
+        label: "Treasury",
+        data: cleanData(dataTreasury),
+        fill: true,
+        backgroundColor: "#FDFFA2",
         borderWidth: 0,
         borderColor: "rgba(0, 0, 0, 0.34)",
         pointBackgroundColor: "transparent",
@@ -196,20 +198,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
         pointBorderWidth: 0,
         lineTension: 0,
       },
-      {
-        label: "Public Sale",
-        data: cleanData(dataPublicSale),
-        fill: true,
-        backgroundColor: "#020250",
-        borderWidth: 0,
-        borderColor: "rgba(0, 0, 0, 0.34)",
-        pointBackgroundColor: "transparent",
-        pointBorderColor: "transparent",
-        pointBorderWidth: 0,
-        lineTension: 0,
-      },
     ],
-
   };
 
   return (
