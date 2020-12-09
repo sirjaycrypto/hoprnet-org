@@ -59,10 +59,9 @@ export default function Navbar({ visibleNow, isVisibleBanner }) {
     };
     if (isVisibleBanner) {
       setFontSize(34);
-      setBottomPX(30)
+      setBottomPX(100);
     } else {
-      setFontSize(14);
-      setBottomPX(10)
+      setBottomPX(10);
     }
   }, [fontSize, youDown, isVisibleBanner]);
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "../../components/organisms/layout";
 import HeroInternal from "../../components/organisms/hero-internal";
 import SubStrack from "../../components/molecules/sub-strack";
@@ -9,6 +9,9 @@ import { motion } from "framer-motion";
 import { stagger, fadeInUp } from "../../util/motionConfig";
 import { loadNamespaces } from "../_app";
 import useTranslation from "next-translate/useTranslation";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const dataInfo = [
   {
@@ -57,14 +60,18 @@ const dataVALUES = [
 
 export default function Index() {
   const { t } = useTranslation();
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
       <Layout>
         <HeroInternal>
           <motion.div variants={stagger}>
-            <motion.h1 animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
+            <h1 data-aos="fade-up" data-aos-duration="150"  data-aos-easing="linear">
               {t("aboutHero:title")}
-            </motion.h1>
+            </h1>
             <div>
               <motion.p variants={fadeInUp} transition={{ delay: 0.2 }}>
                 {t("aboutHero:paragraphA")}

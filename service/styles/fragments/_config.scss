@@ -106,7 +106,7 @@ section {
   border-radius: 16px;
   overflow: hidden;
   height: auto;
-  width: 30vw;
+  width: 470px;
   margin: auto;
   @include responsive(tablet) {
     width: 90vw;
@@ -147,5 +147,13 @@ section {
   @include responsive(tablet) {
     position: relative;
     overflow: scroll;
+  }
+}
+
+.center-help {
+  width: 470px;
+  margin: auto;
+  @include responsive(tablet) {
+    width: 90vw;
   }
 }
