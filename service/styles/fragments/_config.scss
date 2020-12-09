@@ -39,7 +39,8 @@ section {
 }
 
 .video-home {
-  height: 100%;
+  background: $hopr_yellow;
+  height: 600px;
   overflow: hidden;
   video {
     width: 100%;

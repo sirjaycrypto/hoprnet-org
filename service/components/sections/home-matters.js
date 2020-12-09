@@ -83,11 +83,7 @@ const HomeMatter = forwardRef(({ setVisibleNow }, ref) => {
          
         </div>
         <p>"{t("homeWhyMatt:mainText")}"</p>
-        <div className="container-center-center">
-          <div className="type-btn">
-            <span>{t("homeWhyMatt:btnLabel")}</span>
-          </div>
-        </div>
+       
       </div>
     </section>
   );
