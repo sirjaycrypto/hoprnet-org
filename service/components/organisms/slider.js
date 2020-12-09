@@ -39,7 +39,6 @@ export default function Slide() {
             const { title, paragraph } = e;
             return (
               <div key={index}>
-                
                 <p className="text-label-data">{t(paragraph)}</p>
                 <p className="text-info">«{t(title)}»</p>
               </div>
