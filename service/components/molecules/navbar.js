@@ -3,7 +3,7 @@ import MenuMobile from "./menu-mobile";
 import Link from "next/link";
 import ItemsMenu from "../atoms/items-menu";
 import useTranslation from "next-translate/useTranslation";
-import { css } from "@emotion/css";
+import { css, keyframes } from "@emotion/css";
 import { useRouter } from "next/router";
 
 const sectionPage = [
@@ -38,8 +38,9 @@ const sectionPage = [
   },
 ];
 
-export default function Navbar({ visibleNow }) {
+export default function Navbar({ visibleNow, isVisibleBanner }) {
   const [fontSize, setFontSize] = useState(34);
+  const [bottomPX, setBottomPX] = useState(10);
   const [youDown, setYouDown] = useState(false);
   const [activaMenu, setActivaMenu] = useState(false);
   const router = useRouter();
@@ -56,11 +57,24 @@ export default function Navbar({ visibleNow }) {
         setActivaMenu(false);
       }
     };
-  }, [fontSize, youDown]);
+    if (isVisibleBanner) {
+      setFontSize(34);
+      setBottomPX(30)
+    } else {
+      setFontSize(14);
+      setBottomPX(10)
+    }
+  }, [fontSize, youDown, isVisibleBanner]);
 
   const clickBtn = () => {
     console.log("Click");
   };
+
+  const animate = keyframes`
+  0% {opacity:0;}
+  100% {opacity:1;}
+
+`;
 
   return (
     <>
@@ -111,7 +125,18 @@ export default function Navbar({ visibleNow }) {
           </ul>
         </div>
       ) : null}
-      <div className="container-bottom link-special">
+      <div
+        className={css`
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 1;
+          width: 100%;
+          position: fixed;
+          transition: all 600ms ease-in-out;
+          bottom: ${bottomPX}px;
+        `}
+      >
         <div
           onClick={() => clickBtn()}
           className={css`
@@ -120,6 +145,9 @@ export default function Navbar({ visibleNow }) {
             padding: 0em 1.5em;
             border-radius: 100px;
             width: fit-content;
+            &:hover {
+              animation: ${animate} ease 1s forwards;
+            }
           `}
         >
           <span
@@ -135,9 +163,7 @@ export default function Navbar({ visibleNow }) {
               color: #ffffff;
               margin: 0;
               padding: 0;
-              &:hover {
-                color: #ffffa0;
-              }
+
               @media screen and (max-width: 600px) {
                 font-size: 14px;
               }

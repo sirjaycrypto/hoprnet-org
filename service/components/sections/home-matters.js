@@ -75,9 +75,9 @@ const HomeMatter = forwardRef(({ setVisibleNow }, ref) => {
         <div className="container">
           <div className="container-char">
             <Line data={data} options={optionsLine} />
-            <p className="link-out">{t("homeWhyMatt:labelDate")}</p>
-          </div>
           
+          </div>
+          <p className="link-out">{t("homeWhyMatt:labelDate")}</p>
         </div>
         <div>
          

@@ -35,11 +35,11 @@ export default function Home() {
   const [isVisibleBanner, currentElementVisibleBanner] = useVisibility(100);
   const [isVisibleTokenFuture, currentElementTokenFuture] = useVisibility(100);
   const { t } = useTranslation();
-
+console.log(isVisibleBanner)
   useEffect(() => {
     if (isVisibleHero) setVisibleNow("");
     if (isVisibleVideo) setVideoAutoPlay(true);
-    if (showBtnBanner) setShowBtnBanner(true);
+    if (isVisibleBanner) setShowBtnBanner(true);
     if (isVisibleWhy) setVisibleNow(currentElement.current.id);
     if (isVisibleHow) setVisibleNow(currentElementAlt.current.id);
     if (isVisibleTokenFea) setVisibleNow(currentElementTokenFea.current.id);
@@ -71,7 +71,7 @@ export default function Home() {
   ]);
 
   return (
-    <Layout visibleNow={visibleNow}>
+    <Layout visibleNow={visibleNow} isVisibleBanner={isVisibleBanner}>
       <ChooseLanguage />
 
       <Hero setVisibleNow={setVisibleNow} ref={currentElementHero} />
@@ -105,11 +105,11 @@ export default function Home() {
       />
       <section className="banner-CTA" ref={currentElementVisibleBanner}>
         <img src="/assets/images/banner.png" alt="The HOPR-Token NOW" />
-        <div className="container-btn">
+        {/* <div className="container-btn">
           <div className="type-btn btn-big">
             <span>{t("common:btn-token")}</span>
           </div>
-        </div>
+        </div> */}
       </section>
       <HomeFurther
         setVisibleNow={setVisibleNow}
