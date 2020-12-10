@@ -50,6 +50,7 @@
       margin: auto;
       object-fit: cover;
       width: 80%;
+      height: 300px;
       @include responsive(tablet) {
         width: 100%;
       }

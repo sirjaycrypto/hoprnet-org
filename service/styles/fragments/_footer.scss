@@ -1,6 +1,7 @@
 footer {
-  position: relative;
   color: #fff;
+  position: relative;
+  z-index: 1;
   &::before {
     content: "";
     position: absolute;

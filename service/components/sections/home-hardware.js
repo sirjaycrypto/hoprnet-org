@@ -22,7 +22,7 @@ const HomeHardware = forwardRef(({ setVisibleNow }, ref) => {
             <div>
             <h3>{t("homeHard:subtitleB")}</h3>
               <img
-                src="/assets/images/banner-ardware.jpg"
+                src="/assets/images/banner-hardware.jpg"
                 alt={t("homeHard:title")}
                 className="aux-img-cover"
               />

@@ -1,5 +1,7 @@
 .section-further {
   background: $hopr_yellow;
+  position: relative;
+  z-index: 1;
   h2 {
     font-size: 60px;
     font-weight: 400;
