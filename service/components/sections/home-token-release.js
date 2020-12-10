@@ -103,7 +103,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
   };
 
   const dataDate = dataSupply.map((item, index) =>
-    index % 2 === 0 ? item.Date : ""
+    index % 2 !== 0 ? item.Date : ""
   );
 
   const dataTreasury = dataSupply.map((item) => item.Treasury);
