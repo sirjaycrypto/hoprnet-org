@@ -17,7 +17,7 @@ export default function Header() {
       />
       {/* <meta property="og:image" content="/assets/brand/meta.jpg" />
       <meta property="og:image:alt" ccontent="assets/brand/meta.jpg" /> */}
-      <meta charset="utf-8" />
+      <meta charSet="utf-8" />
       <meta name="keywords" content="crypto, data privacy, network-level" />
       <meta name="author" content="HOPR" />
       <meta name="copyright" content=" HOPR" />
@@ -25,16 +25,16 @@ export default function Header() {
       <meta httpEquiv="cache-control" content="no-cache" />
       <meta httpEquiv="expires" content="43200" />
       <link
-  rel="stylesheet"
-  type="text/css"
-  charset="UTF-8"
-  href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-/>
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-/>
+        rel="stylesheet"
+        type="text/css"
+        charSet="UTF-8"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+      />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+      />
     </Head>
   );
 }
