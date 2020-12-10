@@ -42,14 +42,16 @@ nav {
     a {
       text-decoration: none;
       text-transform: uppercase;
-      padding: 0 0.8rem;
+      margin: 0 0.8rem;
       font-size: 1rem;
       line-height: 1.875rem;
       letter-spacing: -0.1px;
       font-weight: 400;
-      color: $hopr_grey;
+      color: $hopr_black;
       transition: all 350ms ease-in-out;
-
+      &.active {
+        border-bottom: 2px solid $hopr_black;
+      }
       &:hover {
         transition: all 350ms ease-in-out;
         color: $hopr_bright_blue;
