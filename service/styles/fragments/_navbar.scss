@@ -3,7 +3,7 @@ nav {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 64px;
+  height: 54px;
   background: #fff;
   top: 0;
   position: relative;
@@ -32,6 +32,10 @@ nav {
     justify-content: space-between;
   }
   .menu-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     @include responsive(tablet) {
       display: none;
     }

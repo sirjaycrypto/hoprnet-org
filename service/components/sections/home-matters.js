@@ -70,24 +70,25 @@ const HomeMatter = forwardRef(({ setVisibleNow }, ref) => {
       id="WHY-IT-MATTERS"
       className="section-why-matters padding-section-aux invert-color "
     >
-      <div className="container ">
-        <h2>{t("homeWhyMatt:title")}…</h2>
-        <div className="container">
-          <div className="container-char">
+       <div className="container">
+        <div className="container-center-center">
+            <h2>{t("homeWhyMatt:title")}</h2>
+          </div>
+          <div className="flex-line-row">
+            <div className="aux-padding-box-read">
+            <p>"{t("homeWhyMatt:mainText")}"</p>
+            </div>
+            <div>
+            <div className="container-char">
             <Line data={data} options={optionsLine} />
           
           </div>
           <div className="center-help">
           <p className="link-out">{t("homeWhyMatt:labelDate")}</p>
           </div>
-
+            </div>
+          </div>
         </div>
-        <div>
-         
-        </div>
-        <p>"{t("homeWhyMatt:mainText")}"</p>
-       
-      </div>
     </section>
   );
 });

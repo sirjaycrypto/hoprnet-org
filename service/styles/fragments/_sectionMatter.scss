@@ -31,4 +31,27 @@
     font-size: 14px;
     text-decoration: underline;
   }
+  .flex-line-row {
+    display: flex;
+    & > div {
+      width: 50%;
+      overflow: hidden;
+      height: 100%;
+    }
+    img {
+      margin: auto;
+      object-fit: cover;
+      width: 80%;
+      height: 300px;
+      @include responsive(tablet) {
+        width: 100%;
+      }
+    }
+    @include responsive(tablet) {
+      flex-direction: column;
+      & > div {
+        width: 100%;
+      }
+    }
+  }
 }

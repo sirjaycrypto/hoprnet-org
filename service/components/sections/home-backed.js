@@ -31,7 +31,7 @@ const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
       <section
         ref={ref}
         id="BACKED-BY"
-        className="section-backed padding-section-aux invert-color "
+        className="section-backed invert-color "
       >
         <div className="container">
           <h2>{t("homeBack:title")}</h2>

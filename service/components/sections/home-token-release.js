@@ -64,10 +64,10 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
 
       xAxes: [
         {
-          distribution: "series",
+          
           ticks: {
-            maxRotation: 90,
-            minRotation: 0,
+            maxRotation: 100,
+            minRotation: 90,
           },
         },
       ],
@@ -102,7 +102,10 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
     ],
   };
 
-  const dataDate = dataSupply.map((item) => item.Date);
+  const dataDate = dataSupply.map((item, index) =>
+    index % 2 === 0 ? item.Date : ""
+  );
+
   const dataTreasury = dataSupply.map((item) => item.Treasury);
   const dataTeamNAdvisors = dataSupply.map((item) => item["Team & Advisors"]);
   const dataEarlyTokenBuyers = dataSupply.map(
@@ -122,9 +125,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
 
   const dataTokenSupply = {
     labels: dataDate,
-    // labels: [  "0.00","250,000.000","500.000.000","750.000.000","1000.000.000",],
     datasets: [
-   
       {
         label: "Team & Advisors",
         data: cleanData(dataTeamNAdvisors),
@@ -137,7 +138,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
         pointBorderWidth: 0,
         lineTension: 0,
       },
-     
+
       {
         label: "Bounties",
         data: cleanData(dataBounties),

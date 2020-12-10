@@ -31,11 +31,10 @@ export default function Home() {
   const [isVisibleNode, currentElementNode] = useVisibility(100);
   const [isVisibleTokenRele, currentElementTokenRele] = useVisibility(100);
   const [isVisibleBack, currentElementVisibleBack] = useVisibility(100);
-
   const [isVisibleBanner, currentElementVisibleBanner] = useVisibility(100);
   const [isVisibleTokenFuture, currentElementTokenFuture] = useVisibility(100);
   const { t } = useTranslation();
-console.log(isVisibleBanner)
+
   useEffect(() => {
     if (isVisibleHero) setVisibleNow("");
     if (isVisibleVideo) setVideoAutoPlay(true);

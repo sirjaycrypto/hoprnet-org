@@ -1,5 +1,12 @@
 .section-backed {
   background: $hopr_yellow;
+  padding: 120px 0;
+  @include responsive(tablet) {
+    padding: 50px 0 182px 0;
+  }
+  @include responsive(phone) {
+    padding: 24px 0 150px 0;
+  }
   h2 {
     font-weight: normal;
     font-size: 65px;
@@ -9,6 +16,12 @@
     color: $hopr_grey;
     margin-top: 0;
     padding-top: 0;
+    @include responsive(tablet) {
+      font-size: 60px;
+    }
+    @include responsive(phone) {
+      font-size: 30px;
+    }
   }
   p {
     font-size: 1em;
@@ -20,10 +33,13 @@
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin: 74px 0;
+    margin-top: 80px;
     @include responsive(tablet) {
       justify-content: space-between;
-      margin: 50px 0 182px 0;
+      margin-top: 50px;
+    }
+    @include responsive(phone) {
+      margin: 18px 0;
     }
     a {
       width: 200px;
