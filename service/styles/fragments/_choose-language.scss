@@ -55,6 +55,9 @@
       &:last-child {
         padding-bottom: 10px;
       }
+      &.is-current {
+        background: $hopr_yellow;
+      }
       &:hover {
         background: $hopr_yellow;
       }
