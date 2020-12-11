@@ -1,11 +1,12 @@
 .section-indicator {
   display: none;
+
   @include responsive(tablet) {
-    transition: all 400ms ease-in-out;
+    transform: translateY(-100%);
+    transition: all 350ms ease-in-out;
     top: 52px;
     display: block;
     width: 100%;
-
     box-sizing: border-box;
     margin: auto;
     position: fixed;
@@ -55,4 +56,9 @@
       }
     }
   }
+}
+
+.make-visible {
+  transform: translateY(0);
+  transition: all 350ms ease-in-out;
 }
