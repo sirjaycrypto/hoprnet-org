@@ -19,12 +19,23 @@
   &:first-child,
   &:last-child {
     margin: 0em auto;
+    .info-cont {
+      @include responsive(tablet) {
+        padding: 0;
+      }
+    }
   }
   &:first-child {
     margin-top: 120px;
+    @include responsive(tablet) {
+      margin-top: 50px;
+    }
   }
   &:last-child {
     margin-bottom: 120px;
+    @include responsive(tablet) {
+      margin-bottom: 50px;
+    }
   }
 
   &:nth-child(2) {
@@ -34,11 +45,14 @@
       object-fit: cover;
       padding: 0 2rem 0 0;
       box-sizing: border-box;
+      @include responsive(tablet) {
+        padding: 0;
+      }
     }
     .info-cont {
       padding: 0 0 0 2rem;
       @include responsive(tablet) {
-        padding: 0 2rem 0 0;
+        padding: 0;
       }
     }
   }
@@ -46,7 +60,7 @@
     width: 50%;
   }
   @include responsive(tablet) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     & > div {
       width: 100%;
     }
@@ -65,7 +79,7 @@
     letter-spacing: 0.25px;
     margin-bottom: 24px;
     @include responsive(tablet) {
-      margin-bottom: 18px;
+      margin: 18px 0;
       font-size: 24px;
       font-style: normal;
       font-weight: 700;
@@ -82,7 +96,6 @@
     }
   }
   p {
- 
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -97,10 +110,10 @@
     }
     @include responsive(phone) {
       font-size: 16px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 22px;
-          letter-spacing: 0.13333334028720856px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 0.13333334028720856px;
     }
   }
   img {
@@ -109,11 +122,15 @@
     object-fit: cover;
     padding: 0 0 0 2rem;
     box-sizing: border-box;
+    @include responsive(tablet) {
+      padding: 0;
+    }
   }
 }
 .flex-line {
   flex-direction: row-reverse;
+
   @include responsive(tablet) {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }

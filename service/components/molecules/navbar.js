@@ -90,14 +90,9 @@ export default function Navbar({ visibleNow, isVisibleBanner }) {
           </div>
           <div
             className={"icon-menu " + (activaMenu ? "open" : "")}
-            onClick={() => setActivaMenu(!activaMenu)}
           >
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+            <input type="checkbox" id="toggle"    onClick={() => setActivaMenu(!activaMenu)} />
+            <label htmlFor="toggle"></label>
           </div>
 
           <ItemsMenu />
