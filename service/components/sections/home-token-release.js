@@ -1,11 +1,18 @@
-import React, { forwardRef } from "react";
+import React, { useState, useEffect, forwardRef } from "react";
 import useTranslation from "next-translate/useTranslation";
 import { Line, Pie } from "react-chartjs-2";
 
 import dataSupply from "../../public/assets/json/dataSupply.json";
 
 const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
+  const [isMobile, setIsMobile] = useState(false);
   const { t } = useTranslation();
+
+  useEffect(() => {
+    if (window.matchMedia("screen and (max-width: 797px)").matches) {
+      setIsMobile(true);
+    }
+  }, []);
 
   var yLabels = {
     0: "0.00",
@@ -22,7 +29,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
     legend: {
       display: true,
       // position: "right",
-      position: "bottom",
+      position: isMobile ? "bottom" : "right",
       responsive: false,
       maintainAspectRatio: false,
       labels: {
@@ -42,7 +49,6 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
 
     legend: {
       display: true,
-      // position: "right",
       position: "bottom",
       responsive: false,
       maintainAspectRatio: false,
@@ -64,7 +70,6 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
 
       xAxes: [
         {
-          
           ticks: {
             maxRotation: 100,
             minRotation: 90,
@@ -135,7 +140,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
         borderColor: "rgba(0, 0, 0, 0.34)",
         pointBackgroundColor: "transparent",
         pointBorderColor: "transparent",
-        pointBorderWidth: 0,
+        pointBorderWidth: 1,
         lineTension: 0,
       },
 

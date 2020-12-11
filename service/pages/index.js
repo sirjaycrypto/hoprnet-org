@@ -37,7 +37,11 @@ export default function Home() {
 
   useEffect(() => {
     if (isVisibleHero) setVisibleNow("");
-    if (isVisibleVideo) setVideoAutoPlay(true);
+    if (isVisibleVideo) {
+      setVideoAutoPlay(true);
+    } else if (currentElementVideo.current.id === "video-area") {
+      setVideoAutoPlay(false);
+    }
     if (isVisibleBanner) setShowBtnBanner(true);
     if (isVisibleWhy) setVisibleNow(currentElement.current.id);
     if (isVisibleHow) setVisibleNow(currentElementAlt.current.id);
@@ -48,6 +52,7 @@ export default function Home() {
     if (isVisibleTokenFuture)
       setVisibleNow(currentElementTokenFuture.current.id);
   }, [
+    videoAutoPLay,
     isVisibleHero,
     isVisibleWhy,
     isVisibleHow,
@@ -75,13 +80,17 @@ export default function Home() {
 
       <Hero setVisibleNow={setVisibleNow} ref={currentElementHero} />
       <HomeMatter setVisibleNow={setVisibleNow} ref={currentElement} />
-      <section className="video-home " ref={currentElementVideo}>
+      <section
+        id="video-area"
+        className="video-home "
+        ref={currentElementVideo}
+      >
         <ReactPlayer
           className="react-player"
           url="/assets/video/about.mp4"
           width="100%"
           height="100%"
-          muted={true}
+          muted={!videoAutoPLay}
           playing={videoAutoPLay}
           loop={true}
         />
