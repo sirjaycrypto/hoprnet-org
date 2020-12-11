@@ -42,7 +42,13 @@ export default function Home() {
     } else if (currentElementVideo.current.id === "video-area") {
       setVideoAutoPlay(false);
     }
-    if (isVisibleBanner) setShowBtnBanner(true);
+
+    if (isVisibleBanner) {
+      setShowBtnBanner(true);
+    } else {
+      setShowBtnBanner(false);
+    }
+
     if (isVisibleWhy) setVisibleNow(currentElement.current.id);
     if (isVisibleHow) setVisibleNow(currentElementAlt.current.id);
     if (isVisibleTokenFea) setVisibleNow(currentElementTokenFea.current.id);
@@ -113,11 +119,14 @@ export default function Home() {
       />
       <section className="banner-CTA" ref={currentElementVisibleBanner}>
         <img src="/assets/images/banner.png" alt="The HOPR-Token NOW" />
-        {/* <div className="container-btn">
-          <div className="type-btn btn-big">
-            <span>{t("common:btn-token")}</span>
+
+        {showBtnBanner && (
+          <div className={`container-btn ${showBtnBanner ? "animate" : ""}`}>
+            <div className="type-btn btn-big">
+              <span>{t("common:btn-token")}</span>
+            </div>
           </div>
-        </div> */}
+        )}
       </section>
       <HomeFurther
         setVisibleNow={setVisibleNow}

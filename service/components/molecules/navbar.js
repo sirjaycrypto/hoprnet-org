@@ -57,13 +57,8 @@ export default function Navbar({ visibleNow, isVisibleBanner }) {
         setActivaMenu(false);
       }
     };
-    if (isVisibleBanner) {
-      setFontSize(34);
-      setBottomPX(250);
-    } else {
-      setBottomPX(10);
-    }
-  }, [fontSize, youDown, isVisibleBanner]);
+   
+  }, [fontSize, youDown]);
 
   const clickBtn = () => {
     console.log("Click");
@@ -88,10 +83,12 @@ export default function Navbar({ visibleNow, isVisibleBanner }) {
               />
             </Link>
           </div>
-          <div
-            className={"icon-menu " + (activaMenu ? "open" : "")}
-          >
-            <input type="checkbox" id="toggle"    onClick={() => setActivaMenu(!activaMenu)} />
+          <div className={"icon-menu " + (activaMenu ? "open" : "")}>
+            <input
+              type="checkbox"
+              id="toggle"
+              onClick={() => setActivaMenu(!activaMenu)}
+            />
             <label htmlFor="toggle"></label>
           </div>
 
@@ -119,54 +116,57 @@ export default function Navbar({ visibleNow, isVisibleBanner }) {
           </ul>
         </div>
       ) : null}
-      <div
-        className={css`
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          z-index: 1;
-          width: 100%;
-          position: fixed;
-          transition: all 600ms ease-in-out;
-          bottom: ${bottomPX}px;
-        `}
-      >
+
+      {!isVisibleBanner && (
         <div
-          onClick={() => clickBtn()}
           className={css`
-            background: linear-gradient(90deg, #0000db 0%, #292941 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            width: 100%;
+            position: fixed;
             transition: all 600ms ease-in-out;
-            padding: 0em 1.5em;
-            border-radius: 100px;
-            width: fit-content;
-            &:hover {
-              animation: ${animate} ease 1s forwards;
-            }
+            bottom: 10px;
           `}
         >
-          <span
+          <div
+            onClick={() => clickBtn()}
             className={css`
-              font-size: ${fontSize}px;
-              transition: all 300ms ease-in-out;
-              font-weight: 600;
-              line-height: 2em;
-              display: flex;
-              align-items: center;
-              text-align: center;
-              letter-spacing: 0.2975px;
-              color: #ffffff;
-              margin: 0;
-              padding: 0;
-
-              @media screen and (max-width: 600px) {
-                font-size: 14px;
+              background: linear-gradient(90deg, #0000db 0%, #292941 100%);
+              transition: all 600ms ease-in-out;
+              padding: 0em 1.5em;
+              border-radius: 100px;
+              width: fit-content;
+              &:hover {
+                animation: ${animate} ease 1s forwards;
               }
             `}
           >
-            {t("common:btn-token")}
-          </span>
+            <span
+              className={css`
+                font-size: ${fontSize}px;
+                transition: all 300ms ease-in-out;
+                font-weight: 600;
+                line-height: 2em;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                letter-spacing: 0.2975px;
+                color: #ffffff;
+                margin: 0;
+                padding: 0;
+
+                @media screen and (max-width: 600px) {
+                  font-size: 14px;
+                }
+              `}
+            >
+              {t("common:btn-token")}
+            </span>
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 }

@@ -17,11 +17,28 @@
     z-index: -1;
   }
 
-  .container-btn{
+  .container-btn {
     position: absolute;
-
-    @include responsive(tablet) {
-      padding: 0 2rem;
+    span {
+      font-size: 34px;
     }
+    @include responsive(tablet) {
+      span {
+        font-size: 21px;
+      }
+    }
+  }
+  .animate {
+    animation: animateThis 1400ms ease-in-out forwards;
+  }
+}
+
+@keyframes animateThis {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
   }
 }

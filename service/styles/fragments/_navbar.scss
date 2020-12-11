@@ -217,6 +217,10 @@ nav {
 }
 
 .icon-menu {
+  display: none;
+    @include responsive(tablet) {
+      display: block;
+    }
   right: 24px;
   position: relative;
   label {
