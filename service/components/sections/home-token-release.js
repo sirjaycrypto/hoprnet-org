@@ -239,6 +239,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
           </div>
           <div>
             <h3>{t("homeToken:secondSubTitle")} (%)</h3>
+            <p>{t("homeToken:secondSubAbout")}</p>
             <div>
               <Pie data={data} width={100} height={539} options={options} />
             </div>

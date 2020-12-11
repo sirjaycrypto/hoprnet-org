@@ -42,9 +42,19 @@
     li {
       text-transform: uppercase;
       color: #000;
-      font-size: 0.875rem;
-      box-sizing: border-box;
-      padding: 0.4rem;
+      font-size: 14px;
+      text-align: center;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      line-height: 35px;
+      letter-spacing: 0.116667px;
+      &:first-child {
+        padding-top: 10px;
+      }
+      &:last-child {
+        padding-bottom: 10px;
+      }
       &:hover {
         background: $hopr_yellow;
       }

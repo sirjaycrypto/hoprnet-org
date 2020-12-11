@@ -5,6 +5,11 @@ const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
   const { t } = useTranslation();
   const data = [
     {
+      img: "/assets/backed_by_logo/Binance_labs.png",
+      url: "https://binancelabs.substack.com/",
+      title: "Binance_labs",
+    },
+    {
       img: "/assets/backed_by_logo/01_Caballeros_Logo.svg",
       url: "http://caballeroscapital.com/",
       title: "caballeros-capital",

@@ -34,8 +34,11 @@ nav {
   .menu-desktop {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     width: 100%;
+    @media all and (orientation: landscape) {
+      justify-content: center;
+    }
     @include responsive(tablet) {
       display: none;
     }
@@ -218,9 +221,9 @@ nav {
 
 .icon-menu {
   display: none;
-    @include responsive(tablet) {
-      display: block;
-    }
+  @include responsive(tablet) {
+    display: block;
+  }
   right: 24px;
   position: relative;
   label {

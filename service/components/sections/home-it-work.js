@@ -18,8 +18,8 @@ const HomeHomeItWork = forwardRef(({ setVisibleNow }, ref) => {
     },
     {
       img: "/assets/images/03_hopr_Performant.png",
-      title: "homeHowWor:private",
-      paragraph: "homeHowWor:privateMain",
+      title: "homeHowWor:performant",
+      paragraph: "homeHowWor:performantMain",
       mirrorBox: false,
     },
   ];
