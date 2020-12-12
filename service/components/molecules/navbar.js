@@ -72,7 +72,7 @@ export default function Navbar({ visibleNow, isVisibleBanner }) {
 
   return (
     <>
-      <nav className={youDown ? "add-scroll-menu " : ""}>
+      <nav id="menu" className={youDown ? "add-scroll-menu " : ""}>
         <div className={"container-sm " + (activaMenu ? "add-shadow" : "")}>
           <div className="help-flex">
             <Link href="/">

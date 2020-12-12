@@ -14,13 +14,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
     }
   }, []);
 
-  var yLabels = {
-    0: "0.00",
-    1: "250,000.000",
-    2: "500.000.000",
-    6: "750.000.000",
-    8: "1000.000.000",
-  };
+  
 
   const options = {
     maintainAspectRatio: false,
@@ -40,42 +34,6 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
         boxWidth: 21,
         usePointStyle: false,
       },
-    },
-  };
-
-  const optionsLine = {
-    maintainAspectRatio: false,
-    responsive: true,
-
-    legend: {
-      display: true,
-      position: "bottom",
-      responsive: false,
-      maintainAspectRatio: false,
-      labels: {
-        fontFamily: "Source Code Pro",
-        fontSize: 14,
-        fontColor: "#414141",
-        padding: 18,
-        boxWidth: 21,
-        usePointStyle: false,
-      },
-    },
-    scales: {
-      y: {
-        ticks: {
-          crossAlign: "far",
-        },
-      },
-
-      xAxes: [
-        {
-          ticks: {
-            maxRotation: 100,
-            minRotation: 90,
-          },
-        },
-      ],
     },
   };
 
@@ -107,9 +65,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
     ],
   };
 
-  const dataDate = dataSupply.map((item, index) =>
-    index % 2 !== 0 ? item.Date : ""
-  );
+  const dataDate = dataSupply.map((item) => item.Date);
 
   const dataTreasury = dataSupply.map((item) => item.Treasury);
   const dataTeamNAdvisors = dataSupply.map((item) => item["Team & Advisors"]);
@@ -128,80 +84,149 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
     });
   }
 
+  var yLabels = [{
+    
+    0: "0.00",
+    1: "250,000.000",
+    2: "500.000.000",
+    6: "750.000.000",
+    8: "1000.000.000",
+  }];
+
+  const dataOption = {
+    maintainAspectRatio: !1,
+    elements: {
+      point: {
+        radius: 0,
+        borderWidth: 0,
+      },
+    },
+    tooltips: {
+      mode: "x-axis",
+      callbacks: {
+        label: function (e, t) {
+          return "".concat(t.legend[e.datasetIndex], " ").concat(e.yLabel, "%");
+        },
+      },
+    },
+    scales: {
+      yAxes: [
+        {
+          gridLines: {
+            display: true,
+          },
+          stacked: !0,
+          beginAtZero: true,
+          ticks: {
+            max: 1000000000,
+            min: 0.00,
+            stepSize: 250000000
+        }
+        },
+      ],
+      xAxes: [
+        {
+          gridLines: {
+            display: false,
+          },
+          ticks: {
+            maxRotation: 100,
+            minRotation: 90,
+            maxTicksLimit: 12,
+          },
+        },
+      ],
+    },
+    legend: {
+      position: "bottom",
+      labels: {
+        boxWidth: 10,
+      },
+    },
+  };
+
   const dataTokenSupply = {
+    legend: [
+      "Team & Advisors",
+      "Bounties",
+      "Early Token Buyers",
+      "Public Sale",
+      "Treasury",
+      "Cover Traffic",
+    ],
     labels: dataDate,
     datasets: [
       {
         label: "Team & Advisors",
         data: cleanData(dataTeamNAdvisors),
-        fill: true,
-        backgroundColor: "#FBFB3B",
+        backgroundColor: ["#FBFB3B"],
+        pointBackgroundColor: "#FBFB3B",
+
         borderWidth: 0,
-        borderColor: "rgba(0, 0, 0, 0.34)",
+        borderColor: "transparent",
         pointBackgroundColor: "transparent",
         pointBorderColor: "transparent",
         pointBorderWidth: 1,
         lineTension: 0,
       },
-
       {
         label: "Bounties",
         data: cleanData(dataBounties),
-        fill: true,
-        backgroundColor: "#7E7E1E",
+        backgroundColor: ["#7E7E1E"],
+        pointBackgroundColor: "#7E7E1E",
         borderWidth: 0,
-        borderColor: "rgba(0, 0, 0, 0.34)",
+        borderColor: "transparent",
         pointBackgroundColor: "transparent",
         pointBorderColor: "transparent",
-        pointBorderWidth: 0,
+        pointBorderWidth: 1,
         lineTension: 0,
       },
       {
         label: "Early Token Buyers",
         data: cleanData(dataEarlyTokenBuyers),
-        fill: true,
-        backgroundColor: "#BCBC2A",
+        backgroundColor: ["#BCBC2A"],
+        pointBackgroundColor: "#BCBC2A",
         borderWidth: 0,
-        borderColor: "rgba(0, 0, 0, 0.34)",
+        borderColor: "transparent",
         pointBackgroundColor: "transparent",
         pointBorderColor: "transparent",
-        pointBorderWidth: 0,
+        pointBorderWidth: 1,
         lineTension: 0,
       },
       {
         label: "Public Sale",
         data: cleanData(dataPublicSale),
-        fill: true,
-        backgroundColor: "#020250",
+        backgroundColor: ["#020250"],
+        pointBackgroundColor: "#020250",
         borderWidth: 0,
-        borderColor: "rgba(0, 0, 0, 0.34)",
+        borderColor: "transparent",
         pointBackgroundColor: "transparent",
         pointBorderColor: "transparent",
-        pointBorderWidth: 0,
+        pointBorderWidth: 1,
         lineTension: 0,
       },
       {
         label: "Treasury",
         data: cleanData(dataTreasury),
-        fill: true,
-        backgroundColor: "#FDFFA2",
+        backgroundColor: ["#FDFFA2"],
+        pointBackgroundColor: "#FDFFA2",
         borderWidth: 0,
-        borderColor: "rgba(0, 0, 0, 0.34)",
+        borderColor: "transparent",
         pointBackgroundColor: "transparent",
         pointBorderColor: "transparent",
-        pointBorderWidth: 0,
+        pointBorderWidth: 1,
         lineTension: 0,
       },
       {
         label: "Cover Traffic",
         data: cleanData(dataCoverTraffic),
-        fill: true,
-        backgroundColor: "#0E01B4",
+        backgroundColor: ["#0E01B4"],
+        pointBackgroundColor: "#0E01B4",
         borderWidth: 0,
-        borderColor: "rgba(0, 0, 0, 0.34)",
+        borderColor: "transparent",
         pointBackgroundColor: "transparent",
         pointBorderColor: "transparent",
-        pointBorderWidth: 0,
+        pointBorderWidth: 1,
         lineTension: 0,
       },
     ],
@@ -249,7 +274,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
             <h3>{t("homeToken:thirdSubTitle")} (%)</h3>
             <div className="container-chart">
               <div className="help-scroll">
-                <Line data={dataTokenSupply} options={optionsLine} />
+                <Line data={dataTokenSupply} options={dataOption} />
               </div>
             </div>
           </div>
