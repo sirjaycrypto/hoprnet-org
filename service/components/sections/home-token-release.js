@@ -84,14 +84,6 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
     });
   }
 
-  var yLabels = [{
-    
-    0: "0.00",
-    1: "250,000.000",
-    2: "500.000.000",
-    6: "750.000.000",
-    8: "1000.000.000",
-  }];
 
   const dataOption = {
     maintainAspectRatio: !1,
@@ -105,6 +97,8 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
       mode: "x-axis",
       callbacks: {
         label: function (e, t) {
+          console.log(e)
+          console.log(t)
           return "".concat(t.legend[e.datasetIndex], " ").concat(e.yLabel, "%");
         },
       },
@@ -161,73 +155,42 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
         data: cleanData(dataTeamNAdvisors),
         backgroundColor: ["#FBFB3B"],
         pointBackgroundColor: "#FBFB3B",
-
-        borderWidth: 0,
-        borderColor: "transparent",
-        pointBackgroundColor: "transparent",
-        pointBorderColor: "transparent",
-        pointBorderWidth: 1,
-        lineTension: 0,
+ 
       },
       {
         label: "Bounties",
         data: cleanData(dataBounties),
         backgroundColor: ["#7E7E1E"],
         pointBackgroundColor: "#7E7E1E",
-        borderWidth: 0,
-        borderColor: "transparent",
-        pointBackgroundColor: "transparent",
-        pointBorderColor: "transparent",
-        pointBorderWidth: 1,
-        lineTension: 0,
+       
       },
       {
         label: "Early Token Buyers",
         data: cleanData(dataEarlyTokenBuyers),
         backgroundColor: ["#BCBC2A"],
         pointBackgroundColor: "#BCBC2A",
-        borderWidth: 0,
-        borderColor: "transparent",
-        pointBackgroundColor: "transparent",
-        pointBorderColor: "transparent",
-        pointBorderWidth: 1,
-        lineTension: 0,
+       
       },
       {
         label: "Public Sale",
         data: cleanData(dataPublicSale),
         backgroundColor: ["#020250"],
         pointBackgroundColor: "#020250",
-        borderWidth: 0,
-        borderColor: "transparent",
-        pointBackgroundColor: "transparent",
-        pointBorderColor: "transparent",
-        pointBorderWidth: 1,
-        lineTension: 0,
+     
       },
       {
         label: "Treasury",
         data: cleanData(dataTreasury),
         backgroundColor: ["#FDFFA2"],
         pointBackgroundColor: "#FDFFA2",
-        borderWidth: 0,
-        borderColor: "transparent",
-        pointBackgroundColor: "transparent",
-        pointBorderColor: "transparent",
-        pointBorderWidth: 1,
-        lineTension: 0,
+     
       },
       {
         label: "Cover Traffic",
         data: cleanData(dataCoverTraffic),
         backgroundColor: ["#0E01B4"],
         pointBackgroundColor: "#0E01B4",
-        borderWidth: 0,
-        borderColor: "transparent",
-        pointBackgroundColor: "transparent",
-        pointBorderColor: "transparent",
-        pointBorderWidth: 1,
-        lineTension: 0,
+       
       },
     ],
   };
