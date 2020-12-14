@@ -95,7 +95,12 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
       mode: "x-axis",
       callbacks: {
         label: function (e, t) {
-          return "".concat(t.legend[e.datasetIndex], " ").concat(e.yLabel, "%");
+          return ""
+            .concat(t.legend[e.datasetIndex], " ")
+            .concat(
+              e.yLabel.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+              "%"
+            );
         },
       },
     },
