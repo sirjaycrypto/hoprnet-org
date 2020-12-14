@@ -14,8 +14,6 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
     }
   }, []);
 
-  
-
   const options = {
     maintainAspectRatio: false,
     responsive: true,
@@ -84,9 +82,9 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
     });
   }
 
-
   const dataOption = {
     maintainAspectRatio: !1,
+
     elements: {
       point: {
         radius: 0,
@@ -97,8 +95,6 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
       mode: "x-axis",
       callbacks: {
         label: function (e, t) {
-          console.log(e)
-          console.log(t)
           return "".concat(t.legend[e.datasetIndex], " ").concat(e.yLabel, "%");
         },
       },
@@ -113,9 +109,12 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
           beginAtZero: true,
           ticks: {
             max: 1000000000,
-            min: 0.00,
-            stepSize: 250000000
-        }
+            min: 0.0,
+            stepSize: 250000000,
+            callback: function (value, index, values) {
+              return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            },
+          },
         },
       ],
       xAxes: [
@@ -134,7 +133,12 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
     legend: {
       position: "bottom",
       labels: {
-        boxWidth: 10,
+        fontFamily: "Source Code Pro",
+        fontSize: 14,
+        fontColor: "#414141",
+        padding: 18,
+        boxWidth: 21,
+        usePointStyle: false,
       },
     },
   };
@@ -155,42 +159,54 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
         data: cleanData(dataTeamNAdvisors),
         backgroundColor: ["#FBFB3B"],
         pointBackgroundColor: "#FBFB3B",
- 
+        borderWidth: 0,
+        pointBorderWidth: 0,
+        lineTension: 0,
       },
       {
         label: "Bounties",
         data: cleanData(dataBounties),
         backgroundColor: ["#7E7E1E"],
         pointBackgroundColor: "#7E7E1E",
-       
+        borderWidth: 0,
+        pointBorderWidth: 0,
+        lineTension: 0,
       },
       {
         label: "Early Token Buyers",
         data: cleanData(dataEarlyTokenBuyers),
         backgroundColor: ["#BCBC2A"],
         pointBackgroundColor: "#BCBC2A",
-       
+        borderWidth: 0,
+        pointBorderWidth: 0,
+        lineTension: 0,
       },
       {
         label: "Public Sale",
         data: cleanData(dataPublicSale),
         backgroundColor: ["#020250"],
         pointBackgroundColor: "#020250",
-     
+        borderWidth: 0,
+        pointBorderWidth: 0,
+        lineTension: 0,
       },
       {
         label: "Treasury",
         data: cleanData(dataTreasury),
         backgroundColor: ["#FDFFA2"],
         pointBackgroundColor: "#FDFFA2",
-     
+        borderWidth: 0,
+        pointBorderWidth: 0,
+        lineTension: 0,
       },
       {
         label: "Cover Traffic",
         data: cleanData(dataCoverTraffic),
         backgroundColor: ["#0E01B4"],
         pointBackgroundColor: "#0E01B4",
-       
+        borderWidth: 0,
+        pointBorderWidth: 0,
+        lineTension: 0,
       },
     ],
   };

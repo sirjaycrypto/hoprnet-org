@@ -1,14 +1,14 @@
 .container-languages {
   position: absolute;
   right: 24px;
-  top: 74px;
+  top: 4rem;
   .select-lang {
     text-transform: uppercase;
     position: relative;
     z-index: 3;
     display: flex;
     align-items: center;
-    padding: 0.5rem 0;
+    padding-bottom: 0.5rem ;
     color: #fff;
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
     justify-content: flex-end;

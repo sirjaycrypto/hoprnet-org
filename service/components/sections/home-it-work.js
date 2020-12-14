@@ -17,7 +17,7 @@ const HomeHomeItWork = forwardRef(({ setVisibleNow }, ref) => {
       mirrorBox: true,
     },
     {
-      img: "/assets/images/03_hopr_Performant.png",
+      img: "/assets/images/hopr_Performant_Animation.gif",
       title: "homeHowWor:performant",
       paragraph: "homeHowWor:performantMain",
       mirrorBox: false,
