@@ -24,7 +24,6 @@ const HomeMatter = forwardRef(({ setVisibleNow }, ref) => {
     datasets: [
       {
         data: [
-          ,
           241812,
           368808,
           522840,
@@ -39,7 +38,7 @@ const HomeMatter = forwardRef(({ setVisibleNow }, ref) => {
           3337284,
           4200000,
         ],
-        borderDash: [15, 3, 3, 3],
+        borderDash: [1, 0],
         fill: false,
         backgroundColor: "rgba(0,0,0,0)",
         borderColor: "#648CFA",
@@ -48,17 +47,44 @@ const HomeMatter = forwardRef(({ setVisibleNow }, ref) => {
   };
 
   const optionsLine = {
+    maintainAspectRatio: !1,
     legend: {
       display: false,
       spanGaps: false,
     },
     responsive: true,
     borderCapStyle: "round",
+    elements: {
+      point: {
+        radius: 0,
+        borderWidth: 0,
+      },
+    },
     scales: {
       yAxes: [
         {
+          gridLines: {
+            display: true,
+          },
           ticks: {
-            beginAtZero: false,
+            max: 5000000,
+            min: 0.0,
+            stepSize: 1000000,
+            callback: function (value, index, values) {
+              return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            },
+          },
+        },
+      ],
+      xAxes: [
+        {
+          gridLines: {
+            display: true,
+          },
+          ticks: {
+            maxRotation: 0,
+            minRotation: 0,
+            maxTicksLimit: 7,
           },
         },
       ],
