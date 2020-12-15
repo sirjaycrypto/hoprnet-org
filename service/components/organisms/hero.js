@@ -7,24 +7,26 @@ const Hero = forwardRef(({ setVisibleNow }, ref) => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    if (window.matchMedia("screen and (min-width: 1080px)").matches) {
-      setVideoActive("/assets/video/hopr_Drone_Desktop_Tablet-Landscape.mp4");
-    }
-    if (window.matchMedia("screen and (max-width: 797px)").matches) {
-      setVideoActive("/assets/video/hopr_Drone_Tablet-Portrait.mp4");
-    }
-    if (window.matchMedia("screen and (max-width: 370px)").matches) {
-      setVideoActive("/assets/video/hopr_Drone_Mobile.mp4");
-      
+    if (typeof window !== "undefined") {
+      if (window.matchMedia("(min-width: 1080px)").matches) {
+        setVideoActive("/assets/video/hero.mp4");
+      } else if (window.matchMedia("(max-width: 797px)").matches) {
+        setVideoActive("/assets/video/hopr_Drone_Tablet-Portrait.mp4");
+      } else if (window.matchMedia("(max-width: 370px)").matches) {
+        setVideoActive("/assets/video/hopr_Drone_Mobile.mp4");
+      }
     }
   });
-console.log(videoActive)
+
   return (
     <>
       <section ref={ref} className="section-hero">
         <HeroInfo />
         <video id="background-video" autoPlay loop muted>
-          <source src={videoActive} type="video/mp4" />
+          <source
+            src="/assets/video/hopr_Drone_Tablet-Portrait.mp4"
+            type="video/mp4"
+          />
           Your browser does not support the video tag.
         </video>
 
