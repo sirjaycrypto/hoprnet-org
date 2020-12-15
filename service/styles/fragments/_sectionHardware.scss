@@ -81,6 +81,7 @@
       height: 300px;
       @include responsive(tablet) {
         width: 100%;
+        height: auto;
       }
     }
     @include responsive(tablet) {

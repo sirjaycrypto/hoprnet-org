@@ -99,7 +99,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
             .concat(t.legend[e.datasetIndex], " ")
             .concat(
               e.yLabel.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
-              "%"
+              " HOPR"
             );
         },
       },
@@ -113,10 +113,14 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
           stacked: !0,
           beginAtZero: true,
           ticks: {
+            fontFamily: "Source Code Pro",
+            fontSize: 14,
+            fontColor: "#414141",
+            padding: 18,
             max: 1000000000,
             min: 0.0,
             stepSize: 250000000,
-            callback: function (value, index, values) {
+            callback: function (value) {
               return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             },
           },

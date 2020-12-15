@@ -37,9 +37,9 @@ nav {
     align-items: center;
     justify-content: flex-end;
     width: 100%;
-    @media all and (orientation: landscape) {
-      justify-content: center;
-    }
+    // @media all and (orientation: landscape) {
+    //   justify-content: center;
+    // }
     @include responsive(tablet) {
       display: none;
     }
@@ -63,7 +63,6 @@ nav {
     }
   }
 }
-
 
 .menu-mobile {
   display: flex;
