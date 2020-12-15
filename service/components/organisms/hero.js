@@ -21,6 +21,7 @@ const Hero = forwardRef(({ setVisibleNow }, ref) => {
         setVideoS(true);
       }
     }
+
   },[]);
 
   return (

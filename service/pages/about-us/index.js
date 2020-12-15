@@ -10,8 +10,6 @@ import { stagger, fadeInUp } from "../../util/motionConfig";
 import { loadNamespaces } from "../_app";
 import useTranslation from "next-translate/useTranslation";
 
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const dataInfo = [
   {
@@ -60,18 +58,18 @@ const dataVALUES = [
 
 export default function Index() {
   const { t } = useTranslation();
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-  }, []);
+
   return (
     <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
       <Layout>
         <HeroInternal>
           <motion.div variants={stagger}>
-            <h1 data-aos="fade-up" data-aos-duration="150"  data-aos-easing="linear">
+            <h1 className="reveal-from-top "  data-reveal-delay="150">
               {t("aboutHero:title")}
             </h1>
+            <p className="section-header mt-0 mb-0 reveal-from-top big-title" data-reveal-delay="150">
+            Independent, Incorruptible, And Indestructible
+          </p>
             <div>
               <motion.p variants={fadeInUp} transition={{ delay: 0.2 }}>
                 {t("aboutHero:paragraphA")}

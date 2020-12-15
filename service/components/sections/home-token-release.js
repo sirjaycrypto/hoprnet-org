@@ -64,7 +64,6 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
   };
 
   const dataDate = dataSupply.map((item) => item.Date);
-
   const dataTreasury = dataSupply.map((item) => item.Treasury);
   const dataTeamNAdvisors = dataSupply.map((item) => item["Team & Advisors"]);
   const dataEarlyTokenBuyers = dataSupply.map(
@@ -78,7 +77,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
     return elements.map(function (elem) {
       let aux = elem.split("").join("");
       aux = aux.split(",").join("");
-      return aux;
+      return parseFloat(aux);
     });
   }
 
@@ -140,7 +139,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
       ],
     },
     legend: {
-      position: "bottom",
+      position: isMobile ? "bottom" : "right",
       labels: {
         fontFamily: "Source Code Pro",
         fontSize: 14,
@@ -154,51 +153,15 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
 
   const dataTokenSupply = {
     legend: [
-      "Team & Advisors",
-      "Bounties",
-      "Early Token Buyers",
-      "Public Sale",
       "Treasury",
+      "Team & Advisors",
+      "Early Token Buyers",
+      "Bounties",
       "Cover Traffic",
+      "Public Sale",
     ],
     labels: dataDate,
     datasets: [
-      {
-        label: "Team & Advisors",
-        data: cleanData(dataTeamNAdvisors),
-        backgroundColor: ["#FBFB3B"],
-        pointBackgroundColor: "#FBFB3B",
-        borderWidth: 0,
-        pointBorderWidth: 0,
-        lineTension: 0,
-      },
-      {
-        label: "Bounties",
-        data: cleanData(dataBounties),
-        backgroundColor: ["#7E7E1E"],
-        pointBackgroundColor: "#7E7E1E",
-        borderWidth: 0,
-        pointBorderWidth: 0,
-        lineTension: 0,
-      },
-      {
-        label: "Early Token Buyers",
-        data: cleanData(dataEarlyTokenBuyers),
-        backgroundColor: ["#BCBC2A"],
-        pointBackgroundColor: "#BCBC2A",
-        borderWidth: 0,
-        pointBorderWidth: 0,
-        lineTension: 0,
-      },
-      {
-        label: "Public Sale",
-        data: cleanData(dataPublicSale),
-        backgroundColor: ["#020250"],
-        pointBackgroundColor: "#020250",
-        borderWidth: 0,
-        pointBorderWidth: 0,
-        lineTension: 0,
-      },
       {
         label: "Treasury",
         data: cleanData(dataTreasury),
@@ -208,11 +171,52 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
         pointBorderWidth: 0,
         lineTension: 0,
       },
+
+      {
+        label: "Team & Advisors",
+        data: cleanData(dataTeamNAdvisors),
+        backgroundColor: ["#FBFB3B"],
+        pointBackgroundColor: "#FBFB3B",
+        borderWidth: 0,
+        pointBorderWidth: 0,
+        lineTension: 0,
+      },
+
+      {
+        label: "Early Token Buyers",
+        data: cleanData(dataEarlyTokenBuyers),
+        backgroundColor: ["#BCBC2A"],
+        pointBackgroundColor: "#BCBC2A",
+        borderWidth: 0,
+        pointBorderWidth: 0,
+        lineTension: 0,
+      },
+
+      {
+        label: "Bounties",
+        data: cleanData(dataBounties),
+        backgroundColor: ["#7E7E1E"],
+        pointBackgroundColor: "#7E7E1E",
+        borderWidth: 0,
+        pointBorderWidth: 0,
+        lineTension: 0,
+      },
+
       {
         label: "Cover Traffic",
         data: cleanData(dataCoverTraffic),
         backgroundColor: ["#0E01B4"],
         pointBackgroundColor: "#0E01B4",
+        borderWidth: 0,
+        pointBorderWidth: 0,
+        lineTension: 0,
+      },
+
+      {
+        label: "Public Sale",
+        data: cleanData(dataPublicSale),
+        backgroundColor: ["#020250"],
+        pointBackgroundColor: "#020250",
         borderWidth: 0,
         pointBorderWidth: 0,
         lineTension: 0,

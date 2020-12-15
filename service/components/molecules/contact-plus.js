@@ -44,9 +44,9 @@ export default function ContactPlus() {
         {data.map((e, index) => {
           const { link, img, label } = e;
           return (
-            <a href={link} target="_blank" rel="noopener noreferrer">
+            <a key={index} href={link} target="_blank" rel="noopener noreferrer">
               <motion.div
-                key={index}
+                
                 variants={fadeInUp}
                 transition={{ delay: 0.8 }}
                 className="item-contact-plus"
