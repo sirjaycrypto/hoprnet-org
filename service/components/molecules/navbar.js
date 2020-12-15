@@ -117,7 +117,7 @@ export default function Navbar({ visibleNow, isVisibleBanner }) {
         </div>
       ) : null}
 
-      {!isVisibleBanner && (
+     
         <div
           className={css`
             display: flex;
@@ -166,7 +166,7 @@ export default function Navbar({ visibleNow, isVisibleBanner }) {
             </span>
           </div>
         </div>
-      )}
+      
     </>
   );
 }

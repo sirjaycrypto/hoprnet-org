@@ -4,7 +4,7 @@ $phone: 370px;  //
 
 @mixin responsive($media) {
   @if $media= phone {
-    @media screen and (max-width: 600px)  {
+    @media screen and (max-width: 639px)  {
       @content;
     }
   }

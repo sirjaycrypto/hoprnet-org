@@ -4,6 +4,12 @@
     font-weight: 400;
     margin-bottom: 4rem;
     color: $hopr_grey;
+    @include responsive(tablet) {
+      font-size: 60px;
+    }
+    @include responsive(phone) {
+      font-size: 30px;
+    }
   }
 
   .element-boxing {

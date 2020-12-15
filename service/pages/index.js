@@ -48,6 +48,7 @@ export default function Home() {
     } else {
       setShowBtnBanner(false);
     }
+    console.log(currentElementVisibleBanner.current.offsetTop)
 
     if (isVisibleWhy) setVisibleNow(currentElement.current.id);
     if (isVisibleHow) setVisibleNow(currentElementAlt.current.id);

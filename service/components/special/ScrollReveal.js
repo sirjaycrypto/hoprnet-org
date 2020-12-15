@@ -4,9 +4,9 @@ import { throttle } from "lodash";
 class ScrollReveal extends React.Component {
   constructor() {
     super(...arguments);
-    if (typeof window !== "undefined") {
+    
       this.state = {
-        viewportHeight: window.innerHeight,
+        viewportHeight:typeof window !== "undefined" ?  window.innerHeight : 0,
         revealEl: [],
       };
 
@@ -46,8 +46,9 @@ class ScrollReveal extends React.Component {
             }
           }
         }
+    
       };
-    }
+    
 
     this.init = () => {
       setTimeout(() => {
