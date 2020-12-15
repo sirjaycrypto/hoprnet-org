@@ -107,11 +107,11 @@ section {
   box-shadow: 1px 1px 41px -13px rgba(0, 0, 0, 0.34);
   border-radius: 16px;
   overflow: hidden;
-  height: auto;
+  height: 250px;
   width: 90%;
   margin: auto;
   @include responsive(tablet) {
-    width: 90vw;
+    height: 300px;
   }
   canvas {
     padding: 1em;

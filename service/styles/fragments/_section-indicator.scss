@@ -4,7 +4,7 @@
   @include responsive(tablet) {
     transform: translateY(-100%);
     transition: all 350ms ease-in-out;
-    top: 52px;
+    top: 0;
     display: block;
     width: 100%;
     box-sizing: border-box;
