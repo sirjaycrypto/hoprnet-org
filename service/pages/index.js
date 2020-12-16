@@ -125,6 +125,7 @@ const clickBtn = () => {
           height="100%"
           muted={!videoAutoPLay}
           playing={videoAutoPLay}
+          playsinline={true}
           loop={true}
         />
       </section>
