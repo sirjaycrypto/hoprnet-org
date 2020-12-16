@@ -64,6 +64,44 @@ const HomeFurther = forwardRef(({ setVisibleNow }, ref) => {
               );
             })}
           </div>
+          <div>
+            {/* className="list-top" */}
+            <div className="row">
+              <div className="item">
+                <div className="icon">
+                  <img
+                    src="/assets/brand/logo.svg"
+                    alt={t("homeFut:infoTopTitleA")}
+                  />
+                </div>
+              </div>
+              <div className="item">
+                <div className="icon">
+                  <img
+                    src="/assets/brand/logo.svg"
+                    alt={t("homeFut:infoTopTitleB")}
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="item">
+                <h5>{t("homeFut:infoTopTitleA")}</h5>
+              </div>
+              <div className="item">
+                <h5>{t("homeFut:infoTopTitleB")}</h5>
+              </div>
+            </div>
+            <div className="row">
+              <div className="item">
+                <p>{t("homeFut:infoTopTitleAAbout")}</p>
+              </div>
+              <div className="item">
+                <p>{t("homeFut:infoTopTitleBAbout")}</p>
+              </div>
+            </div>
+            {/*  */}
+          </div>
 
           <div className="list-down">
             {infoDown.map((e, index) => {

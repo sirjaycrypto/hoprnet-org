@@ -8,14 +8,13 @@
 
     color: $hopr_grey;
     text-align: center;
-    margin: 120px 0;
+    margin: 74px 0;
     @include responsive(tablet) {
       justify-content: space-between;
       margin: 50px 0;
     }
     @include responsive(phone) {
       font-size: 30px;
-      margin: 24px 0;
     }
   }
   .list-top,
@@ -25,7 +24,10 @@
     flex-wrap: wrap;
   }
   .list-top {
- 
+    display: none;
+    @include responsive(tablet) {
+      display: flex;
+    }
   }
   .element-future {
     width: 50%;
@@ -71,7 +73,7 @@
           text-align: center;
           letter-spacing: 0.166667px;
           margin: 24px 0 18px 0;
-          width: 100%;
+             width: 100%;
         }
       }
       p {
@@ -106,6 +108,69 @@
           line-height: normal;
         }
       }
+    }
+  }
+}
+
+
+
+.row {
+  display: flex;
+  @include responsive(tablet) {
+    display: none;
+  }
+  & > .item {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+   
+    .icon {
+      width: 200px;
+      height: 200px;
+      background: #fff;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    h5,
+    p {
+      padding: 0;
+      margin: 0;
+    }
+    h5 {
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 37px;
+      text-align: center;
+      letter-spacing: 0.2px;
+      text-decoration-line: underline;
+      color: $hopr_bright_blue;
+      width: 70%;
+      margin: 24px auto;
+      letter-spacing: 0.2px;
+      @include responsive(tablet) {
+        font-size: 24px;
+        line-height: 37px;
+        letter-spacing: 0.2px;
+        width: 100%;
+      }
+      @include responsive(phone) {
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        letter-spacing: 0.166667px;
+        margin: 24px 0 18px 0;
+        width: 100%;
+      }
+    }
+    p {
+      padding: 0 14px;
+      font-weight: 400;
+      font-size: 1.125rem;
+      line-height: 2.063rem;
+      letter-spacing: 0.15px;
+      color: $hopr_grey;
     }
   }
 }
