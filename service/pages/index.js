@@ -25,7 +25,7 @@ export default function Home() {
   const [visibleNow, setVisibleNow] = useState("");
   const [videoAutoPLay, setVideoAutoPlay] = useState(false);
   const [showBtnBanner, setShowBtnBanner] = useState();
- 
+  const [btnBanner, setBtnBanner] = useState(false);
   const [isVisibleVideo, currentElementVideo] = useVisibility(100);
   const [isVisibleHero, currentElementHero] = useVisibility(100);
   const [isVisibleWhy, currentElement] = useVisibility(100);
@@ -46,9 +46,14 @@ export default function Home() {
       setVideoAutoPlay(false);
     }
 
-    if (isVisibleBanner) setShowBtnBanner(true);
-    if (isVisibleTokenFuture) setShowBtnBanner(true);
-    if( isVisibleBanner) setVisibleNow(currentElementVisibleBanner.current.id);
+    if (visibleNow === "BANNER" || visibleNow === "FURTHER-READING") {
+      setBtnBanner(true);
+    } else {
+      setBtnBanner(false);
+    }
+
+    if (isVisibleBanner) setShowBtnBanner(showBtnBanner);
+    if (isVisibleBanner) setVisibleNow(currentElementVisibleBanner.current.id);
     if (isVisibleWhy) setVisibleNow(currentElement.current.id);
     if (isVisibleHow) setVisibleNow(currentElementAlt.current.id);
     if (isVisibleTokenFea) setVisibleNow(currentElementTokenFea.current.id);
@@ -57,15 +62,6 @@ export default function Home() {
     if (isVisibleBack) setVisibleNow(currentElementVisibleBack.current.id);
     if (isVisibleTokenFuture)
       setVisibleNow(currentElementTokenFuture.current.id);
-
-      if (window.pageYOffset === 0) {
-        setFontSize(34)
-      } else{
-        setFontSize(14)
-        if(isVisibleBanner){
-          setFontSize(34)
-        }
-      }
 
   }, [
     videoAutoPLay,
@@ -89,26 +85,13 @@ export default function Home() {
     currentElementVisibleBack,
     currentElementTokenFuture,
   ]);
-
-  
-  const posiPro = isVisibleBanner ? "initial" : " fixed";
-
-  const animate = keyframes`
-  0% {opacity:0;}
-  100% {opacity:1;}
-
-`;
-
-const clickBtn = () => {
-  console.log("Click");
-};
-
+console.log(visibleNow)
+  const clickBtn = () => {
+    console.log("Click");
+  };
 
   return (
-    <Layout
-      visibleNow={visibleNow}
-      
-    >
+    <Layout visibleNow={visibleNow}>
       <ChooseLanguage />
 
       <Hero setVisibleNow={setVisibleNow} ref={currentElementHero} />
@@ -118,17 +101,16 @@ const clickBtn = () => {
         className="video-home "
         ref={currentElementVideo}
       >
-         <video
-              className="react-player"
-              url="/assets/video/about.mp4"
-              width="100%"
-              height="100%"
-              muted={!videoAutoPLay}
-              playing={videoAutoPLay}
-              playsInline
-              loop={true}
-          ></video>
-     
+        <ReactPlayer
+          className="react-player"
+          url="/assets/video/about.mp4"
+          width="100%"
+          height="100%"
+          muted={!videoAutoPLay}
+          playing={videoAutoPLay}
+          playsInline
+          loop={true}
+        />
       </section>
 
       <HomeHomeItWork setVisibleNow={setVisibleNow} ref={currentElementAlt} />
@@ -146,53 +128,14 @@ const clickBtn = () => {
         setVisibleNow={setVisibleNow}
         ref={currentElementVisibleBack}
       />
-      <section id="banner-CTA" className="banner-CTA" ref={currentElementVisibleBanner}>
-        <div
-          className={css`
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1;
-            width: 100%;
-            position: ${posiPro};
-            transition: all 600ms ease-in-out;
-            bottom: 10px;
-          `}
-        >
-          <div
-            onClick={() => clickBtn()}
-            className={css`
-              background: linear-gradient(90deg, #0000db 0%, #292941 100%);
-              transition: all 600ms ease-in-out;
-              padding: 0em 1.5em;
-              border-radius: 100px;
-              width: fit-content;
-              &:hover {
-                animation: ${animate} ease 1s forwards;
-              }
-            `}
-          >
-            <span
-              className={css`
-                font-size: ${fontSize}px;
-                transition: font-size 300ms ease-in-out;
-                font-weight: 600;
-                line-height: 2em;
-                display: flex;
-                align-items: center;
-                text-align: center;
-                letter-spacing: 0.2975px;
-                color: #ffffff;
-                margin: 0;
-                padding: 0;
-
-                @media screen and (max-width: 600px) {
-                  font-size: 14px;
-                }
-              `}
-            >
-              {t("common:btn-token")}
-            </span>
+      <section
+        id="BANNER"
+        className="banner-CTA"
+        ref={currentElementVisibleBanner}
+      >
+        <div className={"btn-follow " + (btnBanner ? "change-mode" : "")}>
+          <div onClick={() => clickBtn()}>
+            <span>{t("common:btn-token")}</span>
           </div>
         </div>
         <img src="/assets/images/banner.png" alt="The HOPR-Token NOW" />
