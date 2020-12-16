@@ -173,7 +173,7 @@ const clickBtn = () => {
             <span
               className={css`
                 font-size: ${fontSize}px;
-                transition: all 300ms ease-in-out;
+                transition: font-size 300ms ease-in-out;
                 font-weight: 600;
                 line-height: 2em;
                 display: flex;

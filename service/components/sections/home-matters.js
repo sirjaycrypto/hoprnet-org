@@ -122,7 +122,7 @@ const HomeMatter = forwardRef(({ setVisibleNow }, ref) => {
     <section
       ref={ref}
       id="WHY-IT-MATTERS"
-      className="section-why-matters padding-section-aux invert-color "
+      className="section-why-matters invert-color "
     >
       <div className="container">
         <div className="container-center-center">
