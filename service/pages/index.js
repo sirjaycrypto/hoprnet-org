@@ -46,8 +46,9 @@ export default function Home() {
       setVideoAutoPlay(false);
     }
 
-    if (currentElementVisibleBanner.current.id  === "banner-CTA") setShowBtnBanner(true);
-   
+    if (isVisibleBanner) setShowBtnBanner(true);
+    if (isVisibleTokenFuture) setShowBtnBanner(true);
+    if( isVisibleBanner) setVisibleNow(currentElementVisibleBanner.current.id);
     if (isVisibleWhy) setVisibleNow(currentElement.current.id);
     if (isVisibleHow) setVisibleNow(currentElementAlt.current.id);
     if (isVisibleTokenFea) setVisibleNow(currentElementTokenFea.current.id);
@@ -57,7 +58,15 @@ export default function Home() {
     if (isVisibleTokenFuture)
       setVisibleNow(currentElementTokenFuture.current.id);
 
-    console.log(window.pageYOffset);
+      if (window.pageYOffset === 0) {
+        setFontSize(34)
+      } else{
+        setFontSize(14)
+        if(isVisibleBanner){
+          setFontSize(34)
+        }
+      }
+
   }, [
     videoAutoPLay,
     isVisibleHero,
@@ -81,9 +90,9 @@ export default function Home() {
     currentElementTokenFuture,
   ]);
 
-  console.log(isVisibleBanner)
+  
   const posiPro = isVisibleBanner ? "initial" : " fixed";
-  const sizePro = showBtnBanner ? 34 : 14;
+
   const animate = keyframes`
   0% {opacity:0;}
   100% {opacity:1;}
@@ -97,7 +106,8 @@ const clickBtn = () => {
 
   return (
     <Layout
-      visibleNow={visibleNow} 
+      visibleNow={visibleNow}
+      
     >
       <ChooseLanguage />
 
@@ -162,7 +172,7 @@ const clickBtn = () => {
           >
             <span
               className={css`
-                font-size: ${sizePro}px;
+                font-size: ${fontSize}px;
                 transition: all 300ms ease-in-out;
                 font-weight: 600;
                 line-height: 2em;

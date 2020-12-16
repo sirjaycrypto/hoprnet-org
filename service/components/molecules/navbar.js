@@ -48,6 +48,7 @@ export default function Navbar({ visibleNow }) {
     window.onscroll = function () {
       if (window.pageYOffset === 0) {
         setYouDown(false);
+        console.log('1111')
       } else {
         setYouDown(true);
         setActivaMenu(false);

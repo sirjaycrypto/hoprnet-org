@@ -1,10 +1,4 @@
-import React, {
-  forwardRef,
-  useState,
-  createRef,
-  useRef,
-  useEffect,
-} from "react";
+import React, { useRef, useEffect } from "react";
 import Header from "../molecules/header";
 import Navbar from "../molecules/navbar";
 import Footer from "../molecules/footer";
