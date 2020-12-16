@@ -42,18 +42,20 @@ export default function ItemsMenu() {
             </Link>
           );
         })}
-        {/* <ul className="list-lang-sm">
+        <ul className="list-lang-sm">
           {listLang.map((e, i) => {
             const { info } = e;
             return (
-              lang !== info && (
-                <Link href="/" locale={info} key={i}>
-                  <li>{info}</li>
-                </Link>
-              )
+             
+                 <Link href="/" locale={info} key={i}>
+                 <li onClick={() => clickMenu()} className={lang===info ? 'is-current' : ''}>
+                   <a>{info}</a>
+                 </li>
+               </Link>
+              
             );
           })}
-        </ul> */}
+        </ul>
       </div>
     </>
   );

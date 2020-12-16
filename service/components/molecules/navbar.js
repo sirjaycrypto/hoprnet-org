@@ -85,11 +85,6 @@ export default function Navbar({ visibleNow }) {
       {router.pathname === "/" ? (
         <div className={"section-indicator " + (youDown ? "make-visible" : "")}>
           <div className="helper-hr"></div>
-
-          {/* {sectionPage.map((e, index) => {
-            const { name } = e;
-            return <h4 key={index}> {e.id == visibleNow ? name : null}</h4>;
-          })} */}
           <ul>
             {sectionPage.map((e, index) => {
               return (

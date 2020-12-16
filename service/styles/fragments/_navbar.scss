@@ -94,13 +94,18 @@ nav {
           border-bottom: 2px solid #414141;
         }
       }
+
+      font-size: 24px;
+      line-height: 60px;
       text-decoration: none;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      letter-spacing: 0.2px;
       text-transform: uppercase;
-      margin-bottom: 1em;
-      font-size: 2em;
-      letter-spacing: 0.125px;
-      font-weight: 400;
+
       color: $hopr_grey;
+
       transition: all 350ms ease-in-out;
       &:last-child {
         margin-bottom: 0;
@@ -110,6 +115,7 @@ nav {
         color: $hopr_bright_blue;
       }
     }
+  
   }
 }
 
@@ -121,13 +127,25 @@ nav {
     padding: 0;
     display: flex;
     align-items: center;
-    bottom: 4rem;
+    bottom: 1rem;
     position: absolute;
   }
   li {
     margin-right: 1rem;
     text-transform: uppercase;
     font-size: 1.125rem;
+    @include responsive(tablet) {
+      font-size: 18px;
+      letter-spacing: 0.151667px;
+      margin-right: 14px;
+      &.is-current{
+      
+        a{
+          border-bottom: 2px solid $hopr_grey;
+          line-height: initial;
+        }
+      }
+    }
     &:last-child {
       margin-right: 0;
     }
