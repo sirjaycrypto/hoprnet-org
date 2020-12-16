@@ -118,16 +118,17 @@ const clickBtn = () => {
         className="video-home "
         ref={currentElementVideo}
       >
-        <ReactPlayer
-          className="react-player"
-          url="/assets/video/about.mp4"
-          width="100%"
-          height="100%"
-          muted={!videoAutoPLay}
-          playing={videoAutoPLay}
-          playsinline={true}
-          loop={true}
-        />
+         <video
+              className="react-player"
+              url="/assets/video/about.mp4"
+              width="100%"
+              height="100%"
+              muted={!videoAutoPLay}
+              playing={videoAutoPLay}
+              playsInline
+              loop={true}
+          ></video>
+     
       </section>
 
       <HomeHomeItWork setVisibleNow={setVisibleNow} ref={currentElementAlt} />
