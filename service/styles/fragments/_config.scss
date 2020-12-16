@@ -87,8 +87,14 @@ section {
     padding: 0 0 0 2rem;
   }
   box-sizing: border-box;
+  margin-bottom: 34px;
   @include responsive(tablet) {
     padding: 0;
+    margin-bottom: 34px;
+    &:first-child {
+      padding: 0;
+    }
+   
   }
 }
 
@@ -111,7 +117,9 @@ section {
   width: 90%;
   margin: auto;
   @include responsive(tablet) {
-    height: 300px;
+    height: auto;
+    width: 100%;
+    margin-bottom: 12px;
   }
   canvas {
     padding: 1em;
@@ -157,6 +165,9 @@ section {
   margin: auto;
   @include responsive(tablet) {
     width: 90vw;
+    .link-out{
+      margin-bottom: 18px;
+    }
   }
 }
 

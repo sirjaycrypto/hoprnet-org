@@ -60,7 +60,7 @@
       }
     }
     @include responsive(tablet) {
-      flex-direction: column;
+      flex-direction: column-reverse;
       & > div {
         width: 100%;
       }
