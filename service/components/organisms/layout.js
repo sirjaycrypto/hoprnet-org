@@ -11,7 +11,7 @@ import Footer from "../molecules/footer";
 // import ChooseLanguage from "../molecules/choose-language";
 import ScrollReveal from "../special/ScrollReveal";
 
-export default function Layout({ visibleNow, children, isVisibleBanner }) {
+export default function Layout({ visibleNow, children }) {
   const scrollReveal = useRef(null);
 
   useEffect(() => {
@@ -29,10 +29,7 @@ export default function Layout({ visibleNow, children, isVisibleBanner }) {
           <>
             <Header />
             <div className="cursor">
-              <Navbar
-                visibleNow={visibleNow}
-                isVisibleBanner={isVisibleBanner}
-              />
+              <Navbar visibleNow={visibleNow} />
 
               {children}
 

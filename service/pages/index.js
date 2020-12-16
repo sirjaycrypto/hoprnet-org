@@ -17,12 +17,15 @@ import ChooseLanguage from "../components/molecules/choose-language";
 import ReactPlayer from "react-player/lazy";
 import useVisibility from "../components/hooks/useVisibility";
 
-// import { css } from "@emotion/css";
+import { css, keyframes } from "@emotion/css";
 
 export default function Home() {
+  const [fontSize, setFontSize] = useState(34);
+  //
   const [visibleNow, setVisibleNow] = useState("");
   const [videoAutoPLay, setVideoAutoPlay] = useState(false);
-  const [showBtnBanner, setShowBtnBanner] = useState(false);
+  const [showBtnBanner, setShowBtnBanner] = useState();
+ 
   const [isVisibleVideo, currentElementVideo] = useVisibility(100);
   const [isVisibleHero, currentElementHero] = useVisibility(100);
   const [isVisibleWhy, currentElement] = useVisibility(100);
@@ -43,13 +46,8 @@ export default function Home() {
       setVideoAutoPlay(false);
     }
 
-    if (isVisibleBanner) {
-      setShowBtnBanner(true);
-    } else {
-      setShowBtnBanner(false);
-    }
-    console.log(currentElementVisibleBanner.current.offsetTop)
-
+    if (currentElementVisibleBanner.current.id  === "banner-CTA") setShowBtnBanner(true);
+   
     if (isVisibleWhy) setVisibleNow(currentElement.current.id);
     if (isVisibleHow) setVisibleNow(currentElementAlt.current.id);
     if (isVisibleTokenFea) setVisibleNow(currentElementTokenFea.current.id);
@@ -58,6 +56,8 @@ export default function Home() {
     if (isVisibleBack) setVisibleNow(currentElementVisibleBack.current.id);
     if (isVisibleTokenFuture)
       setVisibleNow(currentElementTokenFuture.current.id);
+
+    console.log(window.pageYOffset);
   }, [
     videoAutoPLay,
     isVisibleHero,
@@ -81,8 +81,24 @@ export default function Home() {
     currentElementTokenFuture,
   ]);
 
+  console.log(isVisibleBanner)
+  const posiPro = isVisibleBanner ? "initial" : " fixed";
+  const sizePro = showBtnBanner ? 34 : 14;
+  const animate = keyframes`
+  0% {opacity:0;}
+  100% {opacity:1;}
+
+`;
+
+const clickBtn = () => {
+  console.log("Click");
+};
+
+
   return (
-    <Layout visibleNow={visibleNow} isVisibleBanner={isVisibleBanner}>
+    <Layout
+      visibleNow={visibleNow} 
+    >
       <ChooseLanguage />
 
       <Hero setVisibleNow={setVisibleNow} ref={currentElementHero} />
@@ -118,16 +134,56 @@ export default function Home() {
         setVisibleNow={setVisibleNow}
         ref={currentElementVisibleBack}
       />
-      <section className="banner-CTA" ref={currentElementVisibleBanner}>
-        <img src="/assets/images/banner.png" alt="The HOPR-Token NOW" />
+      <section id="banner-CTA" className="banner-CTA" ref={currentElementVisibleBanner}>
+        <div
+          className={css`
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            width: 100%;
+            position: ${posiPro};
+            transition: all 600ms ease-in-out;
+            bottom: 10px;
+          `}
+        >
+          <div
+            onClick={() => clickBtn()}
+            className={css`
+              background: linear-gradient(90deg, #0000db 0%, #292941 100%);
+              transition: all 600ms ease-in-out;
+              padding: 0em 1.5em;
+              border-radius: 100px;
+              width: fit-content;
+              &:hover {
+                animation: ${animate} ease 1s forwards;
+              }
+            `}
+          >
+            <span
+              className={css`
+                font-size: ${sizePro}px;
+                transition: all 300ms ease-in-out;
+                font-weight: 600;
+                line-height: 2em;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                letter-spacing: 0.2975px;
+                color: #ffffff;
+                margin: 0;
+                padding: 0;
 
-        {showBtnBanner && (
-          <div className={`container-btn ${showBtnBanner ? "animate" : ""}`}>
-            <div className="type-btn btn-big">
-              <span>{t("common:btn-token")}</span>
-            </div>
+                @media screen and (max-width: 600px) {
+                  font-size: 14px;
+                }
+              `}
+            >
+              {t("common:btn-token")}
+            </span>
           </div>
-        )}
+        </div>
+        <img src="/assets/images/banner.png" alt="The HOPR-Token NOW" />
       </section>
       <HomeFurther
         setVisibleNow={setVisibleNow}

@@ -38,9 +38,7 @@ const sectionPage = [
   },
 ];
 
-export default function Navbar({ visibleNow, isVisibleBanner }) {
-  const [fontSize, setFontSize] = useState(34);
-  const [bottomPX, setBottomPX] = useState(10);
+export default function Navbar({ visibleNow }) {
   const [youDown, setYouDown] = useState(false);
   const [activaMenu, setActivaMenu] = useState(false);
   const router = useRouter();
@@ -50,25 +48,12 @@ export default function Navbar({ visibleNow, isVisibleBanner }) {
     window.onscroll = function () {
       if (window.pageYOffset === 0) {
         setYouDown(false);
-        setFontSize(34);
       } else {
-        setFontSize(14);
         setYouDown(true);
         setActivaMenu(false);
       }
     };
-   
-  }, [fontSize, youDown]);
-
-  const clickBtn = () => {
-    console.log("Click");
-  };
-
-  const animate = keyframes`
-  0% {opacity:0;}
-  100% {opacity:1;}
-
-`;
+  }, [ youDown]);
 
   return (
     <>
@@ -116,57 +101,6 @@ export default function Navbar({ visibleNow, isVisibleBanner }) {
           </ul>
         </div>
       ) : null}
-
-     
-        <div
-          className={css`
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1;
-            width: 100%;
-            position: fixed;
-            transition: all 600ms ease-in-out;
-            bottom: 10px;
-          `}
-        >
-          <div
-            onClick={() => clickBtn()}
-            className={css`
-              background: linear-gradient(90deg, #0000db 0%, #292941 100%);
-              transition: all 600ms ease-in-out;
-              padding: 0em 1.5em;
-              border-radius: 100px;
-              width: fit-content;
-              &:hover {
-                animation: ${animate} ease 1s forwards;
-              }
-            `}
-          >
-            <span
-              className={css`
-                font-size: ${fontSize}px;
-                transition: all 300ms ease-in-out;
-                font-weight: 600;
-                line-height: 2em;
-                display: flex;
-                align-items: center;
-                text-align: center;
-                letter-spacing: 0.2975px;
-                color: #ffffff;
-                margin: 0;
-                padding: 0;
-
-                @media screen and (max-width: 600px) {
-                  font-size: 14px;
-                }
-              `}
-            >
-              {t("common:btn-token")}
-            </span>
-          </div>
-        </div>
-      
     </>
   );
 }
