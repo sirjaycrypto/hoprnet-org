@@ -42,7 +42,6 @@ const Hero = forwardRef(({ setVisibleNow }, ref) => {
               type="video/mp4"
             />
           )}
-          Your browser does not support the video tag.
         </video>
 
         <div className="container">

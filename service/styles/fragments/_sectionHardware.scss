@@ -76,7 +76,7 @@
     }
     img {
       margin: auto;
-      object-fit: cover;
+      object-fit: contain;
       width: 80%;
       height: 300px;
       @include responsive(tablet) {
