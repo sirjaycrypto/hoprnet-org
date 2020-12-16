@@ -17,6 +17,7 @@ footer {
       width: 55px;
       @include responsive(tablet) {
         width: 34px;
+        margin: 24px 0;
       }
     }
   }
@@ -27,8 +28,9 @@ footer {
     margin-top: 2em;
     margin-bottom: 3em;
     @include responsive(tablet) {
-      margin-top: 1em;
+      margin-top: 0em;
       margin-bottom: 0em;
+      flex-direction: column;
     }
   }
   .second-line-footer {
@@ -85,13 +87,14 @@ footer {
     }
   }
   .footer-social {
+  
     ul {
       list-style: none;
       margin: 0;
       padding: 0;
       li {
         float: left;
-        margin-right: 1em;
+        margin-right: 24px;
         &:last-child {
           margin-right: 0;
         }
@@ -100,7 +103,7 @@ footer {
           filter: invert(1);
           width: 27px;
           @include responsive(tablet) {
-            width: 1em;
+            width: 21px;
           }
         }
       }

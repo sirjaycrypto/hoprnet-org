@@ -8,27 +8,30 @@
 
     color: $hopr_grey;
     text-align: center;
-    margin: 74px 0;
+    margin: 120px 0;
     @include responsive(tablet) {
       justify-content: space-between;
       margin: 50px 0;
     }
     @include responsive(phone) {
       font-size: 30px;
+      margin: 24px 0;
     }
   }
   .list-top,
   .list-down {
     display: flex;
-    align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
+  }
+  .list-top {
+ 
   }
   .element-future {
     width: 50%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
     box-sizing: border-box;
     padding: 1em;
@@ -47,14 +50,29 @@
     .info {
       h5 {
         font-weight: normal;
-        font-size: 1.5rem;
-        line-height: 2.313rem;
+        font-size: 24px;
+        line-height: 37px;
         text-align: center;
         letter-spacing: 0.2px;
         text-decoration-line: underline;
         color: $hopr_bright_blue;
         width: 70%;
-        margin: 1.5rem auto;
+        margin: 24px auto;
+        letter-spacing: 0.2px;
+        @include responsive(tablet) {
+          font-size: 24px;
+          line-height: 37px;
+          letter-spacing: 0.2px;
+          width: 100%;
+        }
+        @include responsive(phone) {
+          font-size: 20px;
+          line-height: 28px;
+          text-align: center;
+          letter-spacing: 0.166667px;
+          margin: 24px 0 18px 0;
+          width: 100%;
+        }
       }
       p {
         font-weight: 400;

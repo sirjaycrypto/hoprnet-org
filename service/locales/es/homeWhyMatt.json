@@ -1,6 +1,6 @@
 {
-    "title": "WHY IT MATTERS",
+    "title": "Why does it matter?",
     "labelDate": "Source: Cisco Visual Networking Index",
-    "mainText": "Millions of Gigabytes are transmitted across the globe every minute. The global internet bandwidth is still growing exponentially due to new technologies such as 5G. A lot of this massive amount of data is confidentially transmitted by people or corporations that need protection. The HOPR protocol brings metadata privacy on the network level for all of them. The HOPR network is driven by the HOPR token.",
-    "btnLabel":"Get HOPR-Token on SECRET"
+    "mainText": "Every minute, people and companies transmit millions of gigabytes of data across the globe. This figure is growing exponentially thanks to new technologies such as 5G and the Internet of Things. This data all needs protecting, and so does the metadata it generates. The HOPR protocol provides network-level metadata privacy for everyone, and the HOPR network is driven by the HOPR token.",
+    "btnLabel": "Get HOPR-Token on SECRET"
 }

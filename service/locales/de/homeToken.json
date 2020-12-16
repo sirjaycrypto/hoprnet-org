@@ -1,6 +1,6 @@
 {
-    "title": "TOKEN RELEASE",
-    "about": " Lock HOPR tokens in your node to relay user data and cover traffic. The more you stake, the more data you can relay, and the more you earn. A quarter of all HOPR tokens are available only to stake's as a reward for relaying cover traffic.",
+    "title": "Token Release",
+    "about": "The HOPR Network is powered by the HOPR Token, a utility token on the Ethereum Network.",
     "subTitle": "KEY METRICS",
     "listItemA": "Token Name: HOPR Token",
     "listItemB": "Token Symbol: HOPR",
@@ -10,5 +10,6 @@
     "listItemF": "Initial circulating supply: X HOPR",
     "listItemG": "Token price: X USD / HOPR",
     "secondSubTitle": "Token Allocation",
+    "secondSubAbout": "Starting at an initial circulating supply of 75 million, HOPR tokens will be released over a period of 5 years. A quarter of all HOPR tokens are available only to stakers as a reward for relaying cover traffic.",
     "thirdSubTitle": "Token Supply Distribution"
 }
