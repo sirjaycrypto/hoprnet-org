@@ -86,12 +86,12 @@
     }
   }
   .list-down {
-    margin-bottom: 34px;
+    margin: 34px 0;
     @include responsive(tablet) {
-      margin-bottom: 74px;
+      margin: 74px 0;
     }
     @include responsive(phone) {
-      margin-bottom: 50px;
+      margin: 50px 0;
     }
     .element-future {
       width: 33%;
