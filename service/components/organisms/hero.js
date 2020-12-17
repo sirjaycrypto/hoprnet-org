@@ -8,7 +8,9 @@ const Hero = forwardRef(({}, ref) => {
   const [videoS, setVideoS] = useState(false);
   const { t } = useTranslation();
 
-  useEffect(() => {
+  useEffect(() => { 
+    
+  
     if (typeof window !== "undefined") {
       if (window.matchMedia("(min-width: 1080px)").matches) {
         setVideoL(true);
@@ -17,6 +19,9 @@ const Hero = forwardRef(({}, ref) => {
         setVideoM(true);
         console.log("M");
       } else if (window.matchMedia("(max-width: 639px)").matches) {
+        setVideoS(true);
+        console.log("S");
+      } else if (window.matchMedia("(min-width: 639px)").matches) {
         setVideoS(true);
         console.log("S");
       }
@@ -33,7 +38,7 @@ const Hero = forwardRef(({}, ref) => {
             autoPlay
             loop
             muted
-            playsInline
+            playsInline 
             className="background-video"
             src="/assets/video/hero.mp4"
           ></video>

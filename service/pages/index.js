@@ -92,7 +92,7 @@ export default function Home() {
     currentElementVisibleBack,
     currentElementTokenFuture,
   ]);
-  console.log(visibleNow);
+  
   const clickBtn = () => {
     console.log("Click");
   };

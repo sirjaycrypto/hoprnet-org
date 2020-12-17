@@ -51,15 +51,24 @@
   }
   h4 {
     position: absolute;
-    top: 20%;
+    top: calc(50% - 326px/2 - 128px);
     left: 0;
     align-items: center;
     justify-content: center;
     width: 100%;
     font-weight: bold;
-    font-size: 1.875rem;
-    letter-spacing: 0.25px;
+    font-size: 30px;
+    line-height: 32px;
     margin-bottom: 4.625rem;
+    @include responsive(tablet) {
+      font-size: 30px;
+      line-height: 32px;
+      top: calc(50% - 84px/2 - 229px);
+    }
+    @include responsive(phone) {
+      font-size: 20px;
+      line-height: 32px;
+    }
   }
 }
 
