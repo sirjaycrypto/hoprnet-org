@@ -3,14 +3,13 @@ import useTranslation from "next-translate/useTranslation";
 import HeroInfo from "../molecules/hero-info";
 
 const Hero = forwardRef(({}, ref) => {
+  const [isIos, setIsIos] = useState(false);
   const [videoL, setVideoL] = useState(false);
   const [videoM, setVideoM] = useState(false);
   const [videoS, setVideoS] = useState(false);
   const { t } = useTranslation();
 
-  useEffect(() => { 
-    
-  
+  useEffect(() => {
     if (typeof window !== "undefined") {
       if (window.matchMedia("(min-width: 1080px)").matches) {
         setVideoL(true);
@@ -21,9 +20,8 @@ const Hero = forwardRef(({}, ref) => {
       } else if (window.matchMedia("(max-width: 639px)").matches) {
         setVideoS(true);
         console.log("S");
-      } else if (window.matchMedia("(min-width: 639px)").matches) {
+      } else {
         setVideoS(true);
-        console.log("S");
       }
     }
   }, []);
@@ -32,13 +30,12 @@ const Hero = forwardRef(({}, ref) => {
     <>
       <section ref={ref} className="section-hero">
         <HeroInfo />
-
         {videoL && (
           <video
             autoPlay
             loop
             muted
-            playsInline 
+            playsInline
             className="background-video"
             src="/assets/video/hero.mp4"
           ></video>
