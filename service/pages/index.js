@@ -115,7 +115,6 @@ export default function Home() {
           height="100%"
           muted={!videoAutoPLay}
           playing={videoAutoPLay}
-          playsInline
           loop={true}
         />
       </section>
