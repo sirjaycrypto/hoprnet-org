@@ -28,7 +28,15 @@ const Hero = forwardRef(({}, ref) => {
     <>
       <section ref={ref} className="section-hero">
         <HeroInfo />
-        {videoL && (
+        <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="background-video"
+            src="/assets/video/hero.mp4"
+          ></video>
+        {/* {videoL && (
           <video
             autoPlay
             loop
@@ -57,7 +65,7 @@ const Hero = forwardRef(({}, ref) => {
             className="background-video"
             src="/assets/video/hopr_Drone_Mobile.mp4"
           ></video>
-        )}
+        )} */}
 
         <div className="container">
           <div className="text-wrapper">
