@@ -92,10 +92,11 @@ export default function Home() {
     currentElementVisibleBack,
     currentElementTokenFuture,
   ]);
-  
+
   const clickBtn = () => {
     console.log("Click");
   };
+
 
   return (
     <Layout visibleNow={visibleNow}>
@@ -146,7 +147,7 @@ export default function Home() {
                 font-size: ${fontSize}px;
                 transition: font-size 300ms ease-in-out;
                 font-weight: 600;
-                line-height: 2em;
+                line-height: 2.5em;
                 display: flex;
                 align-items: center;
                 text-align: center;

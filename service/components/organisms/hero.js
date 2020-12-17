@@ -3,7 +3,6 @@ import useTranslation from "next-translate/useTranslation";
 import HeroInfo from "../molecules/hero-info";
 
 const Hero = forwardRef(({}, ref) => {
-  const [isIos, setIsIos] = useState(false);
   const [videoL, setVideoL] = useState(false);
   const [videoM, setVideoM] = useState(false);
   const [videoS, setVideoS] = useState(false);
@@ -20,8 +19,12 @@ const Hero = forwardRef(({}, ref) => {
       } else if (window.matchMedia("(max-width: 639px)").matches) {
         setVideoS(true);
         console.log("S");
-      } else {
+      } else if (window.matchMedia("(min-width: 768px)").matches) {
+        setVideoM(true);
+        console.log("MAnd");
+      } else if (window.matchMedia("(min-width: 639px)").matches) {
         setVideoS(true);
+        console.log("San");
       }
     }
   }, []);

@@ -26,6 +26,9 @@
   @include responsive(tablet) {
     margin: 50px 0;
   }
+  @include responsive(phone) {
+
+  }
   &:first-child,
   &:last-child {
     margin: 0em auto;

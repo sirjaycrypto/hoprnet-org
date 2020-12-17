@@ -96,6 +96,9 @@ section {
     }
    
   }
+  @include responsive(phone) {
+    margin-bottom: 0;
+  }
 }
 
 //
@@ -141,8 +144,9 @@ section {
 //
 .padding-bottom {
   @include responsive(tablet) {
-    margin-bottom: 2rem !important;
+    margin-bottom: 18px;
   }
+
 }
 ///
 .container-chart {

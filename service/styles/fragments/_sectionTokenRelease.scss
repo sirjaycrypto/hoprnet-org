@@ -17,19 +17,55 @@
   }
   h3 {
     font-weight: bold;
-    font-size: 1.5em;
-    line-height: 1.8em;
+    font-size: 25px;
+    line-height: 37px;
+    /* or 148% */
+
+    letter-spacing: 0.208333px;
+
     text-align: center;
-    letter-spacing: 0.291667px;
+
     color: $hopr_grey;
-    margin-top: 6.25rem;
+
     margin-bottom: 3.125rem;
+    @include responsive(tablet) {
+      font-size: 30px;
+      line-height: 32px;
+      letter-spacing: 0.5px;
+      margin-bottom: 50px;
+    }
+    @include responsive(phone) {
+  
+
+
+      font-size: 18px;
+line-height: 32px;
+      margin-bottom: 24px;
+      text-align: center;
+      letter-spacing: 0.25px;
+    }
   }
   p {
-    font-size: 1.563rem;
-    line-height: 2.313rem;
-    margin-bottom: 3.125rem;
+    font-size: 25px;
+    line-height: 37px;
+    /* or 148% */
+
+    letter-spacing: 0.208333px;
+    margin-bottom: 50px;
     color: $hopr_grey;
+    @include responsive(tablet) {
+      font-size: 20px;
+      line-height: 33px;
+
+      letter-spacing: 0.166667px;
+    }
+    @include responsive(phone) {
+      font-size: 16px;
+      line-height: 22px;
+      /* or 137% */
+
+      letter-spacing: 0.133333px;
+    }
   }
 }
 
@@ -40,9 +76,12 @@
     width: 100%;
   }
   .container-table {
-    box-shadow: 1px 1px 41px -13px rgba(0 ,0 ,0, 0.34);
+    box-shadow: 1px 1px 41px -13px rgba(0, 0, 0, 0.34);
     border-radius: 16px;
     overflow: hidden;
+    @include responsive(tablet) {
+      margin-bottom: 50px;
+    }
     .title {
       background: $hopr_bright_blue;
       padding: 0.7em;
@@ -54,10 +93,16 @@
     .list-table {
       ul {
         li {
-          font-size: 1em;
-          line-height: 2em;
+          font-size: 18px;
+          line-height: 30px;
           letter-spacing: 0.15px;
           color: #292941;
+
+          @include responsive(phone) {
+            font-size: 14px;
+            line-height: 21px;
+            letter-spacing: 0.116667px;
+          }
         }
       }
     }
