@@ -16,12 +16,10 @@ const Hero = forwardRef(({}, ref) => {
         console.log("L");
       } else if (window.matchMedia("(max-width: 768px)").matches) {
         setVideoM(true);
-        console.log("M");
+        setVideovideoExp(true);
+        console.log("Mº");
       } else if (window.matchMedia("(max-width: 639px)").matches) {
         setVideoS(true);
-        console.log("S");
-      }else {
-        setVideovideoExp(true);
         console.log("S");
       }
    
