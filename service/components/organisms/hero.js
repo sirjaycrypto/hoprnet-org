@@ -6,6 +6,7 @@ const Hero = forwardRef(({}, ref) => {
   const [videoL, setVideoL] = useState(false);
   const [videoM, setVideoM] = useState(false);
   const [videoS, setVideoS] = useState(false);
+  const [videoExp, setVideovideoExp] = useState(false);
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -19,8 +20,11 @@ const Hero = forwardRef(({}, ref) => {
       } else if (window.matchMedia("(max-width: 639px)").matches) {
         setVideoS(true);
         console.log("S");
+      }else {
+        setVideovideoExp(true);
+        console.log("S");
       }
-      setVideoL(true);
+   
     }
   }, []);
 
@@ -28,15 +32,7 @@ const Hero = forwardRef(({}, ref) => {
     <>
       <section ref={ref} className="section-hero">
         <HeroInfo />
-        <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="background-video"
-            src="/assets/video/hero.mp4"
-          ></video>
-        {/* {videoL && (
+        {videoL && (
           <video
             autoPlay
             loop
@@ -65,8 +61,17 @@ const Hero = forwardRef(({}, ref) => {
             className="background-video"
             src="/assets/video/hopr_Drone_Mobile.mp4"
           ></video>
-        )} */}
-
+        )}
+    {videoExp && (
+          <video
+            autoPlay
+            loop
+            muted
+            
+            className="background-video"
+            src="/assets/video/hopr_Drone_Tablet-Portrait.mp4"
+          ></video>
+        )}
         <div className="container">
           <div className="text-wrapper">
             <h4>{t("homeHero:subtitle")}</h4>
