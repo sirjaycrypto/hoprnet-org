@@ -19,8 +19,8 @@ const Hero = forwardRef(({}, ref) => {
       } else if (window.matchMedia("(max-width: 639px)").matches) {
         setVideoS(true);
         console.log("S");
-      } else if (window.matchMedia("(min-width: 639px)").matches) {
-        setVideoS(true);
+      } else {
+        setVideoM(true);
         console.log("MAnd");
       } 
     }
