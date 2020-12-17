@@ -22,7 +22,6 @@ const Hero = forwardRef(({}, ref) => {
     //     setVideoS(true);
     //     console.log("S");
     //   }
-   
     // }
   }, []);
 
@@ -30,8 +29,8 @@ const Hero = forwardRef(({}, ref) => {
     <>
       <section ref={ref} className="section-hero">
         <HeroInfo />
-    
-          <video
+
+        <video
             autoPlay
             loop
             muted
@@ -40,23 +39,30 @@ const Hero = forwardRef(({}, ref) => {
             src="/assets/video/hero.mp4"
           ></video>
       
-          <video
+        {/* <video
             autoPlay
             loop
             muted
             playsInline
             className="background-video display-tablet"
             src="/assets/video/hopr_Drone_Tablet-Portrait.mp4"
-          ></video>
-      
-          <video
+          ></video> */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="background-video display-tablet"
+          src="/assets/video/hopr_Drone_Tablet-Portrait.mp4"
+        ></video>
+        {/* <video
             autoPlay
             loop
             muted
             playsInline
             className="background-video display-phone"
             src="/assets/video/hopr_Drone_Mobile.mp4"
-          ></video>
+          ></video> */}
 
         <div className="container">
           <div className="text-wrapper">

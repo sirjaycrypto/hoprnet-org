@@ -103,31 +103,18 @@
 }
 
 .display-desktop {
-  display: block;
+  display: flex;
   @include responsive(tablet) {
     display: none;
   }
-  @include responsive(phone) {
-    display: none;
-  }
+  
 }
 
 .display-tablet {
   display: none;
   @include responsive(tablet) {
-    display: block;
+    display: flex;
   }
-  @include responsive(phone) {
-    display: none;
-  }
+ 
 }
 
-.display-phone {
-  display: none;
-  @include responsive(tablet) {
-    display: none;
-  }
-  @include responsive(phone) {
-    display: block;
-  }
-}
