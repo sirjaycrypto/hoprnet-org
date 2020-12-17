@@ -62,24 +62,7 @@
       animation: animateBtn ease 1400ms forwards;
     }
   }
- 
-  span {
-    font-size: 34px;
-    transition: font-size 300ms ease-in-out;
-    font-weight: 600;
-    line-height: 2em;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.2975px;
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
 
-    @media screen and (max-width: 600px) {
-      font-size: 14px;
-    }
-  }
 }
 
 

@@ -62,7 +62,14 @@ export default function Home() {
     if (isVisibleBack) setVisibleNow(currentElementVisibleBack.current.id);
     if (isVisibleTokenFuture)
       setVisibleNow(currentElementTokenFuture.current.id);
-
+    if (window.pageYOffset === 0) {
+      setFontSize(34);
+    } else {
+      setFontSize(14);
+      if (isVisibleBanner) {
+        setFontSize(34);
+      }
+    }
   }, [
     videoAutoPLay,
     isVisibleHero,
@@ -85,7 +92,7 @@ export default function Home() {
     currentElementVisibleBack,
     currentElementTokenFuture,
   ]);
-console.log(visibleNow)
+  console.log(visibleNow);
   const clickBtn = () => {
     console.log("Click");
   };
@@ -135,7 +142,27 @@ console.log(visibleNow)
       >
         <div className={"btn-follow " + (btnBanner ? "change-mode" : "")}>
           <div onClick={() => clickBtn()}>
-            <span>{t("common:btn-token")}</span>
+            <span
+              className={css`
+                font-size: ${fontSize}px;
+                transition: font-size 300ms ease-in-out;
+                font-weight: 600;
+                line-height: 2em;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                letter-spacing: 0.2975px;
+                color: #ffffff;
+                margin: 0;
+                padding: 0;
+
+                @media screen and (max-width: 600px) {
+                  font-size: 14px;
+                }
+              `}
+            >
+              {t("common:btn-token")}
+            </span>
           </div>
         </div>
         <img src="/assets/images/banner.png" alt="The HOPR-Token NOW" />
