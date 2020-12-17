@@ -38,7 +38,6 @@
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
   }
   h1 {
-   
     font-weight: normal;
     font-size: 6.25rem;
     display: flex;
@@ -51,7 +50,7 @@
   }
   h4 {
     position: absolute;
-    top: calc(50% - 326px/2 - 128px);
+    top: calc(50% - 326px / 2 - 128px);
     left: 0;
     align-items: center;
     justify-content: center;
@@ -63,7 +62,7 @@
     @include responsive(tablet) {
       font-size: 30px;
       line-height: 32px;
-      top: calc(50% - 84px/2 - 229px);
+      top: calc(50% - 84px / 2 - 229px);
     }
     @include responsive(phone) {
       font-size: 20px;
@@ -101,4 +100,34 @@
 
 .help-label-info {
   font-size: 14px;
+}
+
+.display-desktop {
+  display: block;
+  @include responsive(tablet) {
+    display: none;
+  }
+  @include responsive(phone) {
+    display: none;
+  }
+}
+
+.display-tablet {
+  display: none;
+  @include responsive(tablet) {
+    display: block;
+  }
+  @include responsive(phone) {
+    display: none;
+  }
+}
+
+.display-phone {
+  display: none;
+  @include responsive(tablet) {
+    display: none;
+  }
+  @include responsive(phone) {
+    display: block;
+  }
 }
