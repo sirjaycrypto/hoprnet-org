@@ -1,12 +1,15 @@
 import React from "react";
+import useTranslation from "next-translate/useTranslation";
+import { motion } from "framer-motion";
+
 import Layout from "../../components/organisms/layout";
 import HeroInternal from "../../components/organisms/hero-internal";
-import { motion } from "framer-motion";
 import { stagger, fadeInUp } from "../../util/motionConfig";
 import { loadNamespaces } from "../_app";
-import useTranslation from "next-translate/useTranslation";
+
 export default function Index() {
   const { t } = useTranslation();
+
   return (
     <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
       <Layout>
@@ -58,7 +61,6 @@ export default function Index() {
             </div>
           </motion.div>
         </section>
-        {/*  */}
         <section className="section-source padding-section-aux">
           <div>
             <h2> {t("techOpen:title")} </h2>
@@ -148,7 +150,6 @@ export default function Index() {
                 </a>
                 .
               </li>
-
               <li>
                 <a
                   className="underline"
@@ -169,7 +170,6 @@ export default function Index() {
                 </a>
                 .
               </li>
-
               <li>
                 <a
                   className="underline"
@@ -193,7 +193,6 @@ export default function Index() {
             </ul>
           </div>
         </section>
-        {/*  */}
         <section className="section-documentation padding-section-aux invert-color ">
           <motion.div variants={stagger}>
             <motion.h2 variants={fadeInUp} transition={{ delay: 0.8 }}>
@@ -217,7 +216,6 @@ export default function Index() {
             </div>
           </motion.div>
         </section>
-        {/*  */}
         <section className="section-bounties padding-section-aux">
           <div className="container-sm">
             <h2> {t("techWork:title")}</h2>

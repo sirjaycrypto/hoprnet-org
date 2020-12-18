@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { motion } from "framer-motion";
+
 import Layout from "../../components/organisms/layout";
 import HeroInternal from "../../components/organisms/hero-internal";
-import { motion } from "framer-motion";
 import {
   stagger,
-  staggerHaft,
   fadeInUp,
-  fadeInDown,
 } from "../../util/motionConfig";
 
 export default function Index() {
@@ -18,7 +17,6 @@ export default function Index() {
             <motion.h1 animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
               Guardians Of Privacy
             </motion.h1>
-
             <div>
               <motion.p
                 variants={fadeInUp}
@@ -31,7 +29,6 @@ export default function Index() {
                 more than just gratitude, as you’ll earn upcoming HOPR token
                 incentives (coming Q4!) from our plug-and-earn mixnet node PC.
               </motion.p>
-
               <motion.p variants={fadeInUp} transition={{ delay: 0.4 }}>
                 HOPR makes no profit from the first-of-its-kind custom node PC.
                 Instead, we thank you for helping ensure a decentralized Web3
@@ -129,12 +126,10 @@ export default function Index() {
                     </div>
                   </a>
                 </div>
-                {/*  */}
               </div>
             </div>
           </motion.div>
         </section>
-        {/*  */}
         <section className="section-source padding-section-aux">
           <div>
             <h2>Specifications of HOPR Node PC</h2>

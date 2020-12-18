@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import useTranslation from "next-translate/useTranslation";
+
 import Layout from "../../components/organisms/layout";
 import HeroInternal from "../../components/organisms/hero-internal";
 import SubStrack from "../../components/molecules/sub-strack";
 import Jobs from "../../components/molecules/jobs";
 import ProfileAssociation from "../../components/molecules/profile-association";
 import ContactPlus from "../../components/molecules/contact-plus";
-import { motion } from "framer-motion";
 import { stagger, fadeInUp } from "../../util/motionConfig";
 import { loadNamespaces } from "../_app";
-import useTranslation from "next-translate/useTranslation";
-
 
 const dataInfo = [
   {

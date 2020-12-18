@@ -1,7 +1,6 @@
 import I18nProvider from 'next-translate/I18nProvider';
 import { useRouter } from 'next/router'
 
-
 import '../styles/main.scss';
 
 export async function loadNamespaces(namespaces, lang) {

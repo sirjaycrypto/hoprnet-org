@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
+import { motion } from "framer-motion";
+import useTranslation from "next-translate/useTranslation";
+
 import Layout from "../../components/organisms/layout";
 import HeroInternal from "../../components/organisms/hero-internal";
-import { motion } from "framer-motion";
 import {
   stagger,
   staggerHaft,
@@ -10,7 +12,7 @@ import {
 } from "../../util/motionConfig";
 import insertScript from "../../util/insertScript";
 import { loadNamespaces } from "../_app";
-import useTranslation from "next-translate/useTranslation";
+
 const dataInfo = [
   {
     img: "assets/images/icons/twitter.svg",
@@ -58,7 +60,6 @@ export default function Index() {
     );
 
     script.onload = () => {
-      // eslint-disable-next-line
       MediumWidget.Init({
         renderTo: "#medium-widget",
         params: {
@@ -113,7 +114,6 @@ export default function Index() {
         <section className="continue-hero-internal padding-section-aux invert-color ">
           <motion.div variants={stagger} className="container">
             <motion.h2 variants={fadeInUp} transition={{ delay: 0.8 }}>
-            
             {t("blogSecundSec:title")}
             </motion.h2>
             <motion.div variants={stagger} className="container-block">
@@ -150,7 +150,6 @@ export default function Index() {
             </motion.div>
           </motion.div>
         </section>
-        {/*  */}
         <section className="section-blog  padding-section-aux">
           <div className="container-sm">
             <h2 className=" padding-section-aux">{t("menu:blog")}</h2>
