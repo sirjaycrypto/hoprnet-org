@@ -3,7 +3,7 @@ import MenuMobile from "./menu-mobile";
 import Link from "next/link";
 import ItemsMenu from "../atoms/items-menu";
 import useTranslation from "next-translate/useTranslation";
-import { css, keyframes } from "@emotion/css";
+
 import { useRouter } from "next/router";
 
 const sectionPage = [

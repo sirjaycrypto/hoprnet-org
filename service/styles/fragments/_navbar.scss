@@ -51,7 +51,7 @@ nav {
       color: $hopr_black;
       transition: all 350ms ease-in-out;
       &.active {
-        border-bottom: 2px solid $hopr_black;
+        border-bottom: 1px solid $hopr_black;
       }
       &:hover {
         transition: all 350ms ease-in-out;
@@ -91,7 +91,7 @@ nav {
     a {
       @include responsive(tablet) {
         &.active {
-          border-bottom: 2px solid #414141;
+          border-bottom: 1px solid $hopr_black;
         }
       }
 

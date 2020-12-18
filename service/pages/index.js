@@ -11,13 +11,11 @@ import HomeFurther from "../components/sections/home-further";
 import Slide from "../components/organisms/slider";
 import { loadNamespaces } from "./_app";
 import useTranslation from "next-translate/useTranslation";
-
 import ChooseLanguage from "../components/molecules/choose-language";
-
 import ReactPlayer from "react-player/lazy";
 import useVisibility from "../components/hooks/useVisibility";
-
-import { css, keyframes } from "@emotion/css";
+import Footer from "../components/molecules/footer";
+import { css } from "@emotion/css";
 
 export default function Home() {
   const [fontSize, setFontSize] = useState(34);
@@ -36,6 +34,7 @@ export default function Home() {
   const [isVisibleBack, currentElementVisibleBack] = useVisibility(100);
   const [isVisibleBanner, currentElementVisibleBanner] = useVisibility(100);
   const [isVisibleTokenFuture, currentElementTokenFuture] = useVisibility(100);
+  const [isVisibleFooter, currentElementTokenFooter] = useVisibility(100);
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -46,12 +45,15 @@ export default function Home() {
       setVideoAutoPlay(false);
     }
 
-    if (visibleNow === "BANNER" || visibleNow === "FURTHER-READING") {
+    if (
+      visibleNow === "BANNER" ||
+      visibleNow === "FURTHER-READING" ||
+      visibleNow === "FOOTER"
+    ) {
       setBtnBanner(true);
     } else {
       setBtnBanner(false);
     }
-
     if (isVisibleBanner) setShowBtnBanner(showBtnBanner);
     if (isVisibleBanner) setVisibleNow(currentElementVisibleBanner.current.id);
     if (isVisibleWhy) setVisibleNow(currentElement.current.id);
@@ -62,11 +64,16 @@ export default function Home() {
     if (isVisibleBack) setVisibleNow(currentElementVisibleBack.current.id);
     if (isVisibleTokenFuture)
       setVisibleNow(currentElementTokenFuture.current.id);
+    if (isVisibleFooter) setVisibleNow(currentElementTokenFooter.current.id);
     if (window.pageYOffset === 0) {
       setFontSize(34);
     } else {
       setFontSize(14);
-      if (isVisibleBanner) {
+      if (
+        visibleNow === "BANNER" ||
+        visibleNow === "FURTHER-READING" ||
+        visibleNow === "FOOTER"
+      ) {
         setFontSize(34);
       }
     }
@@ -82,6 +89,7 @@ export default function Home() {
     isVisibleBack,
     isVisibleTokenFuture,
     isVisibleBanner,
+    isVisibleFooter,
     currentElementVisibleBanner,
     currentElementVideo,
     currentElement,
@@ -91,13 +99,13 @@ export default function Home() {
     currentElementTokenRele,
     currentElementVisibleBack,
     currentElementTokenFuture,
+    currentElementTokenFooter,
   ]);
 
   const clickBtn = () => {
     console.log("Click");
   };
 
- 
   return (
     <Layout visibleNow={visibleNow}>
       <ChooseLanguage />
@@ -171,6 +179,7 @@ export default function Home() {
         setVisibleNow={setVisibleNow}
         ref={currentElementTokenFuture}
       />
+      <Footer setVisibleNow={setVisibleNow} ref={currentElementTokenFooter} />
     </Layout>
   );
 }

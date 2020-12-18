@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import Link from "next/link";
 import useTranslation from "next-translate/useTranslation";
 
@@ -33,10 +33,10 @@ const dataInfo = [
   },
 ];
 
-export default function Footer() {
+const Footer = forwardRef(({ setVisibleNow }, ref) => {
   const { t } = useTranslation();
   return (
-    <footer>
+    <footer ref={ref} id="FOOTER">
       <div className="container padding-section-aux">
         <div className="first-line-footer">
           <div className="footer-icon">
@@ -93,4 +93,6 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+});
+
+export default Footer;
