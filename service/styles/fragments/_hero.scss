@@ -118,3 +118,11 @@
  
 }
 
+
+.display-phone {
+  display: none;
+  @include responsive(phone) {
+    display: flex;
+  }
+ 
+}

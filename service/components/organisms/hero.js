@@ -39,14 +39,7 @@ const Hero = forwardRef(({}, ref) => {
             src="/assets/video/hero.mp4"
           ></video>
       
-        {/* <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="background-video display-tablet"
-            src="/assets/video/hopr_Drone_Tablet-Portrait.mp4"
-          ></video> */}
+     
         <video
           autoPlay
           loop

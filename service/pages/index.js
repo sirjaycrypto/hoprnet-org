@@ -97,8 +97,7 @@ export default function Home() {
     console.log("Click");
   };
 
-  console.log(visibleNow)
-console.log(btnBanner)
+ 
   return (
     <Layout visibleNow={visibleNow}>
       <ChooseLanguage />
