@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Layout from "../components/organisms/layout";
 import Hero from "../components/organisms/hero";
 import HomeMatter from "../components/sections/home-matters";
@@ -19,6 +19,7 @@ import { css } from "@emotion/css";
 
 export default function Home() {
   const [fontSize, setFontSize] = useState(34);
+  const [scrollTopBanner, setScrollTopBanner] = useState(null);
   //
   const [visibleNow, setVisibleNow] = useState("");
   const [videoAutoPLay, setVideoAutoPlay] = useState(false);
@@ -37,6 +38,34 @@ export default function Home() {
   const [isVisibleFooter, currentElementTokenFooter] = useVisibility(100);
   const { t } = useTranslation();
 
+  const scrollDetect = () => {
+    console.log(currentElementVisibleBanner);
+   
+      const bannerHth = parseInt(
+        currentElementVisibleBanner.current.clientHeight / 2,
+        10
+      );
+      const bannerFocus = currentElementVisibleBanner.current.offsetTop;
+      const brakeBanner = bannerHth + bannerFocus;
+      const scrollCurrent = window.pageYOffset + window.screen.height;
+
+      console.log("scrollCurrent", scrollCurrent);
+
+      console.log("brakeBanner", brakeBanner);
+
+      if (scrollCurrent >= brakeBanner) {
+        setFontSize(34);
+      } else {
+        setFontSize(14);
+      }
+    
+  };
+
+  useEffect(() => {
+    
+    window.addEventListener("scroll", scrollDetect);
+  }, [scrollTopBanner]);
+
   useEffect(() => {
     if (isVisibleHero) setVisibleNow("");
     if (isVisibleVideo) {
@@ -45,15 +74,16 @@ export default function Home() {
       setVideoAutoPlay(false);
     }
 
-    if (
-      visibleNow === "BANNER" ||
-      visibleNow === "FURTHER-READING" ||
-      visibleNow === "FOOTER"
-    ) {
-      setBtnBanner(true);
-    } else {
-      setBtnBanner(false);
-    }
+    // if (
+    //   visibleNow === "BANNER" ||
+    //   visibleNow === "FURTHER-READING" ||
+    //   visibleNow === "FOOTER"
+    // ) {
+    //   setBtnBanner(true);
+    // } else {
+    //   setBtnBanner(false);
+    // }
+
     if (isVisibleBanner) setShowBtnBanner(showBtnBanner);
     if (isVisibleBanner) setVisibleNow(currentElementVisibleBanner.current.id);
     if (isVisibleWhy) setVisibleNow(currentElement.current.id);
@@ -65,18 +95,6 @@ export default function Home() {
     if (isVisibleTokenFuture)
       setVisibleNow(currentElementTokenFuture.current.id);
     if (isVisibleFooter) setVisibleNow(currentElementTokenFooter.current.id);
-    if (window.pageYOffset === 0) {
-      setFontSize(34);
-    } else {
-      setFontSize(14);
-      if (
-        visibleNow === "BANNER" ||
-        visibleNow === "FURTHER-READING" ||
-        visibleNow === "FOOTER"
-      ) {
-        setFontSize(34);
-      }
-    }
   }, [
     videoAutoPLay,
     isVisibleHero,
@@ -173,7 +191,6 @@ export default function Home() {
             </span>
           </div>
         </div>
-        <img src="/assets/images/banner.png" alt="The HOPR-Token NOW" />
       </section>
       <HomeFurther
         setVisibleNow={setVisibleNow}
