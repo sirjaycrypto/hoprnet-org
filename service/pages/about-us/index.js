@@ -114,7 +114,6 @@ export default function Index() {
             </div>
           </div>
         </section>
-        {/*  */}
         <section className="section-partners padding-section-aux">
           <div className="container">
             <h2>{t("aboutPart:title")}</h2>
@@ -141,7 +140,6 @@ export default function Index() {
             </div>
           </div>
         </section>
-        {/*  */}
         <section className="continue-yellow padding-section-aux invert-color ">
           <div className="container">
             <div>
@@ -155,7 +153,6 @@ export default function Index() {
             </div>
           </div>
         </section>
-        {/*  */}
         <section className="section-HOPR-values padding-section-aux">
           <div className="container">
             <div>
@@ -182,7 +179,6 @@ export default function Index() {
             </div>
           </div>
         </section>
-        {/*  */}
         <section className="section-board-association continue-yellow padding-section-aux invert-color">
           <div>
             <h2>{t("aboutAssoci:title")}</h2>
@@ -207,7 +203,7 @@ export default function Index() {
                 </ul>
               </div>
               <div>
-                <p> {t("aboutAssoci:paragraphB")}</p>
+                <p>{t("aboutAssoci:paragraphB")}</p>
                 <div className="btn-align">
                   <a
                     href="https://docs.google.com/forms/d/e/1FAIpQLSeiZ76QfvcbpbBJk-DJDE5IfYmzkuUfUOM-j4btBviTbBNn2w/viewform?hl=en"
@@ -224,7 +220,6 @@ export default function Index() {
             </div>
           </div>
         </section>
-        {/*  */}
         <section className="section-jobs padding-section-aux">
           <div className="container">
             <div>
@@ -234,7 +229,6 @@ export default function Index() {
             <Jobs />
           </div>
         </section>
-        {/*  */}
         <section className="section-board-contact continue-yellow padding-section-aux invert-color">
           <div>
             <h2>{t("common:contactUs")}</h2>
