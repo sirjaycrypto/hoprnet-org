@@ -69,17 +69,8 @@
 
 .change-mode {
   bottom: auto;
-  animation: changeMode ease 300ms forwards;
+  position: absolute;
 
-}
-
-@keyframes changeMode {
-  0% {
-    position: fixed;
-  }
-  100% {
-    position: absolute;
-  }
 }
 
 
