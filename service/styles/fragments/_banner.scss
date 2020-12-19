@@ -70,7 +70,22 @@
 
 .change-mode {
   bottom: auto;
-  position: absolute;
+
+  animation: changeMode ease 300ms forwards;
+  @include responsive(tablet) {
+    position: absolute!important;
+  }
 }
 
 
+
+
+
+@keyframes changeMode {
+  0% {
+    position: fixed;
+  }
+  100% {
+    position: absolute;
+  }
+}
