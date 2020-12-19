@@ -44,11 +44,13 @@ export default function Navbar({ visibleNow }) {
   const router = useRouter();
   const { t } = useTranslation();
 
+  console.log(activaMenu)
   useEffect(() => {
     window.onscroll = function () {
       if (window.pageYOffset === 0) {
         setYouDown(false);
       } else {
+        window.toggle.checked=false;
         setYouDown(true);
         setActivaMenu(false);
       }

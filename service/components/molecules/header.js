@@ -15,8 +15,6 @@ export default function Header() {
         name="description"
         content="The HOPR protocol ensures everyone has control of their privacy, data, and identity."
       />
-      {/* <meta property="og:image" content="/assets/brand/meta.jpg" />
-      <meta property="og:image:alt" ccontent="assets/brand/meta.jpg" /> */}
       <meta charSet="utf-8" />
       <meta name="keywords" content="crypto, data privacy, network-level" />
       <meta name="author" content="HOPR" />

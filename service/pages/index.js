@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "../components/organisms/layout";
 import Hero from "../components/organisms/hero";
 import HomeMatter from "../components/sections/home-matters";
@@ -11,20 +11,21 @@ import HomeFurther from "../components/sections/home-further";
 import Slide from "../components/organisms/slider";
 import { loadNamespaces } from "./_app";
 import useTranslation from "next-translate/useTranslation";
+
 import ChooseLanguage from "../components/molecules/choose-language";
+
 import ReactPlayer from "react-player/lazy";
 import useVisibility from "../components/hooks/useVisibility";
-import Footer from "../components/molecules/footer";
-import { css } from "@emotion/css";
+
+import { css, keyframes } from "@emotion/css";
 
 export default function Home() {
   const [fontSize, setFontSize] = useState(34);
-  const [scrollTopBanner, setScrollTopBanner] = useState(null);
   //
   const [visibleNow, setVisibleNow] = useState("");
   const [videoAutoPLay, setVideoAutoPlay] = useState(false);
   const [showBtnBanner, setShowBtnBanner] = useState();
-  const [btnBanner, setBtnBanner] = useState(false);
+
   const [isVisibleVideo, currentElementVideo] = useVisibility(100);
   const [isVisibleHero, currentElementHero] = useVisibility(100);
   const [isVisibleWhy, currentElement] = useVisibility(100);
@@ -35,36 +36,7 @@ export default function Home() {
   const [isVisibleBack, currentElementVisibleBack] = useVisibility(100);
   const [isVisibleBanner, currentElementVisibleBanner] = useVisibility(100);
   const [isVisibleTokenFuture, currentElementTokenFuture] = useVisibility(100);
-  const [isVisibleFooter, currentElementTokenFooter] = useVisibility(100);
   const { t } = useTranslation();
-
-  const scrollDetect = () => {
-    console.log(currentElementVisibleBanner);
-   
-      const bannerHth = parseInt(
-        currentElementVisibleBanner.current.clientHeight / 2,
-        10
-      );
-      const bannerFocus = currentElementVisibleBanner.current.offsetTop;
-      const brakeBanner = bannerHth + bannerFocus;
-      const scrollCurrent = window.pageYOffset + window.screen.height;
-
-      console.log("scrollCurrent", scrollCurrent);
-
-      console.log("brakeBanner", brakeBanner);
-
-      if (scrollCurrent >= brakeBanner) {
-        setFontSize(34);
-      } else {
-        setFontSize(14);
-      }
-    
-  };
-
-  useEffect(() => {
-    
-    window.addEventListener("scroll", scrollDetect);
-  }, [scrollTopBanner]);
 
   useEffect(() => {
     if (isVisibleHero) setVisibleNow("");
@@ -74,17 +46,8 @@ export default function Home() {
       setVideoAutoPlay(false);
     }
 
-    // if (
-    //   visibleNow === "BANNER" ||
-    //   visibleNow === "FURTHER-READING" ||
-    //   visibleNow === "FOOTER"
-    // ) {
-    //   setBtnBanner(true);
-    // } else {
-    //   setBtnBanner(false);
-    // }
-
-    if (isVisibleBanner) setShowBtnBanner(showBtnBanner);
+    if (isVisibleBanner) setShowBtnBanner(true);
+    if (isVisibleTokenFuture) setShowBtnBanner(true);
     if (isVisibleBanner) setVisibleNow(currentElementVisibleBanner.current.id);
     if (isVisibleWhy) setVisibleNow(currentElement.current.id);
     if (isVisibleHow) setVisibleNow(currentElementAlt.current.id);
@@ -94,7 +57,15 @@ export default function Home() {
     if (isVisibleBack) setVisibleNow(currentElementVisibleBack.current.id);
     if (isVisibleTokenFuture)
       setVisibleNow(currentElementTokenFuture.current.id);
-    if (isVisibleFooter) setVisibleNow(currentElementTokenFooter.current.id);
+
+    if (window.pageYOffset === 0) {
+      setFontSize(34);
+    } else {
+      setFontSize(14);
+      if (isVisibleBanner) {
+        setFontSize(34);
+      }
+    }
   }, [
     videoAutoPLay,
     isVisibleHero,
@@ -107,7 +78,6 @@ export default function Home() {
     isVisibleBack,
     isVisibleTokenFuture,
     isVisibleBanner,
-    isVisibleFooter,
     currentElementVisibleBanner,
     currentElementVideo,
     currentElement,
@@ -117,8 +87,15 @@ export default function Home() {
     currentElementTokenRele,
     currentElementVisibleBack,
     currentElementTokenFuture,
-    currentElementTokenFooter,
   ]);
+
+  const posiPro = isVisibleBanner ? "initial" : " fixed";
+
+  const animate = keyframes`
+  0% {opacity:0;}
+  100% {opacity:1;}
+
+`;
 
   const clickBtn = () => {
     console.log("Click");
@@ -137,7 +114,12 @@ export default function Home() {
       >
         <ReactPlayer
           className="react-player"
-          url="/assets/video/about.mp4"
+          config={{
+            vimeo: {
+              playerVars: { showinfo: 1 },
+            },
+          }}
+          url={"https://vimeo.com/492666726"}
           width="100%"
           height="100%"
           muted={!videoAutoPLay}
@@ -162,18 +144,41 @@ export default function Home() {
         ref={currentElementVisibleBack}
       />
       <section
-        id="BANNER"
+        id="banner-CTA"
         className="banner-CTA"
         ref={currentElementVisibleBanner}
       >
-        <div className={"btn-follow " + (btnBanner ? "change-mode" : "")}>
-          <div onClick={() => clickBtn()}>
+        <div
+          className={css`
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            width: 100%;
+            position: ${posiPro};
+            transition: all 600ms ease-in-out;
+            bottom: 10px;
+          `}
+        >
+          <div
+            onClick={() => clickBtn()}
+            className={css`
+              background: linear-gradient(90deg, #0000db 0%, #292941 100%);
+              transition: all 600ms ease-in-out;
+              padding: 0em 1.5em;
+              border-radius: 100px;
+              width: fit-content;
+              &:hover {
+                animation: ${animate} ease 1s forwards;
+              }
+            `}
+          >
             <span
               className={css`
                 font-size: ${fontSize}px;
                 transition: font-size 300ms ease-in-out;
                 font-weight: 600;
-                line-height: 2.5em;
+                line-height: 2em;
                 display: flex;
                 align-items: center;
                 text-align: center;
@@ -196,7 +201,6 @@ export default function Home() {
         setVisibleNow={setVisibleNow}
         ref={currentElementTokenFuture}
       />
-      <Footer setVisibleNow={setVisibleNow} ref={currentElementTokenFooter} />
     </Layout>
   );
 }

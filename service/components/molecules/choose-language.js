@@ -20,7 +20,7 @@ export default function ChooseLanguage() {
   };
 
   return (
-    <div className="container-languages invert-color">
+    <div className="container-languages invert-color" >
       <div
         className="select-lang"
         onMouseEnter={() => clickMenu()}
@@ -30,6 +30,7 @@ export default function ChooseLanguage() {
       </div>
       <div className="box-hidden-info">
         <ul
+        onMouseLeave={() => clickMenu()}
           className={css`
             transform: translateY(${translateY}%);
           `}
@@ -38,7 +39,7 @@ export default function ChooseLanguage() {
             const { info, label } = e;
             return (
               <Link href="/" locale={info} key={i}>
-                <li onClick={() => clickMenu()} className={lang===info ? 'is-current' : ''}>
+                <li  onClick={() => clickMenu()} className={lang===info ? 'is-current' : ''}>
                   <a>{label}</a>
                 </li>
               </Link>
