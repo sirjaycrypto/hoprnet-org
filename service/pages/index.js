@@ -16,16 +16,17 @@ import ChooseLanguage from "../components/molecules/choose-language";
 
 import ReactPlayer from "react-player/lazy";
 import useVisibility from "../components/hooks/useVisibility";
-
+import Footer from "../components/molecules/footer";
 import { css, keyframes } from "@emotion/css";
 
 export default function Home() {
   const [fontSize, setFontSize] = useState(34);
+  const [scrollTopBanner, setScrollTopBanner] = useState(null);
   //
   const [visibleNow, setVisibleNow] = useState("");
   const [videoAutoPLay, setVideoAutoPlay] = useState(false);
   const [showBtnBanner, setShowBtnBanner] = useState();
-
+  const [btnBanner, setBtnBanner] = useState(false);
   const [isVisibleVideo, currentElementVideo] = useVisibility(100);
   const [isVisibleHero, currentElementHero] = useVisibility(100);
   const [isVisibleWhy, currentElement] = useVisibility(100);
@@ -36,6 +37,7 @@ export default function Home() {
   const [isVisibleBack, currentElementVisibleBack] = useVisibility(100);
   const [isVisibleBanner, currentElementVisibleBanner] = useVisibility(100);
   const [isVisibleTokenFuture, currentElementTokenFuture] = useVisibility(100);
+  const [isVisibleFooter, currentElementTokenFooter] = useVisibility(100);
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -44,6 +46,16 @@ export default function Home() {
       setVideoAutoPlay(true);
     } else if (currentElementVideo.current.id === "video-area") {
       setVideoAutoPlay(false);
+    }
+
+    if (
+      visibleNow === "BANNER" ||
+      visibleNow === "FURTHER-READING" ||
+      visibleNow === "FOOTER"
+    ) {
+      setBtnBanner(true);
+    } else {
+      setBtnBanner(false);
     }
 
     if (isVisibleBanner) setShowBtnBanner(true);
@@ -57,15 +69,19 @@ export default function Home() {
     if (isVisibleBack) setVisibleNow(currentElementVisibleBack.current.id);
     if (isVisibleTokenFuture)
       setVisibleNow(currentElementTokenFuture.current.id);
-
+    if (isVisibleFooter) setVisibleNow(currentElementTokenFooter.current.id);
     if (window.pageYOffset === 0) {
       setFontSize(34);
     } else {
       setFontSize(14);
-      if (isVisibleBanner) {
+      if (  visibleNow === "BANNER" ||
+      visibleNow === "FURTHER-READING" ||
+      visibleNow === "FOOTER") {
         setFontSize(34);
       }
     }
+
+    console.log(visibleNow);
   }, [
     videoAutoPLay,
     isVisibleHero,
@@ -78,6 +94,7 @@ export default function Home() {
     isVisibleBack,
     isVisibleTokenFuture,
     isVisibleBanner,
+    isVisibleFooter,
     currentElementVisibleBanner,
     currentElementVideo,
     currentElement,
@@ -87,9 +104,8 @@ export default function Home() {
     currentElementTokenRele,
     currentElementVisibleBack,
     currentElementTokenFuture,
+    currentElementTokenFooter,
   ]);
-
-  const posiPro = isVisibleBanner ? "initial" : " fixed";
 
   const animate = keyframes`
   0% {opacity:0;}
@@ -144,22 +160,11 @@ export default function Home() {
         ref={currentElementVisibleBack}
       />
       <section
-        id="banner-CTA"
+        id="BANNER"
         className="banner-CTA"
         ref={currentElementVisibleBanner}
       >
-        <div
-          className={css`
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1;
-            width: 100%;
-            position: ${posiPro};
-            transition: all 600ms ease-in-out;
-            bottom: 10px;
-          `}
-        >
+        <div className={"btn-follow " + (btnBanner ? "change-mode" : "")}>
           <div
             onClick={() => clickBtn()}
             className={css`
@@ -201,6 +206,7 @@ export default function Home() {
         setVisibleNow={setVisibleNow}
         ref={currentElementTokenFuture}
       />
+      <Footer setVisibleNow={setVisibleNow} ref={currentElementTokenFooter} />
     </Layout>
   );
 }
