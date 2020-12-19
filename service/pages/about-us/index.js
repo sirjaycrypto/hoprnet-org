@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import useTranslation from "next-translate/useTranslation";
 
@@ -12,47 +12,31 @@ import { stagger, fadeInUp } from "../../util/motionConfig";
 import { loadNamespaces } from "../_app";
 
 const dataInfo = [
-  {
-    img: "assets/partners/avado.svg",
-  },
-  {
-    img: "assets/partners/froriep.png",
-  },
-  {
-    img: "assets/partners/elrond.png",
-  },
-  {
-    img: "assets/partners/health_tech_cluster.png",
-  },
-  {
-    img: "assets/partners/sedimentum.png",
-  },
-  {
-    img: "assets/partners/download.png",
-  },
-  {
-    img: "assets/partners/swiss_medtech.png",
-  },
-  {
-    img: "assets/partners/swiss_healthcare_startups.png",
-  },
+  "assets/partners/avado.svg",
+  "assets/partners/froriep.png",
+  "assets/partners/elrond.png",
+  "assets/partners/health_tech_cluster.png",
+  "assets/partners/sedimentum.png",
+  "assets/partners/download.png",
+  "assets/partners/swiss_medtech.png",
+  "assets/partners/swiss_healthcare_startups.png",
 ];
 
 const dataVALUES = [
   {
     img: "assets/icons/with-yellow-ball/protection-shield.png",
-    title: "aboutValu:itemTitleA",
-    text: "aboutValu:itemAboutA",
+    title: "about:values.itemTitleA",
+    text: "about:values.itemAboutA",
   },
   {
     img: "assets/icons/with-yellow-ball/light-bulb-shine.png",
-    title: "aboutValu:itemTitleB",
-    text: "aboutValu:itemAboutB",
+    title: "about:values.itemTitleB",
+    text: "about:values.itemAboutB",
   },
   {
     img: "assets/icons/with-yellow-ball/multiple-users-1.png",
-    title: "aboutValu:itemTitleC",
-    text: "aboutValu:itemAboutC",
+    title: "about:values.itemTitleC",
+    text: "about:values.itemAboutC",
   },
 ];
 
@@ -65,26 +49,23 @@ export default function Index() {
         <HeroInternal>
           <motion.div variants={stagger}>
             <h1 className="reveal-from-top "  data-reveal-delay="150">
-              {t("aboutHero:title")}
+              {t("about:hero.title")}
             </h1>
-            <p className="section-header mt-0 mb-0 reveal-from-top big-title" data-reveal-delay="150">
-            Independent, Incorruptible, And Indestructible
-          </p>
             <div>
               <motion.p variants={fadeInUp} transition={{ delay: 0.2 }}>
-                {t("aboutHero:paragraphA")}
+                {t("about:hero.paragraphA")}
               </motion.p>
               <motion.p variants={fadeInUp} transition={{ delay: 0.4 }}>
-                {t("aboutHero:paragraphB")}
+                {t("about:hero.paragraphB")}
               </motion.p>
               <motion.p variants={fadeInUp} transition={{ delay: 0.6 }}>
-                {t("aboutHero:paragraphC")}
+                {t("about:hero.paragraphC")}
               </motion.p>
               <motion.p variants={fadeInUp} transition={{ delay: 0.8 }}>
-                {t("aboutHero:paragraphD")}
+                {t("about:hero.paragraphD")}
               </motion.p>
               <motion.p variants={fadeInUp} transition={{ delay: 1 }}>
-                {t("aboutHero:paragraphE")}
+                {t("about:hero.paragraphE")}
                 <a
                   className="link-out"
                   href="https://hopr.swiss/who-is-HOPR#team"
@@ -100,41 +81,40 @@ export default function Index() {
         <section className="continue-hero-internal padding-section-aux invert-color ">
           <div className="">
             <div>
-              <h2> {t("aboutSecundSection:title")}</h2>
+              <h2> {t("about:governance.title")}</h2>
             </div>
             <div className="container-sm two-block">
               <div className="block-left">
-                <p>{t("aboutSecundSection:paragraphLeftA")}</p>
-                <p>{t("aboutSecundSection:paragraphLeftB")}</p>
+                <p>{t("about:governance.paragraphLeftA")}</p>
+                <p>{t("about:governance.paragraphLeftB")}</p>
               </div>
               <div className="block-right">
-                <p>{t("aboutSecundSection:paragraphRightA")}</p>
-                <p>{t("aboutSecundSection:paragraphRightB")}</p>
+                <p>{t("about:governance.paragraphRightA")}</p>
+                <p>{t("about:governance.paragraphRightB")}</p>
               </div>
             </div>
           </div>
         </section>
         <section className="section-partners padding-section-aux">
           <div className="container">
-            <h2>{t("aboutPart:title")}</h2>
+            <h2>{t("about:partners.title")}</h2>
             <div className="container-sm">
               <ul>
-                {dataInfo.map((e, index) => {
-                  const { img } = e;
+                {dataInfo.map((item, index) => {
                   return (
                     <motion.li
                       key={index}
                       variants={fadeInUp}
                       transition={{ delay: 0.8 }}
                     >
-                      <img src={img} alt="The HOPR-Token NOW" />
+                      <img src={item} alt="The HOPR-Token NOW" />
                     </motion.li>
                   );
                 })}
               </ul>
               <div className="btn-align">
                 <div className="type-btn">
-                  <span>{t("aboutPart:btnLabel")}</span>
+                  <span>{t("about:partners.btnLabel")}</span>
                 </div>
               </div>
             </div>
@@ -156,7 +136,7 @@ export default function Index() {
         <section className="section-HOPR-values padding-section-aux">
           <div className="container">
             <div>
-              <h2>{t("aboutValu:title")}</h2>
+              <h2>{t("about:values.title")}</h2>
             </div>
             <div className="element-value">
               {dataVALUES.map((e, index) => {
@@ -181,29 +161,28 @@ export default function Index() {
         </section>
         <section className="section-board-association continue-yellow padding-section-aux invert-color">
           <div>
-            <h2>{t("aboutAssoci:title")}</h2>
+            <h2>{t("about:association.title")}</h2>
           </div>
           <div>
             <ProfileAssociation />
             <div className="container">
               <p>
-                {t("aboutAssoci:paragraphA")}
+                {t("about:association.paragraphA")}
                 <a href="https://hopr.swiss/who-is-HOPR#team">
                   {t("common:HOPRServices")}
                 </a>
               </p>
               <div className="section-receivers">
-                <h3>{t("aboutAssoci:subtitle")}</h3>
-
+                <h3>{t("about:association.subtitle")}</h3>
                 <ul>
-                  <li>{t("aboutAssoci:itemA")}</li>
-                  <li>{t("aboutAssoci:itemB")}</li>
-                  <li>{t("aboutAssoci:itemC")}</li>
-                  <li>{t("aboutAssoci:itemD")}</li>
+                  <li>{t("about:association.itemA")}</li>
+                  <li>{t("about:association.itemB")}</li>
+                  <li>{t("about:association.itemC")}</li>
+                  <li>{t("about:association.itemD")}</li>
                 </ul>
               </div>
               <div>
-                <p>{t("aboutAssoci:paragraphB")}</p>
+                <p>{t("about:association.paragraphB")}</p>
                 <div className="btn-align">
                   <a
                     href="https://docs.google.com/forms/d/e/1FAIpQLSeiZ76QfvcbpbBJk-DJDE5IfYmzkuUfUOM-j4btBviTbBNn2w/viewform?hl=en"
@@ -247,11 +226,7 @@ export async function getStaticProps({ locale }) {
         [
           "common",
           "menu",
-          "aboutHero",
-          "aboutSecundSection",
-          "aboutPart",
-          "aboutAssoci",
-          "aboutValu",
+          "about",
         ],
         locale
       ),
