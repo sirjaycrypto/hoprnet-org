@@ -4,6 +4,20 @@ import { Line, Pie } from "react-chartjs-2";
 
 import dataSupply from "../../public/assets/json/dataSupply.json";
 
+
+function intlFormat(num)
+{
+  return new Intl.NumberFormat().format(Math.round(num*10)/10);
+}
+function makeFriendly(num)
+{
+  if(num >= 1000000)
+    return intlFormat(num/1000000)+'M';
+  if(num >= 1000)
+    return intlFormat(num/1000)+'k';
+  return intlFormat(num);
+}
+
 const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
   const [isMobile, setIsMobile] = useState(false);
   const { t } = useTranslation();
@@ -120,7 +134,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
             min: 0.0,
             stepSize: 250000000,
             callback: function (value) {
-              return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+              return makeFriendly(value)
             },
           },
         },
