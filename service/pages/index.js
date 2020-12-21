@@ -80,8 +80,6 @@ export default function Home() {
         setFontSize(34);
       }
     }
-
-    console.log(visibleNow);
   }, [
     videoAutoPLay,
     isVisibleHero,

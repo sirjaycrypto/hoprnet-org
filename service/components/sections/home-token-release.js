@@ -159,58 +159,46 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
         fontSize: 14,
         fontColor: "#414141",
         padding: 18,
-        boxWidth: 21,
+        boxWidth: 16,
         usePointStyle: false,
+  
       },
     },
   };
 
   const dataTokenSupply = {
     legend: [
+      "Public Sale",
+      "Cover Traffic",
+      "Bounties",
+      "Early Token Buyers",
+      "Team & Advisors",
+      "Treasury",
+    ],
+
+
+    legend: [
       "Treasury",
       "Team & Advisors",
       "Early Token Buyers",
       "Bounties",
-      "Cover Traffic",
+
       "Public Sale",
+      "Cover Traffic",
+      
+     
+    
+     
     ],
+
+    
     labels: dataDate,
     datasets: [
       {
-        label: "Treasury",
-        data: cleanData(dataTreasury),
-        backgroundColor: ["#FDFFA2"],
-        pointBackgroundColor: "#FDFFA2",
-        borderWidth: 0,
-        pointBorderWidth: 0,
-        lineTension: 0,
-      },
-
-      {
-        label: "Team & Advisors",
-        data: cleanData(dataTeamNAdvisors),
-        backgroundColor: ["#FBFB3B"],
-        pointBackgroundColor: "#FBFB3B",
-        borderWidth: 0,
-        pointBorderWidth: 0,
-        lineTension: 0,
-      },
-
-      {
-        label: "Early Token Buyers",
-        data: cleanData(dataEarlyTokenBuyers),
-        backgroundColor: ["#BCBC2A"],
-        pointBackgroundColor: "#BCBC2A",
-        borderWidth: 0,
-        pointBorderWidth: 0,
-        lineTension: 0,
-      },
-
-      {
-        label: "Bounties",
-        data: cleanData(dataBounties),
-        backgroundColor: ["#7E7E1E"],
-        pointBackgroundColor: "#7E7E1E",
+        label: "Public Sale",
+        data: cleanData(dataPublicSale),
+        backgroundColor: ["#020250"],
+        pointBackgroundColor: "#020250",
         borderWidth: 0,
         pointBorderWidth: 0,
         lineTension: 0,
@@ -227,16 +215,45 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
       },
 
       {
-        label: "Public Sale",
-        data: cleanData(dataPublicSale),
-        backgroundColor: ["#020250"],
-        pointBackgroundColor: "#020250",
+        label: "Bounties",
+        data: cleanData(dataBounties),
+        backgroundColor: ["#7E7E1E"],
+        pointBackgroundColor: "#7E7E1E",
+        borderWidth: 0,
+        pointBorderWidth: 0,
+        lineTension: 0,
+      },
+
+      {
+        label: "Early Token Buyers",
+        data: cleanData(dataEarlyTokenBuyers),
+        backgroundColor: ["#BCBC2A"],
+        pointBackgroundColor: "#BCBC2A",
+        borderWidth: 0,
+        pointBorderWidth: 0,
+        lineTension: 0,
+      },
+      {
+        label: "Team & Advisors",
+        data: cleanData(dataTeamNAdvisors),
+        backgroundColor: ["#FBFB3B"],
+        pointBackgroundColor: "#FBFB3B",
+        borderWidth: 0,
+        pointBorderWidth: 0,
+        lineTension: 0,
+      },
+      {
+        label: "Treasury",
+        data: cleanData(dataTreasury),
+        backgroundColor: ["#FDFFA2"],
+        pointBackgroundColor: "#FDFFA2",
         borderWidth: 0,
         pointBorderWidth: 0,
         lineTension: 0,
       },
     ],
   };
+     
 
   return (
     <>
