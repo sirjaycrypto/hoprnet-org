@@ -130,7 +130,7 @@ export default function Home() {
           className="react-player"
           config={{
             vimeo: {
-              playerVars: { showinfo: 1 },
+              playerVars: { showInfo: 1 },
             },
           }}
           url={"https://vimeo.com/492666726"}

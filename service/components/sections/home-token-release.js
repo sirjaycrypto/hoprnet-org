@@ -176,16 +176,6 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
       "Treasury",
     ],
 
-
-    // legend: [
-    //   "Treasury",
-    //   "Team & Advisors",
-    //   "Early Token Buyers",
-    //   "Bounties",
-    //   "Public Sale",
-    //   "Cover Traffic", 
-    // ],
-
     
     labels: dataDate,
     datasets: [
