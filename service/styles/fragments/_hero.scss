@@ -40,16 +40,12 @@
   h1 {
     font-size: 100px;
     line-height: 103px;
-    
     display: flex;
     align-items: center;
     text-align: center;
     letter-spacing: 0.833333px;
-
+    word-break: break-word;
     font-weight: normal;
-   
- 
-
     @include responsive(tablet) {
       font-size: 108px;
       line-height: 112px;
