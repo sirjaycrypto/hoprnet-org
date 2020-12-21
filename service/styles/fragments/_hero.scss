@@ -77,8 +77,9 @@
       top: calc(50% - 84px / 2 - 229px);
     }
     @include responsive(phone) {
-      font-size: 20px;
-      line-height: 32px;
+      font-size: 20px!important;
+      line-height: 32px!important;
+      top: calc(55% - 0px / 2 - 229px)!important;
     }
   }
 }
