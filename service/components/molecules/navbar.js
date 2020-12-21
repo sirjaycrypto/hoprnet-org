@@ -78,12 +78,11 @@ export default function Navbar({ visibleNow }) {
             />
             <label htmlFor="toggle"></label>
           </div>
-
           <ItemsMenu />
         </div>
       </nav>
 
-      <MenuMobile activaMenu={activaMenu} />
+      <MenuMobile activaMenu={activaMenu} setActivaMenu={()=>{setActivaMenu}}/>
       {router.pathname === "/" ? (
         <div className={"section-indicator " + (youDown ? "make-visible" : "")}>
           <div className="helper-hr"></div>

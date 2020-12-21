@@ -38,14 +38,30 @@
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
   }
   h1 {
-    font-weight: normal;
-    font-size: 6.25rem;
+    font-size: 100px;
+    line-height: 103px;
+    
     display: flex;
     align-items: center;
     text-align: center;
     letter-spacing: 0.833333px;
+
+    font-weight: normal;
+   
+ 
+
     @include responsive(tablet) {
-      font-size: 2rem;
+      font-size: 108px;
+      line-height: 112px;
+      align-items: center;
+      text-align: center;
+      letter-spacing: 0.9px;
+    }
+    @include responsive(phone) {
+      font-size: 50px;
+      line-height: 64px;
+ 
+      letter-spacing: 0.416667px;
     }
   }
   h4 {

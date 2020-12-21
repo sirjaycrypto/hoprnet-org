@@ -5,7 +5,7 @@ export default function MenuMobile({ activaMenu }) {
   return (
     <div className={"menu-mobile " + (activaMenu ? "open" : "")}>
       <div>
-        <ItemsMenu />
+        <ItemsMenu activaMenu={()=>{activaMenu}} />
       </div>
     </div>
   );

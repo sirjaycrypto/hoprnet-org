@@ -24,7 +24,6 @@ export default function ChooseLanguage() {
       <div
         className="select-lang"
         onMouseEnter={() => clickMenu()}
-        
       >
         {lang}
       </div>

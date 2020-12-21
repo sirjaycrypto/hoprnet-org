@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import useTranslation from "next-translate/useTranslation";
 import { listLang } from "../../util/listLanguage";
 
-export default function ItemsMenu() {
+export default function ItemsMenu({setActivaMenu,activaMenu}) {
   const router = useRouter();
+  const [translateY, setTranslateY] = useState(-102);
+  const [flag, setFlag] = useState(false);
   const { t, lang } = useTranslation();
   const linkLocal = [
     {
@@ -29,6 +31,18 @@ export default function ItemsMenu() {
       name: "menu:blog",
     },
   ];
+
+  const clickMenu = () => {
+    if (flag == false) {
+      setTranslateY(0);
+      setFlag(true);
+    } else {
+      setTranslateY(-102);
+      setFlag(false);
+      
+    }
+  };
+
   return (
     <>
       <div className="menu-desktop">
