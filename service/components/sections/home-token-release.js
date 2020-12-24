@@ -4,17 +4,12 @@ import { Line, Pie } from "react-chartjs-2";
 
 import dataSupply from "../../public/assets/json/dataSupply.json";
 
-
-function intlFormat(num)
-{
-  return new Intl.NumberFormat().format(Math.round(num*10)/10);
+function intlFormat(num) {
+  return new Intl.NumberFormat().format(Math.round(num * 10) / 10);
 }
-function makeFriendly(num)
-{
-  if(num >= 1000000)
-    return intlFormat(num/1000000)+'M';
-  if(num >= 1000)
-    return intlFormat(num/1000)+'k';
+function makeFriendly(num) {
+  if (num >= 1000000) return intlFormat(num / 1000000) + "M";
+  if (num >= 1000) return intlFormat(num / 1000) + "k";
   return intlFormat(num);
 }
 
@@ -31,10 +26,13 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
   const options = {
     maintainAspectRatio: false,
     responsive: true,
-
+    tooltips: {
+      mode: "x-axis",
+      bodyFontFamily: "Source Code Pro",
+   
+    },
     legend: {
       display: true,
-      // position: "right",
       position: isMobile ? "bottom" : "right",
       responsive: false,
       maintainAspectRatio: false,
@@ -106,6 +104,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
     },
     tooltips: {
       mode: "x-axis",
+      bodyFontFamily: "Source Code Pro",
       callbacks: {
         label: function (e, t) {
           return ""
@@ -134,7 +133,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
             min: 0.0,
             stepSize: 250000000,
             callback: function (value) {
-              return makeFriendly(value)
+              return makeFriendly(value);
             },
           },
         },
@@ -161,7 +160,6 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
         padding: 18,
         boxWidth: 16,
         usePointStyle: false,
-  
       },
     },
   };
@@ -176,7 +174,6 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
       "Treasury",
     ],
 
-    
     labels: dataDate,
     datasets: [
       {
@@ -238,7 +235,6 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
       },
     ],
   };
-     
 
   return (
     <>
@@ -266,6 +262,15 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
                   <li>{t("homeToken:listItemE")}</li>
                   <li>{t("homeToken:listItemF")}</li>
                   <li>{t("homeToken:listItemG")}</li>
+                  <li>
+                    <a
+                      href="https://coinmarketcap.com/currencies/hopr/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      KEY METRICS-box
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -274,7 +279,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
             <h3>{t("homeToken:secondSubTitle")} (%)</h3>
             <p>{t("homeToken:secondSubAbout")}</p>
             <div>
-              <Pie data={data} width={100} height={539} options={options} />
+              <Pie data={data} width={100} height={420} options={options} />
             </div>
             <p></p>
           </div>
