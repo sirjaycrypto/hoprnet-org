@@ -1,9 +1,0 @@
-{
-    "title":"TOKEN FEATURES",
-    "pay":"Pay",
-    "payMain":"Spend HOPR tokens to send data through the HOPR network with complete data and metadata privacy. Spent HOPR tokens are paid to the node runners who relay the data as it hops through the network.",
-    "stake":"Stake",
-    "stakeMain":"Lock HOPR tokens in your node to relay user data and cover traffic. The more you stake, the more data you can relay, and the more you earn. A quarter of all HOPR tokens are available only to stake's as a reward for relaying cover traffic.",
-    "vote":"Vote",
-    "voteMain":"Participate in decentralized, community-enabling governance decisions to shape the future of HOPR, from technical parameters to the composition of the HOPR Association’s board of directors."
-}

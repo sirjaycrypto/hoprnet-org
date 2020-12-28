@@ -23,8 +23,8 @@ const Hero = forwardRef(({}, ref) => {
             className="background-video display-desktop"
             src="/assets/video/hero.mp4"
           ></video>
-      
-     
+
+
         <video
           autoPlay
           loop
@@ -44,8 +44,8 @@ const Hero = forwardRef(({}, ref) => {
 
         <div className="container">
           <div className="text-wrapper">
-            <h4>{t("homeHero:subtitle")}</h4>
-            <h1>{t("homeHero:title")}</h1>
+            <h4>{t("home:hero.subtitle")}</h4>
+            <h1>{t("home:hero.title")}</h1>
           </div>
         </div>
       </section>

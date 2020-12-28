@@ -6,18 +6,18 @@ const HomeTokenFeatures = forwardRef(({ setVisibleNow }, ref) => {
   const dataInfo = [
     {
       img: "/assets/icons/icon-pay.svg",
-      title: "homeTokFea:pay",
-      paragraph: "homeTokFea:payMain",
+      title: "home:features.pay",
+      paragraph: "home:features.payMain",
     },
     {
       img: "/assets/icons/icon-stake.svg",
-      title: "homeTokFea:stake",
-      paragraph: "homeTokFea:stakeMain",
+      title: "home:features.stake",
+      paragraph: "home:features.stakeMain",
     },
     {
       img: "/assets/icons/icon-vote.svg",
-      title: "homeTokFea:vote",
-      paragraph: "homeTokFea:voteMain",
+      title: "home:features.vote",
+      paragraph: "home:features.voteMain",
     },
   ];
 
@@ -30,7 +30,7 @@ const HomeTokenFeatures = forwardRef(({ setVisibleNow }, ref) => {
       >
         <div className="container">
           <div className="container-center-center">
-            <h2>{t("homeTokFea:title")}</h2>
+            <h2>{t("home:features.title")}</h2>
           </div>
           <div className="container-items">
             <div className="element-boxing">

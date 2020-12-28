@@ -16,7 +16,7 @@ export default function Index() {
         <HeroInternal>
           <motion.div variants={stagger}>
             <motion.h1 animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
-              {t("techHero:title")}
+              {t("tech:hero.title")}
             </motion.h1>
             <div>
               <motion.p
@@ -24,13 +24,13 @@ export default function Index() {
                 exit={{ opacity: 0 }}
                 transition={{ delay: 0.2 }}
               >
-                {t("techHero:paragraphA")}
+                {t("tech:hero.paragraphA")}
               </motion.p>
               <motion.p variants={fadeInUp} transition={{ delay: 0.4 }}>
-                {t("techHero:paragraphB")}
+                {t("tech:hero.paragraphB")}
               </motion.p>
               <motion.p variants={fadeInUp} transition={{ delay: 0.6 }}>
-                {t("techHero:paragraphC")}
+                {t("tech:hero.paragraphC")}
               </motion.p>
             </div>
           </motion.div>
@@ -38,24 +38,24 @@ export default function Index() {
         <section className="continue-hero-internal padding-section-aux invert-color ">
           <motion.div variants={stagger}>
             <motion.h2 variants={fadeInUp} transition={{ delay: 0.8 }}>
-              {t("techHero:title")}
+              {t("tech:hero.title")}
             </motion.h2>
 
             <div className="container-sm two-block">
               <div className="block-left">
                 <motion.p variants={fadeInUp} transition={{ delay: 0.9 }}>
-                  {t("techHero:paragraphA")}
+                  {t("tech:hero.paragraphA")}
                 </motion.p>
                 <motion.p variants={fadeInUp} transition={{ delay: 1 }}>
-                  {t("techHero:paragraphB")}
+                  {t("tech:hero.paragraphB")}
                 </motion.p>
               </div>
               <div className="block-right">
                 <motion.p variants={fadeInUp} transition={{ delay: 0.9 }}>
-                  {t("techHero:paragraphC")}
+                  {t("tech:hero.paragraphC")}
                 </motion.p>
                 <motion.p variants={fadeInUp} transition={{ delay: 1 }}>
-                  {t("techHero:paragraphD")}
+                  {t("tech:hero.paragraphD")}
                 </motion.p>
               </div>
             </div>
@@ -63,12 +63,12 @@ export default function Index() {
         </section>
         <section className="section-source padding-section-aux">
           <div>
-            <h2> {t("techOpen:title")} </h2>
+            <h2> {t("tech:open.title")} </h2>
           </div>
           <div className="container-sm">
-            <p>{t("techOpen:paragraphA")}</p>
-            <p>{t("techOpen:paragraphB")}</p>
-            <p>{t("techOpen:paragraphC")}</p>
+            <p>{t("tech:open.paragraphA")}</p>
+            <p>{t("tech:open.paragraphB")}</p>
+            <p>{t("tech:open.paragraphC")}</p>
             <ul className="external-links">
               <li>
                 <a
@@ -79,7 +79,7 @@ export default function Index() {
                 >
                   Libp2p
                 </a>{" "}
-                {t("techOpen:paragraphD")}{" "}
+                {t("tech:open.paragraphD")}{" "}
                 <a
                   className="underline"
                   href="https://github.com/libp2p/js-peer-id/pull/115"
@@ -139,7 +139,7 @@ export default function Index() {
                 >
                   {t("common:multiformats")}
                 </a>{" "}
-                {t("techOpen:paragraphF")}{" "}
+                {t("tech:open.paragraphF")}{" "}
                 <a
                   className="underline"
                   href="https://github.com/multiformats/js-multiaddr/pull/112"
@@ -159,7 +159,7 @@ export default function Index() {
                 >
                   {t("common:pullPrefixed")}
                 </a>{" "}
-                {t("techOpen:paragraphF")}{" "}
+                {t("tech:open.paragraphF")}{" "}
                 <a
                   className="underline"
                   href="https://github.com/dignifiedquire/pull-length-prefixed/pull/20"
@@ -179,14 +179,14 @@ export default function Index() {
                 >
                   {t("common:definitelyTyped")}
                 </a>{" "}
-                {t("techOpen:paragraphG")}{" "}
+                {t("tech:open.paragraphG")}{" "}
                 <a
                   className="underline"
                   href="https://github.com/DefinitelyTyped/DefinitelyTyped/pull/42559"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {t("techOpen:paragraphJ")}
+                  {t("tech:open.paragraphJ")}
                 </a>
                 .
               </li>
@@ -196,11 +196,11 @@ export default function Index() {
         <section className="section-documentation padding-section-aux invert-color ">
           <motion.div variants={stagger}>
             <motion.h2 variants={fadeInUp} transition={{ delay: 0.8 }}>
-              {t("techDoc:title")}
+              {t("tech:doc.title")}
             </motion.h2>
             <div className="container-sm">
-              <p>{t("techDoc:paragraphA")}</p>
-              <p>{t("techDoc:paragraphB")}</p>
+              <p>{t("tech:doc.paragraphA")}</p>
+              <p>{t("tech:doc.paragraphB")}</p>
               <div className="btn-align">
                 <a
                   href="https://docs.hoprnet.org/home/"
@@ -218,10 +218,10 @@ export default function Index() {
         </section>
         <section className="section-bounties padding-section-aux">
           <div className="container-sm">
-            <h2> {t("techWork:title")}</h2>
+            <h2> {t("tech:work.title")}</h2>
             <div>
               <p>
-                {t("techWork:paragraphA")}{" "}
+                {t("tech:work.paragraphA")}{" "}
                 <a
                   className="underline"
                   href="https://gitcoin.co/hoprnet"
@@ -230,7 +230,7 @@ export default function Index() {
                 >
                   {t("common:gitcoin")}
                 </a>{" "}
-                - {t("techWork:paragraphB")}
+                - {t("tech:work.paragraphB")}
               </p>
             </div>
           </div>
@@ -244,15 +244,7 @@ export async function getStaticProps({ locale }) {
   return {
     props: {
       _ns: await loadNamespaces(
-        [
-          "common",
-          "menu",
-          "techHero",
-          "techSecundSec",
-          "techOpen",
-          "techDoc",
-          "techWork",
-        ],
+        [ "common", "menu", "tech" ],
         locale
       ),
     },

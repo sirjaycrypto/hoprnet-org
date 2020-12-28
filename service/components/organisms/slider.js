@@ -6,16 +6,16 @@ export default function Slide() {
   const { t } = useTranslation();
   const dataInfo = [
     {
-      title: "homeSlide:slideA",
-      paragraph: "homeSlide:slideAMain",
+      title: "home:slide.slideA",
+      paragraph: "home:slide.slideAMain",
     },
     {
-      title: "homeSlide:slideB",
-      paragraph: "homeSlide:slideBMain",
+      title: "home:slide.slideB",
+      paragraph: "home:slide.slideBMain",
     },
     {
-      title: "homeSlide:slideC",
-      paragraph: "homeSlide:slideCMain",
+      title: "home:slide.slideC",
+      paragraph: "home:slide.slideCMain",
     },
   ];
 

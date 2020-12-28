@@ -39,7 +39,7 @@ const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
         className="section-backed invert-color "
       >
         <div className="container">
-          <h2>{t("homeBack:title")}</h2>
+          <h2>{t("home:back.title")}</h2>
           <div className="item-back-container">
             {data.map((e, index) => {
               const { img, url, title } = e;

@@ -80,11 +80,11 @@ export default function Index() {
         <HeroInternal>
           <motion.div variants={staggerHaft}>
             <motion.h1 animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
-              {t("blogHero:title")}
+              {t("blog:hero.title")}
             </motion.h1>
             <motion.div>
               <motion.h3 variants={fadeInDown} transition={{ delay: 0.8 }}>
-                {t("blogHero:paragraphA")}
+                {t("blog:hero.paragraphA")}
               </motion.h3>
               <div>
                 <ul className="social-list-blog">
@@ -114,7 +114,7 @@ export default function Index() {
         <section className="continue-hero-internal padding-section-aux invert-color ">
           <motion.div variants={stagger} className="container">
             <motion.h2 variants={fadeInUp} transition={{ delay: 0.8 }}>
-            {t("blogSecundSec:title")}
+            {t("blog:second.title")}
             </motion.h2>
             <motion.div variants={stagger} className="container-block">
               <div className="block-video">
@@ -134,7 +134,7 @@ export default function Index() {
                 ))}
               </div>
               <div className="see-my-youtube">
-                .. {t("blogSecundSec:subTitle")}
+                .. {t("blog:second.subTitle")}
                 <motion.a
                   animate={{ opacity: 1 }}
                   initial={{ opacity: 0 }}
@@ -143,7 +143,7 @@ export default function Index() {
                   rel="noopener noreferrer"
                   className="text-color-high underline"
                 >
-                  {t("blogSecundSec:youtubeChannel")}
+                  {t("blog:second.youtubeChannel")}
                 </motion.a>
                 .
               </div>
@@ -167,7 +167,7 @@ export async function getStaticProps({ locale }) {
   return {
     props: {
       _ns: await loadNamespaces(
-        ["common", "menu", "blogHero", "blogSecundSec"],
+        ["common", "menu", "blog"],
         locale
       ),
     },

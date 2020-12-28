@@ -1,9 +1,0 @@
-{
-    "title":"Token features",
-    "pay":"Pay",
-    "payMain":"Spend HOPR tokens to send data through the HOPR network with complete data and metadata privacy.",
-    "stake":"Stake",
-    "stakeMain":"Lock HOPR tokens in your node to relay user data and cover traffic. The more you stake, the more data you can relay, and the more you can earn.",
-    "vote":"Vote",
-    "voteMain":"Participate in decentralized, community-enabling governance decisions to shape the future of HOPR."
-}

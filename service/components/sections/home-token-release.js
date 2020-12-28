@@ -29,7 +29,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
     tooltips: {
       mode: "x-axis",
       bodyFontFamily: "Source Code Pro",
-   
+
     },
     legend: {
       display: true,
@@ -245,23 +245,23 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
       >
         <div className="container">
           <div>
-            <h2>{t("homeToken:title")}</h2>
-            <p>{t("homeToken:about")}</p>
+            <h2>{t("home:token.title")}</h2>
+            <p>{t("home:token.about")}</p>
           </div>
           <div className="table-info">
             <div className="container-table">
               <div className="title">
-                <h4>{t("homeToken:subTitle")}</h4>
+                <h4>{t("home:token.subTitle")}</h4>
               </div>
               <div className="list-table">
                 <ul>
-                  <li>{t("homeToken:listItemA")}</li>
-                  <li>{t("homeToken:listItemB")}</li>
-                  <li>{t("homeToken:listItemC")}</li>
-                  <li>{t("homeToken:listItemD")}</li>
-                  <li>{t("homeToken:listItemE")}</li>
-                  <li>{t("homeToken:listItemF")}</li>
-                  <li>{t("homeToken:listItemG")}</li>
+                  <li>{t("home:token.listItemA")}</li>
+                  <li>{t("home:token.listItemB")}</li>
+                  <li>{t("home:token.listItemC")}</li>
+                  <li>{t("home:token.listItemD")}</li>
+                  <li>{t("home:token.listItemE")}</li>
+                  <li>{t("home:token.listItemF")}</li>
+                  <li>{t("home:token.listItemG")}</li>
                   <li>
                     <a
                       href="https://coinmarketcap.com/currencies/hopr/"
@@ -276,15 +276,15 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
             </div>
           </div>
           <div>
-            <h3>{t("homeToken:secondSubTitle")} (%)</h3>
-            <p>{t("homeToken:secondSubAbout")}</p>
+            <h3>{t("home:token.secondSubTitle")} (%)</h3>
+            <p>{t("home:token.secondSubAbout")}</p>
             <div>
               <Pie data={data} width={100} height={420} options={options} />
             </div>
             <p></p>
           </div>
           <div>
-            <h3>{t("homeToken:thirdSubTitle")} (%)</h3>
+            <h3>{t("home:token.thirdSubTitle")} (%)</h3>
             <div className="container-chart">
               <div className="help-scroll">
                 <Line data={dataTokenSupply} options={dataOption} />

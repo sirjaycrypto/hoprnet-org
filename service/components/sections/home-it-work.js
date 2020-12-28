@@ -6,20 +6,20 @@ const HomeHomeItWork = forwardRef(({ setVisibleNow }, ref) => {
   const dataInfo = [
     {
       img: "/assets/images/01_hopr_Private_Animation.gif",
-      title: "homeHowWor:private",
-      paragraph: "homeHowWor:privateMain",
+      title: "home:work.private",
+      paragraph: "home:work.privateMain",
       mirrorBox: false,
     },
     {
       img: "/assets/images/02_hopr_Profitable_Animation.gif",
-      title: "homeHowWor:profitable",
-      paragraph: "homeHowWor:profitableMain",
+      title: "home:work.profitable",
+      paragraph: "home:work.profitableMain",
       mirrorBox: true,
     },
     {
       img: "/assets/images/hopr_Performant_Animation.gif",
-      title: "homeHowWor:performant",
-      paragraph: "homeHowWor:performantMain",
+      title: "home:work.performant",
+      paragraph: "home:work.performantMain",
       mirrorBox: false,
     },
   ];
@@ -33,7 +33,7 @@ const HomeHomeItWork = forwardRef(({ setVisibleNow }, ref) => {
       >
         <div className="container">
           <div className="container-center-center">
-            <h2>{t("homeHowWor:title")}</h2>
+            <h2>{t("home:work.title")}</h2>
           </div>
           {/*  */}
           <div className="element-boxing">

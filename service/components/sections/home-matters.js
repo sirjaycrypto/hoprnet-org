@@ -126,11 +126,11 @@ const HomeMatter = forwardRef(({ setVisibleNow }, ref) => {
     >
       <div className="container">
         <div className="container-center-center">
-          <h2>{t('homeWhyMatt:title')}</h2>
+          <h2>{t('home:why.title')}</h2>
         </div>
         <div className="flex-line-row">
           <div className="aux-padding-box-read">
-            <p>"{t('homeWhyMatt:mainText')}"</p>
+            <p>"{t('home:why.mainText')}"</p>
           </div>
           <div>
             <div className="container-char">
@@ -141,7 +141,7 @@ const HomeMatter = forwardRef(({ setVisibleNow }, ref) => {
               />
             </div>
             <div className="center-help">
-              <p className="link-out">{t('homeWhyMatt:labelDate')}</p>
+              <p className="link-out">{t('home:why.labelDate')}</p>
             </div>
           </div>
         </div>
