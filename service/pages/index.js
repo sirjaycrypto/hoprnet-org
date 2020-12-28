@@ -21,8 +21,6 @@ import { css, keyframes } from "@emotion/css";
 
 export default function Home() {
   const [fontSize, setFontSize] = useState(34);
-  const [scrollTopBanner, setScrollTopBanner] = useState(null);
-  //
   const [visibleNow, setVisibleNow] = useState("");
   const [videoAutoPLay, setVideoAutoPlay] = useState(false);
   const [showBtnBanner, setShowBtnBanner] = useState();
@@ -33,7 +31,7 @@ export default function Home() {
   const [isVisibleHow, currentElementAlt] = useVisibility(100);
   const [isVisibleTokenFea, currentElementTokenFea] = useVisibility(100);
   const [isVisibleNode, currentElementNode] = useVisibility(100);
-  const [isVisibleTokenRele, currentElementTokenRele] = useVisibility(100);
+  const [isVisibleTokenRel, currentElementTokenRel] = useVisibility(100);
   const [isVisibleBack, currentElementVisibleBack] = useVisibility(100);
   const [isVisibleBanner, currentElementVisibleBanner] = useVisibility(100);
   const [isVisibleTokenFuture, currentElementTokenFuture] = useVisibility(100);
@@ -65,18 +63,20 @@ export default function Home() {
     if (isVisibleHow) setVisibleNow(currentElementAlt.current.id);
     if (isVisibleTokenFea) setVisibleNow(currentElementTokenFea.current.id);
     if (isVisibleNode) setVisibleNow(currentElementNode.current.id);
-    if (isVisibleTokenRele) setVisibleNow(currentElementTokenRele.current.id);
+    if (isVisibleTokenRel) setVisibleNow(currentElementTokenRel.current.id);
     if (isVisibleBack) setVisibleNow(currentElementVisibleBack.current.id);
-    if (isVisibleTokenFuture)
-      setVisibleNow(currentElementTokenFuture.current.id);
+    if (isVisibleTokenFuture) setVisibleNow(currentElementTokenFuture.current.id);
     if (isVisibleFooter) setVisibleNow(currentElementTokenFooter.current.id);
+
     if (window.pageYOffset === 0) {
       setFontSize(34);
     } else {
       setFontSize(14);
-      if (  visibleNow === "BANNER" ||
-      visibleNow === "FURTHER-READING" ||
-      visibleNow === "FOOTER") {
+      if (
+        visibleNow === "BANNER" ||
+        visibleNow === "FURTHER-READING" ||
+        visibleNow === "FOOTER"
+      ) {
         setFontSize(34);
       }
     }
@@ -88,7 +88,7 @@ export default function Home() {
     isVisibleVideo,
     isVisibleTokenFea,
     isVisibleNode,
-    isVisibleTokenRele,
+    isVisibleTokenRel,
     isVisibleBack,
     isVisibleTokenFuture,
     isVisibleBanner,
@@ -99,7 +99,7 @@ export default function Home() {
     currentElementAlt,
     currentElementTokenFea,
     currentElementNode,
-    currentElementTokenRele,
+    currentElementTokenRel,
     currentElementVisibleBack,
     currentElementTokenFuture,
     currentElementTokenFooter,
@@ -108,7 +108,6 @@ export default function Home() {
   const animate = keyframes`
   0% {opacity:0;}
   100% {opacity:1;}
-
 `;
 
   const clickBtn = () => {
@@ -151,7 +150,7 @@ export default function Home() {
       <HomeHardware setVisibleNow={setVisibleNow} ref={currentElementNode} />
       <HomeTokenReleas
         setVisibleNow={setVisibleNow}
-        ref={currentElementTokenRele}
+        ref={currentElementTokenRel}
       />
       <HomeBacked
         setVisibleNow={setVisibleNow}
@@ -211,10 +210,7 @@ export default function Home() {
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      _ns: await loadNamespaces(
-        [ "common", "menu", "home" ],
-        locale
-      ),
+      _ns: await loadNamespaces(["common", "menu", "home"], locale),
     },
   };
 }
