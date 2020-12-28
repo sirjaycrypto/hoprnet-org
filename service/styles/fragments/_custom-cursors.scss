@@ -1,31 +1,31 @@
 @function getCursorUri($color, $radius) {
-
   @return "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='32' width='32'%3E%3Ccircle cx='16' cy='16' r='#{$radius}' fill='#{$color}' /%3E%3C/svg%3E%0A";
 }
 
 .cursor:not(.invert-color) {
   transition: all 350ms ease;
-  cursor: url(getCursorUri('%23ffffa0', 16)) 16 16, auto !important;
+  cursor: url(getCursorUri("%23ffffa0", 16)) 16 16, auto !important;
 }
 
 .cursor .invert-color {
   transition: all 350ms ease;
-  cursor: url(getCursorUri('%23000050', 16)) 16 16, auto !important;
+  cursor: url(getCursorUri("%23000050", 16)) 16 16, auto !important;
 }
 
 // overwrite various cursors
 
-a,.type-btn, .link-special {
+a,
+.type-btn,
+.link-special {
   transition: all 350ms ease;
-  cursor: url(getCursorUri('%230000b4', 16)) 16 16, auto !important;
+  cursor: url(getCursorUri("%230000b4", 16)) 16 16, auto !important;
 }
 
 .accordion-header {
   transition: all 350ms ease;
-  cursor: url(getCursorUri('%230000b4', 16)) 16 16, auto !important;
+  cursor: url(getCursorUri("%230000b4", 16)) 16 16, auto !important;
 }
 
-
-canvas{
-  cursor: pointer;  
+canvas {
+  cursor: pointer;
 }

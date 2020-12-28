@@ -6,8 +6,8 @@
     width: 100%;
     @include responsive(tablet) {
       flex-direction: column;
-      a{
-          margin-bottom: 1rem;
+      a {
+        margin-bottom: 1rem;
       }
     }
   }

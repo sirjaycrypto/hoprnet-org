@@ -66,23 +66,16 @@
       animation: animateBtn ease 1400ms forwards;
     }
   }
-
 }
-
-
 
 .change-mode {
   bottom: auto;
 
   animation: changeMode ease 300ms forwards;
   @include responsive(tablet) {
-    position: absolute!important;
+    position: absolute !important;
   }
 }
-
-
-
-
 
 @keyframes changeMode {
   0% {

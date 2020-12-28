@@ -3,9 +3,11 @@ body {
   font-family: "Source Code Pro", monospace;
   transition: all 350ms ease;
 }
+
 :root {
   font-size: 16px;
 }
+
 section {
   overflow: hidden;
 }
@@ -94,7 +96,6 @@ section {
     &:first-child {
       padding: 0;
     }
-   
   }
   @include responsive(phone) {
     margin-bottom: 0;
@@ -146,7 +147,6 @@ section {
   @include responsive(tablet) {
     margin-bottom: 18px;
   }
-
 }
 ///
 .container-chart {
@@ -169,7 +169,7 @@ section {
   margin: auto;
   @include responsive(tablet) {
     width: 90vw;
-    .link-out{
+    .link-out {
       margin-bottom: 18px;
     }
   }
@@ -180,5 +180,3 @@ h2 {
   word-break: break-word;
   text-transform: uppercase;
 }
-
-

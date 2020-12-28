@@ -56,7 +56,7 @@
     @include responsive(phone) {
       font-size: 50px;
       line-height: 64px;
- 
+
       letter-spacing: 0.416667px;
     }
   }
@@ -77,9 +77,9 @@
       top: calc(50% - 84px / 2 - 229px);
     }
     @include responsive(phone) {
-      font-size: 20px!important;
-      line-height: 32px!important;
-      top: calc(55% - 0px / 2 - 229px)!important;
+      font-size: 20px !important;
+      line-height: 32px !important;
+      top: calc(55% - 0px / 2 - 229px) !important;
     }
   }
 }
@@ -120,7 +120,6 @@
   @include responsive(tablet) {
     display: none;
   }
-  
 }
 
 .display-tablet {
@@ -128,14 +127,11 @@
   @include responsive(tablet) {
     display: flex;
   }
- 
 }
-
 
 .display-phone {
   display: none;
   @include responsive(phone) {
     display: flex;
   }
- 
 }
