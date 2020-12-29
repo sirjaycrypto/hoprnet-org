@@ -1,6 +1,7 @@
-import React, { forwardRef, useState, createRef, useEffect } from 'react';
-import useTranslation from 'next-translate/useTranslation';
-import { Line } from 'react-chartjs-2';
+import React, { forwardRef, useState, createRef, useEffect } from "react";
+import useTranslation from "next-translate/useTranslation";
+import { Line } from "react-chartjs-2";
+
 const PARTS = 100;
 const PERCENT_BRANCH = 0.68;
 const HomeMatter = forwardRef(({ setVisibleNow }, ref) => {
@@ -9,20 +10,20 @@ const HomeMatter = forwardRef(({ setVisibleNow }, ref) => {
   const chartRef = createRef();
   const data = {
     labels: [
-      '2009',
-      '2010',
-      '2011',
-      '2012',
-      '2013',
-      '2014',
-      '2015',
-      '2016',
-      '2017',
-      '2018',
-      '2019',
-      '2020',
-      '2021',
-      '2022',
+      "2009",
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022",
     ],
   };
 
@@ -33,7 +34,7 @@ const HomeMatter = forwardRef(({ setVisibleNow }, ref) => {
       spanGaps: false,
     },
     responsive: true,
-    borderCapStyle: 'round',
+    borderCapStyle: "round",
     onResize: (props) => {
       setChartSizes(props);
     },
@@ -54,7 +55,7 @@ const HomeMatter = forwardRef(({ setVisibleNow }, ref) => {
             min: 0.0,
             stepSize: 1000000,
             callback: function (value, index, values) {
-              return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+              return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             },
           },
         },
@@ -95,8 +96,8 @@ const HomeMatter = forwardRef(({ setVisibleNow }, ref) => {
           ],
           borderDash: [],
           fill: false,
-          backgroundColor: 'rgba(0,0,0,0)',
-          borderColor: '#648CFA',
+          backgroundColor: "rgba(0,0,0,0)",
+          borderColor: "#648CFA",
         },
       ];
     aResult[0].borderDash.push(width * PERCENT_BRANCH);
@@ -114,10 +115,11 @@ const HomeMatter = forwardRef(({ setVisibleNow }, ref) => {
   }
   useEffect(() => {
     _handleResize();
-    window.addEventListener('resize', _handleResize);
+    window.addEventListener("resize", _handleResize);
 
-    return () => window.removeEventListener('resize', _handleResize);
+    return () => window.removeEventListener("resize", _handleResize);
   }, [_handleResize]);
+
   return (
     <section
       ref={ref}
@@ -126,11 +128,11 @@ const HomeMatter = forwardRef(({ setVisibleNow }, ref) => {
     >
       <div className="container">
         <div className="container-center-center">
-          <h2>{t('home:why.title')}</h2>
+          <h2>{t("home:why.title")}</h2>
         </div>
         <div className="flex-line-row">
           <div className="aux-padding-box-read">
-            <p>"{t('home:why.mainText')}"</p>
+            <p>"{t("home:why.mainText")}"</p>
           </div>
           <div>
             <div className="container-char">
@@ -141,7 +143,7 @@ const HomeMatter = forwardRef(({ setVisibleNow }, ref) => {
               />
             </div>
             <div className="center-help">
-              <p className="link-out">{t('home:why.labelDate')}</p>
+              <p className="link-out">{t("home:why.labelDate")}</p>
             </div>
           </div>
         </div>

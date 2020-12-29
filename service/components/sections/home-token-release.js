@@ -7,6 +7,7 @@ import dataSupply from "../../public/assets/json/dataSupply.json";
 function intlFormat(num) {
   return new Intl.NumberFormat().format(Math.round(num * 10) / 10);
 }
+
 function makeFriendly(num) {
   if (num >= 1000000) return intlFormat(num / 1000000) + "M";
   if (num >= 1000) return intlFormat(num / 1000) + "k";
@@ -29,7 +30,6 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
     tooltips: {
       mode: "x-axis",
       bodyFontFamily: "Source Code Pro",
-
     },
     legend: {
       display: true,
@@ -49,17 +49,16 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
 
   const data = {
     labels: [
-      "Public Sale",
-      "Cover Traffic",
-      "Bounties",
-      "Early Token Buyers",
-      "Team & Advisors",
-      "Treasury",
+      t("home:graphic.public"),
+      t("home:graphic.cover"),
+      t("home:graphic.bounties"),
+      t("home:graphic.early"),
+      t("home:graphic.team"),
+      t("home:graphic.treasury"),
     ],
-
     datasets: [
       {
-        label: "# of Votes",
+        label: t("home:graphic.votes"),
         data: [75000000, 250000000, 56875000, 180000000, 200000000, 238125000],
         backgroundColor: [
           "#0B005D",
@@ -69,7 +68,6 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
           "#F8FE00",
           "#FDFFA2",
         ],
-
         borderWidth: 0,
       },
     ],
@@ -77,25 +75,24 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
 
   const dataDate = dataSupply.map((item) => item.Date);
   const dataTreasury = dataSupply.map((item) => item.Treasury);
-  const dataTeamNAdvisors = dataSupply.map((item) => item["Team & Advisors"]);
+  const dataTeamNAdvisors = dataSupply.map((item) => item[t("home:graphic.team")]);
   const dataEarlyTokenBuyers = dataSupply.map(
-    (item) => item["Early Token Buyers"]
+    (item) => item[t("home:graphic.early")]
   );
   const dataBounties = dataSupply.map((item) => item.Bounties);
-  const dataCoverTraffic = dataSupply.map((item) => item["Cover Traffic"]);
-  const dataPublicSale = dataSupply.map((item) => item["Public Sale"]);
+  const dataCoverTraffic = dataSupply.map((item) => item[t("home:graphic.cover")]);
+  const dataPublicSale = dataSupply.map((item) => item[t("home:graphic.public")]);
 
   function cleanData(elements) {
     return elements.map(function (elem) {
-      let aux = elem.split("").join("");
-      aux = aux.split(",").join("");
-      return parseFloat(aux);
+      return parseFloat(
+        elem.split(",").join("").trim()
+      );
     });
   }
 
   const dataOption = {
     maintainAspectRatio: !1,
-
     elements: {
       point: {
         radius: 0,
@@ -166,18 +163,17 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
 
   const dataTokenSupply = {
     legend: [
-      "Public Sale",
-      "Cover Traffic",
-      "Bounties",
-      "Early Token Buyers",
-      "Team & Advisors",
-      "Treasury",
+      t("home:graphic.public"),
+      t("home:graphic.cover"),
+      t("home:graphic.bounties"),
+      t("home:graphic.early"),
+      t("home:graphic.team"),
+      t("home:graphic.treasury"),
     ],
-
     labels: dataDate,
     datasets: [
       {
-        label: "Public Sale",
+        label: t("home:graphic.public"),
         data: cleanData(dataPublicSale),
         backgroundColor: ["#020250"],
         pointBackgroundColor: "#020250",
@@ -185,9 +181,8 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
         pointBorderWidth: 0,
         lineTension: 0,
       },
-
       {
-        label: "Cover Traffic",
+        label: t("home:graphic.cover"),
         data: cleanData(dataCoverTraffic),
         backgroundColor: ["#0E01B4"],
         pointBackgroundColor: "#0E01B4",
@@ -195,9 +190,8 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
         pointBorderWidth: 0,
         lineTension: 0,
       },
-
       {
-        label: "Bounties",
+        label: t("home:graphic.bounties"),
         data: cleanData(dataBounties),
         backgroundColor: ["#7E7E1E"],
         pointBackgroundColor: "#7E7E1E",
@@ -205,9 +199,8 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
         pointBorderWidth: 0,
         lineTension: 0,
       },
-
       {
-        label: "Early Token Buyers",
+        label: t("home:graphic.early"),
         data: cleanData(dataEarlyTokenBuyers),
         backgroundColor: ["#BCBC2A"],
         pointBackgroundColor: "#BCBC2A",
@@ -216,7 +209,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
         lineTension: 0,
       },
       {
-        label: "Team & Advisors",
+        label: t("home:graphic.team"),
         data: cleanData(dataTeamNAdvisors),
         backgroundColor: ["#FBFB3B"],
         pointBackgroundColor: "#FBFB3B",
@@ -225,7 +218,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
         lineTension: 0,
       },
       {
-        label: "Treasury",
+        label: t("home:graphic.treasury"),
         data: cleanData(dataTreasury),
         backgroundColor: ["#FDFFA2"],
         pointBackgroundColor: "#FDFFA2",

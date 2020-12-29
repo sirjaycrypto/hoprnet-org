@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Slider from "react-slick";
 
 import useTranslation from "next-translate/useTranslation";
@@ -21,14 +21,14 @@ export default function Slide() {
 
   var settings = {
     arrows: false,
-    autoplay:false,
+    autoplay: false,
     dots: true,
     lazyLoad: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    initialSlide: 2
+    initialSlide: 2,
   };
 
   return (

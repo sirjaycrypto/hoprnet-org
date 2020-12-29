@@ -41,7 +41,6 @@ export const stagger = {
   },
 };
 
-
 export const staggerHaft = {
   animate: {
     transition: {

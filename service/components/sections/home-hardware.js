@@ -3,6 +3,7 @@ import useTranslation from "next-translate/useTranslation";
 
 const HomeHardware = forwardRef(({ setVisibleNow }, ref) => {
   const { t } = useTranslation();
+
   return (
     <>
       <section
@@ -11,7 +12,7 @@ const HomeHardware = forwardRef(({ setVisibleNow }, ref) => {
         className="section-hopr-github padding-section-aux"
       >
         <div className="container">
-        <div className="container-center-center">
+          <div className="container-center-center">
             <h2>{t("home:hardware.title")}</h2>
           </div>
           <div className="flex-line-row">
@@ -20,7 +21,7 @@ const HomeHardware = forwardRef(({ setVisibleNow }, ref) => {
               <p>{t("home:hardware.about")}</p>
             </div>
             <div>
-            <h3>{t("home:hardware.subtitleB")}</h3>
+              <h3>{t("home:hardware.subtitleB")}</h3>
               <img
                 src="/assets/images/banner-hardware.jpg"
                 alt={t("home:hardware.title")}

@@ -65,7 +65,6 @@ const HomeFurther = forwardRef(({ setVisibleNow }, ref) => {
             })}
           </div>
           <div>
-            {/* className="list-top" */}
             <div className="row">
               <div className="item">
                 <div className="icon">
@@ -100,7 +99,6 @@ const HomeFurther = forwardRef(({ setVisibleNow }, ref) => {
                 <p>{t("home:further.infoTopTitleBAbout")}</p>
               </div>
             </div>
-            {/*  */}
           </div>
 
           <div className="list-down">
