@@ -38,24 +38,24 @@ export default function Index() {
         <section className="continue-hero-internal padding-section-aux invert-color ">
           <motion.div variants={stagger}>
             <motion.h2 variants={fadeInUp} transition={{ delay: 0.8 }}>
-              {t("tech:hero.title")}
+              {t("tech:second.title")}
             </motion.h2>
 
             <div className="container-sm two-block">
               <div className="block-left">
                 <motion.p variants={fadeInUp} transition={{ delay: 0.9 }}>
-                  {t("tech:hero.paragraphA")}
+                  {t("tech:second.paragraphA")}
                 </motion.p>
                 <motion.p variants={fadeInUp} transition={{ delay: 1 }}>
-                  {t("tech:hero.paragraphB")}
+                  {t("tech:second.paragraphB")}
                 </motion.p>
               </div>
               <div className="block-right">
                 <motion.p variants={fadeInUp} transition={{ delay: 0.9 }}>
-                  {t("tech:hero.paragraphC")}
+                  {t("tech:second.paragraphC")}
                 </motion.p>
                 <motion.p variants={fadeInUp} transition={{ delay: 1 }}>
-                  {t("tech:hero.paragraphD")}
+                  {t("tech:second.paragraphD")}
                 </motion.p>
               </div>
             </div>
