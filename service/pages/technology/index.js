@@ -244,7 +244,7 @@ export async function getStaticProps({ locale }) {
   return {
     props: {
       _ns: await loadNamespaces(
-        [ "common", "menu", "tech" ],
+        ["common", "menu", "tech"],
         locale
       ),
     },
