@@ -3,10 +3,7 @@ import { motion } from "framer-motion";
 
 import Layout from "../../components/organisms/layout";
 import HeroInternal from "../../components/organisms/hero-internal";
-import {
-  stagger,
-  fadeInUp,
-} from "../../util/motionConfig";
+import { stagger, fadeInUp } from "../../util/motionConfig";
 
 export default function Index() {
   return (
@@ -42,11 +39,6 @@ export default function Index() {
             className="banner-node"
             style={{
               backgroundImage: "url(assets/images/banner-ardware.jpg)",
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-              widows: "100%",
-              height: "550px",
             }}
           ></div>
         </section>

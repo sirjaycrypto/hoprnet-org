@@ -1,3 +1,33 @@
+.btn-banner {
+  background: linear-gradient(90deg, #0000db 0%, #292941 100%);
+  transition: all 600ms ease-in-out;
+  padding: 0em 1.5em;
+  border-radius: 100px;
+  width: fit-content;
+  &:hover {
+    background: linear-gradient(90deg, #0000db 100%, #292941 100%);
+    animation: hoverAnimate ease 1s forwards;
+  }
+
+  span{
+    transition: font-size 300ms ease-in-out;
+    font-weight: 600;
+    line-height: 2em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.2975px;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+
+    @media screen and (max-width: 600px) {
+      font-size: 14px;
+    }
+  }
+
+}
+
 .banner-CTA {
   width: 100%;
   height: 50vh;
@@ -83,5 +113,14 @@
   }
   100% {
     position: absolute;
+  }
+}
+
+@keyframes hoverAnimate {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

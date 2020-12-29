@@ -65,7 +65,8 @@ export default function Home() {
     if (isVisibleNode) setVisibleNow(currentElementNode.current.id);
     if (isVisibleTokenRel) setVisibleNow(currentElementTokenRel.current.id);
     if (isVisibleBack) setVisibleNow(currentElementVisibleBack.current.id);
-    if (isVisibleTokenFuture) setVisibleNow(currentElementTokenFuture.current.id);
+    if (isVisibleTokenFuture)
+      setVisibleNow(currentElementTokenFuture.current.id);
     if (isVisibleFooter) setVisibleNow(currentElementTokenFooter.current.id);
 
     if (window.pageYOffset === 0) {
@@ -104,11 +105,6 @@ export default function Home() {
     currentElementTokenFuture,
     currentElementTokenFooter,
   ]);
-
-  const animate = keyframes`
-  0% {opacity:0;}
-  100% {opacity:1;}
-`;
 
   const clickBtn = () => {
     console.log("Click");
@@ -162,36 +158,10 @@ export default function Home() {
         ref={currentElementVisibleBanner}
       >
         <div className={"btn-follow " + (btnBanner ? "change-mode" : "")}>
-          <div
-            onClick={() => clickBtn()}
-            className={css`
-              background: linear-gradient(90deg, #0000db 0%, #292941 100%);
-              transition: all 600ms ease-in-out;
-              padding: 0em 1.5em;
-              border-radius: 100px;
-              width: fit-content;
-              &:hover {
-                animation: ${animate} ease 1s forwards;
-              }
-            `}
-          >
+          <div onClick={() => clickBtn()} className="btn-banner ">
             <span
               className={css`
                 font-size: ${fontSize}px;
-                transition: font-size 300ms ease-in-out;
-                font-weight: 600;
-                line-height: 2em;
-                display: flex;
-                align-items: center;
-                text-align: center;
-                letter-spacing: 0.2975px;
-                color: #ffffff;
-                margin: 0;
-                padding: 0;
-
-                @media screen and (max-width: 600px) {
-                  font-size: 14px;
-                }
               `}
             >
               {t("common:btn-token")}
