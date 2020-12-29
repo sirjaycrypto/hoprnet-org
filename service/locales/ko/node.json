@@ -1,0 +1,23 @@
+{
+  "hero": {
+    "title": "Guardians Of Privacy",
+    "paragraphA": "To the HOPR Node Runners, we dedicate this page to you. Online privacy, personal data control, and Ethereum blockchain integrity all owe you a debt of gratitude. Although, you’ll get more than just gratitude, as you’ll earn upcoming HOPR token incentives (coming Q4!) from our plug-and-earn mixnet node PC.",
+    "paragraphB": "HOPR makes no profit from the first-of-its-kind custom node PC. Instead, we thank you for helping ensure a decentralized Web3 future, where everyone has control of their own data."
+  },
+  "second": {
+    "leftLink": "GitBook instructions",
+    "leftParagraphA": "If you want to run a node on your own hardware without the HOPR Node PC, that’s perfectly acceptable and possible as well! Check out our ",
+    "leftParagraphB": " for details on how to install.",
+    "leftTitle": "Run Your Own Metal",
+    "rightTitle": "Your HOPR Hardware Node",
+    "rightLink": "GitBook instructions",
+    "rightParagraphA": "If you want to run a node on your own hardware without the HOPR Node PC, that’s perfectly acceptable and possible as well! Check out our ",
+    "rightParagraphB": " for details on how to install."
+  },
+  "specifications": {
+    "link": "AVADO i2",
+    "paragraphA": "The HOPR Node PC is a pre-configured version of the ",
+    "paragraphB": ", a plug-and-play blockchain-ready node. It has high specifications (8GB RAM, Intel Pentium 4415) with upgraded SSD storage (1TB), making it more than powerful enough to install and run an Ethereum full node. The HOPR Node PC contains the first release of HOPR Alpha, a layer-0 privacy software able to connect to the HOPR Network. The HOPR Node PC is ready to use: just connect it to your router! You can also use it to run other kinds of nodes, making it a viable IPFS, Filecoin, or ETH2 node.",
+    "title": "Specifications of HOPR Node PC"
+  }
+}

@@ -29,7 +29,18 @@
     "subtitleB":"Your HOPR Hardware Node",
     "title": "HOPR-NODE ON GITHUB"
   },
+  "graphic": {
+    "bounties": "Bounties",
+    "cover": "Cover Traffic",
+    "early": "Early Token Buyers",
+    "public": "Public Sale",
+    "team": "Team & Advisors",
+    "treasury": "Treasury",
+    "votes": "# of Votes"
+  },
   "hero": {
+    "endSale": "END OF SALE ",
+    "location": "Jungfraujoch, Switzerland, 3454 masl",
     "subtitle": "The Token",
     "title": "Changing Data Privacy for Good"
   },
