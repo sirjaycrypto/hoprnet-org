@@ -52,25 +52,23 @@ export default function Index() {
                 <div className="help-icon-node">
                   <img
                     src="assets/images/icons/github.svg"
-                    alt="Run Your Own Metal"
+                    alt=""
                   />
                 </div>
                 <motion.h3 animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
-                  Run Your Own Metal
+                  {t("node:second.leftTitle")}
                 </motion.h3>
                 <motion.p variants={fadeInUp} transition={{ delay: 0.9 }}>
-                  If you want to run a node on your own hardware without the
-                  HOPR Node PC, that’s perfectly acceptable and possible as
-                  well! Check out our{" "}
+                  {t("node:second.leftParagraphA")}
                   <a
                     href="https://docs.hoprnet.org/home/getting-started/hopr-chat"
                     className="text-color-high underline"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    GitBook instructions
-                  </a>{" "}
-                  for details on how to install.
+                    {t("node:second.leftLink")}
+                  </a>
+                  {t("node:second.leftParagraphB")}
                 </motion.p>
                 <div className="btn-align">
                   <a
@@ -80,7 +78,7 @@ export default function Index() {
                     className="link-out"
                   >
                     <div className="type-btn">
-                      <span>START NOW</span>
+                      <span>{t("common:startNow")}</span>
                     </div>
                   </a>
                 </div>
@@ -89,25 +87,23 @@ export default function Index() {
                 <div className="help-icon-node">
                   <img
                     src="assets/images/icons/original/light-bulb-shine.png"
-                    alt=" Your HOPR Hardware Node"
+                    alt=""
                   />
                 </div>
                 <motion.h3 animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
-                  Your HOPR Hardware Node
+                  {t("node:second.rightTitle")}
                 </motion.h3>
                 <motion.p variants={fadeInUp} transition={{ delay: 0.9 }}>
-                  If you want to run a node on your own hardware without the
-                  HOPR Node PC, that’s perfectly acceptable and possible as
-                  well! Check out our{" "}
+                  {t("node:second.rightParagraphA")}
                   <a
                     href="https://docs.hoprnet.org/home/getting-started/hopr-chat"
                     className="text-color-high underline"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    GitBook instructions
-                  </a>{" "}
-                  for details on how to install.
+                    {t("node:second.rightLink")}
+                  </a>
+                  {t("node:second.rightParagraphB")}
                 </motion.p>
                 <div className="btn-align">
                   <a
@@ -117,7 +113,7 @@ export default function Index() {
                     className="link-out"
                   >
                     <div className="type-btn">
-                      <span>ORDER NOW</span>
+                      <span>{t("common:orderNow")}</span>
                     </div>
                   </a>
                 </div>
@@ -127,27 +123,20 @@ export default function Index() {
         </section>
         <section className="section-source padding-section-aux">
           <div>
-            <h2>Specifications of HOPR Node PC</h2>
+            <h2>{t("node:specifications.title")}</h2>
           </div>
           <div className="container-sm">
             <p>
-              The HOPR Node PC is a pre-configured version of the{" "}
+              {t("node:specifications.paragraphA")}
               <a
                 href="https://ava.do/avado-i2"
                 className="text-color-high underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                AVADO i2
+                {t("node:specifications.link")}
               </a>
-              , a plug-and-play blockchain-ready node. It has high
-              specifications (8GB RAM, Intel Pentium 4415) with upgraded SSD
-              storage (1TB), making it more than powerful enough to install and
-              run an Ethereum full node. The HOPR Node PC contains the first
-              release of HOPR Alpha, a layer-0 privacy software able to connect
-              to the HOPR Network. The HOPR Node PC is ready to use: just
-              connect it to your router! You can also use it to run other kinds
-              of nodes, making it a viable IPFS, Filecoin, or ETH2 node.
+              {t("node:specifications.paragraphB")}
             </p>
           </div>
         </section>
