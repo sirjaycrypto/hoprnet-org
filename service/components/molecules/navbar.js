@@ -42,20 +42,18 @@ export default function Navbar({ visibleNow }) {
   const [youDown, setYouDown] = useState(false);
   const [activaMenu, setActivaMenu] = useState(false);
   const router = useRouter();
-  const { t } = useTranslation();
 
- 
   useEffect(() => {
     window.onscroll = function () {
       if (window.pageYOffset === 0) {
         setYouDown(false);
       } else {
-        window.toggle.checked=false;
+        window.toggle.checked = false;
         setYouDown(true);
         setActivaMenu(false);
       }
     };
-  }, [ youDown]);
+  }, [youDown]);
 
   return (
     <>
@@ -82,7 +80,13 @@ export default function Navbar({ visibleNow }) {
         </div>
       </nav>
 
-      <MenuMobile activaMenu={activaMenu} setActivaMenu={()=>{setActivaMenu}}/>
+      <MenuMobile
+        activaMenu={activaMenu}
+        setActivaMenu={() => {
+          setActivaMenu;
+        }}
+      />
+
       {router.pathname === "/" ? (
         <div className={"section-indicator " + (youDown ? "make-visible" : "")}>
           <div className="helper-hr"></div>

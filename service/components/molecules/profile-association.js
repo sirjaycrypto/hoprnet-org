@@ -1,10 +1,6 @@
 import React from "react";
-
 import { motion } from "framer-motion";
-import {
-  stagger,
-  fadeInUp,
-} from "../../util/motionConfig";
+import { stagger, fadeInUp } from "../../util/motionConfig";
 
 const data = [
   {
@@ -32,26 +28,29 @@ export default function ProfileAssociation() {
     <div className="container container-profile padding-section-aux">
       <motion.div variants={stagger}>
         {data.map((e, index) => {
-          const { link,img, name, label } = e;
+          const { link, img, name, label } = e;
           return (
-            <a  key={index} href={link} target="_blank" rel="noopener noreferrer">
-        
-              <motion.div
-              
-              variants={fadeInUp}
-              transition={{ delay: 0.8 }}
-              className="item-profile"
+            <a
+              key={index}
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <motion.img variants={fadeInUp} src={img} alt={name} />
-              <div>
-                <motion.h5 variants={fadeInUp} transition={{ delay: 0.8 }}>
-                  {name}
-                </motion.h5>
-                <motion.p variants={fadeInUp} transition={{ delay: 0.8 }}>
-                  {label}
-                </motion.p>
-              </div>
-            </motion.div>
+              <motion.div
+                variants={fadeInUp}
+                transition={{ delay: 0.8 }}
+                className="item-profile"
+              >
+                <motion.img variants={fadeInUp} src={img} alt={name} />
+                <div>
+                  <motion.h5 variants={fadeInUp} transition={{ delay: 0.8 }}>
+                    {name}
+                  </motion.h5>
+                  <motion.p variants={fadeInUp} transition={{ delay: 0.8 }}>
+                    {label}
+                  </motion.p>
+                </div>
+              </motion.div>
             </a>
           );
         })}
