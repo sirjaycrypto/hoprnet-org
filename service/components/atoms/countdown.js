@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import useTranslation from "next-translate/useTranslation";
 
 function addDays(date, days) {
   var result = new Date(date);
@@ -20,6 +21,8 @@ const formatTime = (time) => {
 };
 
 export default function Countdown() {
+  const { t } = useTranslation();
+
   const [minutes, setMinutes] = useState("");
   const [hours, setHours] = useState("");
   const [days, setDays] = useState("");
@@ -61,7 +64,7 @@ export default function Countdown() {
   return (
     <div className="info-hero-top">
       <p className="help-label-info">
-        END OF SALE {days}:{hours}:{minutes}
+        {t("home:hero.endSale")}{days}:{hours}:{minutes}
       </p>
     </div>
   );

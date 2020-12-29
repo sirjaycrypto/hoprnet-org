@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import useTranslation from "next-translate/useTranslation";
 import { listLang } from "../../util/listLanguage";
 
-export default function ItemsMenu({setActivaMenu,activaMenu}) {
+export default function ItemsMenu() {
   const router = useRouter();
   const [translateY, setTranslateY] = useState(-102);
   const [flag, setFlag] = useState(false);
@@ -39,7 +39,6 @@ export default function ItemsMenu({setActivaMenu,activaMenu}) {
     } else {
       setTranslateY(-102);
       setFlag(false);
-      
     }
   };
 
@@ -60,13 +59,14 @@ export default function ItemsMenu({setActivaMenu,activaMenu}) {
           {listLang.map((e, i) => {
             const { info } = e;
             return (
-             
-                 <Link href="/" locale={info} key={i}>
-                 <li onClick={() => clickMenu()} className={lang===info ? 'is-current' : ''}>
-                   <a>{info}</a>
-                 </li>
-               </Link>
-              
+              <Link href="/" locale={info} key={i}>
+                <li
+                  onClick={() => clickMenu()}
+                  className={lang === info ? "is-current" : ""}
+                >
+                  <a>{info}</a>
+                </li>
+              </Link>
             );
           })}
         </ul>
@@ -74,5 +74,3 @@ export default function ItemsMenu({setActivaMenu,activaMenu}) {
     </>
   );
 }
-
-
