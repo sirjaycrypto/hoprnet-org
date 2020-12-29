@@ -78,8 +78,8 @@ export default function Index() {
                   rel="noopener noreferrer"
                 >
                   Libp2p
-                </a>{" "}
-                {t("tech:open.paragraphD")}{" "}
+                </a>
+                {t("tech:open.paragraphD")}
                 <a
                   className="underline"
                   href="https://github.com/libp2p/js-peer-id/pull/115"
@@ -127,8 +127,7 @@ export default function Index() {
                   rel="noopener noreferrer"
                 >
                   {t("common:contributed")}
-                </a>
-                .
+                </a>.
               </li>
               <li>
                 <a
@@ -138,8 +137,8 @@ export default function Index() {
                   rel="noopener noreferrer"
                 >
                   {t("common:multiformats")}
-                </a>{" "}
-                {t("tech:open.paragraphF")}{" "}
+                </a>
+                {t("tech:open.paragraphF")}
                 <a
                   className="underline"
                   href="https://github.com/multiformats/js-multiaddr/pull/112"
@@ -147,8 +146,7 @@ export default function Index() {
                   rel="noopener noreferrer"
                 >
                   {t("common:fixes&testing")}
-                </a>
-                .
+                </a>.
               </li>
               <li>
                 <a
@@ -158,8 +156,8 @@ export default function Index() {
                   rel="noopener noreferrer"
                 >
                   {t("common:pullPrefixed")}
-                </a>{" "}
-                {t("tech:open.paragraphF")}{" "}
+                </a>
+                {t("tech:open.paragraphF")}
                 <a
                   className="underline"
                   href="https://github.com/dignifiedquire/pull-length-prefixed/pull/20"
@@ -167,8 +165,7 @@ export default function Index() {
                   rel="noopener noreferrer"
                 >
                   {t("common:resolIssue")}
-                </a>
-                .
+                </a>.
               </li>
               <li>
                 <a
@@ -178,8 +175,8 @@ export default function Index() {
                   rel="noopener noreferrer"
                 >
                   {t("common:definitelyTyped")}
-                </a>{" "}
-                {t("tech:open.paragraphG")}{" "}
+                </a>
+                {t("tech:open.paragraphG")}
                 <a
                   className="underline"
                   href="https://github.com/DefinitelyTyped/DefinitelyTyped/pull/42559"
@@ -187,8 +184,7 @@ export default function Index() {
                   rel="noopener noreferrer"
                 >
                   {t("tech:open.paragraphJ")}
-                </a>
-                .
+                </a>.
               </li>
             </ul>
           </div>
