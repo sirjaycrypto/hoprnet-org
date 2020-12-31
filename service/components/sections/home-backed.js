@@ -31,6 +31,23 @@ const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
     },
   ];
 
+  const dataInfoPartners = [
+    "assets/partners/avado.svg",
+    "assets/partners/froriep.png",
+    "assets/partners/elrond.png",
+    "assets/partners/health_tech_cluster.png",
+    "assets/partners/sedimentum.png",
+    "assets/partners/download.png",
+    "assets/partners/swiss_medtech.png",
+    "assets/partners/swiss_healthcare_startups.png",
+  ];
+
+  const dataInfoAssSee = [
+    "assets/as_see/coindesk.svg",
+    "assets/as_see/coint.svg",
+    "assets/as_see/money.svg",
+  ];
+
   return (
     <>
       <section
@@ -55,6 +72,47 @@ const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
                   </div>
                 </a>
               );
+            })}
+          </div>
+          <h2>{t("home:back.titleA")}</h2>
+          <div className="item-back-container">
+            {dataInfoPartners.map((e, index) => {
+            
+              return (
+                <a
+                href="#"
+                key={index}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="item-logo-element">
+                  <img src={e} alt={e} />
+                </div>
+              </a>
+              );
+
+
+              
+            })}
+          </div>
+
+          <h2>{t("home:back.titleB")}</h2>
+          <div className="item-back-container">
+            {dataInfoAssSee.map((e, index) => {
+
+              return (
+                <a
+                href="#"
+                key={index}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="item-logo-element">
+                  <img src={e} alt={e} />
+                </div>
+              </a>
+              );
+
             })}
           </div>
         </div>

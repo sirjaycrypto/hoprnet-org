@@ -5,6 +5,7 @@ import HomeHeadline from "../components/sections/home-headline";
 import HomeTokenFeatures from "../components/sections/home-token-features";
 import HomeHomeItWork from "../components/sections/home-it-work";
 import HomeHardware from "../components/sections/home-hardware";
+import HomeBacked from "../components/sections/home-backed";
 import Slide from "../components/organisms/slider";
 import HomeTokenReleas from "../components/sections/home-token-release";
 import { loadNamespaces } from "./_app";
@@ -83,6 +84,10 @@ export default function Home() {
       />
       <HomeHomeItWork setVisibleNow={setVisibleNow} ref={currentElementAlt} />
       <HomeHardware setVisibleNow={setVisibleNow} ref={currentElementNode} />
+      <HomeBacked
+        setVisibleNow={setVisibleNow}
+        ref={currentElementVisibleBack}
+      />
       <Slide />
       <HomeTokenReleas
         setVisibleNow={setVisibleNow}
@@ -93,10 +98,14 @@ export default function Home() {
         className="banner-CTA"
         ref={currentElementVisibleBanner}
       >
+        <div className="container">
+          <h3>
+          {t("home:banner.label")}
+          </h3>
+        </div>
         <div className="btn-follow " >
           <div onClick={() => clickBtn()} className="btn-banner ">
             <span
-             
             >
               {t("common:btn-token")}
             </span>
