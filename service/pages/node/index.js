@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Layout from "../../components/organisms/layout";
 import HeroInternal from "../../components/organisms/hero-internal";
 import { stagger, fadeInUp } from "../../util/motionConfig";
+import { loadNamespaces } from "../_app";
 
 export default function Index() {
   const { t } = useTranslation();
