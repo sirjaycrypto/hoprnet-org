@@ -8,6 +8,7 @@ import HomeHardware from "../components/sections/home-hardware";
 import HomeBacked from "../components/sections/home-backed";
 import Slide from "../components/organisms/slider";
 import HomeTokenReleas from "../components/sections/home-token-release";
+import HomeRoadMap from '../components/sections/home-road'
 import { loadNamespaces } from "./_app";
 import useTranslation from "next-translate/useTranslation";
 
@@ -92,7 +93,7 @@ export default function Home() {
       <HomeTokenReleas
         setVisibleNow={setVisibleNow}
         ref={currentElementTokenRel}
-      />{" "}
+      />
       <section
         id="BANNER"
         className="banner-CTA"
@@ -112,6 +113,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <HomeRoadMap/>
       <Footer setVisibleNow={setVisibleNow} ref={currentElementTokenFooter} />
     </Layout>
   );

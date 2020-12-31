@@ -96,5 +96,8 @@
     "profitable": "Profitable",
     "profitableMain": "HOPR’s unique proof-of-relay mechanism means every node runner is incentivized to correctly relay data in exchange for HOPR tokens.",
     "title": " How does it work"
+  },
+  "roadMap": {
+    "title": " ROADMAP"
   }
 }
