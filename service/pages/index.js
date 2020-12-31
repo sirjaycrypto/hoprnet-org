@@ -24,6 +24,7 @@ export default function Home() {
   const [isVisibleBack, currentElementVisibleBack] = useVisibility(100);
   const [isVisibleNode, currentElementNode] = useVisibility(100);
   const [isVisibleTokenRel, currentElementTokenRel] = useVisibility(100);
+  const [isVisibleBanner, currentElementVisibleBanner] = useVisibility(100);
   const [isVisibleFooter, currentElementTokenFooter] = useVisibility(100);
   const { t } = useTranslation();
 
@@ -33,13 +34,16 @@ export default function Home() {
     if (isVisibleHow) setVisibleNow(currentElementAlt.current.id);
     if (isVisibleNode) setVisibleNow(currentElementNode.current.id);
     if (isVisibleBack) setVisibleNow(currentElementVisibleBack.current.id);
+    if (isVisibleBanner) setVisibleNow(currentElementVisibleBanner.current.id);
     if (isVisibleTokenRel) setVisibleNow(currentElementTokenRel.current.id);
   }, [
     isVisibleHero,
     isVisibleVideo,
     isVisibleFooter,
     isVisibleHow,
-    isVisibleTokenRel,,
+    isVisibleTokenRel,
+    isVisibleBanner,
+    currentElementVisibleBanner,
     currentElementAlt,
     currentElementHero,
     currentElementVideo,
@@ -77,14 +81,28 @@ export default function Home() {
         setVisibleNow={setVisibleNow}
         ref={currentElementTokenFea}
       />
-       <HomeHomeItWork setVisibleNow={setVisibleNow} ref={currentElementAlt} />
-       <HomeHardware setVisibleNow={setVisibleNow} ref={currentElementNode} />
-
-       <Slide />
-       <HomeTokenReleas
+      <HomeHomeItWork setVisibleNow={setVisibleNow} ref={currentElementAlt} />
+      <HomeHardware setVisibleNow={setVisibleNow} ref={currentElementNode} />
+      <Slide />
+      <HomeTokenReleas
         setVisibleNow={setVisibleNow}
         ref={currentElementTokenRel}
-      />
+      />{" "}
+      <section
+        id="BANNER"
+        className="banner-CTA"
+        ref={currentElementVisibleBanner}
+      >
+        <div className="btn-follow " >
+          <div onClick={() => clickBtn()} className="btn-banner ">
+            <span
+             
+            >
+              {t("common:btn-token")}
+            </span>
+          </div>
+        </div>
+      </section>
       <Footer setVisibleNow={setVisibleNow} ref={currentElementTokenFooter} />
     </Layout>
   );
