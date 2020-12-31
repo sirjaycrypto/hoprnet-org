@@ -44,7 +44,12 @@ const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
             {data.map((e, index) => {
               const { img, url, title } = e;
               return (
-                <a href={url} key={index} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={url}
+                  key={index}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <div className="item-logo-element">
                     <img src={img} alt={title} />
                   </div>

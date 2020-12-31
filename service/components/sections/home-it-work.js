@@ -1,4 +1,4 @@
-import React, { forwardRef} from "react";
+import React, { forwardRef } from "react";
 import useTranslation from "next-translate/useTranslation";
 
 const HomeHomeItWork = forwardRef(({ setVisibleNow }, ref) => {
@@ -35,7 +35,6 @@ const HomeHomeItWork = forwardRef(({ setVisibleNow }, ref) => {
           <div className="container-center-center">
             <h2>{t("home:work.title")}</h2>
           </div>
-          {/*  */}
           <div className="element-boxing">
             {dataInfo.map((e, index) => {
               const { img, title, paragraph, mirrorBox } = e;
@@ -55,11 +54,10 @@ const HomeHomeItWork = forwardRef(({ setVisibleNow }, ref) => {
               );
             })}
           </div>
-          {/*  */}
         </div>
       </section>
     </>
   );
 });
 
-export default HomeHomeItWork
+export default HomeHomeItWork;

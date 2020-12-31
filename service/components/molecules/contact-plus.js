@@ -38,15 +38,21 @@ export default function ContactPlus() {
       label: "common:investors",
     },
   ];
+  
   return (
     <div className="container  padding-section-aux">
       <motion.div variants={stagger} className="contact-plus-element">
         {data.map((e, index) => {
           const { link, img, label } = e;
+
           return (
-            <a key={index} href={link} target="_blank" rel="noopener noreferrer">
+            <a
+              key={index}
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <motion.div
-                
                 variants={fadeInUp}
                 transition={{ delay: 0.8 }}
                 className="item-contact-plus"

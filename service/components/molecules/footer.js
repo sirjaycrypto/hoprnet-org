@@ -35,6 +35,7 @@ const dataInfo = [
 
 const Footer = forwardRef(({ setVisibleNow }, ref) => {
   const { t } = useTranslation();
+
   return (
     <footer ref={ref} id="FOOTER">
       <div className="container padding-section-aux">

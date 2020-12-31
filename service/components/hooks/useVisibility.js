@@ -3,14 +3,10 @@ import throttle from "lodash.throttle";
 
 /**
  * Check if an element is in viewport
-
  * @param {number} offset - Number of pixels up to the observable element from the top
  * @param {number} throttleMilliseconds - Throttle observable listener, in ms
  */
-export default function useVisibility(
-  offset = 0,
-  throttleMilliseconds = 100
-) {
+export default function useVisibility(offset = 0, throttleMilliseconds = 100) {
   const [isVisible, setIsVisible] = useState(false);
   const currentElement = createRef();
 

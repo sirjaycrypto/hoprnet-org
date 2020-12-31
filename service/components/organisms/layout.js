@@ -11,7 +11,7 @@ export default function Layout({ visibleNow, children }) {
   useEffect(() => {
     document.body.classList.add("is-revealed");
     document.body.classList.add("is-loaded");
-    
+
     scrollReveal.current.init();
   }, []);
 
@@ -24,9 +24,7 @@ export default function Layout({ visibleNow, children }) {
             <Header />
             <div className="cursor">
               <Navbar visibleNow={visibleNow} />
-
               {children}
-              
               {router.pathname !== "/" ? <Footer /> : null}
             </div>
           </>
