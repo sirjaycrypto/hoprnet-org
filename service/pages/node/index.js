@@ -1,4 +1,5 @@
 import React from "react";
+import useTranslation from "next-translate/useTranslation";
 import { motion } from "framer-motion";
 
 import Layout from "../../components/organisms/layout";
@@ -6,13 +7,15 @@ import HeroInternal from "../../components/organisms/hero-internal";
 import { stagger, fadeInUp } from "../../util/motionConfig";
 
 export default function Index() {
+  const { t } = useTranslation();
+
   return (
     <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
       <Layout>
         <HeroInternal>
           <motion.div variants={stagger}>
             <motion.h1 animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
-              Guardians Of Privacy
+              {t("node:hero.title")}
             </motion.h1>
             <div>
               <motion.p
@@ -20,16 +23,10 @@ export default function Index() {
                 exit={{ opacity: 0 }}
                 transition={{ delay: 0.2 }}
               >
-                To the HOPR Node Runners, we dedicate this page to you. Online
-                privacy, personal data control, and Ethereum blockchain
-                integrity all owe you a debt of gratitude. Although, you’ll get
-                more than just gratitude, as you’ll earn upcoming HOPR token
-                incentives (coming Q4!) from our plug-and-earn mixnet node PC.
+                {t("node:hero.paragraphA")}
               </motion.p>
               <motion.p variants={fadeInUp} transition={{ delay: 0.4 }}>
-                HOPR makes no profit from the first-of-its-kind custom node PC.
-                Instead, we thank you for helping ensure a decentralized Web3
-                future, where everyone has control of their own data.
+                {t("node:hero.paragraphB")}
               </motion.p>
             </div>
           </motion.div>
@@ -151,4 +148,15 @@ export default function Index() {
       </Layout>
     </motion.div>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      _ns: await loadNamespaces(
+        ["common", "menu", "node"],
+        locale
+      ),
+    },
+  };
 }
