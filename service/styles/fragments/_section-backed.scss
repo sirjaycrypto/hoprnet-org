@@ -1,6 +1,6 @@
 .section-backed {
   background: $hopr_yellow;
-  padding: 120px 0;
+
   @include responsive(tablet) {
     padding: 50px 0 182px 0;
   }
@@ -9,18 +9,20 @@
   }
   h2 {
     font-weight: normal;
-    font-size: 65px;
+    font-size: 60pt;
     margin-bottom: 0;
     text-align: center;
     letter-spacing: 0.5px;
     color: $hopr_grey;
-    margin-top: 0;
+    margin-top: 70px;
     padding-top: 0;
     @include responsive(tablet) {
-      font-size: 60px;
+      // font-size: 60px;
+      margin-top: 50px;
     }
     @include responsive(phone) {
-      font-size: 30px;
+      font-size: 30pt;
+      margin-top: 0;
     }
   }
   p {
@@ -31,32 +33,35 @@
   .item-back-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
-    margin-top: 80px;
+    margin: 50px auto;
+    width: 80%;
     @include responsive(tablet) {
-      justify-content: space-between;
-      margin-top: 50px;
+      width: 100%;
     }
     @include responsive(phone) {
-      margin: 18px 0;
+      margin: 18px auto 50px auto;
     }
     a {
-      width: 200px;
-      height: 140px;
-      background: transparent;
+      width: 180px;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 1em 0;
-      padding: 1.5rem;
+      background: transparent;
+      padding: 0.5em;
+      margin: 0.5em 0;
       box-sizing: border-box;
-      overflow: hidden;
+      .item-logo-element {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
       img {
         width: 100%;
-        object-fit: cover;
-        filter: grayscale(1);
+        object-fit: contain;
+        filter: brightness(0.5);
       }
       p {
         padding: 0;

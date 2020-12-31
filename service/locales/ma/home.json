@@ -1,32 +1,48 @@
 {
+  "headline": {
+    "title": "BLIND TEXT HEADLINE",
+    "beforeInfo": "Be the first to earn and stake HOPR with our limited token release.",
+    "mainInfo": "Every minute, people and companies transmit millions of gigabytes of data across the globe. This figure is growing exponentially thanks to new technologies such as 5G and the Internet of Things. This data all needs protecting, and so does the metadata it generates. The HOPR protocol provides network-level metadata privacy for everyone, and the HOPR network is driven by the HOPR token.",
+    "titleTicket": "SALE-OFFER",
+    "txtDownNum": "per HOPR",
+    "fPoint": "Join our initial limited token release to be one of the first to earn and stake HOPR.",
+    "sPoint": "There will be only XXXX tokens available during this initial phase.",
+    "tPoint": "Tokens will be available via",
+    "tokenLeft": "TOKENS LEFT"
+  },
   "back": {
-    "title":"BACKED BY"
+    "title": "BACKED BY",
+    "titleA": "PARTNERS",
+    "titleB": "AS SEEN IN"
+  },
+  "banner":{
+    "label":"Be among the first who profit the most from staking our HOPR Token."
   },
   "features": {
-    "pay":"Pay",
-    "payMain":"Spend HOPR tokens to send data through the HOPR network with complete data and metadata privacy.",
-    "stake":"Stake",
-    "stakeMain":"Lock HOPR tokens in your node to relay user data and cover traffic. The more you stake, the more data you can relay, and the more you can earn.",
-    "title":"Token features",
-    "vote":"Vote",
-    "voteMain":"Participate in decentralized, community-enabling governance decisions to shape the future of HOPR."
+    "pay": "Pay",
+    "payMain": "Spend HOPR tokens to send data through the HOPR network with complete data and metadata privacy.",
+    "stake": "Stake",
+    "stakeMain": "Lock HOPR tokens in your node to relay user data and cover traffic. The more you stake, the more data you can relay, and the more you can earn.",
+    "title": "Token features",
+    "vote": "Vote",
+    "voteMain": "Participate in decentralized, community-enabling governance decisions to shape the future of HOPR."
   },
   "further": {
-    "infoBottomATitle":"Our Blog",
-    "infoBottomBTitle":"Our Values",
-    "infoBottomCTitle":"Our Whitepaper",
-    "infoBottomDTitle":"Our organizational structure: Decent Gov",
-    "infoBottomETitle":"HOPR in the Media",
-    "infoTopTitleA":"Install a HOPR node for free via GitHub",
-    "infoTopTitleAAbout":"Anyone can run a HOPR node on their own hardware! We provide easy-to-install software for Linux, macOS, Windows, docker and cloud environments. We also sell a dedicated hardware node for faster staking.",
-    "infoTopTitleB":"Buy a HOPR Node PC",
-    "infoTopTitleBAbout":"The HOPR Node PC is a powerful plug-and-play hardware device which lets you run a HOPR node around the clock.",
-    "title":"Further Reading"
+    "infoBottomATitle": "Our Blog",
+    "infoBottomBTitle": "Our Values",
+    "infoBottomCTitle": "Our Whitepaper",
+    "infoBottomDTitle": "Our organizational structure: Decent Gov",
+    "infoBottomETitle": "HOPR in the Media",
+    "infoTopTitleA": "Install a HOPR node for free via GitHub",
+    "infoTopTitleAAbout": "Anyone can run a HOPR node on their own hardware! We provide easy-to-install software for Linux, macOS, Windows, docker and cloud environments. We also sell a dedicated hardware node for faster staking.",
+    "infoTopTitleB": "Buy a HOPR Node PC",
+    "infoTopTitleBAbout": "The HOPR Node PC is a powerful plug-and-play hardware device which lets you run a HOPR node around the clock.",
+    "title": "Further Reading"
   },
   "hardware": {
-    "about":"Anyone can run a HOPR node on their own hardware! We provide easy-to-install software for Linux, macOS, Windows, Docker and Cloud Environments. Furthermore we also sell an dedicated hardware not for faster staking.More at the End of the Page.",
+    "about": "Anyone can run a HOPR node on their own hardware! We provide easy-to-install software for Linux, macOS, Windows, Docker and Cloud Environments. Furthermore we also sell an dedicated hardware not for faster staking.More at the End of the Page.",
     "subtitleA": "Run Your Own Metal",
-    "subtitleB":"Your HOPR Hardware Node",
+    "subtitleB": "Your HOPR Hardware Node",
     "title": "HOPR-NODE ON GITHUB"
   },
   "graphic": {
@@ -39,18 +55,16 @@
     "votes": "# of Votes"
   },
   "hero": {
-    "endSale": "END OF SALE ",
-    "location": "Jungfraujoch, Switzerland, 3454 masl",
-    "subtitle": "The Token",
+    "subtitle": "Soon on sale: the hopr-token",
     "title": "Changing Data Privacy for Good"
   },
   "slide": {
-    "slideA":"Name, Position",
-    "slideAMain":"This is a quote that should address HOPRS’ vision and it’s added value",
-    "slideB":"test-test-test",
-    "slideBMain":"This is a quote that should address HOPRS’ vision and it’s added value",
-    "slideC":"Name, Position",
-    "slideCMain":"This is a quote that should address HOPRS’ vision and it’s added value"
+    "slideA": "Name, Position",
+    "slideAMain": "This is a quote that should address HOPRS’ vision and it’s added value",
+    "slideB": "test-test-test",
+    "slideBMain": "This is a quote that should address HOPRS’ vision and it’s added value",
+    "slideC": "Name, Position",
+    "slideCMain": "This is a quote that should address HOPRS’ vision and it’s added value"
   },
   "token": {
     "about": "The HOPR Network is powered by the HOPR Token, a utility token on the Ethereum Network.",

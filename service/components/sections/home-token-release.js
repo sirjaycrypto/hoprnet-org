@@ -290,6 +290,9 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
                 <Line data={dataTokenSupply} options={dataOption} />
               </div>
             </div>
+            <p>
+            <p>{t("home:token.textEnding")}</p>
+            </p>
           </div>
         </div>
       </section>

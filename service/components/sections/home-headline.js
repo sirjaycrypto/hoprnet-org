@@ -22,6 +22,13 @@ const HomeHeadline = forwardRef(({ setVisibleNow }, ref) => {
          
             <p className="special">{t("home:headline.beforeInfo")}</p>
             <p>{t("home:headline.mainInfo")}</p>
+            <div className="">
+              <p className="link-out-label">
+                <a>
+                {t("home:why.labelDate")}
+                </a>
+              </p>
+            </div>
           </div>
 
           <div>
