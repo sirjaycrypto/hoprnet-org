@@ -4,7 +4,6 @@ import LocationMarker from "../atoms/location-marker";
 export default function HeroInfo() {
   return (
     <>
-      <Countdown />
       <LocationMarker />
     </>
   );

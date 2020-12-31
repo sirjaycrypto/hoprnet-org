@@ -28,7 +28,14 @@
 }
 
 .section-hero {
+  .text-wrapper {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
   h1,
+  span,
   h4 {
     margin: 0;
     padding: 0;
@@ -38,7 +45,7 @@
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
   }
   h1 {
-    font-size: 100px;
+    font-size: 140px;
     line-height: 103px;
     display: flex;
     align-items: center;
@@ -46,6 +53,8 @@
     letter-spacing: 0.833333px;
     word-break: break-word;
     font-weight: normal;
+    margin-top: 24px;
+    margin-bottom: 50px;
     @include responsive(tablet) {
       font-size: 108px;
       line-height: 112px;
@@ -54,6 +63,8 @@
       letter-spacing: 0.9px;
     }
     @include responsive(phone) {
+      margin-top: 24px;
+      margin-bottom: 24px;
       font-size: 50px;
       line-height: 64px;
 
@@ -61,25 +72,19 @@
     }
   }
   h4 {
-    position: absolute;
-    top: calc(50% - 326px / 2 - 128px);
-    left: 0;
     align-items: center;
     justify-content: center;
     width: 100%;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 30px;
     line-height: 32px;
-    margin-bottom: 4.625rem;
     @include responsive(tablet) {
       font-size: 30px;
       line-height: 32px;
-      top: calc(50% - 84px / 2 - 229px);
     }
     @include responsive(phone) {
       font-size: 20px !important;
       line-height: 32px !important;
-      top: calc(55% - 0px / 2 - 229px) !important;
     }
   }
 }
@@ -133,5 +138,33 @@
   display: none;
   @include responsive(phone) {
     display: flex;
+  }
+}
+
+#clockDiv {
+  font-size: 140px;
+  line-height: 103px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.833333px;
+  word-break: break-word;
+  font-weight: normal;
+  margin-top: 24px;
+  margin-bottom: 50px;
+  @include responsive(tablet) {
+    font-size: 108px;
+    line-height: 112px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.9px;
+  }
+  @include responsive(phone) {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    font-size: 50px;
+    line-height: 64px;
+
+    letter-spacing: 0.416667px;
   }
 }

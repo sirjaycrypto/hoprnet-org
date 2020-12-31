@@ -8,11 +8,13 @@
     background: linear-gradient(90deg, #0000db 100%, #292941 100%);
     animation: hoverAnimate ease 1s forwards;
   }
-
+  @media screen and (max-width: 600px) {
+    padding: 0.5em 1.5em;
+  }
   span{
     transition: font-size 300ms ease-in-out;
     font-weight: 600;
-    line-height: 2em;
+   
     display: flex;
     align-items: center;
     text-align: center;
@@ -20,9 +22,9 @@
     color: #ffffff;
     margin: 0;
     padding: 0;
-
+    font-size: 34px;
     @media screen and (max-width: 600px) {
-      font-size: 14px;
+      font-size: 17px;
     }
   }
 
@@ -52,7 +54,7 @@
   }
 
   .container-btn {
-    position: absolute;
+
     span {
       font-size: 34px;
     }

@@ -1,4 +1,15 @@
 {
+  "headline":{
+    "title":"BLIND TEXT HEADLINE",
+    "beforeInfo":"Be the first to earn and stake HOPR with our limited token release.",
+    "mainInfo":"Every minute, people and companies transmit millions of gigabytes of data across the globe. This figure is growing exponentially thanks to new technologies such as 5G and the Internet of Things. This data all needs protecting, and so does the metadata it generates. The HOPR protocol provides network-level metadata privacy for everyone, and the HOPR network is driven by the HOPR token.",
+    "titleTicket":"SALE-OFFER",
+    "txtDownNum":"per HOPR",
+    "fPoint":"Join our initial limited token release to be one of the first to earn and stake HOPR.",
+    "sPoint":"There will be only XXXX tokens available during this initial phase.",
+    "tPoint":"Tokens will be available via",
+    "tokenLeft":"TOKENS LEFT"
+  },
   "back": {
     "title":"BACKED BY"
   },
@@ -30,7 +41,7 @@
     "title": "HOPR-NODE ON GITHUB"
   },
   "hero": {
-    "subtitle": "The Token",
+    "subtitle": "Soon on sale: the hopr-token",
     "title": "Changing Data Privacy for Good"
   },
   "slide": {
