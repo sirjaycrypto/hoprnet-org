@@ -50,13 +50,7 @@
     "votes": "# of Votes"
   },
   "hero": {
-<<<<<<< HEAD
     "subtitle": "Soon on sale: the hopr-token",
-=======
-    "endSale": "END OF SALE ",
-    "location": "Jungfraujoch, Switzerland, 3454 masl",
-    "subtitle": "The Token",
->>>>>>> c8a0e2b5b46126dbdced3c8b61d6df802045b244
     "title": "Changing Data Privacy for Good"
   },
   "slide": {

@@ -1,8 +1,8 @@
 .section-hopr-github {
-  background: $hopr_bright_blue;
+ 
   h2,
   p {
-    color: #fff;
+    color: $hopr_greySp;
   }
   h2 {
     font-size: 60px;
@@ -44,8 +44,8 @@
   }
   h3 {
     margin-top: 0;
-    color: #fff;
-    font-weight: 700;
+    color: $hopr_greySp;
+    font-weight: 600;
     font-size: 30px;
     line-height: 45px;
     letter-spacing: 0.25px;

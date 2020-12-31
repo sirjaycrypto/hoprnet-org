@@ -26,7 +26,7 @@ const HomeTokenFeatures = forwardRef(({ setVisibleNow }, ref) => {
       <section
         ref={ref}
         id="TOKEN-FEATURES"
-        className="section-token-fea padding-section-aux"
+        className="section-token-fea padding-section-aux invert-color"
       >
         <div className="container">
           <div className="container-center-center">

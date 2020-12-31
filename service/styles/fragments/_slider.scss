@@ -1,5 +1,5 @@
 .slider {
-  background: $hopr_yellow;
+  background: $hopr_blue;
   box-sizing: border-box;
   overflow: hidden;
   padding: 74px 0;
@@ -24,7 +24,7 @@
     font-size: 25px;
     line-height: normal;
     letter-spacing: 0.36px;
-    color: $hopr_grey;
+    color: #fff;
     margin-bottom: 24px;
     @include responsive(tablet) {
       font-size: 18px;
@@ -33,11 +33,11 @@
   }
   .text-label-data {
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 43.2px;
     line-height: normal;
     letter-spacing: 0.208333px;
-    color: $hopr_grey;
+    color: #fff;
     margin-bottom: 24px;
     @include responsive(tablet) {
       font-size: 25px;
@@ -59,6 +59,8 @@
         content: "";
         text-align: center;
         border-radius: 100px;
+        opacity: 1;
+        border: 3px solid #fff;
         background: $hopr_bright_blue;
       }
     }
@@ -74,7 +76,8 @@
           content: "";
           text-align: center;
           border-radius: 100px;
-          background: $hopr_bright_blue;
+          opacity: 1;
+          background: #fff
         }
       }
     }
