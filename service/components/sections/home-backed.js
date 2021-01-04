@@ -32,20 +32,20 @@ const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
   ];
 
   const dataInfoPartners = [
-    "assets/partners/avado.svg",
-    "assets/partners/froriep.png",
-    "assets/partners/elrond.png",
-    "assets/partners/health_tech_cluster.png",
-    "assets/partners/sedimentum.png",
-    "assets/partners/download.png",
-    "assets/partners/swiss_medtech.png",
-    "assets/partners/swiss_healthcare_startups.png",
+    "assets/partners/01_avado.svg",
+    "assets/partners/02_froriep.png",
+    "assets/partners/03_elrond.png",
+    "assets/partners/04_sedimentum.png",
+    "assets/partners/05_swiss_medtech.png",
+    "assets/partners/06_dai_logo.png",
+    "assets/partners/07_health_tech_cluster.png",
+    "assets/partners/08_swiss_healthcare_startups.png",
   ];
 
   const dataInfoAssSee = [
-    "assets/as_see/coindesk.svg",
-    "assets/as_see/coint.svg",
-    "assets/as_see/money.svg",
+    "assets/as_see/coindesk.png",
+    "assets/as_see/cointelegraph.png",
+    "assets/as_see/moneytoday.png",
   ];
 
   return (
@@ -67,9 +67,8 @@ const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <div className="item-logo-element">
                     <img src={img} alt={title} />
-                  </div>
+                 
                 </a>
               );
             })}
@@ -77,42 +76,36 @@ const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
           <h2>{t("home:back.titleA")}</h2>
           <div className="item-back-container">
             {dataInfoPartners.map((e, index) => {
-            
               return (
                 <a
-                href="#"
-                key={index}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="item-logo-element">
-                  <img src={e} alt={e} />
-                </div>
-              </a>
+                  href="#"
+                  key={index}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  
+                    <img src={e} alt={e} />
+                 
+                </a>
               );
-
-
-              
             })}
           </div>
 
           <h2>{t("home:back.titleB")}</h2>
           <div className="item-back-container">
             {dataInfoAssSee.map((e, index) => {
-
               return (
                 <a
-                href="#"
-                key={index}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="item-logo-element">
-                  <img src={e} alt={e} />
-                </div>
-              </a>
+                  href="#"
+                  key={index}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  
+                    <img src={e} alt={e} />
+                 
+                </a>
               );
-
             })}
           </div>
         </div>

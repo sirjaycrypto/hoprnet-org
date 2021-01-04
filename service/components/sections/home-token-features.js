@@ -5,17 +5,17 @@ const HomeTokenFeatures = forwardRef(({ setVisibleNow }, ref) => {
   const { t } = useTranslation();
   const dataInfo = [
     {
-      img: "/assets/icons/icon-pay.svg",
+      img: "/assets/icons/hopr_Icon_Govern.png",
       title: "home:features.pay",
       paragraph: "home:features.payMain",
     },
     {
-      img: "/assets/icons/icon-stake.svg",
+      img: "/assets/icons/hopr_Icon_Stake.png",
       title: "home:features.stake",
       paragraph: "home:features.stakeMain",
     },
     {
-      img: "/assets/icons/icon-vote.svg",
+      img: "/assets/icons/hopr_Icon_Pay.png",
       title: "home:features.vote",
       paragraph: "home:features.voteMain",
     },
