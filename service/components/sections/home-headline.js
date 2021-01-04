@@ -15,17 +15,19 @@ const HomeHeadline = forwardRef(({ setVisibleNow }, ref) => {
         className="section-blindText invert-color "
       >
         <div>
-        <h2>{t("home:headline.title")}</h2>
+          <h2>{t("home:headline.title")}</h2>
         </div>
         <div className="container">
           <div>
-         
             <p className="special">{t("home:headline.beforeInfo")}</p>
             <p>{t("home:headline.mainInfo")}</p>
             <div className="">
               <p className="link-out-label">
-                <a>
-                {t("home:why.labelDate")}
+                <a
+                  href="https://www.cisco.com/c/dam/m/en_in/innovation/enterprise/assets/visual_networking_index_infographic_2016.pdf"
+                  target="_blank"
+                >
+                  {t("home:why.labelDate")}
                 </a>
               </p>
             </div>
@@ -54,8 +56,7 @@ const HomeHeadline = forwardRef(({ setVisibleNow }, ref) => {
               </div>
               <div className="area-scroll">
                 <p> {t("home:headline.tokenLeft")}</p>
-                <div className="scrollIndicator">
-                </div>
+                <div className="scrollIndicator"></div>
               </div>
               <div className="btn-ticket">
                 <div onClick={() => clickBtn()} className="btn-banner ">
