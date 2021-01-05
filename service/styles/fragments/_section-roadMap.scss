@@ -2,18 +2,27 @@
   text-align: center;
   margin-bottom: 120px;
   h2 {
+    color: $hopr_grey;
+    margin: 74px 0;
     font-size: 60px;
     font-weight: 400;
-
-    color: $hopr_grey;
     text-align: center;
     margin: 74px 0;
+    line-height: 32px;
+    letter-spacing: 0.5px;
     @include responsive(tablet) {
-      justify-content: space-between;
+      font-size: 60px;
+      line-height: 32px;
+      text-align: center;
+      letter-spacing: 0.5px;
       margin: 50px 0;
     }
     @include responsive(phone) {
       font-size: 30px;
+      line-height: 32px;
+      text-align: center;
+      letter-spacing: 0.25px;
+      margin: 24px 0;
     }
   }
   p {
@@ -64,16 +73,6 @@
       background: #1100b4;
       height: 100%;
     }
-    &::last-of-type {
-      margin: 0;
-      &::after {
-        content: "";
-        position: absolute;
-        width: 2px;
-        background: red;
-        height: 0%;
-      }
-    }
   }
 
   .area-info {
@@ -93,17 +92,28 @@
     a {
       color: #1100b4;
     }
+    p {
+      font-size: 18px;
+      line-height: 23px;
+      letter-spacing: 0.15px;
+
+      @include responsive(phone) {
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.116667px;
+      }
+    }
   }
 }
 
-
-.line-help:last-of-type {
-    margin: 0;
+.road-map-element:last-of-type {
+  .line-help {
     &::after {
       content: "";
       position: absolute;
-      width: 2px;
-      background: red;
-      height: 0%;
+      width: 0;
+      background: #1100b4;
+      height: 100%;
     }
   }
+}

@@ -68,28 +68,31 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
           "#1423C1",
           "#060D62",
         ],
-        borderColor:'#fff',
+        borderColor: "#fff",
         borderWidth: 3,
-  
       },
     ],
   };
 
   const dataDate = dataSupply.map((item) => item.Date);
   const dataTreasury = dataSupply.map((item) => item.Treasury);
-  const dataTeamNAdvisors = dataSupply.map((item) => item[t("home:graphic.team")]);
+  const dataTeamNAdvisors = dataSupply.map(
+    (item) => item[t("home:graphic.team")]
+  );
   const dataEarlyTokenBuyers = dataSupply.map(
     (item) => item[t("home:graphic.early")]
   );
   const dataBounties = dataSupply.map((item) => item.Bounties);
-  const dataCoverTraffic = dataSupply.map((item) => item[t("home:graphic.cover")]);
-  const dataPublicSale = dataSupply.map((item) => item[t("home:graphic.public")]);
+  const dataCoverTraffic = dataSupply.map(
+    (item) => item[t("home:graphic.cover")]
+  );
+  const dataPublicSale = dataSupply.map(
+    (item) => item[t("home:graphic.public")]
+  );
 
   function cleanData(elements) {
     return elements.map(function (elem) {
-      return parseFloat(
-        elem.split(",").join("").trim()
-      );
+      return parseFloat(elem.split(",").join("").trim());
     });
   }
 
@@ -179,7 +182,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
         data: cleanData(dataPublicSale),
         backgroundColor: ["#FEFDAF"],
         pointBackgroundColor: "#FEFDAF",
-        borderColor:'#fff',
+        borderColor: "#fff",
         borderWidth: 2,
         pointBorderWidth: 0,
         lineTension: 0,
@@ -198,7 +201,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
         data: cleanData(dataBounties),
         backgroundColor: ["#C0F3FF"],
         pointBackgroundColor: "#C0F3FF",
-        borderColor:'#fff',
+        borderColor: "#fff",
         borderWidth: 2,
         pointBorderWidth: 0,
         lineTension: 0,
@@ -208,7 +211,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
         data: cleanData(dataEarlyTokenBuyers),
         backgroundColor: ["#4B79B4"],
         pointBackgroundColor: "#4B79B4",
-        borderColor:'#fff',
+        borderColor: "#fff",
         borderWidth: 2,
         pointBorderWidth: 0,
         lineTension: 0,
@@ -218,7 +221,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
         data: cleanData(dataTeamNAdvisors),
         backgroundColor: ["#1423C1"],
         pointBackgroundColor: "#1423C1",
-        borderColor:'#fff',
+        borderColor: "#fff",
         borderWidth: 2,
         pointBorderWidth: 0,
         lineTension: 0,
@@ -228,7 +231,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
         data: cleanData(dataTreasury),
         backgroundColor: ["#060D62"],
         pointBackgroundColor: "#060D62",
-        borderColor:'#fff',
+        borderColor: "#fff",
         borderWidth: 2,
         pointBorderWidth: 0,
         lineTension: 0,
@@ -241,7 +244,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
       <section
         ref={ref}
         id="TOKEN-RELEASE"
-        className="section-token-release padding-section-aux"
+        className="section-token-release "
       >
         <div className="container">
           <div>
@@ -290,9 +293,9 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
                 <Line data={dataTokenSupply} options={dataOption} />
               </div>
             </div>
-            <p>
-            <p>{t("home:token.textEnding")}</p>
-            </p>
+            <div className="text-info-char-area">
+              <p>{t("home:token.textEnding")}</p>
+            </div>
           </div>
         </div>
       </section>

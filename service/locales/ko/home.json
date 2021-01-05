@@ -15,8 +15,8 @@
     "titleA": "PARTNERS",
     "titleB": "AS SEEN IN"
   },
-  "banner":{
-    "label":"Be among the first who profit the most from staking our HOPR Token."
+  "banner": {
+    "label": "Be the first to earn and stake HOPR with our limited token release."
   },
   "features": {
     "pay": "Pay",
@@ -79,7 +79,8 @@
     "secondSubTitle": "Token Allocation",
     "subTitle": "KEY METRICS",
     "thirdSubTitle": "Token Supply Distribution",
-    "title": "Token Release"
+    "title": "Token Release",
+    "textEnding": "VC-NOTE Fusce sagittis mauris at purus venenatis, sed sagittis est feugiat. Aenean et malesuada massa. Morbi dignissim venenatis eros ut lobortis. Cras eu libero mi. Etiam ullamcorper sapien non est pretium elementum. Donec eget risus sollicitudin, ultricies est ut, aliquam neque. Mauris et dictum ex. Nulla ultrices mollis dui. Pellentesque vel leo ac lorem maximus convallis quis ac est. Ut pellentesque quis nisl sed dictum."
   },
   "why": {
     "btnLabel": "Get HOPR-Token on SECRET",
@@ -95,5 +96,8 @@
     "profitable": "Profitable",
     "profitableMain": "HOPR’s unique proof-of-relay mechanism means every node runner is incentivized to correctly relay data in exchange for HOPR tokens.",
     "title": " How does it work"
+  },
+  "roadMap": {
+    "title": " ROADMAP"
   }
 }

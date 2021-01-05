@@ -43,22 +43,17 @@
   p {
     font-size: 25px;
     line-height: 37px;
-    /* or 148% */
-
     letter-spacing: 0.208333px;
     margin-bottom: 50px;
     color: $hopr_greySp;
     @include responsive(tablet) {
       font-size: 20px;
       line-height: 33px;
-
       letter-spacing: 0.166667px;
     }
     @include responsive(phone) {
       font-size: 16px;
       line-height: 22px;
-      /* or 137% */
-
       letter-spacing: 0.133333px;
     }
   }
@@ -101,5 +96,16 @@
         }
       }
     }
+  }
+}
+
+.text-info-char-area {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.116667px;
+  color: #414141;
+  margin-top: 100px;
+  @include responsive(tablet) {
+    margin-top: 50px;
   }
 }

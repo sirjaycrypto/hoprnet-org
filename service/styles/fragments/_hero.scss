@@ -142,18 +142,18 @@
 }
 
 #clockDiv {
-  font-size: 140px;
+  font-size: 120px;
   line-height: 103px;
   display: flex;
   align-items: center;
   text-align: center;
   letter-spacing: 0.833333px;
-  word-break: break-word;
+
   font-weight: normal;
   margin-top: 24px;
   margin-bottom: 50px;
   @include responsive(tablet) {
-    font-size: 108px;
+    font-size: 89px;
     line-height: 112px;
     align-items: center;
     text-align: center;

@@ -88,7 +88,7 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
           {data.map((e, index) => {
             const { date, title, about, link, linkText } = e;
             return (
-              <div keu={index} className="road-map-element">
+              <div key={index} className="road-map-element">
                 <div>
                   <p>{date}</p>
                 </div>

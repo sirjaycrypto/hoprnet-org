@@ -21,26 +21,30 @@
   p {
     color: $hopr_greySp;
     &.special {
-      font-size: 45pt;
-      line-height: auto;
-      font-weight: 400;
+      font-size: 45px;
+      line-height: 57px;
       margin-bottom: 50px;
-
+      @include responsive(tablet) {
+        font-size: 28px;
+        line-height: 38px;
+      }
       @include responsive(phone) {
+        font-size: 24px;
+        line-height: 30px;
         margin-bottom: 24px;
       }
     }
     &.link-out-label {
       font-size: 14px;
-      a{
-        color:#1423C1;
-        
+      a {
+        color: #1423c1;
       }
     }
-    font-size: 25pt;
+    font-size: 25px;
+    line-height: 37px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+
     letter-spacing: 0.15000000596046448px;
     @include responsive(tablet) {
       font-size: 16px;
@@ -72,15 +76,14 @@
 }
 
 .card-view {
-  float: right;
-  width: 70%;
   background: #fff;
-  border-radius: 8px;
+  border-radius: 16px;
   padding: 0 1em;
-  box-shadow: 1px 1px 41px -13px rgba(0, 0, 0, 0.44);
+  box-shadow: 2px 2px 41px -14px rgba(0, 0, 0, 0.5);
   color: $hopr_greySp;
   box-sizing: border-box;
   overflow: hidden;
+  margin: 2rem;
   @include responsive(tablet) {
     width: 100%;
   }
