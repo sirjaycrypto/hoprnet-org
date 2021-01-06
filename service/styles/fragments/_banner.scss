@@ -126,14 +126,12 @@
   transition: all 600ms ease-in-out;
   position: fixed;
 
-  // opacity: 0;
-  // transform: translateY(100%);
+
   &.modeFollow {
     bottom: 5vh;
     animation: firstShow ease 300ms forwards;
   }
   &.fixOnBanner {
-    transition-delay: position 300ms;
     position: relative;
   }
   & > div {
