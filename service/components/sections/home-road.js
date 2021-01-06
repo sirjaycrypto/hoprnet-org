@@ -90,7 +90,7 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
             return (
               <div key={index} className="road-map-element">
                 <div>
-                  <p>{date}</p>
+                  <p className="styleDate">{date}</p>
                 </div>
                 <div className="line-help">
                   <span></span>
