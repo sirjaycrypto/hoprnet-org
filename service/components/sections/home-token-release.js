@@ -2,6 +2,8 @@ import React, { useState, useEffect, forwardRef } from "react";
 import useTranslation from "next-translate/useTranslation";
 import { Line, Pie } from "react-chartjs-2";
 
+import dataPie from "../../public/assets/json/data-token-allocation.json";
+
 import dataSupply from "../../public/assets/json/dataSupply.json";
 
 function intlFormat(num) {
@@ -14,8 +16,9 @@ function makeFriendly(num) {
   return intlFormat(num);
 }
 
-const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
+const HomeTokenRelease = forwardRef(({ setVisibleNow, start }, ref) => {
   const [isMobile, setIsMobile] = useState(false);
+  const [animateDate, setAnimateDate]=useState(start);
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -24,9 +27,42 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
     }
   }, []);
 
+  const resultPie = Object.keys(dataPie).map((key) => {
+    const aux = [Number(key), dataPie[key]];
+    return aux[1];
+  });
+
+  const allSumResultPie = resultPie.reduce((a, b) => a + b, 0);
+
+  const percentagesPieItem = Object.keys(dataPie).map((key) => {
+    const aux = [Number(key), dataPie[key]];
+    return ((aux[1] / allSumResultPie) * 100).toFixed(0);
+  });
+
+  const labelsPie = [
+    t("home:graphic.public"),
+    t("home:graphic.cover"),
+    t("home:graphic.bounties"),
+    t("home:graphic.early"),
+    t("home:graphic.team"),
+    t("home:graphic.treasury"),
+  ];
+
+  const matchLabelsPie = function (names, values) {
+    const item = names.map((name, index) => {
+      name = name + ": " + values[index] + "%";
+      return name;
+    });
+
+    return item;
+  };
+
   const options = {
     maintainAspectRatio: false,
     responsive: true,
+    animation: {
+      duration: 5000,
+    },
     tooltips: {
       mode: "x-axis",
       bodyFontFamily: "Source Code Pro",
@@ -38,7 +74,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
       maintainAspectRatio: false,
       labels: {
         fontFamily: "Source Code Pro",
-        fontSize: 14,
+        fontSize: 16,
         fontColor: "#414141",
         padding: 18,
         boxWidth: 21,
@@ -48,18 +84,11 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
   };
 
   const data = {
-    labels: [
-      t("home:graphic.public"),
-      t("home:graphic.cover"),
-      t("home:graphic.bounties"),
-      t("home:graphic.early"),
-      t("home:graphic.team"),
-      t("home:graphic.treasury"),
-    ],
+    labels: matchLabelsPie(labelsPie, percentagesPieItem),
     datasets: [
       {
         label: t("home:graphic.votes"),
-        data: [75000000, 250000000, 56875000, 180000000, 200000000, 238125000],
+        data: start ? resultPie : "",
         backgroundColor: [
           "#FEFDAF",
           "#FEFDAF",
@@ -104,17 +133,15 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
         borderWidth: 0,
       },
     },
+    animation: {
+      duration: 8000,
+    },
     tooltips: {
       mode: "x-axis",
       bodyFontFamily: "Source Code Pro",
       callbacks: {
         label: function (e, t) {
-          return ""
-            .concat(t.legend[e.datasetIndex], " ")
-            .concat(
-              e.yLabel.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
-              " HOPR"
-            );
+          return " ".concat(t.legend[e.datasetIndex], " ");
         },
       },
     },
@@ -176,7 +203,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
       t("home:graphic.treasury"),
     ],
     labels: dataDate,
-    datasets: [
+    datasets:  start ? [
       {
         label: t("home:graphic.public"),
         data: cleanData(dataPublicSale),
@@ -236,16 +263,12 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow }, ref) => {
         pointBorderWidth: 0,
         lineTension: 0,
       },
-    ],
+    ]:'',
   };
 
   return (
     <>
-      <section
-        ref={ref}
-        id="TOKEN-RELEASE"
-        className="section-token-release "
-      >
+      <section ref={ref} id="TOKEN-RELEASE" className="section-token-release ">
         <div className="container">
           <div>
             <h2>{t("home:token.title")}</h2>

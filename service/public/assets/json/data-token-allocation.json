@@ -1,10 +1,8 @@
-[
-    {
-        "Public Sale": 75000000,
-        "Cover Traffic": 250000000,
-        "Bounties": 56875000,
-        "Early Token Buyers": 180000000,
-        "Team & Advisors": 200000000,
-        "Treasury": 238125000
-    }
-]
+{
+    "Public Sale": 75000000,
+    "Cover Traffic": 250000000,
+    "Bounties": 56875000,
+    "Early Token Buyers": 180000000,
+    "Team & Advisors": 200000000,
+    "Treasury": 238125000
+}

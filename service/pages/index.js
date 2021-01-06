@@ -8,7 +8,7 @@ import HomeHardware from "../components/sections/home-hardware";
 import HomeBacked from "../components/sections/home-backed";
 import Slide from "../components/organisms/slider";
 import HomeTokenReleas from "../components/sections/home-token-release";
-import HomeRoadMap from '../components/sections/home-road'
+import HomeRoadMap from "../components/sections/home-road";
 import { loadNamespaces } from "./_app";
 import useTranslation from "next-translate/useTranslation";
 
@@ -91,6 +91,7 @@ export default function Home() {
       />
       <Slide />
       <HomeTokenReleas
+        start={visibleNow == "TOKEN-RELEASE" && true}
         setVisibleNow={setVisibleNow}
         ref={currentElementTokenRel}
       />
@@ -100,20 +101,15 @@ export default function Home() {
         ref={currentElementVisibleBanner}
       >
         <div className="container">
-          <h3>
-          {t("home:banner.label")}
-          </h3>
+          <h3>{t("home:banner.label")}</h3>
         </div>
-        <div className="btn-follow " >
+        <div className="btn-follow ">
           <div onClick={() => clickBtn()} className="btn-banner ">
-            <span
-            >
-              {t("common:btn-token")}
-            </span>
+            <span>{t("common:btn-token")}</span>
           </div>
         </div>
       </section>
-      <HomeRoadMap/>
+      <HomeRoadMap />
       <Footer setVisibleNow={setVisibleNow} ref={currentElementTokenFooter} />
     </Layout>
   );
