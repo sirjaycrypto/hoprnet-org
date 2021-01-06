@@ -124,7 +124,18 @@
   width: 100%;
 
   transition: all 600ms ease-in-out;
-  bottom: 10px;
+  position: fixed;
+
+  // opacity: 0;
+  // transform: translateY(100%);
+  &.modeFollow {
+    bottom: 5vh;
+    animation: firstShow ease 300ms forwards;
+  }
+  &.fixOnBanner {
+    transition-delay: position 300ms;
+    position: relative;
+  }
   & > div {
     background: linear-gradient(90deg, #0000db 0%, #292941 100%);
     transition: all 600ms ease-in-out;
@@ -161,5 +172,19 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes firstShow {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(20%);
+  }
+  100% {
+    transform: translateY(0%);
   }
 }

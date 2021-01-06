@@ -18,6 +18,8 @@ import Footer from "../components/molecules/footer";
 import ReactPlayer from "react-player/lazy";
 export default function Home() {
   const [visibleNow, setVisibleNow] = useState("");
+  const [activeBtn, setActiveBtn] = useState(false);
+
   const [videoAutoPLay, setVideoAutoPlay] = useState(false);
   const [isVisibleHero, currentElementHero] = useVisibility(100);
   const [isVisibleVideo, currentElementVideo] = useVisibility(100);
@@ -38,6 +40,12 @@ export default function Home() {
     if (isVisibleBack) setVisibleNow(currentElementVisibleBack.current.id);
     if (isVisibleBanner) setVisibleNow(currentElementVisibleBanner.current.id);
     if (isVisibleTokenRel) setVisibleNow(currentElementTokenRel.current.id);
+
+    if (visibleNow == "TOKEN-FEATURES") {
+      setActiveBtn(true);
+    } else if (visibleNow == "BANNER") {
+      setActiveBtn(false);
+    }
   }, [
     isVisibleHero,
     isVisibleVideo,
@@ -103,7 +111,7 @@ export default function Home() {
         <div className="container">
           <h3>{t("home:banner.label")}</h3>
         </div>
-        <div className="btn-follow ">
+        <div className={"btn-follow " + (activeBtn ? "modeFollow" : "fixOnBanner")}>
           <div onClick={() => clickBtn()} className="btn-banner ">
             <span>{t("common:btn-token")}</span>
           </div>
