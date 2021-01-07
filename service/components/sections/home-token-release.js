@@ -63,10 +63,10 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow, start }, ref) => {
     animation: {
       duration: 5000,
     },
-    tooltips: {
-      mode: "x-axis",
-      bodyFontFamily: "Source Code Pro",
-    },
+    // tooltips: {
+    //   mode: "x-axis",
+    //   bodyFontFamily: "Source Code Pro",
+    // },
     legend: {
       display: true,
       position: isMobile ? "bottom" : "right",
@@ -141,10 +141,18 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow, start }, ref) => {
       bodyFontFamily: "Source Code Pro",
       callbacks: {
         label: function (e, t) {
-          return " ".concat(t.legend[e.datasetIndex], " ");
+          return ""
+            .concat(t.legend[e.datasetIndex], " ")
+            .concat(
+              e.yLabel.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+              " HOPR"
+            );
         },
       },
     },
+
+
+
     scales: {
       yAxes: [
         {

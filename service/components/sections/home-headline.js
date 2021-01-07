@@ -14,12 +14,22 @@ const HomeHeadline = forwardRef(({ setVisibleNow }, ref) => {
         id="blindText"
         className="section-blindText invert-color "
       >
-        <div>
-          <h2>{t("home:headline.title")}</h2>
+        <div className="container">
+          <div className="helper-test">
+            <div>
+              <h2>{t("home:headline.title")}</h2>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: t("home:headline.beforeInfoTop"),
+                }}
+                className="special"
+              ></p>
+              <p className="special">{t("home:headline.beforeInfoBottom")}</p>
+            </div>
+          </div>
         </div>
         <div className="container">
           <div>
-            <p className="special">{t("home:headline.beforeInfo")}</p>
             <p>{t("home:headline.mainInfo")}</p>
             <div className="">
               <p className="link-out-label">

@@ -42,10 +42,8 @@
     }
   }
   &:last-child {
-    margin-bottom: 120px;
-    @include responsive(tablet) {
-      margin-bottom: 50px;
-    }
+    margin-bottom: 0;
+
   }
 
   &:nth-child(2) {

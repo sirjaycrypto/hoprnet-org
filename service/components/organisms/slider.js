@@ -13,22 +13,18 @@ export default function Slide() {
       title: "home:slide.slideB",
       paragraph: "home:slide.slideBMain",
     },
-    {
-      title: "home:slide.slideC",
-      paragraph: "home:slide.slideCMain",
-    },
   ];
 
   var settings = {
     arrows: false,
-    autoplay: false,
+    autoplay: true,
     dots: true,
-    lazyLoad: true,
+    lazyLoad: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    initialSlide: 2,
+    initialSlide: 0,
   };
 
   return (

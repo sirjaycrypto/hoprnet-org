@@ -1,5 +1,4 @@
 .section-hopr-github {
- 
   h2,
   p {
     color: $hopr_greySp;
@@ -10,6 +9,10 @@
     line-height: 72px;
     letter-spacing: 0.5px;
     text-align: center;
+    margin: 120px 0;
+    @include responsive(tablet) {
+      margin: 50px 0;
+    }
     @include responsive(phone) {
       font-size: 30px;
       font-style: normal;
@@ -77,8 +80,8 @@
     img {
       margin: auto;
       object-fit: contain;
-      width: 80%;
-      height: 300px;
+      width: 100%;
+
       @include responsive(tablet) {
         width: 100%;
         height: auto;
