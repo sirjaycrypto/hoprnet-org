@@ -119,7 +119,14 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow, start }, ref) => {
           "#1423C1",
           "#060D62",
         ],
-        hoverBorderColor: ["#ccc", "#ccc", "#ccc", "#ccc", "#ccc", "#ccc"],
+        hoverBorderColor: [
+          "#FEFDAF",
+          "#FEFDAF",
+          "#C0F3FF",
+          "#4B79B4",
+          "#1423C1",
+          "#060D62",
+        ],
         borderColor: "#fff",
         borderWidth: 3,
       },
@@ -166,7 +173,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow, start }, ref) => {
       callbacks: {
         label: function (e, t) {
           return ""
-            .concat(t.legend[e.datasetIndex], "  ")
+            .concat( "  ", t.legend[e.datasetIndex], "   ")
             .concat(
               e.yLabel.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "'"),
               " HOPR"
@@ -202,8 +209,9 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow, start }, ref) => {
           gridLines: {
             display: false,
           },
+
           ticks: {
-            bodyFontFamily: "Source Code Pro",
+            fontFamily: "Source Code Pro",
             fontSize: 14,
             maxRotation: 100,
             minRotation: 90,
@@ -319,16 +327,6 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow, start }, ref) => {
                   <li>{t("home:token.listItemD")}</li>
                   <li>{t("home:token.listItemE")}</li>
                   <li>{t("home:token.listItemF")}</li>
-                  <li>{t("home:token.listItemG")}</li>
-                  <li>
-                    <a
-                      href="https://coinmarketcap.com/currencies/hopr/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      KEY METRICS-box
-                    </a>
-                  </li>
                 </ul>
               </div>
             </div>

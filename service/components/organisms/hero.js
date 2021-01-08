@@ -4,8 +4,9 @@ import Modal from "../atoms/modal";
 import HeroInfo from "../molecules/hero-info";
 
 const Hero = forwardRef(({}, ref) => {
-  const [dateFinal, setDateFinal] = useState(true);
-  
+  const [dateFinal, setDateFinal] = useState(false);
+  const [modePreSales, setModePreSales] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   const [days, setDays] = useState("");
   const [hours, setHours] = useState("");
   const [minutes, setMinutes] = useState("");
@@ -14,9 +15,13 @@ const Hero = forwardRef(({}, ref) => {
 
   useEffect(() => {}, []);
 
-  const changeItemVisible = ()=>{
-    setDateFinal(false)
-  }
+  const showModalActive = () => {
+    setShowModal(!showModal);
+  };
+
+  const changeModePreSale = () => {
+    setModePreSales(!modePreSales);
+  };
 
   const clickBtn = () => {
     console.log("Click");
@@ -52,6 +57,9 @@ const Hero = forwardRef(({}, ref) => {
     <>
       <section ref={ref} className="section-hero">
         <HeroInfo />
+        <div onClick={() => changeModePreSale()} className="changeBtn-style">
+          <p>Show Pre-sale</p>
+        </div>
 
         <video
           autoPlay
@@ -82,7 +90,12 @@ const Hero = forwardRef(({}, ref) => {
 
         <div className="container">
           <div className="text-wrapper">
-            {!dateFinal ? (
+            {showModal ? (
+              <Modal
+                showModal={showModal}
+                showModalActive={() => showModalActive()}
+              />
+            ) : (
               <>
                 <h4>{t("home:hero.subtitle")}</h4>
 
@@ -110,11 +123,27 @@ const Hero = forwardRef(({}, ref) => {
                   </div>
                 </div>
               </>
-            ) : (
-              <Modal dateFinal={dateFinal} changeItemVisible={()=>changeItemVisible()} />
             )}
           </div>
         </div>
+
+        {modePreSales && (
+          <div className="preSales-bottom container">
+            <div>
+              <p>Subscribe to be notified when the token is on sale </p>
+              <div onClick={() => showModalActive()} className="btn-small ">
+                <span>{t("common:subscribe")}</span>
+              </div>
+            </div>
+
+            <div>
+              <p>Join our Telegram-Group</p>
+              <div className="btn-small ">
+                <span>{t("common:join")}</span>
+              </div>
+            </div>
+          </div>
+        )}
       </section>
     </>
   );

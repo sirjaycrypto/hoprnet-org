@@ -36,3 +36,15 @@
   align-items: center;
   justify-content: center;
 }
+
+.btn-small {
+  background: linear-gradient(180deg, #0000b2 15.32%, #000050 83.35%);
+  border-radius: 28.3217px;
+  height: fit-content;
+  margin-left: 1em !important;
+  padding: 0.5em 0.8em !important;
+  span {
+   
+    text-transform: capitalize !important;
+  }
+}

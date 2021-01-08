@@ -16,7 +16,7 @@
   "disclaimer": "Disclaimer",
   "entrepreneurs": "Entrepreneurs",
   "fixes&testing": "fixes and testing",
-  "getHorp":"Get HOPR",
+  "getHorp": "Get HOPR",
   "gitcoin": " Gitcoin",
   "hereLabel": " here",
   "improvements": "improvements",
@@ -38,5 +38,7 @@
   "support": "Support",
   "techies": "Techies",
   "title": "HOPR EN",
-  "various": "various"
+  "various": "various",
+  "subscribe": "Subscribe",
+  "join": "Join"
 }
