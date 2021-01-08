@@ -106,6 +106,7 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
               linkC,
               linkTextC,
             } = e;
+        
             return (
               <div key={index} className="road-map-element">
                 <div>
@@ -119,9 +120,9 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
                   <p>{about}</p>
 
                   <div className="links-exp">
-                    (<a href={linkA}>{linkTextA}</a>{" "}
-                    <a href={linkB}> {linkTextB}</a>{" "}
-                    <a href={linkC}> {linkTextC}</a>)
+                    (<a href={linkA}>{linkTextA}</a>
+                   {linkB ? <a href={linkB}> {linkTextB}</a> : ''}
+                    {linkC ?  <a href={linkC}> {linkTextC}</a> : ''})
                   </div>
                 </div>
               </div>
