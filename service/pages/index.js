@@ -22,6 +22,7 @@ export default function Home() {
 
   const [videoAutoPLay, setVideoAutoPlay] = useState(false);
   const [isVisibleHero, currentElementHero] = useVisibility(100);
+  const [isVisibleInvestData, currentInvestData] = useVisibility(100);
   const [isVisibleVideo, currentElementVideo] = useVisibility(100);
   const [isVisibleTokenFea, currentElementTokenFea] = useVisibility(100);
   const [isVisibleHow, currentElementAlt] = useVisibility(100);
@@ -34,7 +35,9 @@ export default function Home() {
 
   useEffect(() => {
     if (isVisibleFooter) setVisibleNow(currentElementTokenFooter.current.id);
+    if (isVisibleInvestData) setVisibleNow(currentInvestData.current.id);
     if (isVisibleTokenFea) setVisibleNow(currentElementTokenFea.current.id);
+    if (isVisibleVideo) setVisibleNow(currentElementVideo.current.id);
     if (isVisibleHow) setVisibleNow(currentElementAlt.current.id);
     if (isVisibleNode) setVisibleNow(currentElementNode.current.id);
     if (isVisibleBack) setVisibleNow(currentElementVisibleBack.current.id);
@@ -45,15 +48,22 @@ export default function Home() {
       setActiveBtn(true);
     } else if (visibleNow == "BANNER") {
       setActiveBtn(false);
+    } else if (
+      visibleNow == "blindText" ||
+      visibleNow == "video-area"
+    ) {
+      setActiveBtn(false);
     }
   }, [
     isVisibleHero,
+    setVisibleNow,
     isVisibleVideo,
     isVisibleFooter,
     isVisibleHow,
     isVisibleTokenRel,
     isVisibleBanner,
     currentElementVisibleBanner,
+    currentInvestData,
     currentElementAlt,
     currentElementHero,
     currentElementVideo,
@@ -61,12 +71,13 @@ export default function Home() {
     currentElementTokenRel,
     currentElementTokenFooter,
   ]);
+console.log(visibleNow)
 
   return (
     <Layout visibleNow={visibleNow}>
       <ChooseLanguage />
       <Hero setVisibleNow={setVisibleNow} ref={currentElementHero} />
-      <HomeHeadline />
+      <HomeHeadline    ref={currentInvestData}/>
       <section
         id="video-area"
         className="video-home "
@@ -111,7 +122,9 @@ export default function Home() {
         <div className="container">
           <h3>{t("home:banner.label")}</h3>
         </div>
-        <div className={"btn-follow " + (activeBtn ? "modeFollow" : "fixOnBanner")}>
+        <div
+          className={"btn-follow " + (activeBtn ? "modeFollow" : "fixOnBanner")}
+        >
           <div onClick={() => clickBtn()} className="btn-banner ">
             <span>{t("common:getHorp")}</span>
           </div>

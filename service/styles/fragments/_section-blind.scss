@@ -254,11 +254,11 @@
   }
   &::before {
     background: white;
-    animation: animateCircleWhite 2s infinite ease-in-out;
+    animation: animateCircleWhite 2200ms infinite ease-in-out;
   }
   &::after {
     background: $hopr_yellow;
-    animation: animateCircleYellow 2s infinite 1s ease-in-out;
+    animation: animateCircleYellow 2000ms infinite ease-in-out;
   }
 }
 
