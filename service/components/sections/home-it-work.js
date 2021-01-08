@@ -5,19 +5,19 @@ const HomeHomeItWork = forwardRef(({ setVisibleNow }, ref) => {
   const { t } = useTranslation();
   const dataInfo = [
     {
-      img: "/assets/images/01_hopr_Private_Animation.gif",
+      img: "/assets/images/hopr_Private.gif",
       title: "home:work.private",
       paragraph: "home:work.privateMain",
       mirrorBox: false,
     },
     {
-      img: "/assets/images/02_hopr_Profitable_Animation.gif",
+      img: "/assets/images/hopr_Profitable.gif",
       title: "home:work.profitable",
       paragraph: "home:work.profitableMain",
       mirrorBox: true,
     },
     {
-      img: "/assets/images/hopr_Performant_Animation.gif",
+      img: "/assets/images/hopr_Performant.gif",
       title: "home:work.performant",
       paragraph: "home:work.performantMain",
       mirrorBox: false,

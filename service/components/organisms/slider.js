@@ -13,6 +13,11 @@ export default function Slide() {
       title: "home:slide.slideB",
       paragraph: "home:slide.slideBMain",
     },
+    {
+      title: "Gin Chao, Strategy Officer of Binance",
+      paragraph:
+        'Add a third quote: "The team at HOPR has shown us how their decentralized network achieves privacy guarantees on the metadata level and gives power back to the people.',
+    },
   ];
 
   var settings = {

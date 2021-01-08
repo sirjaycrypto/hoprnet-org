@@ -19,10 +19,9 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
       title: "Funding and Launch ",
       about:
         "HOPR officially launches, concluding a $1m seed funding round led by Binance. The HOPR Association is founded. ",
- 
+
       linkA: "#",
       linkTextA: "Binance",
-
     },
     {
       date: "July 2020",
@@ -77,7 +76,6 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
         "A robust API allows others to build metadata-private dApps and services on top of the HOPR protocol.",
       linkA: "#",
       linkTextA: "Blogpost",
-      
     },
     {
       date: "Sept. 2021",
@@ -97,7 +95,17 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
         </div>
         <div className="container">
           {data.map((e, index) => {
-            const { date, title, about, linkA, linkTextA,linkB,linkTextB,linkC,linkTextC } = e;
+            const {
+              date,
+              title,
+              about,
+              linkA,
+              linkTextA,
+              linkB,
+              linkTextB,
+              linkC,
+              linkTextC,
+            } = e;
             return (
               <div key={index} className="road-map-element">
                 <div>
@@ -111,7 +119,9 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
                   <p>{about}</p>
 
                   <div className="links-exp">
-                    ( <a href={linkA}>{linkTextA}</a> <a href={linkB}> {linkTextB}</a> <a href={linkC}> {linkTextC}</a>)
+                    (<a href={linkA}>{linkTextA}</a>{" "}
+                    <a href={linkB}> {linkTextB}</a>{" "}
+                    <a href={linkC}> {linkTextC}</a>)
                   </div>
                 </div>
               </div>

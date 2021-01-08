@@ -18,7 +18,7 @@ function makeFriendly(num) {
 
 const HomeTokenRelease = forwardRef(({ setVisibleNow, start }, ref) => {
   const [isMobile, setIsMobile] = useState(false);
-  const [animateDate, setAnimateDate]=useState(start);
+  const [animateDate, setAnimateDate] = useState(start);
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -60,22 +60,24 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow, start }, ref) => {
   const options = {
     maintainAspectRatio: false,
     responsive: true,
-    
+
     animation: {
       duration: 5000,
     },
 
     tooltips: {
-
       bodyFontFamily: "Source Code Pro",
-     callbacks: {
-      label: function (e, t) {
-        return ""
-          .concat(t.labels[e.index].slice(0, -1))
-          .concat(
-            t.datasets[0].data[e.index].toString().replace(/\B(?=(\d{3})+(?!\d))/g, "'"),
-          );
-      },
+      callbacks: {
+        label: function (e, t) {
+          console.log(t.datasets[0].data[e.index]);
+          return ""
+            .concat(t.labels[e.index].slice(0, -3), " ")
+            .concat(
+              t.datasets[0].data[e.index]
+                .toString()
+                .replace(/\B(?=(\d{3})+(?!\d))/g, "'")
+            );
+        },
       },
     },
     legend: {
@@ -83,7 +85,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow, start }, ref) => {
       position: isMobile ? "bottom" : "right",
       responsive: false,
       maintainAspectRatio: false,
-   
+
       labels: {
         fontFamily: "Source Code Pro",
         fontSize: 16,
@@ -117,16 +119,9 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow, start }, ref) => {
           "#1423C1",
           "#060D62",
         ],
-        hoverBorderColor: [
-          "#ccc",
-          "#ccc",
-          "#ccc",
-          "#ccc",
-          "#ccc",
-          "#ccc",
-        ],
+        hoverBorderColor: ["#ccc", "#ccc", "#ccc", "#ccc", "#ccc", "#ccc"],
         borderColor: "#fff",
-        borderWidth:3,
+        borderWidth: 3,
       },
     ],
   };
@@ -164,7 +159,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow, start }, ref) => {
     animation: {
       duration: 8000,
     },
-    
+
     tooltips: {
       mode: "x-axis",
       bodyFontFamily: "Source Code Pro",
@@ -179,8 +174,6 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow, start }, ref) => {
         },
       },
     },
-
-
 
     scales: {
       yAxes: [
@@ -242,7 +235,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow, start }, ref) => {
       t("home:graphic.treasury"),
     ],
     labels: dataDate,
-    datasets:   [
+    datasets: [
       {
         label: t("home:graphic.public"),
         data: cleanData(dataPublicSale),
