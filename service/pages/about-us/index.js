@@ -12,14 +12,14 @@ import { stagger, fadeInUp } from "../../util/motionConfig";
 import { loadNamespaces } from "../_app";
 
 const dataInfo = [
-  "assets/partners/avado.svg",
-  "assets/partners/froriep.png",
-  "assets/partners/elrond.png",
-  "assets/partners/health_tech_cluster.png",
-  "assets/partners/sedimentum.png",
-  "assets/partners/download.png",
-  "assets/partners/swiss_medtech.png",
-  "assets/partners/swiss_healthcare_startups.png",
+  "assets/partners/01_avado.svg",
+    "assets/partners/02_froriep.svg",
+    "assets/partners/03_elrond.svg",
+    "assets/partners/04_sedimentum.svg",
+    "assets/partners/05_swiss_medtech.svg",
+    "assets/partners/06_dai_logo.svg",
+    "assets/partners/07_health_tech_cluster.svg",
+    "assets/partners/08_swiss_healthcare_startups.svg",
 ];
 
 const dataVALUES = [

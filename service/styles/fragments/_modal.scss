@@ -1,0 +1,17 @@
+.modal {
+  background: #fff;
+  position: relative;
+  &.close {
+    transform: scale(0);
+    transition: all 350ms ease-in-out;
+  }
+  .icon-close {
+    position: absolute;
+    right: 1%;
+    top: 6%;
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

@@ -1,9 +1,11 @@
 import React, { forwardRef, useState, useEffect } from "react";
 import useTranslation from "next-translate/useTranslation";
+import Modal from "../atoms/modal";
 import HeroInfo from "../molecules/hero-info";
 
 const Hero = forwardRef(({}, ref) => {
-  const [dateFinal, setDateFinal] = useState(false);
+  const [dateFinal, setDateFinal] = useState(true);
+  
   const [days, setDays] = useState("");
   const [hours, setHours] = useState("");
   const [minutes, setMinutes] = useState("");
@@ -11,6 +13,10 @@ const Hero = forwardRef(({}, ref) => {
   const { t } = useTranslation();
 
   useEffect(() => {}, []);
+
+  const changeItemVisible = ()=>{
+    setDateFinal(false)
+  }
 
   const clickBtn = () => {
     console.log("Click");
@@ -76,34 +82,37 @@ const Hero = forwardRef(({}, ref) => {
 
         <div className="container">
           <div className="text-wrapper">
-            <h4>{t("home:hero.subtitle")}</h4>
             {!dateFinal ? (
-              <div id="clockDiv">
-                <div>
-                  <span className="days">{days}</span>
-                </div>
-                <span>:</span>
-                <div>
-                  <span className="hours">{hours}</span>
-                </div>
-                <span>:</span>
-                <div>
-                  <span className="minutes">{minutes}</span>
-                </div>
-                <span>:</span>
-                <div>
-                  <span className="seconds">{seconds}</span>
-                </div>
-              </div>
-            ) : (
-              <h1>IS Today</h1>
-            )}
+              <>
+                <h4>{t("home:hero.subtitle")}</h4>
 
-            <div>
-              <div onClick={() => clickBtn()} className="btn-banner ">
-                <span>{t("common:getHorp")}</span>
-              </div>
-            </div>
+                <div id="clockDiv">
+                  <div>
+                    <span className="days">{days}</span>
+                  </div>
+                  <span>:</span>
+                  <div>
+                    <span className="hours">{hours}</span>
+                  </div>
+                  <span>:</span>
+                  <div>
+                    <span className="minutes">{minutes}</span>
+                  </div>
+                  <span>:</span>
+                  <div>
+                    <span className="seconds">{seconds}</span>
+                  </div>
+                </div>
+
+                <div>
+                  <div onClick={() => clickBtn()} className="btn-banner ">
+                    <span>{t("common:getHorp")}</span>
+                  </div>
+                </div>
+              </>
+            ) : (
+              <Modal dateFinal={dateFinal} changeItemVisible={()=>changeItemVisible()} />
+            )}
           </div>
         </div>
       </section>

@@ -65,12 +65,19 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow, start }, ref) => {
       duration: 5000,
     },
 
-    // tooltips: {
-    //   display: false,
-    //   mode: "x-axis",
-    //   bodyFontFamily: "Source Code Pro",
+    tooltips: {
 
-    // },
+      bodyFontFamily: "Source Code Pro",
+     callbacks: {
+      label: function (e, t) {
+        return ""
+          .concat(t.labels[e.index].slice(0, -1))
+          .concat(
+            t.datasets[0].data[e.index].toString().replace(/\B(?=(\d{3})+(?!\d))/g, "'"),
+          );
+      },
+      },
+    },
     legend: {
       display: true,
       position: isMobile ? "bottom" : "right",
