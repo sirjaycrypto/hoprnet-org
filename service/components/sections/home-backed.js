@@ -5,7 +5,7 @@ const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
   const { t } = useTranslation();
   const data = [
     {
-      img: "/assets/backed_by_logo/Binance_labs.png",
+      img: "/assets/backed_by_logo/Binance_labs.svg",
       url: "https://binancelabs.substack.com/",
       title: "Binance_labs",
     },
@@ -15,17 +15,17 @@ const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
       title: "caballeros-capital",
     },
     {
-      img: "/assets/backed_by_logo/02_Spark_Logo.png",
+      img: "/assets/backed_by_logo/02_Spark_Logo.svg",
       url: "https://www.sparkdigitalcapital.com/",
       title: "spark-digital-capital",
     },
     {
-      img: "/assets/backed_by_logo/03_Focus_Labs_Logo.png",
+      img: "/assets/backed_by_logo/03_Focus_Labs_Logo.svg",
       url: "https://focuslabs.io/",
       title: "focus-labs",
     },
     {
-      img: "/assets/backed_by_logo/04_AU21CAPITAL_Logo.png",
+      img: "/assets/backed_by_logo/04_AU21CAPITAL_Logo.svg",
       url: "https://au21.capital/",
       title: "au21",
     },
@@ -33,19 +33,19 @@ const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
 
   const dataInfoPartners = [
     "assets/partners/01_avado.svg",
-    "assets/partners/02_froriep.png",
-    "assets/partners/03_elrond.png",
-    "assets/partners/04_sedimentum.png",
-    "assets/partners/05_swiss_medtech.png",
-    "assets/partners/06_dai_logo.png",
-    "assets/partners/07_health_tech_cluster.png",
-    "assets/partners/08_swiss_healthcare_startups.png",
+    "assets/partners/02_froriep.svg",
+    "assets/partners/03_elrond.svg",
+    "assets/partners/04_sedimentum.svg",
+    "assets/partners/05_swiss_medtech.svg",
+    "assets/partners/06_dai_logo.svg",
+    "assets/partners/07_health_tech_cluster.svg",
+    "assets/partners/08_swiss_healthcare_startups.svg",
   ];
 
   const dataInfoAssSee = [
-    "assets/as_see/coindesk.png",
-    "assets/as_see/cointelegraph.png",
-    "assets/as_see/moneytoday.png",
+    "assets/as_see/coindesk.svg",
+    "assets/as_see/cointelegraph.svg",
+    "assets/as_see/moneytoday.svg",
   ];
 
   return (

@@ -60,13 +60,16 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow, start }, ref) => {
   const options = {
     maintainAspectRatio: false,
     responsive: true,
+    
     animation: {
       duration: 5000,
     },
-    // tooltips: {
-    //   mode: "x-axis",
-    //   bodyFontFamily: "Source Code Pro",
-    // },
+    events: [],
+    tooltips: {
+      
+      mode: "x-axis",
+      bodyFontFamily: "Source Code Pro",
+    },
     legend: {
       display: true,
       position: isMobile ? "bottom" : "right",
@@ -88,7 +91,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow, start }, ref) => {
     datasets: [
       {
         label: t("home:graphic.votes"),
-        data: start ? resultPie : "",
+        data: resultPie,
         backgroundColor: [
           "#FEFDAF",
           "#FEFDAF",
@@ -136,6 +139,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow, start }, ref) => {
     animation: {
       duration: 8000,
     },
+    
     tooltips: {
       mode: "x-axis",
       bodyFontFamily: "Source Code Pro",
@@ -144,7 +148,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow, start }, ref) => {
           return ""
             .concat(t.legend[e.datasetIndex], " ")
             .concat(
-              e.yLabel.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+              e.yLabel.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "'"),
               " HOPR"
             );
         },
@@ -211,7 +215,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow, start }, ref) => {
       t("home:graphic.treasury"),
     ],
     labels: dataDate,
-    datasets:  start ? [
+    datasets:   [
       {
         label: t("home:graphic.public"),
         data: cleanData(dataPublicSale),
@@ -271,7 +275,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow, start }, ref) => {
         pointBorderWidth: 0,
         lineTension: 0,
       },
-    ]:'',
+    ],
   };
 
   return (
