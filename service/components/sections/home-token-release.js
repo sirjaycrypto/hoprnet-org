@@ -64,17 +64,19 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow, start }, ref) => {
     animation: {
       duration: 5000,
     },
-    events: [],
-    tooltips: {
-      
-      mode: "x-axis",
-      bodyFontFamily: "Source Code Pro",
-    },
+
+    // tooltips: {
+    //   display: false,
+    //   mode: "x-axis",
+    //   bodyFontFamily: "Source Code Pro",
+
+    // },
     legend: {
       display: true,
       position: isMobile ? "bottom" : "right",
       responsive: false,
       maintainAspectRatio: false,
+   
       labels: {
         fontFamily: "Source Code Pro",
         fontSize: 16,
@@ -100,8 +102,24 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow, start }, ref) => {
           "#1423C1",
           "#060D62",
         ],
+        hoverBackgroundColor: [
+          "#FEFDAF",
+          "#FEFDAF",
+          "#C0F3FF",
+          "#4B79B4",
+          "#1423C1",
+          "#060D62",
+        ],
+        hoverBorderColor: [
+          "#ccc",
+          "#ccc",
+          "#ccc",
+          "#ccc",
+          "#ccc",
+          "#ccc",
+        ],
         borderColor: "#fff",
-        borderWidth: 3,
+        borderWidth:3,
       },
     ],
   };
@@ -146,7 +164,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow, start }, ref) => {
       callbacks: {
         label: function (e, t) {
           return ""
-            .concat(t.legend[e.datasetIndex], " ")
+            .concat(t.legend[e.datasetIndex], "  ")
             .concat(
               e.yLabel.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "'"),
               " HOPR"
@@ -185,9 +203,11 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow, start }, ref) => {
             display: false,
           },
           ticks: {
+            bodyFontFamily: "Source Code Pro",
+            fontSize: 14,
             maxRotation: 100,
             minRotation: 90,
-            maxTicksLimit: 12,
+            maxTicksLimit: 16,
           },
         },
       ],

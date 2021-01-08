@@ -21,13 +21,6 @@ const Hero = forwardRef(({}, ref) => {
     let result = ("0" + num).slice(-2);
     return result;
   }
-  // //1612072800000
-
-  // var now = new Date().getTime();
-  // var pibote = countDownDate - now;
-  // //console.log( countDownDate == pibote);
-  // console.log(countDownDate / 10);
-  // console.log(pibote / 100000000);
 
   var time = setInterval(function () {
     var now = new Date().getTime();
