@@ -19,7 +19,7 @@ const Modal = forwardRef(({ showModal, showModalActive }, ref) => {
           >
             <img src="/assets/icons/close.svg" alt="hopr logo" />
           </div>
-          {/* <SubStrack /> */}
+  
         </div>
       </div>
     </>
