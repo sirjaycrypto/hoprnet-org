@@ -24,10 +24,11 @@ export default function Slide() {
     autoplay: true,
     dots: true,
     lazyLoad: false,
-    infinite: false,
+    infinite: true,
     speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    fade:true,
+    slidesToShow: 0,
+    slidesToScroll: 0,
     initialSlide: 0,
   };
 
