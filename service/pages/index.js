@@ -19,6 +19,7 @@ import Footer from "../components/molecules/footer";
 export default function Home() {
   const [visibleNow, setVisibleNow] = useState("");
   const [activeBtn, setActiveBtn] = useState(false);
+  const [animateChart, setAnimateChart] = useState(false);
   const [videoAutoPLay, setVideoAutoPlay] = useState(false);
   const [isVisibleHero, currentElementHero] = useVisibility(100);
   const [isVisibleInvestData, currentInvestData] = useVisibility(100);
@@ -42,12 +43,12 @@ export default function Home() {
     if (isVisibleBack) setVisibleNow(currentElementVisibleBack.current.id);
     if (isVisibleBanner) setVisibleNow(currentElementVisibleBanner.current.id);
     if (isVisibleTokenRel) setVisibleNow(currentElementTokenRel.current.id);
-
-    if (visibleNow == "TOKEN-FEATURES") {
+    if (visibleNow == "TOKEN-RELEASE") {
+      setAnimateChart(true);
+    }
+    if (visibleNow == "video-area") {
       setActiveBtn(true);
-    } else if (visibleNow == "BANNER") {
-      setActiveBtn(false);
-    } else if (visibleNow == "blindText" || visibleNow == "video-area") {
+    } else if (visibleNow == "BANNER" || visibleNow == "blindText") {
       setActiveBtn(false);
     }
   }, [
@@ -67,7 +68,6 @@ export default function Home() {
     currentElementTokenRel,
     currentElementTokenFooter,
   ]);
-
 
   return (
     <Layout visibleNow={visibleNow}>
@@ -96,7 +96,7 @@ export default function Home() {
       />
       <Slide />
       <HomeTokenReleas
-        start={visibleNow == "TOKEN-RELEASE" && true}
+        start={animateChart}
         setVisibleNow={setVisibleNow}
         ref={currentElementTokenRel}
       />

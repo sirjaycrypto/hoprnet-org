@@ -3,7 +3,6 @@ import useTranslation from "next-translate/useTranslation";
 import { Line, Pie } from "react-chartjs-2";
 
 import dataPie from "../../public/assets/json/data-token-allocation.json";
-
 import dataSupply from "../../public/assets/json/dataSupply.json";
 
 function intlFormat(num) {
@@ -16,9 +15,9 @@ function makeFriendly(num) {
   return intlFormat(num);
 }
 
-const HomeTokenRelease = forwardRef(({ setVisibleNow, start }, ref) => {
+const HomeTokenRelease = forwardRef(({ start }, ref) => {
   const [isMobile, setIsMobile] = useState(false);
-  const [animateDate, setAnimateDate] = useState(start);
+
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -53,7 +52,6 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow, start }, ref) => {
       name = name + ": " + values[index] + "%";
       return name;
     });
-
     return item;
   };
 
@@ -62,7 +60,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow, start }, ref) => {
     responsive: true,
 
     animation: {
-      duration: 5000,
+      duration: 8000,
     },
 
     tooltips: {
@@ -101,7 +99,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow, start }, ref) => {
     datasets: [
       {
         label: t("home:graphic.votes"),
-        data: resultPie,
+        data: start ? resultPie : "",
         backgroundColor: [
           "#FEFDAF",
           "#FEFDAF",
@@ -173,7 +171,7 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow, start }, ref) => {
       callbacks: {
         label: function (e, t) {
           return ""
-            .concat( "  ", t.legend[e.datasetIndex], "   ")
+            .concat("  ", t.legend[e.datasetIndex], "   ")
             .concat(
               e.yLabel.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "'"),
               " HOPR"
@@ -243,67 +241,70 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow, start }, ref) => {
       t("home:graphic.treasury"),
     ],
     labels: dataDate,
-    datasets: [
-      {
-        label: t("home:graphic.public"),
-        data: cleanData(dataPublicSale),
-        backgroundColor: ["#FEFDAF"],
-        pointBackgroundColor: "#FEFDAF",
-        borderColor: "#fff",
-        borderWidth: 2,
-        pointBorderWidth: 0,
-        lineTension: 0,
-      },
-      {
-        label: t("home:graphic.cover"),
-        data: cleanData(dataCoverTraffic),
-        backgroundColor: ["#FEFDAF"],
-        pointBackgroundColor: "#FEFDAF",
-        borderWidth: 0,
-        pointBorderWidth: 0,
-        lineTension: 0,
-      },
-      {
-        label: t("home:graphic.bounties"),
-        data: cleanData(dataBounties),
-        backgroundColor: ["#C0F3FF"],
-        pointBackgroundColor: "#C0F3FF",
-        borderColor: "#fff",
-        borderWidth: 2,
-        pointBorderWidth: 0,
-        lineTension: 0,
-      },
-      {
-        label: t("home:graphic.early"),
-        data: cleanData(dataEarlyTokenBuyers),
-        backgroundColor: ["#4B79B4"],
-        pointBackgroundColor: "#4B79B4",
-        borderColor: "#fff",
-        borderWidth: 2,
-        pointBorderWidth: 0,
-        lineTension: 0,
-      },
-      {
-        label: t("home:graphic.team"),
-        data: cleanData(dataTeamNAdvisors),
-        backgroundColor: ["#1423C1"],
-        pointBackgroundColor: "#1423C1",
-        borderColor: "#fff",
-        borderWidth: 2,
-        pointBorderWidth: 0,
-        lineTension: 0,
-      },
-      {
-        label: t("home:graphic.treasury"),
-        data: cleanData(dataTreasury),
-        backgroundColor: ["#060D62"],
-        pointBackgroundColor: "#060D62",
-        borderColor: "#fff",
-        borderWidth: 2,
-        pointBorderWidth: 0,
-        lineTension: 0,
-      },
-    ],
+
+    datasets: start
+      ? [
+          {
+            label: t("home:graphic.public"),
+            data: cleanData(dataPublicSale),
+            backgroundColor: ["#FEFDAF"],
+            pointBackgroundColor: "#FEFDAF",
+            borderColor: "#fff",
+            borderWidth: 2,
+            pointBorderWidth: 0,
+            lineTension: 0,
+          },
+          {
+            label: t("home:graphic.cover"),
+            data: cleanData(dataCoverTraffic),
+            backgroundColor: ["#FEFDAF"],
+            pointBackgroundColor: "#FEFDAF",
+            borderWidth: 0,
+            pointBorderWidth: 0,
+            lineTension: 0,
+          },
+          {
+            label: t("home:graphic.bounties"),
+            data: cleanData(dataBounties),
+            backgroundColor: ["#C0F3FF"],
+            pointBackgroundColor: "#C0F3FF",
+            borderColor: "#fff",
+            borderWidth: 2,
+            pointBorderWidth: 0,
+            lineTension: 0,
+          },
+          {
+            label: t("home:graphic.early"),
+            data: cleanData(dataEarlyTokenBuyers),
+            backgroundColor: ["#4B79B4"],
+            pointBackgroundColor: "#4B79B4",
+            borderColor: "#fff",
+            borderWidth: 2,
+            pointBorderWidth: 0,
+            lineTension: 0,
+          },
+          {
+            label: t("home:graphic.team"),
+            data: cleanData(dataTeamNAdvisors),
+            backgroundColor: ["#1423C1"],
+            pointBackgroundColor: "#1423C1",
+            borderColor: "#fff",
+            borderWidth: 2,
+            pointBorderWidth: 0,
+            lineTension: 0,
+          },
+          {
+            label: t("home:graphic.treasury"),
+            data: cleanData(dataTreasury),
+            backgroundColor: ["#060D62"],
+            pointBackgroundColor: "#060D62",
+            borderColor: "#fff",
+            borderWidth: 2,
+            pointBorderWidth: 0,
+            lineTension: 0,
+          },
+        ]
+      : "",
   };
 
   return (
