@@ -69,7 +69,6 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow, start }, ref) => {
       bodyFontFamily: "Source Code Pro",
       callbacks: {
         label: function (e, t) {
-          console.log(t.datasets[0].data[e.index]);
           return ""
             .concat(t.labels[e.index].slice(0, -3), " ")
             .concat(
@@ -120,15 +119,16 @@ const HomeTokenRelease = forwardRef(({ setVisibleNow, start }, ref) => {
           "#060D62",
         ],
         hoverBorderColor: [
-          "#FEFDAF",
-          "#FEFDAF",
-          "#C0F3FF",
-          "#4B79B4",
-          "#1423C1",
-          "#060D62",
+          "#878787",
+          "#878787",
+          "#878787",
+          "#878787",
+          "#878787",
+          "#878787",
         ],
-        borderColor: "#fff",
-        borderWidth: 3,
+        hoverBorderWidth: 4,
+        borderColor: "#E0E0E0",
+        borderWidth: 2,
       },
     ],
   };

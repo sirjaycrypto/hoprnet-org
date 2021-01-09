@@ -15,11 +15,10 @@ import useTranslation from "next-translate/useTranslation";
 import ChooseLanguage from "../components/molecules/choose-language";
 import useVisibility from "../components/hooks/useVisibility";
 import Footer from "../components/molecules/footer";
-import ReactPlayer from "react-player/lazy";
+
 export default function Home() {
   const [visibleNow, setVisibleNow] = useState("");
   const [activeBtn, setActiveBtn] = useState(false);
-
   const [videoAutoPLay, setVideoAutoPlay] = useState(false);
   const [isVisibleHero, currentElementHero] = useVisibility(100);
   const [isVisibleInvestData, currentInvestData] = useVisibility(100);
@@ -48,10 +47,7 @@ export default function Home() {
       setActiveBtn(true);
     } else if (visibleNow == "BANNER") {
       setActiveBtn(false);
-    } else if (
-      visibleNow == "blindText" ||
-      visibleNow == "video-area"
-    ) {
+    } else if (visibleNow == "blindText" || visibleNow == "video-area") {
       setActiveBtn(false);
     }
   }, [
@@ -71,19 +67,22 @@ export default function Home() {
     currentElementTokenRel,
     currentElementTokenFooter,
   ]);
-console.log(visibleNow)
+
 
   return (
     <Layout visibleNow={visibleNow}>
       <ChooseLanguage />
       <Hero setVisibleNow={setVisibleNow} ref={currentElementHero} />
-      <HomeHeadline    ref={currentInvestData}/>
+      <HomeHeadline ref={currentInvestData} />
       <section
         id="video-area"
         className="video-home "
         ref={currentElementVideo}
       >
- <iframe src="https://player.vimeo.com/video/492666726?title=0&byline=0&portrait=0&playsinline=0&muted=1&autopause=0&controls=0&loop=1&app_id=122963" frameborder="0"></iframe>
+        <iframe
+          src="https://player.vimeo.com/video/492666726?title=0&byline=0&portrait=0&playsinline=0&muted=1&autopause=0&controls=0&loop=1&app_id=122963"
+          frameborder="0"
+        ></iframe>
       </section>
       <HomeTokenFeatures
         setVisibleNow={setVisibleNow}

@@ -5,7 +5,7 @@ import SubStrack from "../molecules/sub-strack";
 const Modal = forwardRef(({ showModal, showModalActive }, ref) => {
   const [close, setClose] = useState(showModal);
   const { t } = useTranslation();
-console.log(showModal)
+
   useEffect(() => {}, []);
 
 
@@ -19,7 +19,7 @@ console.log(showModal)
           >
             <img src="/assets/icons/close.svg" alt="hopr logo" />
           </div>
-          <SubStrack />
+          {/* <SubStrack /> */}
         </div>
       </div>
     </>
