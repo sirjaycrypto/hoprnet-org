@@ -24,7 +24,7 @@ export default function Slide() {
     autoplay: true,
     dots: true,
     lazyLoad: false,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -49,3 +49,4 @@ export default function Slide() {
     </div>
   );
 }
+
