@@ -154,7 +154,8 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
   }
 
   const dataOption = {
-    maintainAspectRatio: !1,
+    aspectRatio: 2,
+    maintainAspectRatio: true,
     elements: {
       point: {
         radius: 0,
@@ -211,6 +212,7 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
           ticks: {
             fontFamily: "Source Code Pro",
             fontSize: 14,
+            fontColor: "#414141",
             maxRotation: 100,
             minRotation: 90,
             maxTicksLimit: 16,

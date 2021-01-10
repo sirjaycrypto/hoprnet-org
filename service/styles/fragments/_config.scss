@@ -143,15 +143,13 @@ section {
   }
 }
 
-//
 .padding-bottom {
   @include responsive(tablet) {
     margin-bottom: 18px;
   }
 }
-///
+
 .container-chart {
-  height: 50vh;
   width: 100%;
   margin: auto;
 
@@ -159,6 +157,7 @@ section {
     height: 100%;
     width: auto;
   }
+
   @include responsive(tablet) {
     position: relative;
     overflow: scroll;
