@@ -20,13 +20,14 @@ const HomeHardware = forwardRef(({ setVisibleNow }, ref) => {
               <h3>{t("home:hardware.subtitleA")}</h3>
               <p>{t("home:hardware.about")}</p>
             </div>
-            <div>
+            <div className="hardware-hopr">
               <h3>{t("home:hardware.subtitleB")}</h3>
               <img
                 src="/assets/images/banner-hardware.jpg"
                 alt={t("home:hardware.title")}
                 className="aux-img-cover"
               />
+              <p className="caption-image">{t("home:hardware.caption")}</p>
             </div>
           </div>
         </div>

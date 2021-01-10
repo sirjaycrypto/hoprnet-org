@@ -42,6 +42,7 @@
   },
   "hardware": {
     "about": "Anyone can run a HOPR node on their own hardware! We provide easy-to-install software for Linux, macOS, Windows, Docker and Cloud Environments. Furthermore we also sell an dedicated hardware not for faster staking.More at the End of the Page.",
+    "caption": "We also sell a dedicated hardware node for faster staking.",
     "subtitleA": "Run Your Own Metal",
     "subtitleB": "Your HOPR Hardware Node",
     "title": "HOPR-NODE ON GITHUB"
