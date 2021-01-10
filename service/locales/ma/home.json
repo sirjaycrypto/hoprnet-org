@@ -17,7 +17,8 @@
     "titleB": "AS SEEN IN"
   },
   "banner": {
-    "label": "Be the first to earn and stake HOPR with our limited token release."
+    "label": "Be the first to earn and stake HOPR with our limited token release.",
+    "button": "Get HOPR Token"
   },
   "features": {
     "pay": "Pay",

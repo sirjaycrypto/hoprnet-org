@@ -112,7 +112,7 @@ export default function Home() {
           className={"btn-follow " + (activeBtn ? "modeFollow" : "fixOnBanner")}
         >
           <div onClick={() => clickBtn()} className="btn-banner ">
-            <span>{t("common:getHorp")}</span>
+            <span>{t("home:banner.button")}</span>
           </div>
         </div>
       </section>
