@@ -8,6 +8,7 @@ const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
       img: "/assets/backed_by_logo/Binance_labs.svg",
       url: "https://binancelabs.substack.com/",
       title: "Binance_labs",
+      is_break: true,
     },
     {
       img: "/assets/backed_by_logo/01_Caballeros_Logo.svg",
@@ -59,18 +60,32 @@ const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
           <h2>{t("home:back.title")}</h2>
           <div className="item-back-container">
             {data.map((e, index) => {
-              const { img, url, title } = e;
-              return (
-                <a
-                  href={url}
-                  key={index}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+              const { img, url, title, is_break } = e;
+              if (!is_break) {
+                return (
+                  <a
+                    href={url}
+                    key={index}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <img src={img} alt={title} />
-                 
-                </a>
-              );
+                  </a>
+                );
+              } else {
+                return (
+                  <div className="break-line">
+                    <a
+                      href={url}
+                      key={index}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={img} alt={title} />
+                    </a>
+                  </div>
+                )
+              }
             })}
           </div>
           <h2>{t("home:back.titleA")}</h2>
@@ -83,9 +98,9 @@ const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  
+
                     <img src={e} alt={e} />
-                 
+
                 </a>
               );
             })}
@@ -101,9 +116,9 @@ const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  
+
                     <img src={e} alt={e} />
-                 
+
                 </a>
               );
             })}
