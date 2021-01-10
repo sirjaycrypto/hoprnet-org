@@ -309,7 +309,7 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
 
   return (
     <>
-      <section ref={ref} id="TOKEN-RELEASE" className="section-token-release ">
+      <section ref={ref} id="TOKEN-RELEASE" className="section-token-release">
         <div className="container">
           <div>
             <h2>{t("home:token.title")}</h2>
@@ -346,9 +346,6 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
               <div className="help-scroll">
                 <Line data={dataTokenSupply} options={dataOption} />
               </div>
-            </div>
-            <div className="text-info-char-area">
-              <p>{t("home:token.textEnding")}</p>
             </div>
           </div>
         </div>
