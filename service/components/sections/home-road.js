@@ -5,7 +5,7 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
   const { t } = useTranslation();
   const data = [
     {
-      date: "Nov. 2019",
+      date: "Nov 2019",
       title: "Idea",
       about:
         "HOPR’s founders develop a decentralized approach to the urgent issue of metadata privacy. HOPR is born!",
@@ -15,7 +15,7 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
       linkTextB: "Technical White Paper",
     },
     {
-      date: "April 2020",
+      date: "Apr 2020",
       title: "Funding and Launch ",
       about:
         "HOPR officially launches, concluding a $1m seed funding round led by Binance. The HOPR Association is founded. ",
@@ -24,7 +24,7 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
       linkTextA: "Binance",
     },
     {
-      date: "July 2020",
+      date: "Jul 2020",
       title: "Idea",
       about:
         "HOPR Hardware NodeThe HOPR Node PC launches, allowing users to run a dedicated HOPR device from their home. ",
@@ -34,10 +34,9 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
       linkTextB: "gitHub",
     },
     {
-      date: "Aug.-Dec. 2020",
+      date: "Aug 2020",
       title: "Testing and Community",
-      about:
-        " A series of popular incentivized and gamified testnets grow the community and network to 1000 nodes.",
+      about: "A series of popular incentivized and gamified testnets grow the community and network to 1000 nodes.",
       linkA: "#",
       linkTextA: "Matic,",
       linkB: "#",
@@ -46,23 +45,23 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
       linkTextC: "BSC",
     },
     {
-      date: "Jan. 2021",
-      title: "Mainnet Launch (Eiger)",
+      date: "Jan 2021",
+      title: "Eiger Release (Mainnet)",
       about:
         "The HOPR mainnet launches, giving everyone their first chance to buy and earn HOPR tokens. ",
       linkA: "#",
       linkTextA: "SalePage",
     },
     {
-      date: "Feb. 2021",
-      title: "Main MainNet (Jungfrau)",
+      date: "Feb 2021",
+      title: "Jungfrau Release",
       about:
         "HOPR’s Jungfrau release introduces cover traffic, making the protocol feature complete.",
       linkA: "#",
       linkTextA: "Blogpost",
     },
     {
-      date: "Mar. 2021",
+      date: "Mar 2021",
       title: "Launch DAO",
       about:
         "HOPR’s focus on decentralized community enabling governance is solidified with the launch of a DAO.",
@@ -70,7 +69,7 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
       linkTextA: "DecenGov",
     },
     {
-      date: "May. 2021",
+      date: "May 2021",
       title: "Launch of Ecosystem ",
       about:
         "A robust API allows others to build metadata-private dApps and services on top of the HOPR protocol.",
@@ -78,7 +77,7 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
       linkTextA: "Blogpost",
     },
     {
-      date: "Sept. 2021",
+      date: "Sep 2021",
       title: "Token-based Voting",
       about:
         "All token holders will be eligible to vote in the first General Assembly of the HOPR Association. ",
@@ -120,8 +119,8 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
                   <p>{about}</p>
                   <div className="links-exp">
                     (<a href={linkA}>{linkTextA}</a>
-                    {linkB ? <a href={linkB}> {linkTextB}</a> : ""}
-                    {linkC ? <a href={linkC}> {linkTextC}</a> : ""})
+                    {linkB ? (<>{" "}<a href={linkB}>{linkTextB}</a></>) : ""}
+                    {linkC ? (<>{" "}<a href={linkC}>{linkTextC}</a></>) : ""})
                   </div>
                 </div>
               </div>
