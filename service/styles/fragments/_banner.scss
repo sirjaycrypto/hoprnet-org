@@ -1,14 +1,13 @@
 .btn-banner {
-  background: linear-gradient(90deg, #0000db 0%, #292941 100%);
-  transition: all 600ms ease-in-out;
-
-  border-radius: 100px;
-
-  height: 60px;
-  width: 198px;
-  display: flex;
   align-items: center;
+  background: linear-gradient(90deg, #0000db 0%, #292941 100%);
+  border-radius: 100px;
+  display: flex;
+  height: 60px;
   justify-content: center;
+  transition: all 600ms ease-in-out;
+  width: 198px;
+
   &:hover {
     background: linear-gradient(90deg, #0000db 100%, #292941 100%);
     animation: hoverAnimate ease 1s forwards;
@@ -17,17 +16,18 @@
     padding: 0.5em 1.5em;
   }
   span {
-    transition: font-size 300ms ease-in-out;
-    font-weight: 600;
-
-    display: flex;
     align-items: center;
-    text-align: center;
-    letter-spacing: 0.2975px;
     color: #ffffff;
+    display: flex;
+    font-size: 34px;
+    font-weight: 600;
+    letter-spacing: 0.2975px;
     margin: 0;
     padding: 0;
-    font-size: 34px;
+    text-align: center;
+    text-transform: none!important;
+    transition: font-size 300ms ease-in-out;
+
     @media screen and (max-width: 600px) {
       font-size: 17px;
     }
