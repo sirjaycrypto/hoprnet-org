@@ -3,7 +3,7 @@ import useTranslation from "next-translate/useTranslation";
 import { Line, Pie } from "react-chartjs-2";
 
 import dataPie from "../../public/assets/json/data-token-allocation.json";
-import dataSupply from "../../public/assets/json/dataSupply.json";
+import dataSupply from "../../public/assets/json/data-supply.json";
 
 function intlFormat(num) {
   return new Intl.NumberFormat().format(Math.round(num * 10) / 10);
