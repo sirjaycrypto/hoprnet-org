@@ -1,5 +1,6 @@
 import React, { useEffect, useState, forwardRef } from "react";
 import useTranslation from "next-translate/useTranslation";
+import HomeMatter from "./home-progression"
 
 const HomeHeadline = forwardRef(({ setVisibleNow }, ref) => {
   const { t } = useTranslation();
@@ -29,35 +30,8 @@ const HomeHeadline = forwardRef(({ setVisibleNow }, ref) => {
         id="blindText"
         className="section-blindText invert-color "
       >
+        <h2>{t("home:headline.title")}</h2>
         <div className="container">
-          <div className="helper-test">
-            <div>
-              <h2>{t("home:headline.title")}</h2>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: t("home:headline.beforeInfoTop"),
-                }}
-                className="special"
-              ></p>
-              <p className="special">{t("home:headline.beforeInfoBottom")}</p>
-            </div>
-          </div>
-        </div>
-        <div className="container">
-          <div>
-            <p>{t("home:headline.mainInfo")}</p>
-            <div className="">
-              <p className="link-out-label">
-                <a
-                  href="https://www.cisco.com/c/dam/m/en_in/innovation/enterprise/assets/visual_networking_index_infographic_2016.pdf"
-                  target="_blank"
-                >
-                  {t("home:why.labelDate")}
-                </a>
-              </p>
-            </div>
-          </div>
-
           <div>
             <div className="card-view">
               <h3>{t("home:headline.titleTicket")}</h3>
@@ -71,23 +45,33 @@ const HomeHeadline = forwardRef(({ setVisibleNow }, ref) => {
                   {t("home:headline.txtDownNum")}
                 </p>
               </div>
-
-              <div>
-                <ul>
-                  <li>{t("home:headline.fPoint")}</li>
-                  <li>{t("home:headline.sPoint")}</li>
-                  <li>{t("home:headline.tPoint")}</li>
-                </ul>
-              </div>
-              <div className="area-scroll">
-                <p> {t("home:headline.tokenLeft")}</p>
-                <div className="scrollIndicator"></div>
-              </div>
+              <br/>
               <div className="btn-ticket">
                 <div onClick={() => clickBtn()} className="btn-banner ">
                   <span>{t("common:getHorp")}</span>
                 </div>
               </div>
+            </div>
+          </div>
+          <div>
+            <div className="card-view">
+              <HomeMatter />
+            </div>
+          </div>
+        </div>
+
+        <div className="container">
+          <div className="helper-test">
+            <div>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: t("home:headline.beforeInfoTop"),
+                }}
+                className="special"
+              ></p>
+              <br/>
+              <br/>
+              <p className="special">{t("home:headline.beforeInfoBottom")}</p>
             </div>
           </div>
         </div>
