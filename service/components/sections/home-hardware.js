@@ -9,7 +9,7 @@ const HomeHardware = forwardRef(({ setVisibleNow }, ref) => {
       <section
         ref={ref}
         id="HOPR-NODE-ON-GITHUB"
-        className="section-hopr-github padding-section-aux"
+        className="section-hopr-github "
       >
         <div className="container">
           <div className="container-center-center">
@@ -23,7 +23,7 @@ const HomeHardware = forwardRef(({ setVisibleNow }, ref) => {
             <div className="hardware-hopr">
               <h3>{t("home:hardware.subtitleB")}</h3>
               <img
-                src="/assets/images/banner-hardware.jpg"
+                src="/assets/images/banner-hardware.png"
                 alt={t("home:hardware.title")}
                 className="aux-img-cover"
               />
