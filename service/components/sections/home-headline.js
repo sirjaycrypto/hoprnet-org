@@ -9,9 +9,13 @@ const HomeHeadline = forwardRef(({ setVisibleNow }, ref) => {
   };
 
   const fetchData = async () => {
-    const result = await fetch(
-        "https://api.etherscan.io/api?module=proxy&action=eth_call&to=0x8b6e6e7b5b3801fed2cafd4b22b8a16c2f2db21a&data=0x15e84af90000000000000000000000006b175474e89094c44da98b954eedeac495271d0f000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2&tag=latest"
-      ),
+    const result = await fetch("https://mainnet.infura.io/v3/3f8a9c1b16ac4826bf23d8519ff7d055", {
+        method: "POST",
+        body: '{"jsonrpc":"2.0","method":"eth_call","params":[{"to":"0x8b6e6e7b5b3801fed2cafd4b22b8a16c2f2db21a","data":"0x15e84af90000000000000000000000006b175474e89094c44da98b954eedeac495271d0f000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"},"latest"],"id":1}',
+        headers: {
+          "Content-type": "application/json; charset=UTF-8"
+        }
+      }),
       json = await result.json(),
       data = parseInt(json.result, 16) / 1e18;
 
