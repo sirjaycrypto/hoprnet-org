@@ -105,7 +105,6 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
               linkC,
               linkTextC,
             } = e;
-
             return (
               <div key={index} className="road-map-element">
                 <div>

@@ -18,6 +18,7 @@ const HomeHeadline = forwardRef(({ setVisibleNow }, ref) => {
     }
   };
 
+
   const [price, setPrice] = useState('$XXXXXX');
   useEffect(() => {
     fetchData();

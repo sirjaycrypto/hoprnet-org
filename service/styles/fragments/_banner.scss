@@ -6,8 +6,8 @@
   height: 60px;
   justify-content: center;
   transition: all 600ms ease-in-out;
-  width: 198px;
-
+  width: auto;
+  padding: 0 1.5em;
   &:hover {
     background: linear-gradient(90deg, #0000db 100%, #292941 100%);
     animation: hoverAnimate ease 1s forwards;

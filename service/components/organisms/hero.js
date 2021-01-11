@@ -119,7 +119,7 @@ const Hero = forwardRef(({}, ref) => {
 
                 <div>
                   <div onClick={() => clickBtn()} className="btn-banner ">
-                    <span>{t("common:getHorp")}</span>
+                    <span>{t("common:getHorpFull")}</span>
                   </div>
                 </div>
               </>

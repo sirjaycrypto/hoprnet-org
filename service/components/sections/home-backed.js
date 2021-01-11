@@ -21,7 +21,7 @@ const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
       title: "spark-digital-capital",
     },
     {
-      img: "/assets/backed_by_logo/03_Focus_Labs_Logo.svg",
+      img: "/assets/backed_by_logo/03_Focus_Labs_Logo_SW_shadow.png",
       url: "https://focuslabs.io/",
       title: "focus-labs",
     },

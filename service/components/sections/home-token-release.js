@@ -243,7 +243,6 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
       t("home:graphic.treasury"),
     ],
     labels: dataDate,
-
     datasets: start
       ? [
           {
