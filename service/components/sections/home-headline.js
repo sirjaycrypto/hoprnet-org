@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import React, { useEffect, useState, forwardRef } from "react";
 import useTranslation from "next-translate/useTranslation";
 
 const HomeHeadline = forwardRef(({ setVisibleNow }, ref) => {
@@ -6,6 +6,21 @@ const HomeHeadline = forwardRef(({ setVisibleNow }, ref) => {
   const clickBtn = () => {
     console.log("Click");
   };
+
+  const fetchData = async () => {
+    const result = await fetch('https://api.etherscan.io/api?module=proxy&action=eth_call&to=0x8b6e6e7b5b3801fed2cafd4b22b8a16c2f2db21a&data=0x15e84af90000000000000000000000006b175474e89094c44da98b954eedeac495271d0f000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2&tag=latest'),
+      json = await result.json(),
+      data = parseInt(json.result, 16) /1e18;
+
+    if (!isNaN(data)) {
+      setPrice(`$${parseFloat(data).toFixed(4)}`);
+    }
+  };
+
+  const [price, setPrice] = useState('$XXXXXX');
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <>
@@ -51,7 +66,7 @@ const HomeHeadline = forwardRef(({ setVisibleNow }, ref) => {
                   src="/assets/images/logo_h.svg"
                   alt={t("home:headline.titleTicket")}
                 />
-                <p>$XXXXXX</p>
+                <p>{price}</p>
                 <p className="label-remember">
                   {t("home:headline.txtDownNum")}
                 </p>
