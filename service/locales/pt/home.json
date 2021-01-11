@@ -96,7 +96,7 @@
     "private": "Private",
     "privateMain": "The HOPR network is a decentralized incentivized mixnet, ensuring complete data and metadata privacy for everyone who uses it. Data is sent via multiple hops, so no-one but the sender and receiver know the origin, destination, or content or a data transfer.",
     "profitable": "Profitable",
-    "profitableMain": "HOPR’s unique proof-of-relay mechanism means every node runner is incentivized to correctly relay data in exchange for HOPR tokens.",
+    "profitableMain": "HOPR’s unique proof-of-relay mechanism means every node runner is incentivized to correctly relay data in exchange for HOPR tokens. Anyone can run a HOPR node to earn HOPR tokens and contribute to online data privacy.",
     "title": "How it works"
   },
   "roadMap": {
