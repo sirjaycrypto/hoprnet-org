@@ -65,7 +65,7 @@
   h3 {
     font-weight: 400;
     text-align: center;
-    padding-top: 24px;
+    padding-top: 27px;
     margin-bottom: 0;
     font-size: 40px;
     @include responsive(tablet) {
@@ -99,8 +99,7 @@
   }
   img {
     width: 40%;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 40px 0;
     @include responsive(tablet) {
       margin-top: 24px;
       margin-bottom: 24px;
@@ -287,7 +286,7 @@
     width: 50%;
   }
   .the-balancer {
-    box-shadow: 4px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 0px 10px 0px rgba(0, 0, 0, 0.3);
     z-index: 1;
   }
   .the-char-balancer {

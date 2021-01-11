@@ -50,6 +50,8 @@ export default function Home() {
       setActiveBtn(true);
     } else if (visibleNow === "BANNER" || visibleNow === "blindText") {
       setActiveBtn(false);
+    }else{
+      setActiveBtn(true);
     }
   }, [
     isVisibleHero,
@@ -69,8 +71,8 @@ export default function Home() {
     currentElementTokenFooter,
   ]);
 
-  console.log(isVisibleBanner);
-  console.log(currentElementVisibleBanner);
+  console.log(visibleNow);
+
 
   return (
     <Layout visibleNow={visibleNow}>

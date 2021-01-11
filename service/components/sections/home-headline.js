@@ -47,7 +47,6 @@ const HomeHeadline = forwardRef(({ setVisibleNow }, ref) => {
                   {t("home:headline.txtDownNum")}
                 </p>
               </div>
-              <br />
               <div className="btn-ticket">
                 <div onClick={() => clickBtn()} className="btn-banner ">
                   <span>{t("common:getHorp")}</span>
