@@ -207,6 +207,8 @@
 }
 
 .helper-test {
+  padding: 2rem 0;
+  margin: 2rem 0 0;
   width: 100% !important;
   flex-direction: column;
   display: flex;
@@ -224,6 +226,9 @@
     margin-bottom: 21px;
     &:last-child {
       margin-bottom: 80px;
+    }
+    &.special {
+      font-size: 30px;
     }
     @include responsive(tablet) {
       font-size: 28px;
@@ -268,7 +273,7 @@
     transform: scale(0);
   }
   50% {
-    transform: scale(20);
+    transform: scale(15);
   }
 }
 
