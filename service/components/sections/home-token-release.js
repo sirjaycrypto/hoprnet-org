@@ -60,7 +60,7 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
     responsive: true,
 
     animation: {
-      duration: 8000,
+      duration: 9000,
     },
 
     tooltips: {
@@ -163,7 +163,7 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
       },
     },
     animation: {
-      duration: 8000,
+      duration: 9000,
     },
 
     tooltips: {

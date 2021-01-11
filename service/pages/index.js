@@ -46,9 +46,9 @@ export default function Home() {
     if (visibleNow == "TOKEN-RELEASE") {
       setAnimateChart(true);
     }
-    if (visibleNow == "video-area") {
+    if (visibleNow == "video-area" ) {
       setActiveBtn(true);
-    } else if (visibleNow == "BANNER" || visibleNow == "blindText") {
+    } else if (visibleNow === "BANNER" || visibleNow === "blindText") {
       setActiveBtn(false);
     }
   }, [
@@ -68,6 +68,9 @@ export default function Home() {
     currentElementTokenRel,
     currentElementTokenFooter,
   ]);
+
+  console.log(isVisibleBanner);
+  console.log(currentElementVisibleBanner);
 
   return (
     <Layout visibleNow={visibleNow}>
