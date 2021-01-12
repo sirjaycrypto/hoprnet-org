@@ -167,7 +167,7 @@
   position: relative;
 
   .wrapper-test {
-    z-index: 1;
+    z-index: 4;
   }
 
   p {
@@ -214,43 +214,56 @@
 
   &::before,
   &::after {
-    z-index: 0;
-    content: "";
-    position: absolute;
-    display: block;
     border-radius: 25px;
-    width: 25px;
+    content: "";
+    display: block;
     height: 25px;
+    position: absolute;
+    width: 25px;
   }
 
   &::before {
     background: white;
-    animation: animateCircleWhite 2200ms infinite ease-in-out;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-name: animateCircleWhite;
+    animation-timing-function: ease-in-out;
+    z-index: 1;
   }
 
   &::after {
-    //background: $hopr_yellow;
-    //  animation: animateCircleYellow 2000ms infinite ease-in-out;
+    background: $hopr_yellow;
+    animation-duration: 8s;
+    animation-delay: 4s;
+    animation-iteration-count: infinite;
+    animation-name: animateCircleYellow;
+    animation-timing-function: ease-in-out;
+    z-index: 0;
   }
 }
 
 @keyframes animateCircleWhite {
-  0%,
-  100% {
+  0% {
     transform: scale(0);
   }
   50% {
     transform: scale(15);
   }
+  100% {
+    transform: scale(15);
+  }
 }
 
 @keyframes animateCircleYellow {
-  0%,
-  100% {
+  0% {
+    z-index: 1;
     transform: scale(0);
   }
   50% {
-    transform: scale(20);
+    transform: scale(15);
+  }
+  100% {
+    transform: scale(15);
   }
 }
 
@@ -318,14 +331,14 @@
   }
 }
 
-.help-area-padding{
+.help-area-padding {
   margin: 120px auto;
   @include responsive(phone) {
     margin: 50px auto;
   }
-  .wrapper-test{
-    p{
-      &:first-child{
+  .wrapper-test {
+    p {
+      &:first-child {
         margin-bottom: 24px;
       }
     }
