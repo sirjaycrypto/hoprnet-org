@@ -26,7 +26,7 @@ const HomeHeadline = forwardRef(({ setVisibleNow }, ref) => {
 
   const [price, setPrice] = useState("$XXXXXX");
   useEffect(() => {
-    fetchData();
+    // fetchData();
   }, []);
 
   return (
@@ -76,7 +76,11 @@ const HomeHeadline = forwardRef(({ setVisibleNow }, ref) => {
 
         <div className="container">
           <div className="helper-test">
-            <div>
+            <div className="wrapper-anim">
+              <span className="circle-one"></span>
+              <span className="circle-two"></span>
+            </div>
+            <div className="wrapper-test">
               <p
                 dangerouslySetInnerHTML={{
                   __html: t("home:headline.beforeInfoTop"),

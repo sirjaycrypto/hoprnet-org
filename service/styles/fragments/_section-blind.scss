@@ -201,22 +201,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   position: relative;
-  div {
+
+  .wrapper-test {
     z-index: 1;
   }
+
   p {
     font-size: 45px;
     line-height: 57px;
     margin-top: 0;
     margin-bottom: 21px;
+
     &:last-child {
       margin-bottom: 80px;
     }
+
     &.special {
       font-size: 30px;
     }
+
     @include responsive(tablet) {
       font-size: 28px;
       line-height: 38px;
@@ -224,16 +228,19 @@
         margin-bottom: 50px;
       }
     }
+
     @include responsive(phone) {
       font-size: 24px;
       line-height: 30px;
       margin-bottom: 24px;
     }
+
     &:first-child {
       padding-bottom: 0;
       margin-bottom: 0;
     }
   }
+
   &::before,
   &::after {
     z-index: 0;
@@ -244,10 +251,12 @@
     width: 25px;
     height: 25px;
   }
+
   &::before {
     background: white;
     animation: animateCircleWhite 2200ms infinite ease-in-out;
   }
+
   &::after {
     //background: $hopr_yellow;
     //  animation: animateCircleYellow 2000ms infinite ease-in-out;
