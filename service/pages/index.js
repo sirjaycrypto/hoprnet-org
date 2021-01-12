@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Layout from "../components/organisms/layout";
 import Hero from "../components/organisms/hero";
 import HomeHeadline from "../components/sections/home-headline";
@@ -10,6 +10,7 @@ import Slide from "../components/organisms/slider";
 import HomeTokenReleas from "../components/sections/home-token-release";
 import HomeRoadMap from "../components/sections/home-road";
 import { loadNamespaces } from "./_app";
+import useOnScreen from "../components/hooks/useVisibility";
 import useTranslation from "next-translate/useTranslation";
 
 import ChooseLanguage from "../components/molecules/choose-language";
@@ -18,19 +19,20 @@ import Footer from "../components/molecules/footer";
 
 export default function Home() {
   const [visibleNow, setVisibleNow] = useState("");
+  const btnMainPoint = useRef("");
+
   const [activeBtn, setActiveBtn] = useState(false);
   const [animateChart, setAnimateChart] = useState(false);
-  const [videoAutoPLay, setVideoAutoPlay] = useState(false);
-  const [isVisibleHero, currentElementHero] = useVisibility(100);
-  const [isVisibleInvestData, currentInvestData] = useVisibility(100);
-  const [isVisibleVideo, currentElementVideo] = useVisibility(100);
-  const [isVisibleTokenFea, currentElementTokenFea] = useVisibility(100);
-  const [isVisibleHow, currentElementAlt] = useVisibility(100);
-  const [isVisibleBack, currentElementVisibleBack] = useVisibility(100);
-  const [isVisibleNode, currentElementNode] = useVisibility(100);
-  const [isVisibleTokenRel, currentElementTokenRel] = useVisibility(100);
-  const [isVisibleBanner, currentElementVisibleBanner] = useVisibility(100);
-  const [isVisibleFooter, currentElementTokenFooter] = useVisibility(100);
+  const [isVisibleHero, currentElementHero] = useVisibility(0);
+  const [isVisibleInvestData, currentInvestData] = useVisibility(0);
+  const [isVisibleVideo, currentElementVideo] = useVisibility(0);
+  const [isVisibleTokenFea, currentElementTokenFea] = useVisibility(0);
+  const [isVisibleHow, currentElementAlt] = useVisibility(0);
+  const [isVisibleBack, currentElementVisibleBack] = useVisibility(0);
+  const [isVisibleNode, currentElementNode] = useVisibility(0);
+  const [isVisibleTokenRel, currentElementTokenRel] = useVisibility(0);
+  const [isVisibleBanner, currentElementVisibleBanner] = useVisibility(0);
+  const [isVisibleFooter, currentElementTokenFooter] = useVisibility();
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -46,11 +48,13 @@ export default function Home() {
     if (visibleNow == "TOKEN-RELEASE") {
       setAnimateChart(true);
     }
-    if (visibleNow == "video-area" ) {
-      setActiveBtn(true);
-    } else if (visibleNow === "BANNER" || visibleNow === "blindText") {
+    if (
+      visibleNow === "BANNER" ||
+      visibleNow === "blindText" ||
+      visibleNow === "FOOTER"
+    ) {
       setActiveBtn(false);
-    }else{
+    } else {
       setActiveBtn(true);
     }
   }, [
@@ -70,8 +74,7 @@ export default function Home() {
     currentElementTokenRel,
     currentElementTokenFooter,
   ]);
-
-  console.log(visibleNow);
+  console.log(btnMainPoint.current)
 
 
   return (
@@ -115,9 +118,13 @@ export default function Home() {
         </div>
         <div
           className={"btn-follow " + (activeBtn ? "modeFollow" : "fixOnBanner")}
+          ref={activeBtn ? btnMainPoint : null}
         >
-          <div onClick={() => clickBtn()} className="btn-banner ">
-            <span>{t("home:banner.button")}</span>
+          <div onClick={() => clickBtn()} className="btn-banner">
+            <span>
+              {t("home:banner.button")}
+             
+            </span>
           </div>
         </div>
       </section>
@@ -134,3 +141,5 @@ export async function getStaticProps({ locale }) {
     },
   };
 }
+
+
