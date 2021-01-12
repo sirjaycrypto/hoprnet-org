@@ -124,7 +124,7 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
           "#878787",
           "#878787",
         ],
-        hoverBorderWidth: 4,
+        hoverBorderWidth: 2,
         borderColor: "#E0E0E0",
         borderWidth: 2,
       },

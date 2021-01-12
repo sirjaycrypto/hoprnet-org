@@ -49,9 +49,10 @@ export default function Home() {
       setAnimateChart(true);
     }
     if (
-      visibleNow === "BANNER" ||
-      visibleNow === "blindText" ||
-      visibleNow === "FOOTER"
+      visibleNow == "" ||
+      visibleNow == "BANNER" ||
+      visibleNow == "blindText" ||
+      visibleNow == "FOOTER"
     ) {
       setActiveBtn(false);
     } else {
@@ -74,7 +75,7 @@ export default function Home() {
     currentElementTokenRel,
     currentElementTokenFooter,
   ]);
-  console.log(btnMainPoint.current)
+  console.log(visibleNow)
 
 
   return (
