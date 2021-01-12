@@ -75,8 +75,6 @@ export default function Home() {
     currentElementTokenRel,
     currentElementTokenFooter,
   ]);
-  console.log(visibleNow)
-
 
   return (
     <Layout visibleNow={visibleNow}>
@@ -122,10 +120,7 @@ export default function Home() {
           ref={activeBtn ? btnMainPoint : null}
         >
           <div onClick={() => clickBtn()} className="btn-banner">
-            <span>
-              {t("home:banner.button")}
-             
-            </span>
+            <span>{t("home:banner.button")}</span>
           </div>
         </div>
       </section>
@@ -142,5 +137,3 @@ export async function getStaticProps({ locale }) {
     },
   };
 }
-
-
