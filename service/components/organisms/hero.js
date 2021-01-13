@@ -70,7 +70,6 @@ const Hero = forwardRef(({}, ref) => {
           src="/assets/video/hero.mp4"
         ></video>
 
-
         <div className="container">
           <div className="text-wrapper">
             {showModal ? (
