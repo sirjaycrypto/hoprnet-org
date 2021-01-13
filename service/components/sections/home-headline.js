@@ -30,7 +30,7 @@ const HomeHeadline = forwardRef(({ setVisibleNow }, ref) => {
 
   const [price, setPrice] = useState("$XXXXXX");
   useEffect(() => {
-    // fetchData();
+    fetchData();
   }, []);
 
   return (
@@ -85,8 +85,6 @@ const HomeHeadline = forwardRef(({ setVisibleNow }, ref) => {
                 }}
                 className="special"
               ></p>
-
-          
               <p className="special">{t("home:headline.beforeInfoBottom")}</p>
             </div>
           </div>
