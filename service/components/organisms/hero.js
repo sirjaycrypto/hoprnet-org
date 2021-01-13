@@ -52,7 +52,7 @@ const Hero = forwardRef(({}, ref) => {
       setDateFinal(true);
     }
   }, 1000);
-
+  
   return (
     <>
       <section ref={ref} className="section-hero">
@@ -66,10 +66,11 @@ const Hero = forwardRef(({}, ref) => {
           loop
           muted
           playsInline
-          className="background-video display-desktop"
+          className="background-video "
           src="/assets/video/hero.mp4"
         ></video>
-
+        {/* display-desktop */}
+{/* 
         <video
           autoPlay
           loop
@@ -86,7 +87,7 @@ const Hero = forwardRef(({}, ref) => {
           playsInline
           className="background-video display-phone"
           src="/assets/video/hopr_Drone_Mobile.mp4"
-        ></video>
+        ></video> */}
 
         <div className="container">
           <div className="text-wrapper">
