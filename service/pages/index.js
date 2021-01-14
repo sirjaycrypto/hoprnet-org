@@ -6,11 +6,13 @@ import useTranslation from 'next-translate/useTranslation';
 
 import { loadNamespaces } from './_app';
 
-import HoperFor from "../components/home-sections/HoperFor";
+import HoperFor from '../components/home-sections/HoperFor';
 import News from '../components/home-sections/News';
+import UseCases from '../components/home-sections/UseCases';
+import HoperIs from '../components/home-sections/HoperIs';
 import Blog from '../components/home-sections/Blogs';
 import Partners from '../components/home-sections/Partners';
-import Products from '../components/home-sections/Products';
+import Team from '../components/home-sections/Team';
 import Contact from '../components/home-sections/Contact';
 export default function Home() {
   return (
@@ -19,10 +21,12 @@ export default function Home() {
         {/* <HoprCircle /> */}
         <HeroFull />
         <News />
-        <HoperFor/>
-        <Products />
+        <UseCases />
+        <HoperFor />
+        <HoperIs />
         <Blog />
         <Partners />
+        <Team />
         <Contact />
       </div>
     </Layout>

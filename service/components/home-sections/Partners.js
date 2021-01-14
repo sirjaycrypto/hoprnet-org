@@ -19,8 +19,10 @@ export default function Partners() {
   return (
     <section className="section-partners change-bg-color ">
       <div className="container">
-        <h2>Partners</h2>
-        <div className="container-sm">
+        <div className="container-sm sub-title">
+          <h2>Partners</h2>
+        </div>
+        <div className="container">
           <ul>
             {dataInfo.map((item, index) => {
               return (

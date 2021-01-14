@@ -1,17 +1,17 @@
-import React, { useState, useEffect, forwardRef } from "react";
-import useTranslation from "next-translate/useTranslation";
-import { Line, Pie } from "react-chartjs-2";
+import React, { useState, useEffect, forwardRef } from 'react';
+import useTranslation from 'next-translate/useTranslation';
+import { Line, Pie } from 'react-chartjs-2';
 
-import dataPie from "../../public/assets/json/data-token-allocation.json";
-import dataSupply from "../../public/assets/json/data-supply.json";
+import dataPie from '../../public/assets/json/data-token-allocation.json';
+import dataSupply from '../../public/assets/json/data-supply.json';
 
 function intlFormat(num) {
   return new Intl.NumberFormat().format(Math.round(num * 10) / 10);
 }
 
 function makeFriendly(num) {
-  if (num >= 1000000) return intlFormat(num / 1000000) + "M";
-  if (num >= 1000) return intlFormat(num / 1000) + "k";
+  if (num >= 1000000) return intlFormat(num / 1000000) + 'M';
+  if (num >= 1000) return intlFormat(num / 1000) + 'k';
   return intlFormat(num);
 }
 
@@ -21,7 +21,7 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    if (window.matchMedia("screen and (max-width: 797px)").matches) {
+    if (window.matchMedia('screen and (max-width: 797px)').matches) {
       setIsMobile(true);
     }
   }, []);
@@ -39,17 +39,17 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
   });
 
   const labelsPie = [
-    t("home:graphic.public"),
-    t("home:graphic.cover"),
-    t("home:graphic.bounties"),
-    t("home:graphic.early"),
-    t("home:graphic.team"),
-    t("home:graphic.treasury"),
+    t('home:graphic.public'),
+    t('home:graphic.cover'),
+    t('home:graphic.bounties'),
+    t('home:graphic.early'),
+    t('home:graphic.team'),
+    t('home:graphic.treasury'),
   ];
 
   const matchLabelsPie = function (names, values) {
     const item = names.map((name, index) => {
-      name = name + ": " + values[index] + "%";
+      name = name + ': ' + values[index] + '%';
       return name;
     });
     return item;
@@ -64,11 +64,11 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
     },
 
     tooltips: {
-      bodyFontFamily: "Source Code Pro",
+      bodyFontFamily: 'Source Code Pro',
       callbacks: {
         label: function (e, t) {
-          return ""
-            .concat(t.labels[e.index].slice(0, -3), " ")
+          return ''
+            .concat(t.labels[e.index].slice(0, -3), ' ')
             .concat(
               t.datasets[0].data[e.index]
                 .toString()
@@ -79,14 +79,14 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
     },
     legend: {
       display: true,
-      position: isMobile ? "bottom" : "right",
+      position: isMobile ? 'bottom' : 'right',
       responsive: false,
       maintainAspectRatio: false,
 
       labels: {
-        fontFamily: "Source Code Pro",
+        fontFamily: 'Source Code Pro',
         fontSize: 16,
-        fontColor: "#414141",
+        fontColor: '#414141',
         padding: 18,
         boxWidth: 21,
         usePointStyle: false,
@@ -98,34 +98,34 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
     labels: matchLabelsPie(labelsPie, percentagesPieItem),
     datasets: [
       {
-        label: t("home:graphic.votes"),
-        data: start ? resultPie : "",
+        label: t('home:graphic.votes'),
+        data: start ? resultPie : '',
         backgroundColor: [
-          "#FEFDAF",
-          "#FEFDAF",
-          "#C0F3FF",
-          "#4B79B4",
-          "#1423C1",
-          "#060D62",
+          '#FEFDAF',
+          '#FEFDAF',
+          '#C0F3FF',
+          '#4B79B4',
+          '#1423C1',
+          '#060D62',
         ],
         hoverBackgroundColor: [
-          "#FEFDAF",
-          "#FEFDAF",
-          "#C0F3FF",
-          "#4B79B4",
-          "#1423C1",
-          "#060D62",
+          '#FEFDAF',
+          '#FEFDAF',
+          '#C0F3FF',
+          '#4B79B4',
+          '#1423C1',
+          '#060D62',
         ],
         hoverBorderColor: [
-          "#878787",
-          "#878787",
-          "#878787",
-          "#878787",
-          "#878787",
-          "#878787",
+          '#878787',
+          '#878787',
+          '#878787',
+          '#878787',
+          '#878787',
+          '#878787',
         ],
         hoverBorderWidth: 2,
-        borderColor: "#E0E0E0",
+        borderColor: '#E0E0E0',
         borderWidth: 2,
       },
     ],
@@ -134,22 +134,22 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
   const dataDate = dataSupply.map((item) => item.Date);
   const dataTreasury = dataSupply.map((item) => item.Treasury);
   const dataTeamNAdvisors = dataSupply.map(
-    (item) => item[t("home:graphic.team")]
+    (item) => item[t('home:graphic.team')]
   );
   const dataEarlyTokenBuyers = dataSupply.map(
-    (item) => item[t("home:graphic.early")]
+    (item) => item[t('home:graphic.early')]
   );
   const dataBounties = dataSupply.map((item) => item.Bounties);
   const dataCoverTraffic = dataSupply.map(
-    (item) => item[t("home:graphic.cover")]
+    (item) => item[t('home:graphic.cover')]
   );
   const dataPublicSale = dataSupply.map(
-    (item) => item[t("home:graphic.public")]
+    (item) => item[t('home:graphic.public')]
   );
 
   function cleanData(elements) {
     return elements.map(function (elem) {
-      return parseFloat(elem.split(",").join("").trim());
+      return parseFloat(elem.split(',').join('').trim());
     });
   }
 
@@ -167,15 +167,15 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
     },
 
     tooltips: {
-      mode: "x-axis",
-      bodyFontFamily: "Source Code Pro",
+      mode: 'x-axis',
+      bodyFontFamily: 'Source Code Pro',
       callbacks: {
         label: function (e, t) {
-          return ""
-            .concat("  ", t.legend[e.datasetIndex], "   ")
+          return ''
+            .concat('  ', t.legend[e.datasetIndex], '   ')
             .concat(
               e.yLabel.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "'"),
-              " HOPR"
+              ' HOPR'
             );
         },
       },
@@ -190,9 +190,9 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
           stacked: !0,
           beginAtZero: true,
           ticks: {
-            fontFamily: "Source Code Pro",
+            fontFamily: 'Source Code Pro',
             fontSize: 14,
-            fontColor: "#414141",
+            fontColor: '#414141',
             padding: 18,
             max: 1000000000,
             min: 0.0,
@@ -210,9 +210,9 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
           },
 
           ticks: {
-            fontFamily: "Source Code Pro",
+            fontFamily: 'Source Code Pro',
             fontSize: 14,
-            fontColor: "#414141",
+            fontColor: '#414141',
             maxRotation: 100,
             minRotation: 90,
             maxTicksLimit: 16,
@@ -221,11 +221,11 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
       ],
     },
     legend: {
-      position: isMobile ? "bottom" : "right",
+      position: isMobile ? 'bottom' : 'right',
       labels: {
-        fontFamily: "Source Code Pro",
+        fontFamily: 'Source Code Pro',
         fontSize: 14,
-        fontColor: "#414141",
+        fontColor: '#414141',
         padding: 18,
         boxWidth: 16,
         usePointStyle: false,
@@ -235,77 +235,77 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
 
   const dataTokenSupply = {
     legend: [
-      t("home:graphic.public"),
-      t("home:graphic.cover"),
-      t("home:graphic.bounties"),
-      t("home:graphic.early"),
-      t("home:graphic.team"),
-      t("home:graphic.treasury"),
+      t('home:graphic.public'),
+      t('home:graphic.cover'),
+      t('home:graphic.bounties'),
+      t('home:graphic.early'),
+      t('home:graphic.team'),
+      t('home:graphic.treasury'),
     ],
     labels: dataDate,
     datasets: start
       ? [
           {
-            label: t("home:graphic.public"),
+            label: t('home:graphic.public'),
             data: cleanData(dataPublicSale),
-            backgroundColor: ["#FEFDAF"],
-            pointBackgroundColor: "#FEFDAF",
-            borderColor: "#fff",
+            backgroundColor: ['#FEFDAF'],
+            pointBackgroundColor: '#FEFDAF',
+            borderColor: '#fff',
             borderWidth: 2,
             pointBorderWidth: 0,
             lineTension: 0,
           },
           {
-            label: t("home:graphic.cover"),
+            label: t('home:graphic.cover'),
             data: cleanData(dataCoverTraffic),
-            backgroundColor: ["#FEFDAF"],
-            pointBackgroundColor: "#FEFDAF",
+            backgroundColor: ['#FEFDAF'],
+            pointBackgroundColor: '#FEFDAF',
             borderWidth: 0,
             pointBorderWidth: 0,
             lineTension: 0,
           },
           {
-            label: t("home:graphic.bounties"),
+            label: t('home:graphic.bounties'),
             data: cleanData(dataBounties),
-            backgroundColor: ["#C0F3FF"],
-            pointBackgroundColor: "#C0F3FF",
-            borderColor: "#fff",
+            backgroundColor: ['#C0F3FF'],
+            pointBackgroundColor: '#C0F3FF',
+            borderColor: '#fff',
             borderWidth: 2,
             pointBorderWidth: 0,
             lineTension: 0,
           },
           {
-            label: t("home:graphic.early"),
+            label: t('home:graphic.early'),
             data: cleanData(dataEarlyTokenBuyers),
-            backgroundColor: ["#4B79B4"],
-            pointBackgroundColor: "#4B79B4",
-            borderColor: "#fff",
+            backgroundColor: ['#4B79B4'],
+            pointBackgroundColor: '#4B79B4',
+            borderColor: '#fff',
             borderWidth: 2,
             pointBorderWidth: 0,
             lineTension: 0,
           },
           {
-            label: t("home:graphic.team"),
+            label: t('home:graphic.team'),
             data: cleanData(dataTeamNAdvisors),
-            backgroundColor: ["#1423C1"],
-            pointBackgroundColor: "#1423C1",
-            borderColor: "#fff",
+            backgroundColor: ['#1423C1'],
+            pointBackgroundColor: '#1423C1',
+            borderColor: '#fff',
             borderWidth: 2,
             pointBorderWidth: 0,
             lineTension: 0,
           },
           {
-            label: t("home:graphic.treasury"),
+            label: t('home:graphic.treasury'),
             data: cleanData(dataTreasury),
-            backgroundColor: ["#060D62"],
-            pointBackgroundColor: "#060D62",
-            borderColor: "#fff",
+            backgroundColor: ['#060D62'],
+            pointBackgroundColor: '#060D62',
+            borderColor: '#fff',
             borderWidth: 2,
             pointBorderWidth: 0,
             lineTension: 0,
           },
         ]
-      : "",
+      : '',
   };
 
   return (
@@ -313,36 +313,36 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
       <section ref={ref} id="TOKEN-RELEASE" className="section-token-release">
         <div className="container">
           <div>
-            <h2>{t("home:token.title")}</h2>
-            <p>{t("home:token.about")}</p>
+            <h2>{t('home:token.title')}</h2>
+            <p>{t('home:token.about')}</p>
           </div>
           <div className="table-info">
             <div className="container-table">
               <div className="title">
-                <h4>{t("home:token.subTitle")}</h4>
+                <h4>{t('home:token.subTitle')}</h4>
               </div>
               <div className="list-table">
                 <ul>
-                  <li>{t("home:token.listItemA")}</li>
-                  <li>{t("home:token.listItemB")}</li>
-                  <li>{t("home:token.listItemC")}</li>
-                  <li>{t("home:token.listItemD")}</li>
-                  <li>{t("home:token.listItemE")}</li>
-                  <li>{t("home:token.listItemF")}</li>
+                  <li>{t('home:token.listItemA')}</li>
+                  <li>{t('home:token.listItemB')}</li>
+                  <li>{t('home:token.listItemC')}</li>
+                  <li>{t('home:token.listItemD')}</li>
+                  <li>{t('home:token.listItemE')}</li>
+                  <li>{t('home:token.listItemF')}</li>
                 </ul>
               </div>
             </div>
           </div>
           <div>
-            <h3>{t("home:token.secondSubTitle")} (%)</h3>
-            <p>{t("home:token.secondSubAbout")}</p>
+            <h3>{t('home:token.secondSubTitle')} (%)</h3>
+            <p>{t('home:token.secondSubAbout')}</p>
             <div>
               <Pie data={data} width={100} height={420} options={options} />
             </div>
             <p></p>
           </div>
           <div>
-            <h3>{t("home:token.thirdSubTitle")} (%)</h3>
+            <h3>{t('home:token.thirdSubTitle')} (%)</h3>
             <div className="container-chart">
               <div className="help-scroll">
                 <Line data={dataTokenSupply} options={dataOption} />

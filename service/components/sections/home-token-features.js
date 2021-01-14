@@ -1,23 +1,23 @@
-import React, { forwardRef } from "react";
-import useTranslation from "next-translate/useTranslation";
+import React, { forwardRef } from 'react';
+import useTranslation from 'next-translate/useTranslation';
 
 const HomeTokenFeatures = forwardRef(({ setVisibleNow }, ref) => {
   const { t } = useTranslation();
   const dataInfo = [
     {
-      img: "/assets/icons/hopr_Icon_Pay.png",
-      title: "home:features.pay",
-      paragraph: "home:features.payMain",
+      img: '/assets/icons/hopr_Icon_Pay.png',
+      title: 'home:features.pay',
+      paragraph: 'home:features.payMain',
     },
     {
-      img: "/assets/icons/hopr_Icon_Stake.png",
-      title: "home:features.stake",
-      paragraph: "home:features.stakeMain",
+      img: '/assets/icons/hopr_Icon_Stake.png',
+      title: 'home:features.stake',
+      paragraph: 'home:features.stakeMain',
     },
     {
-      img: "/assets/icons/hopr_Icon_Govern.png ",
-      title: "home:features.vote",
-      paragraph: "home:features.voteMain",
+      img: '/assets/icons/hopr_Icon_Govern.png ',
+      title: 'home:features.vote',
+      paragraph: 'home:features.voteMain',
     },
   ];
 
@@ -30,7 +30,7 @@ const HomeTokenFeatures = forwardRef(({ setVisibleNow }, ref) => {
       >
         <div className="container">
           <div className="container-center-center">
-            <h2>{t("home:features.title")}</h2>
+            <h2>{t('home:features.title')}</h2>
           </div>
           <div className="container-items">
             <div className="element-boxing">

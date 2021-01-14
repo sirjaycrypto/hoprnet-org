@@ -3,8 +3,6 @@ import useTranslation from 'next-translate/useTranslation';
 import { motion } from 'framer-motion';
 import { stagger, fadeInUp } from '../../util/motionConfig';
 
-
-
 export default function Blogs() {
   const { t } = useTranslation();
   const data = [
@@ -32,8 +30,10 @@ export default function Blogs() {
 
   return (
     <div className="container  padding-section-aux">
-      <h2>HOPR Blogs</h2>
-      <motion.div variants={stagger} className="contact-plus-element">
+      <div className="container-sm sub-title">
+        <h2>HOPR Blogs</h2>
+      </div>
+      <motion.div variants={stagger} className=" list-items">
         {data.map((e, index) => {
           const { link, img, label } = e;
 

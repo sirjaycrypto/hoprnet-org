@@ -1,21 +1,21 @@
-import React from "react";
-import Slider from "react-slick";
+import React from 'react';
+import Slider from 'react-slick';
 
-import useTranslation from "next-translate/useTranslation";
+import useTranslation from 'next-translate/useTranslation';
 export default function Slide() {
   const { t } = useTranslation();
   const dataInfo = [
     {
-      title: "home:slide.slideA",
-      paragraph: "home:slide.slideAMain",
+      title: 'home:slide.slideA',
+      paragraph: 'home:slide.slideAMain',
     },
     {
-      title: "home:slide.slideB",
-      paragraph: "home:slide.slideBMain",
+      title: 'home:slide.slideB',
+      paragraph: 'home:slide.slideBMain',
     },
     {
-      title: "home:slide.slideC",
-      paragraph:"home:slide.slideCMain",
+      title: 'home:slide.slideC',
+      paragraph: 'home:slide.slideCMain',
     },
   ];
 
@@ -26,7 +26,7 @@ export default function Slide() {
     lazyLoad: false,
     infinite: true,
     speed: 500,
-    fade:true,
+    fade: true,
     slidesToShow: 0,
     slidesToScroll: 0,
     initialSlide: 0,
@@ -50,4 +50,3 @@ export default function Slide() {
     </div>
   );
 }
-

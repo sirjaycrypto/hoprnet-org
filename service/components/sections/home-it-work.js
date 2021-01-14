@@ -1,25 +1,25 @@
-import React, { forwardRef } from "react";
-import useTranslation from "next-translate/useTranslation";
+import React, { forwardRef } from 'react';
+import useTranslation from 'next-translate/useTranslation';
 
 const HomeHomeItWork = forwardRef(({ setVisibleNow }, ref) => {
   const { t } = useTranslation();
   const dataInfo = [
     {
-      img: "/assets/images/hopr_Private.gif",
-      title: "home:work.private",
-      paragraph: "home:work.privateMain",
+      img: '/assets/images/hopr_Private.gif',
+      title: 'home:work.private',
+      paragraph: 'home:work.privateMain',
       mirrorBox: false,
     },
     {
-      img: "/assets/images/hopr_Profitable.gif",
-      title: "home:work.profitable",
-      paragraph: "home:work.profitableMain",
+      img: '/assets/images/hopr_Profitable.gif',
+      title: 'home:work.profitable',
+      paragraph: 'home:work.profitableMain',
       mirrorBox: true,
     },
     {
-      img: "/assets/images/hopr_Performant.gif",
-      title: "home:work.performant",
-      paragraph: "home:work.performantMain",
+      img: '/assets/images/hopr_Performant.gif',
+      title: 'home:work.performant',
+      paragraph: 'home:work.performantMain',
       mirrorBox: false,
     },
   ];
@@ -33,7 +33,7 @@ const HomeHomeItWork = forwardRef(({ setVisibleNow }, ref) => {
       >
         <div className="container">
           <div className="container-center-center">
-            <h2>{t("home:work.title")}</h2>
+            <h2>{t('home:work.title')}</h2>
           </div>
           <div className="element-boxing">
             {dataInfo.map((e, index) => {
@@ -41,7 +41,7 @@ const HomeHomeItWork = forwardRef(({ setVisibleNow }, ref) => {
               return (
                 <div
                   key={index}
-                  className={"info-box-line " + (mirrorBox ? "flex-line" : "")}
+                  className={'info-box-line ' + (mirrorBox ? 'flex-line' : '')}
                 >
                   <div className="info-cont aux-padding-box-read">
                     <h3>{t(title)}</h3>

@@ -40,11 +40,11 @@ export default function HoperFor() {
     },
   ];
   return (
-    <div className="container  padding-section-aux">
-      <div className="container">
+    <div className=" container  padding-section-aux">
+      <div className="container sub-title">
         <h2>HOPR For</h2>
       </div>
-      <motion.div variants={stagger} className="contact-plus-element">
+      <motion.div variants={stagger} className=" list-items">
         {data.map((e, index) => {
           const { link, img, label } = e;
 
