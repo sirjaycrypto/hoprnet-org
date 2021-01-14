@@ -19,7 +19,7 @@ export default function ItemsMenu() {
       name: "menu:technology",
     },
     {
-      path: "http://saentis.hoprnet.org/",
+      path: "/token",
       name: "menu:token",
     },
     {

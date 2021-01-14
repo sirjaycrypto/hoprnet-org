@@ -1,4 +1,4 @@
-import React, { forwardRef, useState, useEffect } from 'react';
+import React, { forwardRef, useState } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 import Modal from '../atoms/modal';
 import HeroInfo from '../molecules/hero-info';
@@ -12,8 +12,6 @@ const Hero = forwardRef(({}, ref) => {
   const [minutes, setMinutes] = useState('');
   const [seconds, setSeconds] = useState('');
   const { t } = useTranslation();
-
-  useEffect(() => {}, []);
 
   const showModalActive = () => {
     setShowModal(!showModal);
@@ -98,7 +96,6 @@ const Hero = forwardRef(({}, ref) => {
                     <span className="seconds">{seconds}</span>
                   </div>
                 </div>
-
                 <div>
                   <div onClick={() => clickBtn()} className="btn-banner ">
                     <span>{t('common:getHorpFull')}</span>

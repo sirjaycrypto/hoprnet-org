@@ -1,74 +1,74 @@
-import React, { useEffect } from "react";
-import { motion } from "framer-motion";
-import useTranslation from "next-translate/useTranslation";
+import React, { useEffect } from 'react';
+import { motion } from 'framer-motion';
+import useTranslation from 'next-translate/useTranslation';
 
-import Layout from "../../components/organisms/layout";
-import HeroInternal from "../../components/organisms/hero-internal";
+import Layout from '../../components/organisms/layout';
+import HeroInternal from '../../components/organisms/hero-internal';
 import {
   stagger,
   staggerHaft,
   fadeInUp,
   fadeInDown,
-} from "../../util/motionConfig";
-import insertScript from "../../util/insertScript";
-import { loadNamespaces } from "../_app";
+} from '../../util/motionConfig';
+import insertScript from '../../util/insertScript';
+import { loadNamespaces } from '../_app';
 
 const dataInfo = [
   {
-    img: "assets/images/icons/twitter.svg",
-    link: "https://twitter.com/hoprnet",
+    img: 'assets/images/icons/twitter.svg',
+    link: 'https://twitter.com/hoprnet',
   },
   {
-    img: "assets/images/icons/telegram.svg",
-    link: "https://t.me/hoprnet",
+    img: 'assets/images/icons/telegram.svg',
+    link: 'https://t.me/hoprnet',
   },
   {
-    img: "assets/images/icons/linkedin.svg",
-    link: "https://www.linkedin.com/company/hoprnet",
+    img: 'assets/images/icons/linkedin.svg',
+    link: 'https://www.linkedin.com/company/hoprnet',
   },
   {
-    img: "assets/images/icons/github.svg",
-    link: "https://github.com/hoprnet",
+    img: 'assets/images/icons/github.svg',
+    link: 'https://github.com/hoprnet',
   },
   {
-    img: "assets/images/icons/medium.svg",
-    link: "https://medium.com/hoprnet",
+    img: 'assets/images/icons/medium.svg',
+    link: 'https://medium.com/hoprnet',
   },
   {
-    img: "assets/images/icons/youtube.svg",
-    link: "https://www.youtube.com/channel/UC2DzUtC90LXdW7TfT3igasA",
+    img: 'assets/images/icons/youtube.svg',
+    link: 'https://www.youtube.com/channel/UC2DzUtC90LXdW7TfT3igasA',
   },
   {
-    img: "assets/images/icons/discord.svg",
-    link: "https://discord.gg/dEAWC4G",
+    img: 'assets/images/icons/discord.svg',
+    link: 'https://discord.gg/dEAWC4G',
   },
 ];
 
 const youtubeIds = [
-  "mcnezYJXuXw",
-  "wH48dy6PjVg",
-  "YN8BEF1JIQ0",
-  "lHQBiZmCLBY",
-  "kZiCoR1DYSg",
+  'mcnezYJXuXw',
+  'wH48dy6PjVg',
+  'YN8BEF1JIQ0',
+  'lHQBiZmCLBY',
+  'kZiCoR1DYSg',
 ];
 
 export default function Index() {
   const { t } = useTranslation();
   useEffect(() => {
     const script = insertScript(
-      "https://medium-widget.pixelpoint.io/widget.js"
+      'https://medium-widget.pixelpoint.io/widget.js'
     );
 
     script.onload = () => {
       MediumWidget.Init({
-        renderTo: "#medium-widget",
+        renderTo: '#medium-widget',
         params: {
-          resource: "https://medium.com/hoprnet",
+          resource: 'https://medium.com/hoprnet',
           postsPerLine: 2,
           limit: undefined,
-          picture: "big",
-          fields: ["author", "publishAt"],
-          ratio: "landscape",
+          picture: 'big',
+          fields: ['author', 'publishAt'],
+          ratio: 'landscape',
         },
       });
     };
@@ -80,11 +80,11 @@ export default function Index() {
         <HeroInternal>
           <motion.div variants={staggerHaft}>
             <motion.h1 animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
-              {t("blog:hero.title")}
+              {t('blog:hero.title')}
             </motion.h1>
             <motion.div>
               <motion.h3 variants={fadeInDown} transition={{ delay: 0.8 }}>
-                {t("blog:hero.paragraphA")}
+                {t('blog:hero.paragraphA')}
               </motion.h3>
               <div>
                 <ul className="social-list-blog">
@@ -114,7 +114,7 @@ export default function Index() {
         <section className="continue-hero-internal padding-section-aux invert-color ">
           <motion.div variants={stagger} className="container">
             <motion.h2 variants={fadeInUp} transition={{ delay: 0.8 }}>
-            {t("blog:second.title")}
+              {t('blog:second.title')}
             </motion.h2>
             <motion.div variants={stagger} className="container-block">
               <div className="block-video">
@@ -134,7 +134,7 @@ export default function Index() {
                 ))}
               </div>
               <div className="see-my-youtube">
-                .. {t("blog:second.subTitle")}
+                .. {t('blog:second.subTitle')}
                 <motion.a
                   animate={{ opacity: 1 }}
                   initial={{ opacity: 0 }}
@@ -143,16 +143,16 @@ export default function Index() {
                   rel="noopener noreferrer"
                   className="text-color-high underline"
                 >
-                  {t("blog:second.youtubeChannel")}
+                  {t('blog:second.youtubeChannel')}
                 </motion.a>
                 .
               </div>
             </motion.div>
           </motion.div>
         </section>
-        <section className="section-blog  padding-section-aux">
+        <section id="post-blog" className="section-blog  padding-section-aux">
           <div className="container-sm">
-            <h2 className=" padding-section-aux">{t("menu:blog")}</h2>
+            <h2 className=" padding-section-aux">{t('menu:blog')}</h2>
             <div>
               <div id="medium-widget" />
             </div>
@@ -166,10 +166,7 @@ export default function Index() {
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      _ns: await loadNamespaces(
-        ["common", "menu", "blog"],
-        locale
-      ),
+      _ns: await loadNamespaces(['common', 'menu', 'blog'], locale),
     },
   };
 }
