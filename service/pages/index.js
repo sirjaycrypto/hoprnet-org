@@ -1,11 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Layout from '../components/organisms/layout';
-import HoprCircle from '../components/home-sections/HoprCircle';
 import HeroFull from '../components/home-sections/HeroFull';
-import useTranslation from 'next-translate/useTranslation';
 
 import { loadNamespaces } from './_app';
-
+import Welcome from '../components/home-sections/Welcome';
 import HoperFor from '../components/home-sections/HoperFor';
 import News from '../components/home-sections/News';
 import UseCases from '../components/home-sections/UseCases';
@@ -15,20 +13,26 @@ import Partners from '../components/home-sections/Partners';
 import Team from '../components/home-sections/Team';
 import Contact from '../components/home-sections/Contact';
 export default function Home() {
+  const [welcomeAnimate, setWelcomeAnimate] = useState(true);
+
   return (
     <Layout>
-      <div id="the-old-home">
-        {/* <HoprCircle /> */}
-        <HeroFull />
-        <News />
-        <UseCases />
-        <HoperFor />
-        <HoperIs />
-        <Blog />
-        <Partners />
-        <Team />
-        <Contact />
-      </div>
+      <Welcome welcomeAnimate={welcomeAnimate} />
+      {!welcomeAnimate ? (
+        <div id="the-old-home">
+          <HeroFull />
+          <News />
+          <UseCases />
+          <HoperFor />
+          <HoperIs />
+          <Blog />
+          <Partners />
+          <Team />
+          <Contact />
+        </div>
+      ) : (
+        ''
+      )}
     </Layout>
   );
 }

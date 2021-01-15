@@ -1,0 +1,125 @@
+.welcome-section {
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  height: 100vh;
+  background: $hopr_yellow;
+  &::before {
+    background: white;
+    border-radius: 100%;
+    height: 80vh;
+    width: 80vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: '';
+    display: block;
+    position: absolute;
+    transition: all 400ms ease-in-out;
+  }
+  .center-on-the-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+  }
+  .section-top {
+    height: 70%;
+    .main-labels {
+      z-index: 3;
+      .help-box {
+        margin: 50px auto 0 auto;
+        width: 60%;
+        @include responsive(tablet) {
+          width: 80%;
+        }
+      }
+      h1,
+      p {
+        padding: 0;
+        margin: 0;
+        color: #414141;
+      }
+      h1 {
+        font-weight: 400;
+        font-size: 100px;
+        line-height: 126px;
+        text-transform: uppercase;
+      }
+      p {
+        font-size: 20px;
+        line-height: 25px;
+        text-align: center;
+        letter-spacing: 0.166667px;
+      }
+    }
+  }
+  .section-bottom {
+    transform: translateY(100%);
+    height: 30%;
+    display: flex;
+    & > div {
+      width: 50%;
+      overflow: hidden;
+      box-sizing: border-box;
+      position: relative;
+      &:first-child {
+        background: red;
+      }
+      &:last-child {
+        background: forestgreen;
+      }
+      a {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+        .text-area {
+          position: absolute;
+        }
+      }
+      h2 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 45px;
+        line-height: 55px;
+        text-align: center;
+        letter-spacing: 0.375px;
+        text-transform: uppercase;
+        color: #ffffff;
+        text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+        @include responsive(tablet) {
+          font-size: 25px;
+          line-height: 31px;
+          letter-spacing: 0.208333px;
+        }
+        @include responsive(phone) {
+          font-size: 20px;
+          line-height: 25px;
+          letter-spacing: 0.166667px;
+        }
+      }
+    }
+  }
+}
+
+.show-hi {
+  &::before {
+    height: 120vh;
+    width: 120vh;
+    transition: all 500ms ease-in-out;
+  }
+  .section-bottom {
+    transform: translateY(0%);
+    transition: all 800ms ease-in-out;
+  }
+}

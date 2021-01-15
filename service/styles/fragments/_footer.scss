@@ -3,7 +3,7 @@ footer {
   position: relative;
   z-index: 1;
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0;
     left: 0;
@@ -16,7 +16,6 @@ footer {
     img {
       width: 32px;
       @include responsive(tablet) {
-       
         margin: 24px 0;
       }
     }
