@@ -48,10 +48,10 @@ export default function Index() {
       setAnimateChart(true);
     }
     if (
-      visibleNow == '' ||
-      visibleNow == 'BANNER' ||
-      visibleNow == 'blindText' ||
-      visibleNow == 'FOOTER'
+      visibleNow === '' ||
+      visibleNow === 'BANNER' ||
+      visibleNow === 'blindText' ||
+      visibleNow === 'FOOTER'
     ) {
       setActiveBtn(false);
     } else {

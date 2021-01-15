@@ -58,15 +58,15 @@
     "votes": "# of Votes"
   },
   "hero": {
-    "subtitle": "THE HOPR TOKEN SALE ENDS IN:",
+    "subtitle": "THE HOPR TOKEN LAUNCH ENDS IN:",
     "title": "Changing Data Privacy for Good"
   },
   "slide": {
-    "slideA": "Sandro Cilurzo, Co-Founder & CEO of Sedimentum AG",
+    "slideA": "Sandro Cilurzo, Co-Founder & CEO of Sedimentum AG.",
     "slideAMain": "HOPR has developed this groundbreaking open source technology to be used by privacy-aware developers all over the world, HOPR is integrated in our cutting edge privacy-preserving technology to save lives without compromising privacy.",
-    "slideB": "Beniamin Mincu, CEO of Elrond",
-    "slideBMain": "Our protocol offers a new standard for internet-scale performance, probabilistic security, and cryptographic pseudonymity. We’re happy to bridge the last mile to the Elrond network entry-points with HOPR, and offer a truly decentralized & private end-to-end experience for our users",
-    "slideC": "Gin Chao, Strategy Officer of Binance",
+    "slideB": "Beniamin Mincu, CEO of Elrond.",
+    "slideBMain": "Our protocol offers a new standard for internet-scale performance, probabilistic security, and cryptographic pseudonymity. We’re happy to bridge the last mile to the Elrond network entry-points with HOPR, and offer a truly decentralized & private end-to-end experience for our users.",
+    "slideC": "Gin Chao, Strategy Officer of Binance.",
     "slideCMain": "Add a third quote: The team at HOPR has shown us how their decentralized network achieves privacy guarantees on the metadata level and gives power back to the people."
   },
   "token": {
@@ -75,8 +75,8 @@
     "listItemB": "Token Symbol: HOPR",
     "listItemC": "Network: Ethereum",
     "listItemD": "Standards: ERC20, ERC777",
-    "listItemE": "Total supply: 130’000’000 HOPR",
-    "listItemF": "Initial circulating supply: 130’000’000 HOPR",
+    "listItemE": "Total supply: 1BN HOPR",
+    "listItemF": "Initial circulating supply: 130M HOPR",
     "secondSubAbout": "Starting at an initial circulating supply of 130 million, HOPR tokens will be released over a period of 5 years. A quarter of all HOPR tokens are available only to stakers as a reward for relaying cover traffic.",
     "secondSubTitle": "Token Allocation",
     "subTitle": "KEY METRICS",

@@ -56,7 +56,7 @@ const HomeHeadline = forwardRef(({ setVisibleNow }, ref) => {
                 </p>
               </div>
               <div className="btn-ticket" onClick={() => clickBtn()}>
-                <span>{t('common:getHorp')}</span>
+                <span>{t('common:getHorpFull')}</span>
               </div>
             </div>
 
