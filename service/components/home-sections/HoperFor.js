@@ -40,9 +40,9 @@ export default function HoperFor() {
     },
   ];
   return (
-    <div className=" container  padding-section-aux">
+    <div className=" container the-aux-margin">
       <div className="container sub-title">
-        <h2>HOPR For</h2>
+        <h2 className="the-aux-margin">HOPR For</h2>
       </div>
       <motion.div variants={stagger} className=" list-items">
         {data.map((e, index) => {

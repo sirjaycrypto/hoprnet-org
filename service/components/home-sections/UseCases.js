@@ -84,7 +84,7 @@ const data = [
 export default function UseCases() {
   const { t } = useTranslation();
   return (
-    <section className="section-UseCases change-bg-color">
+    <section className="section-UseCases change-bg-color the-aux-margin">
       <div className="container">
         <div className="container-sm sub-title">
           <h2>Use Cases</h2>

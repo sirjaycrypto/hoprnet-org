@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 
 export default function Team() {
   return (
-    <div className="section-team container">
+    <div className="section-team container the-aux-margin">
       <div className="container">
         <div className=" ">
           <h3>Team</h3>

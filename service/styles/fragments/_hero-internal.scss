@@ -10,6 +10,8 @@
     font-size: 6.25rem;
     font-weight: 400;
     line-height: initial;
+    padding-bottom: 32px;
+    margin-bottom: 32px;
     @include responsive(tablet) {
       font-size: 2.5rem;
     }
@@ -20,6 +22,7 @@
 
     letter-spacing: 0.208333px;
     font-weight: 300;
+    margin-bottom: 32px;
   }
   h3 {
     font-size: 1.313rem;

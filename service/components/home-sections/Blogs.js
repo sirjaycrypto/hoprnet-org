@@ -29,11 +29,11 @@ export default function Blogs() {
   ];
 
   return (
-    <div className="container  padding-section-aux">
+    <div className="container  the-aux-margin">
       <div className="container-sm sub-title">
-        <h2>HOPR Blogs</h2>
+        <h2 className="the-aux-margin">HOPR Blogs</h2>
       </div>
-      <motion.div variants={stagger} className=" list-items">
+      <motion.div variants={stagger} className=" list-items helper-box-mob">
         {data.map((e, index) => {
           const { link, img, label } = e;
 

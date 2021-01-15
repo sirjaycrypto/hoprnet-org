@@ -33,7 +33,7 @@ export default function News() {
   const { t } = useTranslation();
   return (
     <>
-      <section className="section-InTheNews">
+      <section className="section-InTheNews the-aux-margin">
         <div className="container">
           <div className="container-sm sub-title">
             <h2>In The News</h2>

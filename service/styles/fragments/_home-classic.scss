@@ -1,12 +1,19 @@
 #the-old-home {
   color: #414141;
-  .type-btn {
+  .type-btn,
+  .btn-banner {
     border-radius: 15px;
     height: 48px;
     background: linear-gradient(270deg, #000050, #0000b4);
     display: flex;
     align-items: center;
     justify-content: center;
+    width: fit-content;
+    margin: auto;
+    @include responsive(tablet) {
+      padding: auto 2em;
+      height: 22px;
+    }
     span {
       font-weight: 500;
       font-size: 14px;
@@ -38,16 +45,25 @@
       color: #414141;
       word-wrap: break-word;
       overflow-wrap: break-word;
+      @include responsive(tablet) {
+        font-size: 32px;
+        line-height: 42px;
+      }
     }
   }
+
   .section-partners {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 60px 0;
+
     ul {
-      li{
-        img{
+      li {
+        @include responsive(tablet) {
+          width: 100%;
+        }
+        img {
           height: 100%;
           object-fit: cover;
           filter: contrast(0.5);
@@ -56,8 +72,20 @@
     }
   }
   .section-UseCases {
+    h2 {
+      margin: 0 !important;
+      &:last-of-type {
+        @include responsive(tablet) {
+          font-size: 32px;
+          margin-top: 3rem !important;
+        }
+      }
+    }
     .read-text {
       text-align: center;
+      @include responsive(tablet) {
+        margin-bottom: 80px;
+      }
       p {
         font-weight: 400;
         color: #414141;
@@ -98,6 +126,9 @@
         height: 100%;
         padding: 32px 24px;
         align-items: center;
+        @include responsive(tablet) {
+          padding: 0;
+        }
       }
       .container-img {
         width: 75px;
@@ -199,7 +230,9 @@
     align-items: center;
     padding-bottom: 89px;
     border-bottom: 0.5px solid;
-    margin-bottom: 89px;
+    @include responsive(tablet) {
+      flex-direction: column;
+    }
     & > div {
       display: flex;
       align-items: center;
@@ -235,6 +268,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    text-align: center;
     .item-contact-plus {
       display: flex;
       flex-direction: column;
@@ -246,7 +280,7 @@
     a {
       text-decoration: none;
       @include responsive(tablet) {
-        width: 100%;
+        width: 50%;
       }
     }
     .bg-img {
@@ -272,9 +306,25 @@
       color: $hopr_grey;
       padding: 0;
       margin: 0;
+      @include responsive(tablet) {
+        font-size: 18px;
+      }
     }
   }
   .change-bg-color {
     background: $hopr_yellow;
+  }
+
+  .the-aux-padding {
+    padding: 80px 0;
+    @include responsive(tablet) {
+      padding: 48px 0;
+    }
+  }
+  .the-aux-margin {
+    margin: 80px auto;
+    @include responsive(tablet) {
+      margin: 48px auto;
+    }
   }
 }

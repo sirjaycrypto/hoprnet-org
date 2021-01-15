@@ -14,9 +14,9 @@ footer {
   }
   .footer-icon {
     img {
-      width: 55px;
+      width: 32px;
       @include responsive(tablet) {
-        width: 34px;
+       
         margin: 24px 0;
       }
     }
@@ -25,8 +25,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 2em;
-    margin-bottom: 3em;
+    margin-top: 1em;
+    margin-bottom: 2em;
     @include responsive(tablet) {
       margin-top: 0em;
       margin-bottom: 0em;
@@ -64,6 +64,7 @@ footer {
 
       li {
         margin-right: 1em;
+        font-weight: 300;
         &:last-child {
           margin-right: 0;
         }
@@ -100,10 +101,7 @@ footer {
 
         img {
           filter: invert(1);
-          width: 27px;
-          @include responsive(tablet) {
-            width: 21px;
-          }
+          width: 16px;
         }
       }
     }
