@@ -28,6 +28,8 @@
     height: 70%;
     .main-labels {
       z-index: 3;
+      opacity: 0;
+      transform: translateY(100%);
       .help-box {
         margin: 50px auto 0 auto;
         width: 60%;
@@ -46,12 +48,23 @@
         font-size: 100px;
         line-height: 126px;
         text-transform: uppercase;
+        letter-spacing: 0.833333px;
+        @include responsive(phone) {
+          font-size: 50px;
+          line-height: 64px;
+          letter-spacing: 0.416667px;
+        }
       }
       p {
         font-size: 20px;
         line-height: 25px;
         text-align: center;
         letter-spacing: 0.166667px;
+        @include responsive(phone) {
+          font-size: 16px;
+          line-height: 20px;
+          letter-spacing: 0.133333px;
+        }
       }
     }
   }
@@ -117,6 +130,13 @@
     height: 120vh;
     width: 120vh;
     transition: all 500ms ease-in-out;
+  }
+  .section-top {
+    .main-labels {
+      transform: translateY(0%);
+      opacity: 1;
+      transition: all 800ms ease-in-out;
+    }
   }
   .section-bottom {
     transform: translateY(0%);

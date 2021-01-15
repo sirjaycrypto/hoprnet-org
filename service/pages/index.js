@@ -1,7 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Layout from '../components/organisms/layout';
-import HeroFull from '../components/home-sections/HeroFull';
-
 import { loadNamespaces } from './_app';
 import Welcome from '../components/home-sections/Welcome';
 import HoperFor from '../components/home-sections/HoperFor';
@@ -15,12 +13,16 @@ import Contact from '../components/home-sections/Contact';
 export default function Home() {
   const [welcomeAnimate, setWelcomeAnimate] = useState(true);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setWelcomeAnimate(false);
+    }, 600);
+  }, []);
   return (
     <Layout>
       <Welcome welcomeAnimate={welcomeAnimate} />
       {!welcomeAnimate ? (
         <div id="the-old-home">
-          <HeroFull />
           <News />
           <UseCases />
           <HoperFor />

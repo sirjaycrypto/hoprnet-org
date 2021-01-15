@@ -1,8 +1,7 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { stagger, fadeInUp } from '../../util/motionConfig';
-import HeroInternal from '../../components/organisms/hero-internal';
-
+import Link from 'next/link';
 export default function Welcome({ welcomeAnimate }) {
   const [initialAni, setInitialAni] = useState(false);
 
@@ -38,12 +37,14 @@ export default function Welcome({ welcomeAnimate }) {
           </a>
         </div>
         <div className="left-container center-on-the-box">
-          <a>
-            <img src="/assets/images/welcomeLeft.png" alt="HOPR Token-SALE" />
-            <div className="text-area">
-              <h2>HOPR Token-SALE 02:09:26:41 </h2>
-            </div>
-          </a>
+          <Link href="/token">
+            <a>
+              <img src="/assets/images/welcomeLeft.png" alt="HOPR Token-SALE" />
+              <div className="text-area">
+                <h2>HOPR Token-SALE 02:09:26:41 </h2>
+              </div>
+            </a>
+          </Link>
         </div>
       </div>
     </div>
