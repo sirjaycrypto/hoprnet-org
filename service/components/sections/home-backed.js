@@ -74,13 +74,8 @@ const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
                 );
               } else {
                 return (
-                  <div className="break-line">
-                    <a
-                      href={url}
-                      key={index}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                  <div className="break-line" key={index}>
+                    <a href={url} target="_blank" rel="noopener noreferrer">
                       <img src={img} alt={title} />
                     </a>
                   </div>

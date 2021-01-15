@@ -44,7 +44,7 @@ export default function Index() {
     if (isVisibleBack) setVisibleNow(currentElementVisibleBack.current.id);
     if (isVisibleBanner) setVisibleNow(currentElementVisibleBanner.current.id);
     if (isVisibleTokenRel) setVisibleNow(currentElementTokenRel.current.id);
-    if (visibleNow === 'TOKEN-RELEASE') {
+    if (visibleNow == 'TOKEN-RELEASE') {
       setAnimateChart(true);
     }
     if (
