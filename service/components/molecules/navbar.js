@@ -46,10 +46,16 @@ const sectionPage = [
 
 export default function Navbar({ visibleNow }) {
   const [youDown, setYouDown] = useState(false);
+  const [addStyle, setAddStyle] = useState(false);
   const [activaMenu, setActivaMenu] = useState(false);
   const router = useRouter();
 
+  function isTheHome() {
+    setAddStyle(router.pathname === '/');
+  }
+
   useEffect(() => {
+    isTheHome();
     window.onscroll = function () {
       if (window.pageYOffset === 0) {
         setYouDown(false);
@@ -67,7 +73,13 @@ export default function Navbar({ visibleNow }) {
         <motion.nav
           variants={fadeInDown}
           id="menu"
-          className={youDown ? 'add-scroll-menu ' : ''}
+          className={
+            youDown
+              ? 'add-scroll-menu '
+              : '' || !addStyle
+              ? 'nav-style-no-home'
+              : ''
+          }
           transition={{ delay: 0.8 }}
         >
           <div className={'container-sm ' + (activaMenu ? 'add-shadow' : '')}>

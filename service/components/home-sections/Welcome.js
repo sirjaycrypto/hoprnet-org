@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { stagger, fadeInUp } from '../../util/motionConfig';
 import Link from 'next/link';
+
 export default function Welcome({ welcomeAnimate }) {
   const [initialAni, setInitialAni] = useState(false);
 
