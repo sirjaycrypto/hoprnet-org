@@ -1,14 +1,24 @@
+// Containers widths
+$container--width-boxed: 1440px; // boxed container width
+$container--width: 1080px; // container width
+$container--width-sm: 896px; // container sm width
+$container--width-xs: 620px; // container xs width
 $container--padding__mobile: 16px; // container, left and right padding (mobile)
-$container--padding__desktop: 24px; // container, left and right padding (desktop)
+$container--padding__desktop: 24px; //
 
-.container,
+
+
+
+
+
+  .container,
 .container-sm,
 .container-xs {
   width: 100%;
   margin: 0 auto;
   padding-left: $container--padding__mobile;
   padding-right: $container--padding__mobile;
-  box-sizing: border-box;
+
   @include responsive(tablet) {
     padding-left: $container--padding__desktop;
     padding-right: $container--padding__desktop;
@@ -16,28 +26,28 @@ $container--padding__desktop: 24px; // container, left and right padding (deskto
 }
 
 .container {
-  max-width: $pc + ($container--padding__desktop * 2);
+  max-width: $container--width + ($container--padding__desktop * 2);
 }
 
 .container-sm {
-  max-width: $tablet + ($container--padding__desktop * 2);
+  max-width: $container--width-sm + ($container--padding__desktop * 2);
 }
 
 .container-xs {
-  max-width: $phone + ($container--padding__desktop * 2);
+  max-width: $container--width-xs + ($container--padding__desktop * 2);
 }
 
-[class*="container"] {
-  [class*="container"] {
+[class*='container'] {
+  [class*='container'] {
     padding-left: 0;
     padding-right: 0;
   }
 
   .container-sm {
-    max-width: $phone;
+    max-width: $container--width-sm;
   }
 
   .container-xs {
-    max-width: $phone;
+    max-width: $container--width-xs;
   }
 }
