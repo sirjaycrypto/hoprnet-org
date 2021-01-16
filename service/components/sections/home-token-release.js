@@ -109,12 +109,12 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
           '#060D62',
         ],
         hoverBackgroundColor: [
-          '#FEFDAF',
-          '#FEFDAF',
-          '#C0F3FF',
-          '#4B79B4',
-          '#1423C1',
-          '#060D62',
+          '#FEFC86',
+          '#FEFC86',
+          '#99ECFF',
+          '#426A9E',
+          '#111EA6',
+          '#04083A',
         ],
         hoverBorderColor: [
           '#878787',

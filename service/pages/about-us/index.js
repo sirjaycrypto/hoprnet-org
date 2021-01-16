@@ -8,7 +8,7 @@ import SubStrack from '../../components/molecules/sub-strack';
 import Jobs from '../../components/molecules/jobs';
 import ProfileAssociation from '../../components/molecules/profile-association';
 import ContactPlus from '../../components/molecules/contact-plus';
-import { stagger, fadeInUp } from '../../util/motionConfig';
+import { stagger, fadeInUp, fadeInDown } from '../../util/motionConfig';
 import { loadNamespaces } from '../_app';
 
 const dataInfo = [
@@ -48,23 +48,23 @@ export default function Index() {
       <Layout>
         <HeroInternal>
           <motion.div variants={stagger}>
-            <h1 className="reveal-from-top " data-reveal-delay="150">
+            <motion.h1 variants={fadeInDown} transition={{ delay: 0.2 }}>
               {t('about:hero.title')}
-            </h1>
+            </motion.h1>
             <div>
-              <motion.p variants={fadeInUp} transition={{ delay: 0.2 }}>
+              <motion.p variants={fadeInDown} transition={{ delay: 0.2 }}>
                 {t('about:hero.paragraphA')}
-              </motion.p>
-              <motion.p variants={fadeInUp} transition={{ delay: 0.4 }}>
+                <br />
+                <br />
                 {t('about:hero.paragraphB')}
-              </motion.p>
-              <motion.p variants={fadeInUp} transition={{ delay: 0.6 }}>
+                <br />
+                <br />
                 {t('about:hero.paragraphC')}
-              </motion.p>
-              <motion.p variants={fadeInUp} transition={{ delay: 0.8 }}>
+                <br />
+                <br />
                 {t('about:hero.paragraphD')}
-              </motion.p>
-              <motion.p variants={fadeInUp} transition={{ delay: 1 }}>
+                <br />
+                <br />
                 {t('about:hero.paragraphE')}
                 <a
                   className="link-out"

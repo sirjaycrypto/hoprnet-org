@@ -10,10 +10,11 @@ export default function Layout({ visibleNow, children }) {
   const router = useRouter();
   useEffect(() => {
     document.body.classList.add('is-revealed');
+    document.body.classList.add('has-animations');
     document.body.classList.add('is-loaded');
-
     scrollReveal.current.init();
   }, []);
+
 
   return (
     <>
@@ -33,6 +34,3 @@ export default function Layout({ visibleNow, children }) {
     </>
   );
 }
-
-
-

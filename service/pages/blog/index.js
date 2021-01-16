@@ -77,25 +77,19 @@ export default function Index() {
   return (
     <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
       <Layout>
-        <HeroInternal>
+        <HeroInternal noNeedFull={true}>
           <motion.div variants={staggerHaft}>
-            <motion.h1 animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
+            <motion.h1 variants={fadeInDown} transition={{ delay: 0.2 }}>
               {t('blog:hero.title')}
             </motion.h1>
-            <motion.div>
-              <motion.h3 variants={fadeInDown} transition={{ delay: 0.8 }}>
-                {t('blog:hero.paragraphA')}
-              </motion.h3>
+            <motion.div variants={fadeInDown} transition={{ delay: 0.5 }}>
+              <h3>{t('blog:hero.paragraphA')}</h3>
               <div>
                 <ul className="social-list-blog">
                   {dataInfo.map((e, index) => {
                     const { img, link } = e;
                     return (
-                      <motion.li
-                        key={index}
-                        variants={fadeInDown}
-                        transition={{ delay: 0.8 }}
-                      >
+                      <li key={index}>
                         <a
                           href={link}
                           target="_blank"
@@ -103,7 +97,7 @@ export default function Index() {
                         >
                           <img src={img} alt="The HOPR-Token NOW" />
                         </a>
-                      </motion.li>
+                      </li>
                     );
                   })}
                 </ul>
