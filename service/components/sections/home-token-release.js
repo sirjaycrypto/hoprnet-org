@@ -42,7 +42,7 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
     t('home:graphic.public'),
     t('home:graphic.cover'),
     t('home:graphic.bounties'),
-    t('home:graphic.early'),
+    t('home:graphic.pre'),
     t('home:graphic.team'),
     t('home:graphic.treasury'),
   ];
@@ -60,7 +60,7 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
     responsive: true,
 
     animation: {
-      duration: 9000, 
+      duration: 9000,
     },
 
     tooltips: {
@@ -137,7 +137,7 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
     (item) => item[t('home:graphic.team')]
   );
   const dataEarlyTokenBuyers = dataSupply.map(
-    (item) => item[t('home:graphic.early')]
+    (item) => item[t('home:graphic.pre')]
   );
   const dataBounties = dataSupply.map((item) => item.Bounties);
   const dataCoverTraffic = dataSupply.map(
@@ -147,11 +147,16 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
     (item) => item[t('home:graphic.public')]
   );
 
-  // function cleanData(elements) {
-  //   return elements.map(function (elem) {
-  //     return parseFloat(elem.split(',').join('').trim());
-  //   });
-  // }
+  function cleanData(elements) {
+    return elements.map(function (elem) {
+      console.log(elem);
+      if(elem === undefined){
+        return elem
+      }
+      //parseFloat(elem.split(',').join('').trim())
+      return parseFloat(elem.split(',').join('').trim());
+    });
+  }
 
   const dataOption = {
     aspectRatio: 2,
@@ -233,80 +238,80 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
     },
   };
 
-  // const dataTokenSupply = {
-  //   legend: [
-  //     t('home:graphic.public'),
-  //     t('home:graphic.cover'),
-  //     t('home:graphic.bounties'),
-  //     t('home:graphic.early'),
-  //     t('home:graphic.team'),
-  //     t('home:graphic.treasury'),
-  //   ],
-  //   labels: dataDate,
-  //   datasets: start
-  //     ? [
-  //         {
-  //           label: t('home:graphic.public'),
-  //           data: cleanData(dataPublicSale),
-  //           backgroundColor: ['#FEFDAF'],
-  //           pointBackgroundColor: '#FEFDAF',
-  //           borderColor: '#fff',
-  //           borderWidth: 2,
-  //           pointBorderWidth: 0,
-  //           lineTension: 0,
-  //         },
-  //         {
-  //           label: t('home:graphic.cover'),
-  //           data: cleanData(dataCoverTraffic),
-  //           backgroundColor: ['#FEFDAF'],
-  //           pointBackgroundColor: '#FEFDAF',
-  //           borderWidth: 0,
-  //           pointBorderWidth: 0,
-  //           lineTension: 0,
-  //         },
-  //         {
-  //           label: t('home:graphic.bounties'),
-  //           data: cleanData(dataBounties),
-  //           backgroundColor: ['#C0F3FF'],
-  //           pointBackgroundColor: '#C0F3FF',
-  //           borderColor: '#fff',
-  //           borderWidth: 2,
-  //           pointBorderWidth: 0,
-  //           lineTension: 0,
-  //         },
-  //         {
-  //           label: t('home:graphic.early'),
-  //           data: cleanData(dataEarlyTokenBuyers),
-  //           backgroundColor: ['#4B79B4'],
-  //           pointBackgroundColor: '#4B79B4',
-  //           borderColor: '#fff',
-  //           borderWidth: 2,
-  //           pointBorderWidth: 0,
-  //           lineTension: 0,
-  //         },
-  //         {
-  //           label: t('home:graphic.team'),
-  //           data: cleanData(dataTeamNAdvisors),
-  //           backgroundColor: ['#1423C1'],
-  //           pointBackgroundColor: '#1423C1',
-  //           borderColor: '#fff',
-  //           borderWidth: 2,
-  //           pointBorderWidth: 0,
-  //           lineTension: 0,
-  //         },
-  //         {
-  //           label: t('home:graphic.treasury'),
-  //           data: cleanData(dataTreasury),
-  //           backgroundColor: ['#060D62'],
-  //           pointBackgroundColor: '#060D62',
-  //           borderColor: '#fff',
-  //           borderWidth: 2,
-  //           pointBorderWidth: 0,
-  //           lineTension: 0,
-  //         },
-  //       ]
-  //     : '',
-  // };
+  const dataTokenSupply = {
+    legend: [
+      t('home:graphic.public'),
+      t('home:graphic.cover'),
+      t('home:graphic.bounties'),
+      t('home:graphic.pre'),
+      t('home:graphic.team'),
+      t('home:graphic.treasury'),
+    ],
+    labels: dataDate,
+    datasets: start
+      ? [
+          {
+            label: t('home:graphic.public'),
+            data: cleanData(dataPublicSale),
+            backgroundColor: ['#FEFDAF'],
+            pointBackgroundColor: '#FEFDAF',
+            borderColor: '#fff',
+            borderWidth: 2,
+            pointBorderWidth: 0,
+            lineTension: 0,
+          },
+          {
+            label: t('home:graphic.cover'),
+            data: cleanData(dataCoverTraffic),
+            backgroundColor: ['#FEFDAF'],
+            pointBackgroundColor: '#FEFDAF',
+            borderWidth: 0,
+            pointBorderWidth: 0,
+            lineTension: 0,
+          },
+          {
+            label: t('home:graphic.bounties'),
+            data: cleanData(dataBounties),
+            backgroundColor: ['#C0F3FF'],
+            pointBackgroundColor: '#C0F3FF',
+            borderColor: '#fff',
+            borderWidth: 2,
+            pointBorderWidth: 0,
+            lineTension: 0,
+          },
+          {
+            label: t('home:graphic.pre'),
+            data: cleanData(dataEarlyTokenBuyers),
+            backgroundColor: ['#4B79B4'],
+            pointBackgroundColor: '#4B79B4',
+            borderColor: '#fff',
+            borderWidth: 2,
+            pointBorderWidth: 0,
+            lineTension: 0,
+          },
+          {
+            label: t('home:graphic.team'),
+            data: cleanData(dataTeamNAdvisors),
+            backgroundColor: ['#1423C1'],
+            pointBackgroundColor: '#1423C1',
+            borderColor: '#fff',
+            borderWidth: 2,
+            pointBorderWidth: 0,
+            lineTension: 0,
+          },
+          {
+            label: t('home:graphic.treasury'),
+            data: cleanData(dataTreasury),
+            backgroundColor: ['#060D62'],
+            pointBackgroundColor: '#060D62',
+            borderColor: '#fff',
+            borderWidth: 2,
+            pointBorderWidth: 0,
+            lineTension: 0,
+          },
+        ]
+      : '',
+  };
 
   return (
     <>
@@ -345,7 +350,7 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
             <h3>{t('home:token.thirdSubTitle')} (M)</h3>
             <div className="container-chart">
               <div className="help-scroll">
-                {/* <Line data={dataTokenSupply} options={dataOption} /> */}
+                <Line data={dataTokenSupply} options={dataOption} />
               </div>
             </div>
           </div>
