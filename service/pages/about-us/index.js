@@ -7,6 +7,7 @@ import HeroInternal from '../../components/organisms/hero-internal';
 import SubStrack from '../../components/molecules/sub-strack';
 import Jobs from '../../components/molecules/jobs';
 import ProfileAssociation from '../../components/molecules/profile-association';
+import PeopleBuild from '../../components/molecules/PeopleBuild';
 import ContactPlus from '../../components/molecules/contact-plus';
 import { stagger, fadeInUp, fadeInDown } from '../../util/motionConfig';
 import { loadNamespaces } from '../_app';
@@ -181,6 +182,9 @@ export default function Index() {
                   <li>{t('about:association.itemD')}</li>
                 </ul>
               </div>
+
+              <PeopleBuild />
+
               <div>
                 <p>{t('about:association.paragraphB')}</p>
                 <div className="btn-align">

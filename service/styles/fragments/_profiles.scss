@@ -37,3 +37,29 @@
     font-size: 1rem !important;
   }
 }
+
+.people-area {
+  margin-top: 120px;
+  @include responsive(tablet) {
+    margin-top: 50px;
+  }
+  @include responsive(phone) {
+    margin-bottom: 24px;
+  }
+  .people-faces {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    a {
+      text-decoration: none;
+    }
+    .item-profile {
+      padding: 32px;
+      img {
+        width: 180px;
+        height: 180px;
+        margin: auto 58px;
+      }
+    }
+  }
+}
