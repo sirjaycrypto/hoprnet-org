@@ -9,8 +9,7 @@
   width: auto;
   padding: 0 1.5em;
   &:hover {
-    background: linear-gradient(90deg, #0000db 100%, #292941 100%);
-   
+    background:#0000db;
   }
   @media screen and (max-width: 600px) {
     padding: 0.5em 1.5em;
@@ -142,7 +141,7 @@
     position: relative;
   }
   & > div {
-    background: linear-gradient(90deg, #0000db 0%, #292941 100%);
+    // background: linear-gradient(90deg, #0000db 0%, #292941 100%);
     transition: all 600ms ease-in-out;
     padding: 0em 1.5em;
     border-radius: 100px;

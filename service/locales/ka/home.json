@@ -1,11 +1,11 @@
 {
   "headline": {
     "title": "INVEST IN METADATA PRIVACY",
-    "beforeInfoTop": "Global data traffic is <strong> growing</strong> exponentially, and so are the security risks. ",
+    "beforeInfoTop": "Global data traffic is <strong>growing</strong> exponentially, and so are the security risks. ",
     "beforeInfoBottom": " HOPR provides essential and compliant network-level metadata privacy for everyone.",
     "mainInfo": "Every minute, people and companies transmit millions of gigabytes of data across the globe. This figure is growing exponentially thanks to new technologies such as 5G and the Internet of Things. This data all needs protecting, and so does the metadata it generates. The HOPR protocol provides network-level metadata privacy for everyone, and the HOPR network is driven by the HOPR token.",
-    "titleTicket": "Balancer-Sale",
-    "txtDownNum": "per HOPR",
+    "titleTicket": "Balancer Sale",
+    "txtDownNum": "per HOPR token",
     "fPoint": "Join our initial limited token release to be one of the first to earn and stake HOPR.",
     "sPoint": "There will be only XXXX tokens available during this initial phase.",
     "tPoint": "Tokens will be available via",
@@ -17,7 +17,7 @@
     "titleB": "AS SEEN IN"
   },
   "banner": {
-    "label": "Be the first to earn and stake HOPR with our limited token release.",
+    "label": "Be the first to earn and stake HOPR tokens with our limited token release.",
     "button": "Get HOPR Token"
   },
   "features": {
@@ -52,7 +52,7 @@
     "bounties": "Bounties",
     "cover": "Cover Traffic",
     "early": "Early Token Buyers",
-    "public": "Public Sale",
+    "public": "Public Distribution",
     "team": "Team & Advisors",
     "treasury": "Treasury",
     "votes": "# of Votes"
@@ -65,14 +65,14 @@
     "slideA": "Sandro Cilurzo, Co-Founder & CEO of Sedimentum AG.",
     "slideAMain": "HOPR has developed this groundbreaking open source technology to be used by privacy-aware developers all over the world, HOPR is integrated in our cutting edge privacy-preserving technology to save lives without compromising privacy.",
     "slideB": "Beniamin Mincu, CEO of Elrond.",
-    "slideBMain": "Our protocol offers a new standard for internet-scale performance, probabilistic security, and cryptographic pseudonymity. We’re happy to bridge the last mile to the Elrond network entry-points with HOPR, and offer a truly decentralized & private end-to-end experience for our users.",
+    "slideBMain": "The HOPR protocol offers a new standard for internet-scale performance, probabilistic security, and cryptographic pseudonymity. We’re happy to bridge the last mile to the Elrond network entry-points with HOPR, and offer a truly decentralized & private end-to-end experience for our users",
     "slideC": "Gin Chao, Strategy Officer of Binance.",
-    "slideCMain": "Add a third quote: The team at HOPR has shown us how their decentralized network achieves privacy guarantees on the metadata level and gives power back to the people."
+    "slideCMain": "The team at HOPR has shown us how their decentralized network achieves privacy guarantees on the metadata level and gives power back to the people."
   },
   "token": {
     "about": "The HOPR Network is powered by the HOPR Token, a utility token on the Ethereum Network.",
-    "listItemA": "Token Name: HOPR Token",
-    "listItemB": "Token Symbol: HOPR",
+    "listItemA": "Token same: HOPR Token",
+    "listItemB": "Token symbol: HOPR",
     "listItemC": "Network: Ethereum",
     "listItemD": "Standards: ERC20, ERC777",
     "listItemE": "Total supply: 1BN HOPR",
@@ -92,9 +92,9 @@
   },
   "work": {
     "performant": "Performant",
-    "performantMain": "NEW TEXT: HOPR’s custom layer-two scaling solution is based on probabilistic payment channels. This ensures fully decentralized settelement without unnecessary blockchain transaction fees, all while protecting node runners’ metadata.",
+    "performantMain": "HOPR’s custom layer-two scaling solution is based on probabilistic payment channels. This ensures fully decentralized settlement without unnecessary blockchain transaction fees, all while protecting node runners’ metadata.",
     "private": "Private",
-    "privateMain": "The HOPR network is a decentralized incentivized mixnet, ensuring complete data and metadata privacy for everyone who uses it. Data is sent via multiple hops, so no-one but the sender and receiver know the origin, destination, or content or a data transfer.",
+    "privateMain": "The HOPR network is a decentralized incentivized mixnet, ensuring complete data and metadata privacy for everyone who uses it. Data is sent via multiple hops, so no-one but the sender and receiver know the origin, destination, or content of a data transfer.",
     "profitable": "Profitable",
     "profitableMain": "HOPR’s unique proof-of-relay mechanism means every node runner is incentivized to correctly relay data in exchange for HOPR tokens. Anyone can run a HOPR node to earn HOPR tokens and contribute to online data privacy.",
     "title": "How it works"

@@ -1,533 +1,452 @@
 [
   {
-    "Date": "15 Jan, 2021",
-    "Public Sale": "75,000,000",
+    "Date": "Launch",
+    "Public Distribution": "85,000,000",
+    "Cover Traffic": "0",
+    "Bounties": "13,333,333",
+    "Pre-Sale": "0",
+    "Team & Advisors":"0",
+    "Treasury": "31,875,000"
+  },
+  {
+    "Date": "1 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "10,417,000",
-    "Bounties": "10,208,333",
-    "Early Token Buyers":"0",
-    "Team & Advisors":"0",
-    "Treasury": "15,000,000"
+    "Bounties": "13,333,333",
+    "Pre-Sale": "0",
+    "Team & Advisors": "0",
+    "Treasury": "31,875,000"
   },
   {
-    "Date": "14 Feb, 2021",
-    "Public Sale": "75,000,000",
+    "Date": "2 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "20,834,000",
-    "Bounties": "10,208,333",
-    "Early Token Buyers":"0",
+    "Bounties": "13,333,333",
+    "Pre-Sale":"0",
     "Team & Advisors":"0",
-    "Treasury": "15,000,000"
+    "Treasury": "31,875,000"
   },
   {
-    "Date": "16 Mar, 2021",
-    "Public Sale": "75,000,000",
+    "Date": "3 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "31,251,000",
-    "Bounties": "10,208,333",
-    "Early Token Buyers":"0",
+    "Bounties": "16,666,666",
+    "Pre-Sale": "0",
     "Team & Advisors":"0",
-    "Treasury": "15,000,000"
+    "Treasury": "31,875,000"
   },
   {
-    "Date": "15 Apr, 2021",
-    "Public Sale": "75,000,000",
+    "Date": "4 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "41,668,000",
-    "Bounties": "13,541,666",
-    "Early Token Buyers": "0",
-    "Team & Advisors":"0",
-    "Treasury": "15,000,000"
+    "Bounties": "16,666,666",
+    "Pre-Sale": "0",
+    "Team & Advisors": "0",
+    "Treasury": "31,875,000"
   },
   {
-    "Date": "15 May, 2021",
-    "Public Sale": "75,000,000",
+    "Date": "5 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "52,085,000",
-    "Bounties": "13,541,666",
-    "Early Token Buyers":"0",
+    "Bounties": "16,666,666",
+    "Pre-Sale": "0",
     "Team & Advisors":"0",
-    "Treasury": "15,000,000"
+    "Treasury": "31,875,000"
   },
   {
-    "Date": "14 Jun, 2021",
-    "Public Sale": "75,000,000",
+    "Date": "6 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "62,502,000",
-    "Bounties": "13,541,666",
-    "Early Token Buyers":"0",
-    "Team & Advisors":"0",
-    "Treasury": "15,000,000"
+    "Bounties": "19,999,999",
+    "Pre-Sale": "0",
+    "Team & Advisors": "0",
+    "Treasury": "31,875,000"
   },
   {
-    "Date": "14 Jul, 2021",
-    "Public Sale": "75,000,000",
+    "Date": "7 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "72,919,000",
-    "Bounties": "16,874,999",
-    "Early Token Buyers": "45,000,000",
-    "Team & Advisors":"0",
-    "Treasury": "15,000,000"
+    "Bounties": "19,999,999",
+    "Pre-Sale": "41,250,000",
+    "Team & Advisors": "0",
+    "Treasury": "31,875,000"
   },
   {
-    "Date": "13 Aug, 2021",
-    "Public Sale": "75,000,000",
+    "Date": "8 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "83,336,000",
-    "Bounties": "16,874,999",
-    "Early Token Buyers": "45,000,000",
-    "Team & Advisors":"0",
-    "Treasury": "15,000,000"
+    "Bounties": "19,999,999",
+    "Pre-Sale": "41,250,000",
+    "Team & Advisors": "0",
+    "Treasury": "31,875,000"
   },
   {
-    "Date": "12 Sep, 2021",
-    "Public Sale": "75,000,000",
+    "Date": "9 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "93,753,000",
-    "Bounties": "16,874,999",
-    "Early Token Buyers": "45,000,000",
-    "Team & Advisors":"0",
-    "Treasury": "15,000,000"
+    "Bounties": "23,333,332",
+    "Pre-Sale": "41,250,000",
+    "Team & Advisors": "0",
+    "Treasury": "31,875,000"
   },
   {
-    "Date": "12 Oct, 2021",
-    "Public Sale": "75,000,000",
+    "Date": "10 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "104,170,000",
-    "Bounties": "20,208,332",
-    "Early Token Buyers": "45,000,000",
-    "Team & Advisors":"0",
-    "Treasury": "15,000,000"
+    "Bounties": "23,333,332",
+    "Pre-Sale": "41,250,000",
+    "Team & Advisors": "0",
+    "Treasury": "31,875,000"
   },
   {
-    "Date": "11 Nov, 2021",
-    "Public Sale": "75,000,000",
+    "Date": "11 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "114,587,000",
-    "Bounties": "20,208,332",
-    "Early Token Buyers": "45,000,000",
-    "Team & Advisors":"0",
-    "Treasury": "15,000,000"
+    "Bounties": "23,333,332",
+    "Pre-Sale": "41,250,000",
+    "Team & Advisors": "0",
+    "Treasury": "31,875,000"
   },
   {
-    "Date": "11 Dec, 2021",
-    "Public Sale": "75,000,000",
+    "Date": "12 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "125,004,000",
-    "Bounties": "20,208,332",
-    "Early Token Buyers": "45,000,000",
-    "Team & Advisors":"0",
-    "Treasury": "15,000,000"
+    "Bounties": "26,666,665",
+    "Pre-Sale": "41,250,000",
+    "Team & Advisors": "26,428,571",
+    "Treasury": "63,750,000"
   },
   {
-    "Date": "10 Jan, 2022",
-    "Public Sale": "75,000,000",
+    "Date": "13 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "135,421,000",
-    "Bounties": "23,541,665",
-    "Early Token Buyers": "90,000,000",
-    "Team & Advisors": "28,571,429",
-    "Treasury": "46,875,000"
+    "Bounties": "26,666,665",
+    "Pre-Sale": "82,500,000",
+    "Team & Advisors": "26,428,571",
+    "Treasury": "63,750,000"
   },
   {
-    "Date": "9 Feb, 2022",
-    "Public Sale": "75,000,000",
+    "Date": "13 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "145,838,000",
-    "Bounties": "23,541,665",
-    "Early Token Buyers": "90,000,000",
-    "Team & Advisors": "28,571,429",
-    "Treasury": "46,875,000"
+    "Bounties": "26,666,665",
+    "Pre-Sale": "82,500,000",
+    "Team & Advisors": "26,428,571",
+    "Treasury": "63,750,000"
   },
   {
-    "Date": "11 Mar, 2022",
-    "Public Sale": "75,000,000",
+    "Date": "14 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "156,255,000",
-    "Bounties": "23,541,665",
-    "Early Token Buyers": "90,000,000",
-    "Team & Advisors": "28,571,429",
-    "Treasury": "46,875,000"
+    "Bounties": "29,999,998",
+    "Pre-Sale": "82,500,000",
+    "Team & Advisors": "26,428,571",
+    "Treasury": "63,750,000"
   },
   {
-    "Date": "10 Apr, 2022",
-    "Public Sale": "75,000,000",
+    "Date": "15 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "166,672,000",
-    "Bounties": "26,874,998",
-    "Early Token Buyers": "90,000,000",
-    "Team & Advisors": "28,571,429",
-    "Treasury": "46,875,000"
+    "Bounties": "29,999,998",
+    "Pre-Sale": "82,500,000",
+    "Team & Advisors": "26,428,571",
+    "Treasury": "63,750,000"
   },
   {
-    "Date": "10 May, 2022",
-    "Public Sale": "75,000,000",
+    "Date": "16 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "177,088,000",
-    "Bounties": "26,874,998",
-    "Early Token Buyers": "90,000,000",
-    "Team & Advisors": "28,571,429",
-    "Treasury": "46,875,000"
+    "Bounties": "29,999,998",
+    "Pre-Sale": "82,500,000",
+    "Team & Advisors": "26,428,571",
+    "Treasury": "63,750,000"
   },
   {
-    "Date": "9 Jun, 2022",
-    "Public Sale": "75,000,000",
+    "Date": "17 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "187,504,000",
-    "Bounties": "26,874,998",
-    "Early Token Buyers": "90,000,000",
-    "Team & Advisors": "28,571,429",
-    "Treasury": "46,875,000"
+    "Bounties": "33,333,332",
+    "Pre-Sale": "82,500,000",
+    "Team & Advisors": "52,857,143",
+    "Treasury": "95,625,000"
   },
   {
-    "Date": "9 Jul, 2022",
-    "Public Sale": "75,000,000",
+    "Date": "18 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "197,920,000",
-    "Bounties": "30,208,332",
-    "Early Token Buyers": "135,000,000",
-    "Team & Advisors": "57,142,858",
-    "Treasury": "78,750,000"
+    "Bounties": "33,333,332",
+    "Pre-Sale": "123,750,000",
+    "Team & Advisors": "52,857,143",
+    "Treasury": "95,625,000"
   },
   {
-    "Date": "8 Aug, 2022",
-    "Public Sale": "75,000,000",
+    "Date": "19 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "208,336,000",
-    "Bounties": "30,208,332",
-    "Early Token Buyers": "135,000,000",
-    "Team & Advisors": "57,142,858",
-    "Treasury": "78,750,000"
+    "Bounties": "33,333,332",
+    "Pre-Sale": "123,750,000",
+    "Team & Advisors": "52,857,143",
+    "Treasury": "95,625,000"
   },
   {
-    "Date": "7 Sep, 2022",
-    "Public Sale": "75,000,000",
+    "Date": "20 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "218,752,000",
-    "Bounties": "30,208,332",
-    "Early Token Buyers": "135,000,000",
-    "Team & Advisors": "57,142,858",
-    "Treasury": "78,750,000"
+    "Bounties": "36,666,665",
+    "Pre-Sale": "123,750,000",
+    "Team & Advisors": "52,857,143",
+    "Treasury": "95,625,000"
   },
   {
-    "Date": "7 Oct, 2022",
-    "Public Sale": "75,000,000",
+    "Date": "21 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "229,168,000",
-    "Bounties": "33,541,665",
-    "Early Token Buyers": "135,000,000",
-    "Team & Advisors": "57,142,858",
-    "Treasury": "78,750,000"
+    "Bounties": "36,666,665",
+    "Pre-Sale": "123,750,000",
+    "Team & Advisors": "52,857,143",
+    "Treasury": "95,625,000"
   },
   {
-    "Date": "6 Nov, 2022",
-    "Public Sale": "75,000,000",
+    "Date": "22 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "239,584,000",
-    "Bounties": "33,541,665",
-    "Early Token Buyers": "135,000,000",
-    "Team & Advisors": "57,142,858",
-    "Treasury": "78,750,000"
+    "Bounties": "36,666,665",
+    "Pre-Sale": "123,750,000",
+    "Team & Advisors": "52,857,143",
+    "Treasury": "95,625,000"
   },
   {
-    "Date": "6 Dec, 2022",
-    "Public Sale": "75,000,000",
+    "Date": "23 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
-    "Bounties": "33,541,665",
-    "Early Token Buyers": "135,000,000",
-    "Team & Advisors": "57,142,858",
-    "Treasury": "78,750,000"
+    "Bounties": "39,999,999",
+    "Pre-Sale": "123,750,000",
+    "Team & Advisors": "79,285,714",
+    "Treasury": "127,500,000"
   },
   {
-    "Date": "5 Jan, 2023",
-    "Public Sale": "75,000,000",
+    "Date": "24 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
-    "Bounties": "36,874,999",
-    "Early Token Buyers": "180,000,000",
+    "Bounties": "39,999,999",
+    "Pre-Sale": "165,000,000",
+    "Team & Advisors": "79,285,714",
+    "Treasury": "127,500,000"
+  },
+  {
+    "Date": "25 month",
+    "Public Distribution": "85,000,000",
+    "Cover Traffic": "250,000,000",
+    "Bounties": "39,999,999",
+    "Pre-Sale": "165,000,000",
+    "Team & Advisors": "79,285,714",
+    "Treasury": "127,500,000"
+  },
+  {
+    "Date": "26 month",
+    "Public Distribution": "85,000,000",
+    "Cover Traffic": "250,000,000",
+    "Bounties": "43,333,332",
+    "Pre-Sale": "165,000,000",
     "Team & Advisors": "85,714,287",
-    "Treasury": "110,625,000"
+    "Treasury": "127,500,000"
   },
   {
-    "Date": "4 Feb, 2023",
-    "Public Sale": "75,000,000",
+    "Date": "27 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
-    "Bounties": "36,874,999",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "85,714,287",
-    "Treasury": "110,625,000"
+    "Bounties": "43,333,332",
+    "Pre-Sale": "165,000,000",
+    "Team & Advisors": "79,285,714",
+    "Treasury": "127,500,000"
   },
   {
-    "Date": "6 Mar, 2023",
-    "Public Sale": "75,000,000",
+    "Date": "28 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
-    "Bounties": "36,874,999",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "85,714,287",
-    "Treasury": "110,625,000"
+    "Bounties": "43,333,332",
+    "Pre-Sale": "165,000,000",
+    "Team & Advisors": "79,285,714",
+    "Treasury": "127,500,000"
   },
   {
-    "Date": "5 Apr, 2023",
-    "Public Sale": "75,000,000",
+    "Date": "29 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
-    "Bounties": "40,208,332",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "85,714,287",
-    "Treasury": "110,625,000"
+    "Bounties": "46,666,666",
+    "Pre-Sale": "165,000,000",
+    "Team & Advisors": "105,714,286",
+    "Treasury": "159,375,000"
   },
   {
-    "Date": "5 May, 2023",
-    "Public Sale": "75,000,000",
+    "Date": "30 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
-    "Bounties": "40,208,332",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "85,714,287",
-    "Treasury": "110,625,000"
+    "Bounties": "46,666,666",
+    "Pre-Sale": "165,000,000",
+    "Team & Advisors": "105,714,286",
+    "Treasury": "159,375,000"
   },
   {
-    "Date": "4 Jun, 2023",
-    "Public Sale": "75,000,000",
+    "Date": "31 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
-    "Bounties": "40,208,332",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "85,714,287",
-    "Treasury": "110,625,000"
+    "Bounties": "46,666,666",
+    "Pre-Sale": "165,000,000",
+    "Team & Advisors": "105,714,286",
+    "Treasury": "159,375,000"
   },
   {
-    "Date": "4 Jul, 2023",
-    "Public Sale": "75,000,000",
+    "Date": "32 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
-    "Bounties": "43,541,666",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "114,285,716",
-    "Treasury": "142,500,000"
+    "Bounties": "49,999,999",
+    "Pre-Sale": "165,000,000",
+    "Team & Advisors": "105,714,286",
+    "Treasury": "159,375,000"
   },
   {
-    "Date": "3 Aug, 2023",
-    "Public Sale": "75,000,000",
+    "Date": "33 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
-    "Bounties": "43,541,666",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "114,285,716",
-    "Treasury": "142,500,000"
+    "Bounties": "49,999,999",
+    "Pre-Sale": "165,000,000",
+    "Team & Advisors": "105,714,286",
+    "Treasury": "159,375,000"
   },
   {
-    "Date": "2 Sep, 2023",
-    "Public Sale": "75,000,000",
+    "Date": "34 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
-    "Bounties": "43,541,666",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "114,285,716",
-    "Treasury": "142,500,000"
+    "Bounties": "49,999,999",
+    "Pre-Sale": "165,000,000",
+    "Team & Advisors": "105,714,286",
+    "Treasury": "159,375,000"
   },
   {
-    "Date": "2 Oct, 2023",
-    "Public Sale": "75,000,000",
+    "Date": "35 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
-    "Bounties": "46,874,999",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "114,285,716",
-    "Treasury": "142,500,000"
+    "Bounties": "53,333,333",
+    "Pre-Sale": "165,000,000",
+    "Team & Advisors": "132,142,857",
+    "Treasury": "191,250,000"
   },
   {
-    "Date": "1 Nov, 2023",
-    "Public Sale": "75,000,000",
+    "Date": "36 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
-    "Bounties": "46,874,999",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "114,285,716",
-    "Treasury": "142,500,000"
+    "Bounties": "53,333,333",
+    "Pre-Sale": "165,000,000",
+    "Team & Advisors": "132,142,857",
+    "Treasury": "191,250,000"
   },
   {
-    "Date": "1 Dec, 2023",
-    "Public Sale": "75,000,000",
+    "Date": "37 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
-    "Bounties": "46,874,999",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "114,285,716",
-    "Treasury": "142,500,000"
+    "Bounties": "53,333,333",
+    "Pre-Sale": "165,000,000",
+    "Team & Advisors": "132,142,857",
+    "Treasury": "191,250,000"
   },
   {
-    "Date": "31 Dec, 2023",
-    "Public Sale": "75,000,000",
+    "Date": "38 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
-    "Bounties": "50,208,333",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "142,857,144",
-    "Treasury": "174,375,000"
+    "Bounties": "56,666,666",
+    "Pre-Sale": "165,000,000",
+    "Team & Advisors": "132,142,857",
+    "Treasury": "191,250,000"
   },
   {
-    "Date": "30 Jan, 2024",
-    "Public Sale": "75,000,000",
+    "Date": "39 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
-    "Bounties": "50,208,333",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "142,857,144",
-    "Treasury": "174,375,000"
+    "Bounties": "56,666,666",
+    "Pre-Sale": "165,000,000",
+    "Team & Advisors": "132,142,857",
+    "Treasury": "191,250,000"
   },
   {
-    "Date": "29 Feb, 2024",
-    "Public Sale": "75,000,000",
+    "Date": "40 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
-    "Bounties": "50,208,333",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "142,857,144",
-    "Treasury": "174,375,000"
+    "Bounties": "56,666,666",
+    "Pre-Sale": "165,000,000",
+    "Team & Advisors": "132,142,857",
+    "Treasury": "191,250,000"
   },
   {
-    "Date": "30 Mar, 2024",
-    "Public Sale": "75,000,000",
+    "Date": "41 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
-    "Bounties": "53,541,666",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "142,857,144",
-    "Treasury": "174,375,000"
+    "Bounties": "60,000,000",
+    "Pre-Sale": "165,000,000",
+    "Team & Advisors": "158,571,429",
+    "Treasury": "223,125,000"
   },
   {
-    "Date": "29 Apr, 2024",
-    "Public Sale": "75,000,000",
+    "Date": "42 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
-    "Bounties": "53,541,666",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "142,857,144",
-    "Treasury": "174,375,000"
+    "Bounties": "60,000,000",
+    "Pre-Sale": "165,000,000",
+    "Team & Advisors": "158,571,429",
+    "Treasury": "223,125,000"
   },
   {
-    "Date": "29 May, 2024",
-    "Public Sale": "75,000,000",
+    "Date": "43 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
-    "Bounties": "53,541,666",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "142,857,144",
-    "Treasury": "174,375,000"
+    "Bounties": "60,000,000",
+    "Pre-Sale": "165,000,000",
+    "Team & Advisors": "158,571,429",
+    "Treasury": "223,125,000"
   },
   {
-    "Date": "28 Jun, 2024",
-    "Public Sale": "75,000,000",
+    "Date": "44 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
-    "Bounties": "56,875,000",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "171,428,572",
-    "Treasury": "206,250,000"
+    "Bounties": "60,000,000",
+    "Pre-Sale": "165,000,000",
+    "Team & Advisors": "158,571,429",
+    "Treasury": "223,125,000"
   },
   {
-    "Date": "28 Jul, 2024",
-    "Public Sale": "75,000,000",
+    "Date": "45 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
-    "Bounties": "56,875,000",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "171,428,572",
-    "Treasury": "206,250,000"
+    "Bounties": "60,000,000",
+    "Pre-Sale": "165,000,000",
+    "Team & Advisors": "158,571,429",
+    "Treasury": "223,125,000"
   },
   {
-    "Date": "27 Aug, 2024",
-    "Public Sale": "75,000,000",
+    "Date": "46 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
-    "Bounties": "56,875,000",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "171,428,572",
-    "Treasury": "206,250,000"
+    "Bounties": "60,000,000",
+    "Pre-Sale": "165,000,000",
+    "Team & Advisors": "158,571,429",
+    "Treasury": "223,125,000"
   },
   {
-    "Date": "26 Sep, 2024",
-    "Public Sale": "75,000,000",
+    "Date": "47 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
-    "Bounties": "56,875,000",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "171,428,572",
-    "Treasury": "206,250,000"
+    "Bounties": "60,000,000",
+    "Pre-Sale": "165,000,000",
+    "Team & Advisors": "185,000,000",
+    "Treasury": "255,000,000"
   },
   {
-    "Date": "26 Oct, 2024",
-    "Public Sale": "75,000,000",
+    "Date": "48 month",
+    "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
-    "Bounties": "56,875,000",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "171,428,572",
-    "Treasury": "206,250,000"
-  },
-  {
-    "Date": "25 Nov, 2024",
-    "Public Sale": "75,000,000",
-    "Cover Traffic": "250,000,000",
-    "Bounties": "56,875,000",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "171,428,572",
-    "Treasury": "206,250,000"
-  },
-  {
-    "Date": "25 Dec, 2024",
-    "Public Sale": "75,000,000",
-    "Cover Traffic": "250,000,000",
-    "Bounties": "56,875,000",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "200,000,000",
-    "Treasury": "238,125,000"
-  },
-  {
-    "Date": "24 Jan, 2025",
-    "Public Sale": "75,000,000",
-    "Cover Traffic": "250,000,000",
-    "Bounties": "56,875,000",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "200,000,000",
-    "Treasury": "238,125,000"
-  },
-  {
-    "Date": "23 Feb, 2025",
-    "Public Sale": "75,000,000",
-    "Cover Traffic": "250,000,000",
-    "Bounties": "56,875,000",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "200,000,000",
-    "Treasury": "238,125,000"
-  },
-  {
-    "Date": "25 Mar, 2025",
-    "Public Sale": "75,000,000",
-    "Cover Traffic": "250,000,000",
-    "Bounties": "56,875,000",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "200,000,000",
-    "Treasury": "238,125,000"
-  },
-  {
-    "Date": "24 Apr, 2025",
-    "Public Sale": "75,000,000",
-    "Cover Traffic": "250,000,000",
-    "Bounties": "56,875,000",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "200,000,000",
-    "Treasury": "238,125,000"
-  },
-  {
-    "Date": "24 May, 2025",
-    "Public Sale": "75,000,000",
-    "Cover Traffic": "250,000,000",
-    "Bounties": "56,875,000",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "200,000,000",
-    "Treasury": "238,125,000"
-  },
-  {
-    "Date": "23 Jun, 2025",
-    "Public Sale": "75,000,000",
-    "Cover Traffic": "250,000,000",
-    "Bounties": "56,875,000",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "200,000,000",
-    "Treasury": "238,125,000"
-  },
-  {
-    "Date": "23 Jul, 2025",
-    "Public Sale": "75,000,000",
-    "Cover Traffic": "250,000,000",
-    "Bounties": "56,875,000",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "200,000,000",
-    "Treasury": "238,125,000"
-  },
-  {
-    "Date": "22 Aug, 2025",
-    "Public Sale": "75,000,000",
-    "Cover Traffic": "250,000,000",
-    "Bounties": "56,875,000",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "200,000,000",
-    "Treasury": "238,125,000"
-  },
-  {
-    "Date": "21 Sep, 2025",
-    "Public Sale": "75,000,000",
-    "Cover Traffic": "250,000,000",
-    "Bounties": "56,875,000",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "200,000,000",
-    "Treasury": "238,125,000"
-  },
-  {
-    "Date": "21 Oct, 2025",
-    "Public Sale": "75,000,000",
-    "Cover Traffic": "250,000,000",
-    "Bounties": "56,875,000",
-    "Early Token Buyers": "180,000,000",
-    "Team & Advisors": "200,000,000",
-    "Treasury": "238,125,000"
+    "Bounties": "60,000,000",
+    "Pre-Sale": "165,000,000",
+    "Team & Advisors": "185,000,000",
+    "Treasury": "255,000,000"
   }
 ]

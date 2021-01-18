@@ -1,6 +1,5 @@
 import React, { useEffect, useState, forwardRef } from 'react';
 import useTranslation from 'next-translate/useTranslation';
-import HomeMatter from './home-progression';
 
 const HomeHeadline = forwardRef(({ setVisibleNow }, ref) => {
   const { t } = useTranslation();

@@ -10,7 +10,7 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
       about:
         'HOPR’s founders develop a decentralized approach to the urgent issue of metadata privacy. HOPR is born!',
       linkA: '#',
-      linkTextA: 'Boork of HOPR,',
+      linkTextA: 'Boork,',
       linkB: '#',
       linkTextB: 'Technical White Paper',
     },
@@ -25,9 +25,9 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
     },
     {
       date: 'Jul 2020',
-      title: 'Idea',
+      title: 'ENTIRE BLOCK',
       about:
-        'HOPR Hardware NodeThe HOPR Node PC launches, allowing users to run a dedicated HOPR device from their home. ',
+        'HOPR Hardware Node The HOPR Node PC launches, allowing users to run a dedicated HOPR device from their home.',
       linkA: '#',
       linkTextA: 'Shop,',
       linkB: '#',
@@ -47,25 +47,25 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
     },
     {
       date: 'Jan 2021',
-      title: 'Eiger Release (Mainnet)',
+      title: 'Jungfrau Release (Mainnet) ',
       about:
-        'The HOPR mainnet launches, giving everyone their first chance to buy and earn HOPR tokens. ',
+        'The HOPR mainnet launches, giving everyone their first chance to buy and earn HOPR tokens.',
       linkA: '#',
       linkTextA: 'SalePage',
     },
     {
       date: 'Feb 2021',
-      title: 'Jungfrau Release',
+      title: 'Eiger Release',
       about:
-        'HOPR’s Jungfrau release introduces cover traffic, making the protocol feature complete.',
+        'HOPR’s Eiger release introduces cover traffic, making the protocol feature complete.',
       linkA: '#',
       linkTextA: 'Blogpost',
     },
     {
       date: 'Mar 2021',
-      title: 'Launch DAO',
+      title: 'Launch HOPR DAO ',
       about:
-        'HOPR’s focus on decentralized community enabling governance is solidified with the launch of a DAO.',
+        'HOPR’s focus on decentralized community enabling governance is solidified with the launch of the project-wide HOPR DAO.',
       linkA: '#',
       linkTextA: 'DecenGov',
     },
