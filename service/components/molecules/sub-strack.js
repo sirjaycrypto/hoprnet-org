@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 export default function SubStrack() {
   return (
-    <div className="iframe-container" style={{ height: "200px" }}>
+    <div className="iframe-container" style={{ height: '200px' }}>
       <iframe
         title="substack"
         src="https://hopr.substack.com/embed"
@@ -12,10 +12,10 @@ export default function SubStrack() {
         marginHeight="0"
         marginWidth="0"
         style={{
-          border: "1px solid #EEE",
-          background: "white",
-          width: "100%",
-          height: "100%",
+          border: '1px solid #EEE',
+          background: 'white',
+          width: '100%',
+          height: '100%',
         }}
       />
     </div>

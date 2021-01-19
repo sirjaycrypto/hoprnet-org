@@ -1,25 +1,25 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { stagger, fadeInUp } from "../../util/motionConfig";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { stagger, fadeInUp } from '../../util/motionConfig';
 
 const data = [
   {
-    link: "https://www.linkedin.com/in/scbuergel/",
-    img: "/assets/images/team/sebastian_burgel.png",
-    name: "Dr. Sebastian Bürgel",
-    label: "President",
+    link: 'https://www.linkedin.com/in/scbuergel/',
+    img: '/assets/images/team/sebastian_burgel.png',
+    name: 'Dr. Sebastian Bürgel',
+    label: 'President',
   },
   {
-    link: "https://www.linkedin.com/in/cluchsinger/",
-    img: "/assets/images/team/catrina_luchsinger.jpg",
-    name: "Dr. Catrina Luchsinger",
-    label: "Board Member",
+    link: 'https://www.linkedin.com/in/cluchsinger/',
+    img: '/assets/images/team/catrina_luchsinger.jpg',
+    name: 'Dr. Catrina Luchsinger',
+    label: 'Board Member',
   },
   {
-    link: "https://www.linkedin.com/in/ronald-kogens/",
-    img: "/assets/images/team/ronald_kogens.jpg",
-    name: "Ronald Kogens",
-    label: "Board Member",
+    link: 'https://www.linkedin.com/in/ronald-kogens/',
+    img: '/assets/images/team/ronald_kogens.jpg',
+    name: 'Ronald Kogens',
+    label: 'Board Member',
   },
 ];
 

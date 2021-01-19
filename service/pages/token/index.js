@@ -35,15 +35,33 @@ export default function Index() {
   const { t } = useTranslation();
 
   useEffect(() => {
-    if (isVisibleFooter) setVisibleNow(currentElementTokenFooter.current.id);
-    if (isVisibleInvestData) setVisibleNow(currentInvestData.current.id);
-    if (isVisibleTokenFea) setVisibleNow(currentElementTokenFea.current.id);
-    if (isVisibleVideo) setVisibleNow(currentElementVideo.current.id);
-    if (isVisibleHow) setVisibleNow(currentElementAlt.current.id);
-    if (isVisibleNode) setVisibleNow(currentElementNode.current.id);
-    if (isVisibleBack) setVisibleNow(currentElementVisibleBack.current.id);
-    if (isVisibleBanner) setVisibleNow(currentElementVisibleBanner.current.id);
-    if (isVisibleTokenRel) setVisibleNow(currentElementTokenRel.current.id);
+    if (isVisibleFooter) {
+      setVisibleNow(currentElementTokenFooter.current.id);
+    }
+    if (isVisibleInvestData) {
+      setVisibleNow(currentInvestData.current.id);
+    }
+    if (isVisibleTokenFea) {
+      setVisibleNow(currentElementTokenFea.current.id);
+    }
+    if (isVisibleVideo) {
+      setVisibleNow(currentElementVideo.current.id);
+    }
+    if (isVisibleHow) {
+      setVisibleNow(currentElementAlt.current.id);
+    }
+    if (isVisibleNode) {
+      setVisibleNow(currentElementNode.current.id);
+    }
+    if (isVisibleBack) {
+      setVisibleNow(currentElementVisibleBack.current.id);
+    }
+    if (isVisibleBanner) {
+      setVisibleNow(currentElementVisibleBanner.current.id);
+    }
+    if (isVisibleTokenRel) {
+      setVisibleNow(currentElementTokenRel.current.id);
+    }
     if (visibleNow === 'TOKEN-RELEASE') {
       setAnimateChart(true);
     }
@@ -118,7 +136,7 @@ export default function Index() {
           className={'btn-follow ' + (activeBtn ? 'modeFollow' : 'fixOnBanner')}
           ref={activeBtn ? btnMainPoint : null}
         >
-          <div onClick={() => clickBtn()} className="btn-banner">
+          <div className="btn-banner">
             <span>{t('home:banner.button')}</span>
           </div>
         </div>

@@ -1,12 +1,12 @@
-import Head from "next/head";
-import useTranslation from "next-translate/useTranslation";
+import Head from 'next/head';
+import useTranslation from 'next-translate/useTranslation';
 
 export default function Header() {
   const { t } = useTranslation();
 
   return (
     <Head>
-      <title>{t("common:title")}</title>
+      <title>{t('common:title')}</title>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="canonical" href="https://hoprnet.org/" />
       <meta name="theme-color" content="#ffffa0" />

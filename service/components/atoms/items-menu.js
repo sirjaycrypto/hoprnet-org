@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import useTranslation from "next-translate/useTranslation";
-import { listLang } from "../../util/listLanguage";
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import useTranslation from 'next-translate/useTranslation';
+import { listLang } from '../../util/listLanguage';
 
 export default function ItemsMenu() {
   const router = useRouter();
@@ -11,29 +11,29 @@ export default function ItemsMenu() {
   const { t, lang } = useTranslation();
   const linkLocal = [
     {
-      path: "/about-us",
-      name: "menu:aboutUs",
+      path: '/about-us',
+      name: 'menu:aboutUs',
     },
     {
-      path: "/technology",
-      name: "menu:technology",
+      path: '/technology',
+      name: 'menu:technology',
     },
     {
-      path: "/token",
-      name: "menu:token",
+      path: '/token',
+      name: 'menu:token',
     },
     {
-      path: "http://saentis.hoprnet.org/",
-      name: "menu:joinTestnet",
+      path: 'http://saentis.hoprnet.org/',
+      name: 'menu:joinTestnet',
     },
     {
-      path: "/blog",
-      name: "menu:blog",
+      path: '/blog',
+      name: 'menu:blog',
     },
   ];
 
   const clickMenu = () => {
-    if (flag == false) {
+    if (flag === false) {
       setTranslateY(0);
       setFlag(true);
     } else {
@@ -49,7 +49,7 @@ export default function ItemsMenu() {
           const { path, name } = e;
           return (
             <Link key={index} href={path}>
-              <a className={router.pathname === path ? "active" : ""}>
+              <a className={router.pathname === path ? 'active' : ''}>
                 {t(name)}
               </a>
             </Link>
@@ -62,7 +62,7 @@ export default function ItemsMenu() {
               <Link href="/" locale={info} key={i}>
                 <li
                   onClick={() => clickMenu()}
-                  className={lang === info ? "is-current" : ""}
+                  className={lang === info ? 'is-current' : ''}
                 >
                   <a>{info}</a>
                 </li>

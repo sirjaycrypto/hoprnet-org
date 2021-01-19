@@ -1,5 +1,5 @@
-import { createRef, useEffect, useState } from "react";
-import throttle from "lodash.throttle";
+import { createRef, useEffect, useState } from 'react';
+import throttle from 'lodash.throttle';
 
 /**
  * Check if an element is in viewport
@@ -20,8 +20,8 @@ export default function useVisibility(offset = 0, throttleMilliseconds = 100) {
   }, throttleMilliseconds);
 
   useEffect(() => {
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
   });
 
   return [isVisible, currentElement];

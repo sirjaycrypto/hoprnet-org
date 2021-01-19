@@ -10,8 +10,12 @@ function intlFormat(num) {
 }
 
 function makeFriendly(num) {
-  if (num >= 1000000) return intlFormat(num / 1000000) + 'M';
-  if (num >= 1000) return intlFormat(num / 1000) + 'k';
+  if (num >= 1000000) {
+    return intlFormat(num / 1000000) + 'M';
+  }
+  if (num >= 1000) {
+    return intlFormat(num / 1000) + 'k';
+  }
   return intlFormat(num);
 }
 

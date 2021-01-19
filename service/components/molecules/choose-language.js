@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import Link from "next/link";
-import { css } from "@emotion/css";
-import useTranslation from "next-translate/useTranslation";
-import { listLang } from "../../util/listLanguage";
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { css } from '@emotion/css';
+import useTranslation from 'next-translate/useTranslation';
+import { listLang } from '../../util/listLanguage';
 
 export default function ChooseLanguage() {
   const [translateY, setTranslateY] = useState(-102);
@@ -10,7 +10,7 @@ export default function ChooseLanguage() {
   const { lang } = useTranslation();
 
   const clickMenu = () => {
-    if (flag == false) {
+    if (flag === false) {
       setTranslateY(0);
       setFlag(true);
     } else {
@@ -37,7 +37,7 @@ export default function ChooseLanguage() {
               <Link href="/" locale={info} key={i}>
                 <li
                   onClick={() => clickMenu()}
-                  className={lang === info ? "is-current" : ""}
+                  className={lang === info ? 'is-current' : ''}
                 >
                   <a>{label}</a>
                 </li>

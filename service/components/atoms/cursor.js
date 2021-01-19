@@ -1,19 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 
 export default function Cursor() {
   useEffect(() => {
-    const cursor = document.querySelector(".cursor");
-    document.addEventListener("mousemove", (e) => {
+    const cursor = document.querySelector('.cursor');
+    document.addEventListener('mousemove', (e) => {
       cursor.setAttribute(
-        "style",
-        "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;"
+        'style',
+        'top: ' + (e.pageY - 10) + 'px; left: ' + (e.pageX - 10) + 'px;'
       );
     });
 
-    document.addEventListener("click", () => {
-      cursor.classList.add("expand");
+    document.addEventListener('click', () => {
+      cursor.classList.add('expand');
       setTimeout(() => {
-        cursor.classList.remove("expand");
+        cursor.classList.remove('expand');
       }, 500);
     });
   }, []);
