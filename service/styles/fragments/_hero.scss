@@ -55,6 +55,7 @@
     font-weight: normal;
     margin-top: 24px;
     margin-bottom: 50px;
+    overflow-wrap: anywhere;
     @include responsive(tablet) {
       font-size: 108px;
       line-height: 112px;

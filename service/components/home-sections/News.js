@@ -33,45 +33,43 @@ export default function News() {
   const { t } = useTranslation();
   return (
     <>
-      <section className="section-InTheNews the-aux-margin">
-        <div className="container">
-          <div className="container-sm sub-title">
-            <h2>In The News</h2>
-          </div>
-          <div className="items">
-            {data.map((e, index) => {
-              const { link, img, about, btn } = e;
-              return (
-                <motion.div
-                  key={index}
-                  variants={fadeInUp}
-                  transition={{ delay: 0.8 }}
-                  className="element-item"
-                >
-                  <div className="main">
-                    <a href={link} target="_blank" rel="noopener noreferrer">
-                      <div className="container-img mb-12">
-                        <img src={img} alt={about} />
-                      </div>
-                    </a>
+      <section className="section-InTheNews the-aux-margin container">
+        <div className="container-sm sub-title">
+          <h2>In The News</h2>
+        </div>
+        <div className="items">
+          {data.map((e, index) => {
+            const { link, img, about, btn } = e;
+            return (
+              <motion.div
+                key={index}
+                variants={fadeInUp}
+                transition={{ delay: 0.8 }}
+                className="element-item"
+              >
+                <div className="main">
+                  <a href={link} target="_blank" rel="noopener noreferrer">
+                    <div className="container-img mb-12">
+                      <img src={img} alt={about} />
+                    </div>
+                  </a>
+                  <div>
+                    <p className="mb-16 quote">{about}</p>
                     <div>
-                      <p className="mb-16 quote">{about}</p>
-                      <div>
-                        <a
-                          href={link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-color-high underline"
-                        >
-                          {btn}
-                        </a>
-                      </div>
+                      <a
+                        href={link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-color-high underline"
+                      >
+                        {btn}
+                      </a>
                     </div>
                   </div>
-                </motion.div>
-              );
-            })}
-          </div>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
       </section>
     </>

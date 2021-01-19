@@ -6,19 +6,14 @@ $container--width-xs: 620px; // container xs width
 $container--padding__mobile: 16px; // container, left and right padding (mobile)
 $container--padding__desktop: 24px; //
 
-
-
-
-
-
-  .container,
+.container,
 .container-sm,
 .container-xs {
   width: 100%;
   margin: 0 auto;
   padding-left: $container--padding__mobile;
   padding-right: $container--padding__mobile;
-
+  box-sizing: border-box;
   @include responsive(tablet) {
     padding-left: $container--padding__desktop;
     padding-right: $container--padding__desktop;
