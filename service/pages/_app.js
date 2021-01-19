@@ -1,5 +1,8 @@
+import React, { useState, useEffect } from 'react';
+
+import Loader from '../components/atoms/loader';
 import I18nProvider from 'next-translate/I18nProvider';
-import { useRouter } from 'next/router'
+import Router, { useRouter } from 'next/router';
 
 import '../styles/main.scss';
 
@@ -14,10 +17,23 @@ export async function loadNamespaces(namespaces, lang) {
 }
 
 function MyApp({ Component, pageProps }) {
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
+  Router.onRouteChangeStart = () => {
+    setLoading(!loading);
+  };
+
+  Router.onRouteChangeComplete = () => {
+    setLoading(!loading);
+  };
+
+  Router.onRouteChangeError = () => {
+    console.log('Error Cargando');
+    setLoading(false);
+  };
   return (
     <I18nProvider lang={router.locale} namespaces={pageProps._ns}>
-      <Component {...pageProps} />
+      {loading ? <Loader /> : <Component {...pageProps} />}
     </I18nProvider>
   );
 }

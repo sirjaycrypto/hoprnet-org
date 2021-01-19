@@ -42,7 +42,7 @@ export default function Blogs() {
               key={index}
               href={link}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener "
             >
               <motion.div
                 variants={fadeInUp}

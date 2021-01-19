@@ -1,0 +1,27 @@
+.the-loader {
+  background: #fff;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  .element {
+    background: $hopr_yellow;
+    border-radius: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    animation: animateWelcomer 1200ms ease-in-out infinite alternate;
+  }
+}
+
+@keyframes animateWelcomer {
+  from {
+    width: 30vh;
+    height: 30vh;
+  }
+
+  to {
+    width: 40vh;
+    height: 40vh;
+  }
+}
