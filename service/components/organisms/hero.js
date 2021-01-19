@@ -1,10 +1,11 @@
-import React, { forwardRef, useState } from 'react';
+import React, { forwardRef, useState, useEffect } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 import Modal from '../atoms/modal';
 import HeroInfo from '../molecules/hero-info';
 
-const Hero = forwardRef(({}, ref) => {
+const Hero = forwardRef(({ setVisibleNow }, ref) => {
   const [dateFinal, setDateFinal] = useState(false);
+  const [videoMobile, setVideoMobile] = useState(false);
   const [modePreSales, setModePreSales] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [days, setDays] = useState('');
@@ -51,6 +52,12 @@ const Hero = forwardRef(({}, ref) => {
     }
   }, 1000);
 
+  useEffect(() => {
+    if (window.matchMedia('screen and (min-width: 797px)').matches) {
+      setVideoMobile(true);
+    }
+  }, {});
+
   return (
     <>
       <section ref={ref} className="section-hero">
@@ -59,14 +66,25 @@ const Hero = forwardRef(({}, ref) => {
           <p>Show Pre-sale</p>
         </div>
 
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="background-video "
-          src="/assets/video/hero.mp4"
-        ></video>
+        {videoMobile ? (
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="background-video "
+            src="/assets/video/hero.mp4"
+          ></video>
+        ) : (
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="background-video display-phone"
+            src="/assets/video/hopr_Drone_Mobile.mp4"
+          ></video>
+        )}
 
         <div className="container">
           <div className="text-wrapper">

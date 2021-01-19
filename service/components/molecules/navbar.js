@@ -111,7 +111,7 @@ export default function Navbar({ visibleNow }) {
         }}
       />
 
-      {router.pathname === '/' ? (
+      {/* {router.pathname === '/' ? (
         <div className={'section-indicator ' + (youDown ? 'make-visible' : '')}>
           <div className="helper-hr"></div>
           <ul>
@@ -124,32 +124,7 @@ export default function Navbar({ visibleNow }) {
             })}
           </ul>
         </div>
-      ) : null}
+      ) : null} */}
     </>
   );
-}
-
-//       <nav id="menu" className={youDown ? 'add-scroll-menu ' : ''}>
-{
-  /* <div className={'container-sm ' + (activaMenu ? 'add-shadow' : '')}>
-<div className="help-flex">
-  <Link href="/">
-    <img
-      className="logo-nav"
-      src="/assets/brand/logo.svg"
-      alt="hopr logo"
-    />
-  </Link>
-</div>
-<div className={'icon-menu ' + (activaMenu ? 'open' : '')}>
-  <input
-    type="checkbox"
-    id="toggle"
-    onClick={() => setActivaMenu(!activaMenu)}
-  />
-  <label htmlFor="toggle"></label>
-</div>
-<ItemsMenu />
-</div>
-</nav> */
 }

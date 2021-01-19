@@ -2,6 +2,11 @@ footer {
   color: #fff;
   position: relative;
   z-index: 1;
+  overflow: hidden;
+  box-sizing: border-box;
+  .container {
+    box-sizing: border-box;
+  }
   &::before {
     content: '';
     position: absolute;
