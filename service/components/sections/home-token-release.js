@@ -35,7 +35,7 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
 
   const percentagesPieItem = Object.keys(dataPie).map((key) => {
     const aux = [Number(key), dataPie[key]];
-    return ((aux[1] / allSumResultPie) * 100).toFixed(0);
+    return Math.floor((aux[1] / allSumResultPie) * 100);
   });
 
   const labelsPie = [
@@ -150,8 +150,8 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
   function cleanData(elements) {
     return elements.map(function (elem) {
       console.log(elem);
-      if(elem === undefined){
-        return elem
+      if (elem === undefined) {
+        return elem;
       }
       //parseFloat(elem.split(',').join('').trim())
       return parseFloat(elem.split(',').join('').trim());
