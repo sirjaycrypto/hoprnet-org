@@ -46,6 +46,12 @@ const data = [
     name: 'The Wandering Editor',
     label: 'Content Creator',
   },
+  {
+    link: '#',
+    img: '/assets/images/team/matthew_edwards.png',
+    name: 'Matthew Edwards',
+    label: 'Community Manager',
+  },
 ];
 
 export default function PeopleBuild() {

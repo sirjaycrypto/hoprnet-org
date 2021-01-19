@@ -1,0 +1,21 @@
+.container-book {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  img {
+    position: absolute;
+    z-index: 0;
+  }
+  .over-img {
+    position: absolute;
+    z-index: 1;
+    a{
+        text-decoration: none;
+    }
+    span{
+        color: #fff;
+    }
+  }
+}

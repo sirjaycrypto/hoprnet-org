@@ -19,6 +19,10 @@ export default function ItemsMenu() {
       name: 'menu:technology',
     },
     {
+      path: '/book-of-hopr',
+      name: 'menu:book',
+    },
+    {
       path: '/token',
       name: 'menu:token',
     },
