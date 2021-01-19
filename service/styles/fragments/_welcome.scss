@@ -16,6 +16,10 @@
     display: block;
     position: absolute;
     transition: all 400ms ease-in-out;
+    @include responsive(tablet) {
+      height: 50vh;
+      width: 50vh;
+    }
   }
   .center-on-the-box {
     display: flex;
@@ -28,15 +32,27 @@
     height: 70%;
     box-sizing: border-box;
     width: 100%;
+
+    @include responsive(phone) {
+      justify-content: flex-end;
+      padding-bottom: 8.5vh;
+    }
     .main-labels {
       z-index: 3;
       opacity: 0;
       transform: translateY(100%);
+      @include responsive(tablet) {
+      }
+  
       .help-box {
         margin: 50px auto 0 auto;
         width: 60%;
         @include responsive(tablet) {
           width: 80%;
+        }
+        @include responsive(phone) {
+          margin: 18px auto 0 auto;
+          width: 98%;
         }
       }
       h1,
@@ -51,9 +67,14 @@
         line-height: 126px;
         text-transform: uppercase;
         letter-spacing: 0.833333px;
-        @include responsive(phone) {
+        @include responsive(tablet) {
           font-size: 50px;
           line-height: 64px;
+          letter-spacing: 0.416667px;
+        }
+        @include responsive(phone) {
+          font-size: 40px;
+          line-height: normal;
           letter-spacing: 0.416667px;
         }
       }
@@ -62,6 +83,11 @@
         line-height: 25px;
         text-align: center;
         letter-spacing: 0.166667px;
+        @include responsive(tablet) {
+          font-size: 16px;
+          line-height: 20px;
+          letter-spacing: 0.133333px;
+        }
         @include responsive(phone) {
           font-size: 16px;
           line-height: 20px;
@@ -123,9 +149,13 @@
 
 .show-hi {
   &::before {
-    height: 120vh;
-    width: 120vh;
+    height: 100vh;
+    width: 100vh;
     transition: all 500ms ease-in-out;
+    @include responsive(tablet) {
+      height: 80vh;
+      width: 80vh;
+    }
   }
   .section-top {
     .main-labels {

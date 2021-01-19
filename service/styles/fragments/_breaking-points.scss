@@ -8,7 +8,7 @@ $phone: 370px; //
       @content;
     }
   } @else if $media= tablet {
-    @media only screen and (min-width: $tablet - 1) {
+    @media all and (min-width: $tablet - 1) {
       @content;
     }
   } @else if $media= pc {

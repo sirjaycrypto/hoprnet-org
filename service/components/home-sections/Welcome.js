@@ -28,10 +28,10 @@ export default function Welcome({ welcomeAnimate }) {
           <a>
             <img
               src="/assets/images/Bildschirmfoto.jpg"
-              alt="LAUNCHING THE HOPR MAINNET"
+              alt="COUNTDOWN THE HOPR MAINNET"
             />
             <div className="text-area">
-              <h2>LAUNCHING THE HOPR MAINNET</h2>
+              <h2>COUNTDOWN THE HOPR MAINNET</h2>
             </div>
           </a>
         </div>
