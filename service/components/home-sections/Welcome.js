@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Countdown from '../atoms/countdown';
 import Link from 'next/link';
 
 export default function Welcome({ welcomeAnimate }) {
@@ -40,7 +41,8 @@ export default function Welcome({ welcomeAnimate }) {
             <a>
               <img src="/assets/images/welcomeLeft.png" alt="HOPR Token-SALE" />
               <div className="text-area">
-                <h2>HOPR Token-SALE 02:09:26:41 </h2>
+                <h2>HOPR Token-SALE </h2>
+                <Countdown />
               </div>
             </a>
           </Link>

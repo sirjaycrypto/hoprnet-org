@@ -1,72 +1,52 @@
 import React, { useState, useEffect } from 'react';
-import useTranslation from 'next-translate/useTranslation';
-
-function addDays(date, days) {
-  var result = new Date(date);
-  result.setDate(result.getDate() + days);
-  return result;
-}
-
-/**
- * Format time
- */
-const formatTime = (time) => {
-  let formattedTime = '';
-  if (time <= 9) {
-    formattedTime = '0' + time;
-  } else {
-    formattedTime = time;
-  }
-  return formattedTime;
-};
 
 export default function Countdown() {
-  const { t } = useTranslation();
-
-  const [minutes, setMinutes] = useState('');
-  const [hours, setHours] = useState('');
   const [days, setDays] = useState('');
-  const [datePlus, setDatePlus] = useState(addDays(new Date().getTime(), 7));
+  const [hours, setHours] = useState('');
+  const [minutes, setMinutes] = useState('');
+  const [seconds, setSeconds] = useState('');
 
-  useEffect(() => {
-    clearInterval(timerInterval);
-    const timerInterval = setInterval(() => {
-      updateTime();
-    }, 1000);
-    return () => {
-      clearInterval(timerInterval);
-    };
-  }, []);
+  const countDownDate = new Date('Jan 31, 2021 0:00:00').getTime();
+  function addCeroIfNeed(num) {
+    let result = ('0' + num).slice(-2);
+    return result;
+  }
 
-  const updateTime = () => {
-    let delta = (datePlus - new Date().getTime()) / 1000; // total of seconds passed between this two dates
-    // calculate (and subtract) whole days
-    let dd = Math.floor(delta / 86400);
-    delta -= dd * 86400;
+  var time = setInterval(function () {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
 
-    // calculate (and subtract) whole hours
-    let hh = Math.floor(delta / 3600) % 24;
-    delta -= hh * 3600;
-
-    // calculate (and subtract) whole minutes
-    let mm = Math.floor(delta / 60) % 60;
-    delta -= mm * 60;
-
-    dd = formatTime(parseInt(dd, 10));
-    hh = formatTime(parseInt(hh, 10));
-    mm = formatTime(parseInt(mm, 10));
-
-    setMinutes(mm);
-    setHours(hh);
-    setDays(dd);
-  };
-
+    setDays(Math.floor(distance / (1000 * 60 * 60 * 24)));
+    setHours(
+      addCeroIfNeed(
+        Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+      )
+    );
+    setMinutes(
+      addCeroIfNeed(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)))
+    );
+    setSeconds(addCeroIfNeed(Math.floor((distance % (1000 * 60)) / 1000)));
+    if (distance < 0) {
+      clearInterval(time);
+    }
+  }, 1000);
   return (
-    <div className="info-hero-top">
-      <p className="help-label-info">
-        {t('home:hero.endSale')}
-        {days}:{hours}:{minutes}
-      </p>
+    <div id="clockDiv">
+      <div>
+        <span className="days">{days}</span>
+      </div>
+      <span>:</span>
+      <div>
+        <span className="hours">{hours}</span>
+      </div>
+      <span>:</span>
+      <div>
+        <span className="minutes">{minutes}</span>
+      </div>
+      <span>:</span>
+      <div>
+        <span className="seconds">{seconds}</span>
+      </div>
     </div>
   );
 }

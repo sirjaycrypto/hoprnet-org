@@ -43,7 +43,6 @@
       transform: translateY(100%);
       @include responsive(tablet) {
       }
-  
       .help-box {
         margin: 50px auto 0 auto;
         width: 60%;
@@ -120,6 +119,31 @@
         }
         .text-area {
           position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          #clockDiv {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 45px;
+            line-height: 55px;
+            text-align: center;
+            letter-spacing: 0.375px;
+            text-transform: uppercase;
+            color: #ffffff;
+            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+            @include responsive(tablet) {
+              font-size: 25px;
+              line-height: 31px;
+              letter-spacing: 0.208333px;
+            }
+            @include responsive(phone) {
+              font-size: 20px;
+              line-height: 25px;
+              letter-spacing: 0.166667px;
+            }
+          }
         }
       }
       h2 {
@@ -132,6 +156,7 @@
         text-transform: uppercase;
         color: #ffffff;
         text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+        margin-bottom: 0;
         @include responsive(tablet) {
           font-size: 25px;
           line-height: 31px;

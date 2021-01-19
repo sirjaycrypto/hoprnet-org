@@ -5,12 +5,9 @@
   display: flex;
   height: 60px;
   justify-content: center;
-  transition: all 600ms ease-in-out;
+  transition: all 350ms ease-in-out;
   width: auto;
   padding: 0 1.5em;
-  &:hover {
-    background:#0000db;
-  }
   @media screen and (max-width: 600px) {
     padding: 0.5em 1.5em;
   }
@@ -19,19 +16,29 @@
     color: #ffffff;
     display: flex;
     font-size: 34px;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 0.2975px;
     margin: 0;
     padding: 0;
     text-align: center;
     text-transform: none !important;
-    transition: font-size 300ms ease-in-out;
+    transition: all 350ms ease-in-out;
 
     @media screen and (max-width: 600px) {
       font-size: 17px;
     }
   }
+  &:hover {
+    transition: all 350ms ease-in-out;
+    background: linear-gradient(90deg, #0000db -100%, #292941 100%);
+    span {
+      transition: all 350ms ease-in-out;
+      color: #fff;
+    }
+  }
 }
+
+
 
 .banner-CTA {
   width: 100%;
@@ -45,7 +52,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("/assets/images/banner.png");
+  background-image: url('/assets/images/banner.png');
   img {
     position: absolute;
     top: 0;
