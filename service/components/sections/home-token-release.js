@@ -39,7 +39,7 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
 
   const percentagesPieItem = Object.keys(dataPie).map((key) => {
     const aux = [Number(key), dataPie[key]];
-    return Math.floor((aux[1] / allSumResultPie) * 100);
+    return (aux[1] / allSumResultPie) * 100;
   });
 
   const labelsPie = [
@@ -71,13 +71,10 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
       bodyFontFamily: 'Source Code Pro',
       callbacks: {
         label: function (e, t) {
+          let num = makeFriendly(t.datasets[0].data[e.index]);
           return ''
-            .concat(t.labels[e.index].slice(0, -3), ' ')
-            .concat(
-              t.datasets[0].data[e.index]
-                .toString()
-                .replace(/\B(?=(\d{3})+(?!\d))/g, "'")
-            );
+            .concat(t.labels[e.index].split(':')[0], ' ')
+            .concat(num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "'"));
         },
       },
     },
@@ -180,10 +177,11 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
       bodyFontFamily: 'Source Code Pro',
       callbacks: {
         label: function (e, t) {
+          let num = makeFriendly(e.yLabel);
           return ''
-            .concat('  ', t.legend[e.datasetIndex], '   ')
+            .concat('  ', t.legend[e.datasetIndex], ': ')
             .concat(
-              e.yLabel.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "'"),
+              num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "'"),
               ' HOPR'
             );
         },
