@@ -2,6 +2,7 @@
 body {
   font-family: Source Code Pro, monospace;
   transition: all 350ms ease;
+  overscroll-behavior-y: none;
 }
 
 :root {

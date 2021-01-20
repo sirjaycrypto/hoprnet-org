@@ -1,7 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import useTranslation from 'next-translate/useTranslation';
-import { stagger, fadeInUp } from '../../util/motionConfig';
+
 const data = [
   {
     link:
@@ -10,6 +9,7 @@ const data = [
     about:
       'Binance Labs, the incubation and seed funding arm of the world’s largest crypto exchange, has made its first investment this year, backing decentralized privacy startup HOPR.',
     btn: 'Read more',
+    delayTime: '100',
   },
   {
     link:
@@ -18,6 +18,7 @@ const data = [
     about:
       'The privacy-focused network allows users to run HOPR nodes, stake and get rewards with HOPR tokens while providing privacy for Web 3.',
     btn: 'Read more',
+    delayTime: '150',
   },
   {
     link:
@@ -26,6 +27,7 @@ const data = [
     about:
       'From award-winning blockchain hackers, Silicon Valley tech veterans and a bold vision that could become a reality in Switzerland.',
     btn: 'Read more',
+    delayTime: '200',
   },
 ];
 
@@ -38,13 +40,12 @@ export default function News() {
           <h2>In The News</h2>
         </div>
         <div className="items">
-          {data.map((e, index) => {
-            const { link, img, about, btn } = e;
+          {data.map((e) => {
+            const { link, img, about, btn, delayTime } = e;
             return (
-              <motion.div
-                key={index}
-                variants={fadeInUp}
-                transition={{ delay: 0.8 }}
+              <div
+                data-aos="fade-up"
+                data-aos-delay={delayTime}
                 className="element-item"
               >
                 <div className="main">
@@ -67,7 +68,7 @@ export default function News() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             );
           })}
         </div>

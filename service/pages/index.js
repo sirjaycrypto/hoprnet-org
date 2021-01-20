@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Layout from '../components/organisms/layout';
 import { loadNamespaces } from './_app';
 import Welcome from '../components/home-sections/Welcome';
@@ -19,23 +20,25 @@ export default function Home() {
     }, 600);
   }, []);
   return (
-    <Layout>
-      <Welcome welcomeAnimate={welcomeAnimate} />
-      {!welcomeAnimate ? (
-        <div id="the-old-home">
-          <News />
-          <UseCases />
-          <HoperFor />
-          <HoperIs />
-          <Blog />
-          <Partners />
-          <Team />
-          <Contact />
-        </div>
-      ) : (
-        ''
-      )}
-    </Layout>
+    <AnimatePresence>
+      <Layout>
+        <Welcome welcomeAnimate={welcomeAnimate} />
+        {!welcomeAnimate ? (
+          <div id="the-old-home">
+            <News />
+            <UseCases />
+            <HoperFor />
+            <HoperIs />
+            <Blog />
+            <Partners />
+            <Team />
+            <Contact />
+          </div>
+        ) : (
+          ''
+        )}
+      </Layout>
+    </AnimatePresence>
   );
 }
 

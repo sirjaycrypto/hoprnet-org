@@ -1,7 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import useTranslation from 'next-translate/useTranslation';
-import { stagger, fadeInUp } from '../../util/motionConfig';
+
 const data = [
   {
     link:
@@ -29,6 +28,7 @@ const data = [
      for distributed machine learning
    </li>
  </ol>`,
+    delayTime: '100',
   },
   {
     link:
@@ -57,6 +57,7 @@ const data = [
       between regulated institutions
     </li>
   </ol>`,
+    delayTime: '150',
   },
   {
     link:
@@ -78,6 +79,7 @@ const data = [
      securely from anywhere, including your home office
    </li>
  </ol>`,
+    delayTime: '200',
   },
 ];
 
@@ -86,48 +88,51 @@ export default function UseCases() {
   return (
     <section className="section-UseCases change-bg-color the-aux-padding">
       <div className="container">
-        <div className="container-sm sub-title">
-          <h2>Use Cases</h2>
-        </div>
-        <div className="read-text">
-          <p>
-            Your data, your decision.
-            <br />
-            <br />
-            HOPR keeps any exchange of data private.
-            <br />
-            The{' '}
-            <a href="/layer0-data-privacy#how">
-              <span className="text-color-high underline">HOPR protocol</span>
-            </a>
-            is a layer-0 privacy foundation for anyone to{' '}
-            <a
-              href="https://www.coindesk.com/dont-hodl-buidl-blockchain-tech-will-add-value-2018"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {' '}
-              <span className="text-color-high underline">build</span>
-            </a>{' '}
-            on.
-          </p>
-          <p>
-            Standard end-to-end encryption does not provide sufficient privacy.
-            <br />
-            It leaks important metadata, such as who is exchanging data, when,
-            and how often. Securing network-level privacy with HOPR unlocks a
-            range of opportunities such as:
-          </p>
+        <div data-aos="fade-up">
+          <div className="container-sm sub-title">
+            <h2>Use Cases</h2>
+          </div>
+          <div className="read-text">
+            <p>
+              Your data, your decision.
+              <br />
+              <br />
+              HOPR keeps any exchange of data private.
+              <br />
+              The{' '}
+              <a href="/layer0-data-privacy#how">
+                <span className="text-color-high underline">HOPR protocol</span>
+              </a>
+              is a layer-0 privacy foundation for anyone to{' '}
+              <a
+                href="https://www.coindesk.com/dont-hodl-buidl-blockchain-tech-will-add-value-2018"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {' '}
+                <span className="text-color-high underline">build</span>
+              </a>{' '}
+              on.
+            </p>
+            <p>
+              Standard end-to-end encryption does not provide sufficient
+              privacy.
+              <br />
+              It leaks important metadata, such as who is exchanging data, when,
+              and how often. Securing network-level privacy with HOPR unlocks a
+              range of opportunities such as:
+            </p>
+          </div>
         </div>
 
         <div className="items-list">
           {data.map((e, index) => {
-            const { title, main, img, about } = e;
+            const { title, main, img, about, delayTime } = e;
             return (
-              <motion.div
+              <div
                 key={index}
-                variants={fadeInUp}
-                transition={{ delay: 0.8 }}
+                data-aos="fade-up"
+                data-aos-delay={delayTime}
                 className="element-item"
               >
                 <div className="main">
@@ -145,7 +150,7 @@ export default function UseCases() {
                     ></div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             );
           })}
         </div>

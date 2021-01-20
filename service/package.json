@@ -17,6 +17,7 @@
     "@zeit/next-css": "1.0.1",
     "@zeit/next-sass": "1.0.1",
     "animate.css-react": "^1.1.0",
+    "aos": "^2.3.4",
     "chart.js": "^2.9.4",
     "framer-motion": "^2.9.4",
     "lodash": "^4.17.20",

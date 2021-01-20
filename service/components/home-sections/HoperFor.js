@@ -1,8 +1,5 @@
-
 import React from 'react';
 import useTranslation from 'next-translate/useTranslation';
-import { motion } from 'framer-motion';
-import { stagger, fadeInUp } from '../../util/motionConfig';
 
 export default function HoperFor() {
   const { t } = useTranslation();
@@ -11,42 +8,52 @@ export default function HoperFor() {
       link: 'https://github.com/hoprnet',
       img: 'assets/icons/with-yellow-ball/shield.png',
       label: 'Privacy Blog',
+      delayTime: '100',
     },
     {
       link: 'https://github.com/hoprnet',
       img: 'assets/icons/with-yellow-ball/lock-4.png',
       label: 'common:cryptographers',
+      delayTime: '150',
     },
     {
       link: 'https://docs.hoprnet.org/home/',
       img: 'assets/icons/with-yellow-ball/programming-team-chat-3.png',
       label: 'common:techies',
+      delayTime: '200',
     },
     {
       link: '',
       img: 'assets/icons/with-yellow-ball/light-bulb-shine.png',
       label: 'common:entrepreneurs',
+      delayTime: '250',
     },
 
     {
       link: 'https://docs.hoprnet.org/home/',
       img: 'assets/icons/with-yellow-ball/outdoors-mining.png',
       label: 'common:miners&Stakers',
+      delayTime: '300',
     },
     {
       link: 'mailto:sebastian.buergel@hoprnet.org?subject=Investment',
       img: 'assets/icons/with-yellow-ball/professions-man-office-1.png',
       label: 'common:investors',
+      delayTime: '350',
     },
   ];
   return (
     <div className=" container the-aux-margin">
-      <div className="container sub-title">
+      <div
+        className="container sub-title"
+        data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+      >
         <h2 className="the-aux-margin">HOPR For</h2>
       </div>
-      <motion.div variants={stagger} className=" list-items">
+      <div className=" list-items">
         {data.map((e, index) => {
-          const { link, img, label } = e;
+          const { link, img, label, delayTime } = e;
 
           return (
             <a
@@ -55,24 +62,23 @@ export default function HoperFor() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <motion.div
-                variants={fadeInUp}
-                transition={{ delay: 0.8 }}
+              <div
+                data-aos="fade-zoom-in"
+                data-aos-easing="ease-in-back"
+                data-aos-delay={delayTime}
                 className="item-contact-plus"
               >
                 <div className="bg-img">
-                  <motion.img variants={fadeInUp} src={img} alt={t(label)} />
+                  <img src={img} alt={t(label)} />
                 </div>
                 <div>
-                  <motion.h6 variants={fadeInUp} transition={{ delay: 0.2 }}>
-                    {t(label)}
-                  </motion.h6>
+                  <h6 transition={{ delay: 0.2 }}>{t(label)}</h6>
                 </div>
-              </motion.div>
+              </div>
             </a>
           );
         })}
-      </motion.div>
+      </div>
     </div>
   );
 }

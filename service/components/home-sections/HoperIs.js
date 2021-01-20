@@ -1,7 +1,5 @@
 import React from 'react';
 import useTranslation from 'next-translate/useTranslation';
-import { motion } from 'framer-motion';
-import { stagger, fadeInUp } from '../../util/motionConfig';
 
 export default function HoperIs() {
   const { t } = useTranslation();
@@ -11,12 +9,14 @@ export default function HoperIs() {
       img: 'assets/icons/with-blue-stroke/common-file-lock.png',
       main: ` We're building the HOPR network to give people and companies control over their level of data
       privacy.`,
+      delayTime: '100',
     },
     {
       title: 'Open Source Support',
       img: 'assets/icons/with-blue-stroke/user-signal.png',
       main:
         '  The HOPR community fights for the digital privacy of the future. Everybody can become a part of our movement.',
+      delayTime: '150',
     },
   ];
 
@@ -36,6 +36,7 @@ export default function HoperIs() {
       </a> ${'   '}
       to become part of our growing community.
       <br />`,
+      delayTime: '200',
     },
     {
       forClient: 'Professional',
@@ -51,24 +52,30 @@ export default function HoperIs() {
         Reach out to us
       </a> ${' '}
       if you and your customers deserve the best.`,
+      delayTime: '250',
     },
   ];
 
   return (
     <section className="section-UseCases change-bg-color the-aux-padding">
       <div className="container">
-        <div className="container-sm sub-title">
+        <div
+          className="container-sm sub-title"
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+        >
           <h2>HOPR Is</h2>
         </div>
 
         <div className="items-list list-two-elements">
           {dataTop.map((e, index) => {
-            const { title, main, img, about } = e;
+            const { title, main, img, about, delayTime } = e;
             return (
-              <motion.div
+              <div
                 key={index}
-                variants={fadeInUp}
-                transition={{ delay: 0.8 }}
+                data-aos="fade-zoom-in"
+                data-aos-easing="ease-in-back"
+                data-aos-delay={delayTime}
                 className="element-item"
               >
                 <div className="main">
@@ -86,7 +93,7 @@ export default function HoperIs() {
                     ></div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             );
           })}
         </div>
@@ -97,12 +104,13 @@ export default function HoperIs() {
 
         <div className="items-list list-two-elements">
           {dataBottom.map((e, index) => {
-            const { forClient, title, main, img } = e;
+            const { forClient, title, main, img, delayTime } = e;
             return (
-              <motion.div
+              <div
                 key={index}
-                variants={fadeInUp}
-                transition={{ delay: 0.8 }}
+                data-aos="fade-zoom-in"
+                data-aos-easing="ease-in-back"
+                data-aos-delay={delayTime}
                 className="element-item"
               >
                 <div className="main">
@@ -121,7 +129,7 @@ export default function HoperIs() {
                     ></div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             );
           })}
         </div>

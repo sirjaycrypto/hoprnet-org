@@ -71,7 +71,7 @@ export default function Index() {
                   className="link-out"
                   href="https://hopr.swiss/who-is-HOPR#team"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener"
                 >
                   {t('common:hereLabel')}
                 </a>

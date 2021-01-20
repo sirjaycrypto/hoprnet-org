@@ -4,7 +4,7 @@ import Navbar from '../molecules/navbar';
 import Footer from '../molecules/footer';
 import { useRouter } from 'next/router';
 import ScrollReveal from '../special/ScrollReveal';
-
+import { motion, AnimatePresence } from 'framer-motion';
 export default function Layout({ visibleNow, children }) {
   const scrollReveal = useRef(null);
   const router = useRouter();
@@ -15,9 +15,8 @@ export default function Layout({ visibleNow, children }) {
     scrollReveal.current.init();
   }, []);
 
-
   return (
-    <>
+    <AnimatePresence>
       <ScrollReveal
         ref={scrollReveal}
         children={() => (
@@ -31,6 +30,6 @@ export default function Layout({ visibleNow, children }) {
           </>
         )}
       />
-    </>
+    </AnimatePresence>
   );
 }
