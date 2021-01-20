@@ -18,6 +18,8 @@ import Footer from '../../components/molecules/footer';
 
 export default function Index() {
   const [visibleNow, setVisibleNow] = useState('');
+  const [modePreSales, setModePreSales] = useState(true);
+
   const btnMainPoint = useRef('');
 
   const [activeBtn, setActiveBtn] = useState(false);
@@ -31,49 +33,52 @@ export default function Index() {
   const [isVisibleNode, currentElementNode] = useVisibility(0);
   const [isVisibleTokenRel, currentElementTokenRel] = useVisibility(0);
   const [isVisibleBanner, currentElementVisibleBanner] = useVisibility(0);
-  const [isVisibleFooter, currentElementTokenFooter] = useVisibility();
+  const [isVisibleFooter, currentElementTokenFooter] = useVisibility(0);
   const { t } = useTranslation();
 
   useEffect(() => {
-    if (isVisibleFooter) {
-      setVisibleNow(currentElementTokenFooter.current.id);
-    }
-    if (isVisibleInvestData) {
-      setVisibleNow(currentInvestData.current.id);
-    }
-    if (isVisibleTokenFea) {
-      setVisibleNow(currentElementTokenFea.current.id);
-    }
-    if (isVisibleVideo) {
-      setVisibleNow(currentElementVideo.current.id);
-    }
-    if (isVisibleHow) {
-      setVisibleNow(currentElementAlt.current.id);
-    }
-    if (isVisibleNode) {
-      setVisibleNow(currentElementNode.current.id);
-    }
-    if (isVisibleBack) {
-      setVisibleNow(currentElementVisibleBack.current.id);
-    }
-    if (isVisibleBanner) {
-      setVisibleNow(currentElementVisibleBanner.current.id);
+    if (!modePreSales) {
+      if (isVisibleFooter) {
+        setVisibleNow(currentElementTokenFooter.current.id);
+      }
+      if (isVisibleInvestData) {
+        setVisibleNow(currentInvestData.current.id);
+      }
+      if (isVisibleTokenFea) {
+        setVisibleNow(currentElementTokenFea.current.id);
+      }
+      if (isVisibleVideo) {
+        setVisibleNow(currentElementVideo.current.id);
+      }
+      if (isVisibleHow) {
+        setVisibleNow(currentElementAlt.current.id);
+      }
+      if (isVisibleNode) {
+        setVisibleNow(currentElementNode.current.id);
+      }
+      if (isVisibleBack) {
+        setVisibleNow(currentElementVisibleBack.current.id);
+      }
+      if (isVisibleBanner) {
+        setVisibleNow(currentElementVisibleBanner.current.id);
+      }
+
+      if (
+        visibleNow === '' ||
+        visibleNow === 'BANNER' ||
+        visibleNow === 'blindText' ||
+        visibleNow === 'FOOTER'
+      ) {
+        setActiveBtn(false);
+      } else {
+        setActiveBtn(true);
+      }
     }
     if (isVisibleTokenRel) {
       setVisibleNow(currentElementTokenRel.current.id);
     }
     if (visibleNow === 'TOKEN-RELEASE') {
       setAnimateChart(true);
-    }
-    if (
-      visibleNow === '' ||
-      visibleNow === 'BANNER' ||
-      visibleNow === 'blindText' ||
-      visibleNow === 'FOOTER'
-    ) {
-      setActiveBtn(false);
-    } else {
-      setActiveBtn(true);
     }
   }, [
     isVisibleHero,
@@ -92,11 +97,18 @@ export default function Index() {
     currentElementTokenRel,
     currentElementTokenFooter,
   ]);
-
+  const changeModePreSale = () => {
+    setModePreSales(!modePreSales);
+  };
   return (
     <Layout visibleNow={visibleNow}>
       <ChooseLanguage />
-      <Hero setVisibleNow={setVisibleNow} ref={currentElementHero} />
+      <Hero
+        setVisibleNow={setVisibleNow}
+        ref={currentElementHero}
+        modePreSales={modePreSales}
+        changeModePreSale={() => changeModePreSale()}
+      />
       <HomeHeadline ref={currentInvestData} />
       <section
         id="video-area"
