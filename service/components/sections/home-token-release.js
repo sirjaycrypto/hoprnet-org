@@ -150,7 +150,6 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
 
   function cleanData(elements) {
     return elements.map(function (elem) {
-      console.log(elem);
       if (elem === undefined) {
         return elem;
       }
