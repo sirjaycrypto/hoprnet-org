@@ -15,12 +15,6 @@ nav {
   &.add-shadow {
     background: rgba(255, 255, 255, 0.97);
   }
-  &.add-scroll-menu {
-    display: none;
-    position: fixed;
-    transition: all 350ms ease-in-out;
-    background: #fff;
-  }
   .logo-nav {
     width: 90px;
     @include responsive(tablet) {
@@ -221,4 +215,10 @@ nav {
 .nav-style-no-home {
   background: #fff;
   position: relative;
+}
+
+.add-scroll-menu {
+  position: fixed;
+  transition: all 350ms ease-in-out;
+  background: #fff;
 }

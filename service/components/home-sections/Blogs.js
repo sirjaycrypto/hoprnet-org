@@ -42,7 +42,6 @@ export default function Blogs() {
       <div className=" list-items helper-box-mob">
         {data.map((e, index) => {
           const { link, img, label, delayTime } = e;
-
           return (
             <a key={index} href={link} target="_blank" rel="noopener ">
               <div

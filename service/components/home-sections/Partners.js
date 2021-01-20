@@ -17,7 +17,7 @@ const dataInfo = [
 export default function Partners() {
   const { t } = useTranslation();
   return (
-    <section className="section-partners change-bg-color ">
+    <section className="section-partners change-bg-color invert-color">
       <div className="container">
         <div className="container-sm sub-title">
           <h2>Partners</h2>

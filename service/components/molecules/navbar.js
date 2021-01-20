@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import {
-  fadeInDown,
-} from '../../util/motionConfig';
+import { fadeInDown } from '../../util/motionConfig';
 import MenuMobile from './menu-mobile';
 import Link from 'next/link';
 import ItemsMenu from '../atoms/items-menu';
@@ -19,15 +17,23 @@ export default function Navbar({ visibleNow }) {
     setAddStyle(router.pathname === '/');
   }
 
+  function isTheToken() {
+    return router.pathname === '/token';
+  }
+
   useEffect(() => {
     isTheHome();
     window.onscroll = function () {
+    
       if (window.pageYOffset === 0) {
         setYouDown(false);
       } else {
         window.toggle.checked = false;
         setYouDown(true);
         setActivaMenu(false);
+        if (isTheToken()) {
+          setYouDown(false);
+        }
       }
     };
   }, [youDown]);

@@ -57,7 +57,7 @@ export default function HoperIs() {
   ];
 
   return (
-    <section className="section-UseCases change-bg-color the-aux-padding">
+    <section className="section-UseCases change-bg-color the-aux-padding invert-color">
       <div className="container">
         <div
           className="container-sm sub-title"

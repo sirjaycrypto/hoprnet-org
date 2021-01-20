@@ -86,7 +86,7 @@ const data = [
 export default function UseCases() {
   const { t } = useTranslation();
   return (
-    <section className="section-UseCases change-bg-color the-aux-padding">
+    <section className="section-UseCases change-bg-color the-aux-padding invert-color">
       <div className="container">
         <div data-aos="fade-up">
           <div className="container-sm sub-title">

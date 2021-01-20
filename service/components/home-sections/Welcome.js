@@ -12,8 +12,8 @@ export default function Welcome({ welcomeAnimate }) {
   }, []);
 
   return (
-    <div className={'welcome-section ' + (initialAni ? 'show-hi' : '')}>
-      <div className="section-top center-on-the-box container">
+    <div className={'welcome-section invert-color ' + (initialAni ? 'show-hi' : '')}>
+      <div className="section-top center-on-the-box container ">
         <div className="main-labels ">
           <h1> Changing Data Privacy For Good</h1>
           <div className="help-box">

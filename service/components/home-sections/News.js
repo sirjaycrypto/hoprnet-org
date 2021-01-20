@@ -40,10 +40,11 @@ export default function News() {
           <h2>In The News</h2>
         </div>
         <div className="items">
-          {data.map((e) => {
+          {data.map((e, index) => {
             const { link, img, about, btn, delayTime } = e;
             return (
               <div
+                key={index}
                 data-aos="fade-up"
                 data-aos-delay={delayTime}
                 className="element-item"
