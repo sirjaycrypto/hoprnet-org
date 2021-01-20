@@ -4,12 +4,12 @@
 
 .cursor:not(.invert-color) {
   transition: all 350ms ease;
-  cursor: url(getCursorUri("%23ffffa0", 16)) 16 16, auto !important;
+  cursor: url(getCursorUri('%23ffffa0', 16)) 16 16, auto !important;
 }
 
 .cursor .invert-color {
   transition: all 350ms ease;
-  cursor: url(getCursorUri("%23000050", 16)) 16 16, auto !important;
+  cursor: url(getCursorUri('%23000050', 16)) 16 16, auto !important;
 }
 
 // overwrite various cursors
@@ -17,15 +17,17 @@
 a,
 .type-btn,
 .link-special,
-.btn-follow ,
-.btn-small {
+.btn-follow,
+.btn-small,
+.btn-alt-modal,
+.btn-modal {
   transition: all 350ms ease;
-  cursor: url(getCursorUri("%230000b4", 16)) 16 16, auto !important;
+  cursor: url(getCursorUri('%230000b4', 16)) 16 16, auto !important;
 }
 
 .accordion-header {
   transition: all 350ms ease;
-  cursor: url(getCursorUri("%230000b4", 16)) 16 16, auto !important;
+  cursor: url(getCursorUri('%230000b4', 16)) 16 16, auto !important;
 }
 
 canvas {

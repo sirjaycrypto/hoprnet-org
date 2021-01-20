@@ -62,4 +62,48 @@
       line-height: 140%;
     }
   }
+  .area-btn-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    span {
+      font-size: 30px;
+      @include responsive(tablet) {
+        font-size: 24px;
+      }
+      @include responsive(phone) {
+        font-size: 20px;
+      }
+    }
+    .btn-alt-modal {
+      width: 140px;
+      span {
+        color: $hopr_grey;
+        text-shadow: none;
+        text-transform: capitalize;
+        margin-right: 34px;
+      }
+    }
+    .btn-modal {
+      background: linear-gradient(90deg, #0000db 0%, #292941 100%);
+      transition: all 600ms ease-in-out;
+      padding: 0em 1.5em;
+      border-radius: 100px;
+      width: fit-content;
+      span {
+        font-weight: 600;
+
+        line-height: 2em;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.2975px;
+        color: #ffffff;
+        margin: 0;
+        padding: 0;
+        text-transform: capitalize;
+      }
+    }
+  }
 }

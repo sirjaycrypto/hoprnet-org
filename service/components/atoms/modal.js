@@ -2,7 +2,6 @@ import React, { forwardRef, useState, useEffect } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 
 const Modal = forwardRef(({ showModal, showModalActive }, ref) => {
-  const [close, setClose] = useState(showModal);
   const { t } = useTranslation();
 
   return (
@@ -17,7 +16,7 @@ const Modal = forwardRef(({ showModal, showModalActive }, ref) => {
             <p>{t('home:modal.about')}</p>
           </div>
           <div className="area-btn-modal">
-            <div className="btn-alt-modal ">
+            <div onClick={() => showModalActive()} className="btn-alt-modal ">
               <span>{t('common:btn-Cancel')}</span>
             </div>
             <div className="btn-modal ">

@@ -2,17 +2,23 @@ import React, { forwardRef, useState, useEffect } from 'react';
 import Countdown from '../atoms/countdown';
 import useTranslation from 'next-translate/useTranslation';
 import Modal from '../atoms/modal';
+import AlertMsg from '../atoms/alertMsg';
 import HeroInfo from '../molecules/hero-info';
 
 const Hero = forwardRef(
   ({ modePreSales, changeModePreSale, setVisibleNow }, ref) => {
     const [videoMobile, setVideoMobile] = useState(false);
-    //false
+    const [showMsg, setShowMsg] = useState(true);
     const [showModal, setShowModal] = useState(false);
     const { t } = useTranslation();
 
     const showModalActive = () => {
       setShowModal(!showModal);
+    };
+
+    const showActiveMsg = () => {
+      setShowMsg(!showMsg);
+      console.log('hola hola');
     };
 
     const clickBtn = () => {
@@ -65,20 +71,34 @@ const Hero = forwardRef(
                   <h4>{t('home:hero.subtitle')}</h4>
 
                   <Countdown />
-
-                  {modePreSales ? (
+                  {showMsg ? (
+                    <AlertMsg />
+                  ) : (
                     <div className="preSales-btn  ">
                       <div>
-                        <div
-                          onClick={() => showModalActive()}
-                          className="btn-small "
-                        >
+                        <div onClick={() => showModalActive()} className="btn ">
                           <span>{t('common:btn-comumnity')}</span>
                         </div>
                       </div>
 
                       <div>
-                        <div className="btn-small ">
+                        <div onClick={() => showActiveMsg()} className="btn ">
+                          <span>{t('common:btn-public')}</span>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {modePreSales ? (
+                    <div className="preSales-btn  ">
+                      <div>
+                        <div onClick={() => showModalActive()} className="btn ">
+                          <span>{t('common:btn-comumnity')}</span>
+                        </div>
+                      </div>
+
+                      <div>
+                        <div onClick={() => showActiveMsg()} className="btn ">
                           <span>{t('common:btn-public')}</span>
                         </div>
                       </div>
