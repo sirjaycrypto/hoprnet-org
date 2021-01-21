@@ -22,7 +22,9 @@ function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
   Router.onRouteChangeStart = () => {
-    setLoading(!loading);
+    setTimeout(() => {
+      setLoading(!loading);
+    }, 1000);
   };
 
   Router.onRouteChangeComplete = () => {

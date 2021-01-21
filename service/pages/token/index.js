@@ -16,10 +16,12 @@ import ChooseLanguage from '../../components/molecules/choose-language';
 import useVisibility from '../../components/hooks/useVisibility';
 import Footer from '../../components/molecules/footer';
 
+import Modal from '../../components/atoms/modal';
+
 export default function Index() {
   const [visibleNow, setVisibleNow] = useState('');
   const [modePreSales, setModePreSales] = useState(false);
-
+  const [showModal, setShowModal] = useState(false);
   const btnMainPoint = useRef('');
 
   const [activeBtn, setActiveBtn] = useState(false);
@@ -100,8 +102,20 @@ export default function Index() {
   const changeModePreSale = () => {
     setModePreSales(!modePreSales);
   };
+  const showModalActive = () => {
+    setShowModal(!showModal);
+  };
   return (
     <Layout visibleNow={visibleNow}>
+      {!showModal ? (
+        <Modal
+          showModal={showModal}
+          showModalActive={() => showModalActive()}
+        />
+      ) : (
+        <></>
+      )}
+
       <ChooseLanguage />
       <Hero
         setVisibleNow={setVisibleNow}
@@ -148,7 +162,7 @@ export default function Index() {
           className={'btn-follow ' + (activeBtn ? 'modeFollow' : 'fixOnBanner')}
           ref={activeBtn ? btnMainPoint : null}
         >
-          <div className="btn-banner">
+          <div className="btn-banner" onClick={() => showModalActive()}>
             <span>{t('home:banner.button')}</span>
           </div>
         </div>

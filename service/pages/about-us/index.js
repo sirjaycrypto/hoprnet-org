@@ -51,7 +51,9 @@ export default function Index() {
       <Layout>
         <HeroInternal>
           <div>
-            <h1 data-aos="fade-down">{t('about:hero.title')}</h1>
+            <h1 data-aos="fade-down" data-aos-delay="150">
+              {t('about:hero.title')}
+            </h1>
             <div>
               <p data-aos="fade-down" data-aos-delay="300">
                 {t('about:hero.paragraphA')}

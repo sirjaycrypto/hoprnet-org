@@ -60,13 +60,14 @@
   },
   "hero": {
     "subtitle": "THE HOPR TOKEN LAUNCH ENDS IN:",
+    "subtitlePre": "THE HOPR TOKEN LAUNCHES IN",
     "title": "Changing Data Privacy for Good"
   },
   "slide": {
     "slideA": "Sandro Cilurzo, Co-Founder & CEO of Sedimentum AG.",
     "slideAMain": "HOPR has developed this groundbreaking open source technology to be used by privacy-aware developers all over the world, HOPR is integrated in our cutting edge privacy-preserving technology to save lives without compromising privacy.",
     "slideB": "Beniamin Mincu, CEO of Elrond.",
-    "slideBMain": "The HOPR protocol offers a new standard for internet-scale performance, probabilistic security, and cryptographic pseudonymity. We’re happy to bridge the last mile to the Elrond network entry-points with HOPR, and offer a truly decentralized & private end-to-end experience for our users",
+    "slideBMain": "The HOPR protocol offers a new standard for internet-scale performance, probabilistic security, and cryptographic pseudonymity. We’re happy to bridge the last mile to the Elrond network entry-points with HOPR, and offer a truly decentralized & private end-to-end experience for our.",
     "slideC": "Gin Chao, Strategy Officer of Binance.",
     "slideCMain": "The team at HOPR has shown us how their decentralized network achieves privacy guarantees on the metadata level and gives power back to the people."
   },

@@ -25,7 +25,7 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
     },
     {
       date: 'Jul 2020',
-      title: 'ENTIRE BLOCK',
+      title: 'HOPR Hardware Node',
       about:
         'HOPR Hardware Node The HOPR Node PC launches, allowing users to run a dedicated HOPR device from their home.',
       linkA: '#',

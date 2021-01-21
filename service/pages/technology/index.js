@@ -1,29 +1,23 @@
 import React from 'react';
 import useTranslation from 'next-translate/useTranslation';
-import { motion } from 'framer-motion';
 
 import Layout from '../../components/organisms/layout';
 import HeroInternal from '../../components/organisms/hero-internal';
-import { stagger, fadeInUp, fadeInDown } from '../../util/motionConfig';
 import { loadNamespaces } from '../_app';
 
 export default function Index() {
   const { t } = useTranslation();
 
   return (
-    <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
+    <div>
       <Layout>
         <HeroInternal>
-          <motion.div variants={stagger}>
-            <motion.h1 variants={fadeInDown} transition={{ delay: 0.2 }}>
+          <div>
+            <h1 data-aos="fade-down" data-aos-delay="150">
               {t('tech:hero.title')}
-            </motion.h1>
+            </h1>
             <div>
-              <motion.p
-                variants={fadeInDown}
-                exit={{ opacity: 0 }}
-                transition={{ delay: 0.2 }}
-              >
+              <p data-aos="fade-down" data-aos-delay="300">
                 {t('tech:hero.paragraphA')}
                 <br />
                 <br />
@@ -31,41 +25,31 @@ export default function Index() {
                 <br />
                 <br />
                 {t('tech:hero.paragraphC')}
-              </motion.p>
+              </p>
             </div>
-          </motion.div>
+          </div>
         </HeroInternal>
         <section className="continue-hero-internal padding-section-aux invert-color ">
-          <motion.div variants={stagger}>
-            <motion.h2 variants={fadeInUp} transition={{ delay: 0.8 }}>
-              {t('tech:second.title')}
-            </motion.h2>
+          <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back">
+            <h2>{t('tech:second.title')}</h2>
 
             <div className="container-sm two-block">
-              <div className="block-left">
-                <motion.p variants={fadeInUp} transition={{ delay: 0.9 }}>
-                  {t('tech:second.paragraphA')}
-                </motion.p>
-                <motion.p variants={fadeInUp} transition={{ delay: 1 }}>
-                  {t('tech:second.paragraphB')}
-                </motion.p>
+              <div className="block-left" data-aos="fade-down">
+                <p>{t('tech:second.paragraphA')}</p>
+                <p>{t('tech:second.paragraphB')}</p>
               </div>
-              <div className="block-right">
-                <motion.p variants={fadeInUp} transition={{ delay: 0.9 }}>
-                  {t('tech:second.paragraphC')}
-                </motion.p>
-                <motion.p variants={fadeInUp} transition={{ delay: 1 }}>
-                  {t('tech:second.paragraphD')}
-                </motion.p>
+              <div className="block-right" data-aos="fade-down">
+                <p>{t('tech:second.paragraphC')}</p>
+                <p>{t('tech:second.paragraphD')}</p>
               </div>
             </div>
-          </motion.div>
+          </div>
         </section>
         <section className="section-source padding-section-aux">
-          <div>
+          <div data-aos="fade-down">
             <h2> {t('tech:open.title')} </h2>
           </div>
-          <div className="container-sm">
+          <div className="container-sm" data-aos="fade-down">
             <p>{t('tech:open.paragraphA')}</p>
             <p>{t('tech:open.paragraphB')}</p>
             <p>{t('tech:open.paragraphC')}</p>
@@ -194,11 +178,9 @@ export default function Index() {
           </div>
         </section>
         <section className="section-documentation padding-section-aux invert-color ">
-          <motion.div variants={stagger}>
-            <motion.h2 variants={fadeInUp} transition={{ delay: 0.8 }}>
-              {t('tech:doc.title')}
-            </motion.h2>
-            <div className="container-sm">
+          <div>
+            <h2 data-aos="fade-down">{t('tech:doc.title')}</h2>
+            <div className="container-sm" data-aos="fade-down">
               <p>{t('tech:doc.paragraphA')}</p>
               <p>{t('tech:doc.paragraphB')}</p>
               <div className="btn-align">
@@ -214,12 +196,12 @@ export default function Index() {
                 </a>
               </div>
             </div>
-          </motion.div>
+          </div>
         </section>
         <section className="section-bounties padding-section-aux">
-          <div className="container-sm">
+          <div className="container-sm" data-aos="fade-down">
             <h2> {t('tech:work.title')}</h2>
-            <div>
+            <div data-aos="fade-down">
               <p>
                 {t('tech:work.paragraphA')}{' '}
                 <a
@@ -236,7 +218,7 @@ export default function Index() {
           </div>
         </section>
       </Layout>
-    </motion.div>
+    </div>
   );
 }
 

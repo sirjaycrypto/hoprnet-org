@@ -74,6 +74,8 @@ export default function PeopleBuild() {
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-aos="fade-zoom-in"
+                data-aos-easing="ease-in-back"
               >
                 <motion.div
                   variants={fadeInUp}

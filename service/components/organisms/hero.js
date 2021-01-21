@@ -82,7 +82,7 @@ const Hero = forwardRef(
                 />
               ) : (
                 <>
-                  <h4>{t('home:hero.subtitle')}</h4>
+                  <h4>{t('home:hero.subtitlePre')}</h4>
                   <Countdown />
                   {modePreSales ? (
                     <>
@@ -119,7 +119,7 @@ const Hero = forwardRef(
                   ) : (
                     <div>
                       <div
-                        onClick={() => console.log('click')}
+                        onClick={() => showModalActive()}
                         className="btn-banner "
                       >
                         <span>{t('common:getHorpFull')}</span>
