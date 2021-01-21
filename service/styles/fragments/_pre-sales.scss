@@ -64,8 +64,12 @@
   .icon-close {
     width: fit-content;
     position: absolute;
-    top: -27px;
-    right: 0;
+    top: -34px;
+    right: -13px;
+    @include responsive(tablet) {
+      top: -27px;
+      right: 0;
+    }
     img {
       width: 24px;
     }
@@ -80,5 +84,24 @@
     @include responsive(tablet) {
       font-size: 16px;
     }
+  }
+}
+
+
+.nowFollowUs{
+  z-index: 11;
+  animation: aniFollowUs 1200ms ease-in-out forwards;
+}
+@keyframes aniFollowUs {
+  from {
+    position: fixed;
+    bottom: 0;
+    transform: translateY(100%);
+  }
+  to{
+    position: fixed;
+    bottom: 0;
+   
+    transform: translateY(-18%);
   }
 }

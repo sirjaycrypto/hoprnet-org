@@ -1,4 +1,4 @@
-import React, { forwardRef, useState, useEffect } from 'react';
+import React, { useRef, forwardRef, useState, useEffect } from 'react';
 import Countdown from '../atoms/countdown';
 import useTranslation from 'next-translate/useTranslation';
 import Modal from '../atoms/modal';
@@ -10,6 +10,9 @@ const Hero = forwardRef(
     const [videoMobile, setVideoMobile] = useState(false);
     const [showMsg, setShowMsg] = useState(false);
     const [showModal, setShowModal] = useState(false);
+
+    const [btnPreSalesFollow, setBtnPreSalesFollow] = useState(false);
+    const theAreaBtn = useRef('');
     const { t } = useTranslation();
 
     const showModalActive = () => {
@@ -17,17 +20,28 @@ const Hero = forwardRef(
     };
 
     const showActiveMsg = () => {
-      setShowMsg(!showMsg);
-    };
-
-    const clickBtn = () => {
-      console.log('Click');
+      window.scrollTo(0, 0);
+      setTimeout(() => {
+        setShowMsg(!showMsg);
+      }, 200);
     };
 
     useEffect(() => {
       if (window.matchMedia('screen and (min-width: 797px)').matches) {
         setVideoMobile(true);
       }
+      const elementTop = theAreaBtn?.current?.clientHeight;
+      const elementPlus = theAreaBtn?.current?.scrollWidth + elementTop;
+      window.onscroll = function () {
+        if (
+          window.pageYOffset >= elementTop &&
+          window.pageYOffset <= elementPlus
+        ) {
+          setBtnPreSalesFollow(true);
+        } else if (window.pageYOffset <= elementPlus) {
+          setBtnPreSalesFollow(false);
+        }
+      };
     }, {});
 
     return (
@@ -73,7 +87,13 @@ const Hero = forwardRef(
                   {showMsg ? (
                     <AlertMsg showActiveMsg={() => showActiveMsg()} />
                   ) : (
-                    <div className="preSales-btn  ">
+                    <div
+                      ref={theAreaBtn}
+                      className={
+                        'preSales-btn ' +
+                        (btnPreSalesFollow ? 'nowFollowUs' : 'e')
+                      }
+                    >
                       <div>
                         <div onClick={() => showModalActive()} className="btn ">
                           <span>{t('common:btn-comumnity')}</span>

@@ -24,7 +24,6 @@ export default function Navbar({ visibleNow }) {
   useEffect(() => {
     isTheHome();
     window.onscroll = function () {
-    
       if (window.pageYOffset === 0) {
         setYouDown(false);
       } else {

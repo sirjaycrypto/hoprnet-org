@@ -7,7 +7,7 @@ export default function MenuMobile({ activaMenu }) {
       <div>
         <ItemsMenu
           activaMenu={() => {
-            activaMenu;
+            activaMenu();
           }}
         />
       </div>
