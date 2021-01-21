@@ -8,7 +8,7 @@ import HeroInfo from '../molecules/hero-info';
 const Hero = forwardRef(
   ({ modePreSales, changeModePreSale, setVisibleNow }, ref) => {
     const [videoMobile, setVideoMobile] = useState(false);
-    const [showMsg, setShowMsg] = useState(true);
+    const [showMsg, setShowMsg] = useState(false);
     const [showModal, setShowModal] = useState(false);
     const { t } = useTranslation();
 
@@ -18,7 +18,6 @@ const Hero = forwardRef(
 
     const showActiveMsg = () => {
       setShowMsg(!showMsg);
-      console.log('hola hola');
     };
 
     const clickBtn = () => {
@@ -72,7 +71,7 @@ const Hero = forwardRef(
 
                   <Countdown />
                   {showMsg ? (
-                    <AlertMsg />
+                    <AlertMsg showActiveMsg={() => showActiveMsg()} />
                   ) : (
                     <div className="preSales-btn  ">
                       <div>
@@ -85,28 +84,6 @@ const Hero = forwardRef(
                         <div onClick={() => showActiveMsg()} className="btn ">
                           <span>{t('common:btn-public')}</span>
                         </div>
-                      </div>
-                    </div>
-                  )}
-
-                  {modePreSales ? (
-                    <div className="preSales-btn  ">
-                      <div>
-                        <div onClick={() => showModalActive()} className="btn ">
-                          <span>{t('common:btn-comumnity')}</span>
-                        </div>
-                      </div>
-
-                      <div>
-                        <div onClick={() => showActiveMsg()} className="btn ">
-                          <span>{t('common:btn-public')}</span>
-                        </div>
-                      </div>
-                    </div>
-                  ) : (
-                    <div>
-                      <div onClick={() => clickBtn()} className="btn-banner ">
-                        <span>{t('common:getHorpFull')}</span>
                       </div>
                     </div>
                   )}

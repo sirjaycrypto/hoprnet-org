@@ -19,6 +19,12 @@
   border-radius: 12px;
   box-shadow: rgba(47, 47, 47, 0.61) 0px 5px 8px;
   overflow: hidden;
+  @include responsive(tablet) {
+    flex-direction: column;
+  }
+  @include responsive(phone) {
+    width: 90%;
+  }
   .hero-moda {
     height: 100px;
     background: $hopr_bright_blue;
@@ -60,6 +66,11 @@
       text-align: start;
       font-size: 16px;
       line-height: 140%;
+      // @include responsive(tablet) {
+      // }
+      @include responsive(phone) {
+        font-size: 13px;
+      }
     }
   }
   .area-btn-modal {

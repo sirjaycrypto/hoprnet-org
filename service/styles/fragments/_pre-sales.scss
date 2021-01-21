@@ -1,21 +1,34 @@
 .preSales-btn {
   display: flex;
+  @include responsive(tablet) {
+    flex-direction: column;
+  }
+  @include responsive(phone) {
+    font-size: 20px;
+  }
   .btn {
     &:first-child {
       margin-right: 1rem;
     }
     &:last-child {
       margin-left: 1rem;
+      @include responsive(phone) {
+        margin-top: 24px;
+      }
     }
     width: 200px;
     background: linear-gradient(90deg, #0000db 0%, #292941 100%);
     transition: all 600ms ease-in-out;
     padding: 0.8em 1.5em;
     border-radius: 100px;
+    @include responsive(phone) {
+      width: 180px;
+    }
     span {
       font-weight: 400;
       line-height: inherit;
       display: flex;
+      justify-content: center;
       align-items: center;
       text-align: center;
       letter-spacing: 0.2975px;
@@ -41,7 +54,24 @@
   padding: 14px 24px;
   box-sizing: border-box;
   width: 64%;
-  p,a {
+  position: relative;
+  @include responsive(tablet) {
+    width: 80%;
+  }
+  @include responsive(phone) {
+    width: 100%;
+  }
+  .icon-close {
+    width: fit-content;
+    position: absolute;
+    top: -27px;
+    right: 0;
+    img {
+      width: 24px;
+    }
+  }
+  p,
+  a {
     margin: 0;
     padding: 0;
     text-align: center;
