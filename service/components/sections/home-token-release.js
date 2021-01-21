@@ -70,11 +70,15 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
     tooltips: {
       bodyFontFamily: 'Source Code Pro',
       callbacks: {
+        // eslint-disable-next-line no-shadow
         label: function (e, t) {
           let num = makeFriendly(t.datasets[0].data[e.index]);
-          return ''
-            .concat(t.labels[e.index].split(':')[0], ' ')
-            .concat(num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "'")) + ' HOPR';
+          return (
+            ''
+              .concat(t.labels[e.index].split(':')[0], ': ')
+              .concat(num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "'")) +
+            ' HOPR'
+          );
         },
       },
     },

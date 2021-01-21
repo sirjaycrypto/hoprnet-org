@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import AOS from 'aos';
 
-
 import Loader from '../components/atoms/loader';
 import I18nProvider from 'next-translate/I18nProvider';
 import Router, { useRouter } from 'next/router';
@@ -27,7 +26,9 @@ function MyApp({ Component, pageProps }) {
   };
 
   Router.onRouteChangeComplete = () => {
-    setLoading(!loading);
+    setTimeout(() => {
+      setLoading(!loading);
+    }, 1000);
   };
 
   Router.onRouteChangeError = () => {
@@ -37,7 +38,7 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     AOS.init({
-      easing: "ease-out-cubic",
+      easing: 'ease-out-cubic',
       once: true,
       offset: 50,
     });
