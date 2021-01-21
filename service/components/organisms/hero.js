@@ -43,7 +43,7 @@ const Hero = forwardRef(
           setBtnPreSalesFollow(false);
         }
       };
-    }, {});
+    }, [modePreSales]);
 
     return (
       <>
@@ -86,7 +86,6 @@ const Hero = forwardRef(
                   <Countdown />
                   {modePreSales ? (
                     <>
-                      {' '}
                       {showMsg ? (
                         <AlertMsg showActiveMsg={() => showActiveMsg()} />
                       ) : (
@@ -94,7 +93,7 @@ const Hero = forwardRef(
                           ref={theAreaBtn}
                           className={
                             'preSales-btn ' +
-                            (btnPreSalesFollow ? 'nowFollowUs' : ' ')
+                            (btnPreSalesFollow ? 'nowFollowUs' : 'e ')
                           }
                         >
                           <div>
