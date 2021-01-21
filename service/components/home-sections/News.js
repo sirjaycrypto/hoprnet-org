@@ -36,7 +36,11 @@ export default function News() {
   return (
     <>
       <section className="section-InTheNews the-aux-margin container">
-        <div className="container-sm sub-title">
+        <div
+          className="container-sm sub-title"
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+        >
           <h2>In The News</h2>
         </div>
         <div className="items">

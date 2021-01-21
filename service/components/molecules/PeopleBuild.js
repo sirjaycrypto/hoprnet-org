@@ -57,7 +57,11 @@ const data = [
 export default function PeopleBuild() {
   return (
     <div className="people-area">
-      <div className="container-sm">
+      <div
+        className="container-sm"
+        data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+      >
         <h2>People building the HOPR Network</h2>
       </div>
       <div className="container padding-section-aux">

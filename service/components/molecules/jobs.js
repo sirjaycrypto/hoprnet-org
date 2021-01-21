@@ -8,7 +8,12 @@ export default function Jobs() {
 
   return (
     <>
-      <div className="padding-section-aux" id="psJobWidget" />
+      <div
+        data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        className="padding-section-aux"
+        id="psJobWidget"
+      />
     </>
   );
 }

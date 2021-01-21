@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import useTranslation from 'next-translate/useTranslation';
 
 import Layout from '../../components/organisms/layout';
@@ -9,7 +8,7 @@ import Jobs from '../../components/molecules/jobs';
 import ProfileAssociation from '../../components/molecules/profile-association';
 import PeopleBuild from '../../components/molecules/PeopleBuild';
 import ContactPlus from '../../components/molecules/contact-plus';
-import { stagger, fadeInUp, fadeInDown } from '../../util/motionConfig';
+
 import { loadNamespaces } from '../_app';
 
 const dataInfo = [
@@ -28,16 +27,19 @@ const dataVALUES = [
     img: 'assets/icons/with-yellow-ball/protection-shield.png',
     title: 'about:values.itemTitleA',
     text: 'about:values.itemAboutA',
+    delayTime: '100',
   },
   {
     img: 'assets/icons/with-yellow-ball/light-bulb-shine.png',
     title: 'about:values.itemTitleB',
     text: 'about:values.itemAboutB',
+    delayTime: '150',
   },
   {
     img: 'assets/icons/with-yellow-ball/multiple-users-1.png',
     title: 'about:values.itemTitleC',
     text: 'about:values.itemAboutC',
+    delayTime: '200',
   },
 ];
 
@@ -45,15 +47,13 @@ export default function Index() {
   const { t } = useTranslation();
 
   return (
-    <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
+    <div>
       <Layout>
         <HeroInternal>
-          <motion.div variants={stagger}>
-            <motion.h1 variants={fadeInDown} transition={{ delay: 0.2 }}>
-              {t('about:hero.title')}
-            </motion.h1>
+          <div>
+            <h1 data-aos="fade-down">{t('about:hero.title')}</h1>
             <div>
-              <motion.p variants={fadeInDown} transition={{ delay: 0.2 }}>
+              <p data-aos="fade-down" data-aos-delay="300">
                 {t('about:hero.paragraphA')}
                 <br />
                 <br />
@@ -75,21 +75,21 @@ export default function Index() {
                 >
                   {t('common:hereLabel')}
                 </a>
-              </motion.p>
+              </p>
             </div>
-          </motion.div>
+          </div>
         </HeroInternal>
         <section className="continue-hero-internal padding-section-aux invert-color ">
           <div className="">
-            <div>
+            <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back">
               <h2> {t('about:governance.title')}</h2>
             </div>
             <div className="container-sm two-block">
-              <div className="block-left">
+              <div className="block-left" data-aos="fade-down">
                 <p>{t('about:governance.paragraphLeftA')}</p>
                 <p>{t('about:governance.paragraphLeftB')}</p>
               </div>
-              <div className="block-right">
+              <div className="block-right" data-aos="fade-down">
                 <p>{t('about:governance.paragraphRightA')}</p>
                 <p>{t('about:governance.paragraphRightB')}</p>
               </div>
@@ -98,18 +98,20 @@ export default function Index() {
         </section>
         <section className="section-partners padding-section-aux">
           <div className="container">
-            <h2>{t('about:partners.title')}</h2>
+            <h2 data-aos="fade-zoom-in" data-aos-easing="ease-in-back">
+              {t('about:partners.title')}
+            </h2>
             <div className="container-sm">
               <ul>
                 {dataInfo.map((item, index) => {
                   return (
-                    <motion.li
+                    <li
                       key={index}
-                      variants={fadeInUp}
-                      transition={{ delay: 0.8 }}
+                      data-aos="fade-zoom-in"
+                      data-aos-easing="ease-in-back"
                     >
                       <img src={item} alt="The HOPR-Token NOW" />
-                    </motion.li>
+                    </li>
                   );
                 })}
               </ul>
@@ -136,17 +138,17 @@ export default function Index() {
         </section>
         <section className="section-HOPR-values padding-section-aux">
           <div className="container">
-            <div>
+            <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back">
               <h2>{t('about:values.title')}</h2>
             </div>
             <div className="element-value">
               {dataVALUES.map((e, index) => {
-                const { img, title, text } = e;
+                const { img, title, text, delayTime } = e;
                 return (
-                  <motion.div
+                  <div
                     key={index}
-                    variants={fadeInUp}
-                    transition={{ delay: 0.8 }}
+                    data-aos="fade-up"
+                    data-aos-delay={delayTime}
                     className="element-item"
                   >
                     <img src={img} alt={t(title)} />
@@ -154,7 +156,7 @@ export default function Index() {
                       <h4>{t(title)}</h4>
                       <p>{t(text)}</p>
                     </div>
-                  </motion.div>
+                  </div>
                 );
               })}
             </div>
@@ -219,7 +221,7 @@ export default function Index() {
           <ContactPlus />
         </section>
       </Layout>
-    </motion.div>
+    </div>
   );
 }
 
