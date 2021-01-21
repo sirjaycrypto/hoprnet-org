@@ -30,9 +30,9 @@ const Hero = forwardRef(
       if (window.matchMedia('screen and (min-width: 797px)').matches) {
         setVideoMobile(true);
       }
-      const elementHeig = theAreaBtn?.current?.clientHeight;
+      const elementHeight = theAreaBtn?.current?.clientHeight;
       const elementTop = theAreaBtn?.current?.scrollWidth;
-      const elementPlus = elementTop + elementHeig;
+      const elementPlus = elementTop + elementHeight;
       window.onscroll = function () {
         if (
           window.pageYOffset >= elementTop &&
