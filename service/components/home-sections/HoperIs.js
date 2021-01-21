@@ -98,7 +98,11 @@ export default function HoperIs() {
           })}
         </div>
 
-        <div className="container sub-title">
+        <div
+          className="container sub-title"
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+        >
           <h2>We Want You To Grow</h2>
         </div>
 

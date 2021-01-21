@@ -1,5 +1,6 @@
 .preSales-btn {
   display: flex;
+  transition: all 350ms ease-in-out;
   @include responsive(tablet) {
     flex-direction: column;
   }
@@ -96,12 +97,11 @@
   from {
     position: fixed;
     bottom: 0;
-    transform: translateY(100%);
+    transform: translateY(-100vh);
   }
   to{
     position: fixed;
     bottom: 0;
-   
     transform: translateY(-18%);
   }
 }

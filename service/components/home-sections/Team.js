@@ -8,6 +8,7 @@ export default function Team() {
           <h3>Team</h3>
         </div>
         <img
+          data-aos="fade-down"
           src="assets/icons/cards/team-card-with-blue-stroke.png"
           alt="Team"
         />

@@ -83,28 +83,47 @@ const Hero = forwardRef(
               ) : (
                 <>
                   <h4>{t('home:hero.subtitle')}</h4>
-
                   <Countdown />
-                  {showMsg ? (
-                    <AlertMsg showActiveMsg={() => showActiveMsg()} />
-                  ) : (
-                    <div
-                      ref={theAreaBtn}
-                      className={
-                        'preSales-btn ' +
-                        (btnPreSalesFollow ? 'nowFollowUs' : 'e')
-                      }
-                    >
-                      <div>
-                        <div onClick={() => showModalActive()} className="btn ">
-                          <span>{t('common:btn-comumnity')}</span>
-                        </div>
-                      </div>
+                  {modePreSales ? (
+                    <>
+                      {' '}
+                      {showMsg ? (
+                        <AlertMsg showActiveMsg={() => showActiveMsg()} />
+                      ) : (
+                        <div
+                          ref={theAreaBtn}
+                          className={
+                            'preSales-btn ' +
+                            (btnPreSalesFollow ? 'nowFollowUs' : ' ')
+                          }
+                        >
+                          <div>
+                            <div
+                              onClick={() => showModalActive()}
+                              className="btn "
+                            >
+                              <span>{t('common:btn-comumnity')}</span>
+                            </div>
+                          </div>
 
-                      <div>
-                        <div onClick={() => showActiveMsg()} className="btn ">
-                          <span>{t('common:btn-public')}</span>
+                          <div>
+                            <div
+                              onClick={() => showActiveMsg()}
+                              className="btn "
+                            >
+                              <span>{t('common:btn-public')}</span>
+                            </div>
+                          </div>
                         </div>
+                      )}
+                    </>
+                  ) : (
+                    <div>
+                      <div
+                        onClick={() => console.log('click')}
+                        className="btn-banner "
+                      >
+                        <span>{t('common:getHorpFull')}</span>
                       </div>
                     </div>
                   )}

@@ -18,7 +18,7 @@ import Footer from '../../components/molecules/footer';
 
 export default function Index() {
   const [visibleNow, setVisibleNow] = useState('');
-  const [modePreSales, setModePreSales] = useState(true);
+  const [modePreSales, setModePreSales] = useState(false);
 
   const btnMainPoint = useRef('');
 

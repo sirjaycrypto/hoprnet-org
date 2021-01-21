@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { stagger, fadeInUp } from '../../util/motionConfig';
+
 import useTranslation from 'next-translate/useTranslation';
 
 const dataInfo = [
@@ -26,13 +25,12 @@ export default function Partners() {
           <ul>
             {dataInfo.map((item, index) => {
               return (
-                <motion.li
+                <li
                   key={index}
-                  variants={fadeInUp}
-                  transition={{ delay: 0.8 }}
+                  data-aos="fade-down"
                 >
                   <img src={item} alt="The HOPR-Token NOW" />
-                </motion.li>
+                </li>
               );
             })}
           </ul>
