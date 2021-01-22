@@ -31,7 +31,9 @@ export default function Index() {
   const { t } = useTranslation();
 
   useEffect(() => {
-    if (isVisibleTokenRel) setVisibleNow(currentElementTokenRel.current.id);
+    if (isVisibleTokenRel) {
+      setVisibleNow(currentElementTokenRel.current.id);
+    }
     if (visibleNow === 'TOKEN-RELEASE') {
       setAnimateChart(true);
     }
@@ -42,6 +44,11 @@ export default function Index() {
   const showModalActive = () => {
     setShowModal(!showModal);
   };
+  console.log(btnFollow);
+  const activeModeFollowMain = () => {
+    srtBtnFollow(true);
+  };
+
   return (
     <Layout visibleNow={visibleNow}>
       {showModal && (
@@ -57,6 +64,7 @@ export default function Index() {
         setVisibleNow={setVisibleNow}
         modePreSales={modePreSales}
         changeModePreSale={() => changeModePreSale()}
+        activeModeFollowMain={() => activeModeFollowMain()}
       />
       <HomeHeadline />
       <section id="video-area" className="video-home ">
