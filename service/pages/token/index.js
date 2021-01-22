@@ -35,13 +35,7 @@ export default function Index() {
     }
     const theHeight = heroInfo?.current?.clientHeight;
     console.log(theHeight);
-    window.onscroll = function () {
-      // if (window.pageYOffset <= theHeight) {
-      //   console.log('estoy en el hero');
-      //   srtBtnFollow(false);
-      // }
-      // srtBtnFollow(true);
-    };
+ 
     console.log(btnFollow);
   }, [modePreSales]);
   const changeModePreSale = () => {

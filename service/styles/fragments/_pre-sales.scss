@@ -90,6 +90,11 @@
 }
 
 .nowFollowUs {
+  display: flex;
+  width: 100%;
+  left: 0;
+  align-items: center;
+  justify-content: center;
   z-index: 11;
   animation: aniFollowUs 1200ms ease-in-out forwards;
 }
@@ -108,4 +113,8 @@
 
 .helperSpaceBtn {
   height: 140px;
+}
+
+.auxScroll {
+  z-index: 6;
 }

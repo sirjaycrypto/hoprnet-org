@@ -90,7 +90,11 @@ const Hero = forwardRef(({ modePreSales, changeModePreSale }, ref) => {
                 <h4>{t('home:hero.subtitlePre')}</h4>
                 <Countdown />
                 {modePreSales ? (
-                  <div className="helperSpaceBtn">
+                  <div
+                    className={
+                      'helperSpaceBtn ' + (btnPreSalesFollow && 'auxScroll')
+                    }
+                  >
                     {showMsg ? (
                       <AlertMsg showActiveMsg={() => showActiveMsg()} />
                     ) : (
