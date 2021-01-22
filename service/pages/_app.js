@@ -19,8 +19,9 @@ export async function loadNamespaces(namespaces, lang) {
 }
 
 function MyApp({ Component, pageProps }) {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const router = useRouter();
+
   Router.onRouteChangeStart = () => {
     setLoading(!loading);
   };
@@ -37,6 +38,9 @@ function MyApp({ Component, pageProps }) {
   };
 
   useEffect(() => {
+    setTimeout(() => {
+      setLoading(!loading);
+    }, 1000);
     AOS.init({
       easing: 'ease-out-cubic',
       once: true,

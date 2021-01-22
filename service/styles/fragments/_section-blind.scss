@@ -144,6 +144,9 @@
     background: linear-gradient(90deg, #0000db 0%, #292941 100%);
     border-radius: 100px;
     height: fit-content;
+    span{
+      font-weight: bold;
+    }
     @include responsive(tablet) {
       padding: 0 1rem;
 
