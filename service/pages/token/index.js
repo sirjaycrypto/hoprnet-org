@@ -56,8 +56,6 @@ export default function Index() {
         ref={heroInfo}
         setVisibleNow={setVisibleNow}
         modePreSales={modePreSales}
-        mainBtnFollow={() => mainBtnFollow()}
-        mainNoBtnFollow={() => mainNoBtnFollow()}
         changeModePreSale={() => changeModePreSale()}
       />
       <HomeHeadline />

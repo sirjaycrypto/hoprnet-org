@@ -34,7 +34,7 @@ export default function ChooseLanguage() {
           {listLang.map((e, i) => {
             const { info, label } = e;
             return (
-              <Link href="/" locale={info} key={i}>
+              <Link href="/token" locale={info} key={i}>
                 <li
                   onClick={() => clickMenu()}
                   className={lang === info ? 'is-current' : ''}

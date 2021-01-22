@@ -21,7 +21,7 @@ export async function loadNamespaces(namespaces, lang) {
 function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
   const router = useRouter();
-
+  console.log(router);
   Router.onRouteChangeStart = () => {
     setLoading(!loading);
   };
