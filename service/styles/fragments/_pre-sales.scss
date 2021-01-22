@@ -55,6 +55,7 @@
   padding: 14px 24px;
   box-sizing: border-box;
   width: 64%;
+  margin: auto;
   position: relative;
   @include responsive(tablet) {
     width: 80%;
@@ -88,8 +89,7 @@
   }
 }
 
-
-.nowFollowUs{
+.nowFollowUs {
   z-index: 11;
   animation: aniFollowUs 1200ms ease-in-out forwards;
 }
@@ -99,9 +99,13 @@
     bottom: 0;
     transform: translateY(-100vh);
   }
-  to{
+  to {
     position: fixed;
     bottom: 0;
     transform: translateY(-18%);
   }
+}
+
+.helperSpaceBtn {
+  height: 140px;
 }

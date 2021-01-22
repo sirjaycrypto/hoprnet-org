@@ -42,6 +42,30 @@ const data = [
   },
   {
     link: '#',
+    img: '/assets/images/team/01_Reinhard_HOPR.jpg',
+    name: 'Reinhard Schmidt',
+    label: 'Graphic Designer',
+  },
+  {
+    link: '#',
+    img: '/assets/images/team/02_Simona_Fontanella.png',
+    name: 'Simona Fontanella',
+    label: 'Operations Manager',
+  },
+  {
+    link: '#',
+    img: '/assets/images/team/03_William_Richter.png',
+    name: 'William Richter',
+    label: 'Communication Coordinator',
+  },
+  {
+    link: '#',
+    img: '/assets/images/team/04_Menglu_Wang_NEW.png',
+    name: 'Menglu Wang ',
+    label: 'Chinese Community Manager',
+  },
+  {
+    link: '#',
     img: '/assets/images/team/the_wandering_editor.png',
     name: 'The Wandering Editor',
     label: 'Content Creator',

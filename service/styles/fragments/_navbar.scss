@@ -217,6 +217,14 @@ nav {
   position: relative;
 }
 
+.specialNav{
+  height: 54px;
+
+  @include responsive(tablet) {
+    height: 52px;
+  }
+}
+
 .add-scroll-menu {
   position: fixed;
   transition: all 350ms ease-in-out;

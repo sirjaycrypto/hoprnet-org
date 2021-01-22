@@ -18,11 +18,13 @@ export default function Navbar({ visibleNow }) {
   }
 
   function isTheToken() {
+    setAddStyle(true);
     return router.pathname === '/token';
   }
 
   useEffect(() => {
     isTheHome();
+    isTheToken();
     window.onscroll = function () {
       if (window.pageYOffset === 0) {
         setYouDown(false);
@@ -35,7 +37,7 @@ export default function Navbar({ visibleNow }) {
         }
       }
     };
-  }, [youDown]);
+  }, [youDown, isTheToken]);
 
   return (
     <>
@@ -44,11 +46,8 @@ export default function Navbar({ visibleNow }) {
           variants={fadeInDown}
           id="menu"
           className={
-            youDown
-              ? 'add-scroll-menu '
-              : '' || !addStyle
-              ? 'nav-style-no-home'
-              : ''
+            (youDown && 'add-scroll-menu ') ||
+            (addStyle ? 'specialNav ' : 'nav-style-no-home')
           }
           transition={{ delay: 0.8 }}
         >
