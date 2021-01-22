@@ -25,19 +25,17 @@ export default function Index() {
   const heroInfo = useRef('');
   const btnToFollow = useRef('');
   //false
-  const [animateChart, setAnimateChart] = useState(true);
+  const [isVisibleTokenRel, currentElementTokenRel] = useVisibility(0);
+  const [animateChart, setAnimateChart] = useState(false);
   const [btnFollow, srtBtnFollow] = useState(false);
   const { t } = useTranslation();
 
   useEffect(() => {
+    if (isVisibleTokenRel) setVisibleNow(currentElementTokenRel.current.id);
     if (visibleNow === 'TOKEN-RELEASE') {
       setAnimateChart(true);
     }
-    const theHeight = heroInfo?.current?.clientHeight;
-    console.log(theHeight);
- 
-    console.log(btnFollow);
-  }, [modePreSales]);
+  }, [isVisibleTokenRel, currentElementTokenRel]);
   const changeModePreSale = () => {
     setModePreSales(!modePreSales);
   };
@@ -74,7 +72,11 @@ export default function Index() {
       <HomeHardware setVisibleNow={setVisibleNow} />
       <HomeBacked setVisibleNow={setVisibleNow} />
       <Slide />
-      <HomeTokenReleas start={animateChart} setVisibleNow={setVisibleNow} />
+      <HomeTokenReleas
+        start={animateChart}
+        setVisibleNow={setVisibleNow}
+        ref={currentElementTokenRel}
+      />
       <section id="BANNER" className="banner-CTA">
         <div className="container">
           <h3>{t('home:banner.label')}</h3>

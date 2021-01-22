@@ -12,6 +12,7 @@ const Hero = forwardRef(({ modePreSales, changeModePreSale }, ref) => {
 
   const [btnPreSalesFollow, setBtnPreSalesFollow] = useState(false);
   const theAreaBtn = useRef('');
+  const area = useRef('');
 
   const { t } = useTranslation();
 
@@ -33,7 +34,10 @@ const Hero = forwardRef(({ modePreSales, changeModePreSale }, ref) => {
   };
   useEffect(() => {
     isPhone();
+    const theHeight = area?.current?.clientHeight;
+    console.log(theHeight);
 
+    console.log(area);
     const elementHeight = theAreaBtn?.current?.clientHeight;
     const elementTop = theAreaBtn?.current?.scrollWidth;
     const elementPlus = elementTop + elementHeight;
@@ -46,13 +50,15 @@ const Hero = forwardRef(({ modePreSales, changeModePreSale }, ref) => {
         setBtnPreSalesFollow(true);
       } else if (window.pageYOffset <= elementPlus) {
         setBtnPreSalesFollow(false);
+      } else if (window.pageYOffset <= theHeight) {
+        console.log('ssss');
       }
     };
   }, [modePreSales]);
 
   return (
     <>
-      <section ref={ref} className="section-hero">
+      <section ref={area} className="section-hero">
         <HeroInfo />
         <div onClick={() => changeModePreSale()} className="changeBtn-style">
           <p>Show Pre-sale</p>
