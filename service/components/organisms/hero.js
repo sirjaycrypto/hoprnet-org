@@ -10,6 +10,7 @@ const Hero = forwardRef(
     {
       thisBanner,
       modePreSales,
+      showModalActive,
       changeModePreSale,
       activeModeFollowMain,
       removeModeFollowMain,
@@ -18,17 +19,12 @@ const Hero = forwardRef(
   ) => {
     const [videoMobile, setVideoMobile] = useState(false);
     const [showMsg, setShowMsg] = useState(false);
-    const [showModal, setShowModal] = useState(false);
 
     const [btnPreSalesFollow, setBtnPreSalesFollow] = useState(false);
     const theAreaBtn = useRef('');
     const area = useRef('');
 
     const { t } = useTranslation();
-
-    const showModalActive = () => {
-      setShowModal(!showModal);
-    };
 
     const showActiveMsg = () => {
       window.scrollTo(0, 0);
@@ -67,7 +63,12 @@ const Hero = forwardRef(
           activeModeFollowMain();
         }
       };
-    }, [modePreSales, activeModeFollowMain, removeModeFollowMain]);
+    }, [
+      modePreSales,
+      activeModeFollowMain,
+      removeModeFollowMain,
+      showModalActive,
+    ]);
 
     return (
       <>
@@ -99,63 +100,52 @@ const Hero = forwardRef(
 
           <div className="container">
             <div className="text-wrapper">
-              {showModal ? (
-                <Modal
-                  showModal={showModal}
-                  showModalActive={() => showModalActive()}
-                />
-              ) : (
-                <>
-                  <h4>{t('home:hero.subtitlePre')}</h4>
-                  <Countdown />
-                  {modePreSales ? (
-                    <div
-                      className={
-                        'helperSpaceBtn ' + (btnPreSalesFollow && 'auxScroll')
-                      }
-                    >
-                      {showMsg ? (
-                        <AlertMsg showActiveMsg={() => showActiveMsg()} />
-                      ) : (
-                        <div
-                          ref={theAreaBtn}
-                          className={
-                            'preSales-btn ' +
-                            (btnPreSalesFollow && 'nowFollowUs')
-                          }
-                        >
-                          <div>
-                            <div
-                              onClick={() => showModalActive()}
-                              className="btn "
-                            >
-                              <span>{t('common:btn-comumnity')}</span>
-                            </div>
-                          </div>
-
-                          <div>
-                            <div
-                              onClick={() => showActiveMsg()}
-                              className="btn "
-                            >
-                              <span>{t('common:btn-public')}</span>
-                            </div>
+              <>
+                <h4>{t('home:hero.subtitlePre')}</h4>
+                <Countdown />
+                {modePreSales ? (
+                  <div
+                    className={
+                      'helperSpaceBtn ' + (btnPreSalesFollow && 'auxScroll')
+                    }
+                  >
+                    {showMsg ? (
+                      <AlertMsg showActiveMsg={() => showActiveMsg()} />
+                    ) : (
+                      <div
+                        ref={theAreaBtn}
+                        className={
+                          'preSales-btn ' + (btnPreSalesFollow && 'nowFollowUs')
+                        }
+                      >
+                        <div>
+                          <div
+                            onClick={() => showModalActive()}
+                            className="btn "
+                          >
+                            <span>{t('common:btn-comumnity')}</span>
                           </div>
                         </div>
-                      )}
-                    </div>
-                  ) : (
-                    <div>
-                      <div
-                        onClick={() => showModalActive()}
-                        className="btn-banner "
-                      >
-                        <span>{t('common:getHorpFull')}</span>
+
+                        <div>
+                          <div onClick={() => showActiveMsg()} className="btn ">
+                            <span>{t('common:btn-public')}</span>
+                          </div>
+                        </div>
                       </div>
+                    )}
+                  </div>
+                ) : (
+                  <div>
+                    <div
+                      onClick={() => showModalActive()}
+                      className="btn-banner "
+                    >
+                      <span>{t('common:getHorpFull')}</span>
                     </div>
-                  )}
-                </>
-              )}
+                  </div>
+                )}
+              </>
             </div>
           </div>
         </section>

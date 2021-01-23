@@ -1,3 +1,27 @@
+.no-show-Modal {
+  opacity: 0;
+  display: none;
+  transition: all 500ms;
+}
+.activar-menu {
+  animation: animateWelcomer 600ms ease-in-out forwards;
+}
+@keyframes animateWelcomer {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+  50% {
+    position: fixed;
+    z-index: 14;
+    display: block;
+  }
+  100% {
+    position: fixed;
+    z-index: 14;
+    opacity: 1;
+  }
+}
 
 .bg-modal {
   position: fixed;
@@ -43,6 +67,9 @@
       border-top-right-radius: 110px;
       border-bottom: 0;
     }
+  }
+  .main-modal {
+    text-align: center;
   }
   .area-label-modal {
     box-sizing: border-box;

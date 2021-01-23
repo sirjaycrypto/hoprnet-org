@@ -59,12 +59,7 @@ export default function Index() {
 
   return (
     <Layout visibleNow={visibleNow}>
-      {showModal && (
-        <Modal
-          showModal={showModal}
-          showModalActive={() => showModalActive()}
-        />
-      )}
+      <Modal showModal={showModal} showModalActive={() => showModalActive()} />
 
       <ChooseLanguage />
       <Hero
@@ -72,6 +67,7 @@ export default function Index() {
         setVisibleNow={setVisibleNow}
         modePreSales={modePreSales}
         thisBanner={thisBanner}
+        showModalActive={() => showModalActive()}
         changeModePreSale={() => changeModePreSale()}
         activeModeFollowMain={() => activeModeFollowMain()}
         removeModeFollowMain={() => removeModeFollowMain()}
