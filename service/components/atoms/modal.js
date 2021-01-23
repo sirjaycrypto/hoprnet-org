@@ -5,7 +5,11 @@ const Modal = forwardRef(({ showModal, showModalActive }, ref) => {
   const { t } = useTranslation();
 
   return (
-    <div className="bg-modal">
+    <div
+      className="bg-modal"
+      data-aos="fade-zoom-in"
+      data-aos-easing="ease-in-back"
+    >
       <div className="modal">
         <div className="hero-moda">
           <span></span>
