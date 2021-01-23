@@ -22,8 +22,11 @@ export default function Index() {
   const [visibleNow, setVisibleNow] = useState('');
   const [modePreSales, setModePreSales] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  //
+  const [thisBanner, setThisBanner] = useState('');
   const heroInfo = useRef('');
   const btnToFollow = useRef('');
+  const bannerArea = useRef('');
   //false
   const [isVisibleTokenRel, currentElementTokenRel] = useVisibility(0);
   const [animateChart, setAnimateChart] = useState(false);
@@ -37,6 +40,8 @@ export default function Index() {
     if (visibleNow === 'TOKEN-RELEASE') {
       setAnimateChart(true);
     }
+    const scrollByBanner = bannerArea.current.offsetTop;
+    setThisBanner(scrollByBanner);
   }, [isVisibleTokenRel, currentElementTokenRel]);
   const changeModePreSale = () => {
     setModePreSales(!modePreSales);
@@ -44,7 +49,7 @@ export default function Index() {
   const showModalActive = () => {
     setShowModal(!showModal);
   };
-  console.log(modePreSales);
+
   const activeModeFollowMain = () => {
     srtBtnFollow(true);
   };
@@ -66,6 +71,7 @@ export default function Index() {
         ref={heroInfo}
         setVisibleNow={setVisibleNow}
         modePreSales={modePreSales}
+        thisBanner={thisBanner}
         changeModePreSale={() => changeModePreSale()}
         activeModeFollowMain={() => activeModeFollowMain()}
         removeModeFollowMain={() => removeModeFollowMain()}
@@ -87,7 +93,7 @@ export default function Index() {
         setVisibleNow={setVisibleNow}
         ref={currentElementTokenRel}
       />
-      <section id="BANNER" className="banner-CTA">
+      <section id="BANNER" className="banner-CTA" ref={bannerArea}>
         <div className="container">
           <h3>{t('home:banner.label')}</h3>
         </div>

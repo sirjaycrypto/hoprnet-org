@@ -8,6 +8,7 @@ import HeroInfo from '../molecules/hero-info';
 const Hero = forwardRef(
   (
     {
+      thisBanner,
       modePreSales,
       changeModePreSale,
       activeModeFollowMain,
@@ -41,13 +42,13 @@ const Hero = forwardRef(
         setVideoMobile(true);
       }
     };
+
     useEffect(() => {
       isPhone();
       const theHeight = area?.current?.clientHeight;
       const elementHeight = theAreaBtn?.current?.clientHeight;
       const elementTop = theAreaBtn?.current?.scrollWidth;
       const elementPlus = elementTop + elementHeight;
-
       window.onscroll = function () {
         if (
           window.pageYOffset >= elementTop &&
@@ -56,10 +57,14 @@ const Hero = forwardRef(
           setBtnPreSalesFollow(true);
         } else if (window.pageYOffset <= elementPlus) {
           setBtnPreSalesFollow(false);
+        }
+        if (
+          window.pageYOffset >= thisBanner ||
+          window.pageYOffset <= theHeight
+        ) {
+          removeModeFollowMain();
         } else if (window.pageYOffset >= theHeight) {
           activeModeFollowMain();
-        } else {
-          removeModeFollowMain();
         }
       };
     }, [modePreSales, activeModeFollowMain, removeModeFollowMain]);
