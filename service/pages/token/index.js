@@ -92,7 +92,6 @@ export default function Index() {
           <h3>{t('home:banner.label')}</h3>
         </div>
         <div
-          // className={'btn-follow ' + (activeBtn ? 'modeFollow' : 'fixOnBanner')}
           className={!modePreSales ? (btnFollow ? 'nowFollowUs' : '') : ''}
           ref={btnToFollow}
         >
