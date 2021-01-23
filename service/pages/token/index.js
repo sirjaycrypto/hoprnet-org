@@ -44,9 +44,12 @@ export default function Index() {
   const showModalActive = () => {
     setShowModal(!showModal);
   };
-  console.log(btnFollow);
+  console.log(modePreSales);
   const activeModeFollowMain = () => {
     srtBtnFollow(true);
+  };
+  const removeModeFollowMain = () => {
+    srtBtnFollow(false);
   };
 
   return (
@@ -65,6 +68,7 @@ export default function Index() {
         modePreSales={modePreSales}
         changeModePreSale={() => changeModePreSale()}
         activeModeFollowMain={() => activeModeFollowMain()}
+        removeModeFollowMain={() => removeModeFollowMain()}
       />
       <HomeHeadline />
       <section id="video-area" className="video-home ">
@@ -89,9 +93,8 @@ export default function Index() {
         </div>
         <div
           // className={'btn-follow ' + (activeBtn ? 'modeFollow' : 'fixOnBanner')}
-          className={btnFollow ? 'nowFollowUs' : ''}
+          className={!modePreSales ? (btnFollow ? 'nowFollowUs' : '') : ''}
           ref={btnToFollow}
-          // ref={activeBtn ? btnMainPoint : null}
         >
           <div className="btn-banner" onClick={() => showModalActive()}>
             <span>{t('home:banner.button')}</span>

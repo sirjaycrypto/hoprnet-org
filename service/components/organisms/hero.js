@@ -6,7 +6,15 @@ import AlertMsg from '../atoms/alertMsg';
 import HeroInfo from '../molecules/hero-info';
 
 const Hero = forwardRef(
-  ({ modePreSales, changeModePreSale, activeModeFollowMain }, ref) => {
+  (
+    {
+      modePreSales,
+      changeModePreSale,
+      activeModeFollowMain,
+      removeModeFollowMain,
+    },
+    ref
+  ) => {
     const [videoMobile, setVideoMobile] = useState(false);
     const [showMsg, setShowMsg] = useState(false);
     const [showModal, setShowModal] = useState(false);
@@ -36,9 +44,6 @@ const Hero = forwardRef(
     useEffect(() => {
       isPhone();
       const theHeight = area?.current?.clientHeight;
-      console.log(theHeight);
-
-      console.log(area);
       const elementHeight = theAreaBtn?.current?.clientHeight;
       const elementTop = theAreaBtn?.current?.scrollWidth;
       const elementPlus = elementTop + elementHeight;
@@ -51,11 +56,13 @@ const Hero = forwardRef(
           setBtnPreSalesFollow(true);
         } else if (window.pageYOffset <= elementPlus) {
           setBtnPreSalesFollow(false);
-        } else if (window.pageYOffset <= theHeight) {
+        } else if (window.pageYOffset >= theHeight) {
           activeModeFollowMain();
+        } else {
+          removeModeFollowMain();
         }
       };
-    }, [modePreSales]);
+    }, [modePreSales, activeModeFollowMain, removeModeFollowMain]);
 
     return (
       <>
