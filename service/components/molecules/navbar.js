@@ -13,17 +13,11 @@ export default function Navbar({ visibleNow }) {
   const [activaMenu, setActivaMenu] = useState(false);
   const router = useRouter();
 
-  function isTheHome() {
-    setAddStyle(router.pathname === '/');
-  }
-
   function isTheToken() {
-    setAddStyle(true);
     return router.pathname === '/token';
   }
 
   useEffect(() => {
-    isTheHome();
     isTheToken();
     window.onscroll = function () {
       if (window.pageYOffset === 0) {
