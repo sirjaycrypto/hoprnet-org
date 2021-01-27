@@ -45,7 +45,7 @@
       }
       .help-box {
         margin: 30px auto 0 auto;
-        width: 60%;
+        width: 70%;
 
         @include responsive(tablet) {
           width: 80%;
@@ -80,17 +80,19 @@
       }
       p {
         font-size: 25px;
-        line-height: 25px;
+        line-height: 37px;
         text-align: center;
         letter-spacing: 0.166667px;
+
         @include responsive(tablet) {
           font-size: 16px;
-          line-height: 20px;
+          line-height: 30px;
           letter-spacing: 0.133333px;
         }
+
         @include responsive(phone) {
           font-size: 16px;
-          line-height: 20px;
+          line-height: 30px;
           letter-spacing: 0.133333px;
         }
       }
