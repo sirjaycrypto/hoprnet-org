@@ -103,14 +103,9 @@ section {
   }
 }
 
-//
 .padding-section-aux {
   padding-top: 50px;
   padding-bottom: 50px;
-  @include responsive(tablet) {
-    padding-top: 24px;
-    padding-bottom: 24px;
-  }
 }
 
 .container-char {
