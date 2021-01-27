@@ -1,13 +1,19 @@
 .section-token-fea {
   background: $hopr_yellow;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
   h2 {
     font-size: 60px;
     font-weight: 400;
-    margin-bottom: 4rem;
+    margin-top: 0;
+    margin-bottom: 50px;
     color: $hopr_grey;
+
     @include responsive(tablet) {
       font-size: 60px;
     }
+
     @include responsive(phone) {
       font-size: 30px;
     }
@@ -17,29 +23,40 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+
     .item {
-      width: 33%;
-      padding: 0.5em;
       box-sizing: border-box;
+      padding: 0 0.5em;
+      width: 33%;
+
       @include responsive(tablet) {
+        margin: 0 0 50px 0;
+        width: 50%;
+      }
+
+      @include responsive(phone) {
         width: 100%;
-        margin: 2em 0;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
       }
     }
+
+    > .item {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
     .icon-toke-show {
-      position: relative;
-      width: 114px;
-      height: 114px;
       display: flex;
+      height: 114px;
       justify-content: center;
       margin-bottom: 0;
+      position: relative;
+      width: 114px;
+
       @include responsive(tablet) {
         margin: auto;
       }
- 
+
       img {
         z-index: 1;
         width: 100%;
