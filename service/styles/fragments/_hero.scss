@@ -1,13 +1,13 @@
 .section-hero {
-  width: 100%;
-  height: 100vh;
-  //height: calc(100vh - 54px);
-  display: flex;
   align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
+  display: flex;
   flex-direction: column;
+  height: calc(100vh - 54px);
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
   @include responsive(tablet) {
     height: calc(100vh - 51px);
   }
