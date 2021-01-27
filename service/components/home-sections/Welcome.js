@@ -41,7 +41,7 @@ export default function Welcome({ welcomeAnimate }) {
             <a>
               <img src="/assets/images/welcomeLeft.png" alt="HOPR Token-SALE" />
               <div className="text-area">
-                <h2>HOPR Token-SALE </h2>
+                <h2>HOPR TOKEN LAUNCH</h2>
                 <Countdown />
               </div>
             </a>
