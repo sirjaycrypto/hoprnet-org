@@ -207,7 +207,7 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
             max: 1000000000,
             min: 0.0,
             stepSize: 250000000,
-            
+
             callback: function (value) {
               return makeFriendly(value);
             },
