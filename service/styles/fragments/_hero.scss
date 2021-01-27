@@ -122,27 +122,6 @@
   font-size: 14px;
 }
 
-.display-desktop {
-  display: flex;
-  @include responsive(tablet) {
-    display: none;
-  }
-}
-
-.display-tablet {
-  display: none;
-  @include responsive(tablet) {
-    display: flex;
-  }
-}
-
-.display-phone {
-  display: none;
-  @include responsive(phone) {
-    display: flex;
-  }
-}
-
 #clockDiv {
   align-items: center;
   display: flex;

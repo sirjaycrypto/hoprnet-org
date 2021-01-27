@@ -34,7 +34,7 @@ const Hero = forwardRef(
     };
 
     const isPhone = () => {
-      if (window.matchMedia('screen and (min-width: 797px)').matches) {
+      if (window.innerWidth <= 768) {
         setVideoMobile(true);
       }
     };
@@ -45,6 +45,7 @@ const Hero = forwardRef(
       const elementHeight = theAreaBtn?.current?.clientHeight;
       const elementTop = theAreaBtn?.current?.scrollWidth;
       const elementPlus = elementTop + elementHeight;
+
       window.onscroll = function () {
         if (
           window.pageYOffset >= elementTop &&
@@ -84,8 +85,8 @@ const Hero = forwardRef(
               loop
               muted
               playsInline
-              className="background-video "
-              src="/assets/video/hero.mp4"
+              className="background-video"
+              src="/assets/video/hopr_Drone_Mobile.mp4"
             ></video>
           ) : (
             <video
@@ -93,8 +94,8 @@ const Hero = forwardRef(
               loop
               muted
               playsInline
-              className="background-video display-phone"
-              src="/assets/video/hopr_Drone_Mobile.mp4"
+              className="background-video"
+              src="/assets/video/hero.mp4"
             ></video>
           )}
 
