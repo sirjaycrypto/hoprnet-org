@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 
 import Layout from '../../components/organisms/layout';
@@ -45,6 +45,21 @@ const dataVALUES = [
 
 export default function Index() {
   const { t } = useTranslation();
+
+  useEffect(() => {
+    const location = document.location.href;
+
+    if (location.indexOf('#') > -1) {
+      const id = location.substr(location.indexOf('#') + 1, location.length),
+        element = document.getElementById(id);
+
+      if (element) {
+        setTimeout(function () {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 3000);
+      }
+    }
+  }, []);
 
   return (
     <div>
