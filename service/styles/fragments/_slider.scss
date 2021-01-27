@@ -17,7 +17,50 @@
     @include responsive(tablet) {
       width: 100%;
     }
+
+    .slick-slide div {
+      outline: none !important;
+    }
+
+    .slick-dots {
+      li {
+        height: auto;
+        width: auto;
+
+        button {
+          &:before {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            content: "";
+            text-align: center;
+            border-radius: 50%;
+            opacity: 1;
+            border: 3px solid #fff;
+            background: transparent;
+          }
+        }
+
+        &.slick-active {
+          button {
+            &:before {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 20px;
+              height: 20px;
+              content: "";
+              text-align: center;
+              border-radius: 50%;
+              opacity: 1;
+              background: #fff;
+            }
+          }
+        }
+      }
+    }
   }
+
   p {
     padding: 0;
     margin: 0;
@@ -53,45 +96,6 @@
       line-height: 30px;
       text-align: center;
       letter-spacing: 0.2px;
-    }
-  }
-}
-
-.slick-slide div {
-  outline: none !important;
-}
-
-.slick-dots {
-  li {
-    button {
-      &:before {
-        position: absolute;
-        width: 14px;
-        height: 14px;
-        content: "";
-        text-align: center;
-        border-radius: 100px;
-        opacity: 1;
-        border: 3px solid #fff;
-        background: transparent;
-      }
-    }
-
-    &.slick-active {
-      button {
-        &:before {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 14px;
-          height: 14px;
-          content: "";
-          text-align: center;
-          border-radius: 100px;
-          opacity: 1;
-          background: #fff;
-        }
-      }
     }
   }
 }
