@@ -144,22 +144,6 @@ section {
   }
 }
 
-.container-chart {
-  width: 100%;
-  margin: auto;
-
-  .help-scroll {
-    height: 100%;
-    width: auto;
-    padding-bottom: 50px;
-  }
-
-  @include responsive(tablet) {
-    position: relative;
-    overflow: scroll;
-  }
-}
-
 .center-help {
   width: 470px;
   margin: auto;

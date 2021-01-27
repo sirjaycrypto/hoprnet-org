@@ -207,6 +207,7 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
             max: 1000000000,
             min: 0.0,
             stepSize: 250000000,
+            
             callback: function (value) {
               return makeFriendly(value);
             },
@@ -255,66 +256,65 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
     labels: dataDate,
     datasets: start
       ? [
-          {
-            label: t('home:graphic.public'),
-            data: cleanData(dataPublicSale),
-            backgroundColor: ['#FEFDAF'],
-            pointBackgroundColor: '#FEFDAF',
-            borderColor: '#fff',
-            borderWidth: 2,
-            pointBorderWidth: 0,
-            lineTension: 0,
-          },
-          {
-            label: t('home:graphic.cover'),
-            data: cleanData(dataCoverTraffic),
-            backgroundColor: ['#FEFDAF'],
-            pointBackgroundColor: '#FEFDAF',
-            borderWidth: 0,
-            pointBorderWidth: 0,
-            lineTension: 0,
-          },
-          {
-            label: t('home:graphic.bounties'),
-            data: cleanData(dataBounties),
-            backgroundColor: ['#C0F3FF'],
-            pointBackgroundColor: '#C0F3FF',
-            borderColor: '#fff',
-            borderWidth: 2,
-            pointBorderWidth: 0,
-            lineTension: 0,
-          },
-          {
-            label: t('home:graphic.pre'),
-            data: cleanData(dataEarlyTokenBuyers),
-            backgroundColor: ['#4B79B4'],
-            pointBackgroundColor: '#4B79B4',
-            borderColor: '#fff',
-            borderWidth: 2,
-            pointBorderWidth: 0,
-            lineTension: 0,
-          },
-          {
-            label: t('home:graphic.team'),
-            data: cleanData(dataTeamNAdvisors),
-            backgroundColor: ['#1423C1'],
-            pointBackgroundColor: '#1423C1',
-            borderColor: '#fff',
-            borderWidth: 2,
-            pointBorderWidth: 0,
-            lineTension: 0,
-          },
-          {
-            label: t('home:graphic.treasury'),
-            data: cleanData(dataTreasury),
-            backgroundColor: ['#060D62'],
-            pointBackgroundColor: '#060D62',
-            borderColor: '#fff',
-            borderWidth: 2,
-            pointBorderWidth: 0,
-            lineTension: 0,
-          },
-        ]
+        {
+          label: t('home:graphic.public'),
+          data: cleanData(dataPublicSale),
+          backgroundColor: ['#FEFDAF'],
+          pointBackgroundColor: '#FEFDAF',
+          borderColor: '#fff',
+          borderWidth: 2,
+          pointBorderWidth: 0,
+          lineTension: 0,
+        },
+        {
+          label: t('home:graphic.cover'),
+          data: cleanData(dataCoverTraffic),
+          backgroundColor: ['#FEFDAF'],
+          pointBackgroundColor: '#FEFDAF',
+          borderWidth: 0,
+          pointBorderWidth: 0,
+          lineTension: 0,
+        },
+        {
+          label: t('home:graphic.bounties'),
+          data: cleanData(dataBounties),
+          backgroundColor: ['#C0F3FF'],
+          pointBackgroundColor: '#C0F3FF',
+          borderColor: '#fff',
+          borderWidth: 2,
+          pointBorderWidth: 0,
+          lineTension: 0,
+        },
+        {
+          label: t('home:graphic.pre'),
+          data: cleanData(dataEarlyTokenBuyers),
+          backgroundColor: ['#4B79B4'],
+          pointBackgroundColor: '#4B79B4',
+          borderColor: '#fff',
+          borderWidth: 2,
+          pointBorderWidth: 0,
+          lineTension: 0,
+        },
+        {
+          label: t('home:graphic.team'),
+          data: cleanData(dataTeamNAdvisors),
+          backgroundColor: ['#1423C1'],
+          pointBackgroundColor: '#1423C1',
+          borderColor: '#fff',
+          borderWidth: 2,
+          pointBorderWidth: 0,
+          lineTension: 0,
+        },
+        {
+          label: t('home:graphic.treasury'),
+          data: cleanData(dataTreasury),
+          backgroundColor: ['#060D62'],
+          pointBackgroundColor: '#060D62',
+          borderColor: '#fff',
+          borderWidth: 2,
+          pointBorderWidth: 0,
+          lineTension: 0,
+        }]
       : '',
   };
 
@@ -349,7 +349,6 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
             <div>
               <Pie data={data} width={100} height={420} options={options} />
             </div>
-            <p></p>
           </div>
           <div>
             <h3>{t('home:token.thirdSubTitle')} (M)</h3>

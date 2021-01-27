@@ -1,6 +1,7 @@
 .section-roadMap {
   text-align: center;
   margin-bottom: 120px;
+
   h2 {
     color: $hopr_grey;
     font-size: 60px;
@@ -47,6 +48,16 @@
   }
   .links-exp{
     color:  #1100b4;
+  }
+
+  .container {
+    > .road-map-element {
+      &:last-child {
+        .area-info {
+          padding-bottom: 0;
+        }
+      }
+    }
   }
 }
 

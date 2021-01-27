@@ -1,61 +1,86 @@
 .section-token-release {
   margin-bottom: 100px;
+
+  @include responsive(tablet) {
+    margin-bottom: 50px;
+  }
+
   h2 {
+    color: $hopr_grey;
     font-size: 60px;
     font-weight: 400;
-
-    color: $hopr_grey;
+    margin: 120px 0;
     text-align: center;
-    margin: 74px 0;
+
     @include responsive(tablet) {
-      justify-content: space-between;
       margin: 50px 0;
     }
+
     @include responsive(phone) {
       font-size: 30px;
+      margin: 24px 0;
     }
   }
+
   h3 {
-    font-weight: bold;
+    color: $hopr_greySp;
     font-size: 25px;
-    line-height: 37px;
-
+    font-weight: bold;
     letter-spacing: 0.208333px;
-
+    line-height: 37px;
+    margin-bottom: 50px;
+    margin-top: 100px;
     text-align: center;
 
-    color: $hopr_greySp;
-    margin-top: 100px;
-    margin-bottom: 50px;
     @include responsive(tablet) {
       font-size: 30px;
-      line-height: 32px;
       letter-spacing: 0.5px;
-      margin-bottom: 50px;
-    }
-    @include responsive(phone) {
-      font-size: 18px;
       line-height: 32px;
       margin-bottom: 24px;
-      text-align: center;
+      margin-top: 50px;
+    }
+
+    @include responsive(phone) {
+      font-size: 18px;
       letter-spacing: 0.25px;
+      line-height: 32px;
+      text-align: center;
     }
   }
+
   p {
-    font-size: 25px;
-    line-height: 37px;
-    letter-spacing: 0.208333px;
-    margin-bottom: 50px;
     color: $hopr_greySp;
+    font-size: 25px;
+    letter-spacing: 0.208333px;
+    line-height: 37px;
+    margin-bottom: 50px;
+    margin-top: 0;
+
     @include responsive(tablet) {
       font-size: 20px;
-      line-height: 33px;
       letter-spacing: 0.166667px;
+      line-height: 33px;
     }
+
     @include responsive(phone) {
       font-size: 16px;
-      line-height: 22px;
       letter-spacing: 0.133333px;
+      line-height: 22px;
+    }
+  }
+
+  .container-chart {
+    width: 100%;
+    margin: auto;
+
+    .help-scroll {
+      height: 100%;
+      width: auto;
+    }
+
+    @include responsive(tablet) {
+      position: relative;
+      overflow: scroll;
     }
   }
 }
@@ -63,24 +88,30 @@
 .table-info {
   width: 50%;
   margin: auto;
+
   @include responsive(tablet) {
+    width: 78%;
+  }
+
+  @include responsive(phone) {
     width: 100%;
   }
+
   .container-table {
     box-shadow: 1px 1px 41px -13px rgba(0, 0, 0, 0.34);
     border-radius: 16px;
     overflow: hidden;
-    @include responsive(tablet) {
-      margin-bottom: 50px;
-    }
+
     .title {
       background: $hopr_bright_blue;
       padding: 0.7em;
+
       h4 {
         margin: 0;
         color: #fff;
       }
     }
+
     .list-table {
       ul {
         li {
@@ -101,11 +132,12 @@
 }
 
 .text-info-char-area {
-  font-size: 14px;
-  line-height: 18px;
-  letter-spacing: 0.116667px;
   color: #414141;
+  font-size: 14px;
+  letter-spacing: 0.116667px;
+  line-height: 18px;
   margin-top: 100px;
+
   @include responsive(tablet) {
     margin-top: 50px;
   }

@@ -90,9 +90,7 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
   return (
     <>
       <section ref={ref} id="roadMap" className="section-roadMap">
-        <div>
-          <h2>{t('home:roadMap.title')}</h2>
-        </div>
+        <h2>{t('home:roadMap.title')}</h2>
         <div className="container">
           {data.map((e, index) => {
             const {
