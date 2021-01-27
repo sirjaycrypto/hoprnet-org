@@ -144,29 +144,29 @@
 }
 
 #clockDiv {
-  font-size: 120px;
-  line-height: 103px;
-  display: flex;
   align-items: center;
-  text-align: center;
-  letter-spacing: 0.833333px;
+  display: flex;
+  font-size: 120px;
   font-weight: normal;
-  margin-top: 0;
+  letter-spacing: 0.833333px;
+  line-height: 103px;
   margin-bottom: 50px;
-  @include responsive(tablet) {
-    font-size: 89px;
-    line-height: 112px;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.9px;
-  }
-  @include responsive(phone) {
-    margin-top: 24px;
-    margin-bottom: 24px;
-    font-size: 50px;
-    line-height: 64px;
+  margin-top: 0;
+  text-align: center;
 
+  @include responsive(tablet) {
+    align-items: center;
+    font-size: 89px;
+    letter-spacing: 0.9px;
+    line-height: 112px;
+    text-align: center;
+  }
+
+  @include responsive(phone) {
+    font-size: 50px;
     letter-spacing: 0.416667px;
+    line-height: 64px;
+    margin-bottom: 24px;
   }
 }
 
