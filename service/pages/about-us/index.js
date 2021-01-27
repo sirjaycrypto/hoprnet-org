@@ -164,7 +164,7 @@ export default function Index() {
             </div>
           </div>
         </section>
-        <section className="section-board-association continue-yellow padding-section-aux invert-color">
+        <section id="team-section" className="section-board-association continue-yellow padding-section-aux invert-color">
           <div>
             <h2>{t('about:association.title')}</h2>
           </div>
