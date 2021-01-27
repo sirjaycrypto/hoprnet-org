@@ -62,7 +62,7 @@ nav {
   top: 0;
   justify-content: center;
   background: $hopr_yellow;
-  height: 90vh;
+  height: 100vh;
   box-sizing: border-box;
   overflow: hidden;
   position: fixed;
@@ -145,70 +145,69 @@ nav {
 }
 
 .icon-menu {
+  cursor: pointer;
   display: none;
+  height: 24px;
+  position: relative;
+  width: 24px;
+
   @include responsive(tablet) {
     display: block;
   }
-  right: 24px;
-  position: relative;
-  label {
-    width: 24px;
-    height: 3px;
+
+  span {
     background-color: $hopr_grey;
+    height: 3px;
     position: absolute;
-    cursor: pointer;
+    top: 10px;
+    transition: all 0.5s cubic-bezier(1, 0, 0, 1);
+    width: 24px;
 
     &::before,
     &::after {
-      content: '';
-      width: 24px;
-      height: 3px;
       background-color: $hopr_grey;
-      position: absolute;
-      display: block;
       color: white;
+      content: '';
+      display: block;
+      height: 3px;
+      position: absolute;
       transition: all 0.6s cubic-bezier(1, 0, 0, 1);
+      width: 24px;
     }
 
     &::before {
-      top: -250%;
       left: 0%;
-      transform: rotateZ(0deg);
+      top: -250%;
       transform-origin: left top;
+      transform: rotateZ(0deg);
     }
 
     &::after {
       bottom: -250%;
       left: 0%;
-      transform: rotateZ(0deg);
       transform-origin: left bottom;
+      transform: rotateZ(0deg);
     }
   }
 
-  #toggle:checked ~ label::before {
-    content: '';
-    background-color: $hopr_black;
-    transform: rotateZ(41deg);
-    left: 10%;
-  }
+  &.open {
+    span {
+      background-color: white;
 
-  #toggle:checked ~ label::after {
-    content: '';
-    background-color: $hopr_black;
-    transform: rotateZ(-41deg);
-    left: 10%;
-  }
+      &::before {
+        background-color: $hopr_black;
+        content: '';
+        left: 10%;
+        transform: rotateZ(41deg);
+      }
 
-  #toggle:checked ~ label {
-    background-color: white;
-  }
-
-  #toggle ~ label {
-    transition: all 0.5s cubic-bezier(1, 0, 0, 1);
-  }
-
-  input {
-    display: none;
+      &::after {
+        background-color: $hopr_black;
+        content: '';
+        left: 10%;
+        transform: rotateZ(-41deg);
+      }
+    }
   }
 }
 

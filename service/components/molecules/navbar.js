@@ -23,7 +23,6 @@ export default function Navbar({ visibleNow }) {
       if (window.pageYOffset === 0) {
         setYouDown(false);
       } else {
-        window.toggle.checked = false;
         setYouDown(true);
         setActivaMenu(false);
         if (isTheToken()) {
@@ -55,13 +54,8 @@ export default function Navbar({ visibleNow }) {
                 />
               </Link>
             </div>
-            <div className={'icon-menu ' + (activaMenu ? 'open' : '')}>
-              <input
-                type="checkbox"
-                id="toggle"
-                onClick={() => setActivaMenu(!activaMenu)}
-              />
-              <label htmlFor="toggle"></label>
+            <div onClick={() => setActivaMenu(!activaMenu)} className={'icon-menu ' + (activaMenu ? 'open' : '')}>
+              <span></span>
             </div>
             <ItemsMenu />
           </div>
