@@ -1,16 +1,32 @@
 .section-how-work {
+  padding-top: 120px;
+  padding-bottom: 0;
+
+  @include responsive(tablet) {
+    padding-top: 50px;
+  }
+
+  @include responsive(phone) {
+    padding-top: 24px;
+  }
 
   h2 {
+    color: $hopr_greySp;
     font-size: 60px;
     font-weight: 400;
-    margin: 0;
-    color: $hopr_greySp;
+    margin: 0 0 120px 0;
+
+    @include responsive(tablet) {
+      margin-bottom: 50px;
+    }
+
     @include responsive(phone) {
       font-size: 30px;
       font-style: normal;
       font-weight: 400;
-      line-height: 32px;
       letter-spacing: 0.25px;
+      line-height: 32px;
+      margin-bottom: 24px;
       text-align: center;
     }
   }
@@ -20,30 +36,10 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin: 80px 0;
-  @include responsive(tablet) {
-    margin: 50px 0;
-  }
-  @include responsive(phone) {
-  }
-  &:first-child,
-  &:last-child {
-    margin: 0em auto;
-    .info-cont {
-      @include responsive(tablet) {
-        padding: 0;
-      }
-    }
-  }
-  &:first-child {
-    margin-top: 120px;
-    @include responsive(tablet) {
-      margin-top: 50px;
-    }
-  }
+  margin: 0 0 80px 0;
+
   &:last-child {
     margin-bottom: 0;
-
   }
 
   &:nth-child(2) {
@@ -57,6 +53,7 @@
         padding: 0;
       }
     }
+
     .info-cont {
       padding: 0 0 0 2rem;
       @include responsive(tablet) {
@@ -64,14 +61,25 @@
       }
     }
   }
+
   & > div {
+    line-height: 0;
+    margin-bottom: 0;
     width: 50%;
   }
+
   @include responsive(tablet) {
     flex-direction: column-reverse;
+    margin: 0 auto 50px auto;
+    width: 90%;
+
     & > div {
       width: 100%;
     }
+  }
+
+  @include responsive(phone) {
+    width: 100%;
   }
 
   h3,
@@ -86,14 +94,16 @@
     line-height: 45px;
     letter-spacing: 0.25px;
     margin-bottom: 24px;
+
     @include responsive(tablet) {
       margin: 18px 0;
       font-size: 24px;
       font-style: normal;
       font-weight: 700;
-      line-height: 77px;
+      line-height: 24px;
       letter-spacing: 0.20000000298023224px;
     }
+
     @include responsive(phone) {
       margin-bottom: 18px;
       font-size: 18px;
