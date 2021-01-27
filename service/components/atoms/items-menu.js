@@ -36,6 +36,10 @@ export default function ItemsMenu() {
     },
   ];
 
+  const isTheToken = () => {
+    return router.pathname === '/token';
+  };
+
   const clickMenu = () => {
     if (flag === false) {
       setTranslateY(0);
@@ -59,21 +63,23 @@ export default function ItemsMenu() {
             </Link>
           );
         })}
-        <ul className="list-lang-sm">
-          {listLang.map((e, i) => {
-            const { info } = e;
-            return (
-              <Link href="/" locale={info} key={i}>
-                <li
-                  onClick={() => clickMenu()}
-                  className={lang === info ? 'is-current' : ''}
-                >
-                  <a>{info}</a>
-                </li>
-              </Link>
-            );
-          })}
-        </ul>
+        {isTheToken() && (
+          <ul className="list-lang-sm">
+            {listLang.map((e, i) => {
+              const { info } = e;
+              return (
+                <Link href="/" locale={info} key={i}>
+                  <li
+                    onClick={() => clickMenu()}
+                    className={lang === info ? 'is-current' : ''}
+                  >
+                    <a>{info}</a>
+                  </li>
+                </Link>
+              );
+            })}
+          </ul>
+        )}
       </div>
     </>
   );

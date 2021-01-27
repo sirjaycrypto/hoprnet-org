@@ -13,9 +13,9 @@ export default function Navbar({ visibleNow }) {
   const [activaMenu, setActivaMenu] = useState(false);
   const router = useRouter();
 
-  function isTheToken() {
+  const isTheToken = () => {
     return router.pathname === '/token';
-  }
+  };
 
   useEffect(() => {
     isTheToken();
@@ -40,7 +40,7 @@ export default function Navbar({ visibleNow }) {
           id="menu"
           className={
             (youDown && 'add-scroll-menu ') ||
-            (addStyle ? 'specialNav ' : 'nav-style-no-home')
+            ('nav-style-no-home')
           }
           transition={{ delay: 0.8 }}
         >
