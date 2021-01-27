@@ -1,6 +1,6 @@
 .section-blindText {
   background: $hopr_yellow;
-  padding-bottom: 50px;
+
   h2 {
     text-align: center;
     margin-top: 120px;
@@ -161,14 +161,18 @@
 }
 
 .helper-test {
-  padding: 2rem 0;
-  margin: 2rem 0 0;
-  width: 100% !important;
-  flex-direction: column;
-  display: flex;
   align-items: center;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  padding: 2rem 0;
   position: relative;
+  width: 100%;
+
+  @include responsive(tablet) {
+    margin: 0 auto;
+    width: 90%;
+  }
 
   .wrapper-test {
     z-index: 4;
@@ -178,11 +182,7 @@
     font-size: 45px;
     line-height: 57px;
     margin-top: 0;
-    margin-bottom: 21px;
-
-    &:last-child {
-      margin-bottom: 80px;
-    }
+    margin-bottom: 24px;
 
     &.special {
       font-size: 30px;
@@ -199,9 +199,6 @@
     @include responsive(tablet) {
       font-size: 28px;
       line-height: 38px;
-      &:last-child {
-        margin-bottom: 50px;
-      }
     }
 
     @include responsive(phone) {
@@ -210,8 +207,7 @@
       margin-bottom: 24px;
     }
 
-    &:first-child {
-      padding-bottom: 0;
+    &:last-child {
       margin-bottom: 0;
     }
   }
@@ -284,9 +280,13 @@
   background: #fff;
   box-shadow: 2px 2px 41px -14px rgba(0, 0, 0, 0.5);
   position: relative;
+
   @include responsive(tablet) {
     flex-direction: column;
+    margin: 0 auto;
+    width: 75%;
   }
+
   & > div {
     width: 50%;
     @include responsive(tablet) {
@@ -296,7 +296,12 @@
   .the-balancer {
     box-shadow: 4px 0px 10px 0px rgba(0, 0, 0, 0.3);
     z-index: 1;
+
+    @include responsive(tablet) {
+      box-shadow: none;
+    }
   }
+
   .the-char-balancer {
     height: 100%;
     z-index: 0;
@@ -306,6 +311,7 @@
     justify-content: center;
     margin: 87px 52px 0 52px;
     box-sizing: border-box;
+
     @include responsive(tablet) {
       margin: 24px 52px;
     }
@@ -341,15 +347,9 @@
 }
 
 .help-area-padding {
-  margin: 120px auto;
+  margin: 100px auto;
+
   @include responsive(phone) {
     margin: 50px auto;
-  }
-  .wrapper-test {
-    p {
-      &:first-child {
-        margin-bottom: 24px;
-      }
-    }
   }
 }
