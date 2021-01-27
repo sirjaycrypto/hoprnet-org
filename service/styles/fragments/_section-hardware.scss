@@ -4,6 +4,7 @@
   p {
     color: $hopr_greySp;
   }
+
   h2 {
     font-size: 60px;
     font-weight: 400;
@@ -11,25 +12,31 @@
     letter-spacing: 0.5px;
     text-align: center;
     margin: 120px 0;
+
     @include responsive(tablet) {
       margin: 50px 0;
     }
+
     @include responsive(phone) {
       font-size: 30px;
       font-style: normal;
       font-weight: 400;
-      line-height: 32px;
       letter-spacing: 0.25px;
+      line-height: 32px;
+      margin: 74px 0 24px 0;
       text-align: center;
     }
   }
+
   p {
-    margin-top: 0;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 33px;
     letter-spacing: 0.15000000596046448px;
+    line-height: 33px;
+    margin-bottom: 0;
+    margin-top: 0;
+
     @include responsive(tablet) {
       font-size: 16px;
       font-style: normal;
@@ -46,6 +53,7 @@
       text-align: left;
     }
   }
+
   h3 {
     margin-top: 0;
     color: $hopr_greySp;
@@ -54,30 +62,36 @@
     line-height: 45px;
     letter-spacing: 0.25px;
     margin-bottom: 24px;
+
     @include responsive(tablet) {
-      margin-bottom: 18px;
       font-size: 24px;
       font-style: normal;
       font-weight: 700;
-      line-height: 77px;
       letter-spacing: 0.20000000298023224px;
+      line-height: 24px;
+      margin-bottom: 24px;
     }
+
     @include responsive(phone) {
-      margin-bottom: 18px;
       font-size: 18px;
       font-style: normal;
       font-weight: 700;
-      line-height: 45px;
       letter-spacing: 0.15000000596046448px;
+      line-height: 18px;
+      margin-bottom: 18px;
     }
   }
+
   .flex-line-row {
     display: flex;
+
     & > div {
-      width: 50%;
-      overflow: hidden;
       height: 100%;
+      margin-bottom: 0;
+      overflow: hidden;
+      width: 50%;
     }
+
     img {
       margin: auto;
       object-fit: contain;
@@ -88,10 +102,16 @@
         height: auto;
       }
     }
-    @include responsive(tablet) {
+
+    @include responsive(phone) {
       flex-direction: column;
+
       & > div {
         width: 100%;
+
+        &.aux-padding-box-read {
+          margin-bottom: 50px;
+        }
       }
     }
   }
