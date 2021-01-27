@@ -43,7 +43,7 @@ const HomeHeadline = forwardRef(({ setVisibleNow }, ref) => {
         <div className="container">
           <div className="wrapper-sales-for">
             <div className="card-view the-balancer">
-              <h3>{t('home:headline.titleTicket')}</h3>
+              <h3 style={{ fontWeight: 'bold' }}>{t('home:headline.titleTicket')}</h3>
               <div className="containerImg">
                 <img
                   src="/assets/images/HPR_Favicon.svg"

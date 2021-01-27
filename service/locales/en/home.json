@@ -4,7 +4,7 @@
     "beforeInfoTop": "Global data traffic is <strong>growing</strong> exponentially, and so are the security risks. ",
     "beforeInfoBottom": " HOPR provides essential and compliant network-level metadata privacy for everyone.",
     "mainInfo": "Every minute, people and companies transmit millions of gigabytes of data across the globe. This figure is growing exponentially thanks to new technologies such as 5G and the Internet of Things. This data all needs protecting, and so does the metadata it generates. The HOPR protocol provides network-level metadata privacy for everyone, and the HOPR network is driven by the HOPR token.",
-    "titleTicket": "Balancer Sale",
+    "titleTicket": "Balancer Launch",
     "txtDownNum": "per HOPR token",
     "fPoint": "Join our initial limited token release to be one of the first to earn and stake HOPR.",
     "sPoint": "There will be only XXXX tokens available during this initial phase.",
@@ -61,7 +61,7 @@
   "hero": {
     "subtitle": "THE HOPR TOKEN LAUNCH ENDS IN:",
     "subtitlePre": "THE HOPR TOKEN LAUNCHES IN:",
-    
+
     "title": "Changing Data Privacy for Good"
   },
   "slide": {
