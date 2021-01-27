@@ -224,6 +224,11 @@
     height: 25px;
     position: absolute;
     width: 25px;
+
+    @include responsive(tablet) {
+      height: 17px;
+      width: 17px;
+    }
   }
 
   &::before {
