@@ -46,7 +46,7 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
       linkTextC: 'BSC',
     },
     {
-      date: 'Jan 2021',
+      date: 'Q1 2021',
       title: 'Jungfrau Release',
       about:
         'The HOPR Jungfrau release is the first feature complete version of the HOPR node & HOPR token.',
@@ -54,7 +54,7 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
       linkTextA: 'SalePage',
     },
     {
-      date: 'Feb 2021',
+      date: 'Q2 2021',
       title: 'Eiger Release',
       about:
         'HOPR’s Eiger release introduces cover traffic, making the protocol feature complete.',
@@ -62,7 +62,7 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
       linkTextA: 'Blogpost',
     },
     {
-      date: 'Mar 2021',
+      date: 'Q2 2021',
       title: 'Launch HOPR DAO ',
       about:
         'HOPR’s focus on decentralized community enabling governance is solidified with the launch of the project-wide HOPR DAO.',
@@ -70,7 +70,7 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
       linkTextA: 'DecenGov',
     },
     {
-      date: 'May 2021',
+      date: 'Q2 2021',
       title: 'Launch of Ecosystem ',
       about:
         'A robust API allows others to build metadata-private dApps and services on top of the HOPR protocol.',
@@ -78,7 +78,7 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
       linkTextA: 'Blogpost',
     },
     {
-      date: 'Sep 2021',
+      date: 'Q4 2021',
       title: 'Token-based Voting',
       about:
         'All token holders will be eligible to vote in the first General Assembly of the HOPR Association. ',
