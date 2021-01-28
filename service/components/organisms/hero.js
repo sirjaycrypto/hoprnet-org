@@ -87,6 +87,7 @@ const Hero = forwardRef(
               playsInline
               className="background-video"
               src="/assets/video/hopr_Drone_Mobile.mp4"
+              type="video/mp4"
             ></video>
           ) : (
             <video
@@ -96,6 +97,7 @@ const Hero = forwardRef(
               playsInline
               className="background-video"
               src="/assets/video/hero.mp4"
+              type="video/mp4"
             ></video>
           )}
 
