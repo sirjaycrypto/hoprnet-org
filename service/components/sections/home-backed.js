@@ -33,14 +33,14 @@ const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
   ];
 
   const dataInfoPartners = [
-    'assets/partners/01_avado.svg',
-    'assets/partners/02_froriep.svg',
-    'assets/partners/03_elrond.svg',
-    'assets/partners/04_sedimentum.svg',
-    'assets/partners/05_swiss_medtech.svg',
-    'assets/partners/06_dai_logo.svg',
-    'assets/partners/07_health_tech_cluster.svg',
-    'assets/partners/08_swiss_healthcare_startups.svg',
+    { url: 'https://ava.do/', image: 'assets/partners/01_avado.svg' },
+    { url: 'https://www.froriep.com/', image: 'assets/partners/02_froriep.svg' },
+    { url: 'https://elrond.com/', image: 'assets/partners/03_elrond.svg' },
+    { url: 'https://www.sedimentum.com/', image: 'assets/partners/04_sedimentum.svg' },
+    { url: 'https://www.swiss-medtech.ch/', image: 'assets/partners/05_swiss_medtech.svg' },
+    { url: 'https://www.xdaichain.com/', image: 'assets/partners/06_dai_logo.svg' },
+    { url: 'https://healthtech.ch/', image: 'assets/partners/07_health_tech_cluster.svg' },
+    { url: 'https://swisshealthcarestartups.com/', image: 'assets/partners/08_swiss_healthcare_startups.svg' },
   ];
 
   const dataInfoAssSee = [
@@ -88,17 +88,16 @@ const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
             {dataInfoPartners.map((e, index) => {
               return (
                 <a
-                  href="#"
+                  href={e.url}
                   key={index}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src={e} alt={e} />
+                  <img src={e.image} alt={e.url} />
                 </a>
               );
             })}
           </div>
-
           <h2>{t('home:back.titleB')}</h2>
           <div className="item-back-container">
             {dataInfoAssSee.map((e, index) => {
