@@ -1,7 +1,7 @@
 import React, { useEffect, useState, forwardRef } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 
-const HomeHeadline = forwardRef(({ setVisibleNow }, ref) => {
+const HomeHeadline = forwardRef(({ setVisibleNow, modePreSales }, ref) => {
   const { t } = useTranslation();
   const clickBtn = () => {
     console.log('Click');
@@ -49,7 +49,7 @@ const HomeHeadline = forwardRef(({ setVisibleNow }, ref) => {
                   src="/assets/images/HPR_Favicon.svg"
                   alt={t('home:headline.titleTicket')}
                 />
-                <p>{price}</p>
+                <p>{!modePreSales ? price : '$ X.XXXX'}</p>
                 <p className="label-remember">
                   {t('home:headline.txtDownNum')}
                 </p>

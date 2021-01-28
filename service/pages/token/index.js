@@ -43,9 +43,11 @@ export default function Index() {
     const scrollByBanner = bannerArea.current.offsetTop;
     setThisBanner(scrollByBanner);
   }, [isVisibleTokenRel, currentElementTokenRel]);
+
   const changeModePreSale = () => {
     setModePreSales(!modePreSales);
   };
+
   const showModalActive = () => {
     setShowModal(!showModal);
   };
@@ -60,7 +62,6 @@ export default function Index() {
   return (
     <Layout visibleNow={visibleNow}>
       <Modal showModal={showModal} showModalActive={() => showModalActive()} />
-
       <ChooseLanguage />
       <Hero
         ref={heroInfo}
@@ -72,7 +73,7 @@ export default function Index() {
         activeModeFollowMain={() => activeModeFollowMain()}
         removeModeFollowMain={() => removeModeFollowMain()}
       />
-      <HomeHeadline />
+      <HomeHeadline modePreSales={modePreSales} />
       <section id="video-area" className="video-home ">
         <iframe
           src="https://player.vimeo.com/video/492666726?title=0&byline=0&portrait=0&playsinline=0&muted=1&autopause=0&controls=0&loop=1&app_id=122963"
