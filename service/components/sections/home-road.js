@@ -9,8 +9,8 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
       title: 'Idea',
       about:
         'HOPR’s founders develop a decentralized approach to the urgent issue of metadata privacy. HOPR is born!',
-      linkA: '#',
-      linkTextA: 'Boork,',
+      linkA: 'https://hoprnet.org/book-of-hopr',
+      linkTextA: 'Book,',
       linkB: '#',
       linkTextB: 'Technical White Paper',
     },
@@ -28,9 +28,9 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
       title: 'HOPR Hardware Node',
       about:
         'HOPR Hardware Node The HOPR Node PC launches, allowing users to run a dedicated HOPR device from their home.',
-      linkA: '#',
+      linkA: 'https://ava.do/checkout/hopr',
       linkTextA: 'Shop,',
-      linkB: '#',
+      linkB: 'https://github.com/hoprnet',
       linkTextB: 'gitHub',
     },
     {
@@ -38,11 +38,11 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
       title: 'Testing and Community',
       about:
         'A series of popular incentivized and gamified testnets grow the community and network to 1000 nodes.',
-      linkA: '#',
+      linkA: 'https://medium.com/hoprnet/hopr-introduces-first-proof-of-relay-data-privacy-mechanism-to-run-on-matic-d45bb5624e5b',
       linkTextA: 'Matic,',
-      linkB: '#',
+      linkB: 'https://www.xdaichain.com/',
       linkTextB: 'xDai,',
-      linkC: '#',
+      linkC: 'https://www.binance.org/en/smartChain',
       linkTextC: 'BSC',
     },
     {
