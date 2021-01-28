@@ -91,7 +91,6 @@
   }
 }
 
-.info-hero-top,
 .info-hero-bottom {
   p {
     display: flex;
@@ -103,19 +102,15 @@
   }
 }
 
-.info-hero-top {
-  position: absolute;
-  top: 0.875rem;
-  left: 24px;
-  @include responsive(tablet) {
-    top: 14px;
-  }
-}
-
 .info-hero-bottom {
   position: absolute;
   bottom: 1rem;
   right: 24px;
+
+  @include responsive(phone) {
+    left: 24px;
+    right: inherit;
+  }
 }
 
 .help-label-info {

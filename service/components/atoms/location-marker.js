@@ -1,16 +1,8 @@
-import React, { useState, useEffect, forwardRef } from 'react';
+import React from 'react';
 
 export default function LocationMarker() {
-  const [changePosition, setChangePosition] = useState(false);
-
-  useEffect(() => {
-    if (window.matchMedia('screen and (min-width: 797px)').matches) {
-      setChangePosition(true);
-    }
-  }, []);
-
   return (
-    <div className={changePosition ? 'info-hero-bottom' : 'info-hero-top'}>
+    <div className='info-hero-bottom'>
       <p className="help-label-info">Jungfraujoch, Switzerland, 3454 masl</p>
     </div>
   );

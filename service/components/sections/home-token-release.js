@@ -163,8 +163,9 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
   }
 
   const dataOption = {
-    aspectRatio: 2,
-    maintainAspectRatio: true,
+    maintainAspectRatio: false,
+    responsive: true,
+
     elements: {
       point: {
         radius: 0,
@@ -318,6 +319,8 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
       : '',
   };
 
+  const graphWidth = screen.width < 420 ? 420 : 520;
+
   return (
     <>
       <section ref={ref} id="TOKEN-RELEASE" className="section-token-release">
@@ -354,7 +357,7 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
             <h3>{t('home:token.thirdSubTitle')} (M)</h3>
             <div className="container-chart">
               <div className="help-scroll">
-                <Line data={dataTokenSupply} options={dataOption} />
+                <Line data={dataTokenSupply} width={100} height={graphWidth} options={dataOption} />
               </div>
             </div>
           </div>
