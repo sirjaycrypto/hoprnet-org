@@ -47,9 +47,9 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
     },
     {
       date: 'Jan 2021',
-      title: 'Jungfrau Release (Mainnet) ',
+      title: 'Jungfrau Release',
       about:
-        'The HOPR mainnet launches, giving everyone their first chance to buy and earn HOPR tokens.',
+        'The HOPR Jungfrau release is the first feature complete version of the HOPR node & HOPR token.',
       linkA: '#',
       linkTextA: 'SalePage',
     },
