@@ -44,9 +44,9 @@ const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
   ];
 
   const dataInfoAssSee = [
-    'assets/as_see/coindesk.svg',
-    'assets/as_see/cointelegraph.svg',
-    'assets/as_see/moneytoday.svg',
+    { url: 'https://www.coindesk.com/binance-labs-leads-1m-seed-round-in-crypto-tor-alternative-hopr', image: 'assets/as_see/coindesk.svg' },
+    { url: 'https://cointelegraph.com/news/hopr-data-privacy-testnet-to-launch-following-investment-by-binance', image: 'assets/as_see/cointelegraph.svg' },
+    { url: 'https://www.moneytoday.ch/news/das-schweizer-tech-startup-hopr-sammelt-1-million-dollar-ein-binance-labs-fuehrt-die-investitionsru/', image: 'assets/as_see/moneytoday.svg' },
   ];
 
   return (
@@ -103,12 +103,12 @@ const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
             {dataInfoAssSee.map((e, index) => {
               return (
                 <a
-                  href="#"
+                  href={e.url}
                   key={index}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src={e} alt={e} />
+                  <img src={e.image} alt={e.url} />
                 </a>
               );
             })}
