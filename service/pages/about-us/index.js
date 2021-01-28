@@ -56,7 +56,7 @@ export default function Index() {
       if (element) {
         setTimeout(function () {
           element.scrollIntoView({ behavior: 'smooth' });
-        }, 3000);
+        }, 1400);
       }
     }
   }, []);
