@@ -1,21 +1,23 @@
 .welcome-section {
+  background: $hopr_yellow;
+  height: 100vh;
   overflow: hidden;
   position: relative;
   top: 0;
-  height: 100vh;
-  background: $hopr_yellow;
+
   &::before {
     background: white;
     border-radius: 100%;
-    height: 80vh;
-    width: 80vh;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     content: '';
     display: block;
+    height: 80vh;
+    left: 50%;
     position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
     transition: all 400ms ease-in-out;
+    width: 80vh;
+
     @include responsive(tablet) {
       height: 50vh;
       width: 50vh;
@@ -50,11 +52,13 @@
         @include responsive(tablet) {
           width: 80%;
         }
+
         @include responsive(phone) {
-          margin: 18px auto 0 auto;
-          width: 98%;
+          margin: 30px auto 0 auto;
+          width: 100%;
         }
       }
+
       h1,
       p {
         padding: 0;
@@ -67,15 +71,11 @@
         line-height: 126px;
         text-transform: uppercase;
         letter-spacing: 0.833333px;
-        @include responsive(tablet) {
+
+        @include responsive(phone) {
           font-size: 50px;
           line-height: 64px;
-          letter-spacing: 0.416667px;
-        }
-        @include responsive(phone) {
-          font-size: 40px;
-          line-height: normal;
-          letter-spacing: -1.44px;
+          letter-spacing: 0.416667px;;
         }
       }
       p {
@@ -85,14 +85,13 @@
         letter-spacing: 0.166667px;
 
         @include responsive(tablet) {
-          font-size: 16px;
-          line-height: 30px;
-          letter-spacing: 0.133333px;
+          font-size: 20px;
+          line-height: 25px;
         }
 
         @include responsive(phone) {
           font-size: 16px;
-          line-height: 30px;
+          line-height: 20px;
           letter-spacing: 0.133333px;
         }
       }
@@ -177,14 +176,16 @@
 
 .show-hi {
   &::before {
-    height: 100vh;
-    width: 100vh;
+    height: 130vh;
     transition: all 500ms ease-in-out;
+    width: 130vh;
+
     @include responsive(tablet) {
-      height: 80vh;
-      width: 80vh;
+      height: 100vh;
+      width: 100vh;
     }
   }
+
   .section-top {
     .main-labels {
       transform: translateY(0%);
@@ -192,6 +193,7 @@
       transition: all 800ms ease-in-out;
     }
   }
+
   .section-bottom {
     transform: translateY(0%);
     transition: all 800ms ease-in-out;
