@@ -1,20 +1,23 @@
 .the-loader {
   background: #fff;
-  width: 100vw;
-  height: 100vh;
-  position: relative;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
   .element {
+    animation: animateLoading 1200ms ease-in-out infinite alternate;
     background: $hopr_yellow;
     border-radius: 100%;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     position: absolute;
-    animation: animateWelcomer 1200ms ease-in-out infinite alternate;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
-@keyframes animateWelcomer {
+@keyframes animateLoading {
   from {
     width: 30vh;
     height: 30vh;
