@@ -33,7 +33,7 @@ const Hero = forwardRef(
     };
 
     const isPhone = () => {
-      if (window.innerWidth <= 768) {
+      if (window.innerWidth <= 750) {
         setVideoMobile(true);
       }
     };
