@@ -86,6 +86,7 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
         <div className="container">
           {data.map((e, index) => {
             const { date, title, about, links } = e;
+
             return (
               <div key={index} className="road-map-element">
                 <div>
@@ -103,7 +104,7 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
                       {links.map((item, i) => {
                         return (
                           <>
-                            <a href={item.link} data-index={i}>{item.text}</a>
+                            <a href={item.link} key={index + '-' + i}>{item.text}</a>
                             {i < (links.length - 1) ? ', ' : ''}
                           </>
                         );
