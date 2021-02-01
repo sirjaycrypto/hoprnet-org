@@ -1,7 +1,7 @@
 import React, { useRef, forwardRef, useState, useEffect } from 'react';
 import Countdown from '../atoms/countdown';
 import useTranslation from 'next-translate/useTranslation';
-import Modal from '../atoms/modal';
+import Trans from 'next-translate/Trans';
 import AlertMsg from '../atoms/alertMsg';
 import HeroInfo from '../molecules/hero-info';
 
@@ -19,10 +19,9 @@ const Hero = forwardRef(
   ) => {
     const [videoMobile, setVideoMobile] = useState(false);
     const [showMsg, setShowMsg] = useState(false);
-
     const [btnPreSalesFollow, setBtnPreSalesFollow] = useState(false);
-    const theAreaBtn = useRef('');
-    const area = useRef('');
+    const theAreaBtn = useRef(null);
+    const area = useRef(null);
 
     const { t } = useTranslation();
 
@@ -39,37 +38,28 @@ const Hero = forwardRef(
       }
     };
 
-    useEffect(() => {
-      isPhone();
-      const theHeight = area?.current?.clientHeight;
-      const elementHeight = theAreaBtn?.current?.clientHeight;
-      const elementTop = theAreaBtn?.current?.scrollWidth;
-      const elementPlus = elementTop + elementHeight;
+    const onScrollGlobal = () => {
+      if (theAreaBtn.current && !videoMobile) {
+        const elementHeight = theAreaBtn.current.clientHeight;
+        const elementTop = theAreaBtn.current.scrollWidth;
+        const elementPlus = elementTop + elementHeight;
 
-      window.onscroll = function () {
-        if (
-          window.pageYOffset >= elementTop &&
-          window.pageYOffset <= elementPlus
-        ) {
+        if (window.pageYOffset > elementPlus) {
           setBtnPreSalesFollow(true);
-        } else if (window.pageYOffset <= elementPlus) {
+        } else {
           setBtnPreSalesFollow(false);
         }
-        if (
-          window.pageYOffset >= thisBanner ||
-          window.pageYOffset <= theHeight
-        ) {
-          removeModeFollowMain();
-        } else if (window.pageYOffset >= theHeight) {
-          activeModeFollowMain();
-        }
-      };
-    }, [
-      modePreSales,
-      activeModeFollowMain,
-      removeModeFollowMain,
-      showModalActive,
-    ]);
+      }
+    };
+
+    useEffect(() => {
+      isPhone();
+    }, []);
+
+    useEffect(() => {
+      window.addEventListener('scroll', onScrollGlobal);
+      return () => window.removeEventListener('scroll', onScrollGlobal);
+    }, [theAreaBtn, modePreSales, videoMobile]);
 
     return (
       <>
@@ -109,7 +99,7 @@ const Hero = forwardRef(
                 {modePreSales ? (
                   <div
                     className={
-                      'helperSpaceBtn ' + (btnPreSalesFollow && 'auxScroll')
+                      'helperSpaceBtn ' + (btnPreSalesFollow ? 'auxScroll' : '')
                     }
                   >
                     {showMsg ? (
@@ -118,22 +108,16 @@ const Hero = forwardRef(
                       <div
                         ref={theAreaBtn}
                         className={
-                          'preSales-btn ' + (btnPreSalesFollow && 'nowFollowUs')
+                          'preSales-btn ' + (btnPreSalesFollow ? 'nowFollowUs' : '')
                         }
                       >
-                        <div>
-                          <div
-                            onClick={() => showModalActive()}
-                            className="btn "
-                          >
-                            <span>{t('common:btn-comumnity')}</span>
-                          </div>
+                        <div onClick={() => showModalActive()} className="btn">
+                          <div>{t('common:btn-community-1')}</div>
+                          <div>{t('common:btn-community-2')}</div>
                         </div>
-
-                        <div>
-                          <div onClick={() => showActiveMsg()} className="btn ">
-                            <span>{t('common:btn-public')}</span>
-                          </div>
+                        <div onClick={() => showActiveMsg()} className="btn">
+                          <div>{t('common:btn-public-1')}</div>
+                          <div>{t('common:btn-public-2')}</div>
                         </div>
                       </div>
                     )}

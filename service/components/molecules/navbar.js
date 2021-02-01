@@ -9,7 +9,6 @@ import { useRouter } from 'next/router';
 
 export default function Navbar({ visibleNow }) {
   const [youDown, setYouDown] = useState(false);
-  const [addStyle, setAddStyle] = useState(false);
   const [activaMenu, setActivaMenu] = useState(false);
   const router = useRouter();
 
@@ -17,19 +16,25 @@ export default function Navbar({ visibleNow }) {
     return router.pathname === '/token';
   };
 
+  const onScrollNavBar = function () {
+    if (window.pageYOffset === 0) {
+      setYouDown(false);
+    } else {
+      setYouDown(true);
+      setActivaMenu(false);
+      if (isTheToken()) {
+        setYouDown(false);
+      }
+    }
+  };
+
   useEffect(() => {
     isTheToken();
-    window.onscroll = function () {
-      if (window.pageYOffset === 0) {
-        setYouDown(false);
-      } else {
-        setYouDown(true);
-        setActivaMenu(false);
-        if (isTheToken()) {
-          setYouDown(false);
-        }
-      }
-    };
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('scroll', onScrollNavBar);
+    return () => window.removeEventListener('scroll', onScrollNavBar);
   }, [youDown, isTheToken]);
 
   return (
