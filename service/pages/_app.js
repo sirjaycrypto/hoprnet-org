@@ -45,6 +45,7 @@ function MyApp({ Component, pageProps }) {
       once: true,
       offset: 50,
     });
+
   }, []);
 
   return (

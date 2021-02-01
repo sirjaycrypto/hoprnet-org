@@ -57,7 +57,7 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
       date: 'Q2 2021',
       title: 'Eiger Release',
       about:
-        'HOPR’s Eiger release introduces cover traffic, making the protocol feature complete.',
+        'HOPR’s Eiger release introduces cover traffic and provides increased incentives for relay node operators.',
       linkA: '#',
       linkTextA: 'Blogpost',
     },

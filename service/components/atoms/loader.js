@@ -13,9 +13,7 @@ export default function Loader() {
     <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
       <Navbar />
       <div className="the-loader">
-        <div className="element">
-          <span></span>
-        </div>
+        <div className="element"></div>
       </div>
     </motion.div>
   );

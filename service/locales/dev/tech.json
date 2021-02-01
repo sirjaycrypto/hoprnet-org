@@ -1,0 +1,35 @@
+{
+  "doc": {
+    "paragraphA": "tech_doc_paragraphA",
+    "paragraphB": "tech_doc_paragraphB",
+    "title": "tech_doc_title"
+  },
+  "hero": {
+    "paragraphA": "tech_hero_paragraphA",
+    "paragraphB": "tech_hero_paragraphB",
+    "paragraphC": "tech_hero_paragraphC",
+    "title": "tech_hero_title"
+  },
+  "open": {
+    "paragraphA": "tech_open_paragraphA",
+    "paragraphB": "tech_open_paragraphB",
+    "paragraphC": "tech_open_paragraphC",
+    "paragraphD": "tech_open_paragraphD",
+    "paragraphF": "tech_open_paragraphF",
+    "paragraphG": "tech_open_paragraphG",
+    "paragraphJ": "tech_open_paragraphJ",
+    "title": "tech_open_title"
+  },
+  "second": {
+    "paragraphA": "tech_second_paragraphA",
+    "paragraphB": "tech_second_paragraphB",
+    "paragraphC": "tech_second_paragraphC",
+    "paragraphD": "tech_second_paragraphD",
+    "title": "tech_second_title"
+  },
+  "work": {
+    "paragraphA": "tech_work_paragraphA",
+    "paragraphB": "tech_work_paragraphB",
+    "title": "tech_work_title"
+  }
+}
