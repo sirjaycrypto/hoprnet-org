@@ -94,7 +94,7 @@ const Hero = forwardRef(
           <div className="container">
             <div className="text-wrapper">
               <>
-                <h4>{t('home:hero.subtitlePre')}</h4>
+                <h4>{modePreSales ? t('home:hero.subtitlePre') : t('home:hero.subtitle')}</h4>
                 <Countdown />
                 {modePreSales ? (
                   <div
@@ -123,13 +123,11 @@ const Hero = forwardRef(
                     )}
                   </div>
                 ) : (
-                  <div>
-                    <div
-                      onClick={() => showModalActive()}
-                      className="btn-banner "
-                    >
-                      <span>{t('common:getHorpFull')}</span>
-                    </div>
+                  <div
+                    onClick={() => showModalActive()}
+                    className="btn-banner "
+                  >
+                    <span>{t('common:getHorpFull')}</span>
                   </div>
                 )}
               </>
