@@ -1,11 +1,8 @@
 import React, { useEffect, useState, forwardRef } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 
-const HomeHeadline = forwardRef(({ setVisibleNow, modePreSales }, ref) => {
+const HomeHeadline = forwardRef(({ setShowModal, modePreSales }, ref) => {
   const { t } = useTranslation();
-  const clickBtn = () => {
-    console.log('Click');
-  };
 
   const fetchData = async () => {
     const result = await fetch(
@@ -54,7 +51,7 @@ const HomeHeadline = forwardRef(({ setVisibleNow, modePreSales }, ref) => {
                   {t('home:headline.txtDownNum')}
                 </p>
               </div>
-              <div className="btn-ticket" onClick={() => clickBtn()}>
+              <div className="btn-ticket" onClick={() => setShowModal(true)}>
                 <span>{t('common:getHorpFull')}</span>
               </div>
             </div>

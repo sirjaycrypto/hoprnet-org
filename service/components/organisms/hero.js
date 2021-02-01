@@ -10,7 +10,7 @@ const Hero = forwardRef(
     {
       thisBanner,
       modePreSales,
-      showModalActive,
+      setShowModal,
       changeModePreSale,
       activeModeFollowMain,
       removeModeFollowMain,
@@ -111,7 +111,7 @@ const Hero = forwardRef(
                           'preSales-btn ' + (btnPreSalesFollow ? 'nowFollowUs' : '')
                         }
                       >
-                        <div onClick={() => showModalActive()} className="btn">
+                        <div onClick={() => setShowModal(true)} className="btn">
                           <div>{t('common:btn-community-1')}</div>
                           <div>{t('common:btn-community-2')}</div>
                         </div>
@@ -124,7 +124,7 @@ const Hero = forwardRef(
                   </div>
                 ) : (
                   <div
-                    onClick={() => showModalActive()}
+                    onClick={() => setShowModal(true)}
                     className="btn-banner "
                   >
                     <span>{t('common:getHorpFull')}</span>
