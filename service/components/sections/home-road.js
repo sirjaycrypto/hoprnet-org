@@ -27,17 +27,17 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
       date: 'Jul 2020',
       title: 'HOPR Hardware Node',
       about:
-        'HOPR Hardware Node The HOPR Node PC launches, allowing users to run a dedicated HOPR device from their home.',
+        'The HOPR Hardware Node launches, allowing users to run a dedicated HOPR device from their home.',
       linkA: 'https://ava.do/checkout/hopr',
       linkTextA: 'Shop,',
       linkB: 'https://github.com/hoprnet',
       linkTextB: 'gitHub',
     },
     {
-      date: 'Aug 2020',
+      date: 'Nov 2020',
       title: 'Testing and Community',
       about:
-        'A series of popular incentivized and gamified testnets grow the community and network to 1000 nodes.',
+        'A series of popular incentivized and gamified testnets grow the community and network to over 2000 nodes.',
       linkA: 'https://medium.com/hoprnet/hopr-introduces-first-proof-of-relay-data-privacy-mechanism-to-run-on-matic-d45bb5624e5b',
       linkTextA: 'Matic,',
       linkB: 'https://www.xdaichain.com/',
