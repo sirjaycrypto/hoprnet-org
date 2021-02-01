@@ -21,7 +21,7 @@ import Modal from '../../components/atoms/modal';
 export default function Index() {
   const [visibleNow, setVisibleNow] = useState('');
   const [modePreSales, setModePreSales] = useState(false);
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(undefined);
   //
   const [thisBanner, setThisBanner] = useState('');
   const heroInfo = useRef('');
@@ -48,10 +48,6 @@ export default function Index() {
     setModePreSales(!modePreSales);
   };
 
-  const showModalActive = () => {
-    setShowModal(!showModal);
-  };
-
   const activeModeFollowMain = () => {
     srtBtnFollow(true);
   };
@@ -61,19 +57,19 @@ export default function Index() {
 
   return (
     <Layout visibleNow={visibleNow}>
-      <Modal showModal={showModal} showModalActive={() => showModalActive()} />
+      <Modal showModal={showModal} setShowModal={setShowModal} />
       <ChooseLanguage />
       <Hero
         ref={heroInfo}
         setVisibleNow={setVisibleNow}
         modePreSales={modePreSales}
         thisBanner={thisBanner}
-        showModalActive={() => showModalActive()}
+        setShowModal={setShowModal}
         changeModePreSale={() => changeModePreSale()}
         activeModeFollowMain={() => activeModeFollowMain()}
         removeModeFollowMain={() => removeModeFollowMain()}
       />
-      <HomeHeadline modePreSales={modePreSales} />
+      <HomeHeadline modePreSales={modePreSales} setShowModal={setShowModal} />
       <section id="video-area" className="video-home ">
         <iframe
           src="https://player.vimeo.com/video/492666726?title=0&byline=0&portrait=0&playsinline=0&muted=1&autopause=0&controls=0&loop=1&app_id=122963"
@@ -98,7 +94,7 @@ export default function Index() {
           className={!modePreSales ? (btnFollow ? 'nowFollowUs' : '') : ''}
           ref={btnToFollow}
         >
-          <div className="btn-banner" onClick={() => showModalActive()}>
+          <div className="btn-banner" onClick={() => setShowModal(true)}>
             <span>{t('home:banner.button')}</span>
           </div>
         </div>

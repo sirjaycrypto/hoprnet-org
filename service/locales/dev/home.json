@@ -1,111 +1,111 @@
 {
   "headline": {
-    "title": "home_headline_title",
-    "beforeInfoTop": "home_headline_beforeInfoTop",
-    "beforeInfoBottom": "home_headline_beforeInfoBottom",
-    "mainInfo": "home_headline_mainInfo",
-    "titleTicket": "home_headline_titleTicket",
-    "txtDownNum": "home_headline_txtDownNum",
-    "fPoint": "home_headline_fPoint",
-    "sPoint": "home_headline_sPoint",
-    "tPoint": "home_headline_tPoint",
-    "tokenLeft": "home_headline_tokenLeft"
+    "title": "INVEST IN METADATA PRIVACY",
+    "beforeInfoTop": "Global data traffic is <strong>growing</strong> exponentially, and so are the security risks. ",
+    "beforeInfoBottom": " HOPR provides essential and compliant network-level metadata privacy for everyone.",
+    "mainInfo": "Every minute, people and companies transmit millions of gigabytes of data across the globe. This figure is growing exponentially thanks to new technologies such as 5G and the Internet of Things. This data all needs protecting, and so does the metadata it generates. The HOPR protocol provides network-level metadata privacy for everyone, and the HOPR network is driven by the HOPR token.",
+    "titleTicket": "Balancer Launch",
+    "txtDownNum": "per HOPR token",
+    "fPoint": "Join our initial limited token release to be one of the first to earn and stake HOPR.",
+    "sPoint": "There will be only XXXX tokens available during this initial phase.",
+    "tPoint": "Tokens will be available via",
+    "tokenLeft": "TOKENS LEFT"
   },
   "back": {
-    "title": "home_back_title",
-    "titleA": "home_back_titleA",
-    "titleB": "home_back_titleB"
+    "title": "BACKED BY",
+    "titleA": "PARTNERS",
+    "titleB": "AS SEEN IN"
   },
   "banner": {
-    "label": "home_banner_label",
-    "button": "home_banner_button"
+    "label": "Be the first to earn and stake HOPR tokens with our limited token release.",
+    "button": "Get HOPR Token"
   },
   "features": {
-    "pay": "home_features_pay",
-    "payMain": "home_features_payMain",
-    "stake": "home_features_stake",
-    "stakeMain": "home_features_stakeMain",
-    "title": "home_features_title",
-    "vote": "home_features_vote",
-    "voteMain": "home_features_voteMain"
+    "pay": "Pay",
+    "payMain": "Spend HOPR tokens to send data through the HOPR network with complete data and metadata privacy.",
+    "stake": "Stake",
+    "stakeMain": "Lock HOPR tokens in your node to relay user data and cover traffic. The more you stake, the more data you can relay, and the more you can earn.",
+    "title": "Token features",
+    "vote": "Govern",
+    "voteMain": "From technical parameters to the composition of the HOPR board of directors, participate in decentralized, community-enabling governance."
   },
   "further": {
-    "infoBottomATitle": "home_further_infoBottomATitle",
-    "infoBottomBTitle": "home_further_infoBottomBTitle",
-    "infoBottomCTitle": "home_further_infoBottomCTitle",
-    "infoBottomDTitle": "home_further_infoBottomDTitle",
-    "infoBottomETitle": "home_further_infoBottomETitle",
-    "infoTopTitleA": "home_further_infoTopTitleA",
-    "infoTopTitleAAbout": "home_further_infoTopTitleAAbout",
-    "infoTopTitleB": "home_further_infoTopTitleB",
-    "infoTopTitleBAbout": "home_further_infoTopTitleBAbout",
-    "title": "home_further_title"
+    "infoBottomATitle": "Our Blog",
+    "infoBottomBTitle": "Our Values",
+    "infoBottomCTitle": "Our Whitepaper",
+    "infoBottomDTitle": "Our organizational structure: Decent Gov",
+    "infoBottomETitle": "HOPR in the Media",
+    "infoTopTitleA": "Install a HOPR node for free via GitHub",
+    "infoTopTitleAAbout": "Anyone can run a HOPR node on their own hardware! We provide easy-to-install software for Linux, macOS, Windows, docker and cloud environments. We also sell a dedicated hardware node for faster staking.",
+    "infoTopTitleB": "Buy a HOPR Node PC",
+    "infoTopTitleBAbout": "The HOPR Node PC is a powerful plug-and-play hardware device which lets you run a HOPR node around the clock.",
+    "title": "Further Reading"
   },
   "hardware": {
-    "about": "home_hardware_about",
-    "caption": "home_hardware_caption",
-    "subtitleA": "home_hardware_subtitleA",
-    "subtitleB": "home_hardware_subtitleB",
-    "title": "home_hardware_title"
+    "about": "Anyone can run a HOPR node on their own hardware! We provide easy-to-install software for Linux, macOS, Windows, Docker and cloud environments. Start earning HOPR tokens within minutes.",
+    "caption": "We also sell a dedicated hardware node for faster staking.",
+    "subtitleA": "Run Your Own Metal",
+    "subtitleB": "Your HOPR Hardware Node",
+    "title": "RUN A HOPR NODE"
   },
   "graphic": {
-    "bounties": "home_graphic_bounties",
-    "cover": "home_graphic_cover",
-    "early": "home_graphic_early",
-    "pre": "home_graphic_pre",
-    "public": "home_graphic_public",
-    "team": "home_graphic_team",
-    "treasury": "home_graphic_treasury",
-    "votes": "home_graphic_votes"
+    "bounties": "Bounties",
+    "cover": "Cover Traffic",
+    "early": "Early Token Buyers",
+    "pre": "Pre-Sale",
+    "public": "Public Distribution",
+    "team": "Team & Advisors",
+    "treasury": "Treasury",
+    "votes": "# of Votes"
   },
   "hero": {
-    "subtitle": "home_hero_subtitle",
-    "subtitlePre": "home_hero_subtitlePre",
-    "title": "home_hero_title"
+    "subtitle": "HOPR JUNGFRAU LAUNCHES IN",
+    "subtitlePre": "THE HOPR TOKEN LAUNCHES IN:",
+    "title": "Changing Data Privacy for Good"
   },
   "slide": {
-    "slideA": "home_slide_slideA",
-    "slideAMain": "home_slide_slideAMain",
-    "slideB": "home_slide_slideB",
-    "slideBMain": "home_slide_slideBMain",
-    "slideC": "home_slide_slideC",
-    "slideCMain": "home_slide_slideCMain"
+    "slideA": "Sandro Cilurzo, Co-Founder & CEO of Sedimentum AG.",
+    "slideAMain": "HOPR has developed this groundbreaking open source technology to be used by privacy-aware developers all over the world, HOPR is integrated in our cutting edge privacy-preserving technology to save lives without compromising privacy.",
+    "slideB": "Beniamin Mincu, CEO of Elrond.",
+    "slideBMain": "The HOPR protocol offers a new standard for internet-scale performance, probabilistic security, and cryptographic pseudonymity. We’re happy to bridge the last mile to the Elrond network entry-points with HOPR, and offer a truly decentralized & private end-to-end experience for our.",
+    "slideC": "Gin Chao, Strategy Officer of Binance.",
+    "slideCMain": "The team at HOPR has shown us how their decentralized network achieves privacy guarantees on the metadata level and gives power back to the people."
   },
   "token": {
-    "about": "home_token_about",
-    "listItemA": "home_token_listItemA",
-    "listItemB": "home_token_listItemB",
-    "listItemC": "home_token_listItemC",
-    "listItemD": "home_token_listItemD",
-    "listItemE": "home_token_listItemE",
-    "listItemF": "home_token_listItemF",
-    "secondSubAbout": "home_token_secondSubAbout",
-    "secondSubTitle": "home_token_secondSubTitle",
-    "subTitle": "home_token_subTitle",
-    "thirdSubTitle": "home_token_thirdSubTitle",
-    "title": "home_token_title",
-    "textEnding": "home_token_textEnding"
+    "about": "The HOPR Network is powered by the HOPR Token, a utility token on the Ethereum Network.",
+    "listItemA": "Token same: HOPR Token",
+    "listItemB": "Token symbol: HOPR",
+    "listItemC": "Network: Ethereum",
+    "listItemD": "Standards: ERC20, ERC777",
+    "listItemE": "Total supply: 1BN HOPR",
+    "listItemF": "Initial circulating supply: 130M HOPR",
+    "secondSubAbout": "Starting at an initial circulating supply of 130 million, HOPR tokens will be released over a period of 5 years. A quarter of all HOPR tokens are available only to stakers as a reward for relaying cover traffic.",
+    "secondSubTitle": "Token Allocation",
+    "subTitle": "KEY METRICS",
+    "thirdSubTitle": "Token Supply Distribution",
+    "title": "Token Release",
+    "textEnding": "VC-NOTE Fusce sagittis mauris at purus venenatis, sed sagittis est feugiat. Aenean et malesuada massa. Morbi dignissim venenatis eros ut lobortis. Cras eu libero mi. Etiam ullamcorper sapien non est pretium elementum. Donec eget risus sollicitudin, ultricies est ut, aliquam neque. Mauris et dictum ex. Nulla ultrices mollis dui. Pellentesque vel leo ac lorem maximus convallis quis ac est. Ut pellentesque quis nisl sed dictum."
   },
   "why": {
-    "btnLabel": "home_why_btnLabel",
-    "labelDate": "home_why_labelDate",
-    "mainText": "home_why_mainText",
-    "title": "home_why_title"
+    "btnLabel": "Get HOPR-Token on SECRET",
+    "labelDate": "Source: Cisco Visual Networking Index",
+    "mainText": "Every minute, people and companies transmit millions of gigabytes of data across the globe. This figure is growing exponentially thanks to new technologies such as 5G and the Internet of Things. This data all needs protecting, and so does the metadata it generates. The HOPR protocol provides network-level metadata privacy for everyone, and the HOPR network is driven by the HOPR token.",
+    "title": "Why does it matter?"
   },
   "work": {
-    "performant": "home_work_performant",
-    "performantMain": "home_work_performantMain",
-    "private": "home_work_private",
-    "privateMain": "home_work_privateMain",
-    "profitable": "home_work_profitable",
-    "profitableMain": "home_work_profitableMain",
-    "title": "home_work_title"
+    "performant": "Performant",
+    "performantMain": "HOPR’s custom layer-two scaling solution is based on probabilistic payment channels. This ensures fully decentralized settlement without unnecessary blockchain transaction fees, all while protecting node runners’ metadata.",
+    "private": "Private",
+    "privateMain": "The HOPR network is a decentralized incentivized mixnet, ensuring complete data and metadata privacy for everyone who uses it. Data is sent via multiple hops, so no-one but the sender and receiver know the origin, destination, or content of a data transfer.",
+    "profitable": "Profitable",
+    "profitableMain": "HOPR’s unique proof-of-relay mechanism means every node runner is incentivized to correctly relay data in exchange for HOPR tokens. Anyone can run a HOPR node to earn HOPR tokens and contribute to online data privacy.",
+    "title": "How it works"
   },
   "roadMap": {
-    "title": "home_roadMap_title"
+    "title": " ROADMAP"
   },
   "modal": {
-    "title": "home_modal_title",
-    "about": "home_modal_about"
+    "title": "Disclaimer",
+    "about": "By clicking on this link, you will be redirected to a website provided by a third-party (third-party website). HOPR (likewise any affiliated entity) has no control over the content, offerings (including offerings regarding HOPR tokens) or resources of the third-party website, and accepts no responsibility for the third-party website, the content, offerings or resources, or for any loss or damage that may arise from your use of the third party-website, the content, offerings or resources. If you decide to access the third-party website, you do so entirely at your own risk and subject to the terms and conditions of use for the third-party website."
   }
 }

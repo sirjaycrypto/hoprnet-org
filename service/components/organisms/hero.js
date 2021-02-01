@@ -1,7 +1,7 @@
 import React, { useRef, forwardRef, useState, useEffect } from 'react';
 import Countdown from '../atoms/countdown';
 import useTranslation from 'next-translate/useTranslation';
-import Modal from '../atoms/modal';
+import Trans from 'next-translate/Trans';
 import AlertMsg from '../atoms/alertMsg';
 import HeroInfo from '../molecules/hero-info';
 
@@ -10,7 +10,7 @@ const Hero = forwardRef(
     {
       thisBanner,
       modePreSales,
-      showModalActive,
+      setShowModal,
       changeModePreSale,
       activeModeFollowMain,
       removeModeFollowMain,
@@ -19,10 +19,9 @@ const Hero = forwardRef(
   ) => {
     const [videoMobile, setVideoMobile] = useState(false);
     const [showMsg, setShowMsg] = useState(false);
-
     const [btnPreSalesFollow, setBtnPreSalesFollow] = useState(false);
-    const theAreaBtn = useRef('');
-    const area = useRef('');
+    const theAreaBtn = useRef(null);
+    const area = useRef(null);
 
     const { t } = useTranslation();
 
@@ -34,42 +33,33 @@ const Hero = forwardRef(
     };
 
     const isPhone = () => {
-      if (window.innerWidth <= 768) {
+      if (window.innerWidth <= 750) {
         setVideoMobile(true);
+      }
+    };
+
+    const onScrollGlobal = () => {
+      if (theAreaBtn.current && !videoMobile) {
+        const elementHeight = theAreaBtn.current.clientHeight;
+        const elementTop = theAreaBtn.current.scrollWidth;
+        const elementPlus = elementTop + elementHeight;
+
+        if (window.pageYOffset > elementPlus) {
+          setBtnPreSalesFollow(true);
+        } else {
+          setBtnPreSalesFollow(false);
+        }
       }
     };
 
     useEffect(() => {
       isPhone();
-      const theHeight = area?.current?.clientHeight;
-      const elementHeight = theAreaBtn?.current?.clientHeight;
-      const elementTop = theAreaBtn?.current?.scrollWidth;
-      const elementPlus = elementTop + elementHeight;
+    }, []);
 
-      window.onscroll = function () {
-        if (
-          window.pageYOffset >= elementTop &&
-          window.pageYOffset <= elementPlus
-        ) {
-          setBtnPreSalesFollow(true);
-        } else if (window.pageYOffset <= elementPlus) {
-          setBtnPreSalesFollow(false);
-        }
-        if (
-          window.pageYOffset >= thisBanner ||
-          window.pageYOffset <= theHeight
-        ) {
-          removeModeFollowMain();
-        } else if (window.pageYOffset >= theHeight) {
-          activeModeFollowMain();
-        }
-      };
-    }, [
-      modePreSales,
-      activeModeFollowMain,
-      removeModeFollowMain,
-      showModalActive,
-    ]);
+    useEffect(() => {
+      window.addEventListener('scroll', onScrollGlobal);
+      return () => window.removeEventListener('scroll', onScrollGlobal);
+    }, [theAreaBtn, modePreSales, videoMobile]);
 
     return (
       <>
@@ -104,12 +94,12 @@ const Hero = forwardRef(
           <div className="container">
             <div className="text-wrapper">
               <>
-                <h4>{t('home:hero.subtitlePre')}</h4>
+                <h4>{modePreSales ? t('home:hero.subtitlePre') : t('home:hero.subtitle')}</h4>
                 <Countdown />
                 {modePreSales ? (
                   <div
                     className={
-                      'helperSpaceBtn ' + (btnPreSalesFollow && 'auxScroll')
+                      'helperSpaceBtn ' + (btnPreSalesFollow ? 'auxScroll' : '')
                     }
                   >
                     {showMsg ? (
@@ -118,34 +108,26 @@ const Hero = forwardRef(
                       <div
                         ref={theAreaBtn}
                         className={
-                          'preSales-btn ' + (btnPreSalesFollow && 'nowFollowUs')
+                          'preSales-btn ' + (btnPreSalesFollow ? 'nowFollowUs' : '')
                         }
                       >
-                        <div>
-                          <div
-                            onClick={() => showModalActive()}
-                            className="btn "
-                          >
-                            <span>{t('common:btn-comumnity')}</span>
-                          </div>
+                        <div onClick={() => setShowModal(true)} className="btn">
+                          <div>{t('common:btn-community-1')}</div>
+                          <div>{t('common:btn-community-2')}</div>
                         </div>
-
-                        <div>
-                          <div onClick={() => showActiveMsg()} className="btn ">
-                            <span>{t('common:btn-public')}</span>
-                          </div>
+                        <div onClick={() => showActiveMsg()} className="btn">
+                          <div>{t('common:btn-public-1')}</div>
+                          <div>{t('common:btn-public-2')}</div>
                         </div>
                       </div>
                     )}
                   </div>
                 ) : (
-                  <div>
-                    <div
-                      onClick={() => showModalActive()}
-                      className="btn-banner "
-                    >
-                      <span>{t('common:getHorpFull')}</span>
-                    </div>
+                  <div
+                    onClick={() => setShowModal(true)}
+                    className="btn-banner "
+                  >
+                    <span>{t('common:getHorpFull')}</span>
                   </div>
                 )}
               </>
