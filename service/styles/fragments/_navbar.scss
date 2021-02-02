@@ -102,13 +102,15 @@
     transition: all 350ms ease-in-out;
     transform: translateY(0%);
   }
+
   @include responsive(tablet) {
     display: flex;
   }
+
   .menu-desktop {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
 
     a {
       @include responsive(tablet) {
@@ -117,40 +119,46 @@
         }
       }
 
-      font-size: 24px;
-      line-height: 60px;
-      text-decoration: none;
-      display: flex;
       align-items: center;
-      text-align: center;
-      letter-spacing: 0.2px;
-      text-transform: uppercase;
-
       color: $hopr_grey;
-
+      display: flex;
+      font-size: 24px;
+      letter-spacing: 0.2px;
+      line-height: 60px;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
       transition: all 350ms ease-in-out;
+
       &:last-child {
         margin-bottom: 0;
       }
+
       &:hover {
-        transition: all 350ms ease-in-out;
         color: $hopr_bright_blue;
+        transition: all 350ms ease-in-out;
+      }
+
+      @include responsive(phone) {
+        line-height: 45px;
       }
     }
   }
 }
 
 .list-lang-sm {
-  list-style: none;
+  align-items: center;
   display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 20px 0 0 0;
+  padding: 0;
+
   @include responsive(tablet) {
-    margin: 0;
-    padding: 0;
     display: flex;
-    align-items: center;
-    bottom: 1rem;
-    position: absolute;
   }
+
   li {
     margin-right: 1rem;
     text-transform: uppercase;
