@@ -76,6 +76,12 @@ const data = [
     name: 'Matthew Edwards',
     label: 'Community Manager',
   },
+  {
+    link: '#',
+    img: '/assets/images/team/menglu_wang.png',
+    name: 'Qianchen "Q" Yu',
+    label: 'Decentralized Technology Architect',
+  },
 ];
 
 export default function PeopleBuild() {
