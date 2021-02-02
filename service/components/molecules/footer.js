@@ -65,29 +65,28 @@ const Footer = forwardRef(({ setVisibleNow }, ref) => {
           <div className="second-line-footer">
             <div>
               <p className="copy-footer">
-                &copy;{new Date().getFullYear()} {t('common:HORPAssociation')},{' '}
-                {t('common:allRights')}
+                &copy;{new Date().getFullYear()} HOPR Association, all rights reserved
               </p>
             </div>
             <div className="footer-menu">
               <ul>
                 <li>
-                  <Link href="/about-us">{t('common:contact')}</Link>
+                  <Link href="/about-us">Contact</Link>
                 </li>
                 <li>
-                  <Link href="/about-us">{t('common:aboutUs')}</Link>
+                  <Link href="/about-us">About us</Link>
                 </li>
                 <li>
-                  <Link href="/token#partners-section">{t('common:partners')}</Link>
+                  <Link href="/token#partners-section">Partners</Link>
                 </li>
                 <li>
-                  <Link href="/token#support-section">{t('common:support')}</Link>
+                  <Link href="/token#support-section">Support</Link>
                 </li>
                 <li>
-                  <Link href="/about-us">{t('common:FAQ')}</Link>
+                  <Link href="/about-us">FAQ</Link>
                 </li>
                 <li>
-                  <Link href="/about-us">{t('common:disclaimer')}</Link>
+                  <Link href="/about-us">Disclaimer</Link>
                 </li>
               </ul>
             </div>

@@ -12,27 +12,27 @@ export default function ItemsMenu() {
   const linkLocal = [
     {
       path: '/about-us',
-      name: 'menu:aboutUs',
+      name: 'About us',
     },
     {
       path: '/technology',
-      name: 'menu:technology',
+      name: 'Technology',
     },
     {
       path: '/book-of-hopr',
-      name: 'menu:book',
+      name: 'Book of HOPR',
     },
     {
       path: '/token',
-      name: 'menu:token',
+      name: 'Token',
     },
     {
       path: 'http://saentis.hoprnet.org/',
-      name: 'menu:joinTestnet',
+      name: 'Testnet',
     },
     {
       path: '/blog',
-      name: 'menu:blog',
+      name: 'Blog',
     },
   ];
 
@@ -58,7 +58,7 @@ export default function ItemsMenu() {
           return (
             <Link key={index} href={path}>
               <a className={router.pathname === path ? 'active' : ''}>
-                {t(name)}
+                {name}
               </a>
             </Link>
           );
