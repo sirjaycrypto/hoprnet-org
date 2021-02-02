@@ -1,8 +1,8 @@
 {
-    "aboutUs": "About us",
-    "technology": "Technology",
-    "book": "Book of HOPR",
-    "token": "Token",
-    "joinTestnet": "Testnet",
-    "blog": "Blog"
-}
+    "aboutUs": "menu_aboutUs",
+    "technology": "menu_technology",
+    "book": "menu_book",
+    "token": "menu_token",
+    "joinTestnet": "menu_joinTestnet",
+    "blog": "menu_blog"
+  }
