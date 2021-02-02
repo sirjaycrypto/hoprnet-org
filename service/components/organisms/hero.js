@@ -112,12 +112,12 @@ const Hero = forwardRef(
                         }
                       >
                         <div onClick={() => setShowModal(true)} className="btn">
-                          <div>{t('common:btn-community-1')}</div>
-                          <div>{t('common:btn-community-2')}</div>
+                          <div>{t('common:btnCommunity1')}</div>
+                          <div>{t('common:btnCommunity2')}</div>
                         </div>
                         <div onClick={() => showActiveMsg()} className="btn">
-                          <div>{t('common:btn-public-1')}</div>
-                          <div>{t('common:btn-public-2')}</div>
+                          <div>{t('common:btnPublic1')}</div>
+                          <div>{t('common:btnPublic2')}</div>
                         </div>
                       </div>
                     )}
