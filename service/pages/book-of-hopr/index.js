@@ -12,10 +12,6 @@ export default function Index() {
     <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
       <Layout>
         <motion.div className="container-book container">
-          <img
-            src="/assets/images/book-of-hopr-cover.jpg"
-            alt="LAUNCHING THE HOPR MAINNET"
-          />
           <div className="over-img">
             <motion.div
               className="type-btn "

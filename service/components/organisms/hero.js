@@ -19,7 +19,6 @@ const Hero = forwardRef(
   ) => {
     const [videoMobile, setVideoMobile] = useState(false);
     const [showMsg, setShowMsg] = useState(false);
-    const [btnPreSalesFollow, setBtnPreSalesFollow] = useState(false);
     const theAreaBtn = useRef(null);
     const area = useRef(null);
 
@@ -39,15 +38,13 @@ const Hero = forwardRef(
     };
 
     const onScrollGlobal = () => {
-      if (theAreaBtn.current && !videoMobile) {
-        const elementHeight = theAreaBtn.current.clientHeight;
-        const elementTop = theAreaBtn.current.scrollWidth;
-        const elementPlus = elementTop + elementHeight;
+      if (area.current && !videoMobile) {
+        const breakOffset = area.current.clientHeight + area.current.offsetTop;
 
-        if (window.pageYOffset > elementPlus) {
-          setBtnPreSalesFollow(true);
-        } else {
-          setBtnPreSalesFollow(false);
+        if (window.pageYOffset >= thisBanner || window.pageYOffset <= breakOffset) {
+          removeModeFollowMain();
+        } else if (window.pageYOffset >= breakOffset) {
+          activeModeFollowMain();
         }
       }
     };
@@ -59,7 +56,7 @@ const Hero = forwardRef(
     useEffect(() => {
       window.addEventListener('scroll', onScrollGlobal);
       return () => window.removeEventListener('scroll', onScrollGlobal);
-    }, [theAreaBtn, modePreSales, videoMobile]);
+    }, [theAreaBtn, modePreSales, videoMobile, thisBanner]);
 
     return (
       <>
@@ -97,36 +94,24 @@ const Hero = forwardRef(
                 <h4>{modePreSales ? t('home:hero.subtitlePre') : t('home:hero.subtitle')}</h4>
                 <Countdown />
                 {modePreSales ? (
-                  <div
-                    className={
-                      'helperSpaceBtn ' + (btnPreSalesFollow ? 'auxScroll' : '')
-                    }
-                  >
+                  <div className='helperSpaceBtn'>
                     {showMsg ? (
                       <AlertMsg showActiveMsg={() => showActiveMsg()} />
                     ) : (
-                      <div
-                        ref={theAreaBtn}
-                        className={
-                          'preSales-btn ' + (btnPreSalesFollow ? 'nowFollowUs' : '')
-                        }
-                      >
+                      <div ref={theAreaBtn} className='preSales-btn'>
                         <div onClick={() => setShowModal(true)} className="btn">
-                          <div>{t('common:btn-community-1')}</div>
-                          <div>{t('common:btn-community-2')}</div>
+                          <div>{t('common:btnCommunity1')}</div>
+                          <div>{t('common:btnCommunity2')}</div>
                         </div>
                         <div onClick={() => showActiveMsg()} className="btn">
-                          <div>{t('common:btn-public-1')}</div>
-                          <div>{t('common:btn-public-2')}</div>
+                          <div>{t('common:btnPublic1')}</div>
+                          <div>{t('common:btnPublic2')}</div>
                         </div>
                       </div>
                     )}
                   </div>
                 ) : (
-                  <div
-                    onClick={() => setShowModal(true)}
-                    className="btn-banner "
-                  >
+                  <div onClick={() => setShowModal(true)} className="btn-banner">
                     <span>{t('common:getHorpFull')}</span>
                   </div>
                 )}

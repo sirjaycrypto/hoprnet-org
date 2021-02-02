@@ -37,62 +37,64 @@ const Footer = forwardRef(({ setVisibleNow }, ref) => {
   const { t } = useTranslation();
 
   return (
-    <footer ref={ref} id="FOOTER">
-      <div className="container padding-section-aux">
-        <div className="first-line-footer">
-          <div className="footer-icon">
-            <img
-              src="/assets/icons/horp_icon.svg"
-              alt="The HOPR-Token footer"
-            />
+    <>
+      <footer ref={ref} id="FOOTER">
+        <div className="container padding-section-aux">
+          <div className="first-line-footer">
+            <div className="footer-icon">
+              <img
+                src="/assets/icons/horp_icon.svg"
+                alt="The HOPR-Token footer"
+              />
+            </div>
+            <div className="footer-social">
+              <ul className="list-reset">
+                {dataInfo.map((e, index) => {
+                  const { img, link } = e;
+                  return (
+                    <li key={index}>
+                      <a href={link} target="_blank" rel="noopener noreferrer">
+                        <img src={img} alt="The HOPR-Token NOW" />
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           </div>
-          <div className="footer-social">
-            <ul className="list-reset">
-              {dataInfo.map((e, index) => {
-                const { img, link } = e;
-                return (
-                  <li key={index}>
-                    <a href={link} target="_blank" rel="noopener noreferrer">
-                      <img src={img} alt="The HOPR-Token NOW" />
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
+          <div className="second-line-footer">
+            <div>
+              <p className="copy-footer">
+                &copy;{new Date().getFullYear()} {t('common:HORPAssociation')},{' '}
+                {t('common:allRights')}
+              </p>
+            </div>
+            <div className="footer-menu">
+              <ul>
+                <li>
+                  <Link href="/about-us">{t('common:contact')}</Link>
+                </li>
+                <li>
+                  <Link href="/about-us">{t('common:aboutUs')}</Link>
+                </li>
+                <li>
+                  <Link href="/token#partners-section">{t('common:partners')}</Link>
+                </li>
+                <li>
+                  <Link href="/token#support-section">{t('common:support')}</Link>
+                </li>
+                <li>
+                  <Link href="/about-us">{t('common:FAQ')}</Link>
+                </li>
+                <li>
+                  <Link href="/about-us">{t('common:disclaimer')}</Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div className="second-line-footer">
-          <div>
-            <p className="copy-footer">
-              &copy;{new Date().getFullYear()} {t('common:HORPAssociation')},{' '}
-              {t('common:allRights')}
-            </p>
-          </div>
-          <div className="footer-menu">
-            <ul>
-              <li>
-                <Link href="/about-us">{t('common:contact')}</Link>
-              </li>
-              <li>
-                <Link href="/about-us">{t('common:aboutUs')}</Link>
-              </li>
-              <li>
-                <Link href="/about-us">{t('common:partners')}</Link>
-              </li>
-              <li>
-                <Link href="/about-us">{t('common:support')}</Link>
-              </li>
-              <li>
-                <Link href="/about-us">{t('common:FAQ')}</Link>
-              </li>
-              <li>
-                <Link href="/about-us">{t('common:disclaimer')}</Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </>
   );
 });
 

@@ -1,8 +1,6 @@
 import React from 'react';
-import useTranslation from 'next-translate/useTranslation';
 
 export default function HoperIs() {
-  const { t } = useTranslation();
   const dataTop = [
     {
       title: 'Enabling Data Privacy',
@@ -25,33 +23,14 @@ export default function HoperIs() {
       forClient: 'Personal',
       title: 'Hackathons + Community',
       img: 'assets/icons/with-blue-stroke/love-heart-keyhole.png',
-      main: `From testnet game sessions to reward bounties, join our
-      <a
-        href="https://t.me/hoprnet"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-color-high underline"
-      >
-        Telegram
-      </a> ${'   '}
-      to become part of our growing community.
-      <br />`,
+      main: `From testnet game sessions to reward bounties, join our <a href="https://t.me/hoprnet" target="_blank" rel="noopener noreferrer" className="text-color-high underline">Telegram</a> to become part of our growing community.<br />`,
       delayTime: '200',
     },
     {
       forClient: 'Professional',
       title: 'Your company',
       img: 'assets/icons/with-blue-stroke/building-modern.png',
-      main: ` HOPR is providing worry-free privacy to everyone.${' '}
-      <a
-        href="/partners"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-color-high underline"
-      >
-        Reach out to us
-      </a> ${' '}
-      if you and your customers deserve the best.`,
+      main: `HOPR is providing worry-free privacy to everyone. <a href="/partners" target="_blank" rel="noopener noreferrer" className="text-color-high underline">Reach out to us</a> if you and your customers deserve the best.`,
       delayTime: '250',
     },
   ];

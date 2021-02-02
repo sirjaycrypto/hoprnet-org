@@ -7,10 +7,19 @@
   }
 
   .btn {
+    align-items: center;
     background: linear-gradient(90deg, #0000db 0%, #292941 100%);
     border-radius: 100px;
-    padding: 0.8em 1.5em;
-    transition: all 600ms ease-in-out;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    font-weight: 600;
+    justify-content: center;
+    letter-spacing: 0.2975px;
+    padding: 0.25em 1.5em;
+    text-align: center;
+    transition: all 350ms ease-in-out;
     width: 200px;
 
     &:first-child {
@@ -22,31 +31,13 @@
       }
     }
 
-    @include responsive(phone) {
-      width: 180px;
+    @include responsive(tablet) {
+      font-size: 24px;
     }
 
-    div {
-      align-items: center;
-      color: #ffffff;
-      display: flex;
-      font-size: 30px;
-      font-weight: 600;
-      justify-content: center;
-      letter-spacing: 0.2975px;
-      line-height: inherit;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      text-transform: capitalize;
-
-      @include responsive(tablet) {
-        font-size: 24px;
-      }
-
-      @include responsive(phone) {
-        font-size: 20px;
-      }
+    @include responsive(phone) {
+      font-size: 20px;
+      width: 180px;
     }
   }
 }
