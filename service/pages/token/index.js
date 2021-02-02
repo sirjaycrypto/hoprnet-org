@@ -39,7 +39,7 @@ export default function Index() {
     }
 
     if (bannerArea.current) {
-      setThisBanner(bannerArea.current.offsetTop);
+      setThisBanner(bannerArea.current.offsetTop - (bannerArea.current.clientHeight / 2));
     }
   }, [isVisibleTokenRel, currentElementTokenRel]);
 
