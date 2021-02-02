@@ -56,20 +56,21 @@ nav {
 }
 
 .menu-mobile {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  top: 0;
-  justify-content: center;
   background: $hopr_yellow;
-  height: 100vh;
   box-sizing: border-box;
+  display: flex;
+  height: 100vh;
+  left: 0;
+  justify-content: center;
   overflow: hidden;
   position: fixed;
-  width: 100%;
-  z-index: 4;
+  top: 0;
   transform: translateY(-100%);
   transition: all 350ms ease-in-out;
+  width: 100%;
+  z-index: 4;
+
   &.open {
     transition: all 350ms ease-in-out;
     transform: translateY(0%);
