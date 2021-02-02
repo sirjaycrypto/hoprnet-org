@@ -41,7 +41,6 @@ const Hero = forwardRef(
       if (area.current && !videoMobile) {
         const breakOffset = area.current.clientHeight + area.current.offsetTop;
 
-        console.log(`pageYOffset: ${window.pageYOffset}, thisBanner: ${thisBanner}, breakOffset: ${breakOffset}`);
         if (window.pageYOffset >= thisBanner || window.pageYOffset <= breakOffset) {
           removeModeFollowMain();
         } else if (window.pageYOffset >= breakOffset) {
