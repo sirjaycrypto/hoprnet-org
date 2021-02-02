@@ -1,20 +1,27 @@
 .container-book {
-  display: flex;
-  justify-content: center;
   align-items: center;
+  background-image: url('/assets/images/book-of-hopr-cover.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
   height: 80vh;
+  justify-content: center;
   padding-bottom: 120px;
+
   img {
     position: absolute;
     z-index: 0;
     object-fit: cover;
   }
+
   .over-img {
     position: absolute;
     z-index: 1;
+
     a {
       text-decoration: none;
     }
+
     span {
       color: #fff;
     }

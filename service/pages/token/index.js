@@ -22,12 +22,12 @@ export default function Index() {
   const [visibleNow, setVisibleNow] = useState('');
   const [modePreSales, setModePreSales] = useState(false);
   const [showModal, setShowModal] = useState(undefined);
-  //
-  const [thisBanner, setThisBanner] = useState('');
-  const heroInfo = useRef('');
-  const btnToFollow = useRef('');
-  const bannerArea = useRef('');
-  //false
+
+  const [thisBanner, setThisBanner] = useState(0);
+  const heroInfo = useRef();
+  const btnToFollow = useRef();
+  const bannerArea = useRef();
+
   const [isVisibleTokenRel, currentElementTokenRel] = useVisibility(0);
   const [animateChart, setAnimateChart] = useState(false);
   const [btnFollow, srtBtnFollow] = useState(false);
@@ -37,12 +37,32 @@ export default function Index() {
     if (isVisibleTokenRel) {
       setVisibleNow(currentElementTokenRel.current.id);
     }
-    if (visibleNow === 'TOKEN-RELEASE') {
+
+    if (bannerArea.current) {
+      setThisBanner(bannerArea.current.offsetTop - (bannerArea.current.clientHeight / 2));
+    }
+  }, [isVisibleTokenRel, currentElementTokenRel]);
+
+  useEffect(() => {
+    if (visibleNow === 'TOKEN-RELEASE' && !animateChart) {
       setAnimateChart(true);
     }
-    const scrollByBanner = bannerArea.current.offsetTop;
-    setThisBanner(scrollByBanner);
-  }, [isVisibleTokenRel, currentElementTokenRel]);
+  }, [visibleNow]);
+
+  useEffect(() => {
+    const location = document.location.href;
+
+    if (location.indexOf('#') > -1) {
+      const id = location.substr(location.indexOf('#') + 1, location.length),
+        element = document.getElementById(id);
+
+      if (element) {
+        setTimeout(function () {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 1400);
+      }
+    }
+  }, []);
 
   const changeModePreSale = () => {
     setModePreSales(!modePreSales);
@@ -65,9 +85,9 @@ export default function Index() {
         modePreSales={modePreSales}
         thisBanner={thisBanner}
         setShowModal={setShowModal}
-        changeModePreSale={() => changeModePreSale()}
-        activeModeFollowMain={() => activeModeFollowMain()}
-        removeModeFollowMain={() => removeModeFollowMain()}
+        changeModePreSale={changeModePreSale}
+        activeModeFollowMain={activeModeFollowMain}
+        removeModeFollowMain={removeModeFollowMain}
       />
       <HomeHeadline modePreSales={modePreSales} setShowModal={setShowModal} />
       <section id="video-area" className="video-home ">
@@ -88,15 +108,25 @@ export default function Index() {
       />
       <section id="BANNER" className="banner-CTA" ref={bannerArea}>
         <div className="container">
-          <h3>{t('home:banner.label')}</h3>
+          <h3>{!modePreSales ? t('home:banner.label') : t('home:banner.labelPreSales')}</h3>
         </div>
-        <div
-          className={!modePreSales ? (btnFollow ? 'nowFollowUs' : '') : ''}
-          ref={btnToFollow}
-        >
-          <div className="btn-banner" onClick={() => setShowModal(true)}>
-            <span>{t('home:banner.button')}</span>
-          </div>
+        <div className={btnFollow ? 'content-buttons nowFollowUs' : 'content-buttons'} ref={btnToFollow}>
+          {modePreSales ? (
+            <>
+              <div onClick={() => setShowModal(true)} className="btn-banner first-button">
+                <div>{t('common:btnCommunity1')}</div>
+                <div>{t('common:btnCommunity2')}</div>
+              </div>
+              <div className="btn-banner">
+                <div>{t('common:btnPublic1')}</div>
+                <div>{t('common:btnPublic2')}</div>
+              </div>
+            </>
+          ) : (
+            <div className="btn-banner" onClick={() => setShowModal(true)}>
+              <span>{t('home:banner.button')}</span>
+            </div>
+          )}
         </div>
       </section>
       <HomeRoadMap />

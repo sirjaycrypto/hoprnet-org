@@ -6,7 +6,7 @@ export default function Countdown() {
   const [minutes, setMinutes] = useState('');
   const [seconds, setSeconds] = useState('');
 
-  const countDownDate = new Date('Jan 31, 2021 0:00:00').getTime();
+  const countDownDate = new Date('Feb 28, 2021 0:00:00').getTime();
   function addCeroIfNeed(num) {
     let result = ('0' + num).slice(-2);
     return result;

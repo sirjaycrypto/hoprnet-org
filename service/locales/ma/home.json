@@ -18,6 +18,7 @@
   },
   "banner": {
     "label": "home_banner_label",
+    "labelPreSales": "home_banner_labelPreSales",
     "button": "home_banner_button"
   },
   "features": {

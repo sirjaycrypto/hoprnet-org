@@ -1,13 +1,13 @@
 {
   "association": {
-    "itemA": "about_association_itemA",
-    "itemB": "about_association_itemB",
-    "itemC": "about_association_itemC",
-    "itemD": "about_association_itemD",
-    "paragraphA": "about_association_paragraphA",
-    "paragraphB": "about_association_paragraphB",
-    "subtitle": "about_association_subtitle",
-    "title": "about_association_title"
+    "itemA":"Avado, CH",
+    "itemB":"Empathy PR, US",
+    "itemC":"S.N. NONI CORPORATION LTD, CY",
+    "itemD":"The Wandering Editor, UK",
+    "paragraphA":"The HOPR protocol is a digital commons that is currently being built by ",
+    "paragraphB":"Do you want to become a member of the association?",
+    "subtitle":"Grant Receivers",
+    "title":"Board Of Association"
   },
   "governance": {
     "paragraphLeftA": "about_governance_paragraphLeftA",
@@ -17,12 +17,12 @@
     "title": "about_governance_title"
   },
   "hero": {
-    "paragraphA": "about_hero_paragraphA",
-    "paragraphB": "about_hero_paragraphB",
-    "paragraphC": "about_hero_paragraphC",
-    "paragraphD": "about_hero_paragraphD",
-    "paragraphE": "about_hero_paragraphE",
-    "title": "about_hero_title"
+    "paragraphA": "We're a team of highly motivated experts with a single shared goal: universal data privacy.",
+    "paragraphB": "With the HOPR protocol, companies and users can decide for themselves who can view their data and who can't.",
+    "paragraphC": "With the HOPR protocol, data security is solved, letting everyone focus on helping people through digitalization.",
+    "paragraphD": "The HOPR community is building the digital privacy landscape of tomorrow. We invite everybody to join our movement.",
+    "paragraphE": "Learn more about the team that builds the HOPR network. ",
+    "title": "Independent, Incorruptible, And Indestructible"
   },
   "partners": {
     "btnLabel": "about_partners_btnLabel",

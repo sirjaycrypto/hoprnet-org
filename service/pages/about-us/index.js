@@ -72,26 +72,15 @@ export default function Index() {
             <div>
               <p data-aos="fade-down" data-aos-delay="300">
                 {t('about:hero.paragraphA')}
-                <br />
-                <br />
+                <br /><br />
                 {t('about:hero.paragraphB')}
-                <br />
-                <br />
+                <br /><br />
                 {t('about:hero.paragraphC')}
-                <br />
-                <br />
+                <br /><br />
                 {t('about:hero.paragraphD')}
-                <br />
-                <br />
+                <br /><br />
                 {t('about:hero.paragraphE')}
-                <a
-                  className="link-out"
-                  href="https://hopr.swiss/who-is-HOPR#team"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  {t('common:hereLabel')}
-                </a>
+                <a className="link-out" href="https://hopr.swiss/who-is-HOPR#team" target="_blank" rel="noopener">{t('common:hereLabel')}</a>
               </p>
             </div>
           </div>
@@ -188,9 +177,7 @@ export default function Index() {
             <div className="container">
               <p>
                 {t('about:association.paragraphA')}
-                <a href="https://hopr.swiss/who-is-HOPR#team">
-                  {t('common:HOPRServices')}
-                </a>
+                <a href="https://hopr.swiss/who-is-HOPR#team">{t('common:HOPRServices')}</a>
               </p>
               <div className="section-receivers">
                 <h3>{t('about:association.subtitle')}</h3>
