@@ -44,6 +44,21 @@ export default function Index() {
     setThisBanner(scrollByBanner);
   }, [isVisibleTokenRel, currentElementTokenRel]);
 
+  useEffect(() => {
+    const location = document.location.href;
+
+    if (location.indexOf('#') > -1) {
+      const id = location.substr(location.indexOf('#') + 1, location.length),
+        element = document.getElementById(id);
+
+      if (element) {
+        setTimeout(function () {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 1400);
+      }
+    }
+  }, []);
+
   const changeModePreSale = () => {
     setModePreSales(!modePreSales);
   };
