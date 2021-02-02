@@ -1,56 +1,83 @@
-nav {
+.wrapper-menu {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
   height: 54px;
-  background: transparent;
-  top: 0;
-  position: absolute;
-  z-index: 6;
-  transition: all 350ms ease-in-out;
-  @include responsive(tablet) {
-    height: 52px;
-  }
-  &.add-shadow {
-    background: rgba(255, 255, 255, 0.97);
-  }
-  .logo-nav {
-    width: 90px;
-    @include responsive(tablet) {
-      width: 70px;
-    }
-  }
-  & > div {
-    display: flex;
+  width: 100%;
+
+  nav {
     align-items: center;
-    justify-content: space-between;
-  }
-  .menu-desktop {
+    background: transparent;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    height: 54px;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    transition: all 350ms ease-in-out;
     width: 100%;
+    z-index: 6;
+
     @include responsive(tablet) {
-      display: none;
+      height: 52px;
     }
-    a {
-      text-decoration: none;
-      text-transform: uppercase;
-      margin: 0 0.8rem;
-      font-size: 1rem;
-      line-height: 1.875rem;
-      letter-spacing: -0.1px;
-      font-weight: 400;
-      color: $hopr_black;
-      transition: all 350ms ease-in-out;
-      &.active {
-        border-bottom: 1px solid $hopr_black;
+
+    &.add-shadow {
+      background: rgba(255, 255, 255, 0.97);
+    }
+
+    .logo-nav {
+      width: 90px;
+
+      @include responsive(tablet) {
+        width: 70px;
       }
-      &:hover {
+    }
+
+    & > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .menu-desktop {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 100%;
+
+      @include responsive(tablet) {
+        display: none;
+      }
+
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        margin: 0 0.8rem;
+        font-size: 1rem;
+        line-height: 1.875rem;
+        letter-spacing: -0.1px;
+        font-weight: 400;
+        color: $hopr_black;
         transition: all 350ms ease-in-out;
-        color: $hopr_bright_blue;
+
+        &.active {
+          border-bottom: 1px solid $hopr_black;
+        }
+
+        &:hover {
+          transition: all 350ms ease-in-out;
+          color: $hopr_bright_blue;
+        }
       }
+    }
+
+    &.nav-style-no-home {
+      background: #fff;
+      position: relative;
+    }
+
+    &.add-scroll-menu {
+      position: fixed;
+      transition: all 350ms ease-in-out;
+      background: #fff;
     }
   }
 }
@@ -212,21 +239,10 @@ nav {
   }
 }
 
-.nav-style-no-home {
-  background: #fff;
-  position: relative;
-}
-
 .specialNav{
   height: 54px;
 
   @include responsive(tablet) {
     height: 52px;
   }
-}
-
-.add-scroll-menu {
-  position: fixed;
-  transition: all 350ms ease-in-out;
-  background: #fff;
 }

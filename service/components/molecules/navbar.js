@@ -20,11 +20,11 @@ export default function Navbar({ visibleNow }) {
     if (window.pageYOffset === 0) {
       setYouDown(false);
     } else {
-      setYouDown(true);
-      setActivaMenu(false);
-      if (isTheToken()) {
-        setYouDown(false);
+      if (!isTheToken()) {
+        setYouDown(true);
       }
+
+      setActivaMenu(false);
     }
   };
 
@@ -39,14 +39,11 @@ export default function Navbar({ visibleNow }) {
 
   return (
     <>
-      <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
+      <motion.div className="wrapper-menu" initial="initial" animate="animate" exit={{ opacity: 0 }}>
         <motion.nav
           variants={fadeInDown}
           id="menu"
-          className={
-            (youDown && 'add-scroll-menu ') ||
-            ('nav-style-no-home')
-          }
+          className={youDown ? 'add-scroll-menu' : 'nav-style-no-home'}
           transition={{ delay: 0.8 }}
         >
           <div className={'container-sm ' + (activaMenu ? 'add-shadow' : '')}>
@@ -68,9 +65,7 @@ export default function Navbar({ visibleNow }) {
       </motion.div>
       <MenuMobile
         activaMenu={activaMenu}
-        setActivaMenu={() => {
-          setActivaMenu();
-        }}
+        setActivaMenu={setActivaMenu}
       />
     </>
   );
