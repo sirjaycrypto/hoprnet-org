@@ -87,6 +87,7 @@
   background: $hopr_yellow;
   box-sizing: border-box;
   display: flex;
+  flex-direction: column;
   height: 100vh;
   left: 0;
   justify-content: center;
@@ -146,6 +147,14 @@
   }
 }
 
+.list-container {
+  background-color: white;
+  height: auto;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  width: 100%;
+}
+
 .list-lang-sm {
   align-items: center;
   display: none;
@@ -166,9 +175,11 @@
     @include responsive(tablet) {
       font-size: 18px;
       letter-spacing: 0.151667px;
-      margin-right: 14px;
+      margin-right: 0px;
+      width: 25%;
       &.is-current {
         a {
+          display: initial;
           border-bottom: 2px solid $hopr_grey;
           line-height: initial;
         }
