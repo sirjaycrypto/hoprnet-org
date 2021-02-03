@@ -8,7 +8,11 @@ const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
       img: '/assets/backed_by_logo/Binance_labs.svg',
       url: 'https://binancelabs.substack.com/',
       title: 'Binance_labs',
-      is_break: true,
+    },
+    {
+      img: '/assets/backed_by_logo/stakely.png',
+      url: 'https://stakely.vc/',
+      title: 'Stakely',
     },
     {
       img: '/assets/backed_by_logo/01_Caballeros_Logo.svg',
@@ -29,6 +33,11 @@ const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
       img: '/assets/backed_by_logo/04_AU21CAPITAL_Logo.svg',
       url: 'https://au21.capital/',
       title: 'au21',
+    },
+    {
+      img: '/assets/backed_by_logo/vendetta_capital.png',
+      url: 'https://www.vendetta.capital/',
+      title: 'Vendetta',
     },
   ];
 
