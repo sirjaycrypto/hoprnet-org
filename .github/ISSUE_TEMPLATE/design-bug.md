@@ -2,8 +2,8 @@
 name: Design bug
 about: Anything related to spacings, wrong implementation, etc.
 title: "[ design bug ] Change title"
-labels: design
-assignees: ''
+labels: type:design, workflow:new issue
+assignees: jjperezaguinaga
 
 ---
 
