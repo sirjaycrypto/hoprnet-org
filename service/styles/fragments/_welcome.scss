@@ -34,11 +34,6 @@
     height: 70%;
     box-sizing: border-box;
     width: 100%;
-
-    @include responsive(phone) {
-      justify-content: flex-end;
-      padding-bottom: 2vh;
-    }
     .main-labels {
       z-index: 3;
       opacity: 0;
