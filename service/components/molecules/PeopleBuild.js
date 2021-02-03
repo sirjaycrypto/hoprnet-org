@@ -78,7 +78,7 @@ const data = [
   },
   {
     link: '#',
-    img: '/assets/images/team/menglu_wang.png',
+    img: '/assets/images/team/qianchen_yu.png',
     name: 'Qianchen "Q" Yu',
     label: 'Decentralized Technology Architect',
   },

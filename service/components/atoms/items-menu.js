@@ -1,54 +1,36 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import useTranslation from 'next-translate/useTranslation';
-import { listLang } from '../../util/listLanguage';
 
 export default function ItemsMenu() {
   const router = useRouter();
-  const [translateY, setTranslateY] = useState(-102);
-  const [flag, setFlag] = useState(false);
-  const { t, lang } = useTranslation();
   const linkLocal = [
     {
       path: '/about-us',
-      name: 'menu:aboutUs',
+      name: 'About us',
     },
     {
       path: '/technology',
-      name: 'menu:technology',
+      name: 'Technology',
     },
     {
       path: '/book-of-hopr',
-      name: 'menu:book',
+      name: 'Book of HOPR',
     },
     {
       path: '/token',
-      name: 'menu:token',
+      name: 'Token',
     },
     {
       path: 'http://saentis.hoprnet.org/',
-      name: 'menu:joinTestnet',
+      name: 'Testnet',
     },
     {
       path: '/blog',
-      name: 'menu:blog',
+      name: 'Blog',
     },
   ];
 
-  const isTheToken = () => {
-    return router.pathname === '/token';
-  };
-
-  const clickMenu = () => {
-    if (flag === false) {
-      setTranslateY(0);
-      setFlag(true);
-    } else {
-      setTranslateY(-102);
-      setFlag(false);
-    }
-  };
 
   return (
     <>
@@ -58,28 +40,11 @@ export default function ItemsMenu() {
           return (
             <Link key={index} href={path}>
               <a className={router.pathname === path ? 'active' : ''}>
-                {t(name)}
+                {name}
               </a>
             </Link>
           );
         })}
-        {isTheToken() && (
-          <ul className="list-lang-sm">
-            {listLang.map((e, i) => {
-              const { info } = e;
-              return (
-                <Link href="/" locale={info} key={i}>
-                  <li
-                    onClick={() => clickMenu()}
-                    className={lang === info ? 'is-current' : ''}
-                  >
-                    <a>{info}</a>
-                  </li>
-                </Link>
-              );
-            })}
-          </ul>
-        )}
       </div>
     </>
   );

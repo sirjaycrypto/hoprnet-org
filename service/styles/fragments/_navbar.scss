@@ -87,10 +87,12 @@
   background: $hopr_yellow;
   box-sizing: border-box;
   display: flex;
+  flex-direction: column;
   height: 100vh;
+  justify-content: stretch;
   left: 0;
-  justify-content: center;
   overflow: hidden;
+  padding-top: 60px;
   position: fixed;
   top: 0;
   transform: translateY(-100%);
@@ -111,6 +113,8 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    flex: 1;
+    justify-content: center;
 
     a {
       @include responsive(tablet) {
@@ -140,45 +144,66 @@
       }
 
       @include responsive(phone) {
-        line-height: 45px;
+        line-height: 40px;
       }
     }
   }
-}
 
-.list-lang-sm {
-  align-items: center;
-  display: none;
-  flex-wrap: wrap;
-  justify-content: center;
-  list-style: none;
-  margin: 20px 0 0 0;
-  padding: 0;
-
-  @include responsive(tablet) {
+  .list-container {
+    background-color: white;
+    box-sizing: border-box;
     display: flex;
-  }
+    flex: 0 auto;
+    padding: 20px;
+    height: auto;
+    width: 100%;
 
-  li {
-    margin-right: 1rem;
-    text-transform: uppercase;
-    font-size: 1.125rem;
-    @include responsive(tablet) {
-      font-size: 18px;
-      letter-spacing: 0.151667px;
-      margin-right: 14px;
-      &.is-current {
-        a {
-          border-bottom: 2px solid $hopr_grey;
-          line-height: initial;
+    .list-lang-sm {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+
+      li {
+        box-sizing: border-box;
+        font-size: 1.125rem;
+        margin-right: 1rem;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 14px;
+        width: auto;
+
+        @include responsive(tablet) {
+          font-size: 18px;
+          letter-spacing: 0.151667px;
+          margin-right: 0px;
+        }
+
+        @include responsive(phone) {
+          padding: 10px;
+          width: 25%;
+        }
+
+        &.is-current {
+          a {
+            display: initial;
+            border-bottom: 2px solid $hopr_grey;
+            line-height: initial;
+          }
+        }
+
+        &:last-child {
+          margin-right: 0;
         }
       }
     }
-    &:last-child {
-      margin-right: 0;
-    }
   }
 }
+
 
 .icon-menu {
   cursor: pointer;

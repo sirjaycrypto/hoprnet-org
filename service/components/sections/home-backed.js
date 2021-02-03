@@ -8,7 +8,11 @@ const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
       img: '/assets/backed_by_logo/Binance_labs.svg',
       url: 'https://binancelabs.substack.com/',
       title: 'Binance_labs',
-      is_break: true,
+    },
+    {
+      img: '/assets/backed_by_logo/stakely.png',
+      url: 'https://stakely.vc/',
+      title: 'Stakely',
     },
     {
       img: '/assets/backed_by_logo/01_Caballeros_Logo.svg',
@@ -29,6 +33,11 @@ const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
       img: '/assets/backed_by_logo/04_AU21CAPITAL_Logo.svg',
       url: 'https://au21.capital/',
       title: 'au21',
+    },
+    {
+      img: '/assets/backed_by_logo/vendetta_capital.png',
+      url: 'https://www.vendetta.capital/',
+      title: 'Vendetta',
     },
   ];
 
@@ -61,26 +70,17 @@ const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
           <div className="item-back-container">
             {data.map((e, index) => {
               const { img, url, title, is_break } = e;
-              if (!is_break) {
-                return (
-                  <a
-                    href={url}
-                    key={index}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img src={img} alt={title} />
-                  </a>
-                );
-              } else {
-                return (
-                  <div className="break-line" key={index}>
-                    <a href={url} target="_blank" rel="noopener noreferrer">
-                      <img src={img} alt={title} />
-                    </a>
-                  </div>
-                );
-              }
+
+              return (
+                <a
+                  href={url}
+                  key={index}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img className={title === 'Stakely' ? 'img-to-black' : ''} src={img} alt={title} />
+                </a>
+              );
             })}
           </div>
           <h2 id="partners-section">{t('home:back.titleA')}</h2>

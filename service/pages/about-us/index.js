@@ -8,6 +8,7 @@ import Jobs from '../../components/molecules/jobs';
 import ProfileAssociation from '../../components/molecules/profile-association';
 import PeopleBuild from '../../components/molecules/PeopleBuild';
 import ContactPlus from '../../components/molecules/contact-plus';
+import HomeInvestors from '../../components/sections/home-investors';
 
 import { loadNamespaces } from '../_app';
 
@@ -72,15 +73,26 @@ export default function Index() {
             <div>
               <p data-aos="fade-down" data-aos-delay="300">
                 {t('about:hero.paragraphA')}
-                <br /><br />
+                <br />
+                <br />
                 {t('about:hero.paragraphB')}
-                <br /><br />
+                <br />
+                <br />
                 {t('about:hero.paragraphC')}
-                <br /><br />
+                <br />
+                <br />
                 {t('about:hero.paragraphD')}
-                <br /><br />
+                <br />
+                <br />
                 {t('about:hero.paragraphE')}
-                <a className="link-out" href="https://hopr.swiss/who-is-HOPR#team" target="_blank" rel="noopener">{t('common:hereLabel')}</a>
+                <a
+                  className="link-out"
+                  href="https://hopr.swiss/who-is-HOPR#team"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  {t('common:hereLabel')}
+                </a>
               </p>
             </div>
           </div>
@@ -129,6 +141,7 @@ export default function Index() {
             </div>
           </div>
         </section>
+        <HomeInvestors />
         <section className="continue-yellow padding-section-aux invert-color ">
           <div className="container">
             <div>
@@ -168,7 +181,10 @@ export default function Index() {
             </div>
           </div>
         </section>
-        <section id="team-section" className="section-board-association continue-yellow padding-section-aux invert-color">
+        <section
+          id="team-section"
+          className="section-board-association continue-yellow padding-section-aux invert-color"
+        >
           <div>
             <h2>{t('about:association.title')}</h2>
           </div>
@@ -177,7 +193,9 @@ export default function Index() {
             <div className="container">
               <p>
                 {t('about:association.paragraphA')}
-                <a href="https://hopr.swiss/who-is-HOPR#team">{t('common:HOPRServices')}</a>
+                <a href="https://hopr.swiss/who-is-HOPR#team">
+                  {t('common:HOPRServices')}
+                </a>
               </p>
               <div className="section-receivers">
                 <h3>{t('about:association.subtitle')}</h3>
