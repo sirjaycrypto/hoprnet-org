@@ -4,16 +4,18 @@
   @include responsive(tablet) {
     padding: 50px 0 182px 0;
   }
+
   @include responsive(phone) {
     padding: 24px 0 50px 0;
   }
+
   h2 {
+    color: $hopr_grey;
     font-size: 60px;
     font-weight: 400;
-
-    color: $hopr_grey;
-    text-align: center;
     margin: 120px 0 0 0;
+    text-align: center;
+
     @include responsive(tablet) {
       justify-content: space-between;
       margin: 50px 0;
@@ -21,57 +23,11 @@
     @include responsive(phone) {
       font-size: 30px;
     }
-
   }
+
   p {
     font-size: 1em;
     letter-spacing: 0.208333px;
     color: $hopr_grey;
-  }
-  .item-back-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 50px auto;
-    width: 80%;
-
-    .break-line {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-    }
-
-    @include responsive(tablet) {
-      width: 100%;
-    }
-    @include responsive(phone) {
-      margin: 18px auto 50px auto;
-    }
-    a {
-      width: 200px;
-      height: 120px;
-      background: transparent;
-      padding: 0.5em;
-      margin: 0.5em 0;
-      box-sizing: border-box;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      img {
-        width: 100%;
-        object-fit: contain;
-
-      }
-      p {
-        padding: 0;
-        margin: 0;
-      }
-      @include responsive(tablet) {
-        width: 47%;
-        width: 180px;
-        height: 100px;
-      }
-    }
   }
 }
