@@ -6,6 +6,7 @@ import Link from 'next/link';
 import useTranslation from 'next-translate/useTranslation';
 
 export default function MenuMobile({ activaMenu }) {
+  const [translateY, setTranslateY] = useState(-102);
   const [flag, setFlag] = useState(false);
   const router = useRouter();
   const { t, lang } = useTranslation();
