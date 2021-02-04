@@ -44,6 +44,7 @@ const dataVALUES = [
     delayTime: '200',
   },
 ];
+
 const SectionContainer = ({ children }) => {
   return (
     <section className="continue-hero-internal padding-section-aux invert-color ">
@@ -53,6 +54,12 @@ const SectionContainer = ({ children }) => {
 };
 export default function Index() {
   const { t } = useTranslation();
+
+  const onClickApply = () => {
+    window.open(
+      'https://docs.google.com/forms/d/e/1FAIpQLSfpw9alXYGO4WvWS8HTF-5keGk_OFshrIIcGzifhfuWs7IN7g/viewform'
+    );
+  };
 
   return (
     <div className="partners-page">
@@ -132,7 +139,7 @@ export default function Index() {
               breakLine: <br />,
             }}
           />
-          <div className="btn-align">
+          <div className="btn-align" onClick={onClickApply}>
             <div className="type-btn">
               <span>{t('partners:partnerSection.button')}</span>
             </div>
