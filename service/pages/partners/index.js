@@ -44,7 +44,13 @@ const dataVALUES = [
     delayTime: '200',
   },
 ];
-
+const SectionContainer = ({ children }) => {
+  return (
+    <section className="continue-hero-internal padding-section-aux invert-color ">
+      <div className="container">{children}</div>
+    </section>
+  );
+};
 export default function Index() {
   const { t } = useTranslation();
 
@@ -59,7 +65,7 @@ export default function Index() {
             <Trans
               i18nKey="partners:hero.content"
               components={{
-                paragraph: <p data-aos='fade-down' data-aos-delay='300' />,
+                paragraph: <p data-aos="fade-down" data-aos-delay="300" />,
                 breakLine: <br />,
               }}
             />
@@ -72,39 +78,66 @@ export default function Index() {
             />
           </div>
         </HeroInternal>
-        <section className="continue-hero-internal padding-section-aux invert-color ">
-          <div className="container">
-            <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back">
-              <h2>{t('about:governance.title')}</h2>
-            </div>
-            <div className="container-sm two-block">
-              <iframe
-                title="The HOPR Advantage"
-                width="800"
-                height="500"
-                src="https://www.youtube-nocookie.com/embed/vb7mD8dp11Q"
-                frameBorder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
+        <SectionContainer>
+          <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back">
+            <h2>{t('partners:video.title')}</h2>
           </div>
-        </section>
+          <div className="container-sm two-block">
+            <iframe
+              title="The HOPR Advantage"
+              width="800"
+              height="500"
+              src="https://www.youtube-nocookie.com/embed/vb7mD8dp11Q"
+              frameBorder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </SectionContainer>
         <section className="section-partners padding-section-aux">
           <div className="container">
             <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back">
-              <h2> {t('about:governance.title')}</h2>
+              <h2> {t('partners:protocol.title')}</h2>
             </div>
             <div className="container-sm two-block">
               <div className="block-left" data-aos="fade-down">
-                <p>{t('about:governance.paragraphLeftA')}</p>
+                <Trans
+                  i18nKey="partners:protocol.leftContent"
+                  components={{
+                    paragraph: <p data-aos="fade-down" data-aos-delay="300" />,
+                    breakLine: <br />,
+                  }}
+                />
               </div>
               <div className="block-right" data-aos="fade-down">
-                <p>{t('about:governance.paragraphRightA')}</p>
+                <Trans
+                  i18nKey="partners:protocol.rightContent"
+                  components={{
+                    paragraph: <p data-aos="fade-down" data-aos-delay="300" />,
+                    breakLine: <br />,
+                  }}
+                />
               </div>
             </div>
           </div>
         </section>
+        <SectionContainer>
+          <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back">
+            <h2>{t('partners:partnerSection.title')}</h2>
+          </div>
+          <Trans
+            i18nKey="partners:partnerSection.content"
+            components={{
+              paragraph: <p data-aos="fade-down" data-aos-delay="300" />,
+              breakLine: <br />,
+            }}
+          />
+          <div className="btn-align">
+            <div className="type-btn">
+              <span>{t('partners:partnerSection.button')}</span>
+            </div>
+          </div>
+        </SectionContainer>
       </Layout>
     </div>
   );
@@ -113,7 +146,10 @@ export default function Index() {
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      _ns: await loadNamespaces(['common', 'menu', 'partners', 'about'], locale),
+      _ns: await loadNamespaces(
+        ['common', 'menu', 'partners', 'about'],
+        locale
+      ),
     },
   };
 }
