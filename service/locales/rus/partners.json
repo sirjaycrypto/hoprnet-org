@@ -1,6 +1,7 @@
 {
-    "hero": {
-      "title": "Partners"
-    }
+  "hero": {
+    "title": "Next Generation Data Privacy",
+    "content": "<paragraph>The HOPR protocol is built for everyone. Our mission of introducing network-level data privacy for all industries and individuals starts with you.<breakLine></breakLine><breakLine></breakLine>In becoming our valued partner, we provide you with:</paragraph>",
+    "list": "<list><child>Your personal project manager</child><child>A dedicated engineer for the integration of the HOPR protocol</child><child>Membership in the HOPR Association</child></list>"
   }
-  
+}

@@ -1,37 +1,119 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import useTranslation from 'next-translate/useTranslation';
+import Trans from 'next-translate/Trans';
 
 import Layout from '../../components/organisms/layout';
 import HeroInternal from '../../components/organisms/hero-internal';
-import { staggerHaft, fadeInDown } from '../../util/motionConfig';
+import SubStrack from '../../components/molecules/sub-strack';
+import Jobs from '../../components/molecules/jobs';
+import ProfileAssociation from '../../components/molecules/profile-association';
+import PeopleBuild from '../../components/molecules/PeopleBuild';
+import ContactPlus from '../../components/molecules/contact-plus';
+import HomeInvestors from '../../components/sections/home-investors';
+
 import { loadNamespaces } from '../_app';
+
+const dataInfo = [
+  'assets/partners/01_avado.svg',
+  'assets/partners/02_froriep.svg',
+  'assets/partners/03_elrond.svg',
+  'assets/partners/04_sedimentum.svg',
+  'assets/partners/05_swiss_medtech.svg',
+  'assets/partners/06_dai_logo.svg',
+  'assets/partners/07_health_tech_cluster.svg',
+  'assets/partners/08_swiss_healthcare_startups.svg',
+];
+
+const dataVALUES = [
+  {
+    img: 'assets/icons/with-yellow-ball/protection-shield.png',
+    title: 'about:values.itemTitleA',
+    text: 'about:values.itemAboutA',
+    delayTime: '100',
+  },
+  {
+    img: 'assets/icons/with-yellow-ball/light-bulb-shine.png',
+    title: 'about:values.itemTitleB',
+    text: 'about:values.itemAboutB',
+    delayTime: '150',
+  },
+  {
+    img: 'assets/icons/with-yellow-ball/multiple-users-1.png',
+    title: 'about:values.itemTitleC',
+    text: 'about:values.itemAboutC',
+    delayTime: '200',
+  },
+];
 
 export default function Index() {
   const { t } = useTranslation();
 
   return (
-    <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
+    <div className="partners-page">
       <Layout>
-        <HeroInternal noNeedFull={true}>
-          <motion.div variants={staggerHaft}>
-            <motion.h1 variants={fadeInDown} transition={{ delay: 0.2 }}>
-              {t('partners:hero.title')}
-            </motion.h1>
-            <motion.div variants={fadeInDown} transition={{ delay: 0.5 }}>
-              <h3>{t('partners:hero.paragraphA')}</h3>
-            </motion.div>
-          </motion.div>
+        <HeroInternal>
+          <h1 data-aos="fade-down" data-aos-delay="150">
+            {t('partners:hero.title')}
+          </h1>
+          <div>
+            <Trans
+              i18nKey="partners:hero.content"
+              components={{
+                paragraph: <p data-aos='fade-down' data-aos-delay='300' />,
+                breakLine: <br />,
+              }}
+            />
+            <Trans
+              i18nKey="partners:hero.list"
+              components={{
+                list: <ol />,
+                child: <li />,
+              }}
+            />
+          </div>
         </HeroInternal>
+        <section className="continue-hero-internal padding-section-aux invert-color ">
+          <div className="container">
+            <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back">
+              <h2>{t('about:governance.title')}</h2>
+            </div>
+            <div className="container-sm two-block">
+              <iframe
+                title="The HOPR Advantage"
+                width="800"
+                height="500"
+                src="https://www.youtube-nocookie.com/embed/vb7mD8dp11Q"
+                frameBorder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </section>
+        <section className="section-partners padding-section-aux">
+          <div className="container">
+            <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back">
+              <h2> {t('about:governance.title')}</h2>
+            </div>
+            <div className="container-sm two-block">
+              <div className="block-left" data-aos="fade-down">
+                <p>{t('about:governance.paragraphLeftA')}</p>
+              </div>
+              <div className="block-right" data-aos="fade-down">
+                <p>{t('about:governance.paragraphRightA')}</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </Layout>
-    </motion.div>
+    </div>
   );
 }
 
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      _ns: await loadNamespaces(['common', 'menu', 'blog'], locale),
+      _ns: await loadNamespaces(['common', 'menu', 'partners', 'about'], locale),
     },
   };
 }
