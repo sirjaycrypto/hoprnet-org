@@ -1,75 +1,83 @@
 .section-hero-internal {
+  color: $hopr_grey;
   height: auto;
   padding: 130px 0 80px 0;
   text-align: center;
-  color: $hopr_grey;
-  min-height: 100vh;
+
   @include responsive(tablet) {
     padding-bottom:  80px 0 40px 0;
   }
-  @include responsive(phone) {
-  }
+
   h1 {
-    font-weight: 400;
     font-size: 100px;
-    line-height: 126px;
-    padding-bottom: 90px;
-    margin: 0;
+    font-weight: 400;
     letter-spacing: 0.833333px;
+    line-height: 126px;
+    margin: 0;
     overflow-wrap: anywhere;
+    padding-bottom: 90px;
+
     @include responsive(phone) {
       font-size: 50px;
-      line-height: 64px;
       letter-spacing: 0.416667px;
+      line-height: 64px;
     }
   }
+
   p {
     font-size: 20px;
-    line-height: 32px;
-    text-align: center;
     letter-spacing: 0.166667px;
+    line-height: 32px;
     opacity: 0.89;
+    text-align: center;
+
     @include responsive(phone) {
       font-size: 16px;
-      line-height: 25px;
       letter-spacing: 0.133333px;
+      line-height: 25px;
     }
   }
   h3 {
+    color: #414141;
     font-size: 1.313rem;
     font-weight: 300;
-    color: #414141;
   }
 }
 
 .continue-hero-internal {
   background: $hopr_yellow;
+
   & > div {
+    align-items: center;
+    color: $hopr_grey;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     text-align: center;
-    color: $hopr_grey;
   }
+
   h2 {
+    color: $hopr_grey;
     font-size: 2.375rem;
     font-weight: 400;
     margin-bottom: 4rem;
-    color: $hopr_grey;
   }
+
   p {
     font-size: 1.3em;
-    line-height: 2em;
-    letter-spacing: 0.208333px;
     font-weight: 300;
+    letter-spacing: 0.208333px;
+    line-height: 2em;
   }
+
   .block-video {
     margin: 3rem 0;
   }
+
   .see-my-youtube {
     color: $hopr_grey;
     font-size: 1.25rem;
+
     a {
       color: $hopr_bright_blue;
       margin-left: 1rem;
@@ -155,6 +163,7 @@
     }
   }
 }
+
 .no-full-height {
   min-height: auto !important;
 }

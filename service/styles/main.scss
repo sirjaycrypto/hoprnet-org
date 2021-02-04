@@ -1,16 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
+// Common
+@import 'common/_normalize';
+@import 'common/_breaking-points';
+@import 'common/_toolkit';
+@import 'common/_config';
+@import 'common/layout.scss';
 
 @import 'fragments/_animation';
-@import 'fragments/_breaking-points';
-@import 'fragments/_normalize';
-@import 'fragments/_toolkit';
 @import 'fragments/_transitions';
 @import 'fragments/_loader';
 @import 'fragments/_book';
 @import 'fragments/_animate-conf';
 @import 'fragments/_modal';
 @import 'fragments/_btn';
-@import 'fragments/_config';
 @import 'fragments/_pre-sales';
 @import 'fragments/_container';
 @import 'fragments/_navbar';
@@ -48,3 +51,6 @@
 @import 'fragments/_section-token-release';
 @import 'fragments/_slider';
 @import 'fragments/_timeline';
+
+// Pages
+@import 'pages/partners.scss';
