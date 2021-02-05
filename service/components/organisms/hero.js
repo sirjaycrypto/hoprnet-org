@@ -39,7 +39,7 @@ const Hero = forwardRef(
 
     const onScrollGlobal = () => {
       if (area.current && !videoMobile) {
-        const breakOffset = area.current.clientHeight + area.current.offsetTop;
+        const breakOffset = area.current.clientHeight * 0.87;
 
         if (window.pageYOffset >= thisBanner || window.pageYOffset <= breakOffset) {
           removeModeFollowMain();
