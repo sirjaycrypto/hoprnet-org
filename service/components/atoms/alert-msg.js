@@ -14,6 +14,7 @@ export const AlertMsg = ({ floating = false, showActiveMsg }) => {
       </div>
       <div>
         <p>
+          {t('home:modal.public')}
           To be the first to know when the HOPR token launches and get other
           news about the project, subscribe to our{' '}
           <a
