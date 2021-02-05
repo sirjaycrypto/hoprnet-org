@@ -138,7 +138,7 @@ const aItems = [
   },
 ];
 
-export default function Index({ hasRef }) {
+export default function Index() {
   const { t } = useTranslation();
 
   return (
@@ -150,7 +150,6 @@ export default function Index({ hasRef }) {
               {t('support:hero.title')}
             </motion.h1>
             <motion.div variants={fadeInDown} transition={{ delay: 0.5 }}>
-              <h3>{t('support:hero.paragraphA')}</h3>
               <Accordion>
                 {aItems.map(({ title, paragraph }) => (
                   <AccordionItem title={title}>{paragraph}</AccordionItem>
@@ -167,7 +166,7 @@ export default function Index({ hasRef }) {
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      _ns: await loadNamespaces(['common', 'menu', 'blog'], locale),
+      _ns: await loadNamespaces(['common', 'menu', 'support', 'blog'], locale),
     },
   };
 }

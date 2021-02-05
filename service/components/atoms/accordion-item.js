@@ -1,13 +1,28 @@
 import React, { createRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
-export const AccordionItem = ({ active = false, children, className, title, ...props }) => {
-  const [isActive, setActive] = useState(active);
+export const AccordionItem = ({ active, children, className, title, ...props }) => {
+  const [isActive, setActive] = useState(false);
   const itemRef = createRef();
+
+  useEffect(() => {
+    setActive(active);
+  }, []);
+
+  const openItem = () => {
+    itemRef.current.style.maxHeight = itemRef.current.scrollHeight + 'px';
+    setActive(true);
+  }
+
+  const closeItem = () => {
+
+    itemRef.current.style.maxHeight = null;
+    setActive(false);
+  }
 
   return (
     <li {...props} className={`${active ? 'is-active' : ''} ${className || ''}`}>
-      <div className="accordion-header text-sm">
+      <div className="accordion-header text-sm" onClick={isActive ? closeItem : openItem}>
         <span className="h6 m-0">{title}</span>
         <div className="accordion-icon"></div>
       </div>
