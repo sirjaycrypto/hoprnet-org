@@ -92,6 +92,10 @@
 }
 
 .info-hero-bottom {
+  position: absolute;
+  bottom: 1rem;
+  right: 24px;
+
   p {
     display: flex;
     align-items: center;
@@ -100,16 +104,18 @@
     color: #fff;
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
   }
-}
 
-.info-hero-bottom {
-  position: absolute;
-  bottom: 1rem;
-  right: 24px;
+  br {
+    display: none;
+  }
 
   @include responsive(phone) {
     left: 24px;
     right: inherit;
+
+    br {
+      display: inline;
+    }
   }
 }
 
@@ -130,14 +136,14 @@
 
   @include responsive(tablet) {
     align-items: center;
-    font-size: 89px;
+    font-size: 80px;
     letter-spacing: 0.9px;
     line-height: 112px;
     text-align: center;
   }
 
   @include responsive(phone) {
-    font-size: 50px;
+    font-size: 40px;
     letter-spacing: 0.416667px;
     line-height: 64px;
     margin-bottom: 24px;
