@@ -1,11 +1,11 @@
-import React, { forwardRef, useState, useEffect } from 'react';
+import React from 'react';
 import useTranslation from 'next-translate/useTranslation';
 
-export default function AlertMsg({showActiveMsg}) {
+export const AlertMsg = ({ floating = false, showActiveMsg }) => {
   const { t } = useTranslation();
 
   return (
-    <div className="area-Msg">
+    <div className={`area-Msg ${floating ? 'floating' : ''}`}>
       <div
         className="icon-close link-special"
         onClick={() => showActiveMsg()}
@@ -46,4 +46,4 @@ export default function AlertMsg({showActiveMsg}) {
       </div>
     </div>
   );
-}
+};
