@@ -2,8 +2,8 @@ import React, { useRef, forwardRef, useState, useEffect } from 'react';
 import Countdown from '../atoms/countdown';
 import useTranslation from 'next-translate/useTranslation';
 import Trans from 'next-translate/Trans';
-import AlertMsg from '../atoms/alertMsg';
 import HeroInfo from '../molecules/hero-info';
+import { AlertMsg } from '..';
 
 const Hero = forwardRef(
   (

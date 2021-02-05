@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { AlertMsg } from '../../components';
 import Layout from '../../components/organisms/layout';
 import Hero from '../../components/organisms/hero';
 import HomeHeadline from '../../components/sections/home-headline';
@@ -22,6 +23,7 @@ export default function Index() {
   const [visibleNow, setVisibleNow] = useState('');
   const [modePreSales, setModePreSales] = useState(false);
   const [showModal, setShowModal] = useState(undefined);
+  const [showPublicMsg, setShowPublicMsg] = useState(false);
 
   const [thisBanner, setThisBanner] = useState(0);
   const heroInfo = useRef();
@@ -75,6 +77,12 @@ export default function Index() {
     srtBtnFollow(false);
   };
 
+  const togglePublicMsg = () => {
+    setTimeout(() => {
+      setShowPublicMsg(!showPublicMsg);
+    }, 200);
+  };
+
   return (
     <Layout visibleNow={visibleNow}>
       <Modal showModal={showModal} setShowModal={setShowModal} />
@@ -112,16 +120,20 @@ export default function Index() {
         </div>
         <div className={btnFollow ? 'content-buttons nowFollowUs' : 'content-buttons'} ref={btnToFollow}>
           {modePreSales ? (
-            <>
-              <div onClick={() => setShowModal(true)} className="btn-banner first-button">
-                <div>{t('common:btnCommunity1')}</div>
-                <div>{t('common:btnCommunity2')}</div>
-              </div>
-              <div className="btn-banner">
-                <div>{t('common:btnPublic1')}</div>
-                <div>{t('common:btnPublic2')}</div>
-              </div>
-            </>
+            showPublicMsg ? (
+              <AlertMsg floating showActiveMsg={togglePublicMsg} />
+            ) : (
+              <>
+                <div onClick={() => setShowModal(true)} className="btn-banner first-button">
+                  <div>{t('common:btnCommunity1')}</div>
+                  <div>{t('common:btnCommunity2')}</div>
+                </div>
+                <div className="btn-banner" onClick={togglePublicMsg}>
+                  <div>{t('common:btnPublic1')}</div>
+                  <div>{t('common:btnPublic2')}</div>
+                </div>
+              </>
+            )
           ) : (
             <div className="btn-banner" onClick={() => setShowModal(true)}>
               <span>{t('home:banner.button')}</span>
