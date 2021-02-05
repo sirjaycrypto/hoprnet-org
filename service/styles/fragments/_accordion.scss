@@ -1,0 +1,212 @@
+$accordion-item--padding-v: 24px; // accordion item, top and bottom padding
+$accordion-item--padding-h: null; // accordion item, left and right padding
+$accordion-icon--size: 16px; // accordion icon, width and height
+$accordion-icon--thickness: 2px; // accordion icon, stroke width
+$accordion-icon--radius: null; // accordion icon, lines radius cap
+$spacing--hx-t: 24px;
+$spacing--hx-b: 24px;
+
+@mixin divider-mix($layout: false) {
+  display: block;
+  height: 1px;
+  @if ($layout == 'inverse') {
+    background: color-border(divider-inverse);
+  } @else {
+    background: color-border(divider);
+  }
+}
+
+@mixin divider($type: false, $layout: false) {
+  @if ($type == 'before') {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      @include divider-mix($layout);
+    }
+  } @else if ($type == 'after') {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      @include divider-mix($layout);
+    }
+  } @else {
+    @include divider-mix($layout);
+  }
+}
+
+// Font Family
+@mixin font-family($elem) {
+  font-family: unquote(get-font-family($elem));
+}
+
+// Font-size + Line-height + Kerning
+@mixin font-size($elem) {
+  font-size: get-font-size($elem);
+  line-height: get-line-height($elem);
+  letter-spacing: get-kerning($elem);
+}
+
+// Font Weight
+@mixin font-weight($elem) {
+  font-weight: get-font-weight($elem);
+}
+
+// Reset lists style
+.list-reset {
+  list-style: none;
+  padding: 0;
+
+  li {
+    margin: 0;
+  }
+}
+
+// accordion
+.accordion {
+  // core
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    @include font-family(heading);
+    @include font-weight(heading);
+    clear: both;
+    color: color(heading);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  h6,
+  .h6,
+  small,
+  .text-sm {
+    @include font-size(sm);
+  }
+
+  h4,
+  h5,
+  h6,
+  .h4,
+  .h5,
+  .h6 {
+    margin-top: $spacing--hx-t;
+    margin-bottom: $spacing--hx-b;
+  }
+
+  .mb-0 {
+    margin-bottom: 0;
+  }
+
+  li {
+    @include divider(before);
+
+    &:last-of-type {
+      @include divider(after);
+    }
+
+    .invert-color & {
+      @include divider(before, inverse);
+
+      &:last-of-type {
+        @include divider(after, inverse);
+      }
+    }
+  }
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: $accordion-item--padding-v;
+  padding-bottom: $accordion-item--padding-v;
+  padding-left: $accordion-item--padding-h;
+  padding-right: $accordion-item--padding-h;
+  cursor: pointer;
+
+  span {
+    width: calc(100% - (#{$accordion-icon--size} * 2));
+  }
+}
+
+.accordion-content {
+  padding-left: $accordion-item--padding-h;
+  padding-right: $accordion-item--padding-h;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.15s ease-in-out, opacity 0.15s;
+
+  .is-active & {
+    opacity: 1;
+  }
+
+  p:last-child {
+    margin-bottom: $accordion-item--padding-v;
+  }
+}
+
+.accordion-icon {
+  position: relative;
+  width: $accordion-icon--size;
+  height: $accordion-icon--size;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    background: color-icon(accordion);
+    border-radius: $accordion-icon--radius;
+    transition: transform 0.25s ease-out;
+
+    .invert-color & {
+      background: color-icon(accordion-inverse);
+    }
+  }
+
+  &::before {
+    top: 0;
+    left: 50%;
+    width: $accordion-icon--thickness;
+    height: 100%;
+    margin-left: -($accordion-icon--thickness / 2);
+  }
+
+  &::after {
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: $accordion-icon--thickness;
+    margin-top: -($accordion-icon--thickness / 2);
+  }
+
+  .is-active & {
+    cursor: pointer;
+
+    &::before {
+      transform: rotate(90deg);
+    }
+
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+}

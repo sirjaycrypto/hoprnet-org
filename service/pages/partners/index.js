@@ -2,7 +2,7 @@ import React from 'react';
 import useTranslation from 'next-translate/useTranslation';
 import Trans from 'next-translate/Trans';
 
-import { SectionContainer } from '../../components';
+import { Button, SectionContainer } from '../../components';
 import Layout from '../../components/organisms/layout';
 import { loadNamespaces } from '../_app';
 
@@ -89,10 +89,13 @@ export default function Index() {
               breakLine: <br />,
             }}
           />
-          <div className="btn-align" onClick={onClickApply}>
-            <div className="type-btn">
-              <span>{t('partners:partnerSection.button')}</span>
-            </div>
+          <div>
+            <Button
+              type="link"
+              target="_blank"
+              content={t('partners:partnerSection.button')}
+              to="https://docs.google.com/forms/d/e/1FAIpQLSfpw9alXYGO4WvWS8HTF-5keGk_OFshrIIcGzifhfuWs7IN7g/viewform"
+            />
           </div>
         </SectionContainer>
       </Layout>

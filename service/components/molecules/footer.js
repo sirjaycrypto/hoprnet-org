@@ -77,16 +77,16 @@ const Footer = forwardRef(({ setVisibleNow }, ref) => {
                   <Link href="/about-us">About us</Link>
                 </li>
                 <li>
-                  <Link href="/token#partners-section">Partners</Link>
+                  <Link href="/partners">Partners</Link>
                 </li>
                 <li>
-                  <Link href="/token#support-section">Support</Link>
+                  <Link href="/support">Support</Link>
                 </li>
                 <li>
-                  <Link href="/about-us">FAQ</Link>
+                  <Link href="/support">FAQ</Link>
                 </li>
                 <li>
-                  <Link href="/about-us">Disclaimer</Link>
+                  <Link href="/disclaimer">Disclaimer</Link>
                 </li>
               </ul>
             </div>
