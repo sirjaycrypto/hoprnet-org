@@ -1,11 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import {
-  stagger,
-  staggerHaft,
-  fadeInUp,
-  fadeInDown,
-} from '../../util/motionConfig';
 import Navbar from '../molecules/navbar';
 
 export default function Loader() {

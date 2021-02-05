@@ -31,7 +31,6 @@ export default function ItemsMenu() {
     },
   ];
 
-
   return (
     <>
       <div className="menu-desktop">

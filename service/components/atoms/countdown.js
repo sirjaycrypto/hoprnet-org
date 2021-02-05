@@ -30,6 +30,7 @@ export default function Countdown() {
       clearInterval(time);
     }
   }, 1000);
+
   return (
     <div id="clockDiv">
       <div>
