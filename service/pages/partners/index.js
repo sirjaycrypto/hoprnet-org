@@ -1,37 +1,112 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import useTranslation from 'next-translate/useTranslation';
+import Trans from 'next-translate/Trans';
 
+import { SectionContainer } from '../../components';
 import Layout from '../../components/organisms/layout';
-import HeroInternal from '../../components/organisms/hero-internal';
-import { staggerHaft, fadeInDown } from '../../util/motionConfig';
 import { loadNamespaces } from '../_app';
 
 export default function Index() {
   const { t } = useTranslation();
 
+  const onClickApply = () => {
+    window.open(
+      'https://docs.google.com/forms/d/e/1FAIpQLSfpw9alXYGO4WvWS8HTF-5keGk_OFshrIIcGzifhfuWs7IN7g/viewform'
+    );
+  };
+
   return (
-    <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
+    <div className="partners-page">
       <Layout>
-        <HeroInternal noNeedFull={true}>
-          <motion.div variants={staggerHaft}>
-            <motion.h1 variants={fadeInDown} transition={{ delay: 0.2 }}>
-              {t('partners:hero.title')}
-            </motion.h1>
-            <motion.div variants={fadeInDown} transition={{ delay: 0.5 }}>
-              <h3>{t('partners:hero.paragraphA')}</h3>
-            </motion.div>
-          </motion.div>
-        </HeroInternal>
+        <SectionContainer align="center" extraClass="header">
+          <h1 data-aos="fade-down" data-aos-delay="150">
+            {t('partners:hero.title')}
+          </h1>
+          <div data-aos="fade-down" data-aos-delay="300">
+            <Trans
+              i18nKey="partners:hero.content"
+              components={{
+                paragraph: <p />,
+                breakLine: <br />,
+              }}
+            />
+            <Trans
+              i18nKey="partners:hero.list"
+              components={{
+                list: <ol />,
+                child: <li />,
+              }}
+            />
+          </div>
+        </SectionContainer>
+        <SectionContainer align="center" invert={true}>
+          <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back">
+            <h2>{t('partners:video.title')}</h2>
+          </div>
+          <iframe
+            title="The HOPR Advantage"
+            width="800"
+            height="500"
+            src="https://www.youtube-nocookie.com/embed/vb7mD8dp11Q"
+            frameBorder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </SectionContainer>
+        <SectionContainer align="center" containerSize='sm'>
+          <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back">
+            <h2> {t('partners:protocol.title')}</h2>
+          </div>
+          <div className="content-columns">
+            <div className="col col-9" data-aos="fade-down">
+              <Trans
+                i18nKey="partners:protocol.leftContent"
+                components={{
+                  paragraph: <p data-aos="fade-down" data-aos-delay="300" />,
+                  breakLine: <br />,
+                }}
+              />
+            </div>
+            <div className="col col-9" data-aos="fade-down">
+              <Trans
+                i18nKey="partners:protocol.rightContent"
+                components={{
+                  paragraph: <p data-aos="fade-down" data-aos-delay="300" />,
+                  breakLine: <br />,
+                }}
+              />
+            </div>
+          </div>
+        </SectionContainer>
+        <SectionContainer align="center" invert={true}>
+          <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back">
+            <h2>{t('partners:partnerSection.title')}</h2>
+          </div>
+          <Trans
+            i18nKey="partners:partnerSection.content"
+            components={{
+              paragraph: <p data-aos="fade-down" data-aos-delay="300" />,
+              breakLine: <br />,
+            }}
+          />
+          <div className="btn-align" onClick={onClickApply}>
+            <div className="type-btn">
+              <span>{t('partners:partnerSection.button')}</span>
+            </div>
+          </div>
+        </SectionContainer>
       </Layout>
-    </motion.div>
+    </div>
   );
 }
 
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      _ns: await loadNamespaces(['common', 'menu', 'blog'], locale),
+      _ns: await loadNamespaces(
+        ['common', 'menu', 'partners', 'about'],
+        locale
+      ),
     },
   };
 }
