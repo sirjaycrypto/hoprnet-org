@@ -1,20 +1,21 @@
 {
   "headline": {
-    "title": "home_headline_title",
-    "beforeInfoTop": "home_headline_beforeInfoTop",
-    "beforeInfoBottom": "home_headline_beforeInfoBottom",
+    "title": "INVEST IN METADATA PRIVACY",
+    "beforeInfoTop": "Global data traffic is <strong>growing</strong> exponentially, and so are the security risks.",
+    "beforeInfoBottom": "HOPR provides essential and compliant network-level metadata privacy for everyone.",
+    "caption": "Hypothetical price progression (if no purchases are made)",
     "mainInfo": "home_headline_mainInfo",
-    "titleTicket": "home_headline_titleTicket",
-    "txtDownNum": "home_headline_txtDownNum",
+    "titleTicket": "Balancer Launch",
+    "txtDownNum": "per HOPR token",
     "fPoint": "home_headline_fPoint",
     "sPoint": "home_headline_sPoint",
     "tPoint": "home_headline_tPoint",
     "tokenLeft": "home_headline_tokenLeft"
   },
   "back": {
-    "title": "home_back_title",
-    "titleA": "home_back_titleA",
-    "titleB": "home_back_titleB"
+    "title": "BACKED BY",
+    "titleA": "PARTNERS",
+    "titleB": "AS SEEN IN"
   },
   "banner": {
     "label": "Be the first to earn and stake HOPR tokens with our limited token release.",
@@ -22,13 +23,13 @@
     "button": "Get HOPR Token"
   },
   "features": {
-    "pay": "home_features_pay",
-    "payMain": "home_features_payMain",
-    "stake": "home_features_stake",
-    "stakeMain": "home_features_stakeMain",
-    "title": "home_features_title",
-    "vote": "home_features_vote",
-    "voteMain": "home_features_voteMain"
+    "pay": "Pay",
+    "payMain": "Spend HOPR tokens to send data through the HOPR network with complete data and metadata privacy.",
+    "stake": "Stake",
+    "stakeMain": "Lock HOPR tokens in your node to relay user data and cover traffic. The more you stake, the more data you can relay, and the more you can earn.",
+    "title": "TOKEN FEATURES",
+    "vote": "Vote",
+    "voteMain": "From technical parameters to the composition of the HOPR board of directors, participate in decentralized, community-enabling governance."
   },
   "further": {
     "infoBottomATitle": "home_further_infoBottomATitle",
@@ -43,20 +44,20 @@
     "title": "home_further_title"
   },
   "hardware": {
-    "about": "home_hardware_about",
-    "caption": "home_hardware_caption",
-    "subtitleA": "home_hardware_subtitleA",
-    "subtitleB": "home_hardware_subtitleB",
-    "title": "home_hardware_title"
+    "about": "Anyone can run a HOPR node on their own hardware! We provide easy-to-install software for Linux, macOS, Windows, Docker and cloud environments. Start earning HOPR tokens within minutes.",
+    "caption": "We also sell a dedicated hardware node for faster staking.",
+    "subtitleA": "Run Your Own Metal",
+    "subtitleB": "Your HOPR Hardware Node",
+    "title": "RUN A HOPR NODE"
   },
   "graphic": {
-    "bounties": "home_graphic_bounties",
-    "cover": "home_graphic_cover",
+    "bounties": "Bounties",
+    "cover": "Cover Traffic",
     "early": "home_graphic_early",
-    "pre": "home_graphic_pre",
-    "public": "home_graphic_public",
-    "team": "home_graphic_team",
-    "treasury": "home_graphic_treasury",
+    "pre": "Early Token Buyers",
+    "public": "Public Distribution",
+    "team": "Team & Advisors",
+    "treasury": "Treasury",
     "votes": "home_graphic_votes"
   },
   "hero": {
@@ -65,26 +66,26 @@
     "title": "home_hero_title"
   },
   "slide": {
-    "slideA": "home_slide_slideA",
-    "slideAMain": "home_slide_slideAMain",
-    "slideB": "home_slide_slideB",
-    "slideBMain": "home_slide_slideBMain",
-    "slideC": "home_slide_slideC",
-    "slideCMain": "home_slide_slideCMain"
+    "slideA": "Sandro Cilurzo, Co-Founder & CEO of Sedimentum AG.",
+    "slideAMain": "HOPR has developed this groundbreaking open source technology to be used by privacy-aware developers all over the world, HOPR is integrated in our cutting edge privacy-preserving technology to save lives without compromising privacy.",
+    "slideB": "Beniamin Mincu, Elrond CEO",
+    "slideBMain": "The HOPR protocol offers a new standard for internet-scale performance, probabilistic security, and cryptographic pseudonymity. We’re happy to bridge the last mile to the Elrond network entry-points with HOPR, and offer a truly decentralized & private end-to-end experience for our users.",
+    "slideC": "Gin Chao, Binance Strategy Officer",
+    "slideCMain": "The team at HOPR has shown us how their decentralized network achieves privacy guarantees on the metadata level and gives power back to the people."
   },
   "token": {
-    "about": "home_token_about",
-    "listItemA": "home_token_listItemA",
-    "listItemB": "home_token_listItemB",
-    "listItemC": "home_token_listItemC",
-    "listItemD": "home_token_listItemD",
-    "listItemE": "home_token_listItemE",
-    "listItemF": "home_token_listItemF",
-    "secondSubAbout": "home_token_secondSubAbout",
-    "secondSubTitle": "home_token_secondSubTitle",
-    "subTitle": "home_token_subTitle",
-    "thirdSubTitle": "home_token_thirdSubTitle",
-    "title": "home_token_title",
+    "about": "The HOPR Network is powered by the HOPR Token, a utility token on the Ethereum Network.",
+    "listItemA": "Token Name: HOPR Token",
+    "listItemB": "Token Symbol: HOPR",
+    "listItemC": "Network: Ethereum",
+    "listItemD": "Standards: ERC20, ERC777",
+    "listItemE": "Total supply: 1BN HOPR",
+    "listItemF": "Initial circulating supply: 130M HOPR",
+    "secondSubAbout": "Starting at an initial circulating supply of 130 million, HOPR tokens will be released over a period of 5 years. A quarter of all HOPR tokens are available only to stakers as a reward for relaying cover traffic.",
+    "secondSubTitle": "Token Allocation",
+    "subTitle": "Key Metrics",
+    "thirdSubTitle": "Token supply distribution",
+    "title": "Token Release",
     "textEnding": "home_token_textEnding"
   },
   "why": {
@@ -94,19 +95,59 @@
     "title": "home_why_title"
   },
   "work": {
-    "performant": "home_work_performant",
-    "performantMain": "home_work_performantMain",
-    "private": "home_work_private",
-    "privateMain": "home_work_privateMain",
-    "profitable": "home_work_profitable",
-    "profitableMain": "home_work_profitableMain",
-    "title": "home_work_title"
+    "performant": "Performant",
+    "performantMain": "HOPR’s custom layer-two scaling solution is based on probabilistic payment channels. This ensures fully decentralized settlement without unnecessary blockchain transaction fees, all while protecting node runners’ metadata.",
+    "private": "Private",
+    "privateMain": "The HOPR network is a decentralized incentivized mixnet, ensuring complete data and metadata privacy for everyone who uses it. Data is sent via multiple hops, so no-one but the sender and receiver know the origin, destination, or content of a data transfer.",
+    "profitable": "Profitable",
+    "profitableMain": "HOPR’s unique proof-of-relay mechanism means every node runner is incentivized to correctly relay data in exchange for HOPR tokens. Anyone can run a HOPR node to earn HOPR tokens and contribute to online data privacy.",
+    "title": "HOW IT WORKS"
   },
   "roadMap": {
-    "title": "home_roadMap_title"
+    "item1Date": "Nov 2019",
+    "item1Description": "HOPR’s founders develop a decentralized approach to the urgent issue of metadata privacy. HOPR is born!",
+    "item1Title": "Idea",
+    "item1L1": "Book",
+    "item1L2": "Technical White Paper",
+    "item2Date": "Apr 2020",
+    "item2Description": "HOPR officially launches, concluding a $1m seed funding round led by Binance. The HOPR Association is founded.",
+    "item2Title": "Funding and Launch",
+    "item2L1": "Binance",
+    "item3Date": "Jul 2020",
+    "item3Description": "The HOPR Node PC launches, allowing users to run a dedicated HOPR device from their home.",
+    "item3Title": "HOPR Hardware Node",
+    "item3L1": "Shop",
+    "item3L2": "gitHub",
+    "item4Date": "Nov 2020",
+    "item4Description": "A series of popular incentivized and gamified testnets grow the community and network to 2000 nodes.",
+    "item4Title": "Testing and Community",
+    "item4L1": "Matic",
+    "item4L2": "xDai",
+    "item4L3": "BSC",
+    "item5Date": "Q1 2021",
+    "item5Description": "The HOPR Jungfrau release is the first feature complete version of the HOPR node & HOPR token.",
+    "item5Title": "Jungfrau Release (Mainnet)",
+    "item5L1": "SalePage",
+    "item6Date": "Q1 2021",
+    "item6Description": "HOPR’s Eiger release introduces cover traffic, making the protocol feature complete.",
+    "item6Title": "Eiger Release",
+    "item6L1": "Blogpost",
+    "item7Date": "Q2 2021",
+    "item7Description": "HOPR’s focus on decentralized community enabling governance is solidified by the launch of the project-wide HOPR DAO.",
+    "item7Title": "Launch HOPR DAO",
+    "item7L1": "DecenGov",
+    "item8Date": "Q2 2021",
+    "item8Description": "A robust API allows others to build metadata-private dApps and services on top of the HOPR protocol.",
+    "item8Title": "Launch of Ecosystem",
+    "item8L1": "Blogpost",
+    "item9Date": "Q4 2021",
+    "item9Description": "All token holders will be eligible to vote in the first General Assembly of the HOPR Association.",
+    "item9Title": "Token-based Voting",
+    "item9L1": "Blogpost",
+    "title": "ROADMAP"
   },
   "modal": {
-    "title": "home_modal_title",
-    "about": "home_modal_about"
+    "title": "DISCLAIMER",
+    "about": "By clicking on this link, you will be redirected to a website provided by a third-party (third-party website). HOPR (likewise any affiliated entity) has no control over the content, offerings (including offerings regarding HOPR tokens) or resources of the third-party website, and accepts no responsibility for the third-party website, the content, offerings or resources, or for any loss or damage that may arise from your use of the third party-party website, the content, offerings or resources. If you decide to access the third-party website, you do so entirely at your own risk and subject to the terms and conditions of use for the third-party website."
   }
 }

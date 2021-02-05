@@ -64,7 +64,7 @@ const HomeHeadline = forwardRef(({ setShowModal, modePreSales }, ref) => {
                 />
                 <div>
                   <p>
-                    Hypothetical price progression (if no purchases are made)
+                    {t('home:headline.caption')}
                   </p>
                 </div>
               </div>
