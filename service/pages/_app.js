@@ -15,6 +15,7 @@ export async function loadNamespaces(namespaces, lang) {
       (m) => m.default
     );
   }
+
   return res;
 }
 
@@ -22,30 +23,30 @@ function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
   const router = useRouter();
   Router.onRouteChangeStart = () => {
-    setLoading(!loading);
+    setLoading(true);
   };
 
   Router.onRouteChangeComplete = () => {
-    setTimeout(() => {
-      setLoading(!loading);
-    }, 1000);
+    setLoading(false);
   };
 
   Router.onRouteChangeError = () => {
-    console.log('Error Cargando');
+    setLoading(false);
+  };
+
+  const onFinishLoading = () => {
     setLoading(false);
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      setLoading(!loading);
-    }, 1000);
     AOS.init({
       easing: 'ease-out-cubic',
       once: true,
       offset: 50,
     });
 
+    window.addEventListener('load', onFinishLoading);
+    return () => window.removeEventListener('load', onFinishLoading);
   }, []);
 
   return (

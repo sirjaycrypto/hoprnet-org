@@ -5,77 +5,115 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
   const { t } = useTranslation();
   const data = [
     {
-      date: 'Nov 2019',
-      title: 'Idea',
-      about: 'HOPR’s founders develop a decentralized approach to the urgent issue of metadata privacy. HOPR is born!',
-      links: [{
-        link: 'https://hoprnet.org/book-of-hopr',
-        text: 'Book'
-      }, {
-        link: '#',
-        text: 'Technical White Paper'
-      }]
+      date: t('home:roadMap.item1Date'),
+      title: t('home:roadMap.item1Title'),
+      about: t('home:roadMap.item1Description'),
+      links: [
+        {
+          link: 'https://hoprnet.org/book-of-hopr',
+          text: t('home:roadMap.item1L1'),
+        }, {
+          link: '#',
+          text: t('home:roadMap.item1L2'),
+        },
+      ],
     },
     {
-      date: 'Apr 2020',
-      title: 'Funding and Launch ',
-      about: 'HOPR officially launches, concluding a $1m seed funding round led by Binance. The HOPR Association is founded. ',
-      links: [{
-        link: '#',
-        text: 'Binance',
-      }]
+      date: t('home:roadMap.item2Date'),
+      title: t('home:roadMap.item2Title'),
+      about: t('home:roadMap.item2Description'),
+      links: [
+        {
+          link: '#',
+          text: t('home:roadMap.item2L1'),
+        },
+      ],
     },
     {
-      date: 'Jul 2020',
-      title: 'HOPR Hardware Node',
-      about: 'The HOPR Hardware Node launches, allowing users to run a dedicated HOPR device from their home.',
-      links: [{
-        link: 'https://ava.do/checkout/hopr',
-        text: 'Shop',
-      }, {
-        link: 'https://github.com/hoprnet',
-        text: 'gitHub',
-      }],
+      date: t('home:roadMap.item3Date'),
+      title: t('home:roadMap.item3Title'),
+      about: t('home:roadMap.item3Description'),
+      links: [
+        {
+          link: 'https://ava.do/checkout/hopr',
+          text: t('home:roadMap.item3L1'),
+        }, {
+          link: 'https://github.com/hoprnet',
+          text: t('home:roadMap.item3L2'),
+        },
+      ],
     },
     {
-      date: 'Nov 2020',
-      title: 'Testing and Community',
-      about: 'A series of popular incentivized and gamified testnets grow the community and network to over 2000 nodes.',
-      links: [{
-        link: 'https://medium.com/hoprnet/hopr-introduces-first-proof-of-relay-data-privacy-mechanism-to-run-on-matic-d45bb5624e5b',
-        text: 'Matic',
-      }, {
-        link: 'https://www.xdaichain.com/',
-        text: 'xDai',
-      }, {
-        link: 'https://www.binance.org/en/smartChain',
-        text: 'BSC',
-      }],
+      date: t('home:roadMap.item4Date'),
+      title: t('home:roadMap.item4Title'),
+      about: t('home:roadMap.item4Description'),
+      links: [
+        {
+          link: 'https://medium.com/hoprnet/hopr-introduces-first-proof-of-relay-data-privacy-mechanism-to-run-on-matic-d45bb5624e5b',
+          text: t('home:roadMap.item4L1'),
+        }, {
+          link: 'https://www.xdaichain.com/',
+          text: t('home:roadMap.item4L2'),
+        }, {
+          link: 'https://www.binance.org/en/smartChain',
+          text: t('home:roadMap.item4L3'),
+        },
+      ],
     },
     {
-      date: 'Q1 2021',
-      title: 'Jungfrau Release',
-      about: 'The HOPR Jungfrau release is the first feature complete version of the HOPR node & HOPR token.',
+      date: t('home:roadMap.item5Date'),
+      title: t('home:roadMap.item5Title'),
+      about: t('home:roadMap.item5Description'),
+      links: [
+        {
+          link: '#',
+          text: t('home:roadMap.item5L1'),
+        },
+      ],
     },
     {
-      date: 'Q2 2021',
-      title: 'Eiger Release',
-      about: 'HOPR’s Eiger release introduces cover traffic and provides increased incentives for relay node operators.',
+      date: t('home:roadMap.item6Date'),
+      title: t('home:roadMap.item6Title'),
+      about: t('home:roadMap.item6Description'),
+      links: [
+        {
+          link: '#',
+          text: t('home:roadMap.item6L1'),
+        },
+      ],
     },
     {
-      date: 'Q2 2021',
-      title: 'Launch HOPR DAO ',
-      about: 'HOPR’s focus on decentralized community enabling governance is solidified with the launch of the project-wide HOPR DAO.',
+      date: t('home:roadMap.item7Date'),
+      title: t('home:roadMap.item7Title'),
+      about: t('home:roadMap.item7Description'),
+      links: [
+        {
+          link: '#',
+          text: t('home:roadMap.item7L1'),
+        },
+      ],
     },
     {
-      date: 'Q2 2021',
-      title: 'Launch of Ecosystem ',
-      about: 'A robust API allows others to build metadata-private dApps and services on top of the HOPR protocol.',
+      date: t('home:roadMap.item8Date'),
+      title: t('home:roadMap.item8Title'),
+      about: t('home:roadMap.item8Description'),
+      links: [
+        {
+          link: '#',
+          text: t('home:roadMap.item8L1'),
+        },
+      ],
     },
     {
-      date: 'Q4 2021',
-      title: 'Token-based Voting',
-      about: 'All token holders will be eligible to vote in the first General Assembly of the HOPR Association. ',
+      date: t('home:roadMap.item9Date'),
+      title: t('home:roadMap.item9Title'),
+      about: t('home:roadMap.item9Description'),
+      links: [
+        {
+          link: '#',
+          text: t('home:roadMap.item9L1'),
+        },
+      ],
     },
   ];
 

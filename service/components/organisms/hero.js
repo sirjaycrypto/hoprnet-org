@@ -2,8 +2,8 @@ import React, { useRef, forwardRef, useState, useEffect } from 'react';
 import Countdown from '../atoms/countdown';
 import useTranslation from 'next-translate/useTranslation';
 import Trans from 'next-translate/Trans';
-import AlertMsg from '../atoms/alertMsg';
 import HeroInfo from '../molecules/hero-info';
+import { AlertMsg } from '..';
 
 const Hero = forwardRef(
   (
@@ -39,7 +39,7 @@ const Hero = forwardRef(
 
     const onScrollGlobal = () => {
       if (area.current && !videoMobile) {
-        const breakOffset = area.current.clientHeight + area.current.offsetTop;
+        const breakOffset = area.current.clientHeight * 0.87;
 
         if (window.pageYOffset >= thisBanner || window.pageYOffset <= breakOffset) {
           removeModeFollowMain();
@@ -100,10 +100,12 @@ const Hero = forwardRef(
                     ) : (
                       <div ref={theAreaBtn} className='preSales-btn'>
                         <div onClick={() => setShowModal(true)} className="btn">
-                          <div>{t('common:btn-community-1')}</div>
+                          <div>{t('common:btnCommunity1')}</div>
+                          <div>{t('common:btnCommunity2')}</div>
                         </div>
                         <div onClick={() => showActiveMsg()} className="btn">
-                          <div>{t('common:btn-public-1')}</div>
+                          <div>{t('common:btnPublic1')}</div>
+                          <div>{t('common:btnPublic2')}</div>
                         </div>
                       </div>
                     )}

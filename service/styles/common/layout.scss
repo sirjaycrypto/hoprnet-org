@@ -25,6 +25,39 @@
     text-transform: none;
   }
 
+  p {
+    margin-bottom: 32px;
+    margin-top: 0;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .text-left {
+    text-align: left;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  .btn {
+    background-origin: border-box;
+    background: linear-gradient(270deg,#000050,#0000b4);
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(255, 255, 160, 0.32), 0 8px 12px rgba(255, 255, 160, 0.24);
+    color: #FFF;
+    display: inline-flex;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 22px;
+    padding: 13px 31px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
   &.invert-color {
     background: $hopr_yellow;
   }

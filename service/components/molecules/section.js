@@ -28,7 +28,7 @@ export const SectionContainer = ({
 
 SectionContainer.propTypes = {
   align: PropTypes.string,
-  children: PropTypes.object,
+  children: PropTypes.node,
   containerSize: PropTypes.string,
   extraClass: PropTypes.string,
   invert: PropTypes.bool,
