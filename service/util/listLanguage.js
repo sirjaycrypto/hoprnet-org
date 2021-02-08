@@ -1,34 +1,30 @@
 export const listLang = [
   {
-    info: 'de',
-    label: 'German',
-  },
-  {
     info: 'en',
-    label: 'English',
-  },
-  {
-    info: 'ma',
-    label: 'Mandarin',
-  },
-  {
-    info: 'pt',
-    label: 'Portuguese',
-  },
-  {
-    info: 'rus',
-    label: 'Russian',
-  },
-  {
-    info: 'ko',
-    label: 'Korean',
-  },
-  {
+    label: 'English'
+  }, {
+    info: 'de',
+    label: 'German'
+  }, {
     info: 'es',
-    label: 'Spanish',
-  },
-  {
+    label: 'Spanish'
+  }, {
+    info: 'zh',
+    label: 'Chinese'
+  }, {
     info: 'ja',
-    label: 'Japanese',
-  },
+    label: 'Japanese'
+  }, {
+    info: 'ko',
+    label: 'Korean'
+  }, {
+    info: 'pt',
+    label: 'Portuguese'
+  }, {
+    info: 'ru',
+    label: 'Russian'
+  }, {
+    info: 'tr',
+    label: 'Turkish'
+  }
 ];
