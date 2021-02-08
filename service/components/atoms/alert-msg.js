@@ -1,10 +1,7 @@
 import React from 'react';
-import useTranslation from 'next-translate/useTranslation';
 import Trans from 'next-translate/Trans';
 
 export const AlertMsg = ({ floating = false, showActiveMsg }) => {
-  const { t } = useTranslation();
-
   return (
     <div className={`area-Msg ${floating ? 'floating' : ''}`}>
       <div
