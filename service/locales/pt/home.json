@@ -21,10 +21,10 @@
     "label": "Seja o primeiro a ganhar e a stake em tokens HOPR com nossa liberação limitada de tokens.",
     "labelPreSales": "Be among the first who profit the most from staking our HOPR Token.",
     "button": "Obtenha o Token HOPR",
-    "btnCommunity1": "COMMUNITY",
-    "btnCommunity2": "PRE-LAUNCH",
-    "btnPublic1":"PUBLIC",
-    "btnPublic2": "LAUNCH",
+    "btnCommunity1": "PRÉ-LANÇAMENTO",
+    "btnCommunity2": "DA COMUNIDADE",
+    "btnPublic1":"LANÇAMENTO",
+    "btnPublic2": "AO PÚBLICO",
     "disclaimer": "Disclaimer"
   },
   "features": {
@@ -153,9 +153,9 @@
   },
   "modal": {
     "about": "Ao clicar neste link, você será redirecionado a um site fornecido por terceiros (site de terceiros). A HOPR (da mesma forma que qualquer entidade afiliada) não tem controle sobre o conteúdo, ofertas (incluindo ofertas sobre tokens HOPR) ou recursos de sites de terceiros e não aceita qualquer responsabilidade por sites de terceiros, conteúdo, ofertas ou recursos, ou por qualquer perda ou dano que possa surgir do uso do site, conteúdo, ofertas ou recursos de terceiros. Se você decidir acessar sites de terceiros, você o faz inteiramente por sua própria conta e risco e sujeito aos termos e condições de uso de sites de terceiros.",
-    "btnCancel": "Cancel",
-    "btnIAgree": "I Agree",
-    "public": "To be the first to know when the HOPR token launches and get other news about the project, subscribe to our.",
+    "btnCancel": "Cancelar",
+    "btnIAgree": "EU CONCORDO",
+    "public": "<paragraph>Para ser o primeiro a saber quando o token HOPR será lançado e receber outras notícias sobre o projeto, inscreva-se na nossa <newsletter>Newsletter</newsletter>, ou siga-nos no <twitter>Twitter</twitter> ou <telegram>Telegram</telegram>.</paragraph>",
     "title": "TERMO DE RESPONSABILIDADE"
   }
 }
