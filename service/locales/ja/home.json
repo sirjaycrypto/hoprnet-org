@@ -21,11 +21,11 @@
     "label": "HOPRトークンの限定リリースで、HOPRトークンを最初に獲得して賭けましょう。",
     "labelPreSales": "Be among the first who profit the most from staking our HOPR Token.",
     "button": "トークンをゲットする",
-    "btnCommunity1": "COMMUNITY",
-    "btnCommunity2": "PRE-LAUNCH",
-    "btnPublic1":"PUBLIC",
-    "btnPublic2": "LAUNCH",
-    "disclaimer": "Disclaimer"
+    "btnCommunity1": "発売前の",
+    "btnCommunity2": "コミュニティ",
+    "btnPublic1":"一般",
+    "btnPublic2": "発売",
+    "disclaimer": "免責事項"
   },
   "features": {
     "pay": "払う",
@@ -155,7 +155,7 @@
     "about": "このリンクをクリックすると、サードパーティが提供するWebサイトにリダイレクトされます。 HOPR（関連するエンティティも同様）は、サードパーティのWebサイトのコンテンツ、オファリング（HOPRトークンに関するオファリングを含む）、またはリソースを管理できません。それに、サードパーティのWebサイトのコンテンツ、オファリングやリソースの使用により発生する損失、または損害に対しては、責任を負いません。 サードパーティのWebサイトにアクセスする場合は、完全に自己責任です。サードパーティのWebサイトの利用規約に従うものとします.",
     "public": "HOPRトークンのリリースについて、または、プロジェクトに関する他のニュースを入手するには、ニュースレターに購読するか、TwitterまたはTelegramでフォローしてください。",
     "title": "免責事項",
-    "btnCancel": "Cancel",
-    "btnIAgree": "I Agree"
+    "btnCancel": "中止",
+    "btnIAgree": "同意する"
   }
 }
