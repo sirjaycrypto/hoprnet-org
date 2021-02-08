@@ -69,6 +69,7 @@
     right: -13px;
     top: -34px;
     width: fit-content;
+    z-index: 2;
 
     @include responsive(tablet) {
       right: 0;
