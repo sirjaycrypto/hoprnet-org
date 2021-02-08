@@ -21,11 +21,11 @@
     "label": "제한된 토큰 공개를 통해 HOPR 토큰을 가장 먼저 획득하고 보유하십시오.",
     "labelPreSales": "Be among the first who profit the most from staking our HOPR Token.",
     "button": "HOPR 토큰을 손에 넣으세요",
-    "btnCommunity1": "COMMUNITY",
-    "btnCommunity2": "PRE-LAUNCH",
-    "btnPublic1":"PUBLIC",
-    "btnPublic2": "LAUNCH",
-    "disclaimer": "Disclaimer"
+    "btnCommunity1": "커뮤니티",
+    "btnCommunity2": "선런칭",
+    "btnPublic1":"공공",
+    "btnPublic2": "공개",
+    "disclaimer": "책임범위한정"
   },
   "features": {
     "pay": "지불",
@@ -155,7 +155,7 @@
     "about": "이 링크를 클릭하면 타사(타사 웹 사이트)에서 제공하는 웹 사이트로 리디렉션됩니다. HOPR(및 모든 관련사)는 콘텐츠, 제공 서비스(HOPR 토큰 관련 제공 서비스 포함) 또는 타사 웹사이트의 리소스를 제어하지 아니합니다. 또한 타사 웹사이트, 콘텐츠, 제공 서비스 또는 정보에 대한 책임 또는 타사 웹사이트, 콘텐츠, 제공 서비스 및 정보를 사용함으로써 발생할 수 있는 손실이나 손상에 대한 책임을 지지 않습니다. 타사 웹 사이트에 액세스하기로 결정한 사용자 본인이 전적으로 자신의 위험을 감수하고 타사 웹 사이트의 사용 약관을 따라야 합니다.",
     "public": "HOPR 토큰이 언제 출시되는지 가장 먼저 알고 프로젝트에 대한 다른 소식을 듣고 싶으시다면 당사의 뉴스레터를 구독하시거나 트위터 혹은 텔레그램을 팔로우하세요.",
     "title": "책임범위한정 ",
-    "btnCancel": "Cancel",
-    "btnIAgree": "I Agree"
+    "btnCancel": "취소",
+    "btnIAgree": "동의"
   }
 }
