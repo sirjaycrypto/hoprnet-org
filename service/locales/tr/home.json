@@ -20,7 +20,12 @@
   "banner": {
     "label": "Sınırlı token salınımımızla HOPR tokenlarını ilk kazanan ve stake eden siz olun.",
     "labelPreSales": "Be among the first who profit the most from staking our HOPR Token.",
-    "button": "HOPR Token Al"
+    "button": "HOPR Token Al",
+    "btnCommunity1": "COMMUNITY",
+    "btnCommunity2": "PRE-LAUNCH",
+    "btnPublic1":"PUBLIC",
+    "btnPublic2": "LAUNCH",
+    "disclaimer": "Disclaimer"
   },
   "features": {
     "pay": "Ödeme Yap",
@@ -149,6 +154,8 @@
   "modal": {
     "about": "Bu bağlantıya tıkladığınızda, üçüncü taraf (üçüncü taraf web sitesi) tarafından sağlanan bir web sitesine yönlendirileceksiniz. HOPR (benzer şekilde herhangi bir bağlı kuruluş) üçüncü taraf web sitesinin içeriği, kaynakları veya teklifleri (HOPR tokenlarıyla ilgili teklifler dahil) üzerinde hiçbir kontrole sahip değildir, ve üçüncü taraf web sitesi, içerik, teklifler veya kaynaklar için veya üçüncü taraf web sitesini, içeriği, teklifleri veya kaynakları kullanmanızdan kaynaklanabilecek herhangi bir kayıp veya hasar için hiçbir sorumluluk kabul etmez. Üçüncü taraf web sitesine erişmeye karar verirseniz, bunu tamamen kendi sorumluluğunuzda yaparsınız ve üçüncü taraf web sitesinin kullanım hüküm ve koşullarına tabi olursunuz.",
     "public": "HOPR token lansmanı ve projeyle ilgili gelişmelerden en önce haberdar olmak için, bültenimize abone olun ve bizi Twitter veya Telegram’ dan takip edin.",
+    "btnCancel": "Cancel",
+    "btnIAgree": "I Agree",
     "title": "SORUMLULUK REDDİ"
   }
 }

@@ -100,19 +100,19 @@ const Hero = forwardRef(
                     ) : (
                       <div ref={theAreaBtn} className='preSales-btn'>
                         <div onClick={() => setShowModal(true)} className="btn">
-                          <div>{t('common:btnCommunity1')}</div>
-                          <div>{t('common:btnCommunity2')}</div>
+                          <div>{t('home:banner.btnCommunity1')}</div>
+                          <div>{t('home:banner.btnCommunity2')}</div>
                         </div>
                         <div onClick={() => showActiveMsg()} className="btn">
-                          <div>{t('common:btnPublic1')}</div>
-                          <div>{t('common:btnPublic2')}</div>
+                          <div>{t('home:banner.btnPublic1')}</div>
+                          <div>{t('home:banner.btnPublic2')}</div>
                         </div>
                       </div>
                     )}
                   </div>
                 ) : (
                   <div onClick={() => setShowModal(true)} className="btn-banner">
-                    <span>{t('common:getHorpFull')}</span>
+                    <span>{t('home:banner.button')}</span>
                   </div>
                 )}
               </>

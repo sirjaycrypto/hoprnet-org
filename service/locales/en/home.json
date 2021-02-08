@@ -20,7 +20,12 @@
   "banner": {
     "label": "Be the first to earn and stake HOPR tokens with our limited token release.",
     "labelPreSales": "Be among the first who profit the most from staking our HOPR Token.",
-    "button": "Get HOPR Token"
+    "button": "Get HOPR Token",
+    "btnCommunity1": "COMMUNITY",
+    "btnCommunity2": "PRE-LAUNCH",
+    "btnPublic1":"PUBLIC",
+    "btnPublic2": "LAUNCH",
+    "disclaimer": "Disclaimer"
   },
   "features": {
     "pay": "Pay",
@@ -148,6 +153,8 @@
   },
   "modal": {
     "about": "By clicking on this link, you will be redirected to a website provided by a third-party (third-party website). HOPR (likewise any affiliated entity) has no control over the content, offerings (including offerings regarding HOPR tokens) or resources of the third-party website, and accepts no responsibility for the third-party website, the content, offerings or resources, or for any loss or damage that may arise from your use of the third party-party website, the content, offerings or resources. If you decide to access the third-party website, you do so entirely at your own risk and subject to the terms and conditions of use for the third-party website.",
+    "btnCancel": "Cancel",
+    "btnIAgree": "I Agree",
     "public": "To be the first to know when the HOPR token launches and get other news about the project, subscribe to our.",
     "title": "DISCLAIMER"
   }

@@ -125,12 +125,12 @@ export default function Index() {
             ) : (
               <>
                 <div onClick={() => setShowModal(true)} className="btn-banner first-button">
-                  <div>{t('common:btnCommunity1')}</div>
-                  <div>{t('common:btnCommunity2')}</div>
+                  <div>{t('home:banner.btnCommunity1')}</div>
+                  <div>{t('home:banner.btnCommunity2')}</div>
                 </div>
                 <div className="btn-banner" onClick={togglePublicMsg}>
-                  <div>{t('common:btnPublic1')}</div>
-                  <div>{t('common:btnPublic2')}</div>
+                  <div>{t('home:banner.btnPublic1')}</div>
+                  <div>{t('home:banner.btnPublic2')}</div>
                 </div>
               </>
             )
