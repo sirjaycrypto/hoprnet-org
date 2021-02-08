@@ -1,5 +1,6 @@
 import React from 'react';
 import useTranslation from 'next-translate/useTranslation';
+import Trans from 'next-translate/Trans';
 
 export const AlertMsg = ({ floating = false, showActiveMsg }) => {
   const { t } = useTranslation();
@@ -13,37 +14,15 @@ export const AlertMsg = ({ floating = false, showActiveMsg }) => {
         <img src="/assets/icons/close.svg" alt="hopr logo" />
       </div>
       <div>
-        <p>
-          {t('home:modal.public')}
-          To be the first to know when the HOPR token launches and get other
-          news about the project, subscribe to our{' '}
-          <a
-            href="https://hopr.substack.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="link-out"
-          >
-            newsletter,
-          </a>{' '}
-          or follow us on{' '}
-          <a
-            href="https://twitter.com/hoprnet"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="link-out"
-          >
-            Twitter
-          </a>{' '}
-          or{' '}
-          <a
-            href="https://t.me/hoprnet"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="link-out"
-          >
-            Telegram.
-          </a>
-        </p>
+        <Trans
+          i18nKey="home:modal.public"
+          components={{
+            paragraph: <p />,
+            newsletter: <a href="https://hopr.substack.com/" target="_blank" rel="noopener noreferrer" className="link-out" />,
+            telegram: <a href="https://t.me/hoprnet" target="_blank" rel="noopener noreferrer" className="link-out" />,
+            twitter: <a href="https://twitter.com/hoprnet" target="_blank" rel="noopener noreferrer" className="link-out" />,
+          }}
+        />
       </div>
     </div>
   );
