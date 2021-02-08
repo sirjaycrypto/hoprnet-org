@@ -1,112 +1,154 @@
 {
   "headline": {
-    "title": "INVEST IN METADATA PRIVACY",
-    "beforeInfoTop": "Global data traffic is <strong>growing</strong> exponentially, and so are the security risks. ",
-    "beforeInfoBottom": " HOPR provides essential and compliant network-level metadata privacy for everyone.",
-    "mainInfo": "Every minute, people and companies transmit millions of gigabytes of data across the globe. This figure is growing exponentially thanks to new technologies such as 5G and the Internet of Things. This data all needs protecting, and so does the metadata it generates. The HOPR protocol provides network-level metadata privacy for everyone, and the HOPR network is driven by the HOPR token.",
+    "title": "ИНВЕСТИРУЙ В КОНФИДЕНЦИАЛЬНОСТЬ МЕТАДАННЫХ",
+    "beforeInfoTop": "Трафик данных в мире растет в геометрической прогрессии, также как растут и риски безопасности.",
+    "beforeInfoBottom": "HOPR обеспечивает необходимую конфиденциальность метаданных на сетевом уровне для всех.",
+    "caption": "Теоретический рост цены (если не было покупок)",
+    "mainInfo": "home_headline_mainInfo",
     "titleTicket": "Balancer Launch",
-    "txtDownNum": "per HOPR token",
-    "fPoint": "Join our initial limited token release to be one of the first to earn and stake HOPR.",
-    "sPoint": "There will be only XXXX tokens available during this initial phase.",
-    "tPoint": "Tokens will be available via",
-    "tokenLeft": "TOKENS LEFT"
+    "txtDownNum": "за токен HOPR",
+    "fPoint": "home_headline_fPoint",
+    "sPoint": "home_headline_sPoint",
+    "tPoint": "home_headline_tPoint",
+    "tokenLeft": "home_headline_tokenLeft"
   },
   "back": {
-    "title": "BACKED BY",
-    "titleA": "PARTNERS",
-    "titleB": "AS SEEN IN"
+    "title": "ПРИ ПОДДЕРЖКЕ",
+    "titleA": "ПАРТНЕРЫ ",
+    "titleB": "КАК ВИДНО ИЗ"
   },
   "banner": {
     "label": "Be the first to earn and stake HOPR tokens with our limited token release.",
     "labelPreSales": "Be among the first who profit the most from staking our HOPR Token.",
-    "button": "Get HOPR Token"
+    "button": "Получить токены HOPR"
   },
   "features": {
-    "pay": "Pay",
-    "payMain": "Spend HOPR tokens to send data through the HOPR network with complete data and metadata privacy.",
-    "stake": "Stake",
-    "stakeMain": "Lock HOPR tokens in your node to relay user data and cover traffic. The more you stake, the more data you can relay, and the more you can earn.",
-    "title": "Token features",
-    "vote": "Govern",
-    "voteMain": "From technical parameters to the composition of the HOPR board of directors, participate in decentralized, community-enabling governance."
+    "pay": "Оплата",
+    "payMain": "Оплачивайте токенами HOPR отправку данных через сеть HOPR с полной конфиденциальностью данных и метаданных.",
+    "stake": "Стекинг",
+    "stakeMain": "Залочьте токены HOPR на своей ноде, чтобы передавать пользовательские данные и покрыть трафик. Чем больше токенов у вас в стеке, тем больше данных вы можете передавать и тем больше можете заработать.",
+    "title": "ОСОБЕННОСТИ ТОКЕНА HOPR",
+    "vote": "Голосование",
+    "voteMain": "От технических параметров до состава совета директоров HOPR, участвуйте в децентрализованном управлении с учетом интересов сообщества."
   },
   "further": {
-    "infoBottomATitle": "Our Blog",
-    "infoBottomBTitle": "Our Values",
-    "infoBottomCTitle": "Our Whitepaper",
-    "infoBottomDTitle": "Our organizational structure: Decent Gov",
-    "infoBottomETitle": "HOPR in the Media",
-    "infoTopTitleA": "Install a HOPR node for free via GitHub",
-    "infoTopTitleAAbout": "Anyone can run a HOPR node on their own hardware! We provide easy-to-install software for Linux, macOS, Windows, docker and cloud environments. We also sell a dedicated hardware node for faster staking.",
-    "infoTopTitleB": "Buy a HOPR Node PC",
-    "infoTopTitleBAbout": "The HOPR Node PC is a powerful plug-and-play hardware device which lets you run a HOPR node around the clock.",
-    "title": "Further Reading"
+    "infoBottomATitle": "home_further_infoBottomATitle",
+    "infoBottomBTitle": "home_further_infoBottomBTitle",
+    "infoBottomCTitle": "home_further_infoBottomCTitle",
+    "infoBottomDTitle": "home_further_infoBottomDTitle",
+    "infoBottomETitle": "home_further_infoBottomETitle",
+    "infoTopTitleA": "home_further_infoTopTitleA",
+    "infoTopTitleAAbout": "home_further_infoTopTitleAAbout",
+    "infoTopTitleB": "home_further_infoTopTitleB",
+    "infoTopTitleBAbout": "home_further_infoTopTitleBAbout",
+    "title": "home_further_title"
   },
   "hardware": {
-    "about": "Anyone can run a HOPR node on their own hardware! We provide easy-to-install software for Linux, macOS, Windows, Docker and cloud environments. Start earning HOPR tokens within minutes.",
-    "caption": "We also sell a dedicated hardware node for faster staking.",
-    "subtitleA": "Run Your Own Metal",
-    "subtitleB": "Your HOPR Hardware Node",
-    "title": "RUN A HOPR NODE"
+    "about": "Каждый может запустить ноду HOPR на собственном оборудовании! Мы предлагаем простое в установке программное обеспечение для Linux, macOS, Windows, Docker и облачных сред. Начните зарабатывать токены HOPR в считанные минуты.",
+    "caption": "Мы также продаем аппаратные ноды HOPR, для более быстрого стекинга.",
+    "subtitleA": "Запуск на собственном оборудовании",
+    "subtitleB": "Ваша аппаратная нода HOPR",
+    "title": "ЗАПУСК НОДЫ HOPR"
   },
   "graphic": {
-    "bounties": "Bounties",
-    "cover": "Cover Traffic",
-    "early": "Early Token Buyers",
-    "pre": "Pre-Sale",
-    "public": "Public Distribution",
-    "team": "Team & Advisors",
-    "treasury": "Treasury",
-    "votes": "# of Votes"
+    "bounties": "Баунти",
+    "cover": "Покрытие трафика",
+    "early": "home_graphic_early",
+    "pre": "Ранние покупатели токенов",
+    "public": "Публичное распространение",
+    "team": "Команда и консультанты",
+    "treasury": "Казначейство",
+    "votes": "home_graphic_votes"
   },
   "hero": {
-    "subtitle": "HOPR JUNGFRAU LAUNCHES IN",
-    "subtitlePre": "THE HOPR TOKEN LAUNCHES IN:",
-    "title": "Changing Data Privacy for Good"
+    "subtitle": "ЗАПУСК ПРОДАЖИ ТОКЕНОВ HOPR В:",
+    "subtitlePre": "ОКОНЧАНИЕ ПРОДАЖИ ТОКЕНОВ HOPR В:",
+    "title": "home_hero_title"
   },
   "slide": {
-    "slideA": "Sandro Cilurzo, Co-Founder & CEO of Sedimentum AG.",
-    "slideAMain": "HOPR has developed this groundbreaking open source technology to be used by privacy-aware developers all over the world, HOPR is integrated in our cutting edge privacy-preserving technology to save lives without compromising privacy.",
-    "slideB": "Beniamin Mincu, CEO of Elrond.",
-    "slideBMain": "The HOPR protocol offers a new standard for internet-scale performance, probabilistic security, and cryptographic pseudonymity. We’re happy to bridge the last mile to the Elrond network entry-points with HOPR, and offer a truly decentralized & private end-to-end experience for our.",
-    "slideC": "Gin Chao, Strategy Officer of Binance.",
-    "slideCMain": "The team at HOPR has shown us how their decentralized network achieves privacy guarantees on the metadata level and gives power back to the people."
+    "slideA": "Sandro Cilurzo, Соучредитель и генеральный директор Sedimentum AG.",
+    "slideAMain": "“HOPR разработал эту революционную технологию с открытым исходным кодом для использования разработчиками по всему миру, заботящимися о конфиденциальности. HOPR интегрирован в нашу передовую технологию сохранения конфиденциальности, чтобы спасти жизни без ущерба для конфиденциальности.”",
+    "slideB": "Beniamin Mincu, Главный исполнительный директор Elrond",
+    "slideBMain": "“Протокол HOPR предлагает новый стандарт производительности в масштабах Интернета, вероятностной безопасности и криптографической псевдонимности. Мы счастливы преодолеть последнюю милю до точек входа в сеть Elrond с помощью HOPR и предложить по-настоящему децентрализованный и частный опыт сквозного шифрования для наших пользователей.” ",
+    "slideC": "Gin Chao, Binance Сотрудник по стратегии",
+    "slideCMain": "“Команда HOPR показала нам, как их децентрализованная сеть обеспечивает гарантии конфиденциальности на уровне метаданных и возвращает власть людям.”"
   },
   "token": {
-    "about": "The HOPR Network is powered by the HOPR Token, a utility token on the Ethereum Network.",
-    "listItemA": "Token same: HOPR Token",
-    "listItemB": "Token symbol: HOPR",
-    "listItemC": "Network: Ethereum",
-    "listItemD": "Standards: ERC20, ERC777",
-    "listItemE": "Total supply: 1BN HOPR",
-    "listItemF": "Initial circulating supply: 130M HOPR",
-    "secondSubAbout": "Starting at an initial circulating supply of 130 million, HOPR tokens will be released over a period of 5 years. A quarter of all HOPR tokens are available only to stakers as a reward for relaying cover traffic.",
-    "secondSubTitle": "Token Allocation",
-    "subTitle": "KEY METRICS",
-    "thirdSubTitle": "Token Supply Distribution",
-    "title": "Token Release",
-    "textEnding": "VC-NOTE Fusce sagittis mauris at purus venenatis, sed sagittis est feugiat. Aenean et malesuada massa. Morbi dignissim venenatis eros ut lobortis. Cras eu libero mi. Etiam ullamcorper sapien non est pretium elementum. Donec eget risus sollicitudin, ultricies est ut, aliquam neque. Mauris et dictum ex. Nulla ultrices mollis dui. Pellentesque vel leo ac lorem maximus convallis quis ac est. Ut pellentesque quis nisl sed dictum."
+    "about": "Сеть HOPR работает на одноимённом токене HOPR, который является служебным(utility) токеном сети Ethereum.",
+    "listItemA": "Имя токена: токен HOPR",
+    "listItemB": "Символ токена: HOPR",
+    "listItemC": "Сеть: Ethereum",
+    "listItemD": "Стандарты: ERC20, ERC777",
+    "listItemE": "Общий объем: 1 млрд HOPR",
+    "listItemF": "Первоначальное оборотное предложение: 130 млн HOPR",
+    "secondSubAbout": "Начиная с первоначального оборотного предложения в 130 миллионов, токены HOPR будут выпускаться в течение 5 лет. Четверть всех токенов HOPR доступны только участникам в качестве вознаграждения за ретрансляцию покрывающего трафика.",
+    "secondSubTitle": "Распределение токенов",
+    "subTitle": "Ключевые метрики",
+    "thirdSubTitle": "Распределение токенов",
+    "title": "Выпуск токена",
+    "textEnding": "home_token_textEnding"
   },
   "why": {
-    "btnLabel": "Get HOPR-Token on SECRET",
-    "labelDate": "Source: Cisco Visual Networking Index",
-    "mainText": "Every minute, people and companies transmit millions of gigabytes of data across the globe. This figure is growing exponentially thanks to new technologies such as 5G and the Internet of Things. This data all needs protecting, and so does the metadata it generates. The HOPR protocol provides network-level metadata privacy for everyone, and the HOPR network is driven by the HOPR token.",
-    "title": "Why does it matter?"
+    "btnLabel": "home_why_btnLabel",
+    "labelDate": "home_why_labelDate",
+    "mainText": "home_why_mainText",
+    "title": "home_why_title"
   },
   "work": {
-    "performant": "Performant",
-    "performantMain": "HOPR’s custom layer-two scaling solution is based on probabilistic payment channels. This ensures fully decentralized settlement without unnecessary blockchain transaction fees, all while protecting node runners’ metadata.",
-    "private": "Private",
-    "privateMain": "The HOPR network is a decentralized incentivized mixnet, ensuring complete data and metadata privacy for everyone who uses it. Data is sent via multiple hops, so no-one but the sender and receiver know the origin, destination, or content of a data transfer.",
-    "profitable": "Profitable",
-    "profitableMain": "HOPR’s unique proof-of-relay mechanism means every node runner is incentivized to correctly relay data in exchange for HOPR tokens. Anyone can run a HOPR node to earn HOPR tokens and contribute to online data privacy.",
-    "title": "How it works"
+    "performant": "Эффективность",
+    "performantMain": "Решение HOPR для масштабирования второго уровня основано на вероятностных каналах оплаты. Это обеспечивает полностью децентрализованный расчет без ненужных комиссий за транзакции блокчейна, при этом защищая метаданные владельцев ноды.",
+    "private": "Приватность",
+    "privateMain": "Сеть HOPR представляет собой децентрализованный стимулируемый микснет, обеспечивающий полную конфиденциальность данных и метаданных для всех, кто его использует. Данные отправляются через несколько узлов, поэтому никто, кроме отправителя и получателя, не знает источник, пункт назначения или содержание переданных данных.",
+    "profitable": "Рентабельность",
+    "profitableMain": "Уникальный механизм proof-of-relay (PoR) HOPR означает, что каждый владелец ноды заинтересован в правильной передаче данных в обмен на токены HOPR. Любой может запустить ноду HOPR, чтобы зарабатывать токены HOPR и вносить свой вклад в обеспечение конфиденциальности данных в Интернете.",
+    "title": "HКАК ЭТО РАБОТАЕТ"
   },
   "roadMap": {
-    "title": " ROADMAP"
+    "item1Date": "  Ноябрь 2019",
+    "item1Description": "Основатели HOPR разрабатывают децентрализованный подход к актуальной проблеме конфиденциальности метаданных. Родился проект HOPR!",
+    "item1Title": "Идея",
+    "item1L1": "Книга HOPR",
+    "item1L2": "Технический White Paper",
+    "item2Date": "Апрель 2020",
+    "item2Description": "HOPR официально объявляет об открытии seed раунда в размере 1 млн. долларов США под руководством Binance. Учреждена Ассоциация HOPR.",
+    "item2Title": "Финансирование и запуск",
+    "item2L1": "Binance",
+    "item3Date": "Июль 2020",
+    "item3Description": "Выпуск аппаратной ноды HOPR, позволяющий пользователям запускать специальное устройство HOPR из своего дома. ",
+    "item3Title": "Аппаратная нода HOPR",
+    "item3L1": "Магазин",
+    "item3L2": "gitHub",
+    "item4Date": "Ноябрь 2020",
+    "item4Description": "Серия популярных стимулированных и геймифицированных тестнетов расширяет сообщество и сеть до 2000 узлов.",
+    "item4Title": "Тестирование и сообщество",
+    "item4L1": "Matic",
+    "item4L2": "xDai",
+    "item4L3": "BSC",
+    "item5Date": "В I квартале 2021 года.",
+    "item5Description": "Релиз HOPR Jungfrau это первая полнофункциональная версия узла HOPR и токена HOPR",
+    "item5Title": "Релиз Jungfrau (Основная сеть)",
+    "item5L1": "Страница продажи",
+    "item6Date": "Во II квартале 2021 года.",
+    "item6Description": "HOPR Eiger релиз вводит покрытие трафика, делая функцию протокола полноценной",
+    "item6Title": "Релиз Eigerсообщение в блоге",
+    "item6L1": "сообщение в блоге",
+    "item7Date": " Во II квартале 2021 года.",
+    "item7Description": "Акцент HOPR на децентрализованном сообществе, обеспечивающем управление, подтверждается запуском проекта HOPR DAO",
+    "item7Title": "Сообщение в блоге",
+    "item7L1": "DecenGov",
+    "item8Date": "Во II квартале 2021 года.",
+    "item8Description": "Все держатели токенов получат право голоса на первом собрании HOPR Association.",
+    "item8Title": "Сообщение в блоге",
+    "item8L1": "Blogpost",
+    "item9Date": "В IV квартале 2021 года.",
+    "item9Description": "Голосование на основе токенов Все держатели токенов получат право голоса на первом собрании HOPR Association. ",
+    "item9Title": "Сообщение в блоге",
+    "item9L1": "Blogpost",
+    "title": "ROADMAP"
   },
   "modal": {
-    "title": "Disclaimer",
-    "about": "By clicking on this link, you will be redirected to a website provided by a third-party (third-party website). HOPR (likewise any affiliated entity) has no control over the content, offerings (including offerings regarding HOPR tokens) or resources of the third-party website, and accepts no responsibility for the third-party website, the content, offerings or resources, or for any loss or damage that may arise from your use of the third party-website, the content, offerings or resources. If you decide to access the third-party website, you do so entirely at your own risk and subject to the terms and conditions of use for the third-party website."
+    "about": "Нажав на эту ссылку, вы будете перенаправлены на веб-сайт, предоставленный третьей стороной (сторонний веб-сайт). HOPR (как и любая аффилированная организация) не контролирует содержание, предложения (в том числе предложения в отношении токенов HOPR) или ресурсы веб-сайта третьей стороны, и не несет никакой ответственности за веб-сайт третьей стороны, содержание, предложения или ресурсы, или за любые потери или ущерб, которые могут возникнуть в результате использования веб-сайта третьей стороны, содержания, предложения или ресурсы. Если Вы решаете получить доступ к стороннему веб-сайту, Вы делаете это исключительно на свой страх и риск и в соответствии с условиями использования стороннего веб-сайта.",
+    "public": "Будьте первым, кто зарабатывает и стекает токены HOPR с нашим ограниченным выпуском токенов.",
+    "title": "ОТКАЗ ОТ ОТВЕТСТВЕННОСТИ"
   }
 }
