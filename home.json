@@ -1,0 +1,161 @@
+{
+  "headline": {
+    "title": "投资元数据隐私",
+    "beforeInfoTop": "全球数据呈指数增长,安全风险也同时在增长",
+    "beforeInfoBottom": "HOPR向全世界提供必不可少且符合网络级别的元数据隐私保护。",
+    "caption": "假设的价格变化幅度（如没购买)",
+    "mainInfo": "home_headline_mainInfo",
+    "titleTicket": "Balancer 发行",
+    "txtDownNum": "HOPR代币单价",
+    "fPoint": "home_headline_fPoint",
+    "sPoint": "home_headline_sPoint",
+    "tPoint": "home_headline_tPoint",
+    "tokenLeft": "home_headline_tokenLeft"
+  },
+  "back": {
+    "title": "投资商",
+    "titleA": "合作伙伴",
+    "titleB": "合作伙伴的背书"
+  },
+  "banner": {
+    "label": "通过我们有限的代币发行,率先赚取并质押HOPR代币",
+    "labelPreSales": "Be among the first who profit the most from staking our HOPR Token.",
+    "button": "获取HOPR代币",
+    "btnCommunity1": "社区优先发行",
+    "btnCommunity2": " ",
+    "btnPublic1":"公共发行",
+    "btnPublic2": " ",
+    "disclaimer": "免责声明"
+  },
+  "features": {
+    "pay": "支付",
+    "payMain": "使用HOPR代币在具备隐私保护的HOPR网络中传达数据和元数据。",
+    "stake": "权益质押",
+    "stakeMain": "用户在节点中锁定HOPR代币,质押越多,中继的数据和覆盖流量就越多,你也赚得越多。",
+    "title": "代币特性",
+    "vote": "投票",
+    "voteMain": "从技术参数到HOPR董事会选举,参与去中心化、支持社区化性质的治理模式。"
+  },
+  "further": {
+    "infoBottomATitle": "home_further_infoBottomATitle",
+    "infoBottomBTitle": "home_further_infoBottomBTitle",
+    "infoBottomCTitle": "home_further_infoBottomCTitle",
+    "infoBottomDTitle": "home_further_infoBottomDTitle",
+    "infoBottomETitle": "home_further_infoBottomETitle",
+    "infoTopTitleA": "home_further_infoTopTitleA",
+    "infoTopTitleAAbout": "home_further_infoTopTitleAAbout",
+    "infoTopTitleB": "home_further_infoTopTitleB",
+    "infoTopTitleBAbout": "home_further_infoTopTitleBAbout",
+    "title": "home_further_title"
+  },
+  "hardware": {
+    "about": "任何人都能在自己的设备上运行一个HOPR节点。我们为LINUX, macOS, WINDOWS, DOCKER和云服务器都提供了简易安装的软件。只需几分钟你就可以开始赚取HOPR代币。",
+    "caption": "我们也售卖专用的硬件节点,可以帮助快速质押。",
+    "subtitleA": "在自己的设备上运行",
+    "subtitleB": "你专属的HOPR 硬件节点",
+    "title": "如何运行HOPR节点"
+  },
+  "graphic": {
+    "bounties": "赏金",
+    "cover": "覆盖流量",
+    "early": "home_graphic_early",
+    "pre": "Pre-Sale",
+    "public": "公开发行量",
+    "team": "团队和顾问",
+    "treasury": "金库",
+    "votes": "home_graphic_votes"
+  },
+  "hero": {
+    "subtitle": "代币发行:",
+    "subtitlePre": "THE HOPR TOKEN LAUNCH ENDS IN:",
+    "title": "home_hero_title"
+  },
+  "slide": {
+    "slideA": "Sandro Cilurzo, Co-Founder & CEO of Sedimentum AG.",
+    "slideAMain": "HOPR为全世界具有对隐私保护意识的开发人员提供了这种突破性的技术。HOPR的隐私保护先锋技术可以在不损害任何隐私的情况下挽救生命。",
+    "slideB": "Beniamin Mincu, Elrond CEO",
+    "slideBMain": "HOPR协议为互联网的规模性提供了一个新的标准。概率安全性和密码匿名性。我们很高兴能用HOPR与我们ELROND网络的最后一英里入口搭建桥梁。为我们的用户提供完整的去中心化,端口到端口的独一无二体验。",
+    "slideC": "币安策略官  Gin Chao",
+    "slideCMain": "HOPR的团队向我们展示了去中心化网络如何在元数据级别上实现隐私保护,并受惠于用户。"
+  },
+  "token": {
+    "about": "HOPR网络由以太坊网络上的实用代币HOPR代币驱动。",
+    "listItemA": "代币名称: HOPR代币",
+    "listItemB": "代币符号: HOPR" ,
+    "listItemC": "网络: Ethereum",
+    "listItemD": "标准: ERC20, ERC777",
+    "listItemE": "总供应量: 1BN HOPR",
+    "listItemF": "初始供应: 130M HOPR",
+    "secondSubAbout": "从初始供应1.3亿开始,HOPR代币将在五年内释放完。总量的四分之一将保留给对帮助中继覆盖流量的权益质押者的奖励。",
+    "secondSubTitle": "代币分配",
+    "subTitle": "Key Metrics",
+    "thirdSubTitle": "代币供应分配",
+    "title": "代币发行",
+    "textEnding": "home_token_textEnding"
+  },
+  "why": {
+    "btnLabel": "home_why_btnLabel",
+    "labelDate": "home_why_labelDate",
+    "mainText": "home_why_mainText",
+    "title": "home_why_title"
+  },
+  "work": {
+    "performant": "高效性",
+    "performantMain": "HOPR特殊的¨layer 2解决方案¨基于概率支付渠道。它确保了完全分散的结算,除去了不必的区块链交易手续费,但同时保护了节点运行者的元数据。",
+    "private": "隐秘性",
+    "privateMain": "HOPR网络是一个去中心化的激励混合网。保护每一位用户的数据和元数据的隐私。数据会通过众多跃点传输,只有发信者和收信者知道数据传输的来源,目的地以及内容。",
+    "profitable": "收益性",
+    "profitableMain": "HOPR独一无二的中继证明机制,意味着每一个节点运行者都可以通过正确中继数据而换得HOPR代币。任何人都可以运行HOPR节点来赚取HOPR代币,因而为互联网的数据隐私保护做出一份贡献。",
+    "title": "HOPR协议原理"
+  },
+  "roadMap": {
+    "item1Date": "2019年11月",
+    "item1Description": "HOPR的创始人开发了一种去中心化的方法来解决元数据隐私这紧迫的问题。HOPR诞生!",
+    "item1Title": "理念诞生",
+    "item1L1": "HOPR手册",
+    "item1L2": "技术白皮书",
+    "item2Date": "2020年4月",
+    "item2Description": "HOPR正式启动。获得了由币安领头的一百万美元融资。HOPR协会成立。",
+    "item2Title": "集资和启动",
+    "item2L1": "Binance",
+    "item3Date": "2020年7月",
+    "item3Description": "HOPR Node PC 启动,用户可以在家中运行专用的HOPR设备。",
+    "item3Title": "HOPR 硬件节点",
+    "item3L1": "在线购买",
+    "item3L2": "gitHub",
+    "item4Date": "2020年11月",
+    "item4Description": "一系列带奖励机制的游戏化测试网扩张了HOPR社区并使网络扩展到2000个节点。",
+    "item4Title": " 测试网和社区",
+    "item4L1": "Matic",
+    "item4L2": "xDai",
+    "item4L3": "BSC",
+    "item5Date": "2021年第一季度",
+    "item5Description": "HOPR主网Jungfrau是HOPR节点和HOPR代币的第一个完整功能的版本。",
+    "item5Title": "发布主网 JUNGFRAU",
+    "item5L1": "SalePage",
+    "item6Date": "2021年第二季度",
+    "item6Description": "HOPR的EIGER引入覆盖流量,使协议性能完整化。",
+    "item6Title": "发布 EIGER ",
+    "item6L1": "Blogpost",
+    "item7Date": "2021年第二季度",
+    "item7Description": "HOPR通过发布HOPR DAO加强¨去中心化权力下放的社区治理模式¨理念。",
+    "item7Title": "发布HOPR DAO",
+    "item7L1": "DecenGov",
+    "item8Date": "2021年第二季度",
+    "item8Description": "一个强大的API允许其他人在HOPR协议的基础上构建元数据隐私的dAPPs和服务。",
+    "item8Title": "发布生态系统",
+    "item8L1": "Blogpost",
+    "item9Date": "2021年第三季度",
+    "item9Description": "所有代币持有者都有资格在HOPR协会的第一届会员大会里投票。",
+    "item9Title": "基于代币的投票",
+    "item9L1": "Blogpost",
+    "title": "路线图"
+  },
+  "modal": {
+    "about": "通过点击此链接,您将被重新定向到第三方提供的网站。HOPR（以及所有附属实体）无法控制第三方网站的内容、产品（包括有关HOPR代币的产品）或资源,也不对第三方网站的内容、产品或资源承担任何责任。也不对您因使用第三方网站的内容、产品或资源而引起的损失承担任何责任。如果您决定访问第三方网站,您需承担所有的风险并遵守第三方网站的使用条款和条件。",
+    "public": "<paragraph>想要第一时间获得所有关于HOPR代币及其他项目信息，请订阅我们的<newsletter>信息刊</newsletter>，或者在<twitter>推特</twitter>或<telegram>电频网</telegram>上关注我们。</paragraph>",
+    "title": "免责声明",
+    "btnCancel": "取消",
+    "btnIAgree": "我同意"
+  }
+}
