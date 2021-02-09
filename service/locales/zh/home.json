@@ -21,11 +21,11 @@
     "label": "通过我们有限的代币发布，率先赚取并质押HOPR代币",
     "labelPreSales": "Be among the first who profit the most from staking our HOPR Token.",
     "button": "获取HOPR代币",
-    "btnCommunity1": "COMMUNITY",
-    "btnCommunity2": "PRE-LAUNCH",
-    "btnPublic1":"PUBLIC",
-    "btnPublic2": "LAUNCH",
-    "disclaimer": "Disclaimer"
+    "btnCommunity1": "社区优先发行",
+    "btnCommunity2": " ",
+    "btnPublic1":"公共发行",
+    "btnPublic2": " ",
+    "disclaimer": "免责声明"
   },
   "features": {
     "pay": "支付",
@@ -153,9 +153,9 @@
   },
   "modal": {
     "about": "通过点击此链接，您将被重新定向到第三方提供的网站。HOPR（以及所有附属实体）无法控制第三方网站的内容、产品（包括有关HOPR代币的产品）或资源，也不对第三方网站的内容、产品或资源承担任何责任。也不对您因使用第三方网站的内容、产品或资源而引起的损失承担任何责任。如果您决定访问第三方网站，您需承担所有的风险并遵守第三方网站的使用条款和条件。",
-    "public": "想要第一时间获得所有关于HOPR代币及其他项目信息，请订阅我们的信息刊，或者在推特或电频网上关注我们。",
+    "public": "<paragraph>想要第一时间获得所有关于HOPR代币及其他项目信息，请订阅我们的<newsletter>信息刊</newsletter>，或者在<twitter>推特</twitter>或<telegram>电频网</telegram>上关注我们。</paragraph>",
     "title": "免责声明",
-    "btnCancel": "Cancel",
-    "btnIAgree": "I Agree"
+    "btnCancel": "取消",
+    "btnIAgree": "我同意"
   }
 }
