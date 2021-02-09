@@ -32,7 +32,7 @@
     "payMain": "Sende Daten vollständig verschlüsselt durch unser HOPR-Netzwerk und bezahle dies mit HOPR-Tokens.",
     "stake": "Staken",
     "stakeMain": "Hinterlege HOPR-Tokens in deinem Node, um am Weiterleiten von Benutzerdaten durch deinen Node verdienen zu können. Die Anzahl der hinterlegten Tokens ist dafür entscheidend wieviel Daten weitergeleitet und somit auch verdient werden kann.",
-    "title": "EIGENSCHAFTEN UNSERES TOKENS:",
+    "title": "EIGENSCHAFTEN UNSERES TOKENS",
     "vote": "Voten",
     "voteMain": "Von den technischen Parametern, bis hin zur Besetzung des HOPR-Vorstandes – beteilige dich an unserer dezentralen Community-gesteuerten Entscheidungsfindung."
   },
@@ -85,7 +85,7 @@
     "listItemC": "Network: Ethereum",
     "listItemD": "Standards: ERC20, ERC777",
     "listItemE": "Gesamtvolumen: 1BN HOPR",
-    "listItemF": "Initiale Umlaufversorgung: 130M HOPR",
+    "listItemF": "Anfänglich verfügbare Tokens: 130M HOPR",
     "secondSubAbout": "Beginnend mit einer anfänglichen Umlaufmenge von 130 Millionen, werden HOPR-Token über einen Zeitraum von 4 Jahren emitiert. Ein Viertel aller HOPR-Token ist nur für Staker als Belohnung für die Weiterleitung von Daten verfügbar.",
     "secondSubTitle": "Token Distribution ",
     "subTitle": "Token Metriken",
