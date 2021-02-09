@@ -1,0 +1,11 @@
+{
+    "aboutUs": "menu_aboutUs",
+    "disclaimer": "menu_disclaimer",
+    "technology": "menu_technology",
+    "book": "menu_book",
+    "token": "menu_token",
+    "joinTestnet": "menu_joinTestnet",
+    "blog": "menu_blog",
+    "partners": "menu_partners",
+    "support": "menu_support"
+  }
