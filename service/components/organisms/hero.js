@@ -33,9 +33,9 @@ const Hero = forwardRef(
     };
 
     const setDeviceType = () => {
-      if (window.innerWidth <= 750) {
+      if (window.innerWidth <= 450) {
         setVideoMobile(true);
-      } else if (window.innerWidth <= 1000) {
+      } else if (window.innerWidth <= 768) {
         setVideoTablet(true);
       }
     }
@@ -77,7 +77,7 @@ const Hero = forwardRef(
             <iframe
               allow="autoplay; fullscreen"
               className="background-video"
-              src="https://player.vimeo.com/video/508845856/56eac0bbe9?autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false"
+              src="https://player.vimeo.com/video/508845856?autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false"
               frameBorder="0"
               allowFullScreen
               width="100%"
@@ -86,7 +86,7 @@ const Hero = forwardRef(
             <iframe
               allow="autoplay; fullscreen"
               className="background-video"
-              src="https://player.vimeo.com/video/508847974/b5664eda0e?autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false"
+              src="https://player.vimeo.com/video/508847974?autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false"
               frameBorder="0"
               allowFullScreen
               width="100%"
@@ -95,7 +95,7 @@ const Hero = forwardRef(
             <iframe
               allow="autoplay; fullscreen"
               className="background-video"
-              src="https://player.vimeo.com/video/508834454/e3a6ac3248?autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false"
+              src="https://player.vimeo.com/video/508834454?autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false"
               frameBorder="0"
               allowFullScreen
               width="100%"
