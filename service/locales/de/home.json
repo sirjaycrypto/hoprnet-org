@@ -1,8 +1,8 @@
 {
   "headline": {
-    "title": "IN DEN SCHUTZ VON METADATEN INVESTIEREN",
-    "beforeInfoTop": "Der globale Datenverkehr wächst exponentiell, und damit auch die Sicherheitsrisiken.",
-    "beforeInfoBottom": "HOPR bietet einen essenziellen und konformen Schutz von Metadaten auf Netzwerkebene für jedermann.",
+    "title": "INVESTIERE IN DEN SCHUTZ VON METADATEN",
+    "beforeInfoTop": "Der globale Datenverkehr wächst exponentiell, und damit ebenso auch die damit verbundenen Sicherheitsrisiken.",
+    "beforeInfoBottom": "HOPR schützt die Privatsphäre indem Daten und Metadaten dezentral verschlüsselt werden.",
     "caption": "Hypothetischer Preisverlauf (wenn keine Käufe getätigt werden)",
     "mainInfo": "home_headline_mainInfo",
     "titleTicket": "BALANCER LAUNCH",
@@ -18,7 +18,7 @@
     "titleB": "AS SEEN IN"
   },
   "banner": {
-    "label": "Sei der erste, der HOPR Tokens staked und verdient mit unserem limitiertem Token Releases.",
+    "label": "Sei der erste, der HOPR Tokens staked und verdiene mit unserem limitiertem Token Releases.",
     "labelPreSales": "Be among the first who profit the most from staking our HOPR Token.",
     "button": "HOPR-Token erwerben",
     "btnCommunity1": "COMMUNITY",
@@ -29,12 +29,12 @@
   },
   "features": {
     "pay": "Zahlen",
-    "payMain": "Geben Sie HOPR-Tokens aus, um Daten durch das HOPR-Netzwerk zu senden, wobei Daten und Metadaten vollständig geschützt werden.",
+    "payMain": "Sende Daten vollständig verschlüsselt durch unser HOPR-Netzwerk und bezahle dies mit HOPR-Tokens.",
     "stake": "Staken",
-    "stakeMain": "Sperren Sie HOPR-Token in Ihrem Node, um Benutzerdaten weiterzuleiten und Datenverkehr abzudecken. Je mehr Token Sie einsetzen, desto mehr Daten können Sie weiterleiten, und somit auch mehr verdienen.",
-    "title": "TOKEN FEATURES",
+    "stakeMain": "Hinterlege HOPR-Tokens in deinem Node, um am Weiterleiten von Benutzerdaten durch deinen Node verdienen zu können. Die Anzahl der hinterlegten Tokens ist dafür entscheidend wieviel Daten weitergeleitet und somit auch verdient werden kann.",
+    "title": "EIGENSCHAFTEN UNSERES TOKENS:",
     "vote": "Voten",
-    "voteMain": "Von den technischen Parametern bis hin zur Besetzung des HOPR-Vorstandes, beteiligen Sie sich an der dezentralen, Community-gesteuerten Entscheidungsfindung."
+    "voteMain": "Von den technischen Parametern, bis hin zur Besetzung des HOPR-Vorstandes – beteilige dich an unserer dezentralen Community-gesteuerten Entscheidungsfindung."
   },
   "further": {
     "infoBottomATitle": "home_further_infoBottomATitle",
@@ -49,9 +49,9 @@
     "title": "home_further_title"
   },
   "hardware": {
-    "about": "Jeder kann einen HOPR-Node auf seiner eigenen Hardware betreiben! Wir bieten einfach zu installierende Software für Linux, macOS, Windows, Docker und Cloud-Umgebungen an. Sie können innerhalb von Minuten anfangen HOPR-Tokens zu verdienen.",
-    "caption": "Wir verkaufen auch einen dedizierten Hardware-Node für schnelleres Staking.",
-    "subtitleA": "Nutze deine eigne Hardware",
+    "about": "Jeder kann einen HOPR-Node auf seiner eigenen Hardware betreiben! Wir bieten eine einfach zu installierende Software für Linux, macOS, Windows, Docker und Cloud-Umgebungen an. Innerhalb von Minuten ist es somit möglich, HOPR-Tokens zu verdienen.",
+    "caption": "Wir bieten auch einen dedizierten Hardware-Node für dezidiertes und schnelleres Staking an.",
+    "subtitleA": "Nutze deine eigene Hardware",
     "subtitleB": "Ihr HOPR-Hardware-Node",
     "title": "EINEN NODE BETREIBEN"
   },
@@ -72,24 +72,24 @@
   },
   "slide": {
     "slideA": "Sandro Cilurzo, Co-Founder & CEO of Sedimentum AG.",
-    "slideAMain": "HOPR hat diese bahnbrechende Open-Source-Technologie entwickelt, die von datenschutzbewusstem Entwickler auf der ganzen Welt genutzt werden kann.",
+    "slideAMain": "HOPR hat eine bahnbrechende Open-Source-Technologie entwickelt, welche von datenschutzbewussten Entwicklerinnen auf der ganzen Welt genutzt werden kann.",
     "slideB": "Beniamin Mincu, Elrond CEO",
     "slideBMain": "Das HOPR-Protokoll bietet einen neuen Standard für Internet-Scale Performance, probabilistische Sicherheit und kryptographische Pseudonymität. Wir freuen uns, mit HOPR die letze Meile zu den Elrond-Netzwerk-Eingangspunkten zu überbrücken und unseren Nutzern ein wirklich dezentrales und privates Ende-zu-Ende-Erlebnis zu bieten.",
     "slideC": "Gin Chao, Binance Strategy Officer",
-    "slideCMain": "Das Team von HOPR hat uns gezeigt, wie ihr dezentrales Netzwerk Datenschutzgarantie auf der Metadatenebene erreicht und den Menschen die Macht wiedergibt."
+    "slideCMain": "Das Team von HOPR hat uns gezeigt, wie ihr dezentrales Netzwerk Datenschutz auf der Metadatenebene erreicht und den Menschen wieder die Handhabe über Ihre Daten ermöglicht."
   },
   "token": {
-    "about": "Das HOPR-Netzwerk wird durch den HOPR-Token angetrieben, ein Utility-Token im Ethereum-Netzwerk.",
+    "about": "Das HOPR-Netzwerk wird durch den HOPR-Token angetrieben, einen Utility-Token aus dem Ethereum-Netzwerk.",
     "listItemA": "Token Name: HOPR Token",
     "listItemB": "Token Symbol: HOPR",
     "listItemC": "Network: Ethereum",
     "listItemD": "Standards: ERC20, ERC777",
-    "listItemE": "Gesamtversorgung: 1BN HOPR",
+    "listItemE": "Gesamtvolumen: 1BN HOPR",
     "listItemF": "Initiale Umlaufversorgung: 130M HOPR",
-    "secondSubAbout": "Beginnend mit einer anfänglichen Umlaufmenge von 130 Millionen, werden HOPR-Token über einen Zeitraum von 5 Jahren freigegeben. Ein Viertel aller HOPR-Token ist nur für Staker als Belohnung für die Weiterleitung von Daten verfügbar.",
+    "secondSubAbout": "Beginnend mit einer anfänglichen Umlaufmenge von 130 Millionen, werden HOPR-Token über einen Zeitraum von 4 Jahren emitiert. Ein Viertel aller HOPR-Token ist nur für Staker als Belohnung für die Weiterleitung von Daten verfügbar.",
     "secondSubTitle": "Token Distribution ",
-    "subTitle": "Wesentliche Metriken",
-    "thirdSubTitle": "Distribution der Token",
+    "subTitle": "Token Metriken",
+    "thirdSubTitle": "Distribution der Tokens",
     "title": "Token Release",
     "textEnding": "home_token_textEnding"
   },
@@ -101,12 +101,12 @@
   },
   "work": {
     "performant": "Performant",
-    "performantMain": "Die benutzerdefinierte Layer-2-Skalierungslösung von HOPR basiert auf probabilistischen Zahlungskanälen. Dies gewährleistet eine vollständig dezentrale Abwicklung ohne unnötige Blockchain-Transaktionsgebühren und schützt gleichzeitig die Metadaten der Node Betreiber.",
+    "performantMain": "Die benutzerdefinierte Layer-2-Skalierungslösung von HOPR basiert auf probabilistischen Zahlungskanälen. Dies gewährleistet eine vollständig dezentrale Abwicklung ohne unnötige Blockchain-Transaktionsgebühren und schützt gleichzeitig die Metadaten der Node-Betreiber.",
     "private": "Privat",
     "privateMain": "Das HOPR-Netzwerk ist ein dezentralisiertes, initiatives Mixnet, das den vollständigen Schutz von Daten und Metadaten für jeden gewährleistet, der es nutzt. Die Daten werden über mehrere Hops gesendet, sodass niemand außer dem Sender und dem Empfänger den Ursprung, das Ziel oder den Inhalt einer Datenübertragung feststellen kann.",
     "profitable": "Profitabel",
-    "profitableMain": "Der einzigartige Proof-of-Relay-Mechanismus von HOPR bedeutet, dass jeder Nodebetreiber einen Anreiz hat, Daten im Austausch für HOPR-Token ordnungsgemäß weiterzuleiten. Jeder kann einen HOPR-Node betreiben, um HOPR-Token zu verdienen und zum Online-Datenschutz beizutragen.",
-    "title": "WIE FUNKTIONIERT ES"
+    "profitableMain": "Der einzigartige Proof-of-Relay-Mechanismus von HOPR bedeutet, dass jeder Nodebetreiber einen Anreiz hat, Daten im Austausch für HOPR-Token ordnungsgemäß weiterzuleiten. Jeder kann einen HOPR-Node betreiben, um HOPR-Token zu verdienen und zum Online-Datenschutz seiner Nutzer beizutragen.",
+    "title": "FUNKTIONSWEISE UNSERES TOKENS"
   },
   "roadMap": {
     "item1Date": "Nov 2019",
@@ -115,26 +115,26 @@
     "item1L1": "Buch von HOPR",
     "item1L2": "Technisches Whitepaper",
     "item2Date": "Apr 2020",
-    "item2Description": "HOPR geht offiziell an den Start und schließt eine $1 Mio. Seed-Finanzierungsrunde unter Führung von Binance ab. Die HOPR Assoziation wird gegründet.",
+    "item2Description": "HOPR geht offiziell an den Start und schließt eine $1 Mio. Seed-Finanzierungsrunde unter frt Führung von Binance ab. Die HOPR Assoziation wird gegründet.",
     "item2Title": "Finanzierung und Launch",
     "item2L1": "Binance",
     "item3Date": "Jul 2020",
-    "item3Description": "Der HOPR Node PC kommt auf den Markt und ermöglicht es Benutzern, ein dediziertes HOPR-Gerät von zu Hause aus zu betreiben.",
+    "item3Description": "Release des HOPR Node PCs. Dieser ermöglicht es Benutzern, ein dediziertes HOPR-Gerät von zu Hause aus zu betreiben.",
     "item3Title": "HOPR Hardware Node",
     "item3L1": "Shop",
     "item3L2": "gitHub",
     "item4Date": "Nov 2020",
-    "item4Description": "Eine Reihe von beliebten incentivierten und gamifizierten Testnetzen lässt die Community und das Netzwerk auf 2000 Nodes heranwachsen.",
+    "item4Description": "Eine Reihe von spielerischen und mit Anreizen verbundenen Testnetze lässt die Community und das Netzwerk auf über 2000 Nodes heranwachsen.",
     "item4Title": "Tests und Community",
     "item4L1": "Matic",
     "item4L2": "xDai",
     "item4L3": "BSC",
     "item5Date": "Q1 2021",
-    "item5Description": "Das HOPR Jungfrau-Release ist die erste voll funktionsfähige Version des HOPR-Nodes & des HOPR-Tokens.",
+    "item5Description": "Das HOPR Jungfrau-Release ist die erste voll funktionsfähige Version des HOPR Nodes & des HOPR Tokens.",
     "item5Title": "Jungfrau Release (Mainnet)",
     "item5L1": "VerkaufsSeite",
     "item6Date": "Q1 2021",
-    "item6Description": "Das Eiger-Release von HOPR führt Cover Traffic ein und vervollständigt damit das Protokoll-Feature.",
+    "item6Description": "Das Eiger-Release von HOPR führt Cover Traffic ein und vervollständigt damit das HOPR Protokoll.",
     "item6Title": "Eiger Release",
     "item6L1": "Blogpost",
     "item7Date": "Q2 2021",
@@ -142,7 +142,7 @@
     "item7Title": "Launch HOPR DAO",
     "item7L1": "DecenGov",
     "item8Date": "Q2 2021",
-    "item8Description": "Eine robuste API ermöglicht es anderen, metadaten-private dApps und Dienste auf dem HOPR-Protokoll aufzubauen.",
+    "item8Description": "Eine robuste API ermöglicht es anderen Entwicklerinnen, metadaten-geschützte dApps und Dienste auf dem HOPR-Protokoll aufzubauen.",
     "item8Title": "Launch des Ecosystems",
     "item8L1": "Blogpost",
     "item9Date": "Q4 2021",
@@ -154,7 +154,7 @@
   "modal": {
     "about": "Wenn Sie auf diesen Link klicken, werden Sie zu einer Website weitergeleitet, die von einem Dritten bereitgestellt wird (Website eines Dritten). HOPR (ebenso wie alle zugehörigen Unternehmen) hat keine Kontrolle über den Inhalt, die Angebote (einschließlich der Angebote in Bezug auf HOPR-Token) oder die Ressourcen der Website eines Dritten und übernimmt keine Verantwortung für die Website eines Dritten, den Inhalt, die Angebote oder die Ressourcen oder für jegliche Verluste oder Schäden, die aus Ihrer Nutzung der Website eines Dritten, des Inhalts, der Angebote oder der Ressourcen entstehen können. Wenn Sie sich entscheiden, auf die Website eines Dritten zuzugreifen, tun Sie dies ausschließlich auf eigenes Risiko und gemäß den Nutzungsbedingungen für die Website des Drittanbieters.",
     "btnCancel": "Ablehnen",
-    "btnIAgree": "I ZUSTIMMEN",
+    "btnIAgree": "ZUSTIMMEN",
     "public": "<paragraph>Um als Erster zu erfahren, wann der HOPR-Token auf den Markt kommt und weitere Neuigkeiten über das Projekt zu erhalten, abonnieren Sie unseren <newsletter>Newsletter</newsletter>, oder folgen Sie uns auf <twitter>Twitter</twitter> oder <telegram>Telegram</telegram>.</paragraph>",
     "title": "HAFTUNGSAUSSCHLUSS"
   }
