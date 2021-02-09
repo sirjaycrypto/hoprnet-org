@@ -52,7 +52,7 @@ const HomeHeadline = forwardRef(({ setShowModal, modePreSales }, ref) => {
                 </p>
               </div>
               <div className="btn-ticket" onClick={() => setShowModal(true)}>
-                <span>{t('common:getHorpFull')}</span>
+                <span>{t('home:banner.button')}</span>
               </div>
             </div>
 

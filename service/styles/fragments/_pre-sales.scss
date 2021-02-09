@@ -17,10 +17,10 @@
     font-weight: 600;
     justify-content: center;
     letter-spacing: 0.2975px;
+    min-width: 200px;
     padding: 0.25em 1.5em;
     text-align: center;
     transition: all 350ms ease-in-out;
-    width: 200px;
 
     &:first-child {
       margin-right: 40px;
@@ -69,6 +69,7 @@
     right: -13px;
     top: -34px;
     width: fit-content;
+    z-index: 2;
 
     @include responsive(tablet) {
       right: 0;

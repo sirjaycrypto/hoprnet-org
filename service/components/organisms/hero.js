@@ -18,6 +18,7 @@ const Hero = forwardRef(
     ref
   ) => {
     const [videoMobile, setVideoMobile] = useState(false);
+    const [videoTablet, setVideoTablet] = useState(false);
     const [showMsg, setShowMsg] = useState(false);
     const theAreaBtn = useRef(null);
     const area = useRef(null);
@@ -31,17 +32,23 @@ const Hero = forwardRef(
       }, 200);
     };
 
-    const isPhone = () => {
+    const setDeviceType = () => {
       if (window.innerWidth <= 750) {
         setVideoMobile(true);
+      } else if (window.innerWidth <= 1000) {
+        setVideoTablet(true);
       }
-    };
+    }
+
 
     const onScrollGlobal = () => {
       if (area.current && !videoMobile) {
         const breakOffset = area.current.clientHeight * 0.87;
 
-        if (window.pageYOffset >= thisBanner || window.pageYOffset <= breakOffset) {
+        if (
+          window.pageYOffset >= thisBanner ||
+          window.pageYOffset <= breakOffset
+        ) {
           removeModeFollowMain();
         } else if (window.pageYOffset >= breakOffset) {
           activeModeFollowMain();
@@ -50,7 +57,7 @@ const Hero = forwardRef(
     };
 
     useEffect(() => {
-      isPhone();
+      setDeviceType();
     }, []);
 
     useEffect(() => {
@@ -67,52 +74,63 @@ const Hero = forwardRef(
           </div>
 
           {videoMobile ? (
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
+            <iframe
+              allow="autoplay; fullscreen"
               className="background-video"
-              src="/assets/video/hopr_Drone_Mobile.mp4"
-              type="video/mp4"
-            ></video>
+              src="https://player.vimeo.com/video/508845856/56eac0bbe9?autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false"
+              frameBorder="0"
+              allowFullScreen
+              width="100%"
+            ></iframe>
+          ) : videoTablet ? (
+            <iframe
+              allow="autoplay; fullscreen"
+              className="background-video"
+              src="https://player.vimeo.com/video/508847974/b5664eda0e?autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false"
+              frameBorder="0"
+              allowFullScreen
+              width="100%"
+            ></iframe>
           ) : (
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
+            <iframe
+              allow="autoplay; fullscreen"
               className="background-video"
-              src="/assets/video/hero.mp4"
-              type="video/mp4"
-            ></video>
+              src="https://player.vimeo.com/video/508834454/e3a6ac3248?autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false"
+              frameBorder="0"
+              allowFullScreen
+              width="100%"
+            ></iframe>
           )}
 
           <div className="container">
             <div className="text-wrapper">
               <>
-                <h4>{modePreSales ? t('home:hero.subtitlePre') : t('home:hero.subtitle')}</h4>
+                <h4>
+                  {modePreSales
+                    ? t('home:hero.subtitlePre')
+                    : t('home:hero.subtitle')}
+                </h4>
                 <Countdown />
                 {modePreSales ? (
-                  <div className='helperSpaceBtn'>
+                  <div className="helperSpaceBtn">
                     {showMsg ? (
                       <AlertMsg showActiveMsg={() => showActiveMsg()} />
                     ) : (
-                      <div ref={theAreaBtn} className='preSales-btn'>
+                      <div ref={theAreaBtn} className="preSales-btn">
                         <div onClick={() => setShowModal(true)} className="btn">
-                          <div>{t('common:btnCommunity1')}</div>
-                          <div>{t('common:btnCommunity2')}</div>
+                          <div>{t('home:banner.btnCommunity1')}</div>
+                          <div>{t('home:banner.btnCommunity2')}</div>
                         </div>
                         <div onClick={() => showActiveMsg()} className="btn">
-                          <div>{t('common:btnPublic1')}</div>
-                          <div>{t('common:btnPublic2')}</div>
+                          <div>{t('home:banner.btnPublic1')}</div>
+                          <div>{t('home:banner.btnPublic2')}</div>
                         </div>
                       </div>
                     )}
                   </div>
                 ) : (
                   <div onClick={() => setShowModal(true)} className="btn-banner">
-                    <span>{t('common:getHorpFull')}</span>
+                    <span>{t('home:banner.button')}</span>
                   </div>
                 )}
               </>

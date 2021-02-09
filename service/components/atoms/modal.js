@@ -18,10 +18,10 @@ const Modal = forwardRef(({ showModal, setShowModal }, ref) => {
             </div>
             <div className="area-btn-modal">
               <div onClick={() => setShowModal(false)} className="btn-alt-modal ">
-                <span>{t('common:btn-Cancel')}</span>
+                <span>{t('home:modal.btnCancel')}</span>
               </div>
               <div className="btn-modal ">
-                <span>{t('common:btn-IAgree')}</span>
+                <span>{t('home:modal.btnIAgree')}</span>
               </div>
             </div>
           </div>
