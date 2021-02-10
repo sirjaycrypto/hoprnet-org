@@ -1,19 +1,15 @@
 import React, { useRef, forwardRef, useState, useEffect } from 'react';
 import Countdown from '../atoms/countdown';
 import useTranslation from 'next-translate/useTranslation';
-import Trans from 'next-translate/Trans';
 import HeroInfo from '../molecules/hero-info';
 import { AlertMsg } from '..';
 
 const Hero = forwardRef(
   (
     {
-      thisBanner,
       modePreSales,
       setShowModal,
       changeModePreSale,
-      activeModeFollowMain,
-      removeModeFollowMain,
     },
     ref
   ) => {
@@ -22,7 +18,6 @@ const Hero = forwardRef(
     const [showMsg, setShowMsg] = useState(false);
     const theAreaBtn = useRef(null);
     const area = useRef(null);
-
     const { t } = useTranslation();
 
     const showActiveMsg = () => {
@@ -38,32 +33,11 @@ const Hero = forwardRef(
       } else if (window.innerWidth <= 768) {
         setVideoTablet(true);
       }
-    }
-
-
-    const onScrollGlobal = () => {
-      if (area.current && !videoMobile) {
-        const breakOffset = area.current.clientHeight * 0.87;
-
-        if (
-          window.pageYOffset >= thisBanner ||
-          window.pageYOffset <= breakOffset
-        ) {
-          removeModeFollowMain();
-        } else if (window.pageYOffset >= breakOffset) {
-          activeModeFollowMain();
-        }
-      }
     };
 
     useEffect(() => {
       setDeviceType();
     }, []);
-
-    useEffect(() => {
-      window.addEventListener('scroll', onScrollGlobal);
-      return () => window.removeEventListener('scroll', onScrollGlobal);
-    }, [theAreaBtn, modePreSales, videoMobile, thisBanner]);
 
     return (
       <>

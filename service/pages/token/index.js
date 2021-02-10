@@ -29,6 +29,7 @@ export default function Index() {
   const heroInfo = useRef();
   const btnToFollow = useRef();
   const bannerArea = useRef();
+  const videoRef = useRef();
 
   const [isVisibleTokenRel, currentElementTokenRel] = useVisibility(0);
   const [animateChart, setAnimateChart] = useState(false);
@@ -66,6 +67,23 @@ export default function Index() {
     }
   }, []);
 
+  useEffect(() => {
+    window.addEventListener('scroll', onScroll);
+    return () =>
+      window.removeEventListener('scroll', onScroll);
+  }, [videoRef, modePreSales, thisBanner]);
+
+  const onScroll = () => {
+    const elemntY = videoRef?.current.scrollWidth;
+    const scrollY = window.pageYOffset;
+
+    if (scrollY - elemntY >= 0 && scrollY < thisBanner) {
+      srtBtnFollow(true);
+    } else {
+      srtBtnFollow(false);
+    }
+  };
+
   const changeModePreSale = () => {
     setModePreSales(!modePreSales);
   };
@@ -91,14 +109,11 @@ export default function Index() {
         ref={heroInfo}
         setVisibleNow={setVisibleNow}
         modePreSales={modePreSales}
-        thisBanner={thisBanner}
         setShowModal={setShowModal}
         changeModePreSale={changeModePreSale}
-        activeModeFollowMain={activeModeFollowMain}
-        removeModeFollowMain={removeModeFollowMain}
       />
       <HomeHeadline modePreSales={modePreSales} setShowModal={setShowModal} />
-      <section id="video-area" className="video-home ">
+      <section id="video-area" className="video-home" ref={videoRef}>
         <iframe
           src="https://player.vimeo.com/video/492666726?title=0&byline=0&portrait=0&playsinline=0&muted=1&autopause=0&controls=0&loop=1&app_id=122963"
           frameBorder="0"
