@@ -28,10 +28,10 @@ export default function Welcome({ welcomeAnimate }) {
         <div className="right-container center-on-the-box">
           <img
             src="/assets/images/Bildschirmfoto.jpg"
-            alt="COUNTDOWN THE HOPR MAINNET"
+            alt="COUNTDOWN TO HOPR MAINNET"
           />
           <div className="text-area">
-            <h2>COUNTDOWN THE HOPR MAINNET</h2>
+            <h2>COUNTDOWN TO HOPR MAINNET</h2>
           </div>
         </div>
         <div className="left-container center-on-the-box">
