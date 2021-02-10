@@ -267,7 +267,7 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
         {
           ...oLineDefaultOptions,
           label: t('home:graphic.pre'),
-          data: processData('Pre-Sale'),
+          data: processData('Early Token Buyers'),
           backgroundColor: ['#4B79B4'],
           pointBackgroundColor: '#4B79B4',
         },
