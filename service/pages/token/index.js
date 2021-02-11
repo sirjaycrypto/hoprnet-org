@@ -26,6 +26,7 @@ export default function Index() {
   const [showModal, setShowModal] = useState(undefined);
   const [showPublicMsg, setShowPublicMsg] = useState(false);
   const [thisBanner, setThisBanner] = useState(0);
+  const [blnPlayVideo, setPlayVideo] = useState(0);
   const router = useRouter();
   const heroInfo = useRef();
   const btnToFollow = useRef();
@@ -88,14 +89,13 @@ export default function Index() {
     const scrollY = window.pageYOffset;
 
     if (scrollY - elemntY >= 0 && scrollY < thisBanner) {
+      console.log('change to 1');
+      setPlayVideo(1);
       srtBtnFollow(true);
     } else {
+      setPlayVideo(0);
       srtBtnFollow(false);
     }
-  };
-
-  const changeModePreSale = () => {
-    setModePreSales(!modePreSales);
   };
 
   const togglePublicMsg = () => {
@@ -103,7 +103,6 @@ export default function Index() {
       setShowPublicMsg(!showPublicMsg);
     }, 200);
   };
-
 
   const getVideoByLang = () => {
     switch (lang) {
@@ -143,7 +142,7 @@ export default function Index() {
       <HomeHeadline modePreSales={modePreSales} setShowModal={setShowModal} />
       <section id="video-area" className="video-home" ref={videoRef}>
         <iframe
-          src={`${getVideoByLang()}?title=0&byline=0&portrait=0&playsinline=0&muted=1&autopause=0&controls=0&loop=1&app_id=122963`}
+          src={`${getVideoByLang()}?title=0&byline=0&portrait=0&playsinline=0&muted=1&autoplay=${blnPlayVideo}&controls=0&loop=1&app_id=122963`}
           frameBorder="0"
         ></iframe>
       </section>
