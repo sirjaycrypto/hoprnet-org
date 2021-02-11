@@ -27,7 +27,7 @@ const Hero = forwardRef(
     };
 
     const setDeviceType = () => {
-      if (window.innerWidth <= 450) {
+      if (window.innerWidth <= 480) {
         setVideoMobile(true);
       } else if (window.innerWidth <= 768) {
         setVideoTablet(true);
