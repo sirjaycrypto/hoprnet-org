@@ -9,7 +9,6 @@ const Hero = forwardRef(
     {
       modePreSales,
       setShowModal,
-      changeModePreSale,
     },
     ref
   ) => {
@@ -43,9 +42,6 @@ const Hero = forwardRef(
       <>
         <section ref={area} className="section-hero">
           <HeroInfo />
-          <div onClick={() => changeModePreSale()} className="changeBtn-style">
-            <p>Show Pre-sale</p>
-          </div>
 
           {videoMobile ? (
             <iframe
