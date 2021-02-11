@@ -20,7 +20,7 @@ import Footer from '../../components/molecules/footer';
 
 import Modal from '../../components/atoms/modal';
 
-export default function Index() {
+export default function Index({ setLoading }) {
   const [visibleNow, setVisibleNow] = useState('');
   const [modePreSales, setModePreSales] = useState(false);
   const [showModal, setShowModal] = useState(undefined);
@@ -64,6 +64,7 @@ export default function Index() {
   }, [visibleNow]);
 
   useEffect(() => {
+    setLoading(true);
     const location = document.location.href;
 
     if (location.indexOf('#') > -1) {
@@ -134,10 +135,11 @@ export default function Index() {
       <Modal showModal={showModal} setShowModal={setShowModal} />
       <ChooseLanguage />
       <Hero
-        ref={heroInfo}
-        setVisibleNow={setVisibleNow}
         modePreSales={modePreSales}
+        ref={heroInfo}
+        setLoading={setLoading}
         setShowModal={setShowModal}
+        setVisibleNow={setVisibleNow}
       />
       <HomeHeadline modePreSales={modePreSales} setShowModal={setShowModal} />
       <section id="video-area" className="video-home" ref={videoRef}>

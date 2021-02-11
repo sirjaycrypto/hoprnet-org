@@ -8,6 +8,7 @@ const Hero = forwardRef(
   (
     {
       modePreSales,
+      setLoading,
       setShowModal,
     },
     ref
@@ -16,6 +17,7 @@ const Hero = forwardRef(
     const [videoTablet, setVideoTablet] = useState(false);
     const [showMsg, setShowMsg] = useState(false);
     const theAreaBtn = useRef(null);
+    const frameRef = useRef();
     const area = useRef(null);
     const { t } = useTranslation();
 
@@ -37,6 +39,16 @@ const Hero = forwardRef(
     useEffect(() => {
       setDeviceType();
     }, []);
+
+    useEffect(() => {
+      if (frameRef) {
+        frameRef.current?.addEventListener('ready', onFinishFrame);
+      }
+    }, [frameRef]);
+
+    const onFinishFrame = () => {
+      setLoading(false);
+    };
 
     return (
       <>
@@ -63,6 +75,7 @@ const Hero = forwardRef(
             ></iframe>
           ) : (
             <iframe
+              ref={frameRef}
               allow="autoplay; fullscreen"
               className="background-video"
               src="https://player.vimeo.com/video/508834454?autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false&app_id=122963"
