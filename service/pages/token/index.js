@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import { AlertMsg } from '../../components';
 import Layout from '../../components/organisms/layout';
 import Hero from '../../components/organisms/hero';
@@ -24,17 +25,26 @@ export default function Index() {
   const [modePreSales, setModePreSales] = useState(false);
   const [showModal, setShowModal] = useState(undefined);
   const [showPublicMsg, setShowPublicMsg] = useState(false);
-
   const [thisBanner, setThisBanner] = useState(0);
+  const router = useRouter();
   const heroInfo = useRef();
   const btnToFollow = useRef();
   const bannerArea = useRef();
   const videoRef = useRef();
+  const { stage } = router.query;
 
   const [isVisibleTokenRel, currentElementTokenRel] = useVisibility(0);
   const [animateChart, setAnimateChart] = useState(false);
   const [btnFollow, srtBtnFollow] = useState(false);
   const { lang, t } = useTranslation();
+
+  useEffect(() => {
+    if (stage) {
+      if (stage === 'pre-sale') {
+        setModePreSales(true);
+      }
+    }
+  }, [stage]);
 
   useEffect(() => {
     if (isVisibleTokenRel) {
@@ -129,7 +139,6 @@ export default function Index() {
         setVisibleNow={setVisibleNow}
         modePreSales={modePreSales}
         setShowModal={setShowModal}
-        changeModePreSale={changeModePreSale}
       />
       <HomeHeadline modePreSales={modePreSales} setShowModal={setShowModal} />
       <section id="video-area" className="video-home" ref={videoRef}>
