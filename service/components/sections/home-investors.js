@@ -61,7 +61,7 @@ const HomeInvestors = forwardRef(({ title }, ref) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img class="img-to-black" src={img} alt={title} />
+                    <img className="img-to-black" src={img} alt={title} />
                   </a>
                 );
               } else {
