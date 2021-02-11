@@ -34,7 +34,7 @@ export default function Index() {
   const [isVisibleTokenRel, currentElementTokenRel] = useVisibility(0);
   const [animateChart, setAnimateChart] = useState(false);
   const [btnFollow, srtBtnFollow] = useState(false);
-  const { t } = useTranslation();
+  const { lang, t } = useTranslation();
 
   useEffect(() => {
     if (isVisibleTokenRel) {
@@ -88,18 +88,37 @@ export default function Index() {
     setModePreSales(!modePreSales);
   };
 
-  const activeModeFollowMain = () => {
-    srtBtnFollow(true);
-  };
-  const removeModeFollowMain = () => {
-    srtBtnFollow(false);
-  };
-
   const togglePublicMsg = () => {
     setTimeout(() => {
       setShowPublicMsg(!showPublicMsg);
     }, 200);
   };
+
+
+  const getVideoByLang = () => {
+    switch (lang) {
+      case 'en':
+        return 'https://player.vimeo.com/video/508840889';
+      case 'de':
+        return 'https://player.vimeo.com/video/508836895';
+      case 'pt':
+        return 'https://player.vimeo.com/video/508838070';
+      case 'ru':
+        return 'https://player.vimeo.com/video/508837930';
+      case 'tr':
+        return 'https://player.vimeo.com/video/508837880';
+      case 'es':
+        return 'https://player.vimeo.com/video/508837017';
+      case 'ja':
+        return 'https://player.vimeo.com/video/508836851';
+      case 'ko':
+        return 'https://player.vimeo.com/video/508836785';
+      case 'zh':
+        return 'https://player.vimeo.com/video/508838006';
+      default:
+        return 'https://player.vimeo.com/video/508840889';
+    }
+  }
 
   return (
     <Layout visibleNow={visibleNow}>
@@ -115,7 +134,7 @@ export default function Index() {
       <HomeHeadline modePreSales={modePreSales} setShowModal={setShowModal} />
       <section id="video-area" className="video-home" ref={videoRef}>
         <iframe
-          src="https://player.vimeo.com/video/492666726?title=0&byline=0&portrait=0&playsinline=0&muted=1&autopause=0&controls=0&loop=1&app_id=122963"
+          src={`${getVideoByLang()}?title=0&byline=0&portrait=0&playsinline=0&muted=1&autopause=0&controls=0&loop=1&app_id=122963`}
           frameBorder="0"
         ></iframe>
       </section>
