@@ -13,8 +13,9 @@ export const Index = () => {
       <Layout>
         <SectionContainer align="center" extraClass="header">
           <h1 data-aos="fade-down" data-aos-delay="150">
-            COMING SOON
+            HOPR JUNGFRAU: 24TH FEB 2021
           </h1>
+          <p>Hop around the world with HOPR, and win a share of 500,000 HOPR tokens and a trip to Switzerland!</p>
         </SectionContainer>
       </Layout>
     </div>
