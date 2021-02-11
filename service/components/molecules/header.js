@@ -6,7 +6,7 @@ export default function Header() {
 
   return (
     <Head>
-      <title>{t('common:title')}</title>
+      <title>HOPR | Blockchain Data Protection and Privacy</title>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="canonical" href="https://hoprnet.org/" />
       <meta name="theme-color" content="#ffffa0" />

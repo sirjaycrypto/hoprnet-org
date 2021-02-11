@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import { AlertMsg } from '../../components';
 import Layout from '../../components/organisms/layout';
 import Hero from '../../components/organisms/hero';
@@ -24,16 +25,27 @@ export default function Index() {
   const [modePreSales, setModePreSales] = useState(false);
   const [showModal, setShowModal] = useState(undefined);
   const [showPublicMsg, setShowPublicMsg] = useState(false);
-
   const [thisBanner, setThisBanner] = useState(0);
+  const [blnPlayVideo, setPlayVideo] = useState(0);
+  const router = useRouter();
   const heroInfo = useRef();
   const btnToFollow = useRef();
   const bannerArea = useRef();
+  const videoRef = useRef();
+  const { stage } = router.query;
 
   const [isVisibleTokenRel, currentElementTokenRel] = useVisibility(0);
   const [animateChart, setAnimateChart] = useState(false);
   const [btnFollow, srtBtnFollow] = useState(false);
-  const { t } = useTranslation();
+  const { lang, t } = useTranslation();
+
+  useEffect(() => {
+    if (stage) {
+      if (stage === 'pre-sale') {
+        setModePreSales(true);
+      }
+    }
+  }, [stage]);
 
   useEffect(() => {
     if (isVisibleTokenRel) {
@@ -66,15 +78,24 @@ export default function Index() {
     }
   }, []);
 
-  const changeModePreSale = () => {
-    setModePreSales(!modePreSales);
-  };
+  useEffect(() => {
+    window.addEventListener('scroll', onScroll);
+    return () =>
+      window.removeEventListener('scroll', onScroll);
+  }, [videoRef, modePreSales, thisBanner]);
 
-  const activeModeFollowMain = () => {
-    srtBtnFollow(true);
-  };
-  const removeModeFollowMain = () => {
-    srtBtnFollow(false);
+  const onScroll = () => {
+    const elemntY = videoRef?.current.scrollWidth;
+    const scrollY = window.pageYOffset;
+
+    if (scrollY - elemntY >= 0 && scrollY < thisBanner) {
+      console.log('change to 1');
+      setPlayVideo(1);
+      srtBtnFollow(true);
+    } else {
+      setPlayVideo(0);
+      srtBtnFollow(false);
+    }
   };
 
   const togglePublicMsg = () => {
@@ -82,6 +103,31 @@ export default function Index() {
       setShowPublicMsg(!showPublicMsg);
     }, 200);
   };
+
+  const getVideoByLang = () => {
+    switch (lang) {
+      case 'en':
+        return 'https://player.vimeo.com/video/508840889';
+      case 'de':
+        return 'https://player.vimeo.com/video/508836895';
+      case 'pt':
+        return 'https://player.vimeo.com/video/508838070';
+      case 'ru':
+        return 'https://player.vimeo.com/video/508837930';
+      case 'tr':
+        return 'https://player.vimeo.com/video/508837880';
+      case 'es':
+        return 'https://player.vimeo.com/video/508837017';
+      case 'ja':
+        return 'https://player.vimeo.com/video/508836851';
+      case 'ko':
+        return 'https://player.vimeo.com/video/508836785';
+      case 'zh':
+        return 'https://player.vimeo.com/video/508838006';
+      default:
+        return 'https://player.vimeo.com/video/508840889';
+    }
+  }
 
   return (
     <Layout visibleNow={visibleNow}>
@@ -91,16 +137,12 @@ export default function Index() {
         ref={heroInfo}
         setVisibleNow={setVisibleNow}
         modePreSales={modePreSales}
-        thisBanner={thisBanner}
         setShowModal={setShowModal}
-        changeModePreSale={changeModePreSale}
-        activeModeFollowMain={activeModeFollowMain}
-        removeModeFollowMain={removeModeFollowMain}
       />
       <HomeHeadline modePreSales={modePreSales} setShowModal={setShowModal} />
-      <section id="video-area" className="video-home ">
+      <section id="video-area" className="video-home" ref={videoRef}>
         <iframe
-          src="https://player.vimeo.com/video/492666726?title=0&byline=0&portrait=0&playsinline=0&muted=1&autopause=0&controls=0&loop=1&app_id=122963"
+          src={`${getVideoByLang()}?title=0&byline=0&portrait=0&playsinline=0&muted=1&autoplay=${blnPlayVideo}&controls=0&loop=1&app_id=122963`}
           frameBorder="0"
         ></iframe>
       </section>

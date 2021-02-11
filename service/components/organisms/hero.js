@@ -1,19 +1,14 @@
 import React, { useRef, forwardRef, useState, useEffect } from 'react';
 import Countdown from '../atoms/countdown';
 import useTranslation from 'next-translate/useTranslation';
-import Trans from 'next-translate/Trans';
 import HeroInfo from '../molecules/hero-info';
 import { AlertMsg } from '..';
 
 const Hero = forwardRef(
   (
     {
-      thisBanner,
       modePreSales,
       setShowModal,
-      changeModePreSale,
-      activeModeFollowMain,
-      removeModeFollowMain,
     },
     ref
   ) => {
@@ -22,7 +17,6 @@ const Hero = forwardRef(
     const [showMsg, setShowMsg] = useState(false);
     const theAreaBtn = useRef(null);
     const area = useRef(null);
-
     const { t } = useTranslation();
 
     const showActiveMsg = () => {
@@ -33,26 +27,10 @@ const Hero = forwardRef(
     };
 
     const setDeviceType = () => {
-      if (window.innerWidth <= 750) {
+      if (window.innerWidth <= 450) {
         setVideoMobile(true);
-      } else if (window.innerWidth <= 1000) {
+      } else if (window.innerWidth <= 768) {
         setVideoTablet(true);
-      }
-    }
-
-
-    const onScrollGlobal = () => {
-      if (area.current && !videoMobile) {
-        const breakOffset = area.current.clientHeight * 0.87;
-
-        if (
-          window.pageYOffset >= thisBanner ||
-          window.pageYOffset <= breakOffset
-        ) {
-          removeModeFollowMain();
-        } else if (window.pageYOffset >= breakOffset) {
-          activeModeFollowMain();
-        }
       }
     };
 
@@ -60,24 +38,16 @@ const Hero = forwardRef(
       setDeviceType();
     }, []);
 
-    useEffect(() => {
-      window.addEventListener('scroll', onScrollGlobal);
-      return () => window.removeEventListener('scroll', onScrollGlobal);
-    }, [theAreaBtn, modePreSales, videoMobile, thisBanner]);
-
     return (
       <>
         <section ref={area} className="section-hero">
           <HeroInfo />
-          <div onClick={() => changeModePreSale()} className="changeBtn-style">
-            <p>Show Pre-sale</p>
-          </div>
 
           {videoMobile ? (
             <iframe
               allow="autoplay; fullscreen"
               className="background-video"
-              src="https://player.vimeo.com/video/508845856/56eac0bbe9?autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false"
+              src="https://player.vimeo.com/video/508845856?autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false&app_id=122963"
               frameBorder="0"
               allowFullScreen
               width="100%"
@@ -86,7 +56,7 @@ const Hero = forwardRef(
             <iframe
               allow="autoplay; fullscreen"
               className="background-video"
-              src="https://player.vimeo.com/video/508847974/b5664eda0e?autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false"
+              src="https://player.vimeo.com/video/508847974?autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false&app_id=122963"
               frameBorder="0"
               allowFullScreen
               width="100%"
@@ -95,7 +65,7 @@ const Hero = forwardRef(
             <iframe
               allow="autoplay; fullscreen"
               className="background-video"
-              src="https://player.vimeo.com/video/508834454/e3a6ac3248?autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false"
+              src="https://player.vimeo.com/video/508834454?autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false&app_id=122963"
               frameBorder="0"
               allowFullScreen
               width="100%"
