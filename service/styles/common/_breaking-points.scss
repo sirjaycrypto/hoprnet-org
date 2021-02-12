@@ -1,7 +1,7 @@
 $pc: 1080px;
 $tablet: 768px;
 $phone: 480px;
-$phone-landscape: 640px;
+$phone-landscape: 667px;
 
 @mixin responsive($media) {
   @if $media == phone {
@@ -9,7 +9,7 @@ $phone-landscape: 640px;
       @content;
     }
   } @else if $media == phone_land {
-    @media screen and (min-device-width: $phone) and (max-device-width: $phone-landscape) and (orientation: landscape) {
+    @media screen and (max-width: $tablet) and (max-device-width: $phone-landscape) and (orientation: landscape) {
       @content;
     }
   } @else if $media == tablet {
