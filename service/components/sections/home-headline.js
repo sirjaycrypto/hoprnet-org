@@ -46,13 +46,13 @@ const HomeHeadline = forwardRef(({ setShowModal, modePreSales }, ref) => {
                   src="/assets/images/HPR_Favicon.svg"
                   alt={t('home:headline.titleTicket')}
                 />
-                <p>{!modePreSales ? price : '$ X.XXXX'}</p>
+                <p>{!modePreSales ? price : '$ 0.30'}</p>
                 <p className="label-remember">
                   {t('home:headline.txtDownNum')}
                 </p>
               </div>
               <div className="btn-ticket" onClick={() => setShowModal(true)}>
-                <span>{t('home:banner.button')}</span>
+                { !modePreSales && <span>{t('home:banner.button')}</span> }
               </div>
             </div>
 
