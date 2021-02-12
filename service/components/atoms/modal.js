@@ -1,5 +1,6 @@
 import React, { forwardRef, useState, useEffect } from 'react';
 import useTranslation from 'next-translate/useTranslation';
+import { Button } from '..';
 
 const Modal = forwardRef(({ showModal, setShowModal }, ref) => {
   const { t } = useTranslation();
@@ -20,9 +21,12 @@ const Modal = forwardRef(({ showModal, setShowModal }, ref) => {
               <div onClick={() => setShowModal(false)} className="btn-alt-modal ">
                 <span>{t('home:modal.btnCancel')}</span>
               </div>
-              <div className="btn-modal ">
-                <span>{t('home:modal.btnIAgree')}</span>
-              </div>
+              <Button
+                className="btn-modal"
+                content={t('home:modal.btnIAgree')}
+                onClick={() => setShowModal(false)}
+                to="/token#blindText"
+              />
             </div>
           </div>
         </div>
