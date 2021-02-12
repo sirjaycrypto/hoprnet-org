@@ -168,14 +168,14 @@ export default function Index({ setLoading }) {
               <AlertMsg floating showActiveMsg={togglePublicMsg} />
             ) : (
               <>
-                <div onClick={() => setShowModal(true)} className="btn-banner first-button">
+                {/* <div onClick={() => setShowModal(true)} className="btn-banner first-button">
                   <div>{t('home:banner.btnCommunity1')}</div>
                   <div>{t('home:banner.btnCommunity2')}</div>
                 </div>
                 <div className="btn-banner" onClick={togglePublicMsg}>
                   <div>{t('home:banner.btnPublic1')}</div>
                   <div>{t('home:banner.btnPublic2')}</div>
-                </div>
+                </div> */}
               </>
             )
           ) : (
