@@ -144,7 +144,7 @@ export default function Index({ setLoading }) {
       <HomeHeadline modePreSales={modePreSales} setShowModal={setShowModal} />
       <section id="video-area" className="video-home" ref={videoRef}>
         <iframe
-          src={`${getVideoByLang()}?title=0&byline=0&portrait=0&playsinline=0&muted=1&autoplay=${blnPlayVideo}&controls=0&loop=1&app_id=122963`}
+          src={`${getVideoByLang()}?title=0&byline=0&portrait=0&playsinline=0&controls=1&loop=1&app_id=122963`}
           frameBorder="0"
         ></iframe>
       </section>
