@@ -1,5 +1,5 @@
 import React, { useRef, forwardRef, useState, useEffect } from 'react';
-import Countdown from '../atoms/countdown';
+import { Button, Countdown } from '..';
 import useTranslation from 'next-translate/useTranslation';
 import HeroInfo from '../molecules/hero-info';
 import { AlertMsg } from '..';
@@ -112,9 +112,11 @@ const Hero = forwardRef(
                     )}
                   </div>
                 ) : (
-                  <div onClick={() => setShowModal(true)} className="btn-banner">
-                    <span>{t('home:banner.button')}</span>
-                  </div>
+                  <Button
+                    className="btn-banner"
+                    content={t('home:banner.button')}
+                    to="/token#bildText"
+                  />
                 )}
               </>
             </div>
