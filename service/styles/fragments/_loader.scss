@@ -1,19 +1,26 @@
-.the-loader {
-  background: #fff;
+.main-loader {
   height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
+  position: fixed;
   width: 100%;
+  z-index: 10;
 
-  .element {
-    animation: animateLoading 1200ms ease-in-out infinite alternate;
-    background: $hopr_yellow;
-    border-radius: 100%;
-    left: 50%;
+  .the-loader {
+    background: #fff;
+    height: 100%;
+    left: 0;
     position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    width: 100%;
+
+    .element {
+      animation: animateLoading 1200ms ease-in-out infinite alternate;
+      background: $hopr_yellow;
+      border-radius: 100%;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 }
 

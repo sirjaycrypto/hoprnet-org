@@ -5,7 +5,7 @@
     "beforeInfoBottom": "HOPRは極めて重要なメタデータの保護をみんなに提供します。",
     "caption": "価格のリアルタイムチャート（購入されてない場合の仮設）",
     "mainInfo": "home_headline_mainInfo",
-    "titleTicket": "を起動する",
+    "titleTicket": "Balancerを起動する",
     "txtDownNum": "[価格]円",
     "fPoint": "home_headline_fPoint",
     "sPoint": "home_headline_sPoint",
@@ -52,7 +52,7 @@
     "about": "誰でも自分のハードウェアでHOPRノードを実行できます。Linux、macOS、Windows、Docker、クラウド環境など、簡単にインストールできるソフトウェアを提供しています。 わずか数分以内にHOPRトークンをゲットしよう！",
     "caption": "もっと高速にステーキングができるように専用のハードウエア版のノードも販売しています。",
     "subtitleA": "自分でHOPRノードを実行する",
-    "subtitleB": "あなたのHOPRハードウエアのノード",
+    "subtitleB": "HOPRハードウエアのノード",
     "title": "ノードを実行する"
   },
   "graphic": {
@@ -60,7 +60,7 @@
     "cover": "通信の報酬",
     "early": "home_graphic_early",
     "pre": "早期購入者",
-    "public": "凡例: 公開配布",
+    "public": "Public Distribution",
     "team": "チームとアドバイザー",
     "treasury": "財務部署",
     "votes": "home_graphic_votes"
@@ -87,7 +87,7 @@
     "listItemE": "総数: 10億 HOPR",
     "listItemF": "初期の供給量: 1億3000万 HOPR",
     "secondSubAbout": "1億3000万の初期循環供給から始まり、HOPRトークンは5年間でリリースされます。 すべてのHOPRトークンの4分の1は、データを中継するための報酬としてユーザーのみに配布されます。",
-    "secondSubTitle": "Token Allocation",
+    "secondSubTitle": "トークンの割合",
     "subTitle": "主要な指標",
     "thirdSubTitle": "トークン供給の配布",
     "title": "トークンのリリース",
@@ -106,7 +106,7 @@
     "privateMain": "HOPRのネットワークは分散型でインセンティブつきのmixnet（混合ネットワーク）でできています。したがって、ユーザーのデータやメタデータに完全なプライバシーを提供できます。データは複数のノードを中継することにより、送信者と受信者だけがデータの発信元、宛先、またはコンテンツを知っています。",
     "profitable": "利益あり",
     "profitableMain": "HOPRの独特なプルーフ・オブ・リレー（中継した証）のメカニズムは、すべてのノードの所有者がデータを正しく中継するのと引き換えにHOPRトークンをもらえる仕組みです。 誰でもHOPRノードを実行することができ、HOPRトークンを獲得し、オンラインデータのプライバシーに貢献できます。",
-    "title": "HOW IT WORKS"
+    "title": "HOPRの仕組み"
   },
   "roadMap": {
     "item1Date": "2019年11月",
@@ -131,7 +131,7 @@
     "item4L3": "BSC",
     "item5Date": "2021 Q1",
     "item5Description": "HOPRリリースのJungfrau版は、初めてHOPRノードとHOPRトークンの機能が完全しているリリースとなりました。",
-    "item5Title": "Jungfrauリリース（メインネット",
+    "item5Title": "Jungfrauリリース（メインネット）",
     "item5L1": "参照",
     "item6Date": "2021 Q2　",
     "item6Description": "HOPRのEigerリリースでは、通信の報酬が導入され、プロトコル機能が完成されます。 .",

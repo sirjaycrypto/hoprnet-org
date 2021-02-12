@@ -51,7 +51,10 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <I18nProvider lang={router.locale} namespaces={pageProps._ns}>
-      {loading ? <Loader /> : <Component {...pageProps} />}
+      <>
+        {loading && <Loader />}
+        <Component {...pageProps} setLoading={setLoading} />
+      </>
     </I18nProvider>
   );
 }

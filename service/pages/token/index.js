@@ -20,7 +20,7 @@ import Footer from '../../components/molecules/footer';
 
 import Modal from '../../components/atoms/modal';
 
-export default function Index() {
+export default function Index({ setLoading }) {
   const [visibleNow, setVisibleNow] = useState('');
   const [modePreSales, setModePreSales] = useState(false);
   const [showModal, setShowModal] = useState(undefined);
@@ -64,6 +64,7 @@ export default function Index() {
   }, [visibleNow]);
 
   useEffect(() => {
+    setLoading(true);
     const location = document.location.href;
 
     if (location.indexOf('#') > -1) {
@@ -134,15 +135,16 @@ export default function Index() {
       <Modal showModal={showModal} setShowModal={setShowModal} />
       <ChooseLanguage />
       <Hero
-        ref={heroInfo}
-        setVisibleNow={setVisibleNow}
         modePreSales={modePreSales}
+        ref={heroInfo}
+        setLoading={setLoading}
         setShowModal={setShowModal}
+        setVisibleNow={setVisibleNow}
       />
       <HomeHeadline modePreSales={modePreSales} setShowModal={setShowModal} />
       <section id="video-area" className="video-home" ref={videoRef}>
         <iframe
-          src={`${getVideoByLang()}?title=0&byline=0&portrait=0&playsinline=0&muted=1&autoplay=${blnPlayVideo}&controls=0&loop=1&app_id=122963`}
+          src={`${getVideoByLang()}?title=0&byline=0&portrait=0&playsinline=0&controls=1&loop=1&app_id=122963`}
           frameBorder="0"
         ></iframe>
       </section>
@@ -166,14 +168,14 @@ export default function Index() {
               <AlertMsg floating showActiveMsg={togglePublicMsg} />
             ) : (
               <>
-                <div onClick={() => setShowModal(true)} className="btn-banner first-button">
+                {/* <div onClick={() => setShowModal(true)} className="btn-banner first-button">
                   <div>{t('home:banner.btnCommunity1')}</div>
                   <div>{t('home:banner.btnCommunity2')}</div>
                 </div>
                 <div className="btn-banner" onClick={togglePublicMsg}>
                   <div>{t('home:banner.btnPublic1')}</div>
                   <div>{t('home:banner.btnPublic2')}</div>
-                </div>
+                </div> */}
               </>
             )
           ) : (

@@ -1,5 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
 import Layout from '../components/organisms/layout';
 import { loadNamespaces } from './_app';
 import Welcome from '../components/home-sections/Welcome';
@@ -11,35 +10,34 @@ import Blog from '../components/home-sections/Blogs';
 import Partners from '../components/home-sections/Partners';
 import Team from '../components/home-sections/Team';
 import Contact from '../components/home-sections/Contact';
-export default function Home() {
+export default function Home({ setLoading }) {
   const [welcomeAnimate, setWelcomeAnimate] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
+      setLoading(false);
       setWelcomeAnimate(false);
     }, 600);
   }, []);
 
   return (
-    <AnimatePresence>
-      <Layout>
-        <Welcome welcomeAnimate={welcomeAnimate} />
-        {!welcomeAnimate ? (
-          <div id="the-old-home">
-            <News />
-            <UseCases />
-            <HoperFor />
-            <HoperIs />
-            <Blog />
-            <Partners />
-            <Team />
-            <Contact />
-          </div>
-        ) : (
-          ''
-        )}
-      </Layout>
-    </AnimatePresence>
+    <Layout>
+      <Welcome welcomeAnimate={welcomeAnimate} />
+      {!welcomeAnimate ? (
+        <div id="the-old-home">
+          <News />
+          <UseCases />
+          <HoperFor />
+          <HoperIs />
+          <Blog />
+          <Partners />
+          <Team />
+          <Contact />
+        </div>
+      ) : (
+        ''
+      )}
+    </Layout>
   );
 }
 

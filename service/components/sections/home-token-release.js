@@ -28,9 +28,11 @@ const oLineDefaultOptions = {
 
 const HomeTokenRelease = forwardRef(({ start }, ref) => {
   const [isMobile, setIsMobile] = useState(false);
+  const [graphWidth, setGraphWidth] = useState(550);
   const { t } = useTranslation();
 
   useEffect(() => {
+    setGraphWidth(screen?.width < 420 ? 420 : 520);
     if (window.matchMedia('screen and (max-width: 797px)').matches) {
       setIsMobile(true);
     }
@@ -287,8 +289,6 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
         }]
       : '',
   };
-
-  const graphWidth = screen.width < 420 ? 420 : 520;
 
   return (
     <section ref={ref} id="TOKEN-RELEASE" className="section-token-release">
