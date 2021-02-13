@@ -55,8 +55,8 @@ const HomeHeadline = forwardRef((
                 />
                 <p>
                   {launchMode ? price
-                    : modePreSales ? '$ 0.30'
-                      : '$ X.XX'
+                    : modePreSales ? '$ 0.05'
+                      : '$ 0.30'
                   }
                 </p>
                 <p className="label-remember">
