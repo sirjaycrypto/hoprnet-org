@@ -32,6 +32,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    height: calc(100vh * 0.3);
   }
 
   .section-top {
@@ -109,6 +110,20 @@
     flex-wrap: nowrap;
     justify-content: stretch;
     transform: translateY(100%);
+
+    .welcome {
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover;
+      @at-root #{&}--left {
+        background-image: url('/assets/images/welcomeLeft.jpg');
+        background-position: center;
+      }
+
+      @at-root #{&}--right {
+        background-image: url('/assets/images/Bildschirmfoto.jpg');
+      }
+    }
 
     & > a {
       box-sizing: border-box;

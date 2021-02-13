@@ -1,7 +1,14 @@
 import React, { useEffect, useState, forwardRef } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 
-const HomeHeadline = forwardRef(({ setShowModal, modePreSales }, ref) => {
+const HomeHeadline = forwardRef((
+  {
+    launchMode,
+    modePreSales,
+    setShowModal,
+  },
+  ref
+) => {
   const { t } = useTranslation();
 
   const fetchData = async () => {
@@ -46,13 +53,18 @@ const HomeHeadline = forwardRef(({ setShowModal, modePreSales }, ref) => {
                   src="/assets/images/HPR_Favicon.svg"
                   alt={t('home:headline.titleTicket')}
                 />
-                <p>{!modePreSales ? price : '$ 0.30'}</p>
+                <p>
+                  {launchMode ? price
+                    : modePreSales ? '$ 0.05'
+                      : '$ 0.30'
+                  }
+                </p>
                 <p className="label-remember">
                   {t('home:headline.txtDownNum')}
                 </p>
               </div>
               <div className="btn-ticket" onClick={() => setShowModal(true)}>
-                { !modePreSales && <span>{t('home:banner.button')}</span> }
+                {modePreSales || launchMode && <span>{t('home:banner.button')}</span>}
               </div>
             </div>
 

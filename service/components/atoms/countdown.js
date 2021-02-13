@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
-export default function Countdown() {
+export const Countdown = () => {
   const [days, setDays] = useState('');
   const [hours, setHours] = useState('');
   const [minutes, setMinutes] = useState('');
@@ -50,4 +50,6 @@ export default function Countdown() {
       </div>
     </div>
   );
-}
+};
+
+export default Countdown;

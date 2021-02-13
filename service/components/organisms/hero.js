@@ -1,5 +1,5 @@
 import React, { useRef, forwardRef, useState, useEffect } from 'react';
-import Countdown from '../atoms/countdown';
+import { Button, Countdown } from '..';
 import useTranslation from 'next-translate/useTranslation';
 import HeroInfo from '../molecules/hero-info';
 import { AlertMsg } from '..';
@@ -7,6 +7,7 @@ import { AlertMsg } from '..';
 const Hero = forwardRef(
   (
     {
+      launchMode,
       modePreSales,
       setLoading,
       setShowModal,
@@ -94,7 +95,7 @@ const Hero = forwardRef(
                     : t('home:hero.subtitle')}
                 </h4>
                 <Countdown />
-                {modePreSales ? (
+                {modePreSales && (
                   <div className="helperSpaceBtn">
                     {showMsg ? (
                       <AlertMsg showActiveMsg={() => showActiveMsg()} />
@@ -111,10 +112,13 @@ const Hero = forwardRef(
                       </div>
                     )}
                   </div>
-                ) : (
-                  <div onClick={() => setShowModal(true)} className="btn-banner">
-                    <span>{t('home:banner.button')}</span>
-                  </div>
+                )}
+                {launchMode && (
+                  <Button
+                    className="btn-banner"
+                    content={t('home:banner.button')}
+                    to="/token#bildText"
+                  />
                 )}
               </>
             </div>

@@ -6,38 +6,38 @@ export default function HoperFor() {
   const data = [
     {
       link: 'https://github.com/hoprnet',
-      img: 'assets/icons/with-yellow-ball/shield.png',
+      img: '/assets/icons/with-yellow-ball/shield.png',
       label: 'Privacy Blog',
       delayTime: '100',
     },
     {
       link: 'https://github.com/hoprnet',
-      img: 'assets/icons/with-yellow-ball/lock-4.png',
+      img: '/assets/icons/with-yellow-ball/lock-4.png',
       label: 'common:cryptographers',
       delayTime: '150',
     },
     {
       link: 'https://docs.hoprnet.org/home/',
-      img: 'assets/icons/with-yellow-ball/programming-team-chat-3.png',
+      img: '/assets/icons/with-yellow-ball/programming-team-chat-3.png',
       label: 'common:techies',
       delayTime: '200',
     },
     {
       link: '',
-      img: 'assets/icons/with-yellow-ball/light-bulb-shine.png',
+      img: '/assets/icons/with-yellow-ball/light-bulb-shine.png',
       label: 'common:entrepreneurs',
       delayTime: '250',
     },
 
     {
       link: 'https://docs.hoprnet.org/home/',
-      img: 'assets/icons/with-yellow-ball/outdoors-mining.png',
+      img: '/assets/icons/with-yellow-ball/outdoors-mining.png',
       label: 'common:miners&Stakers',
       delayTime: '300',
     },
     {
       link: 'mailto:sebastian.buergel@hoprnet.org?subject=Investment',
-      img: 'assets/icons/with-yellow-ball/professions-man-office-1.png',
+      img: '/assets/icons/with-yellow-ball/professions-man-office-1.png',
       label: 'common:investors',
       delayTime: '350',
     },
@@ -69,7 +69,11 @@ export default function HoperFor() {
                 className="item-contact-plus"
               >
                 <div className="bg-img">
-                  <img src={img} alt={t(label)} />
+                  <img
+                    alt={t(label)}
+                    layout="fill"
+                    src={img}
+                  />
                 </div>
                 <div>
                   <h6 transition={{ delay: 0.2 }}>{t(label)}</h6>

@@ -45,7 +45,7 @@ export default function Index() {
             <div className="container-sm two-block">
               <div className="block-left ">
                 <div className="help-icon-node">
-                  <img src="assets/images/icons/github.svg" alt="" />
+                  <img src="assets/images/icons/github.svg" alt="GitHub" />
                 </div>
                 <motion.h3 animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
                   {t('node:second.leftTitle')}
@@ -79,7 +79,7 @@ export default function Index() {
                 <div className="help-icon-node">
                   <img
                     src="assets/images/icons/original/light-bulb-shine.png"
-                    alt=""
+                    alt="Light Bulb"
                   />
                 </div>
                 <motion.h3 animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
