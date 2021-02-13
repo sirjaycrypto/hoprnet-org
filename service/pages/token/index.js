@@ -23,10 +23,10 @@ import Modal from '../../components/atoms/modal';
 export default function Index({ setLoading }) {
   const [visibleNow, setVisibleNow] = useState('');
   const [modePreSales, setModePreSales] = useState(false);
+  const [launchMode, setLaunchMode] = useState(false);
   const [showModal, setShowModal] = useState(undefined);
   const [showPublicMsg, setShowPublicMsg] = useState(false);
   const [thisBanner, setThisBanner] = useState(0);
-  const [blnPlayVideo, setPlayVideo] = useState(0);
   const router = useRouter();
   const heroInfo = useRef();
   const btnToFollow = useRef();
@@ -43,6 +43,9 @@ export default function Index({ setLoading }) {
     if (stage) {
       if (stage === 'pre-sale') {
         setModePreSales(true);
+      }
+      if (stage === 'launch') {
+        setLaunchMode(true);
       }
     }
   }, [stage]);
@@ -85,16 +88,30 @@ export default function Index({ setLoading }) {
       window.removeEventListener('scroll', onScroll);
   }, [videoRef, modePreSales, thisBanner]);
 
+  const setStage = () => {
+    const now = new Date();
+    const preSaleDate = new Date('Feb 21, 2021');
+    const launchDate = new Date('Feb 24, 2021');
+
+    if (now.getTime() < preSaleDate.getTime()) {
+      setModePreSales(false);
+      setLaunchMode(false);
+    } else if (now.getTime() >= preSaleDate().getTime() && now.getTime() < launchDate.getTime()) {
+      setModePreSales(true);
+      setLaunchMode(false);
+    } else {
+      setModePreSales(false);
+      setLaunchMode(true);
+    }
+  }
+
   const onScroll = () => {
     const elemntY = videoRef?.current.scrollWidth;
     const scrollY = window.pageYOffset;
 
     if (scrollY - elemntY >= 0 && scrollY < thisBanner) {
-      console.log('change to 1');
-      setPlayVideo(1);
       srtBtnFollow(true);
     } else {
-      setPlayVideo(0);
       srtBtnFollow(false);
     }
   };
@@ -136,12 +153,17 @@ export default function Index({ setLoading }) {
       <ChooseLanguage />
       <Hero
         modePreSales={modePreSales}
+        launchMode={launchMode}
         ref={heroInfo}
         setLoading={setLoading}
         setShowModal={setShowModal}
         setVisibleNow={setVisibleNow}
       />
-      <HomeHeadline modePreSales={modePreSales} setShowModal={setShowModal} />
+      <HomeHeadline
+        launchMode={launchMode}
+        modePreSales={modePreSales}
+        setShowModal={setShowModal}
+      />
       <section id="video-area" className="video-home" ref={videoRef}>
         <iframe
           src={`${getVideoByLang()}?title=0&byline=0&portrait=0&playsinline=0&controls=1&loop=1&app_id=122963`}
@@ -163,22 +185,23 @@ export default function Index({ setLoading }) {
           <h3>{!modePreSales ? t('home:banner.label') : t('home:banner.labelPreSales')}</h3>
         </div>
         <div className={btnFollow ? 'content-buttons nowFollowUs' : 'content-buttons'} ref={btnToFollow}>
-          {modePreSales ? (
+          {modePreSales && (
             showPublicMsg ? (
               <AlertMsg floating showActiveMsg={togglePublicMsg} />
             ) : (
               <>
-                {/* <div onClick={() => setShowModal(true)} className="btn-banner first-button">
+                <div onClick={() => setShowModal(true)} className="btn-banner first-button">
                   <div>{t('home:banner.btnCommunity1')}</div>
                   <div>{t('home:banner.btnCommunity2')}</div>
                 </div>
                 <div className="btn-banner" onClick={togglePublicMsg}>
                   <div>{t('home:banner.btnPublic1')}</div>
                   <div>{t('home:banner.btnPublic2')}</div>
-                </div> */}
+                </div>}
               </>
             )
-          ) : (
+          )}
+          {launchMode && (
             <div className="btn-banner" onClick={() => setShowModal(true)}>
               <span>{t('home:banner.button')}</span>
             </div>

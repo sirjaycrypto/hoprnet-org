@@ -7,6 +7,7 @@ import { AlertMsg } from '..';
 const Hero = forwardRef(
   (
     {
+      launchMode,
       modePreSales,
       setLoading,
       setShowModal,
@@ -94,7 +95,7 @@ const Hero = forwardRef(
                     : t('home:hero.subtitle')}
                 </h4>
                 <Countdown />
-                {modePreSales ? (
+                {modePreSales && (
                   <div className="helperSpaceBtn">
                     {showMsg ? (
                       <AlertMsg showActiveMsg={() => showActiveMsg()} />
@@ -111,7 +112,8 @@ const Hero = forwardRef(
                       </div>
                     )}
                   </div>
-                ) : (
+                )}
+                {launchMode && (
                   <Button
                     className="btn-banner"
                     content={t('home:banner.button')}
