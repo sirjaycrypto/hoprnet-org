@@ -1,9 +1,11 @@
-import React, { useState, useEffect, forwardRef } from 'react';
-import useTranslation from 'next-translate/useTranslation';
+import React, { forwardRef } from 'react';
 import { Line, Pie } from 'react-chartjs-2';
-
+//Data
 import dataPie from '../../public/assets/json/data-token-allocation.json';
 import dataSupply from '../../public/assets/json/data-supply.json';
+//Hooks
+import { useMobile } from '../hooks/useMobile';
+import useTranslation from 'next-translate/useTranslation';
 
 function intlFormat(num) {
   return new Intl.NumberFormat().format(Math.round(num * 10) / 10);
@@ -27,16 +29,8 @@ const oLineDefaultOptions = {
 };
 
 const HomeTokenRelease = forwardRef(({ start }, ref) => {
-  const [isMobile, setIsMobile] = useState(false);
-  const [graphWidth, setGraphWidth] = useState(550);
+  const [isMobile] = useMobile();
   const { t } = useTranslation();
-
-  useEffect(() => {
-    setGraphWidth(screen?.width < 420 ? 420 : 520);
-    if (window.matchMedia('screen and (max-width: 797px)').matches) {
-      setIsMobile(true);
-    }
-  }, []);
 
   const resultPie = Object.keys(dataPie).map((key) =>
     dataPie[key]
@@ -145,10 +139,9 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
   const dataDate = dataSupply.map((item) => item.Date);
   const processData = (key) =>
     dataSupply.map(oItem => {
-        let nElem = oItem[key];
-
-        return nElem ? parseFloat(nElem.split(',').join('').trim()) : undefined;
-      });
+      let nElem = oItem[key];
+      return nElem ? parseFloat(nElem.split(',').join('').trim()) : undefined;
+    });
 
   const dataOption = {
     maintainAspectRatio: false,
@@ -325,7 +318,7 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
           <h3>{t('home:token.thirdSubTitle')} (M)</h3>
           <div className="container-chart">
             <div className="help-scroll">
-              <Line data={dataTokenSupply} width={100} height={graphWidth} options={dataOption} />
+              <Line data={dataTokenSupply} height={600} width={370} options={dataOption} />
             </div>
           </div>
         </div>
