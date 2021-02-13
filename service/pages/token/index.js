@@ -168,6 +168,7 @@ export default function Index({ setLoading }) {
         <iframe
           src={`${getVideoByLang()}?title=0&byline=0&portrait=0&playsinline=0&controls=1&loop=1&app_id=122963`}
           frameBorder="0"
+          allowFullScreen
         ></iframe>
       </section>
       <HomeTokenFeatures setVisibleNow={setVisibleNow} />
