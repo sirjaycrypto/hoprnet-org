@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import useTranslation from 'next-translate/useTranslation';
 
 export default function HoperFor() {
@@ -70,7 +69,7 @@ export default function HoperFor() {
                 className="item-contact-plus"
               >
                 <div className="bg-img">
-                  <Image
+                  <img
                     alt={t(label)}
                     layout="fill"
                     src={img}
