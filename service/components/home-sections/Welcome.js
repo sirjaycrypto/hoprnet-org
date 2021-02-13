@@ -42,12 +42,12 @@ export default function Welcome({ welcomeAnimate }) {
         <Link href="/win">
           <a className="left-container center-on-the-box">
             <Image
-              alt="COUNTDOWN TO HOPR MAINNET"
+              alt="COUNTDOWN TO HOPR JUNGFRAU"
               layout="fill"
               src="/assets/images/Bildschirmfoto.jpg"
             />
             <div className="text-area">
-              <h2>COUNTDOWN TO HOPR MAINNET</h2>
+              <h2>COUNTDOWN TO HOPR JUNGFRAU</h2>
             </div>
           </a>
         </Link>
