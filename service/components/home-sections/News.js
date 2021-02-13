@@ -3,6 +3,7 @@ import useTranslation from 'next-translate/useTranslation';
 
 const data = [
   {
+    alt: 'Coindesk',
     link:
       'https://www.coindesk.com/binance-labs-leads-1m-seed-round-in-crypto-tor-alternative-hopr',
     img: 'assets/as_see/coindesk.svg',
@@ -12,6 +13,7 @@ const data = [
     delayTime: '100',
   },
   {
+    alt: 'Coin Telegraph',
     link:
       'https://cointelegraph.com/news/hopr-data-privacy-testnet-to-launch-following-investment-by-binance',
     img: 'assets/as_see/cointelegraph.svg',
@@ -21,6 +23,7 @@ const data = [
     delayTime: '150',
   },
   {
+    alt: 'Money Today',
     link:
       'https://www.moneytoday.ch/news/das-schweizer-tech-startup-hopr-sammelt-1-million-dollar-ein-binance-labs-fuehrt-die-investitionsru/',
     img: 'assets/as_see/moneytoday.svg',
@@ -45,7 +48,7 @@ export default function News() {
         </div>
         <div className="items">
           {data.map((e, index) => {
-            const { link, img, about, btn, delayTime } = e;
+            const { alt, link, img, about, btn, delayTime } = e;
             return (
               <div
                 key={index}
@@ -54,7 +57,7 @@ export default function News() {
                 className="element-item"
               >
                 <div className="main">
-                  <a href={link} target="_blank" rel="noopener noreferrer">
+                  <a alt={alt} href={link} target="_blank" rel="noopener noreferrer">
                     <div className="container-img mb-12">
                       <img src={img} alt={about} />
                     </div>
@@ -63,6 +66,7 @@ export default function News() {
                     <p className="mb-16 quote">{about}</p>
                     <div>
                       <a
+                        alt={alt}
                         href={link}
                         target="_blank"
                         rel="noopener noreferrer"

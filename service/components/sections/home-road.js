@@ -141,10 +141,10 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
                       {'('}
                       {links.map((item, i) => {
                         return (
-                          <>
-                            <a href={item.link} key={index + '-' + i}>{item.text}</a>
+                          <div key={index + '-' + i}>
+                            <a href={item.link}>{item.text}</a>
                             {i < (links.length - 1) ? ', ' : ''}
-                          </>
+                          </div>
                         );
                       })}
                       {')'}
