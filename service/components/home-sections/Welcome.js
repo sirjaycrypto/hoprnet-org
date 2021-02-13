@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Countdown from '../atoms/countdown';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Welcome({ welcomeAnimate }) {
   const [initialAni, setInitialAni] = useState(false);
@@ -27,7 +28,11 @@ export default function Welcome({ welcomeAnimate }) {
       <div className="section-bottom">
         <Link href="/token">
           <a className="right-container center-on-the-box">
-            <img src="/assets/images/welcomeLeft.jpg" alt="HOPR Token-SALE" />
+            <Image
+              alt="HOPR Token-SALE"
+              layout="fill"
+              src="/assets/images/welcomeLeft.jpg"
+            />
             <div className="text-area">
               <h2>HOPR TOKEN LAUNCH</h2>
               <Countdown />
@@ -36,9 +41,10 @@ export default function Welcome({ welcomeAnimate }) {
         </Link>
         <Link href="/win">
           <a className="left-container center-on-the-box">
-            <img
-              src="/assets/images/Bildschirmfoto.jpg"
+            <Image
               alt="COUNTDOWN TO HOPR MAINNET"
+              layout="fill"
+              src="/assets/images/Bildschirmfoto.jpg"
             />
             <div className="text-area">
               <h2>COUNTDOWN TO HOPR MAINNET</h2>
