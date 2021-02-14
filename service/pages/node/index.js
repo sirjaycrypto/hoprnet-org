@@ -88,14 +88,22 @@ export default function Index() {
                 <motion.p variants={fadeInUp} transition={{ delay: 0.9 }}>
                   {t('node:second.rightParagraphA')}
                   <a
-                    href="https://docs.hoprnet.org/home/getting-started/hopr-chat"
+                    href="https://www.coindesk.com/binance-labs-leads-1m-seed-round-in-crypto-tor-alternative-hopr"
                     className="text-color-high underline"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {t('node:second.rightLink')}
+                    {t('node:second.rightLink-1')}
                   </a>
-                  {t('node:second.rightParagraphB')}
+                  {' '}and{' '}
+                  <a
+                    href="https://cointelegraph.com/news/hopr-data-privacy-testnet-to-launch-following-investment-by-binance"
+                    className="text-color-high underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {t('node:second.rightLink-2')}
+                  </a>{t('node:second.rightParagraphB')}
                 </motion.p>
                 <div className="btn-align">
                   <a

@@ -1,7 +1,7 @@
 ---
-name: Design bug
+name: Website bug
 about: Anything related to spacings, wrong implementation, etc.
-title: "[ design bug ] Change title"
+title: "[ website bug ] Update title"
 labels: type:design, workflow:new issue
 assignees: jjperezaguinaga
 
@@ -52,10 +52,13 @@ assignees: jjperezaguinaga
 <!-- For example:
 - Device: [e.g. iPhone6]
 - OS: [e.g. iOS8.1]
-- Browser [e.g. stock browser, safari]
-- Version [e.g. 22] -->
+- Browser: [e.g. stock browser, safari]
+- Version: [e.g. 22] 
+- Resolution: [e.g. 1920x1024]
+-->
 
 - Device: 
 - OS: 
 - Browser:
 - Version:
+- Resolution:
