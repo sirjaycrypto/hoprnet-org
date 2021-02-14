@@ -16,8 +16,11 @@ export const Index = () => {
             HOPR JUNGFRAU: 24TH FEB 2021
           </h1>
           <img src="assets/images/hopr_seal.png" alt="HOPR" width="175px" />
-          <p>Hop around the world with HOPR, and win a share of 500,000 HOPR tokens and a trip to Switzerland!</p>
-          <p>More coming soon.</p>
+          <p>
+            Hop around the world with HOPR, and win a share of 500,000 HOPR
+            tokens and a trip to Switzerland!
+          </p>
+          <p style={{ marginBottom: '80px' }}>More coming soon.</p>
         </HeroInternal>
       </Layout>
     </div>
@@ -29,10 +32,7 @@ export default Index;
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      _ns: await loadNamespaces(
-        ['common', 'menu'],
-        locale,
-      ),
+      _ns: await loadNamespaces(['common', 'menu'], locale),
     },
   };
 }
