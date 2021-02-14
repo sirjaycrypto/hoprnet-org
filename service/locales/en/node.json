@@ -5,14 +5,15 @@
     "paragraphB": "HOPR makes no profit from the first-of-its-kind custom node PC. Instead, we thank you for helping ensure a decentralized Web3 future, where everyone has control of their own data."
   },
   "second": {
-    "leftLink": "GitBook instructions",
+    "leftLink": "Documentation",
     "leftParagraphA": "If you want to run a node on your own hardware without the HOPR Node PC, that’s perfectly acceptable and possible as well! Check out our ",
     "leftParagraphB": " for details on how to install.",
     "leftTitle": "Run Your Own Metal",
     "rightTitle": "Your HOPR Hardware Node",
-    "rightLink": "GitBook instructions",
-    "rightParagraphA": "If you want to run a node on your own hardware without the HOPR Node PC, that’s perfectly acceptable and possible as well! Check out our ",
-    "rightParagraphB": " for details on how to install."
+    "rightLink-1": "Coindesk",
+    "rightLink-2": "Cointelegraph",
+    "rightParagraphA": "Order our limited supply of initial HOPR Node PCs now! Following our coverage in ",
+    "rightParagraphB": ", our wait list reached several hundred, which surprised even us! However, we are only making an initial 100 node PCs available, so we highly recommend ordering now."
   },
   "specifications": {
     "link": "AVADO i2",
