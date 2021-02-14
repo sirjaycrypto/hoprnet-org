@@ -12,6 +12,10 @@ $phone-landscape: 667px;
     @media screen and (max-width: $tablet) and (max-device-width: $phone-landscape) and (orientation: landscape) {
       @content;
     }
+  } @else if $media == safari_land {
+    @media screen and (max-height: $phone) and (orientation: landscape) {
+      @content;
+    }
   } @else if $media == tablet {
     @media screen and (max-width: $tablet) {
       @content;

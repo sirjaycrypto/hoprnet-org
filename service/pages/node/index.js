@@ -36,7 +36,7 @@ export default function Index() {
           <div
             className="banner-node"
             style={{
-              backgroundImage: 'url(assets/images/banner-ardware.jpg)',
+              backgroundImage: 'url(/assets/images/banner-hardware.png)',
             }}
           ></div>
         </section>

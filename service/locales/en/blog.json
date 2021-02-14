@@ -1,11 +1,11 @@
 {
   "hero": {
-    "paragraphA": "blog_hero_paragraphA",
-    "title": "blog_hero_title"
+    "paragraphA": "You can reach us on any of these channels:",
+    "title": "Join The HOPR Community"
   },
   "second": {
-    "subTitle": "blog_second_subTitle",
-    "title": "blog_second_title",
-    "youtubeChannel": "blog_second_youtubeChannel"
+    "subTitle":"check out more videos in our",
+    "title":"Video",
+    "youtubeChannel":"Youtube channel"
   }
 }

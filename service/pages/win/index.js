@@ -1,7 +1,7 @@
 import React from 'react';
 import useTranslation from 'next-translate/useTranslation';
 
-import { SectionContainer } from '../../components';
+import HeroInternal from '../../components/organisms/hero-internal';
 import Layout from '../../components/organisms/layout';
 import { loadNamespaces } from '../_app';
 
@@ -11,14 +11,14 @@ export const Index = () => {
   return (
     <div className="win-page">
       <Layout>
-        <SectionContainer align="center" extraClass="header">
+        <HeroInternal>
           <h1 data-aos="fade-down" data-aos-delay="150">
             HOPR JUNGFRAU: 24TH FEB 2021
           </h1>
           <img src="assets/images/hopr_seal.png" alt="HOPR" width="175px" />
           <p>Hop around the world with HOPR, and win a share of 500,000 HOPR tokens and a trip to Switzerland!</p>
           <p>More coming soon.</p>
-        </SectionContainer>
+        </HeroInternal>
       </Layout>
     </div>
   );
