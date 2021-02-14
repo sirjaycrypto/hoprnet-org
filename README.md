@@ -40,20 +40,25 @@ expose the site on port `3000` by default.
 
 2. We use [semantic convention](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716) for describing commits and branches. After identifying the issue by the number, create a branch in the form `$type/$issueId-$authorInitials-$description`, where
 
-  2.1 `$type` can be any of `feat|bug|fix|docs|style|refactor|test|chore`
-  2.2 `$issueId` relates to the issue is trying to solve.
-  2.3 `$authorInitials` identifies who created the PR.
-  2.4 `$description` is a two word description of the issue at hand.
+    2.1 `$type` can be any of `feat|bug|fix|docs|style|refactor|test|chore`
 
-  e.g. docs/100-JA-adding-guidelines
+    2.2 `$issueId` relates to the issue is trying to solve.
+
+    2.3 `$authorInitials` identifies who created the PR.
+
+    2.4 `$description` is a two word description of the issue at hand.
+
+    e.g. docs/100-JA-adding-guidelines
 
 3. Commits follow also semantic convention, and should be phrased in the form `$type: Fixes #$issueId - $reason`, where
 
-  3.1 `$type` can be any of `feat|bug|fix|docs|style|refactor|test|chore`
-  3.2 `$issueId` relates to the issue is trying to solve.
-  3.3 `$reason` is a few words about the “why” of this particular commit.
+    3.1 `$type` can be any of `feat|bug|fix|docs|style|refactor|test|chore`
 
-  e.g. "docs: Fixes #100 - Avoiding repeating instructions on how to contribute to project'
+    3.2 `$issueId` relates to the issue is trying to solve.
+
+    3.3 `$reason` is a few words about the “why” of this particular commit.
+
+    e.g. "docs: Fixes #100 - Avoiding repeating instructions on how to contribute to project'
 
 4. All our work is send as Pull Request (PR) to `development`, and has to be approved by another team member. Production is on `main`, and requires at least `two` team members approval.
 
