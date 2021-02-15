@@ -53,7 +53,7 @@ export default function Index() {
                 <motion.p variants={fadeInUp} transition={{ delay: 0.9 }}>
                   {t('node:second.leftParagraphA')}
                   <a
-                    href="https://docs.hoprnet.org/home/getting-started/hopr-chat"
+                    href="https://github.com/hoprnet"
                     className="text-color-high underline"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -64,7 +64,7 @@ export default function Index() {
                 </motion.p>
                 <div className="btn-align">
                   <a
-                    href="https://docs.hoprnet.org/home/getting-started/hopr-chat"
+                    href="https://docs.hoprnet.org/en/latest/src/install-hoprd/index.html"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="link-out"
