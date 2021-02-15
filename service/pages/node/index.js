@@ -107,7 +107,7 @@ export default function Index() {
                 </motion.p>
                 <div className="btn-align">
                   <a
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSeiZ76QfvcbpbBJk-DJDE5IfYmzkuUfUOM-j4btBviTbBNn2w/viewform?hl=en"
+                    href="https://ava.do/checkout/hopr"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="link-out"
