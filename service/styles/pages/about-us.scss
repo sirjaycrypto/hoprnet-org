@@ -1,0 +1,7 @@
+.about-us {
+  .hero-title {
+    @include responsive(phone) {
+      font-size: 40px;
+    }
+  }
+}
