@@ -9,8 +9,7 @@ export const Index = () => {
   return (
     <Layout>
       <div className="win-page">
-        <HeroInternal>
-        </HeroInternal>
+        <section className="section-hero"></section>
         <SectionContainer>
           <h1 data-aos="fade-down" data-aos-delay="150">
             HOPR JUNGFRAU RELEASE
