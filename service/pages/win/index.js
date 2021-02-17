@@ -45,7 +45,7 @@ export const Index = () => {
           <div>
             <h2>HOPR JUNGFRAU RELEASE</h2>
             <p>
-              Filler text is text that shares some character- istics of a real
+              Filler text is text that shares some character-istics of a real
               written text, but is random or otherwise generated. It may be used
               to display a sample of fonts, generate text for testing, or to
               spoof an e-mail spam filter.{' '}
@@ -121,7 +121,7 @@ export const Index = () => {
               to display a sample of fonts, generate text for testing, or to
               spoof an e-mail spam filter. Filler text is text that shares some
               characteristics of a real written text, but is random or otherwise
-              generated.  WIN A TRIP TO SWITZERLAND by may be used to display a
+              generated. WIN A TRIP TO SWITZERLAND by may be used to display a
               sample of fonts, generate text for testing, or to spoof an e-mail
               spam filter.{' '}
             </p>
