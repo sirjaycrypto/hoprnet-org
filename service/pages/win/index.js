@@ -2,7 +2,8 @@ import React from 'react';
 
 import HeroInternal from '../../components/organisms/hero-internal';
 import Layout from '../../components/organisms/layout';
-import { BannerItem, SectionContainer } from '../../components';
+import HomeBacked from '../../components/sections/home-backed';
+import { BannerGrid, SectionContainer, WinSchedules } from '../../components';
 import { loadNamespaces } from '../_app';
 
 export const Index = () => {
@@ -51,66 +52,7 @@ export const Index = () => {
             </p>
           </div>
         </SectionContainer>
-        <SectionContainer extraClass="banners">
-          <div className="banner-row">
-            <BannerItem
-              alt="Banner 1"
-              blindText="Permanent Blindtext-overlay via Html"
-              height="273.88px"
-              src="/assets/images/win/win-banner-1.png"
-              width="468px"
-            />
-            <BannerItem
-              alt="Banner 2"
-              blindText="Permanent Blindtext-overlay via Html"
-              height="273.88px"
-              src="/assets/images/win/win-banner-2.png"
-              width="468px"
-            />
-            <BannerItem
-              alt="Banner 3"
-              blindText="Permanent Blindtext-overlay via Html"
-              height="273.88px"
-              src="/assets/images/win/win-banner-3.png"
-              width="468px"
-            />
-            <BannerItem
-              alt="Banner 4"
-              blindText="Permanent Blindtext-overlay via Html"
-              height="273.88px"
-              src="/assets/images/win/win-banner-4.png"
-              width="468px"
-            />
-            <BannerItem
-              alt="Banner 5"
-              blindText="Permanent Blindtext-overlay via Html"
-              height="273.88px"
-              src="/assets/images/win/win-banner-5.png"
-              width="468px"
-            />
-            <BannerItem
-              alt="Banner 6"
-              blindText="Permanent Blindtext-overlay via Html"
-              height="273.88px"
-              src="/assets/images/win/win-banner-6.png"
-              width="468px"
-            />
-            <BannerItem
-              alt="Banner 7"
-              blindText="Permanent Blindtext-overlay via Html"
-              height="273.88px"
-              src="/assets/images/win/win-banner-7.png"
-              width="468px"
-            />
-            <BannerItem
-              alt="Banner 8"
-              blindText="Permanent Blindtext-overlay via Html"
-              height="273.88px"
-              src="/assets/images/win/win-banner-8.png"
-              width="468px"
-            />
-          </div>
-        </SectionContainer>
+        <BannerGrid />
         <SectionContainer extraClass="release">
           <div>
             <h2>ONLINE EVENT</h2>
@@ -126,6 +68,23 @@ export const Index = () => {
             </p>
           </div>
         </SectionContainer>
+        <WinSchedules />
+        <SectionContainer extraClass="terms">
+          <p>
+            TERMS AND CONDITIONS: Filler text is text that shares some
+            characteristics of a real written text, but is random or otherwise
+            generated. It may be used to display a sample of fonts, generate
+            text for testing, or to spoof an e-mail spam filter. Filler text is
+            text that shares some characteristics of a real written text, but is
+            random or otherwise generated. Filler text is text that shares some
+            characteristics of a real written text, but is random or otherwise
+            generated. It may be used to display a sample of fonts, generate
+            text for testing, or to spoof an e-mail spam filter. Filler text is
+            text that shares some characteristics of a real written text, but is
+            random or otherwise generated.{' '}
+          </p>
+        </SectionContainer>
+        <HomeBacked />
       </div>
     </Layout>
   );
@@ -136,7 +95,7 @@ export default Index;
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      _ns: await loadNamespaces(['common', 'menu'], locale),
+      _ns: await loadNamespaces(['common', 'menu', 'home'], locale),
     },
   };
 }

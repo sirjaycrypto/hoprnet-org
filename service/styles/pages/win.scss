@@ -101,6 +101,47 @@
   }
 
   .section-container {
+
+    &.hours {
+      box-shadow: 2px 2px 41px -41px rgba(0, 0, 0, 0.25);
+    }
+
+    &.custom-terms {
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.15px;
+        line-height: 18px;
+      }
+    }
+
+    .event-item {
+      align-items: center;
+      border-top: 2px solid #C4C4C4;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 20px 80px;
+
+      p {
+        color: #414141;
+        flex: 1;
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 0.25px;
+        line-height: 32px;
+        margin: inherit;
+        text-align: center;
+      }
+
+      p:nth-of-type(1) {
+        margin-left: 80px;
+        text-align: left;
+      }
+      p:nth-of-type(2) {
+        font-weight: 600;
+      }
+    }
     .wrapper-sales-for {
       background: #FFFFA0;
       box-shadow: none;
