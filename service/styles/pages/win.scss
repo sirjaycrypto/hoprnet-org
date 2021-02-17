@@ -142,6 +142,24 @@
         font-weight: 600;
       }
     }
+
+    @media screen and (max-width: 1023px) {
+      .event-item {
+        padding: 20px 40px;
+
+        p {
+          font-size: 20px;
+        }
+
+        p:nth-of-type(1) {
+          margin-left: 20px;
+          text-align: left;
+        }
+        p:nth-of-type(2) {
+          font-weight: 600;
+        }
+      }
+    }
     .wrapper-sales-for {
       background: #FFFFA0;
       box-shadow: none;
