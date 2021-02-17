@@ -10,11 +10,13 @@ export const Index = () => {
     <Layout>
       <div className="win-page">
         <HeroInternal>
-          <h2>PLACEHOLDER HEADLINE</h2>
+        </HeroInternal>
+        <SectionContainer>
           <h1 data-aos="fade-down" data-aos-delay="150">
             HOPR JUNGFRAU RELEASE
           </h1>
-        </HeroInternal>
+          <img src="assets/images/hopr_seal.png" alt="HOPR" width="175px" />
+        </SectionContainer>
         <SectionContainer invert>
           <div className="wrapper-sales-for">
             <div className="card-view the-balancer">
