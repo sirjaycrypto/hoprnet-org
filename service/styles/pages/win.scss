@@ -29,8 +29,8 @@
           iframe {
             height: 100%;
             left: 0;
-            top: 0;
             position: absolute;
+            top: 0;
             width: 100%;
           }
         }
@@ -131,6 +131,37 @@
         font-weight: 400;
         letter-spacing: 0.15px;
         line-height: 18px;
+      }
+    }
+
+    &.custom-jungfrau {
+      h2 {
+        text-align: center;
+      }
+      .row {
+        border-radius: 20px;
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        z-index: 2;
+
+        div {
+          flex: 1;
+          text-align: center;
+        }
+
+        .left {
+          padding: 10px 60px;
+
+          p {
+            font-size: 38px;
+            letter-spacing: 0.15px;
+            line-height: 48px;
+            text-align: left;
+          }
+        }
+
       }
     }
 

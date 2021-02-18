@@ -11,11 +11,21 @@ export const Index = () => {
     <Layout>
       <div className="win-page">
         <section className="section-hero"></section>
-        <SectionContainer>
-          <h1 data-aos="fade-down" data-aos-delay="150">
-            HOPR JUNGFRAU RELEASE
-          </h1>
-          <img src="assets/images/hopr_seal.png" alt="HOPR" width="175px" />
+        <SectionContainer extraClass="jungfrau">
+          <h2 data-aos="fade-down" data-aos-delay="150">
+            HOPR JUNGFRAU: 24TH FEB 2021
+          </h2>
+          <div className="row">
+            <div className="left">
+              <p>
+                Hop around the world with HOPR, and win a share of 100,000 HOPR
+                tokens and a trip to Switzerland!
+              </p>
+            </div>
+            <div className="right">
+              <img src="assets/images/hopr_seal.png" alt="HOPR" width="351px" />
+            </div>
+          </div>
         </SectionContainer>
         <SectionContainer invert>
           <div className="wrapper-sales-for">
