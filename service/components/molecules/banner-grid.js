@@ -51,7 +51,8 @@ export const BannerGrid = () => {
           alt="Banner 8"
           blindText="Permanent Blindtext-overlay via Html"
           height="273.88px"
-          src="/assets/images/win/win-banner-8.png"
+          onClick="/assets/video/Screensaver.mp4"
+          src="/assets/images/win/win-banner-8.jpg"
           width="468px"
         />
       </div>

@@ -1,16 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Link from 'next/link';
 
 export const BannerItem = ({
   alt,
   blindText,
   children,
   height,
+  onClick = '#',
   src,
   video,
   width
 }) => {
-  return (
+
+  const renderContent = () => (
     <div className="banner-element">
       <span>{blindText}</span>
       {!children ?
@@ -33,6 +36,14 @@ export const BannerItem = ({
         ) : null
       : children}
     </div>
+  );
+
+  return onClick ? (
+    <a href={onClick} download>
+      {renderContent()}
+    </a>
+  ) : (
+    renderContent()
   );
 };
 
