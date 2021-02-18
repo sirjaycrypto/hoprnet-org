@@ -4,19 +4,34 @@ import PropTypes from 'prop-types';
 export const BannerItem = ({
   alt,
   blindText,
+  children,
   height,
   src,
+  video,
   width
 }) => {
   return (
     <div className="banner-element">
       <span>{blindText}</span>
-      <img
-        alt={alt}
-        height={height}
-        src={src}
-        width={width}
-      />
+      {!children ?
+        video ? (
+          <div className="embed-container">
+            <iframe
+              allowFullScreen
+              className="video"
+              frameBorder="0"
+              src={`${video}?title=0&byline=0&portrait=0&playsinline=0&controls=1&loop=0&app_id=122963&width=100%`}
+            ></iframe>
+          </div>
+        ) : src ? (
+          <img
+            alt={alt}
+            height={height}
+            src={src}
+            width={width}
+          />
+        ) : null
+      : children}
     </div>
   );
 };
