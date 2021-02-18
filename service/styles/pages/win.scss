@@ -45,16 +45,21 @@
           position: absolute;
           text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
           top: 0;
+          z-index: 1;
         }
       }
 
-      @media screen and (max-width: 767px) {
+      @media screen and (max-width: 768px) {
         .banner-element {
           width: 50%;
 
           img {
             height: 136px;
             width: 187.5px;
+          }
+
+          span {
+            font-size: 14px;
           }
         }
       }
@@ -109,6 +114,19 @@
       margin-bottom: 50px;
       margin-top: 0;
     }
+
+    @media screen and (max-width: 768px) {
+      h2 {
+        font-size: 30px;
+        margin: 40px 0;
+      }
+
+      p {
+        font-size: 18px;
+        letter-spacing: 0.25px;
+        line-height: 23px;
+      }
+    }
   }
 
   .section-hero {
@@ -161,7 +179,28 @@
             text-align: left;
           }
         }
+      }
 
+      @media screen and (max-width: 767px) {
+        .row{
+          flex-wrap: wrap-reverse;
+
+          .left {
+            padding: 0 15px;
+
+            p {
+              font-size: 18px;
+              font-weight: 400;
+              line-height: 23px;
+            }
+          }
+
+          .right {
+            img {
+              width: 80%!important;
+            }
+          }
+        }
       }
     }
 
@@ -210,6 +249,20 @@
         }
       }
     }
+
+    @media screen and (max-width: 768px) {
+      .event-item {
+        padding: 10px 20px;
+
+        p {
+          font-size: 14px;
+        }
+
+        p:nth-of-type(2) {
+          display: none;
+        }
+      }
+    }
     .wrapper-sales-for {
       background: #FFFFA0;
       box-shadow: none;
@@ -227,6 +280,24 @@
           line-height: 38px;
           letter-spacing: 0.25px;
         }
+      }
+
+      @media screen and (max-width: 767px) {
+        .the-char-balancer {
+          padding: 0;
+
+          p {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 23px;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .wrapper-sales-for {
+        width: 100%;
       }
     }
   }

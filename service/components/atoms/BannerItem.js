@@ -7,7 +7,7 @@ export const BannerItem = ({
   blindText,
   children,
   height,
-  onClick = '#',
+  onClick,
   src,
   video,
   width
