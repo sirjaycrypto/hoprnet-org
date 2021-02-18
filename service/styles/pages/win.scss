@@ -16,6 +16,25 @@
         position: relative;
         width: 468px;
 
+        .embed-container {
+          --video--width: 468;
+          --video--height: 273.88;
+
+          position: relative;
+          padding-bottom: calc(var(--video--height) / var(--video--width) * 99%); /* 41.66666667% */
+          overflow: hidden;
+          max-width: 100%;
+          width: 100%;
+
+          iframe {
+            height: 100%;
+            left: 0;
+            top: 0;
+            position: absolute;
+            width: 100%;
+          }
+        }
+
         span {
           color: #FFFFFF;
           font-size: 18px;
@@ -31,7 +50,7 @@
 
       @media screen and (max-width: 767px) {
         .banner-element {
-          width: 187.5px;
+          width: 50%;
 
           img {
             height: 136px;

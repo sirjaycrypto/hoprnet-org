@@ -6,52 +6,45 @@ export const BannerGrid = () => {
     <SectionContainer extraClass="banners">
       <div className="banner-row">
         <BannerItem
-          alt="Banner 1"
           blindText="Permanent Blindtext-overlay via Html"
           height="273.88px"
-          src="/assets/images/win/win-banner-1.png"
+          video="https://player.vimeo.com/video/513101933"
           width="468px"
         />
         <BannerItem
-          alt="Banner 2"
           blindText="Permanent Blindtext-overlay via Html"
           height="273.88px"
-          src="/assets/images/win/win-banner-2.png"
+          video="https://player.vimeo.com/video/513096259"
           width="468px"
         />
         <BannerItem
-          alt="Banner 3"
           blindText="Permanent Blindtext-overlay via Html"
           height="273.88px"
-          src="/assets/images/win/win-banner-3.png"
+          video="https://player.vimeo.com/video/513096240"
           width="468px"
         />
         <BannerItem
-          alt="Banner 4"
           blindText="Permanent Blindtext-overlay via Html"
           height="273.88px"
-          src="/assets/images/win/win-banner-4.png"
+          video="https://player.vimeo.com/video/513096330"
           width="468px"
         />
         <BannerItem
-          alt="Banner 5"
           blindText="Permanent Blindtext-overlay via Html"
           height="273.88px"
-          src="/assets/images/win/win-banner-5.png"
+          video="https://player.vimeo.com/video/513096151"
           width="468px"
         />
         <BannerItem
-          alt="Banner 6"
           blindText="Permanent Blindtext-overlay via Html"
           height="273.88px"
-          src="/assets/images/win/win-banner-6.png"
+          video="https://player.vimeo.com/video/513096293"
           width="468px"
         />
         <BannerItem
-          alt="Banner 7"
           blindText="Permanent Blindtext-overlay via Html"
           height="273.88px"
-          src="/assets/images/win/win-banner-7.png"
+          video="https://player.vimeo.com/video/513105733"
           width="468px"
         />
         <BannerItem
