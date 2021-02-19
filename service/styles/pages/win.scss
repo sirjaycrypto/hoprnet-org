@@ -130,11 +130,25 @@
   }
 
   .section-hero {
-    background-color: #A1E4f7;
-    background-image: url('/assets/images/hopr_map.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    .background {
+      background-color: #A1E4f7;
+      background-image: url('/assets/images/hopr_map.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      flex: 1 0;
+      width: 100%;
+    }
+
+    .title {
+      background: #FFF;
+      display: flex;
+      flex: 0 auto;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+    }
   }
 
   .section-container {

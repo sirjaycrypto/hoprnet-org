@@ -15,11 +15,13 @@ export const Index = () => {
   return (
     <Layout>
       <div className="win-page">
-        <section className="section-hero"></section>
+        <section className="section-hero">
+          <div className="background"></div>
+          <div className="title">
+            <h2>HOPR JUNGFRAU: 24TH FEB 2021</h2>
+          </div>
+        </section>
         <SectionContainer extraClass="jungfrau">
-          <h2 data-aos="fade-down" data-aos-delay="150">
-            HOPR JUNGFRAU: 24TH FEB 2021
-          </h2>
           <div className="row">
             <div className="left">
               <p>
