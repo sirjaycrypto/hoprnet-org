@@ -3,7 +3,7 @@ import React from 'react';
 import HeroInternal from '../../components/organisms/hero-internal';
 import Layout from '../../components/organisms/layout';
 import HomeBacked from '../../components/sections/home-backed';
-import { BannerGrid, SectionContainer, WinSchedules } from '../../components';
+import { BannerGrid, Button, SectionContainer, WinSchedules } from '../../components';
 import { loadNamespaces } from '../_app';
 
 export const Index = () => {
@@ -36,9 +36,11 @@ export const Index = () => {
                 <p>$ 0.30</p>
                 <p className="label-remember">per HOPR</p>
               </div>
-              <div className="btn-ticket" onClick={() => setShowModal(true)}>
-                <span>Read more</span>
-              </div>
+              <Button
+                className="btn-ticket"
+                content="Read More"
+                to="/token"
+              />
             </div>
 
             <div className="the-char-balancer">
