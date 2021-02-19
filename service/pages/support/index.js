@@ -69,7 +69,7 @@ const aItems = [
         </a>
         .) While packet mixing is a core aspect of a mixnet, it is not the most critical development milestone. We’re
         focused on delivering working software to our community first, before enabling the more technical features which
-        we’ve already developed in a way that doesn’t break the UX. We plan for a mainnet release in late 2020.
+        we’ve already developed in a way that doesn’t break the UX. We plan for a mainnet release in late 2021.
       </>
     ),
   },
