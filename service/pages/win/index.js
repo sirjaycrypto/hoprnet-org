@@ -17,7 +17,7 @@ export const Index = () => {
           </h1>
           <img src="assets/images/hopr_seal.png" alt="HOPR" width="175px" />
           <p>
-            Hop around the world with HOPR, and win a share of 500,000 HOPR
+            Hop around the world with HOPR, and win a share of 100,000 HOPR
             tokens and a trip to Switzerland!
           </p>
           <p style={{ marginBottom: '80px' }}>More coming soon.</p>
