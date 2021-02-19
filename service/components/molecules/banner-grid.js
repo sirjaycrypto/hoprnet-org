@@ -6,50 +6,50 @@ export const BannerGrid = () => {
     <SectionContainer extraClass="banners">
       <div className="banner-row">
         <BannerItem
-          blindText="Permanent Blindtext-overlay via Html"
+          blindText="Jungfrau Release"
           height="273.88px"
           video="https://player.vimeo.com/video/513101933"
           width="468px"
         />
         <BannerItem
-          blindText="Permanent Blindtext-overlay via Html"
+          blindText="Our Team"
           height="273.88px"
           video="https://player.vimeo.com/video/513096259"
           width="468px"
         />
         <BannerItem
-          blindText="Permanent Blindtext-overlay via Html"
+          blindText="HOPR Hardware Node"
           height="273.88px"
           video="https://player.vimeo.com/video/513096240"
           width="468px"
         />
         <BannerItem
-          blindText="Permanent Blindtext-overlay via Html"
+          blindText="Why Jungfraujoch?"
           height="273.88px"
           video="https://player.vimeo.com/video/513096330"
           width="468px"
         />
         <BannerItem
-          blindText="Permanent Blindtext-overlay via Html"
+          blindText="Making of"
           height="273.88px"
           video="https://player.vimeo.com/video/513096151"
           width="468px"
         />
         <BannerItem
-          blindText="Permanent Blindtext-overlay via Html"
+          blindText="Our Values"
           height="273.88px"
           video="https://player.vimeo.com/video/513096293"
           width="468px"
         />
         <BannerItem
-          blindText="Permanent Blindtext-overlay via Html"
+          blindText="Tech Deepdive"
           height="273.88px"
           video="https://player.vimeo.com/video/513105733"
           width="468px"
         />
         <BannerItem
           alt="Banner 8"
-          blindText="Permanent Blindtext-overlay via Html"
+          blindText="Download our Jungfraujoch-Screensaver"
           height="273.88px"
           onClick="/assets/video/Screensaver.mp4"
           src="/assets/images/win/win-banner-8.jpg"
