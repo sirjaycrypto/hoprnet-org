@@ -150,7 +150,18 @@
       width: 100%;
 
       h2 {
+        font-size: 50px;
+        font-weight: normal;
+        letter-spacing: 0.833333px;
+        line-height: 63px;
         margin: 24px 0;
+
+        @media screen and (max-width: 768px) {
+          font-size: 30px;
+          letter-spacing: 0.25px;
+          line-height: 32px;
+          margin: 18px 0;
+        }
       }
     }
   }
@@ -171,8 +182,13 @@
     }
 
     &.custom-jungfrau {
+      margin-bottom: 80px;
+      margin-top: 56px;
       h2 {
         text-align: center;
+      }
+      .container {
+        padding: 0 24px;
       }
       .row {
         border-radius: 20px;
@@ -184,7 +200,12 @@
 
         div {
           flex: 1;
+          width: 50%;
           text-align: center;
+
+          @media screen and (max-width: 768px) {
+            width: 100%;
+          }
         }
 
         .left {
@@ -205,14 +226,9 @@
               line-height: 38px;
             }
           }
-        }
-      }
 
-      @media screen and (max-width: 767px) {
-        .row{
-          flex-wrap: wrap-reverse;
-
-          .left {
+          @media screen and (max-width: 767px) {
+            flex: 1 1 auto;
             padding: 0 15px;
 
             p {
@@ -221,13 +237,26 @@
               line-height: 23px;
             }
           }
+        }
 
-          .right {
-            img {
-              width: 80%!important;
-            }
+        .right {
+          img {
+            width: 80%;
           }
         }
+
+        @media screen and (max-width: 767px) {
+          flex-wrap: wrap-reverse;
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        margin: 50px 0;
+      }
+
+      @media screen and (max-width: 767px) {
+        margin-bottom: 50px;
+        margin-top: 24px;
       }
     }
 
