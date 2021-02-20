@@ -7,6 +7,7 @@ export const BannerItem = ({
   blindText,
   children,
   height,
+  link,
   onClick,
   src,
   video,
@@ -14,7 +15,7 @@ export const BannerItem = ({
 }) => {
 
   const renderContent = () => (
-    <div className="banner-element">
+    <div className="banner-element" onClick={onClick}>
       <span>{blindText}</span>
       {!children ?
         video ? (
@@ -34,12 +35,12 @@ export const BannerItem = ({
             width={width}
           />
         ) : null
-      : children}
+        : children}
     </div>
   );
 
-  return onClick ? (
-    <a href={onClick} download target="_blank">
+  return link ? (
+    <a href={link} download target="_blank">
       {renderContent()}
     </a>
   ) : (
