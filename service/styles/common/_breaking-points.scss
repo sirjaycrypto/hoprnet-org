@@ -24,6 +24,10 @@ $phone-landscape: 667px;
     @media only screen and (min-width: $pc + 1) and (min-width: $pc) {
       @content;
     }
+  } @else if $media == only_desktop {
+    @media only screen and (min-width: $pc) {
+      @content;
+    }
   } @else if $media == pc_tablet {
     @media only screen and (min-width: $tablet - 1) {
       @content;
