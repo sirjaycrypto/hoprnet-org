@@ -39,7 +39,7 @@ export const BannerItem = ({
   );
 
   return onClick ? (
-    <a href={onClick} download>
+    <a href={onClick} download target="_blank">
       {renderContent()}
     </a>
   ) : (

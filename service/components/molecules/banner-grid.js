@@ -51,7 +51,7 @@ export const BannerGrid = () => {
           alt="Banner 8"
           blindText="Download our Jungfraujoch-Screensaver"
           height="273.88px"
-          onClick="/assets/video/Screensaver.mp4"
+          onClick="https://assets.hoprnet.org/HOPR_Screensaver.mp4"
           src="/assets/images/win/win-banner-8.jpg"
           width="468px"
         />
