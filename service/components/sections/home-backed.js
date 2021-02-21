@@ -43,19 +43,50 @@ const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
 
   const dataInfoPartners = [
     { url: 'https://ava.do/', image: 'assets/partners/01_avado.svg' },
-    { url: 'https://www.froriep.com/', image: 'assets/partners/02_froriep.svg' },
+    {
+      url: 'https://www.froriep.com/',
+      image: 'assets/partners/02_froriep.svg',
+    },
     { url: 'https://elrond.com/', image: 'assets/partners/03_elrond.svg' },
-    { url: 'https://www.sedimentum.com/', image: 'assets/partners/04_sedimentum.svg' },
-    { url: 'https://www.swiss-medtech.ch/', image: 'assets/partners/05_swiss_medtech.svg' },
-    { url: 'https://www.xdaichain.com/', image: 'assets/partners/06_dai_logo.svg' },
-    { url: 'https://healthtech.ch/', image: 'assets/partners/07_health_tech_cluster.svg' },
-    { url: 'https://swisshealthcarestartups.com/', image: 'assets/partners/08_swiss_healthcare_startups.svg' },
+    {
+      url: 'https://www.sedimentum.com/',
+      image: 'assets/partners/04_sedimentum.svg',
+    },
+    {
+      url: 'https://www.swiss-medtech.ch/',
+      image: 'assets/partners/05_swiss_medtech.svg',
+    },
+    {
+      url: 'https://www.xdaichain.com/',
+      image: 'assets/partners/06_dai_logo.svg',
+    },
+    {
+      url: 'https://healthtech.ch/',
+      image: 'assets/partners/07_health_tech_cluster.svg',
+    },
+    {
+      url: 'https://swisshealthcarestartups.com/',
+      image: 'assets/partners/08_swiss_healthcare_startups.svg',
+    },
+    { url: 'https://blockark.io/', image: 'assets/partners/BLOCKARK-LOGO.png' },
   ];
 
   const dataInfoAssSee = [
-    { url: 'https://www.coindesk.com/binance-labs-leads-1m-seed-round-in-crypto-tor-alternative-hopr', image: 'assets/as_see/coindesk.svg' },
-    { url: 'https://cointelegraph.com/news/hopr-data-privacy-testnet-to-launch-following-investment-by-binance', image: 'assets/as_see/cointelegraph.svg' },
-    { url: 'https://www.moneytoday.ch/news/das-schweizer-tech-startup-hopr-sammelt-1-million-dollar-ein-binance-labs-fuehrt-die-investitionsru/', image: 'assets/as_see/moneytoday.svg' },
+    {
+      url:
+        'https://www.coindesk.com/binance-labs-leads-1m-seed-round-in-crypto-tor-alternative-hopr',
+      image: 'assets/as_see/coindesk.svg',
+    },
+    {
+      url:
+        'https://cointelegraph.com/news/hopr-data-privacy-testnet-to-launch-following-investment-by-binance',
+      image: 'assets/as_see/cointelegraph.svg',
+    },
+    {
+      url:
+        'https://www.moneytoday.ch/news/das-schweizer-tech-startup-hopr-sammelt-1-million-dollar-ein-binance-labs-fuehrt-die-investitionsru/',
+      image: 'assets/as_see/moneytoday.svg',
+    },
   ];
 
   return (
@@ -78,7 +109,11 @@ const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img className={title === 'Stakely' ? 'img-to-black' : ''} src={img} alt={title} />
+                  <img
+                    className={title === 'Stakely' ? 'img-to-black' : ''}
+                    src={img}
+                    alt={title}
+                  />
                 </a>
               );
             })}
