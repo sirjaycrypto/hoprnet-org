@@ -23,9 +23,10 @@ const Modal = forwardRef(({ showModal, setShowModal }, ref) => {
               </div>
               <Button
                 className="btn-modal"
+                target="_blank"
                 content={t('home:modal.btnIAgree')}
                 onClick={() => setShowModal(false)}
-                to="/token#blindText"
+                to="https://hoprlaunch.eth.link/"
               />
             </div>
           </div>
