@@ -198,7 +198,7 @@ export default function Index({ setLoading }) {
                 <div className="btn-banner" onClick={togglePublicMsg}>
                   <div>{t('home:banner.btnPublic1')}</div>
                   <div>{t('home:banner.btnPublic2')}</div>
-                </div>}
+                </div>
               </>
             )
           )}

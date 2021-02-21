@@ -8,6 +8,7 @@
 
 .show-modal {
   animation: animateModal 600ms ease-in-out forwards;
+  position: fixed;
 }
 
 @keyframes animateModal {
