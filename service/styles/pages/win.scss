@@ -250,12 +250,12 @@
         }
 
         .left {
-          padding: 10px 60px;
+          margin: auto 60px;
 
           p {
-            font-size: 38px;
-            letter-spacing: 0.15px;
-            line-height: 48px;
+            font-size: 32px;
+            line-height: 38px;
+            letter-spacing: 0.25px;
             text-align: left;
           }
 
@@ -264,6 +264,7 @@
 
             p {
               font-size: 30px;
+              font-weight: normal;
               line-height: 38px;
             }
           }
@@ -364,7 +365,7 @@
       }
 
       .the-char-balancer {
-        margin: 0;
+        margin: auto 0;
         padding: 0 40px;
 
         p {

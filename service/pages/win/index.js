@@ -37,7 +37,7 @@ export const Index = () => {
         <SectionContainer invert>
           <div className="wrapper-sales-for">
             <div className="card-view the-balancer">
-              <h3 style={{ fontWeight: 'bold' }}>Balancer-Launch</h3>
+              <h3 style={{ fontWeight: 'bold' }}>Balancer Launch</h3>
               <div className="containerImg">
                 <img src="/assets/images/HPR_Favicon.svg" alt="HOPR Logo" />
                 <p>$ 0.30</p>
