@@ -28,6 +28,10 @@ const aVideos = [
     video: 'https://player.vimeo.com/video/513096293',
   },
   {
+    title: 'Win a Trip!',
+    video: 'https://player.vimeo.com/video/514633549',
+  },
+  {
     title: 'Tech Deepdive',
     video: 'https://player.vimeo.com/video/513105733',
   },
