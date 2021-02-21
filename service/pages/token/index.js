@@ -68,6 +68,7 @@ export default function Index({ setLoading }) {
 
   useEffect(() => {
     setLoading(true);
+    setStage();
     const location = document.location.href;
 
     if (location.indexOf('#') > -1) {
@@ -96,7 +97,7 @@ export default function Index({ setLoading }) {
     if (now.getTime() < preSaleDate.getTime()) {
       setModePreSales(false);
       setLaunchMode(false);
-    } else if (now.getTime() >= preSaleDate().getTime() && now.getTime() < launchDate.getTime()) {
+    } else if (now.getTime() >= preSaleDate.getTime() && now.getTime() < launchDate.getTime()) {
       setModePreSales(true);
       setLaunchMode(false);
     } else {
@@ -198,7 +199,7 @@ export default function Index({ setLoading }) {
                 <div className="btn-banner" onClick={togglePublicMsg}>
                   <div>{t('home:banner.btnPublic1')}</div>
                   <div>{t('home:banner.btnPublic2')}</div>
-                </div>}
+                </div>
               </>
             )
           )}
