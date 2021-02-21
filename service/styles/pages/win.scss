@@ -151,15 +151,35 @@
   }
 
   .section-hero {
+    @keyframes slide {
+      from {
+        background-position: 0;
+      }
+
+      to {
+        background-position: 100%;
+      }
+    }
+
     .background {
       background-color: #A1E4f7;
-      background-image: url('/assets/images/hopr_map.svg');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+      background-image: url('/assets/images/hopr_map.png');
+      background-position: 0;
+      background-repeat: repeat-x;
+      transition: background-size;
+      background-size: auto;
       display: flex;
       flex: 1 0;
       width: 100%;
+      animation:
+        slide
+        30s
+        ease-out
+        0s
+        alternate
+        infinite
+        none
+        running;
     }
 
     .title {
