@@ -55,7 +55,7 @@ const HomeHeadline = forwardRef((
                 />
                 <p>
                   {launchMode ? price
-                    : modePreSales ? '$ 0.05'
+                    : modePreSales ? '$ 0.30'
                       : '$ 0.30'
                   }
                 </p>

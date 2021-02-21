@@ -151,15 +151,35 @@
   }
 
   .section-hero {
+    @keyframes slide {
+      from {
+        background-position: 0;
+      }
+
+      to {
+        background-position: 100%;
+      }
+    }
+
     .background {
       background-color: #A1E4f7;
-      background-image: url('/assets/images/hopr_map.svg');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+      background-image: url('/assets/images/hopr_map.png');
+      background-position: 0;
+      background-repeat: repeat-x;
+      transition: background-size;
+      background-size: auto;
       display: flex;
       flex: 1 0;
       width: 100%;
+      animation:
+        slide
+        30s
+        ease-out
+        0s
+        alternate
+        infinite
+        none
+        running;
     }
 
     .title {
@@ -230,12 +250,12 @@
         }
 
         .left {
-          padding: 10px 60px;
+          margin: auto 60px;
 
           p {
-            font-size: 38px;
-            letter-spacing: 0.15px;
-            line-height: 48px;
+            font-size: 32px;
+            line-height: 38px;
+            letter-spacing: 0.25px;
             text-align: left;
           }
 
@@ -244,6 +264,7 @@
 
             p {
               font-size: 30px;
+              font-weight: normal;
               line-height: 38px;
             }
           }
@@ -344,7 +365,7 @@
       }
 
       .the-char-balancer {
-        margin: 0;
+        margin: auto 0;
         padding: 0 40px;
 
         p {

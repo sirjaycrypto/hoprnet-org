@@ -27,7 +27,14 @@ export const BannerItem = ({
     setDeviceType();
   }, []);
 
-  const renderContent = () => (
+  const renderContent = (link) => {
+    const ImgWrapper = () => (<img
+      alt={alt}
+      height={height}
+      src={src}
+      width={width}
+    />)
+    return (
     <div className="banner-element" onClick={onClick}>
       <span>{blindText}</span>
       {!children ?
@@ -42,24 +49,17 @@ export const BannerItem = ({
             ></iframe>
           </div>
         ) : src ? (
-          <img
-            alt={alt}
-            height={height}
-            src={src}
-            width={width}
-          />
+          link ?
+          <a href={link} download target="_blank">
+            <ImgWrapper/>
+          </a> :
+          <ImgWrapper/>
         ) : null
         : children}
     </div>
-  );
+  )};
 
-  return link ? (
-    <a href={link} download target="_blank">
-      {renderContent()}
-    </a>
-  ) : (
-    renderContent()
-  );
+  return link ? renderContent(link) : renderContent();
 };
 
 BannerItem.propTypes = {

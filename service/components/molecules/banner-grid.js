@@ -28,6 +28,10 @@ const aVideos = [
     video: 'https://player.vimeo.com/video/513096293',
   },
   {
+    title: 'Win a Trip!',
+    video: 'https://player.vimeo.com/video/514633549',
+  },
+  {
     title: 'Tech Deepdive',
     video: 'https://player.vimeo.com/video/513105733',
   },
@@ -57,10 +61,10 @@ export const BannerGrid = () => {
         <BannerItem
           alt="Download Screensaver"
           blindText="Download our Jungfraujoch-Screensaver"
-          height="273.88px"
           link="https://assets.hoprnet.org/HOPR_Screensaver.mp4"
           src="/assets/images/win/win-banner-8.jpg"
-          width="468px"
+          width="100%"
+          height="100%"
         />
       </div>
     </SectionContainer>

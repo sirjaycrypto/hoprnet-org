@@ -37,7 +37,7 @@ export const Index = () => {
         <SectionContainer invert>
           <div className="wrapper-sales-for">
             <div className="card-view the-balancer">
-              <h3 style={{ fontWeight: 'bold' }}>Balancer-Launch</h3>
+              <h3 style={{ fontWeight: 'bold' }}>Balancer Launch</h3>
               <div className="containerImg">
                 <img src="/assets/images/HPR_Favicon.svg" alt="HOPR Logo" />
                 <p>$ 0.30</p>
@@ -90,8 +90,7 @@ export const Index = () => {
               MySwitzerland. Our global launch day event will hop around the
               world to ten different destinations, from Tokyo to San Francisco.
               Each destination will also play host to local community events
-              such as AMAs with more HOPR token giveaways. Check out the full
-              schedule [here]. Finally, find the hidden eleventh destination to
+              such as AMAs with more HOPR token giveaways. Finally, find the hidden eleventh destination to
               win our grand prize: 50,000 HOPR tokens and a trip for two to
               Switzerland and the fabulous Jungfraujoch! The destinations will
               unlock throughout the day. See below the destination panel for

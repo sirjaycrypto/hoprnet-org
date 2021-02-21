@@ -39,7 +39,7 @@ export const  GameCountdown = ({
 
     if (difference > 0) {
       const nDays = Math.floor(difference / (1000 * 60 * 60));
-      timeLeft.hours = (`0${nDays + Math.floor((difference / (1000 * 60 * 60)) % 24)}`).slice(-2);
+      timeLeft.hours = (`0${Math.floor((difference / (1000 * 60 * 60)))}`).slice(-2);
       timeLeft.minutes = (`0${Math.floor((difference / 1000 / 60) % 60)}`).slice(-2);
       timeLeft.seconds = (`0${Math.floor((difference / 1000) % 60)}`).slice(-2);
     }

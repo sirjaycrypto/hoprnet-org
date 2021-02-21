@@ -16,6 +16,7 @@ import useTranslation from 'next-translate/useTranslation';
 
 import ChooseLanguage from '../../components/molecules/choose-language';
 import useVisibility from '../../components/hooks/useVisibility';
+import { useMobile } from '../../components/hooks/useMobile';
 import Footer from '../../components/molecules/footer';
 
 import Modal from '../../components/atoms/modal';
@@ -27,6 +28,7 @@ export default function Index({ setLoading }) {
   const [showModal, setShowModal] = useState(undefined);
   const [showPublicMsg, setShowPublicMsg] = useState(false);
   const [thisBanner, setThisBanner] = useState(0);
+  const [isMobile] = useMobile();
   const router = useRouter();
   const heroInfo = useRef();
   const btnToFollow = useRef();
@@ -110,7 +112,7 @@ export default function Index({ setLoading }) {
     const elemntY = videoRef?.current.scrollWidth;
     const scrollY = window.pageYOffset;
 
-    if (scrollY - elemntY >= 0 && scrollY < thisBanner) {
+    if (scrollY - elemntY >= 0 && scrollY < thisBanner && !isMobile) {
       srtBtnFollow(true);
     } else {
       srtBtnFollow(false);
