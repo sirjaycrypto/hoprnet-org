@@ -1,4 +1,3 @@
-import { set } from 'lodash';
 import React, { useState } from 'react';
 import { BannerItem, SectionContainer } from '..';
 
@@ -38,11 +37,6 @@ const aVideos = [
 ]
 
 export const BannerGrid = () => {
-  const [isPlaying, setPlay] = useState(-1);
-
-  const onClickBanner = (nIndex) => {
-    setPlay(isPlaying !== nIndex ? nIndex : -1);
-  };
 
   return (
     <SectionContainer extraClass="banners">
@@ -52,8 +46,6 @@ export const BannerGrid = () => {
             blindText={title}
             height="273.88px"
             key={nIndex}
-            onClick={() => onClickBanner(nIndex)}
-            playing={nIndex === isPlaying ? 1 : 0}
             video={video}
             width="468px"
           />
