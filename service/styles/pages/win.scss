@@ -35,27 +35,6 @@
           }
         }
 
-        @include responsive(only_desktop) {
-          &:hover {
-            .embed-container {
-              &::before {
-                background-color: rgba(0,0,0,0.45);
-                background-image: url('/assets/icons/play.svg');
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: 50px;
-                content: '';
-                height: 100%;
-                left: 0;
-                position: absolute;
-                top: 0;
-                width: 100%;
-                z-index: 6;
-              }
-            }
-          }
-        }
-
         span {
           color: #FFFFFF;
           font-size: 18px;
