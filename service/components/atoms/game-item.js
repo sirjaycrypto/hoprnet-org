@@ -2,14 +2,17 @@ import React from 'react';
 import { Button, GameCountdown } from '..';
 
 export const GameItem = ({
+  answer,
   date,
   destination,
   hour,
   onClick,
+  setAnswer,
   to,
   video = 'https://player.vimeo.com/video/508834454',
   visible,
 }) => {
+
   return (
     <>
     <div className="event-item" onClick={onClick}>
@@ -26,7 +29,11 @@ export const GameItem = ({
         width="100%"
       ></iframe>
       <div className="answer">
-        <input type="text" />
+        <input
+          onChange={({ target }) => setAnswer(target.value)}
+          type="text"
+          value={answer}
+        />
         <Button
           content="Submit"
           to={to}

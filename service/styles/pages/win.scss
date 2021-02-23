@@ -88,6 +88,40 @@
 
 
     }
+
+    .quiz {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .answer {
+        display: flex;
+        flex-direction: row;
+        margin: 10px;
+
+        input {
+          background: #F0F0F0;
+          border: none;
+          border-radius: 16px;
+          display: flex;
+          flex: 4;
+          min-width: 35vw;
+        }
+
+        a {
+          display: flex;
+          flex: 1;
+        }
+      }
+
+      .quiz-video {
+        height: 25vw;
+        min-height: 50vh;
+        min-width:  120vh;
+        width: 150vh;
+      }
+    }
   }
 
   .custom-release {

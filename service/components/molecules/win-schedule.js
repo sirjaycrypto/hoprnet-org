@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { GameItem, SectionContainer } from '..';
 
 export const WinSchedules = () => {
   const [accordionVisible, setVisible] = useState(null);
+  const [answer, setAnswer] = useState('');
+
+  useEffect(() => {
+    setAnswer('');
+  }, [accordionVisible]);
 
   const setItemVisible = index => {
-    debugger;
     setVisible(accordionVisible === index ? null : index);
   };
 
@@ -82,7 +86,7 @@ export const WinSchedules = () => {
     }
   ]
 
-  const getTwitterIntent = (answer, sDestination) => {
+  const getTwitterIntent = (sDestination) => {
     let sUrl = `https://twitter.com/intent/tweet?text=@hopnet It\'s $HOPR launch day! My answer is ${answer}&hashtags=${sDestination},HOPRLaunch`;
     return encodeURI(sUrl);
   };
@@ -91,12 +95,14 @@ export const WinSchedules = () => {
     <SectionContainer extraClass="banners hours">
       {aData.map((oItem, nIndex) => (
         <GameItem
+          answer={answer}
           date={oItem.date}
           destination={oItem.destination}
           hour={oItem.hour}
           key={nIndex}
           onClick={() => setItemVisible(nIndex)}
-          to={getTwitterIntent('', oItem.ht)}
+          setAnswer={setAnswer}
+          to={getTwitterIntent(oItem.ht)}
           visible={accordionVisible === nIndex}
         />
       ))}
