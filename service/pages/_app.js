@@ -46,6 +46,12 @@ function MyApp({ Component, pageProps }) {
     });
 
     window.addEventListener('load', onFinishLoading);
+
+    // add fathom analytics
+    const script = insertScript('https://panther.hoprnet.org/script.js');
+    script.setAttribute('site', 'ZXTSKLDN');
+    script.setAttribute('spa', 'auto');
+
     return () => window.removeEventListener('load', onFinishLoading);
   }, []);
 
