@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import AOS from 'aos';
 
-import Loader from '../components/atoms/loader';
 import I18nProvider from 'next-translate/I18nProvider';
 import Router, { useRouter } from 'next/router';
+import { insertScript, Loader } from '../components';
 
 import 'aos/dist/aos.css';
 import '../styles/main.scss';
