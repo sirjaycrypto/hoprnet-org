@@ -9,7 +9,7 @@ export const GameItem = ({
   onClick,
   setAnswer,
   to,
-  video = 'https://player.vimeo.com/video/508834454',
+  video = 'https://player.vimeo.com/video/512589722',
   visible,
 }) => {
 
@@ -25,7 +25,7 @@ export const GameItem = ({
         allowFullScreen
         className="quiz-video"
         frameBorder="0"
-        src={`${video}?autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false&app_id=122963`}
+        src={`${video}?autoplay=1&loop=1&title=0&byline=0&muted=0&responsive=true&controls=false&app_id=122963`}
         width="100%"
       ></iframe>
       <div className="answer">
