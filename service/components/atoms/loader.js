@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '../molecules/navbar';
 
-export default function Loader() {
+export function Loader() {
   return (
     <motion.div
       animate="animate"
@@ -17,3 +17,5 @@ export default function Loader() {
     </motion.div>
   );
 }
+
+export default Loader;

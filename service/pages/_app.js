@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import AOS from 'aos';
 
-import Loader from '../components/atoms/loader';
 import I18nProvider from 'next-translate/I18nProvider';
 import Router, { useRouter } from 'next/router';
+import { insertScript, Loader } from '../components';
 
 import 'aos/dist/aos.css';
 import '../styles/main.scss';
@@ -46,6 +46,12 @@ function MyApp({ Component, pageProps }) {
     });
 
     window.addEventListener('load', onFinishLoading);
+
+    // add fathom analytics
+    const script = insertScript('https://panther.hoprnet.org/script.js');
+    script.setAttribute('site', 'ZXTSKLDN');
+    script.setAttribute('spa', 'auto');
+
     return () => window.removeEventListener('load', onFinishLoading);
   }, []);
 
