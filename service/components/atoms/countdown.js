@@ -30,19 +30,19 @@ export const Countdown = () => {
   return (
     <div id="clockDiv">
       <div>
-        <span className="days">{timeLeft.days}</span>
+        <span className="days">00</span>
       </div>
       <span>:</span>
       <div>
-        <span className="hours">{addCeroIfNeed(timeLeft.hours)}</span>
+        <span className="hours">00</span>
       </div>
       <span>:</span>
       <div>
-        <span className="minutes">{addCeroIfNeed(timeLeft.minutes)}</span>
+        <span className="minutes">00</span>
       </div>
       <span>:</span>
       <div>
-        <span className="seconds">{addCeroIfNeed(timeLeft.seconds)}</span>
+        <span className="seconds">00</span>
       </div>
     </div>
   );
