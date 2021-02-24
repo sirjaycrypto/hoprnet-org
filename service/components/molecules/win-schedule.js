@@ -7,10 +7,6 @@ export const WinSchedules = () => {
   const [answer, setAnswer] = useState('');
 
   useEffect(() => {
-    fetchVideo();
-  }, []);
-
-  useEffect(() => {
     setAnswer('');
   }, [accordionVisible]);
 
@@ -109,6 +105,11 @@ export const WinSchedules = () => {
       video: 'SAN_FRANCISCO',
     }
   ];
+
+  useEffect(() => {
+    fetchVideo();
+    setInterval(fetchVideo, 1000 * 60)
+  }, []);
 
   const getTwitterIntent = (sDestination) => {
     let sUrl = `https://twitter.com/intent/tweet?text=@hopnet It\'s $HOPR launch day! My answer is ${answer}&hashtags=${sDestination},HOPRLaunch`;
