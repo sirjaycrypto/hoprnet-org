@@ -21,19 +21,20 @@ export const WinSchedules = () => {
   };
 
   const fetchVideo = async () => {
-    // const result = await fetch(
-    //   'https://api.hoprnet.org/api/fetchVideo',
-    //   {
-    //     method: 'POST'
-    //   },
-    // );
-
-    // if (result) {
-    //   setVisible(result?.city);
-    //   setVideo(`https://player.vimeo.com/video/${result.video.split('/').reverse()[0]}`);
-    // }
-    const oVideo = aData[Math.floor(Math.random() * 10)];
-    setVisible(oVideo?.video);
+    const result = await fetch(
+      'https://api.hoprnet.org/api/fetchVideo',
+      {
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+      },
+    );
+    if (result) {
+      const oJson = await result.json();
+      setVisible(oJson?.city);
+      setVideo(`https://player.vimeo.com/video/${oJson.url?.split('/').reverse()[0]}`);
+    }
   };
 
   const aData = [
