@@ -112,7 +112,7 @@ export const WinSchedules = () => {
   }, []);
 
   const getTwitterIntent = (sDestination) => {
-    let sUrl = `https://twitter.com/intent/tweet?text=@hopnet It\'s $HOPR launch day! My answer is ${answer}&hashtags=${sDestination},HOPRLaunch`;
+    let sUrl = `https://twitter.com/intent/tweet?text=@hoprnet It\'s $HOPR launch day! My answer is ${answer}&hashtags=${sDestination},HOPRLaunch`;
     return encodeURI(sUrl);
   };
 
