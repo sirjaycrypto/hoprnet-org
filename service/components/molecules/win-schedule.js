@@ -5,6 +5,7 @@ export const WinSchedules = () => {
   const [accordionVisible, setVisible] = useState(null);
   const [video, setVideo] = useState();
   const [answer, setAnswer] = useState('');
+  const [intervalTime, setIntervalTime] = useState();
 
   useEffect(() => {
     setAnswer('');
@@ -106,10 +107,33 @@ export const WinSchedules = () => {
     }
   ];
 
+  const getCurrentCityFromTimestamp = (dateTimestamp) => {
+    const citiesAfter = aData.filter( city => dateTimestamp - new Date(city.date).getTime() < 0 )
+    return citiesAfter.length > 0 ? citiesAfter[0] : {
+      date: 'Feb 24, 2021 15:59:59 UTC+09:00',
+      destination: 'Unknown, ??',
+      hour: '15:59 UTC+9',
+      ht: 'Unknown',
+      video: 'UNKNOWN',
+    }
+  }
+
+  const getIntervalTime = () => {
+    const nextCity = getCurrentCityFromTimestamp(new Date().getTime())
+    const msDiff = new Date(nextCity.date).getTime() - (new Date().getTime());
+    return msDiff;
+  }
+
   useEffect(() => {
-    fetchVideo();
-    setInterval(fetchVideo, 1000 * 60)
-  }, []);
+    const loadVideo = async () => {
+      await fetchVideo();
+      const diff = getIntervalTime()
+      setTimeout(() => {
+        setIntervalTime(diff)
+      }, diff)
+    }
+    loadVideo();
+  }, [intervalTime]);
 
   const getTwitterIntent = (sDestination) => {
     let sUrl = `https://twitter.com/intent/tweet?text=@hoprnet It\'s $HOPR launch day! My answer is ${answer}&hashtags=${sDestination},HOPRLaunch`;
