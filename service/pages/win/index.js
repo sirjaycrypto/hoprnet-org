@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-import HeroInternal from '../../components/organisms/hero-internal';
 import Layout from '../../components/organisms/layout';
 import HomeBacked from '../../components/sections/home-backed';
 import {
@@ -9,9 +8,16 @@ import {
   SectionContainer,
   WinSchedules,
 } from '../../components';
+import { usePrice } from '../../components/hooks/usePrice';
 import { loadNamespaces } from '../_app';
 
 export const Index = () => {
+  const [price, getPrice] = usePrice();
+
+  useEffect(() => {
+    getPrice();
+  }, []);
+
   return (
     <Layout>
       <div className="win-page">
@@ -40,7 +46,7 @@ export const Index = () => {
               <h3 style={{ fontWeight: 'bold' }}>Balancer Launch</h3>
               <div className="containerImg">
                 <img src="/assets/images/HPR_Favicon.svg" alt="HOPR Logo" />
-                <p>$ 0.30</p>
+                <p>$ {price}</p>
                 <p className="label-remember">per HOPR</p>
               </div>
               <Button className="btn-ticket" content="Read More" to="/token" />
