@@ -54,9 +54,9 @@ export const WinSchedules = () => {
     },
     {
       date: 'Feb 24, 2021 17:00:00 UTC+08:00',
-      destination: 'Shangai, CN',
+      destination: 'Shanghai, CN',
       hour: '17:00 UTC+8',
-      ht: 'Shangai',
+      ht: 'Shanghai',
       video: 'SHANGAI',
     },
     {
