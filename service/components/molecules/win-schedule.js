@@ -3,14 +3,37 @@ import { GameItem, SectionContainer } from '..';
 
 export const WinSchedules = () => {
   const [accordionVisible, setVisible] = useState(null);
+  const [video, setVideo] = useState();
   const [answer, setAnswer] = useState('');
+
+  useEffect(() => {
+    fetchVideo();
+  }, []);
 
   useEffect(() => {
     setAnswer('');
   }, [accordionVisible]);
 
   const setItemVisible = index => {
-    setVisible(accordionVisible === index ? null : index);
+    if (index !== accordionVisible) {
+      setVisible(index);
+    }
+  };
+
+  const fetchVideo = async () => {
+    // const result = await fetch(
+    //   'https://api.hoprnet.org/api/fetchVideo',
+    //   {
+    //     method: 'POST'
+    //   },
+    // );
+
+    // if (result) {
+    //   setVisible(result?.city);
+    //   setVideo(`https://player.vimeo.com/video/${result.video.split('/').reverse()[0]}`);
+    // }
+    const oVideo = aData[Math.floor(Math.random() * 10)];
+    setVisible(oVideo?.video);
   };
 
   const aData = [
@@ -19,72 +42,79 @@ export const WinSchedules = () => {
       destination: 'Tokyo, JP',
       hour: '16:00 UTC+9',
       ht: 'Tokyo',
-      video: '',
+      video: 'TOKYO',
     },
     {
       date: 'Feb 24, 2021 17:00:00 UTC+09:00',
       destination: 'Seoul, KOR',
       hour: '17:00 UTC+9',
       ht: 'Seoul',
-      video: '',
+      video: 'SEOUL',
     },
     {
       date: 'Feb 24, 2021 17:00:00 UTC+08:00',
       destination: 'Shangai, CN',
       hour: '17:00 UTC+8',
       ht: 'Shangai',
-      video: '',
+      video: 'SHANGAI',
     },
     {
       date: 'Feb 24, 2021 17:00:00 UTC+07:00',
       destination: 'Hanoi, VN',
       hour: '17:00 UTC+7',
       ht: 'Hanoi',
-      video: '',
+      video: 'HANOI',
     },
     {
       date: 'Feb 24, 2021 14:00:00 UTC+03:00',
       destination: 'Moscow, RU',
       hour: '14:00 UTC+3',
       ht: 'Moscow',
-      video: '',
+      video: 'MOSCOW',
     },
     {
       date: 'Feb 24, 2021 15:00:00 UTC+03:00',
       destination: 'Istanbul, TR',
       hour: '15:00 UTC+3',
       ht: 'Istanbul',
-      video: '',
+      video: 'ISTANBUL',
     },
     {
       date: 'Feb 24, 2021 14:00:00 UTC+01:00',
       destination: 'Zurich, CH',
       hour: '14:00 UTC+1',
       ht: 'Zurich',
-      video: '',
+      video: 'ZURICH',
     },
     {
       date: 'Feb 24, 2021 15:00:00 UTC+01:00',
       destination: 'Madrid, ES',
       hour: '15:00 UTC+1',
       ht: 'Madrid',
-      video: '',
+      video: 'MADRID',
     },
     {
       date: 'Feb 24, 2021 12:00:00 UTC-03:00',
       destination: 'Sao Paulo, BR',
       hour: '12:00 UTC-3',
       ht: 'SaoPaolo',
-      video: '',
+      video: 'SAO_PAULO',
     },
     {
       date: 'Feb 24, 2021 12:00:00 UTC-09:00',
       destination: 'San Francisco, USA',
       hour: '12:00 UTC-9',
       ht: 'SF',
-      video: '',
-    }
-  ]
+      video: 'SAN_FRANCISCO',
+    },
+    {
+      date: 'Feb 23, 2021 20:24:00 UTC-06:00',
+      destination: 'San Francisco, USA',
+      hour: '12:00 UTC-9',
+      ht: 'SF',
+      video: 'MX',
+    },
+  ];
 
   const getTwitterIntent = (sDestination) => {
     let sUrl = `https://twitter.com/intent/tweet?text=@hopnet It\'s $HOPR launch day! My answer is ${answer}&hashtags=${sDestination},HOPRLaunch`;
@@ -93,17 +123,19 @@ export const WinSchedules = () => {
 
   return (
     <SectionContainer extraClass="banners hours">
-      {aData.map((oItem, nIndex) => (
+      {aData.map(oItem => (
         <GameItem
           answer={answer}
           date={oItem.date}
           destination={oItem.destination}
           hour={oItem.hour}
-          key={nIndex}
-          onClick={() => setItemVisible(nIndex)}
+          key={oItem.video}
+          onClick={() => setItemVisible(oItem.video)}
+          onFetch={() => fetchVideo()}
           setAnswer={setAnswer}
           to={getTwitterIntent(oItem.ht)}
-          visible={accordionVisible === nIndex}
+          video={video}
+          visible={accordionVisible === oItem.video}
         />
       ))}
     </SectionContainer>
