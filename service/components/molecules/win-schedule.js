@@ -108,7 +108,7 @@ export const WinSchedules = () => {
 
   useEffect(() => {
     fetchVideo();
-    setInterval(fetchVideo, 1000)
+    setInterval(fetchVideo, 1000 * 60)
   }, []);
 
   const getTwitterIntent = (sDestination) => {
