@@ -99,9 +99,9 @@ export const WinSchedules = () => {
       video: 'SAO_PAULO',
     },
     {
-      date: 'Feb 24, 2021 12:00:00 UTC-09:00',
+      date: 'Feb 24, 2021 8:00:00 UTC-09:00',
       destination: 'San Francisco, USA',
-      hour: '12:00 UTC-9',
+      hour: '8:00 UTC-9',
       ht: 'SF',
       video: 'SAN_FRANCISCO',
     }
