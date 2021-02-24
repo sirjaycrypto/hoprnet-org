@@ -1,38 +1,46 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BannerItem, SectionContainer } from '..';
 
 const aVideos = [
   {
     title: 'Jungfrau Release',
-    video: 'https://player.vimeo.com/video/513101933',
+    video: 'https://vimeo.com/513101933',
+    preview: 'https://i.vimeocdn.com/video/1064325853.webp',
   },
   {
     title: 'Our Team',
-    video: 'https://player.vimeo.com/video/513096259',
+    video: 'https://vimeo.com/513096259',
+    preview: 'https://i.vimeocdn.com/video/1062368155.webp',
   },
   {
     title: 'HOPR Hardware Node',
-    video: 'https://player.vimeo.com/video/513096240',
+    video: 'https://vimeo.com/513096240',
+    preview: 'https://i.vimeocdn.com/video/1062367955.webp',
   },
   {
     title: 'Why Jungfraujoch?',
-    video: 'https://player.vimeo.com/video/513096330',
+    video: 'https://vimeo.com/513096330',
+    preview: 'https://i.vimeocdn.com/video/1062371659.webp',
   },
   {
     title: 'Making of',
-    video: 'https://player.vimeo.com/video/513096151',
+    video: 'https://vimeo.com/513096151',
+    preview: 'https://i.vimeocdn.com/video/1064325388.webp',
   },
   {
     title: 'Our Values',
-    video: 'https://player.vimeo.com/video/513096293',
+    video: 'https://vimeo.com/513096293',
+    preview: 'https://i.vimeocdn.com/video/1062368114.webp',
   },
   {
     title: 'Win a Trip!',
-    video: 'https://player.vimeo.com/video/514633549',
+    video: 'https://vimeo.com/514633549',
+    preview: 'https://i.vimeocdn.com/video/1065570649.webp',
   },
   {
     title: 'Tech Deepdive',
-    video: 'https://player.vimeo.com/video/513105733',
+    video: 'https://vimeo.com/513105733',
+    preview: 'https://i.vimeocdn.com/video/1062385601.webp',
   },
 ]
 
@@ -41,13 +49,12 @@ export const BannerGrid = () => {
   return (
     <SectionContainer extraClass="banners">
       <div className="banner-row">
-        {aVideos.map(({ title, video }, nIndex) => (
+        {aVideos.map(({ title, video, preview }, nIndex) => (
           <BannerItem
             blindText={title}
-            height="273.88px"
             key={nIndex}
+            preview={preview}
             video={video}
-            width="468px"
           />
         ))}
         <BannerItem
@@ -55,8 +62,6 @@ export const BannerGrid = () => {
           blindText="Download our Jungfraujoch-Screensaver"
           link="https://assets.hoprnet.org/HOPR_Screensaver.mp4"
           src="/assets/images/win/win-banner-8.jpg"
-          width="100%"
-          height="100%"
         />
       </div>
     </SectionContainer>

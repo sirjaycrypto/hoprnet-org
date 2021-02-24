@@ -45,9 +45,11 @@ export default function Index({ setLoading }) {
     if (stage) {
       if (stage === 'pre-sale') {
         setModePreSales(true);
+        setLaunchMode(false);
       }
       if (stage === 'launch') {
         setLaunchMode(true);
+        setModePreSales(false);
       }
     }
   }, [stage]);
@@ -70,7 +72,9 @@ export default function Index({ setLoading }) {
 
   useEffect(() => {
     setLoading(true);
-    setStage();
+    if (!stage || stage === '') {
+      setStage();
+    }
     const location = document.location.href;
 
     if (location.indexOf('#') > -1) {
@@ -106,7 +110,7 @@ export default function Index({ setLoading }) {
       setModePreSales(false);
       setLaunchMode(true);
     }
-  }
+  };
 
   const onScroll = () => {
     const elemntY = videoRef?.current.scrollWidth;
