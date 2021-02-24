@@ -107,14 +107,7 @@ export const WinSchedules = () => {
       hour: '12:00 UTC-9',
       ht: 'SF',
       video: 'SAN_FRANCISCO',
-    },
-    {
-      date: 'Feb 23, 2021 20:24:00 UTC-06:00',
-      destination: 'San Francisco, USA',
-      hour: '12:00 UTC-9',
-      ht: 'SF',
-      video: 'MX',
-    },
+    }
   ];
 
   const getTwitterIntent = (sDestination) => {
