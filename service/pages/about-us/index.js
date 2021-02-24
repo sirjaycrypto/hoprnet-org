@@ -21,6 +21,7 @@ const dataInfo = [
   'assets/partners/06_dai_logo.svg',
   'assets/partners/07_health_tech_cluster.svg',
   'assets/partners/08_swiss_healthcare_startups.svg',
+  'assets/partners/BLOCKARK-LOGO2.png',
 ];
 
 const dataVALUES = [
@@ -67,7 +68,11 @@ export default function Index() {
       <Layout>
         <HeroInternal>
           <div className="about-us">
-            <h1 data-aos="fade-down" data-aos-delay="150" className="hero-title">
+            <h1
+              data-aos="fade-down"
+              data-aos-delay="150"
+              className="hero-title"
+            >
               {t('about:hero.title')}
             </h1>
             <div>

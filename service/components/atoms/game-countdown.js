@@ -7,12 +7,14 @@ const intialState = {
   seconds: '00',
 };
 
-export const  GameCountdown = ({
+export const GameCountdown = ({
   className,
   endDate,
+  onFinish,
 }) => {
   const [oEndDate, setEndDate] = useState(null);
   const [oTimeLeft, setTimeLeft] = useState(intialState);
+  const [finish, setFinish] = useState(false);
 
   useEffect(() => {
     if (endDate) {
@@ -21,9 +23,14 @@ export const  GameCountdown = ({
   }, [endDate]);
 
   useEffect(() => {
-    const oTimer = setTimeout(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
+    let oTimer;
+    if (!finish) {
+      oTimer = setTimeout(() => {
+        setTimeLeft(calculateTimeLeft());
+      }, 1000);
+    } else {
+      clearTimeout(oTimer);
+    }
 
     return () =>
       clearTimeout(oTimer);
@@ -33,6 +40,10 @@ export const  GameCountdown = ({
     const nToDate = oEndDate ? oEndDate.getTime() : new Date().getTime();
     const now = new Date().getTime();
     const difference = nToDate - now;
+    if (difference <= 0) {
+      onFinish();
+      setFinish(!finish);
+    }
     let timeLeft = {
       ...intialState,
     };
@@ -45,7 +56,7 @@ export const  GameCountdown = ({
     }
 
     return timeLeft;
-  }
+  };
 
   return (
     <p className={className}>
@@ -59,5 +70,6 @@ export const  GameCountdown = ({
 GameCountdown.propTypes = {
   className: PropTypes.string,
   endDate: PropTypes.string,
+  onFinish: PropTypes.func,
 };
 

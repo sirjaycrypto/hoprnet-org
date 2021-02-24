@@ -1,62 +1,137 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { GameItem, SectionContainer } from '..';
 
-import { GameCountdown, SectionContainer } from '..';
+export const WinSchedules = () => {
+  const [accordionVisible, setVisible] = useState(null);
+  const [video, setVideo] = useState();
+  const [answer, setAnswer] = useState('');
 
-export const WinSchedules = ({
+  useEffect(() => {
+    fetchVideo();
+  }, []);
 
-}) => {
+  useEffect(() => {
+    setAnswer('');
+  }, [accordionVisible]);
+
+  const setItemVisible = index => {
+    if (index !== accordionVisible) {
+      setVisible(index);
+    }
+  };
+
+  const fetchVideo = async () => {
+    const result = await fetch(
+      'https://api.hoprnet.org/api/fetchVideo',
+      {
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+      },
+    );
+    if (result) {
+      const oJson = await result.json();
+      setVisible(oJson?.city);
+      setVideo(`https://player.vimeo.com/video/${oJson.url?.split('/').reverse()[0]}`);
+    }
+  };
+
+  const aData = [
+    {
+      date: 'Feb 24, 2021 16:00:00 UTC+09:00',
+      destination: 'Tokyo, JP',
+      hour: '16:00 UTC+9',
+      ht: 'Tokyo',
+      video: 'TOKYO',
+    },
+    {
+      date: 'Feb 24, 2021 17:00:00 UTC+09:00',
+      destination: 'Seoul, KOR',
+      hour: '17:00 UTC+9',
+      ht: 'Seoul',
+      video: 'SEOUL',
+    },
+    {
+      date: 'Feb 24, 2021 17:00:00 UTC+08:00',
+      destination: 'Shangai, CN',
+      hour: '17:00 UTC+8',
+      ht: 'Shangai',
+      video: 'SHANGAI',
+    },
+    {
+      date: 'Feb 24, 2021 17:00:00 UTC+07:00',
+      destination: 'Hanoi, VN',
+      hour: '17:00 UTC+7',
+      ht: 'Hanoi',
+      video: 'HANOI',
+    },
+    {
+      date: 'Feb 24, 2021 14:00:00 UTC+03:00',
+      destination: 'Moscow, RU',
+      hour: '14:00 UTC+3',
+      ht: 'Moscow',
+      video: 'MOSCOW',
+    },
+    {
+      date: 'Feb 24, 2021 15:00:00 UTC+03:00',
+      destination: 'Istanbul, TR',
+      hour: '15:00 UTC+3',
+      ht: 'Istanbul',
+      video: 'ISTANBUL',
+    },
+    {
+      date: 'Feb 24, 2021 14:00:00 UTC+01:00',
+      destination: 'Zurich, CH',
+      hour: '14:00 UTC+1',
+      ht: 'Zurich',
+      video: 'ZURICH',
+    },
+    {
+      date: 'Feb 24, 2021 15:00:00 UTC+01:00',
+      destination: 'Madrid, ES',
+      hour: '15:00 UTC+1',
+      ht: 'Madrid',
+      video: 'MADRID',
+    },
+    {
+      date: 'Feb 24, 2021 12:00:00 UTC-03:00',
+      destination: 'Sao Paulo, BR',
+      hour: '12:00 UTC-3',
+      ht: 'SaoPaolo',
+      video: 'SAO_PAULO',
+    },
+    {
+      date: 'Feb 24, 2021 12:00:00 UTC-09:00',
+      destination: 'San Francisco, USA',
+      hour: '12:00 UTC-9',
+      ht: 'SF',
+      video: 'SAN_FRANCISCO',
+    }
+  ];
+
+  const getTwitterIntent = (sDestination) => {
+    let sUrl = `https://twitter.com/intent/tweet?text=@hopnet It\'s $HOPR launch day! My answer is ${answer}&hashtags=${sDestination},HOPRLaunch`;
+    return encodeURI(sUrl);
+  };
+
   return (
     <SectionContainer extraClass="banners hours">
-      <div className="event-item">
-        <p>Tokyo, JP</p>
-        <p>16:00 GMT+9</p>
-        <GameCountdown endDate="Feb 24, 2021 16:00:00 GMT+09:00" />
-      </div>
-      <div className="event-item">
-        <p>Seoul, KOR</p>
-        <p>17:00 GMT+9</p>
-        <GameCountdown endDate="Feb 24, 2021 17:00:00 GMT+09:00" />
-      </div>
-      <div className="event-item">
-        <p>Shangai, CN</p>
-        <p>17:00 GMT+8</p>
-        <GameCountdown endDate="Feb 24, 2021 17:00:00 GMT+08:00" />
-      </div>
-      <div className="event-item">
-        <p>Hanoi, VN</p>
-        <p>17:00 GMT+7</p>
-        <GameCountdown endDate="Feb 24, 2021 17:00:00 GMT+07:00" />
-      </div>
-      <div className="event-item">
-        <p>Moscow, RU</p>
-        <p>14:00 GMT+3</p>
-        <GameCountdown endDate="Feb 24, 2021 14:00:00 GMT+03:00" />
-      </div>
-      <div className="event-item">
-        <p>Istanbul, TR</p>
-        <p>15:00 GMT+3</p>
-        <GameCountdown endDate="Feb 24, 2021 15:00:00 GMT+03:00" />
-      </div>
-      <div className="event-item">
-        <p>Zurich, CH</p>
-        <p>14:00 GMT+1</p>
-        <GameCountdown endDate="Feb 24, 2021 14:00:00 GMT+01:00" />
-      </div>
-      <div className="event-item">
-        <p>Madrid, ES</p>
-        <p>15:00 GMT+1</p>
-        <GameCountdown endDate="Feb 24, 2021 15:00:00 GMT+01:00" />
-      </div>
-      <div className="event-item">
-        <p>Sao Paulo, BR</p>
-        <p>12:00 GMT-3</p>
-        <GameCountdown endDate="Feb 24, 2021 12:00:00 GMT-03:00" />
-      </div>
-      <div className="event-item">
-        <p>San Francisco, USA</p>
-        <p>12:00 GMT-9</p>
-        <GameCountdown endDate="Feb 24, 2021 12:00:00 GMT-09:00" />
-      </div>
+      {aData.map(oItem => (
+        <GameItem
+          answer={answer}
+          date={oItem.date}
+          destination={oItem.destination}
+          hour={oItem.hour}
+          key={oItem.video}
+          onClick={() => setItemVisible(oItem.video)}
+          onFetch={() => fetchVideo()}
+          setAnswer={setAnswer}
+          to={getTwitterIntent(oItem.ht)}
+          video={video}
+          visible={accordionVisible === oItem.video}
+        />
+      ))}
     </SectionContainer>
   );
 };

@@ -117,7 +117,7 @@ const Hero = forwardRef(
                   <Button
                     className="btn-banner"
                     content={t('home:banner.button')}
-                    to="/token#bildText"
+                    to="/token#blindText"
                   />
                 )}
               </>
