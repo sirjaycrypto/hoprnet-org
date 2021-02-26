@@ -18,20 +18,9 @@ export const WinSchedules = () => {
   };
 
   const fetchVideo = async () => {
-    const result = await fetch(
-      'https://api.hoprnet.org/api/fetchVideo',
-      {
-        method: 'POST',
-        headers: {
-          'Content-type': 'application/json; charset=UTF-8',
-        },
-      },
-    );
-    if (result) {
-      const oJson = await result.json();
-      setVisible(oJson?.city);
-      setVideo(`https://player.vimeo.com/video/${oJson.url?.split('/').reverse()[0]}`);
-    }
+    const oJson = {"url":"https://vimeo.com/515848789","city":"SAN_FRANCISCO","now":1614351680012}
+    setVisible(oJson?.city);
+    setVideo(`https://player.vimeo.com/video/${oJson.url?.split('/').reverse()[0]}`);
   };
 
   const aData = [
