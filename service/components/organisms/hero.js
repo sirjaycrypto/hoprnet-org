@@ -89,12 +89,12 @@ const Hero = forwardRef(
           <div className="container">
             <div className="text-wrapper">
               <>
-                <h4>
+                {/* <h4>
                   {modePreSales
                     ? t('home:hero.subtitlePre')
                     : t('home:hero.subtitle')}
-                </h4>
-                <Countdown />
+                </h4> */}
+                <Countdown title="Join the LBP!"/>
                 {modePreSales && (
                   <div className="helperSpaceBtn">
                     {showMsg ? (

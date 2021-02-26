@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export const Countdown = () => {
+export const Countdown = ({title}) => {
   const calculateTimeLeft = () => {
     const countDownDate = new Date('Feb 24, 2021 14:00:00 GMT+01:00').getTime();
     const now = new Date().getTime();
@@ -18,7 +18,7 @@ export const Countdown = () => {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const timer = !title && setTimeout(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
     // Clear timeout if the component is unmounted
@@ -29,21 +29,29 @@ export const Countdown = () => {
 
   return (
     <div id="clockDiv">
-      <div>
-        <span className="days">00</span>
-      </div>
-      <span>:</span>
-      <div>
-        <span className="hours">00</span>
-      </div>
-      <span>:</span>
-      <div>
-        <span className="minutes">00</span>
-      </div>
-      <span>:</span>
-      <div>
-        <span className="seconds">00</span>
-      </div>
+      {
+        title ?
+          <>
+            <span>{title}</span>
+          </> :
+          <>
+            <div>
+              <span className="days">00</span>
+            </div>
+            <span>:</span>
+            <div>
+              <span className="hours">00</span>
+            </div>
+            <span>:</span>
+            <div>
+              <span className="minutes">00</span>
+            </div>
+            <span>:</span>
+            <div>
+              <span className="seconds">00</span>
+            </div>
+          </>
+      }
     </div>
   );
 };
