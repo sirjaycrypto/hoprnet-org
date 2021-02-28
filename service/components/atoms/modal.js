@@ -26,7 +26,7 @@ const Modal = forwardRef(({ showModal, setShowModal }, ref) => {
                 target="_blank"
                 content={t('home:modal.btnIAgree')}
                 onClick={() => setShowModal(false)}
-                to="https://balancer.exchange/#/swap/0x6b175474e89094c44da98b954eedeac495271d0f/0xf5581dfefd8fb0e4aec526be659cfab1f8c781da"
+                to="https://app.uniswap.org/#/swap"
               />
             </div>
           </div>
