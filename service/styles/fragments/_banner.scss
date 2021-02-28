@@ -12,6 +12,7 @@
   min-width: 200px;
   padding: 0.25em 1.2em;
   text-align: center;
+  text-decoration: none;
   transition: all 350ms ease-in-out;
 
   @include responsive(tablet) {
