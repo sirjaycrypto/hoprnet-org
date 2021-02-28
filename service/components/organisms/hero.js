@@ -94,7 +94,7 @@ const Hero = forwardRef(
                     ? t('home:hero.subtitlePre')
                     : t('home:hero.subtitle')}
                 </h4> */}
-                <Countdown title="HOPR available in Uniswap"/>
+                <Countdown title="Now available on Uniswap!"/>
                 {modePreSales && (
                   <div className="helperSpaceBtn">
                     {showMsg ? (
