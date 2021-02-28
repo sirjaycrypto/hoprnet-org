@@ -115,9 +115,10 @@ const Hero = forwardRef(
                 )}
                 {launchMode && (
                   <Button
+                    type="button"
                     className="btn-banner"
                     content={t('home:banner.button')}
-                    to="/token#blindText"
+                    onClick={() => setShowModal(true)}
                   />
                 )}
               </>
