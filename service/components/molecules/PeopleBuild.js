@@ -60,12 +60,6 @@ const data = [
   },
   {
     link: '#',
-    img: '/assets/images/team/menglu_wang.png',
-    name: 'Menglu Wang ',
-    label: 'Chinese Community Manager',
-  },
-  {
-    link: '#',
     img: '/assets/images/team/the_wandering_editor.png',
     name: 'The Wandering Editor',
     label: 'Content Creator',
@@ -81,6 +75,12 @@ const data = [
     img: '/assets/images/team/qianchen_yu.png',
     name: 'Qianchen "Q" Yu',
     label: 'Decentralized Technology Architect',
+  },
+  {
+    link: '#',
+    img: '/assets/images/team/menglu_wang.png',
+    name: 'Amira Bouguera',
+    label: 'Cryptographer and protocol engineer',
   },
 ];
 
