@@ -78,7 +78,7 @@ const data = [
   },
   {
     link: '#',
-    img: '/assets/images/team/menglu_wang.png',
+    img: '/assets/images/team/amira_bouguera.png',
     name: 'Amira Bouguera',
     label: 'Cryptographer and protocol engineer',
   },
