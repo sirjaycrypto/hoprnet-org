@@ -110,7 +110,7 @@ export default function Index() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {t('common:contributed')}
+                  pull-requests
                 </a>
                 .
               </li>
