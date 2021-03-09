@@ -18,8 +18,7 @@ export default function Welcome({ welcomeAnimate }) {
           <h1> Changing Data Privacy For Good</h1>
           <div className="help-box">
             <p>
-              The HOPR protocol ensures everyone has control of their privacy,
-              data, and identity.
+              The HOPR protocol ensures everyone has control of their privacy and data.
             </p>
           </div>
         </div>
