@@ -43,29 +43,13 @@ export const Index = () => {
         <SectionContainer invert>
           <div className="wrapper-sales-for">
             <div className="card-view the-balancer">
-              <h3 style={{ fontWeight: 'bold' }}>Balancer Launch</h3>
+              <h3 style={{ fontWeight: 'bold' }}>Now on Uniswap</h3>
               <div className="containerImg">
                 <img src="/assets/images/HPR_Favicon.svg" alt="HOPR Logo" />
                 <p>$ {price}</p>
                 <p className="label-remember">per HOPR</p>
               </div>
               <Button className="btn-ticket" content="Read More" to="/token" />
-            </div>
-
-            <div className="the-char-balancer">
-              <p>
-                Be the first to own HOPR tokens! Swap HOPR tokens for DAI in the
-                time-limited HOPR Genesis DAO Balancer Pool. The pool will
-                launch at 14:00 CET on Feb 24th. For more details on how the
-                pool works, click&nbsp;
-                <a
-                  alt="HOPR Medium"
-                  href="https://medium.com/hoprnet/the-hopr-token-launch-5afed592b741"
-                >
-                  here
-                </a>
-                .
-              </p>
             </div>
           </div>
         </SectionContainer>
