@@ -89,6 +89,7 @@ export const Index = () => {
               unlock throughout the day. See below the destination panel for
               full instructions.
             </p>
+            <p>The contest is now closed. Thanks to everyone who participated. You can still watch the videos for each destination below.</p>
           </div>
         </SectionContainer>
         <WinSchedules />
