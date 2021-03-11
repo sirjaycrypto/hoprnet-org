@@ -82,7 +82,7 @@ export const Index = () => {
               release and the mountain itself.
             </p>
             <p>
-              HOPR Jungfrau will launch at 14:00 CET on Wednesday 24th February.
+              HOPR Jungfrau is now live. Read more <a alt="HOPR Medium" href="https://medium.com/hoprnet/jungfrau-release-all-you-need-to-know-8740c8cb86c7">here</a>.
             </p>
           </div>
         </SectionContainer>
