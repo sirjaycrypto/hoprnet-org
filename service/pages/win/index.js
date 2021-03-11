@@ -34,6 +34,9 @@ export const Index = () => {
                 Hop around the world with HOPR, and win a share of 100,000 HOPR
                 tokens and a trip to Switzerland!
               </p>
+              <p>
+                The contest is now closed. The winners were announced <a alt="Contest Winners" href="https://medium.com/hoprnet/hopround-the-world-results-5ff0b8fc9224">here</a>.
+              </p>
             </div>
             <div className="right">
               <img src="assets/images/hopr_seal.png" alt="HOPR" width="351px" />
