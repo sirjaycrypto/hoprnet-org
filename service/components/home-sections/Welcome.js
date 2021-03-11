@@ -28,8 +28,7 @@ export default function Welcome({ welcomeAnimate }) {
         <Link href="/token">
           <a className="right-container center-on-the-box welcome welcome--left">
             <div className="text-area">
-              <h2>HOPR TOKEN LAUNCH</h2>
-              <Countdown />
+              <h2>HOPR TOKEN</h2>
             </div>
           </a>
         </Link>
