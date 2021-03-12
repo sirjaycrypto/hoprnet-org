@@ -12,7 +12,7 @@ export default function Header() {
       <meta name="theme-color" content="#ffffa0" />
       <meta
         name="description"
-        content="The HOPR protocol ensures everyone has control of their privacy, data, and identity."
+        content="The HOPR protocol ensures everyone has control of their privacy and data."
       />
       <meta charSet="utf-8" />
       <meta name="keywords" content="crypto, data privacy, network-level" />
