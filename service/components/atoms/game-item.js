@@ -30,18 +30,6 @@ export const GameItem = ({
             src={`${video}?autoplay=0&loop=1&title=0&byline=0&portrait=0&muted=0&responsive=1&controls=1&app_id=122963`}
             width="100%"
           ></iframe>
-          <div className="answer">
-            <input
-              onChange={({ target }) => setAnswer(target.value)}
-              type="text"
-              value={answer}
-            />
-            <Button
-              content="Submit"
-              target="_blank"
-              to={to}
-            />
-          </div>
         </div>
       )}
     </>

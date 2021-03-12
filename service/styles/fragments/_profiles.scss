@@ -52,6 +52,9 @@
     flex-wrap: wrap;
     a {
       text-decoration: none;
+      @include responsive(pc) {
+        width: 33.33333%;
+      }
     }
     .item-profile {
       padding: 32px;
