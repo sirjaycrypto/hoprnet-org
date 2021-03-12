@@ -1,0 +1,44 @@
+.section-notfound {
+  background: $hopr_yellow;
+  display: flex;
+  min-height: 80vh;
+  @include responsive(tablet) {
+    flex-direction: column;
+  }
+
+  .container {
+    max-width: 1128px;
+    padding: 0 24px;
+
+    .section-inner {
+      display: flex;
+      padding: 80px 0;
+      @include responsive(phone) {
+        flex-direction: column;
+      }
+
+      .textContainer {
+        flex: 1;
+        font-size: 20px;
+        font-weight: 300;
+      }
+    
+      .circleContainer {
+        flex: 0.5;
+        @include responsive(tablet) {
+          margin-top: 24px;
+        }
+        @include responsive(phone) {
+          margin-top: 24px;
+        }
+    
+        .circle {
+          background-color: white;
+          width: 200px;
+          height: 200px;
+          border-radius: 100px;
+        }
+      }
+    }
+  }
+}
