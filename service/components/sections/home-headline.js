@@ -28,7 +28,7 @@ const HomeHeadline = forwardRef((
         <div className="container">
           <div className="wrapper-sales-for">
             <div className="card-view the-balancer">
-              <h3 style={{ fontWeight: 'bold' }}>{t('home:headline.titleTicket')}</h3>
+              <h3 style={{ fontWeight: 'bold' }}>Now on Uniswap</h3>
               <div className="containerImg">
                 <img
                   src="/assets/images/HPR_Favicon.svg"
@@ -46,20 +46,6 @@ const HomeHeadline = forwardRef((
               </div>
               <div className="btn-ticket" onClick={() => setShowModal(true)}>
                 {modePreSales || launchMode && <span>{t('home:banner.button')}</span>}
-              </div>
-            </div>
-
-            <div className="card-view the-char-balancer">
-              <div className="containerImg">
-                <img
-                  src="/assets/images/hopr_Balancer.png"
-                  alt={t('home:headline.titleTicket')}
-                />
-                <div>
-                  <p>
-                    {t('home:headline.caption')}
-                  </p>
-                </div>
               </div>
             </div>
           </div>
