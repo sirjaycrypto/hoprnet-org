@@ -34,6 +34,9 @@ export const Index = () => {
                 Hop around the world with HOPR, and win a share of 100,000 HOPR
                 tokens and a trip to Switzerland!
               </p>
+              <p>
+                The contest is now closed. The winners were announced <a alt="Contest Winners" href="https://medium.com/hoprnet/hopround-the-world-results-5ff0b8fc9224">here</a>.
+              </p>
             </div>
             <div className="right">
               <img src="assets/images/hopr_seal.png" alt="HOPR" width="351px" />
@@ -43,29 +46,13 @@ export const Index = () => {
         <SectionContainer invert>
           <div className="wrapper-sales-for">
             <div className="card-view the-balancer">
-              <h3 style={{ fontWeight: 'bold' }}>Balancer Launch</h3>
+              <h3 style={{ fontWeight: 'bold' }}>Now on Uniswap</h3>
               <div className="containerImg">
                 <img src="/assets/images/HPR_Favicon.svg" alt="HOPR Logo" />
                 <p>$ {price}</p>
                 <p className="label-remember">per HOPR</p>
               </div>
               <Button className="btn-ticket" content="Read More" to="/token" />
-            </div>
-
-            <div className="the-char-balancer">
-              <p>
-                Be the first to own HOPR tokens! Swap HOPR tokens for DAI in the
-                time-limited HOPR Genesis DAO Balancer Pool. The pool will
-                launch at 14:00 CET on Feb 24th. For more details on how the
-                pool works, click&nbsp;
-                <a
-                  alt="HOPR Medium"
-                  href="https://medium.com/hoprnet/the-hopr-token-launch-5afed592b741"
-                >
-                  here
-                </a>
-                .
-              </p>
             </div>
           </div>
         </SectionContainer>
@@ -82,7 +69,7 @@ export const Index = () => {
               release and the mountain itself.
             </p>
             <p>
-              HOPR Jungfrau will launch at 14:00 CET on Wednesday 24th February.
+              HOPR Jungfrau is now live. Read more <a alt="HOPR Medium" href="https://medium.com/hoprnet/jungfrau-release-all-you-need-to-know-8740c8cb86c7">here</a>.
             </p>
           </div>
         </SectionContainer>
@@ -102,6 +89,7 @@ export const Index = () => {
               unlock throughout the day. See below the destination panel for
               full instructions.
             </p>
+            <p>The contest is now closed. Thanks to everyone who participated. You can still watch the videos for each destination below.</p>
           </div>
         </SectionContainer>
         <WinSchedules />
