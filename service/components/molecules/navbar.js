@@ -16,6 +16,8 @@ export default function Navbar({ visibleNow }) {
     return router.pathname === '/token';
   };
 
+  const isHome = () => router.pathname === '/';
+
   const onScrollNavBar = function () {
     if (window.pageYOffset === 0) {
       setYouDown(false);
@@ -43,7 +45,7 @@ export default function Navbar({ visibleNow }) {
         <motion.nav
           variants={fadeInDown}
           id="menu"
-          className={youDown ? 'add-scroll-menu' : 'nav-style-no-home'}
+          className={youDown ? 'add-scroll-menu' : isHome() ? '' : 'nav-style-no-home'}
           transition={{ delay: 0.8 }}
         >
           <div className={'container-sm ' + (activaMenu ? 'add-shadow' : '')}>
