@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { GameItem, SectionContainer } from '..';
 
 export const WinSchedules = () => {
-  const [accordionVisible, setVisible] = useState(0);
+  const [accordionVisible, setVisible] = useState('');
   const [video, setVideo] = useState();
   const [answer, setAnswer] = useState('');
   const [intervalTime, setIntervalTime] = useState();
@@ -107,11 +107,12 @@ export const WinSchedules = () => {
     const nextCity = getCurrentCityFromTimestamp(new Date().getTime())
     const msDiff = new Date(nextCity.date).getTime() - (new Date().getTime());
     return msDiff;
-  }
+  };
 
   useEffect(() => {
     const loadVideo = async () => {
       //await fetchVideo();
+      setVisible(aData[0].video);
       const diff = getIntervalTime()
       setTimeout(() => {
         setIntervalTime(diff)
