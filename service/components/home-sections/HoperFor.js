@@ -17,7 +17,7 @@ export default function HoperFor() {
       delayTime: '150',
     },
     {
-      link: 'https://docs.hoprnet.org/home/',
+      link: 'https://github.com/hoprnet/hoprnet',
       img: '/assets/icons/with-yellow-ball/programming-team-chat-3.png',
       label: 'common:techies',
       delayTime: '200',
@@ -30,7 +30,7 @@ export default function HoperFor() {
     },
 
     {
-      link: 'https://docs.hoprnet.org/home/',
+      link: 'http://docs.hoprnet.org/en/latest/src/install-hoprd/using-avado.html?highlight=node#installing-your-avado-node',
       img: '/assets/icons/with-yellow-ball/outdoors-mining.png',
       label: 'common:miners&Stakers',
       delayTime: '300',

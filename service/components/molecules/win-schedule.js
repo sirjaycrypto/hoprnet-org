@@ -2,14 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { GameItem, SectionContainer } from '..';
 
 export const WinSchedules = () => {
-  const [accordionVisible, setVisible] = useState(null);
+  const [accordionVisible, setVisible] = useState(0);
   const [video, setVideo] = useState();
   const [answer, setAnswer] = useState('');
   const [intervalTime, setIntervalTime] = useState();
-
-  useEffect(() => {
-    setAnswer('');
-  }, [accordionVisible]);
 
   const setItemVisible = index => {
     if (index !== accordionVisible) {
@@ -29,70 +25,70 @@ export const WinSchedules = () => {
       destination: 'Tokyo, JP',
       hour: '16:00 UTC+9',
       ht: 'Tokyo',
-      video: 'TOKYO',
+      video: 'https://player.vimeo.com/video/515841426',
     },
     {
       date: 'Feb 24, 2021 17:00:00 UTC+09:00',
       destination: 'Seoul, KOR',
       hour: '17:00 UTC+9',
       ht: 'Seoul',
-      video: 'SEOUL',
+      video: 'https://player.vimeo.com/video/515842327',
     },
     {
       date: 'Feb 24, 2021 17:00:00 UTC+08:00',
       destination: 'Shanghai, CN',
       hour: '17:00 UTC+8',
       ht: 'Shanghai',
-      video: 'SHANGAI',
+      video: 'https://player.vimeo.com/video/515843265',
     },
     {
       date: 'Feb 24, 2021 17:00:00 UTC+07:00',
       destination: 'Hanoi, VN',
       hour: '17:00 UTC+7',
       ht: 'Hanoi',
-      video: 'HANOI',
+      video: 'https://player.vimeo.com/video/515843905',
     },
     {
       date: 'Feb 24, 2021 14:00:00 UTC+03:00',
       destination: 'Moscow, RU',
       hour: '14:00 UTC+3',
       ht: 'Moscow',
-      video: 'MOSCOW',
+      video: 'https://player.vimeo.com/video/515844733',
     },
     {
       date: 'Feb 24, 2021 15:00:00 UTC+03:00',
       destination: 'Istanbul, TR',
       hour: '15:00 UTC+3',
       ht: 'Istanbul',
-      video: 'ISTANBUL',
+      video: 'https://player.vimeo.com/video/515845437',
     },
     {
       date: 'Feb 24, 2021 14:00:00 UTC+01:00',
       destination: 'Zurich, CH',
       hour: '14:00 UTC+1',
       ht: 'Zurich',
-      video: 'ZURICH',
+      video: 'https://player.vimeo.com/video/515846141',
     },
     {
       date: 'Feb 24, 2021 15:00:00 UTC+01:00',
       destination: 'Madrid, ES',
       hour: '15:00 UTC+1',
       ht: 'Madrid',
-      video: 'MADRID',
+      video: 'https://player.vimeo.com/video/515846998',
     },
     {
       date: 'Feb 24, 2021 12:00:00 UTC-03:00',
       destination: 'Sao Paulo, BR',
       hour: '12:00 UTC-3',
       ht: 'SaoPaolo',
-      video: 'SAO_PAULO',
+      video: 'https://player.vimeo.com/video/515847802',
     },
     {
       date: 'Feb 24, 2021 8:00:00 UTC-09:00',
       destination: 'San Francisco, USA',
       hour: '8:00 UTC-9',
       ht: 'SF',
-      video: 'SAN_FRANCISCO',
+      video: 'https://player.vimeo.com/video/515848789',
     }
   ];
 
@@ -115,7 +111,7 @@ export const WinSchedules = () => {
 
   useEffect(() => {
     const loadVideo = async () => {
-      await fetchVideo();
+      //await fetchVideo();
       const diff = getIntervalTime()
       setTimeout(() => {
         setIntervalTime(diff)
@@ -142,7 +138,7 @@ export const WinSchedules = () => {
           onFetch={() => fetchVideo()}
           setAnswer={setAnswer}
           to={getTwitterIntent(oItem.ht)}
-          video={video}
+          video={oItem.video}
           visible={accordionVisible === oItem.video}
         />
       ))}

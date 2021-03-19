@@ -54,12 +54,6 @@ const data = [
   },
   {
     link: '#',
-    img: '/assets/images/team/william_richter.png',
-    name: 'William Richter',
-    label: 'Communication Coordinator',
-  },
-  {
-    link: '#',
     img: '/assets/images/team/the_wandering_editor.png',
     name: 'The Wandering Editor',
     label: 'Content Creator',
