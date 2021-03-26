@@ -13,7 +13,7 @@ export default function Index() {
   return (
     <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
       <Layout>
-        <HeroInternal>
+        <HeroInternal noNeedFull>
           <motion.div variants={stagger}>
             <motion.h1 animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
               {t('node:hero.title')}
