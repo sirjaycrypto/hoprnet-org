@@ -201,14 +201,12 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
           gridLines: {
             display: false,
           },
-
           ticks: {
             fontFamily: 'Source Code Pro',
             fontSize: 14,
             fontColor: '#414141',
             maxRotation: 100,
             minRotation: 90,
-            maxTicksLimit: 16,
           },
         },
       ],
