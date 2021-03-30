@@ -19,6 +19,7 @@ export default function Layout({ visibleNow, children }) {
 
   return (
     <AnimatePresence>
+      <div className="init-mask" />
       <ScrollReveal
         ref={scrollReveal}
         children={() => (
