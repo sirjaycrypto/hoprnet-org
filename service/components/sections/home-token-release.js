@@ -203,7 +203,6 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
           },
           ticks: {
             callback: (nValue, nIndex) => {
-              console.log(dataSupply.length, dataSupply);
               if (nValue % 2 !== 0 || nIndex === dataSupply.length - 1) {
                 return `Month ${nValue}`;
               }
