@@ -1,6 +1,6 @@
 [
   {
-    "Date": "Month 1",
+    "Date": 1,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "0",
     "Bounties": "13,333,333",
@@ -9,7 +9,7 @@
     "Treasury": "31,875,000"
   },
   {
-    "Date": "Month 2",
+    "Date": 2,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "0",
     "Bounties": "13,333,333",
@@ -18,7 +18,7 @@
     "Treasury": "31,875,000"
   },
   {
-    "Date": "Month 3",
+    "Date": 3,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "0",
     "Bounties": "13,333,333",
@@ -27,7 +27,7 @@
     "Treasury": "31,875,000"
   },
   {
-    "Date": "Month 4",
+    "Date": 4,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "10,417,000",
     "Bounties": "16,666,666",
@@ -36,7 +36,7 @@
     "Treasury": "31,875,000"
   },
   {
-    "Date": "Month 5",
+    "Date": 5,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "20,834,000",
     "Bounties": "16,666,666",
@@ -45,7 +45,7 @@
     "Treasury": "31,875,000"
   },
   {
-    "Date": "Month 6",
+    "Date": 6,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "31,251,000",
     "Bounties": "16,666,666",
@@ -54,7 +54,7 @@
     "Treasury": "31,875,000"
   },
   {
-    "Date": "Month 7",
+    "Date": 7,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "41,668,000",
     "Bounties": "19,999,999",
@@ -63,7 +63,7 @@
     "Treasury": "31,875,000"
   },
   {
-    "Date": "Month 8",
+    "Date": 8,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "52,085,000",
     "Bounties": "19,999,999",
@@ -72,7 +72,7 @@
     "Treasury": "31,875,000"
   },
   {
-    "Date": "Month 9",
+    "Date": 9,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "62,502,000",
     "Bounties": "19,999,999",
@@ -81,7 +81,7 @@
     "Treasury": "31,875,000"
   },
   {
-    "Date": "Month 10",
+    "Date": 10,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "72,919,000",
     "Bounties": "23,333,332",
@@ -90,7 +90,7 @@
     "Treasury": "31,875,000"
   },
   {
-    "Date": "Month 11",
+    "Date": 11,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "83,336,000",
     "Bounties": "23,333,332",
@@ -99,7 +99,7 @@
     "Treasury": "31,875,000"
   },
   {
-    "Date": "Month 12",
+    "Date": 12,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "93,753,000",
     "Bounties": "23,333,332",
@@ -108,7 +108,7 @@
     "Treasury": "31,875,000"
   },
   {
-    "Date": "Month 13",
+    "Date": 13,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "104,170,000",
     "Bounties": "26,666,665",
@@ -117,7 +117,7 @@
     "Treasury": "63,750,000"
   },
   {
-    "Date": "Month 14",
+    "Date": 14,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "114,587,000",
     "Bounties": "26,666,665",
@@ -126,7 +126,7 @@
     "Treasury": "63,750,000"
   },
   {
-    "Date": "Month 15",
+    "Date": 15,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "125,004,000",
     "Bounties": "26,666,665",
@@ -135,7 +135,7 @@
     "Treasury": "63,750,000"
   },
   {
-    "Date": "Month 16",
+    "Date": 16,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "135,421,000",
     "Bounties": "29,999,998",
@@ -144,7 +144,7 @@
     "Treasury": "63,750,000"
   },
   {
-    "Date": "Month 17",
+    "Date": 17,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "145,838,000",
     "Bounties": "29,999,998",
@@ -153,7 +153,7 @@
     "Treasury": "63,750,000"
   },
   {
-    "Date": "Month 18",
+    "Date": 18,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "156,255,000",
     "Bounties": "29,999,998",
@@ -162,7 +162,7 @@
     "Treasury": "63,750,000"
   },
   {
-    "Date": "Month 19",
+    "Date": 19,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "166,672,000",
     "Bounties": "33,333,332",
@@ -171,7 +171,7 @@
     "Treasury": "95,625,000"
   },
   {
-    "Date": "Month 20",
+    "Date": 20,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "177,088,000",
     "Bounties": "33,333,332",
@@ -180,7 +180,7 @@
     "Treasury": "95,625,000"
   },
   {
-    "Date": "Month 21",
+    "Date": 21,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "187,504,000",
     "Bounties": "36,666,665",
@@ -189,7 +189,7 @@
     "Treasury": "95,625,000"
   },
   {
-    "Date": "Month 22",
+    "Date": 22,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "197,920,000",
     "Bounties": "36,666,665",
@@ -198,7 +198,7 @@
     "Treasury": "95,625,000"
   },
   {
-    "Date": "Month 23",
+    "Date": 23,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "208,336,000",
     "Bounties": "36,666,665",
@@ -207,7 +207,7 @@
     "Treasury": "95,625,000"
   },
   {
-    "Date": "Month 24",
+    "Date": 24,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "218,752,000",
     "Bounties": "36,666,665",
@@ -216,7 +216,7 @@
     "Treasury": "95,625,000"
   },
   {
-    "Date": "Month 25",
+    "Date": 25,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "229,168,000",
     "Bounties": "39,999,999",
@@ -225,7 +225,7 @@
     "Treasury": "127,500,000"
   },
   {
-    "Date": "Month 26",
+    "Date": 26,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "239,584,000",
     "Bounties": "39,999,999",
@@ -234,7 +234,7 @@
     "Treasury": "127,500,000"
   },
   {
-    "Date": "Month 27",
+    "Date": 27,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "39,999,999",
@@ -243,7 +243,7 @@
     "Treasury": "127,500,000"
   },
   {
-    "Date": "Month 28",
+    "Date": 28,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "43,333,332",
@@ -252,7 +252,7 @@
     "Treasury": "127,500,000"
   },
   {
-    "Date": "Month 29",
+    "Date": 29,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "43,333,332",
@@ -261,7 +261,7 @@
     "Treasury": "127,500,000"
   },
   {
-    "Date": "Month 30",
+    "Date": 30,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "43,333,332",
@@ -270,7 +270,7 @@
     "Treasury": "127,500,000"
   },
   {
-    "Date": "Month 31",
+    "Date": 31,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "46,666,666",
@@ -279,7 +279,7 @@
     "Treasury": "159,375,000"
   },
   {
-    "Date": "Month 32",
+    "Date": 32,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "46,666,666",
@@ -288,7 +288,7 @@
     "Treasury": "159,375,000"
   },
   {
-    "Date": "Month 33",
+    "Date": 33,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "46,666,666",
@@ -297,7 +297,7 @@
     "Treasury": "159,375,000"
   },
   {
-    "Date": "Month 34",
+    "Date": 34,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "49,999,999",
@@ -306,7 +306,7 @@
     "Treasury": "159,375,000"
   },
   {
-    "Date": "Month 35",
+    "Date": 35,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "49,999,999",
@@ -315,7 +315,7 @@
     "Treasury": "159,375,000"
   },
   {
-    "Date": "Month 36",
+    "Date": 36,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "49,999,999",
@@ -324,7 +324,7 @@
     "Treasury": "159,375,000"
   },
   {
-    "Date": "Month 37",
+    "Date": 37,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "53,333,333",
@@ -333,7 +333,7 @@
     "Treasury": "191,250,000"
   },
   {
-    "Date": "Month 38",
+    "Date": 38,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "53,333,333",
@@ -342,7 +342,7 @@
     "Treasury": "191,250,000"
   },
   {
-    "Date": "Month 39",
+    "Date": 39,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "53,333,333",
@@ -351,7 +351,7 @@
     "Treasury": "191,250,000"
   },
   {
-    "Date": "Month 40",
+    "Date": 40,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "56,666,666",
@@ -360,7 +360,7 @@
     "Treasury": "191,250,000"
   },
   {
-    "Date": "Month 41",
+    "Date": 41,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "56,666,666",
@@ -369,7 +369,7 @@
     "Treasury": "191,250,000"
   },
   {
-    "Date": "Month 42",
+    "Date": 42,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "56,666,666",
@@ -378,7 +378,7 @@
     "Treasury": "191,250,000"
   },
   {
-    "Date": "Month 43",
+    "Date": 43,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "60,000,000",
@@ -387,7 +387,7 @@
     "Treasury": "223,125,000"
   },
   {
-    "Date": "Month 44",
+    "Date": 44,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "60,000,000",
@@ -396,7 +396,7 @@
     "Treasury": "223,125,000"
   },
   {
-    "Date": "Month 45",
+    "Date": 45,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "60,000,000",
@@ -405,7 +405,7 @@
     "Treasury": "223,125,000"
   },
   {
-    "Date": "Month 46",
+    "Date": 46,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "60,000,000",
@@ -414,7 +414,7 @@
     "Treasury": "223,125,000"
   },
   {
-    "Date": "Month 47",
+    "Date": 47,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "60,000,000",
@@ -423,7 +423,7 @@
     "Treasury": "223,125,000"
   },
   {
-    "Date": "Month 48",
+    "Date": 48,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "60,000,000",
@@ -432,7 +432,7 @@
     "Treasury": "223,125,000"
   },
   {
-    "Date": "Month 49",
+    "Date": 49,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "60,000,000",
@@ -441,7 +441,7 @@
     "Treasury": "255,000,000"
   },
   {
-    "Date": "Month 50",
+    "Date": 50,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "60,000,000",
@@ -450,7 +450,7 @@
     "Treasury": "255,000,000"
   },
   {
-    "Date": "Month 51",
+    "Date": 51,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "60,000,000",
@@ -459,7 +459,7 @@
     "Treasury": "255,000,000"
   },
   {
-    "Date": "Month 52",
+    "Date": 52,
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "60,000,000",

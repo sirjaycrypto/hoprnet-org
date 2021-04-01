@@ -27,7 +27,7 @@ export default function ItemsMenu() {
     },
     {
       path: 'http://saentis.hoprnet.org/',
-      name: 'Testnet',
+      name: 'Run Node',
     },
     {
       path: '/blog',

@@ -201,14 +201,19 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
           gridLines: {
             display: false,
           },
-
           ticks: {
+            callback: (nValue, nIndex) => {
+              if (nValue % 2 !== 0 || nIndex === dataSupply.length - 1) {
+                return `Month ${nValue}`;
+              }
+              
+              return '';
+            },
             fontFamily: 'Source Code Pro',
-            fontSize: 14,
+            fontSize: 13,
             fontColor: '#414141',
             maxRotation: 100,
             minRotation: 90,
-            maxTicksLimit: 16,
           },
         },
       ],
