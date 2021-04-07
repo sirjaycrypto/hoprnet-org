@@ -185,7 +185,7 @@ export default function Index() {
               <p>{t('tech:doc.paragraphB')}</p>
               <div className="btn-align">
                 <a
-                  href="https://docs.hoprnet.org/home/"
+                  href="https://docs.hoprnet.org/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="link-out"
