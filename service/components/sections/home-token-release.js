@@ -136,7 +136,9 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
     ],
   };
 
-  const dataDate = dataSupply.map((item) => item.Date);
+  const dataDate = dataSupply.map((item) => {
+    return item.Date + '_' + t(`home:graphic.month_${item.Date}`);
+  });
   const processData = (key) =>
     dataSupply.map(oItem => {
       let nElem = oItem[key];
@@ -202,9 +204,10 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
             display: false,
           },
           ticks: {
-            callback: (nValue, nIndex) => {
-              if (nValue % 2 !== 0 || nIndex === dataSupply.length - 1) {
-                return `Month ${nValue}`;
+            callback: (sValue, nIndex) => {
+              const aValue = sValue.split('_');
+              if (aValue[0] % 2 !== 0 || nIndex === dataSupply.length - 1) {
+                return aValue[1];
               }
               
               return '';
