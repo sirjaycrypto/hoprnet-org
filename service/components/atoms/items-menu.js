@@ -30,12 +30,12 @@ export default function ItemsMenu() {
       name: 'Run Node',
     },
     {
-      path: '/blog',
-      name: 'Blog',
-    },
-    {
       path: 'https://docs.hoprnet.org/',
       name: 'Docs',
+    },
+    {
+      path: '/blog',
+      name: 'Blog',
     },
   ];
 
