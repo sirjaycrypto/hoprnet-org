@@ -203,7 +203,7 @@ export default function Index() {
             </div>
           </div>
         </section>
-        <section className="section-jobs padding-section-aux">
+        <section id="jobs" className="section-jobs padding-section-aux">
           <div className="container">
             <div>
               <h2>{t('common:jobs')}</h2>
