@@ -3,7 +3,6 @@ import useTranslation from 'next-translate/useTranslation';
 
 import Layout from '../../components/organisms/layout';
 import HeroInternal from '../../components/organisms/hero-internal';
-import SubStrack from '../../components/molecules/sub-strack';
 import Jobs from '../../components/molecules/jobs';
 import ProfileAssociation from '../../components/molecules/profile-association';
 import PeopleBuild from '../../components/molecules/PeopleBuild';
@@ -175,19 +174,6 @@ export default function Index() {
           </div>
         </section>
         <HomeInvestors />
-        <section className="continue-yellow padding-section-aux invert-color ">
-          <div className="container">
-            <div>
-              <h2>{t('common:HOPRToken')}</h2>
-              <p>{t('common:subscribeHere')}</p>
-            </div>
-            <div className="container-help-newsletter">
-              <div>
-                <SubStrack />
-              </div>
-            </div>
-          </div>
-        </section>
         <section
           id="team-section"
           className="section-board-association continue-yellow padding-section-aux invert-color"
