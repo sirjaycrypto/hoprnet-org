@@ -62,7 +62,7 @@ const data = [
     link: '#',
     img: '/assets/images/team/matthew_edwards.png',
     name: 'Matthew Edwards',
-    label: 'Community Manager',
+    label: 'Head of Web3 Marketing',
   },
   {
     link: '#',
@@ -72,10 +72,22 @@ const data = [
   },
   {
     link: '#',
-    img: '/assets/images/team/amira_bouguera.png',
+    img: '/assets/images/team/hopr_Amira_Bouguera.png',
     name: 'Amira Bouguera',
     label: 'Cryptographer and protocol engineer',
   },
+  {
+    link: '#',
+    img: '/assets/images/team/hopr_Andrius.png',
+    name: 'Andrius Stepaitis',
+    label: 'Community Manager',
+  },
+  {
+    link: '#',
+    img: '/assets/images/team/Gregory_Babincev.png',
+    name: 'Gregory Babintcev',
+    label: 'Chinese Community Manager',
+  }
 ];
 
 export default function PeopleBuild() {
