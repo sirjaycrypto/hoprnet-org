@@ -26,12 +26,16 @@ export default function ItemsMenu() {
       name: 'Win',
     },
     {
-      path: 'http://saentis.hoprnet.org/',
+      path: 'https://github.com/hoprnet/hopr-sh/blob/main/README.md',
       name: 'Run Node',
     },
     {
       path: '/blog',
       name: 'Blog',
+    },
+    {
+      path: 'https://docs.hoprnet.org/',
+      name: 'Docs',
     },
   ];
 
