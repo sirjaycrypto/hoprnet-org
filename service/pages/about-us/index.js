@@ -213,24 +213,7 @@ export default function Index() {
                   <li>{t('about:association.itemD')}</li>
                 </ul>
               </div>
-
               <PeopleBuild />
-
-              <div>
-                <p>{t('about:association.paragraphB')}</p>
-                <div className="btn-align">
-                  <a
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSeiZ76QfvcbpbBJk-DJDE5IfYmzkuUfUOM-j4btBviTbBNn2w/viewform?hl=en"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="link-out"
-                  >
-                    <div className="type-btn">
-                      <span>{t('common:APPLY')}</span>
-                    </div>
-                  </a>
-                </div>
-              </div>
             </div>
           </div>
         </section>
