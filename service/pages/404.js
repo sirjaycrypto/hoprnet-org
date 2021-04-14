@@ -8,13 +8,7 @@ export default function NotFound() {
         <div className="container">
           <div class="section-inner">
             <div className="textContainer">
-              404 Page not found <br />
-              Whoops! (Or hop-la, as we say in Switzerland)
-              <br />
-              <br />
-              Sorry about that.
-              <br />
-              You're most likely ahead of the curve and we're about to bring this page live very soon, but for now:
+              "Whoops" or "hop-la" as we say in Switzerland, we can't find the URL you've been looking for.
               <br />
               <br />
               Let's get you back to our main page:
