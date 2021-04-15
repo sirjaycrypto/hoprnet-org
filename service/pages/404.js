@@ -8,7 +8,10 @@ export default function NotFound() {
         <div className="container">
           <div class="section-inner">
             <div className="textContainer">
-              "Whoops" or "hop-la" as we say in Switzerland, we can't find the URL you've been looking for.
+              Whoops! (Or hop-la, as we say in Switzerland)
+              <br />
+              <br />
+              Sorry, that page does not exist.
               <br />
               <br />
               Let's get you back to our main page:
