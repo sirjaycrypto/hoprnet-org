@@ -3,7 +3,6 @@ import useTranslation from 'next-translate/useTranslation';
 
 import Layout from '../../components/organisms/layout';
 import HeroInternal from '../../components/organisms/hero-internal';
-import SubStrack from '../../components/molecules/sub-strack';
 import Jobs from '../../components/molecules/jobs';
 import ProfileAssociation from '../../components/molecules/profile-association';
 import PeopleBuild from '../../components/molecules/PeopleBuild';
@@ -75,34 +74,62 @@ export default function Index() {
             >
               {t('about:hero.title')}
             </h1>
-            <div>
-              <p data-aos="fade-down" data-aos-delay="300">
-                {t('about:hero.paragraphA')}
-                <br />
-                <br />
-                {t('about:hero.paragraphB')}
-                <br />
-                <br />
-                {t('about:hero.paragraphC')}
-                <br />
-                <br />
-                {t('about:hero.paragraphD')}
-                <br />
-                <br />
-                {t('about:hero.paragraphE')}
-                <a
-                  className="link-out"
-                  href="https://hopr.swiss/who-is-HOPR#team"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  {t('common:hereLabel')}
-                </a>
-              </p>
-            </div>
           </div>
         </HeroInternal>
-        <section className="continue-hero-internal padding-section-aux invert-color ">
+        <section className="continue-hero-internal padding-section-aux invert-color">
+          <div>
+            <p data-aos="fade-down" data-aos-delay="300">
+              {t('about:hero.paragraphA')}
+              <br />
+              <br />
+              {t('about:hero.paragraphB')}
+              <br />
+              <br />
+              {t('about:hero.paragraphC')}
+              <br />
+              <br />
+              {t('about:hero.paragraphD')}
+              <br />
+              <br />
+              {t('about:hero.paragraphE')}
+              <a
+                className="link-out"
+                href="https://hopr.swiss/who-is-HOPR#team"
+                target="_blank"
+                rel="noopener"
+              >
+                {t('common:hereLabel')}
+              </a>
+            </p>
+          </div>
+        </section>
+        <section className="section-HOPR-values padding-section-aux">
+          <div className="container">
+            <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back">
+              <h2>{t('about:values.title')}</h2>
+            </div>
+            <div className="element-value">
+              {dataVALUES.map((e, index) => {
+                const { img, title, text, delayTime } = e;
+                return (
+                  <div
+                    key={index}
+                    data-aos="fade-up"
+                    data-aos-delay={delayTime}
+                    className="element-item"
+                  >
+                    <img src={img} alt={t(title)} />
+                    <div>
+                      <h4>{t(title)}</h4>
+                      <p>{t(text)}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+        <section className="continue-hero-internal padding-section-aux invert-color">
           <div className="">
             <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back">
               <h2> {t('about:governance.title')}</h2>
@@ -147,45 +174,6 @@ export default function Index() {
           </div>
         </section>
         <HomeInvestors />
-        <section className="continue-yellow padding-section-aux invert-color ">
-          <div className="container">
-            <div>
-              <h2>{t('common:HOPRToken')}</h2>
-              <p>{t('common:subscribeHere')}</p>
-            </div>
-            <div className="container-help-newsletter">
-              <div>
-                <SubStrack />
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="section-HOPR-values padding-section-aux">
-          <div className="container">
-            <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back">
-              <h2>{t('about:values.title')}</h2>
-            </div>
-            <div className="element-value">
-              {dataVALUES.map((e, index) => {
-                const { img, title, text, delayTime } = e;
-                return (
-                  <div
-                    key={index}
-                    data-aos="fade-up"
-                    data-aos-delay={delayTime}
-                    className="element-item"
-                  >
-                    <img src={img} alt={t(title)} />
-                    <div>
-                      <h4>{t(title)}</h4>
-                      <p>{t(text)}</p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
         <section
           id="team-section"
           className="section-board-association continue-yellow padding-section-aux invert-color"
@@ -211,28 +199,11 @@ export default function Index() {
                   <li>{t('about:association.itemD')}</li>
                 </ul>
               </div>
-
               <PeopleBuild />
-
-              <div>
-                <p>{t('about:association.paragraphB')}</p>
-                <div className="btn-align">
-                  <a
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSeiZ76QfvcbpbBJk-DJDE5IfYmzkuUfUOM-j4btBviTbBNn2w/viewform?hl=en"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="link-out"
-                  >
-                    <div className="type-btn">
-                      <span>{t('common:APPLY')}</span>
-                    </div>
-                  </a>
-                </div>
-              </div>
             </div>
           </div>
         </section>
-        <section className="section-jobs padding-section-aux">
+        <section id="jobs" className="section-jobs padding-section-aux">
           <div className="container">
             <div>
               <h2>{t('common:jobs')}</h2>

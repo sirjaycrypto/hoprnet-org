@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import useTranslation from 'next-translate/useTranslation';
-import { stagger, fadeInUp, fadeInDown } from '../../util/motionConfig';
+import { fadeInDown } from '../../util/motionConfig';
 import Layout from '../../components/organisms/layout';
 import { loadNamespaces } from '../_app';
 
@@ -11,10 +11,10 @@ export default function Index() {
   return (
     <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
       <Layout>
-        <motion.div className="container-book container">
+        <motion.div className="container-book">
           <div className="over-img">
             <motion.div
-              className="type-btn "
+              className="type-btn"
               variants={fadeInDown}
               transition={{ delay: 0.2 }}
             >
