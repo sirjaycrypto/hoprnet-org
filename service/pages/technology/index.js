@@ -182,7 +182,6 @@ export default function Index() {
             <h2 data-aos="fade-down">{t('tech:doc.title')}</h2>
             <div className="container-sm" data-aos="fade-down">
               <p>{t('tech:doc.paragraphA')}</p>
-              <p>{t('tech:doc.paragraphB')}</p>
               <div className="btn-align">
                 <a
                   href="https://docs.hoprnet.org/"
