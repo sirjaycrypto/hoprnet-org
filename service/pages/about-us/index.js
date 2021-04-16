@@ -10,6 +10,7 @@ import ContactPlus from '../../components/molecules/contact-plus';
 import HomeInvestors from '../../components/sections/home-investors';
 
 import { loadNamespaces } from '../_app';
+import { Button } from '../../components';
 
 const dataInfo = [
   'assets/partners/01_avado.svg',
@@ -166,9 +167,12 @@ export default function Index() {
                 })}
               </ul>
               <div className="btn-align">
-                <div className="type-btn">
-                  <span>{t('about:partners.btnLabel')}</span>
-                </div>
+                <Button
+                  className="type-btn"
+                  content={t('about:partners.btnLabel')}
+                  to="partners"
+                  type="link"
+                />
               </div>
             </div>
           </div>

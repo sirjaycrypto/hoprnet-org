@@ -1,5 +1,6 @@
 import React from 'react';
 import useTranslation from 'next-translate/useTranslation';
+import { Button } from '../atoms/button';
 
 const dataInfoPartners = [
   { url: 'https://ava.do/', image: 'assets/partners/01_avado.svg' },
@@ -49,9 +50,12 @@ export default function Partners() {
             })}
           </ul>
           <div className="btn-align">
-            <div className="type-btn">
-              <span>Want to become our partner?</span>
-            </div>
+            <Button
+              className="type-btn"
+              content="Want to become our partner?"
+              to="partners"
+              type="link"
+            />
           </div>
         </div>
       </div>
