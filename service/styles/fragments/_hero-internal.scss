@@ -45,6 +45,7 @@
 
 .continue-hero-internal {
   background: $hopr_yellow;
+  padding: 80px 50px;
 
   & > div {
     align-items: center;
@@ -66,7 +67,7 @@
     font-size: 1.3em;
     font-weight: 300;
     letter-spacing: 0.208333px;
-    line-height: 2em;
+    line-height: 1.2em;
   }
 
   .block-video {
