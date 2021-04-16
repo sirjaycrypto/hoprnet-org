@@ -4,6 +4,14 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    .item-profile {
+      padding: 32px;
+      img {
+        width: 180px;
+        height: 180px;
+        margin: auto 58px;
+      }
+    }
     @include responsive(tablet) {
       flex-direction: column;
       a {
