@@ -55,12 +55,12 @@
   }
 
   h3 {
+    font-weight: bold;
     margin-top: 0;
     color: $hopr_greySp;
-    font-weight: 600;
     font-size: 30px;
     line-height: 45px;
-    letter-spacing: 0.25px;
+    letter-spacing: 0.3px;
     margin-bottom: 24px;
 
     @include responsive(tablet) {
