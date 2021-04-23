@@ -45,6 +45,42 @@ const dataVALUES = [
   },
 ];
 
+const dataBoard = [
+  {
+    link: 'https://www.linkedin.com/in/scbuergel/',
+    img: '/assets/images/team/sebastian_burgel.png',
+    name: 'Dr. Sebastian Bürgel',
+    label: 'President',
+  },
+  {
+    link: 'https://www.linkedin.com/in/ronald-kogens/',
+    img: '/assets/images/team/rik_krieger.png',
+    name: 'Rik Krieger, eMBA',
+    label: 'Board Member',
+  },
+  {
+    link: 'https://www.linkedin.com/in/ronald-kogens/',
+    img: '/assets/images/team/robert_kiel.png',
+    name: 'Robert Kiel',
+    label: 'Board Member',
+  },
+];
+
+const dataCommittee = [
+  {
+    link: 'https://www.linkedin.com/in/cluchsinger/',
+    img: '/assets/images/team/catrina_luchsinger.jpg',
+    name: 'Dr. Catrina Luchsinger',
+    label: 'Board Member',
+  },
+  {
+    link: 'https://www.linkedin.com/in/ronald-kogens/',
+    img: '/assets/images/team/ronald_kogens.jpg',
+    name: 'Ronald Kogens',
+    label: 'Board Member',
+  },
+];
+
 export default function Index() {
   const { t } = useTranslation();
 
@@ -186,7 +222,9 @@ export default function Index() {
             <h2>{t('about:association.title')}</h2>
           </div>
           <div>
-            <ProfileAssociation />
+            <ProfileAssociation data={dataBoard} />
+            <h3>Board Committee</h3>
+            <ProfileAssociation data={dataCommittee} justify="j-around" />
             <div className="container">
               <p>
                 {t('about:association.paragraphA')}

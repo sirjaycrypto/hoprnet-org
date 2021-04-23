@@ -25,12 +25,6 @@ const data = [
   },
   {
     link: '#',
-    img: '/assets/images/team/peter_braden.png',
-    name: 'Peter Braden',
-    label: 'Software Engineer',
-  },
-  {
-    link: '#',
     img: '/assets/images/team/reinhard.jpg',
     name: 'Reinhard Schmidt',
     label: 'Graphic Designer',
@@ -43,9 +37,9 @@ const data = [
   },
   {
     link: '#',
-    img: '/assets/images/team/the_wandering_editor.png',
-    name: 'The Wandering Editor',
-    label: 'Content Creator',
+    img: '/assets/images/team/peter_braden.png',
+    name: 'Peter Braden',
+    label: 'Software Engineer',
   },
   {
     link: '#',
@@ -76,7 +70,7 @@ const data = [
     img: '/assets/images/team/Gregory_Babincev.png',
     name: 'Gregory Babintcev',
     label: 'Chinese Community Manager',
-  }
+  },
 ];
 
 export default function PeopleBuild() {
