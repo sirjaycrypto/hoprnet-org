@@ -223,7 +223,7 @@ export default function Index() {
           </div>
           <div>
             <ProfileAssociation data={dataBoard} />
-            <h3>Board Committee</h3>
+            <h3>{t('about:association.subHeadline')}</h3>
             <ProfileAssociation data={dataCommittee} justify="j-around" />
             <div className="container">
               <p>
