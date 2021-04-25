@@ -1,3 +1,10 @@
 {
-  "HOPR": "HOPR"
+  "HOPR": "HOPR",
+  "HOPR_TOTAL_COUNT": "wxHOPR Staked",
+  "HOPR_ADDRESS": "HOPR address",
+  "HOPR_STAKED_AMOUNT": "Staked amount",
+  "HOPR_TOTAL_AMOUNT": "Total amount",
+  "HOPR_CHANEL_STATUS": "Chanel status",
+  "HOPR_SEARCH": "Search",
+  "HOPR_INPUT_TEXT": "Enter your HOPR address"
 }
