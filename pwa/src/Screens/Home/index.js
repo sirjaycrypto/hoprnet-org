@@ -1,8 +1,8 @@
 import React from 'react';
 
-import BrandLogo from '../../Assets/brand/logo.svg';
+import BrandLogo from '../../assets/brand/logo.svg';
 
-const LoginScreen = () => {
+const HomeScreen = () => {
   return (
     <div className="login-screen">
       <div className="wrapper">
@@ -12,4 +12,4 @@ const LoginScreen = () => {
   );
 };
 
-export default LoginScreen;
+export default HomeScreen;

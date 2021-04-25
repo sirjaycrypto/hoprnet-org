@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { I18n } from '../Redux/reducers/i18n';
+import { I18n } from '../redux/reducers/i18n';
 
 export const useI18n = () => {
   const dispatch = useDispatch();
