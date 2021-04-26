@@ -9,10 +9,10 @@ const InputFilter = () => {
   const [, t] = useI18n();
   return (
     <Row gutter={[10]} className="input-filter">
-      <Col xl={22}>
+      <Col xs={12} xl={22}>
         <Input placeholder={t('HOPR_INPUT_TEXT')} />
       </Col>
-      <Col xl={2}>
+      <Col xs={12} xl={2}>
         <Button
           type="primary"
           size="large"
