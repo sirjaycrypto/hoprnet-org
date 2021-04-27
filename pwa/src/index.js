@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 import { PersistGate } from 'redux-persist/integration/react';
-import { persistor, store, history } from './Redux/store';
+import { persistor, store, history } from './redux/store';
 import reportWebVitals from './reportWebVitals';
-import Router from './Components/Router';
-import ServiceWorkerWrapper from './Components/ServiceWorkerWrapper';
+import Router from './components/Router';
+import ServiceWorkerWrapper from './components/ServiceWorkerWrapper';
 
-import './Styles/index.less';
+import './styles/index.less';
 
 ReactDOM.render(
   <Provider store={store}>

@@ -1,59 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { stagger, fadeInUp } from '../../util/motionConfig';
+import { stagger } from '../../util/motionConfig';
+import { MemberProfile } from '..';
 
-const data = [
-  {
-    link: 'https://www.linkedin.com/in/scbuergel/',
-    img: '/assets/images/team/sebastian_burgel.png',
-    name: 'Dr. Sebastian Bürgel',
-    label: 'President',
-  },
-  {
-    link: 'https://www.linkedin.com/in/cluchsinger/',
-    img: '/assets/images/team/catrina_luchsinger.jpg',
-    name: 'Dr. Catrina Luchsinger',
-    label: 'Board Member',
-  },
-  {
-    link: 'https://www.linkedin.com/in/ronald-kogens/',
-    img: '/assets/images/team/ronald_kogens.jpg',
-    name: 'Ronald Kogens',
-    label: 'Board Member',
-  },
-];
-
-export default function ProfileAssociation() {
+export default function ProfileAssociation({ data = [], justify = '' }) {
   return (
-    <div className="container container-profile padding-section-aux">
+    <div className={`container container-profile ${justify}`}>
       <motion.div variants={stagger}>
-        {data.map((e, index) => {
-          const { link, img, name, label } = e;
-          return (
-            <a
-              key={index}
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <motion.div
-                variants={fadeInUp}
-                transition={{ delay: 0.8 }}
-                className="item-profile"
-              >
-                <motion.img variants={fadeInUp} src={img} alt={name} />
-                <div>
-                  <motion.h5 variants={fadeInUp} transition={{ delay: 0.8 }}>
-                    {name}
-                  </motion.h5>
-                  <motion.p variants={fadeInUp} transition={{ delay: 0.8 }}>
-                    {label}
-                  </motion.p>
-                </div>
-              </motion.div>
-            </a>
-          );
-        })}
+        {data.map((e, index) => (
+          <MemberProfile
+            {...e}
+            key={index}
+          />
+        ))}
       </motion.div>
     </div>
   );

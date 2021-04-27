@@ -1,4 +1,4 @@
-import { store } from '../Redux/store';
+import { store } from '../redux/store';
 
 import en from './languages/en.json';
 

@@ -1,20 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { stagger, fadeInUp } from '../../util/motionConfig';
+import { MemberProfile } from '../atoms/member-profile';
 
 const data = [
-  {
-    link: 'https://www.linkedin.com/in/ronald-kogens/',
-    img: '/assets/images/team/robert_kiel.png',
-    name: 'Robert Kiel',
-    label: 'Co-Founder, Crypto',
-  },
-  {
-    link: 'https://www.linkedin.com/in/ronald-kogens/',
-    img: '/assets/images/team/rik_krieger.png',
-    name: 'Rik Krieger, eMBA',
-    label: 'Co-Founder, Commercial',
-  },
   {
     link: '#',
     img: '/assets/images/team/meredith_bachma.png',
@@ -36,12 +25,6 @@ const data = [
   },
   {
     link: '#',
-    img: '/assets/images/team/peter_braden.png',
-    name: 'Peter Braden',
-    label: 'Software Engineer',
-  },
-  {
-    link: '#',
     img: '/assets/images/team/reinhard.jpg',
     name: 'Reinhard Schmidt',
     label: 'Graphic Designer',
@@ -54,9 +37,9 @@ const data = [
   },
   {
     link: '#',
-    img: '/assets/images/team/the_wandering_editor.png',
-    name: 'The Wandering Editor',
-    label: 'Content Creator',
+    img: '/assets/images/team/peter_braden.png',
+    name: 'Peter Braden',
+    label: 'Software Engineer',
   },
   {
     link: '#',
@@ -87,7 +70,7 @@ const data = [
     img: '/assets/images/team/Gregory_Babincev.png',
     name: 'Gregory Babintcev',
     label: 'Chinese Community Manager',
-  }
+  },
 ];
 
 export default function PeopleBuild() {
@@ -102,35 +85,12 @@ export default function PeopleBuild() {
       </div>
       <div className="container padding-section-aux">
         <motion.div className="people-faces" variants={stagger}>
-          {data.map((e, index) => {
-            const { link, img, name, label } = e;
-            return (
-              <a
-                key={index}
-                href={link}
-                target="_blank"
-                rel="noopener noreferrer"
-                data-aos="fade-zoom-in"
-                data-aos-easing="ease-in-back"
-              >
-                <motion.div
-                  variants={fadeInUp}
-                  transition={{ delay: 0.8 }}
-                  className="item-profile"
-                >
-                  <motion.img variants={fadeInUp} src={img} alt={name} />
-                  <div>
-                    <motion.h5 variants={fadeInUp} transition={{ delay: 0.8 }}>
-                      {name}
-                    </motion.h5>
-                    <motion.p variants={fadeInUp} transition={{ delay: 0.8 }}>
-                      {label}
-                    </motion.p>
-                  </div>
-                </motion.div>
-              </a>
-            );
-          })}
+          {data.map((e, index) => (
+            <MemberProfile
+              {...e}
+              key={index}
+            />
+          ))}
         </motion.div>
       </div>
     </div>

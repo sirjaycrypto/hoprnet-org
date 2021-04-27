@@ -233,6 +233,12 @@
       }
     }
   }
+  .section-team-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+  }
   .section-team {
     display: flex;
     align-items: center;
@@ -247,7 +253,6 @@
       flex-direction: column;
       &:last-child {
         max-width: 500px;
-        padding-top: 55px;
       }
     }
     h3 {
@@ -330,9 +335,9 @@
     }
   }
   .the-aux-margin {
-    margin: 80px auto;
+    margin: 0 auto;
     @include responsive(tablet) {
-      margin: 48px auto;
+      margin: 24px auto;
     }
   }
 }

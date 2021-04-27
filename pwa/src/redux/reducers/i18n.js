@@ -1,6 +1,6 @@
 import immutable from 'seamless-immutable';
 import { createReducer, createActions } from 'reduxsauce';
-import { i18nContent } from '../../I18n';
+import { i18nContent } from '../../i18n';
 
 const { Types, Creators } = createActions({
   i18nLanguage: ['language'],

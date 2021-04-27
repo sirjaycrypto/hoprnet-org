@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import PropTypes from 'prop-types';
 
 export const Button = ({
@@ -19,6 +20,12 @@ export const Button = ({
       >
         <span>{content}</span>
       </button>
+    ) : type === 'link' ? (
+      <Link href={to}>
+        <a className={`btn${className ? ' ' + className : ''}`}>
+          <span>{content}</span>
+        </a>
+      </Link>
     ) : (
       <a
         href={to}
