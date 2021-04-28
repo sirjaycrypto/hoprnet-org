@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Table } from 'antd';
+import { Table, Badge } from 'antd';
 //Hooks
 import { useNodeColumns } from '../../hooks/Columns.hook';
 import { useNavigation } from '../../hooks/Nav.hook';
 
-const HoprAddressTable = props => {
+const HoprNodeTable = props => {
   const [, getCol] = useNodeColumns();
   const [, nav] = useNavigation();
   const tableProps = {
@@ -36,7 +36,27 @@ const HoprAddressTable = props => {
         align: 'center',
         className: 'hopr-title',
         render(value) {
-          return <div className="hopr-staked">{value}</div>;
+          return <div className="hopr-staked">{value} HOPR</div>;
+        },
+      },
+      {
+        ...getCol('hopr_total_amount'),
+        align: 'center',
+        className: 'hopr-title',
+        render(value) {
+          return <div className="hopr-staked">{value} HOPR</div>;
+        },
+      },
+      {
+        ...getCol('hopr_chanel_status'),
+        align: 'center',
+        className: 'hopr-title',
+        render() {
+          return (
+            <div>
+              <Badge color="green" dot text="Open"></Badge>
+            </div>
+          );
         },
       },
     ],
@@ -53,8 +73,8 @@ const HoprAddressTable = props => {
   return <Table {...tableProps} />;
 };
 
-HoprAddressTable.propTypes = {
+HoprNodeTable.propTypes = {
   props: PropTypes.object,
 };
 
-export default HoprAddressTable;
+export default HoprNodeTable;
