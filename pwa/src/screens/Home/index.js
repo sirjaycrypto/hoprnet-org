@@ -13,7 +13,8 @@ function generateData() {
   for (let i = 0; i < 100; i++) {
     data.push({
       hopr_address: '10x' + parseInt(Math.random() * 1000000000000),
-      hopr_staked_amount: Math.random() * 100,
+      hopr_staked_amount: parseInt(Math.random() * 100),
+      hopr_total_amount: parseInt(Math.random() * 1000),
     });
   }
   return data;

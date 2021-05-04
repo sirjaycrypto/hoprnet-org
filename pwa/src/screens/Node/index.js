@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Row, Col } from 'antd';
-import HoprAddressTable from '../../components/tables/HoprAddress';
+import HoprNodeTable from '../../components/tables/HoprNode';
 import SettingsModal from '../../components/layout/SettingsModal';
 //Assets
 import BrandLogo from '../../assets/brand/logo.svg';
@@ -13,7 +13,8 @@ function generateData() {
   for (let i = 0; i < 100; i++) {
     data.push({
       hopr_address: '10x' + parseInt(Math.random() * 1000000000000),
-      hopr_staked_amount: Math.random() * 100,
+      hopr_staked_amount: parseInt(Math.random() * 100),
+      hopr_total_amount: parseInt(Math.random() * 1000),
     });
   }
   return data;
@@ -55,7 +56,7 @@ const NodeScreen = () => {
           </Col>
         </Row>
         <div className="hopr-table">
-          <HoprAddressTable dataSource={data} />
+          <HoprNodeTable dataSource={data} />
         </div>
       </div>
     </div>
