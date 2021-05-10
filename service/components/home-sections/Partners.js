@@ -26,6 +26,10 @@ const dataInfoPartners = [
     url: 'https://swisshealthcarestartups.com/',
     image: 'assets/partners/08_swiss_healthcare_startups.svg',
   },
+  {
+    image: 'assets/partners/09_swissmade_software_logo.png',
+    url: 'https://www.swissmadesoftware.org',
+  },
   { url: 'https://blockark.io/', image: 'assets/partners/BLOCKARK-LOGO2.png' },
 ];
 

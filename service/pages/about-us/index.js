@@ -13,15 +13,16 @@ import { loadNamespaces } from '../_app';
 import { Button } from '../../components';
 
 const dataInfo = [
-  'assets/partners/01_avado.svg',
-  'assets/partners/02_froriep.svg',
-  'assets/partners/03_elrond.svg',
-  'assets/partners/04_sedimentum.svg',
-  'assets/partners/05_swiss_medtech.svg',
-  'assets/partners/06_dai_logo.svg',
-  'assets/partners/07_health_tech_cluster.svg',
-  'assets/partners/08_swiss_healthcare_startups.svg',
-  'assets/partners/BLOCKARK-LOGO2.png',
+  { img: 'assets/partners/01_avado.svg' },
+  { img: 'assets/partners/02_froriep.svg' },
+  { img: 'assets/partners/03_elrond.svg' },
+  { img: 'assets/partners/04_sedimentum.svg' },
+  { img: 'assets/partners/05_swiss_medtech.svg' },
+  { img: 'assets/partners/06_dai_logo.svg' },
+  { img: 'assets/partners/07_health_tech_cluster.svg' },
+  { img: 'assets/partners/08_swiss_healthcare_startups.svg' },
+  { img: 'assets/partners/09_swissmade_software_logo.png', url: 'https://www.swissmadesoftware.org' },
+  { img: 'assets/partners/BLOCKARK-LOGO2.png' },
 ];
 
 const dataVALUES = [
@@ -190,14 +191,20 @@ export default function Index() {
             </h2>
             <div className="container-sm">
               <ul>
-                {dataInfo.map((item, index) => {
+                {dataInfo.map(({ img, url }, index) => {
                   return (
                     <li
                       key={index}
                       data-aos="fade-zoom-in"
                       data-aos-easing="ease-in-back"
                     >
-                      <img src={item} alt="The HOPR-Token NOW" />
+                      {url ? (
+                        <a href={url} alt="Partners HOPR">
+                          <img src={img} alt="The HOPR-Token NOW" />
+                        </a>
+                      ) : (
+                        <img src={img} alt="The HOPR-Token NOW" />
+                      )}
                     </li>
                   );
                 })}
