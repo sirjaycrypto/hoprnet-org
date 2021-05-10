@@ -10,20 +10,7 @@ import ContactPlus from '../../components/molecules/contact-plus';
 import HomeInvestors from '../../components/sections/home-investors';
 
 import { loadNamespaces } from '../_app';
-import { Button } from '../../components';
-
-const dataInfo = [
-  { img: 'assets/partners/01_avado.svg' },
-  { img: 'assets/partners/02_froriep.svg' },
-  { img: 'assets/partners/03_elrond.svg' },
-  { img: 'assets/partners/04_sedimentum.svg' },
-  { img: 'assets/partners/05_swiss_medtech.svg' },
-  { img: 'assets/partners/06_dai_logo.svg' },
-  { img: 'assets/partners/07_health_tech_cluster.svg' },
-  { img: 'assets/partners/08_swiss_healthcare_startups.svg' },
-  { img: 'assets/partners/09_swissmade_software_logo.png', url: 'https://www.swissmadesoftware.org' },
-  { img: 'assets/partners/BLOCKARK-LOGO2.png' },
-];
+import Partners from '../../components/home-sections/Partners';
 
 const dataVALUES = [
   {
@@ -184,42 +171,7 @@ export default function Index() {
             </div>
           </div>
         </section>
-        <section className="section-partners padding-section-aux">
-          <div className="container">
-            <h2 data-aos="fade-zoom-in" data-aos-easing="ease-in-back">
-              {t('about:partners.title')}
-            </h2>
-            <div className="container-sm">
-              <ul>
-                {dataInfo.map(({ img, url }, index) => {
-                  return (
-                    <li
-                      key={index}
-                      data-aos="fade-zoom-in"
-                      data-aos-easing="ease-in-back"
-                    >
-                      {url ? (
-                        <a href={url} alt="Partners HOPR">
-                          <img src={img} alt="The HOPR-Token NOW" />
-                        </a>
-                      ) : (
-                        <img src={img} alt="The HOPR-Token NOW" />
-                      )}
-                    </li>
-                  );
-                })}
-              </ul>
-              <div className="btn-align">
-                <Button
-                  className="type-btn"
-                  content={t('about:partners.btnLabel')}
-                  to="partners"
-                  type="link"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
+        <Partners />
         <HomeInvestors />
         <section
           id="team-section"
