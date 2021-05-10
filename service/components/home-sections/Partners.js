@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import useTranslation from 'next-translate/useTranslation';
 import { Button } from '../atoms/button';
 
-const aPartners = [
+export const aPartners = [
   { url: 'https://ava.do/', image: 'assets/partners/01_avado.svg' },
   { url: 'https://www.froriep.com/', image: 'assets/partners/02_froriep.svg' },
   { url: 'https://elrond.com/', image: 'assets/partners/03_elrond.svg' },
@@ -31,7 +31,7 @@ const aPartners = [
     image: 'assets/partners/09_swissmade_software_logo.png',
     url: 'https://www.swissmadesoftware.org',
   },
-  { url: 'https://blockark.io/', image: 'assets/partners/BLOCKARK-LOGO2.png' },
+  { url: 'https://blockark.io/', image: 'assets/partners/BLOCKARK-LOGO.png' },
 ];
 
 export default function Partners({ invert = false }) {

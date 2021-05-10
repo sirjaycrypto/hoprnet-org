@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react';
 import useTranslation from 'next-translate/useTranslation';
+import { aPartners } from '../home-sections/Partners';
 
 const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
   const { t } = useTranslation();
@@ -39,36 +40,6 @@ const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
       url: 'https://www.vendetta.capital/',
       title: 'Vendetta',
     },
-  ];
-
-  const dataInfoPartners = [
-    { url: 'https://ava.do/', image: 'assets/partners/01_avado.svg' },
-    {
-      url: 'https://www.froriep.com/',
-      image: 'assets/partners/02_froriep.svg',
-    },
-    { url: 'https://elrond.com/', image: 'assets/partners/03_elrond.svg' },
-    {
-      url: 'https://www.sedimentum.com/',
-      image: 'assets/partners/04_sedimentum.svg',
-    },
-    {
-      url: 'https://www.swiss-medtech.ch/',
-      image: 'assets/partners/05_swiss_medtech.svg',
-    },
-    {
-      url: 'https://www.xdaichain.com/',
-      image: 'assets/partners/06_dai_logo.svg',
-    },
-    {
-      url: 'https://healthtech.ch/',
-      image: 'assets/partners/07_health_tech_cluster.svg',
-    },
-    {
-      url: 'https://swisshealthcarestartups.com/',
-      image: 'assets/partners/08_swiss_healthcare_startups.svg',
-    },
-    { url: 'https://blockark.io/', image: 'assets/partners/BLOCKARK-LOGO.png' },
   ];
 
   const dataInfoAssSee = [
@@ -120,7 +91,7 @@ const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
           </div>
           <h2 id="partners-section">{t('home:back.titleA')}</h2>
           <div className="item-back-container">
-            {dataInfoPartners.map((e, index) => {
+            {aPartners.map((e, index) => {
               return (
                 <a
                   href={e.url}
