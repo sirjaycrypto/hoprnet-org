@@ -10,19 +10,7 @@ import ContactPlus from '../../components/molecules/contact-plus';
 import HomeInvestors from '../../components/sections/home-investors';
 
 import { loadNamespaces } from '../_app';
-import { Button } from '../../components';
-
-const dataInfo = [
-  'assets/partners/01_avado.svg',
-  'assets/partners/02_froriep.svg',
-  'assets/partners/03_elrond.svg',
-  'assets/partners/04_sedimentum.svg',
-  'assets/partners/05_swiss_medtech.svg',
-  'assets/partners/06_dai_logo.svg',
-  'assets/partners/07_health_tech_cluster.svg',
-  'assets/partners/08_swiss_healthcare_startups.svg',
-  'assets/partners/BLOCKARK-LOGO2.png',
-];
+import Partners from '../../components/home-sections/Partners';
 
 const dataVALUES = [
   {
@@ -183,36 +171,7 @@ export default function Index() {
             </div>
           </div>
         </section>
-        <section className="section-partners padding-section-aux">
-          <div className="container">
-            <h2 data-aos="fade-zoom-in" data-aos-easing="ease-in-back">
-              {t('about:partners.title')}
-            </h2>
-            <div className="container-sm">
-              <ul>
-                {dataInfo.map((item, index) => {
-                  return (
-                    <li
-                      key={index}
-                      data-aos="fade-zoom-in"
-                      data-aos-easing="ease-in-back"
-                    >
-                      <img src={item} alt="The HOPR-Token NOW" />
-                    </li>
-                  );
-                })}
-              </ul>
-              <div className="btn-align">
-                <Button
-                  className="type-btn"
-                  content={t('about:partners.btnLabel')}
-                  to="partners"
-                  type="link"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
+        <Partners />
         <HomeInvestors />
         <section
           id="team-section"

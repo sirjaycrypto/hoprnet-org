@@ -22,8 +22,8 @@ export default function ItemsMenu() {
       name: 'Token',
     },
     {
-      path: '/win',
-      name: 'Win',
+      path: '/jungfrau',
+      name: 'Jungfrau',
     },
     {
       path: 'https://github.com/hoprnet/hopr-sh/blob/main/README.md',
