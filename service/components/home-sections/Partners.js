@@ -32,6 +32,7 @@ export const aPartners = [
     url: 'https://www.swissmadesoftware.org',
   },
   { url: 'https://blockark.io/', image: 'assets/partners/BLOCKARK-LOGO.png' },
+  { image: 'assets/partners/Rockstar_Recruiting.png', url: 'https://www.rockstarjobs.ch/' },
 ];
 
 export default function Partners({ invert = false }) {
