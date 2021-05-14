@@ -43,12 +43,6 @@ const data = [
   },
   {
     link: '#',
-    img: '/assets/images/team/matthew_edwards.png',
-    name: 'Matthew Edwards',
-    label: 'Head of Web3 Marketing',
-  },
-  {
-    link: '#',
     img: '/assets/images/team/qianchen_yu.png',
     name: 'Qianchen "Q" Yu',
     label: 'Decentralized Technology Architect',

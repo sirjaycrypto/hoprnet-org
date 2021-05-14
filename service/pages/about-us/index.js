@@ -197,7 +197,6 @@ export default function Index() {
                   <li>{t('about:association.itemA')}</li>
                   <li>{t('about:association.itemB')}</li>
                   <li>{t('about:association.itemC')}</li>
-                  <li>{t('about:association.itemD')}</li>
                 </ul>
               </div>
               <PeopleBuild />

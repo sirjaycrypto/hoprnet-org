@@ -1,9 +1,8 @@
 {
   "association": {
-    "itemA":"Avado, CH",
-    "itemB":"Kitsch-bent llc, US",
-    "itemC":"S.N. NONI CORPORATION LTD, CY",
-    "itemD":"The Wandering Editor, UK",
+    "itembA":"Avado, CH",
+    "itemB":"S.N. NONI CORPORATION LTD, CY",
+    "itemC":"The Wandering Editor, UK",
     "paragraphA":"The HOPR protocol is a digital commons that is currently being built by ",
     "paragraphB":"Do you want to become a member of the association?",
     "subtitle":"Grant Receivers",
