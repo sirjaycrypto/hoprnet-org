@@ -31,7 +31,7 @@ const data = [
   },
   {
     link: '#',
-    img: '/assets/images/team/simona_fontanella.png',
+    img: '/assets/images/team/simona.jpg',
     name: 'Simona Fontanella',
     label: 'Operations Manager',
   },
@@ -43,13 +43,7 @@ const data = [
   },
   {
     link: '#',
-    img: '/assets/images/team/matthew_edwards.png',
-    name: 'Matthew Edwards',
-    label: 'Head of Web3 Marketing',
-  },
-  {
-    link: '#',
-    img: '/assets/images/team/qianchen_yu.png',
+    img: '/assets/images/team/quianchen.jpg',
     name: 'Qianchen "Q" Yu',
     label: 'Decentralized Technology Architect',
   },
@@ -70,6 +64,18 @@ const data = [
     img: '/assets/images/team/Gregory_Babincev.png',
     name: 'Gregory Babintcev',
     label: 'Chinese Community Manager',
+  },
+  {
+    link: '#',
+    img: '/assets/images/team/Jakob.jpg',
+    name: 'Jakob Leonard',
+    label: 'Business Development Manager',
+  },
+  {
+    link: '#',
+    img: '/assets/images/team/Bogdan_Onica.png',
+    name: 'Bogdan Onica',
+    label: 'Marketing Specialist',
   },
 ];
 

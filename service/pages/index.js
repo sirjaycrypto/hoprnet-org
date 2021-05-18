@@ -17,7 +17,7 @@ export default function Home({ setLoading }) {
     setTimeout(() => {
       setLoading(false);
       setWelcomeAnimate(false);
-    }, 600);
+    }, 500);
   }, []);
 
   return (
@@ -30,7 +30,7 @@ export default function Home({ setLoading }) {
           <HoperFor />
           <HoperIs />
           <Blog />
-          <Partners />
+          <Partners invert />
           <Team />
           <Contact />
         </div>
@@ -44,7 +44,7 @@ export default function Home({ setLoading }) {
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      _ns: await loadNamespaces(['common', 'menu', 'home'], locale),
+      _ns: await loadNamespaces(['about', 'common', 'menu', 'home'], locale),
     },
   };
 }

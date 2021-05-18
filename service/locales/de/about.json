@@ -1,13 +1,13 @@
 {
   "association": {
-    "itemA":"Avado, CH",
-    "itemB":"Kitsch-bent llc, US",
-    "itemC":"S.N. NONI CORPORATION LTD, CY",
-    "itemD":"The Wandering Editor, UK",
+    "itembA":"Avado, CH",
+    "itemB":"S.N. NONI CORPORATION LTD, CY",
+    "itemC":"The Wandering Editor, UK",
     "paragraphA":"The HOPR protocol is a digital commons that is currently being built by ",
     "paragraphB":"Do you want to become a member of the association?",
     "subtitle":"Grant Receivers",
-    "title":"Board Of Association"
+    "title":"Board Of Association",
+    "subHeadline": "Board Committee"
   },
   "governance": {
     "paragraphLeftA": "At HOPR we're building the foundations for a more private and resilient web. But to succeed, we also need to challenge the economic power structures that shackle today's web to unhealthy and unsustainable business models.",
