@@ -77,6 +77,12 @@ const data = [
     name: 'Bogdan Onica',
     label: 'Marketing Specialist',
   },
+  {
+    link: '#',
+    img: '/assets/images/team/Tino_Breddin_gelb.png',
+    name: 'Tino Breddin',
+    label: 'DevOps Engineer',
+  },
 ];
 
 export default function PeopleBuild() {
