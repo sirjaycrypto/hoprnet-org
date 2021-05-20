@@ -37,6 +37,10 @@ export default function ItemsMenu() {
       path: '/blog',
       name: 'Blog',
     },
+    {
+      path: 'https://forum.hoprnet.org/',
+      name: 'Forum',
+    },
   ];
 
   return (
