@@ -5,8 +5,6 @@ import { fadeInUp } from '../../util/motionConfig';
 export const MemberProfile = ({ img, label, link, name }) => {
   return (
     <a
-      href={link}
-      target="_blank"
       rel="noopener noreferrer"
       data-aos="fade-zoom-in"
       data-aos-easing="ease-in-back"
