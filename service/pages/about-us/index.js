@@ -47,7 +47,7 @@ const dataBoard = [
     label: 'Board Member',
   },
   {
-    link: 'https://www.linkedin.com/in/ronald-kogens/',
+    link: 'https://www.linkedin.com/in/robert-kiel-176878161/',
     img: '/assets/images/team/robert_kiel.png',
     name: 'Robert Kiel',
     label: 'Board Member',
