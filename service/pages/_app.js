@@ -11,7 +11,7 @@ import '../styles/main.scss';
 export async function loadNamespaces(namespaces, lang) {
   let res = {};
   for (let ns of namespaces) {
-    const oDev = await import(`../locales/dev/${ns}.json`)
+    const oDev = await import(`../locales/en/${ns}.json`)
       .then(m => m.default);
     let oCurrent = await import(`../locales/${lang}/${ns}.json`)
       .then(m => m.default);
