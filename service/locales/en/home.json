@@ -179,5 +179,20 @@
     "rightSection": "HOPR TOKEN",
     "subTitle": "Whether it’s individuals, companies or institutions – the HOPR protocol provides full control over privacy, data and metadata. HOPR lays the groundwork for a more sovereign and safe internet. For everyone.",
     "title": "Changing Data Privacy For Good"
+  },
+  "news": {
+    "coindesk": {
+      "about": "Binance Labs, the incubation and seed funding arm of the world’s largest crypto exchange, has made its first investment this year, backing decentralized privacy startup HOPR.",
+      "alt": "Coindesk"
+    },
+    "coinTelegraph": {
+      "about": "The privacy-focused network allows users to run HOPR nodes, stake and get rewards with HOPR tokens while providing privacy for Web 3.",
+      "alt": "Coin Telegraph"
+    },
+    "moneyToday": {
+      "about": "From award-winning blockchain hackers, Silicon Valley tech veterans and a bold vision that could become a reality in Switzerland.",
+      "alt": "Money Today"
+    },
+    "title": "In The News"
   }
 }

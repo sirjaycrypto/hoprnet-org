@@ -127,9 +127,24 @@
     "content": "home_digiwithout_content"
   },
   "welcome": {
-    "leftSection": "JUNGFRAU RELEASE",
-    "rightSection": "HOPR TOKEN",
-    "subTitle": "Whether it’s individuals, companies or institutions – the HOPR protocol provides full control over privacy, data and metadata. HOPR lays the groundwork for a more sovereign and safe internet. For everyone.",
-    "title": "Changing Data Privacy For Good"
+    "leftSection": "home_welcome_leftSection",
+    "rightSection": "home_welcome_rightSection",
+    "subTitle": "home_welcome_subTitle",
+    "title": "home_welcome_title"
+  },
+  "news": {
+    "coindesk": {
+      "about": "home_news_coindesk_about",
+      "alt": "home_news_coindesk_alt"
+    },
+    "coinTelegraph": {
+      "about": "home_news_coinTelegraph_about",
+      "alt": "home_news_coinTelegraph_alt"
+    },
+    "moneyToday": {
+      "about": "home_news_moneyToday_about",
+      "alt": "home_news_moneyToday_alt"
+    },
+    "title": "home_news_title"
   }
 }
