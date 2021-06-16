@@ -11,13 +11,18 @@ import '../styles/main.scss';
 export async function loadNamespaces(namespaces, lang) {
   let res = {};
   for (let ns of namespaces) {
+    let oCurrent;
     const oDev = await import(`../locales/en/${ns}.json`)
       .then(m => m.default);
-    let oCurrent = await import(`../locales/${lang}/${ns}.json`)
+    try {
+      oCurrent = await import(`../locales/${lang}/${ns}.json`)
       .then(m => m.default);
-    verifyEntries(oDev, oCurrent);
-
-    res[ns] = oCurrent;
+      verifyEntries(oDev, oCurrent);
+      res[ns] = oCurrent;
+    } catch (e) {
+      console.log(`${lang} file of ${ns} doesn't exists`);
+      res[ns] = oDev;
+    }
   }
 
   return res;
