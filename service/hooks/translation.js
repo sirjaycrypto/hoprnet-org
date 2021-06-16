@@ -1,6 +1,5 @@
 import parse, { domToReact } from 'html-react-parser';
 import handler from 'next-translate/useTranslation';
-import React from 'react';
 
 /**
  * Translate HTML and text
@@ -18,9 +17,14 @@ export function useTranslation() {
       if (domNode.attribs.class) {
         domNode.attribs['className'] = domNode.attribs.class;
         delete domNode.attribs.class;
-        
-        return domToReact(domNode);
       }
+
+      if (domNode.attribs.classname) {
+        domNode.attribs['className'] = domNode.attribs.classname;
+        delete domNode.attribs.classname;
+      }
+
+      return domToReact(domNode);
     },
   };
 
