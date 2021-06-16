@@ -194,5 +194,37 @@
       "alt": "Money Today"
     },
     "title": "In The News"
+  },
+  "hoperIs": {
+    "enablingData": {
+      "main": "We're building the HOPR network to give people and companies control over their level of data privacy.",
+      "title": "Enabling Data Privacy"
+    },
+    "openSource": {
+      "main": "The HOPR community fights for the digital privacy of the future. Everybody can become a part of our movement.",
+      "title": "Open Source Support"
+    },
+    "personal": {
+      "for": "Personal",
+      "main": "From testnet game sessions to reward bounties, join our <a href=\"https:\/\/t.me/hoprnet\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-color-high underline\">Telegram</a> to become part of our growing community.<br />",
+      "title": "Hackathons + Community"
+    },
+    "professional": {
+      "for": "Professional",
+      "main": "HOPR is providing worry-free privacy to everyone. <a href=\"/partners\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-color-high underline\">Reach out to us</a> if you and your customers deserve the best.",
+      "title": "Your company"
+    },
+    "title": "HOPR Is",
+    "titleBottom": "We Want You To Grow"
+  },
+  "blogs": {
+    "title": "HOPR Blogs"
+  },
+  "team": {
+    "paragraph": "<p> HOPR is a digital commons built by and for an open community that has no single owner or single point of failure. At the same time, delivery of complex software projects needs commitment and accountability. <br /> Therefore, the HOPR Association provided a first grant to the HOPR Services AG to develop and support a first version of the HOPR protocol in Typescript to bootstrap the ecosystem. </p>",
+    "title": "Team"
+  },
+  "contact": {
+    "getAll": "Get All Our Latest Updates!"
   }
 }

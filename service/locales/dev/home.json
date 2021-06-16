@@ -146,5 +146,37 @@
       "alt": "home_news_moneyToday_alt"
     },
     "title": "home_news_title"
+  },
+  "hoperIs": {
+    "enablingData": {
+      "main": "home_hoperIs_enablingData_main",
+      "title": "home_hoperIs_enablingData_title"
+    },
+    "openSource": {
+      "main": "home_hoperIs_openSource_main",
+      "title": "home_hoperIs_openSource_title"
+    },
+    "personal": {
+      "for": "home_hoperIs_personal_for",
+      "main": "home_hoperIs_personal_main",
+      "title": "home_hoperIs_personal_title"
+    },
+    "professional": {
+      "for": "home_hoperIs_professional_for",
+      "main": "home_hoperIs_professional_main",
+      "title": "home_hoperIs_professional_title"
+    },
+    "title": "home_hoperIs_title",
+    "titleBottom": "home_hoperIs_titleBottom"
+  },
+  "blogs": {
+    "title": "home_blogs_title"
+  },
+  "team": {
+    "paragraph": "home_team_paragraph",
+    "title": "home_team_title"
+  },
+  "contact": {
+    "getAll": "home_contact_getAll"
   }
 }
