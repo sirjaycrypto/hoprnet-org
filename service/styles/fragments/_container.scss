@@ -42,6 +42,10 @@ $container--padding__desktop: 24px; //
     max-width: $container--width-sm;
   }
 
+  .container-sm-menu {
+    max-width: 1000px;
+  }
+
   .container-xs {
     max-width: $container--width-xs;
   }

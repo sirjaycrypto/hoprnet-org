@@ -48,7 +48,7 @@ export default function Navbar({ visibleNow }) {
           className={youDown ? 'add-scroll-menu' : isHome() ? '' : 'nav-style-no-home'}
           transition={{ delay: 0.8 }}
         >
-          <div className={'container-sm ' + (activaMenu ? 'add-shadow' : '')}>
+          <div className={'container-sm-menu ' + (activaMenu ? 'add-shadow' : '')}>
             <div className="help-flex">
               <Link href="/">
                 <img
