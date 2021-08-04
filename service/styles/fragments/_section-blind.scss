@@ -281,7 +281,7 @@
   border-radius: 20px;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   position: relative;
   z-index: 2;
 
@@ -292,7 +292,7 @@
   }
 
   & > div {
-    width: 50%;
+    width: 49%;
     @include responsive(tablet) {
       width: 100%;
     }
@@ -303,6 +303,43 @@
 
     @include responsive(tablet) {
       box-shadow: none;
+    }
+
+    .btn-row {
+      display: flex;
+
+      .btn-ticket {
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      img {
+        margin: 0;
+        width: 50px;
+      }
+    }
+  }
+
+  .stake {
+    box-shadow: 4px 0px 10px 0px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+
+    @include responsive(tablet) {
+      box-shadow: none;
+    }
+
+    .btn-ticket {
+      margin-bottom: 50px;
+      margin-top: 0;
+    }
+
+    .label-remember {
+      margin: 24px 0;
+    }
+
+    .stacking {
+      margin-bottom: 0px;
+      margin-top: 40px;
     }
   }
 
