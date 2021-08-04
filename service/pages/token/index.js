@@ -25,6 +25,7 @@ export default function Index({ setLoading }) {
   const [visibleNow, setVisibleNow] = useState('');
   const [modePreSales, setModePreSales] = useState(false);
   const [launchMode, setLaunchMode] = useState(false);
+  const [url, setUrl] = useState('');
   const [showModal, setShowModal] = useState(undefined);
   const [showPublicMsg, setShowPublicMsg] = useState(false);
   const [thisBanner, setThisBanner] = useState(0);
@@ -129,6 +130,11 @@ export default function Index({ setLoading }) {
     }, 200);
   };
 
+  const toggleModal = url => {
+    setUrl(url);
+    setShowModal(true);
+  };
+
   const getVideoByLang = () => {
     switch (lang) {
       case 'en':
@@ -156,7 +162,7 @@ export default function Index({ setLoading }) {
 
   return (
     <Layout visibleNow={visibleNow}>
-      <Modal showModal={showModal} setShowModal={setShowModal} />
+      <Modal showModal={showModal} setShowModal={setShowModal} url={url} />
       <ChooseLanguage />
       <Hero
         modePreSales={modePreSales}
@@ -169,7 +175,7 @@ export default function Index({ setLoading }) {
       <HomeHeadline
         launchMode={launchMode}
         modePreSales={modePreSales}
-        setShowModal={setShowModal}
+        toggleModal={toggleModal}
       />
       <section id="video-area" className="video-home" ref={videoRef}>
         <iframe

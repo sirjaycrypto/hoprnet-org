@@ -2,7 +2,7 @@ import React, { forwardRef, useState, useEffect } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 import { Button } from '..';
 
-const Modal = forwardRef(({ showModal, setShowModal }, ref) => {
+const Modal = forwardRef(({ showModal, setShowModal, url }, ref) => {
   const { t } = useTranslation();
 
   return (
@@ -26,7 +26,7 @@ const Modal = forwardRef(({ showModal, setShowModal }, ref) => {
                 target="_blank"
                 content={t('home:modal.btnIAgree')}
                 onClick={() => setShowModal(false)}
-                to="https://app.uniswap.org/#/swap?outputCurrency=0xf5581dfefd8fb0e4aec526be659cfab1f8c781da"
+                to={url}
               />
             </div>
           </div>
