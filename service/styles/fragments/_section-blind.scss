@@ -291,9 +291,16 @@
     width: 75%;
   }
 
+  @include responsive(phone) {
+    flex-direction: column;
+    margin: 0 auto;
+    width: 90%;
+  }
+
   & > div {
     width: 49%;
     @include responsive(tablet) {
+      margin-bottom: 24px;
       width: 100%;
     }
   }
@@ -308,9 +315,31 @@
     .btn-row {
       display: flex;
 
+      @include responsive(tablet) {
+        flex-direction: column;
+      }
+
       .btn-ticket {
         align-items: center;
         justify-content: space-between;
+        @include responsive(tablet) {
+          align-items: center;
+          margin-bottom: 0;
+        }
+
+        @include responsive(phone) {
+          line-height: 45px;
+
+          img {
+            width: 35px;
+          }
+        }
+      }
+
+      .btn-ticket:last-child {
+        @include responsive(tablet) {
+          margin-bottom: 50px;
+        }
       }
 
       img {
