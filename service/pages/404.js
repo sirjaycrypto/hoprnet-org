@@ -6,7 +6,7 @@ export default function NotFound() {
     <Layout>
       <section className="section-notfound invert-color">
         <div className="container">
-          <div class="section-inner">
+          <div className="section-inner">
             <div className="textContainer">
               Whoops! (Or hop-la, as we say in Switzerland)
               <br />

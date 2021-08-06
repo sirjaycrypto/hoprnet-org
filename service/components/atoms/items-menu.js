@@ -22,6 +22,10 @@ export default function ItemsMenu() {
       name: 'Token',
     },
     {
+      path: 'https://stake.hoprnet.org/',
+      name: 'Stacking',
+    },
+    {
       path: '/jungfrau',
       name: 'Jungfrau',
     },

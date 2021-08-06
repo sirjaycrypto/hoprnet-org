@@ -1,12 +1,13 @@
 import React, { useEffect, forwardRef } from 'react';
 import { useTranslation } from '../../hooks/translation';
 import { usePrice } from '../hooks/usePrice';
+import { Button } from '..';
 
 const HomeHeadline = forwardRef((
   {
     launchMode,
     modePreSales,
-    setShowModal,
+    toggleModal,
   },
   ref
 ) => {
@@ -28,7 +29,7 @@ const HomeHeadline = forwardRef((
         <div className="container">
           <div className="wrapper-sales-for">
             <div className="card-view the-balancer">
-            <h3 style={{ fontWeight: 'bold' }}>{t('common:nowOnUnisap')}</h3>
+              <h3 style={{ fontWeight: 'bold' }}>{t('common:nowOnUnisap')}</h3>
               <div className="containerImg">
                 <img
                   src="/assets/images/HPR_Favicon.svg"
@@ -44,9 +45,49 @@ const HomeHeadline = forwardRef((
                   {t('home:headline.txtDownNum')}
                 </p>
               </div>
-              <div className="btn-ticket" onClick={() => setShowModal(true)}>
-                {modePreSales || launchMode && <span>{t('home:banner.button')}</span>}
+              <div className="btn-row">
+                <div
+                  className="btn-ticket"
+                  onClick={() => toggleModal(
+                    'https://app.uniswap.org/#/swap?outputCurrency=0xf5581dfefd8fb0e4aec526be659cfab1f8c781da'
+                  )}
+                >
+                  <img
+                    src="/assets/images/uniswap.svg"
+                    alt={t('home:headline.titleTicket')}
+                  />
+                  <span>{t('home:banner.button')}</span>
+                </div>
+                <div
+                  className="btn-ticket"
+                  onClick={() => toggleModal('https://ascendex.com/en/basic/cashtrade-spottrading/usdt/hopr')}
+                >
+                  <img
+                    src="/assets/images/ascendex.svg"
+                    alt={t('home:headline.titleTicket')}
+                  />
+                  <span>{t('home:banner.button')}</span>
+                </div>
               </div>
+            </div>
+            <div className="card-view stake">
+              <h3 style={{ fontWeight: 'bold' }}>{t('common:staking')}</h3>
+              <div className="containerImg">
+                <img
+                  className="stacking"
+                  src="/assets/images/hopr_stake.png"
+                  alt={t('home:headline.titleTicket')}
+                />
+                <p className="label-remember">
+                  18.25% base APR plus NFT APR boost
+                </p>
+              </div>
+              <Button
+                className="btn-ticket"
+                target="_blank"
+                content={t('home:banner.stake')}
+                to="https://stake.hoprnet.org"
+              />
             </div>
           </div>
         </div>
