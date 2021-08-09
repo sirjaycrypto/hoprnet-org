@@ -23,7 +23,7 @@ export default function ItemsMenu() {
     },
     {
       path: 'https://stake.hoprnet.org/',
-      name: 'Stacking',
+      name: 'Staking',
     },
     {
       path: '/jungfrau',
@@ -54,9 +54,7 @@ export default function ItemsMenu() {
           const { path, name } = e;
           return (
             <Link key={index} href={path}>
-              <a className={router.pathname === path ? 'active' : ''}>
-                {name}
-              </a>
+              <a className={router.pathname === path ? 'active' : ''}>{name}</a>
             </Link>
           );
         })}
