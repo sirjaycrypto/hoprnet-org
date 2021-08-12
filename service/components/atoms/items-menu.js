@@ -23,7 +23,7 @@ export default function ItemsMenu() {
     },
     {
       path: 'https://stake.hoprnet.org/',
-      name: 'Stacking',
+      name: 'Staking',
     },
     {
       path: '/jungfrau',
