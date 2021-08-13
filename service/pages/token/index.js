@@ -158,7 +158,7 @@ export default function Index({ setLoading }) {
       default:
         return 'https://player.vimeo.com/video/508840889';
     }
-  }
+  };
 
   return (
     <Layout visibleNow={visibleNow}>

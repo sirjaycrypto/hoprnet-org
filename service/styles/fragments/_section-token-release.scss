@@ -1,6 +1,5 @@
 .section-token-release {
   margin-bottom: 100px;
-
   @include responsive(tablet) {
     margin-bottom: 50px;
   }
@@ -83,6 +82,7 @@
       overflow: scroll;
     }
   }
+
 }
 
 .table-info {
@@ -113,6 +113,7 @@
     }
 
     .list-table {
+      padding: 10px;
       ul {
         li {
           font-size: 18px;
@@ -126,6 +127,9 @@
             letter-spacing: 0.116667px;
           }
         }
+      }
+      .external-link {
+        padding: 10px;
       }
     }
   }
