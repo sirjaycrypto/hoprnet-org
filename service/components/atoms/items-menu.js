@@ -54,9 +54,7 @@ export default function ItemsMenu() {
           const { path, name } = e;
           return (
             <Link key={index} href={path}>
-              <a className={router.pathname === path ? 'active' : ''}>
-                {name}
-              </a>
+              <a className={router.pathname === path ? 'active' : ''}>{name}</a>
             </Link>
           );
         })}
