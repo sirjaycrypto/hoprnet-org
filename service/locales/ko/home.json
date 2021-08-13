@@ -162,7 +162,7 @@
   },
   "useCases": {
     "title": "Use Cases",
-    "content": "<p> Your data, your decision. <br \/> <br \/> HOPR keeps any exchange of data private. <br \/> The <a href=\"\/layer0-data-privacy#how\"><span class=\"text-color-high underline\">HOPR protocol<\/span><\/a> is a layer-0 privacy foundation for anyone to <a href=\"https:\/\/www.coindesk.com\/dont-hodl-buidl-blockchain-tech-will-add-value-2018\" target=\"_blank\" rel=\"noopener noreferrer\" ><span class=\"text-color-high underline\">build<\/span><\/a> on.<\/p><p> Standard end-to-end encryption does not provide sufficient privacy. <br \/> It leaks important metadata, such as who is exchanging data, when, and how often. Securing network-level privacy with HOPR unlocks a range of opportunities such as:<\/p>"
+    "content": "<p> Your data, your decision. <br \/> <br \/> HOPR keeps any exchange of data private. <br \/> The <a href=\"\/technology#hopr-protocol\"><span class=\"text-color-high underline\">HOPR protocol<\/span><\/a> is a layer-0 privacy foundation for anyone to <a href=\"https:\/\/www.coindesk.com\/dont-hodl-buidl-blockchain-tech-will-add-value-2018\" target=\"_blank\" rel=\"noopener noreferrer\" ><span class=\"text-color-high underline\">build<\/span><\/a> on.<\/p><p> Standard end-to-end encryption does not provide sufficient privacy. <br \/> It leaks important metadata, such as who is exchanging data, when, and how often. Securing network-level privacy with HOPR unlocks a range of opportunities such as:<\/p>"
   },
   "connectDevices": {
     "title": "Connect devices and clouds",

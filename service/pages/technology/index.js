@@ -29,7 +29,10 @@ export default function Index() {
             </div>
           </div>
         </HeroInternal>
-        <section className="continue-hero-internal padding-section-aux invert-color ">
+        <section
+          className="continue-hero-internal padding-section-aux invert-color "
+          id="hopr-protocol"
+        >
           <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back">
             <h2>{t('tech:second.title')}</h2>
 
