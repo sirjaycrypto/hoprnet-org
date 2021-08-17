@@ -82,7 +82,6 @@
       overflow: scroll;
     }
   }
-
 }
 
 .table-info {
@@ -115,6 +114,7 @@
     .list-table {
       padding: 10px;
       ul {
+        margin-bottom: 5px;
         li {
           font-size: 18px;
           line-height: 30px;
@@ -130,6 +130,11 @@
       }
       .external-link {
         padding: 10px;
+        font-family: 'Source Code Pro', monospace;
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: 0.15px;
+        color: #292941;
       }
     }
   }
