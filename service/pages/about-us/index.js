@@ -119,7 +119,7 @@ export default function Index() {
               {t('about:hero.paragraphE')}
               <a
                 className="link-out"
-                href="https://hopr.swiss/who-is-HOPR#team"
+                href="https://hoprnet.org/de/book-of-hopr"
                 target="_blank"
                 rel="noopener"
               >

@@ -87,7 +87,8 @@
     "subTitle": "home_token_subTitle",
     "thirdSubTitle": "home_token_thirdSubTitle",
     "title": "home_token_title",
-    "textEnding": "home_token_textEnding"
+    "textEnding": "home_token_textEnding",
+    "additionalInfo": "home_token_additionalInfo"
   },
   "why": {
     "btnLabel": "home_why_btnLabel",

@@ -211,7 +211,7 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
               if (aValue[0] % 2 !== 0 || nIndex === dataSupply.length - 1) {
                 return aValue[1];
               }
-              
+
               return '';
             },
             fontFamily: 'Source Code Pro',
@@ -314,6 +314,10 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
                 <li>{t('home:token.listItemE')}</li>
                 <li>{t('home:token.listItemF')}</li>
               </ul>
+              <span className="external-link">
+                {t('home:token.additionalInfo')}
+                <a href="https://coinmarketcap.com/es/currencies/hopr/" target="_blank">COINMARKETCAP.</a>
+              </span>
             </div>
           </div>
         </div>
