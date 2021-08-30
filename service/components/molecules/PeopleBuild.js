@@ -31,9 +31,9 @@ const data = [
   },
   {
     link: '#',
-    img: '/assets/images/team/simona.jpg',
-    name: 'Simona Fontanella',
-    label: 'Operations Manager',
+    img: '/assets/images/team/HOPRNET_Vanessa.jpg',
+    name: 'Vanessa Bocoum',
+    label: 'Office Hero',
   },
   {
     link: '#',
@@ -55,7 +55,7 @@ const data = [
   },
   {
     link: '#',
-    img: '/assets/images/team/hopr_Andrius.png',
+    img: '/assets/images/team/HOPRNET_Andrius.jpg',
     name: 'Andrius Stepaitis',
     label: 'Community Manager',
   },
@@ -75,13 +75,19 @@ const data = [
     link: '#',
     img: '/assets/images/team/Bogdan_Onica.png',
     name: 'Bogdan Onica',
-    label: 'Marketing Specialist',
+    label: 'Online Marketing Specialist',
   },
   {
     link: '#',
     img: '/assets/images/team/Tino_Breddin_gelb.png',
     name: 'Tino Breddin',
     label: 'DevOps Engineer',
+  },
+  {
+    link: '#',
+    img: '/assets/images/team/HOPRNET_Andrey.jpg',
+    name: 'Andrey Kiryushkin',
+    label: 'Protocol Engineer',
   },
 ];
 
