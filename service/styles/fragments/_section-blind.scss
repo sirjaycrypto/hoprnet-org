@@ -146,8 +146,8 @@
     margin: 24px auto 50px auto;
     padding: 0 1rem;
     width: fit-content;
-
-    span{
+    text-decoration: none;
+    span {
       font-weight: bold;
       font-size: 14px;
     }
@@ -345,6 +345,7 @@
 
       img {
         margin: 0;
+        margin-right: 10px;
         width: 50px;
       }
     }
