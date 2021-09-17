@@ -95,6 +95,12 @@ const data = [
     name: 'Lukas Pohanka',
     label: 'Protocol engineer',
   },
+  {
+    link: '#',
+    img: '/assets/images/team/JOSH_SCHMITZ.png',
+    name: 'Josh Schmitz',
+    label: 'Online Marketing Specialist',
+  },
 ];
 
 export default function PeopleBuild() {
