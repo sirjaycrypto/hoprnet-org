@@ -89,6 +89,12 @@ const data = [
     name: 'Andrey Kiryushkin',
     label: 'Protocol Engineer',
   },
+  {
+    link: '#',
+    img: '/assets/images/team/LUKAS_POHANKA.png',
+    name: 'Lukas Pohanka',
+    label: 'Protocol engineer',
+  },
 ];
 
 export default function PeopleBuild() {
