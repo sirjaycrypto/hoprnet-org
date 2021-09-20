@@ -49,12 +49,6 @@ const data = [
   },
   {
     link: '#',
-    img: '/assets/images/team/hopr_Amira_Bouguera.png',
-    name: 'Amira Bouguera',
-    label: 'Cryptographer and protocol engineer',
-  },
-  {
-    link: '#',
     img: '/assets/images/team/HOPRNET_Andrius.jpg',
     name: 'Andrius Stepaitis',
     label: 'Community Manager',
