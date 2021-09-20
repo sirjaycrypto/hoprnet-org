@@ -136,10 +136,7 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
     ],
   };
 
-  const dataDate = dataSupply.map((item) => {
-    const sMonth = t('home:graphic.month', { nMonth: item.Date });
-    return item.Date + '_' + sMonth;
-  });
+  const dataDate = dataSupply.map((item) =>  t('home:graphic.month', { nMonth: item.Date }));
 
   const processData = key =>
     dataSupply.map(oItem => {
@@ -206,14 +203,7 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
             display: false,
           },
           ticks: {
-            callback: (sValue, nIndex) => {
-              const aValue = sValue.split('_');
-              if (aValue[0] % 2 !== 0 || nIndex === dataSupply.length - 1) {
-                return aValue[1];
-              }
-
-              return '';
-            },
+            callback: (sValue) => sValue,
             fontFamily: 'Source Code Pro',
             fontSize: 13,
             fontColor: '#414141',
