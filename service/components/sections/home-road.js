@@ -104,7 +104,7 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
                   <span></span>
                 </div>
                 <div className="area-info">
-                  <h4>{title}</h4>
+                  <h4 style={{ alignSelf: 'flex-start'}}>{title}</h4>
                   <p>{about}</p>
                   {links && (
                     <div className="links-exp">
