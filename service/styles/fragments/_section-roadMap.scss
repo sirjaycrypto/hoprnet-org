@@ -48,6 +48,7 @@
   }
   .links-exp{
     color:  #1100b4;
+    align-self: flex-start;
   }
 
   .container {
@@ -102,7 +103,11 @@
     flex-direction: column;
     text-align: start;
     padding-bottom: 2rem;
-    h4,
+
+    h4 {
+      align-self: flex-start;
+    }
+
     p,
     a {
       padding: 0;
