@@ -25,7 +25,8 @@
     "btnCommunity2": "PRE-LAUNCH",
     "btnPublic1":"PUBLIC",
     "btnPublic2": "LAUNCH",
-    "disclaimer": "HAFTUNGSAUSSCHLUSS"
+    "disclaimer": "HAFTUNGSAUSSCHLUSS",
+    "stake": "Staking von HOPR-Token"
   },
   "features": {
     "pay": "Zahlen",
@@ -93,7 +94,8 @@
     "thirdSubTitle": "Distribution der Tokens",
     "title": "Token Release",
     "textEnding": "home_token_textEnding",
-    "additionalInfo": "Additional information on "
+    "additionalInfo": "Additional information on ",
+    "tokenLaunch": "Token werden am 27. jedes Monats freigegeben."
   },
   "why": {
     "btnLabel": "home_why_btnLabel",

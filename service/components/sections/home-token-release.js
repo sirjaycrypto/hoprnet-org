@@ -32,14 +32,12 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
   const [isMobile] = useMobile();
   const { t } = useTranslation();
 
-  const resultPie = Object.keys(dataPie).map((key) =>
-    dataPie[key]
-  );
+  const resultPie = Object.keys(dataPie).map((key) => dataPie[key]);
 
   const allSumResultPie = resultPie.reduce((a, b) => a + b, 0);
 
-  const percentagesPieItem = Object.keys(dataPie).map((key) =>
-    (dataPie[key] / allSumResultPie) * 100
+  const percentagesPieItem = Object.keys(dataPie).map(
+    (key) => (dataPie[key] / allSumResultPie) * 100
   );
 
   const labelsPie = [
@@ -136,10 +134,12 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
     ],
   };
 
-  const dataDate = dataSupply.map((item) =>  t('home:graphic.month', { nMonth: item.Date }));
+  const dataDate = dataSupply.map((item) =>
+    t('home:graphic.month', { nMonth: item.Date })
+  );
 
-  const processData = key =>
-    dataSupply.map(oItem => {
+  const processData = (key) =>
+    dataSupply.map((oItem) => {
       let nElem = oItem[key];
       return nElem ? parseFloat(nElem.split(',').join('').trim()) : undefined;
     });
@@ -238,48 +238,49 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
     labels: dataDate,
     datasets: start
       ? [
-        {
-          ...oLineDefaultOptions,
-          label: t('home:graphic.public'),
-          data: processData('Public Distribution'),
-          backgroundColor: ['#FEFDAF'],
-          pointBackgroundColor: '#FEFDAF',
-        },
-        {
-          ...oLineDefaultOptions,
-          label: t('home:graphic.cover'),
-          data: processData('Cover Traffic'),
-          backgroundColor: ['#FEFDAF'],
-          pointBackgroundColor: '#FEFDAF',
-        },
-        {
-          ...oLineDefaultOptions,
-          label: t('home:graphic.bounties'),
-          data: processData('Bounties'),
-          backgroundColor: ['#C0F3FF'],
-          pointBackgroundColor: '#C0F3FF',
-        },
-        {
-          ...oLineDefaultOptions,
-          label: t('home:graphic.pre'),
-          data: processData('Early Token Buyers'),
-          backgroundColor: ['#4B79B4'],
-          pointBackgroundColor: '#4B79B4',
-        },
-        {
-          ...oLineDefaultOptions,
-          label: t('home:graphic.team'),
-          data: processData('Team & Advisors'),
-          backgroundColor: ['#1423C1'],
-          pointBackgroundColor: '#1423C1',
-        },
-        {
-          ...oLineDefaultOptions,
-          label: t('home:graphic.treasury'),
-          data: processData('Treasury'),
-          backgroundColor: ['#060D62'],
-          pointBackgroundColor: '#060D62',
-        }]
+          {
+            ...oLineDefaultOptions,
+            label: t('home:graphic.public'),
+            data: processData('Public Distribution'),
+            backgroundColor: ['#FEFDAF'],
+            pointBackgroundColor: '#FEFDAF',
+          },
+          {
+            ...oLineDefaultOptions,
+            label: t('home:graphic.cover'),
+            data: processData('Cover Traffic'),
+            backgroundColor: ['#FEFDAF'],
+            pointBackgroundColor: '#FEFDAF',
+          },
+          {
+            ...oLineDefaultOptions,
+            label: t('home:graphic.bounties'),
+            data: processData('Bounties'),
+            backgroundColor: ['#C0F3FF'],
+            pointBackgroundColor: '#C0F3FF',
+          },
+          {
+            ...oLineDefaultOptions,
+            label: t('home:graphic.pre'),
+            data: processData('Early Token Buyers'),
+            backgroundColor: ['#4B79B4'],
+            pointBackgroundColor: '#4B79B4',
+          },
+          {
+            ...oLineDefaultOptions,
+            label: t('home:graphic.team'),
+            data: processData('Team & Advisors'),
+            backgroundColor: ['#1423C1'],
+            pointBackgroundColor: '#1423C1',
+          },
+          {
+            ...oLineDefaultOptions,
+            label: t('home:graphic.treasury'),
+            data: processData('Treasury'),
+            backgroundColor: ['#060D62'],
+            pointBackgroundColor: '#060D62',
+          },
+        ]
       : '',
   };
 
@@ -306,7 +307,12 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
               </ul>
               <span className="external-link">
                 {t('home:token.additionalInfo')}
-                <a href="https://coinmarketcap.com/es/currencies/hopr/" target="_blank">COINMARKETCAP.</a>
+                <a
+                  href="https://coinmarketcap.com/es/currencies/hopr/"
+                  target="_blank"
+                >
+                  COINMARKETCAP.
+                </a>
               </span>
             </div>
           </div>
@@ -322,10 +328,17 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
           <h3>{t('home:token.thirdSubTitle')} (M)</h3>
           <div className="container-chart">
             <div className="help-scroll">
-              <Line data={dataTokenSupply} height={600} width={370} options={dataOption} />
+              <Line
+                data={dataTokenSupply}
+                height={600}
+                width={370}
+                options={dataOption}
+              />
             </div>
           </div>
         </div>
+        <br />
+        <p>{t('home:token.tokenLaunch')}</p>
       </div>
     </section>
   );

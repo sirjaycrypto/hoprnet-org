@@ -25,7 +25,8 @@
     "btnCommunity2": "ÖN-LANSMANI",
     "btnPublic1":"GENEL",
     "btnPublic2": "LANSMAN",
-    "disclaimer": "SORUMLULUK REDDİ"
+    "disclaimer": "SORUMLULUK REDDİ",
+    "stake": "NASIL STAKE YAPILIR?"
   },
   "features": {
     "pay": "Ödeme Yap",
@@ -93,7 +94,8 @@
     "thirdSubTitle": "Token Arz Dağılımı",
     "title": "Token Salınımı",
     "textEnding": "home_token_textEnding",
-    "additionalInfo": "Additional information on "
+    "additionalInfo": "Additional information on ",
+    "tokenLaunch": "Jetonlar her ayın 27'sinde serbest bırakılır"
   },
   "why": {
     "btnLabel": "home_why_btnLabel",

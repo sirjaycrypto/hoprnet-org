@@ -25,7 +25,8 @@
     "btnCommunity2": "ДЛЯ КОМЬЮНИТИ",
     "btnPublic1":"ПУБЛИЧНАЯ",
     "btnPublic2": "ПРОДАЖА",
-    "disclaimer": "ОТКАЗ ОТ ОТВЕТСТВЕННОСТИ"
+    "disclaimer": "ОТКАЗ ОТ ОТВЕТСТВЕННОСТИ",
+    "stake": "КАК СТЕКАТЬ HOPR"
   },
   "features": {
     "pay": "Оплата",
@@ -93,7 +94,8 @@
     "thirdSubTitle": "Распределение токенов",
     "title": "Выпуск токена",
     "textEnding": "home_token_textEnding",
-    "additionalInfo": "Additional information on "
+    "additionalInfo": "Additional information on ",
+    "tokenLaunch": "Токены выпускаются 27 числа каждого месяца"
   },
   "why": {
     "btnLabel": "home_why_btnLabel",

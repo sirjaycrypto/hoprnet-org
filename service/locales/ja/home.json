@@ -25,7 +25,8 @@
     "btnCommunity2": "コミュニティ",
     "btnPublic1":"一般",
     "btnPublic2": "発売",
-    "disclaimer": "免責事項"
+    "disclaimer": "免責事項",
+    "stake": "ステーク方法"
   },
   "features": {
     "pay": "払う",
@@ -93,7 +94,8 @@
     "thirdSubTitle": "トークン供給の配布",
     "title": "トークンのリリース",
     "textEnding": "home_token_textEnding",
-    "additionalInfo": "Additional information on "
+    "additionalInfo": "Additional information on ",
+    "tokenLaunch": "トークンは毎月27日にリリースされます"
   },
   "why": {
     "btnLabel": "home_why_btnLabel",
