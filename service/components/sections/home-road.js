@@ -70,19 +70,9 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
       about: t('home:roadMap.item5Description'),
     },
     {
-      date: t('home:roadMap.item6Date'),
-      title: t('home:roadMap.item6Title'),
-      about: t('home:roadMap.item6Description'),
-    },
-    {
       date: t('home:roadMap.item7Date'),
       title: t('home:roadMap.item7Title'),
       about: t('home:roadMap.item7Description'),
-    },
-    {
-      date: t('home:roadMap.item8Date'),
-      title: t('home:roadMap.item8Title'),
-      about: t('home:roadMap.item8Description'),
     },
     {
       date: t('home:roadMap.item9Date'),
@@ -94,6 +84,17 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
       title: t('home:roadMap.item10Title'),
       about: t('home:roadMap.item10Description'),
     },
+    {
+      date: t('home:roadMap.item6Date'),
+      title: t('home:roadMap.item6Title'),
+      about: t('home:roadMap.item6Description'),
+    },
+    {
+      date: t('home:roadMap.item8Date'),
+      title: t('home:roadMap.item8Title'),
+      about: t('home:roadMap.item8Description'),
+    },
+    
   ];
 
   return (
@@ -114,7 +115,7 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
                 </div>
                 <div className="area-info">
                   <h4>{title}</h4>
-                  <p>{about}</p>
+                  <p className="style-about">{about}</p>
                   {links && (
                     <div className="links-exp">
                       {'('}
