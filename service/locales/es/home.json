@@ -25,7 +25,8 @@
     "btnCommunity2": "PARA LA COMUNIDAD",
     "btnPublic1": "LANZAMIENTO",
     "btnPublic2": "PÚBLICO",
-    "disclaimer": "Disclaimer"
+    "disclaimer": "Disclaimer",
+    "stake": "CÓMO HACER STAKING"
   },
   "features": {
     "pay": "Paga",
@@ -93,7 +94,8 @@
     "thirdSubTitle": "Distribución del suministro del Token",
     "title": "Lanzamiento del Token",
     "textEnding": "VC-NOTE Fusce sagittis mauris at purus venenatis, sed sagittis est feugiat. Aenean et malesuada massa. Morbi dignissim venenatis eros ut lobortis. Cras eu libero mi. Etiam ullamcorper sapien non est pretium elementum. Donec eget risus sollicitudin, ultricies est ut, aliquam neque. Mauris et dictum ex. Nulla ultrices mollis dui. Pellentesque vel leo ac lorem maximus convallis quis ac est. Ut pellentesque quis nisl sed dictum.",
-    "additionalInfo": "Más información en "
+    "additionalInfo": "Más información en ",
+    "tokenLaunch": "Los tokens se liberarán el día 27 de cada mes"
   },
   "why": {
     "btnLabel": "Get HOPR-Token on SECRET",
@@ -135,22 +137,26 @@
     "item5Description": "El lanzamiento de HOPR Jungfrau es la primera versión con funciones completas del nodo y token HOPR.",
     "item5Title": "Lanzamiento Jungfrau",
     "item5L1": "Página de venta",
-    "item6Date": "3º Trimestre de 2021 ",
-    "item6Description": "El lanzamiento Eiger de HOPR presenta el cover traffic, completando el futuro del protocolo.",
+    "item6Date": "Q1 2022 ",
+    "item6Description": "Lanzamiento de Eiger el lanzamiento de Eiger de HOPR iniciará el tráfico de cobertura, completando así la función del protocolo.",
     "item6Title": "Lanzamiento Eiger",
     "item6L1": "Blogpost",
     "item7Date": "2º Trimestre de 2021 ",
     "item7Description": "El enfoque de HOPR sobre un gobierno descentralizado que empodera a la comunidad se solidifica con el lanzamiento del HOPR DAO que abarca todo el proyecto.",
     "item7Title": "Lanzamiento del HOPR DAO",
     "item7L1": "DecenGov",
-    "item8Date": "2º Trimestre de 2021",
-    "item8Description": "Una API robusta que permite a otros construir dApps con privacidad de metadatos integrado asi como servicios sobre el protocolo HOPR.",
-    "item8Title": "Lanzamiento del Ecosistema",
+    "item8Date": "Q2 2022",
+    "item8Description": "Una API consolidada permitirá a los demás el poder construir dApps y servicios de metadatos privados sobre el protocolo de HOPR.",
+    "item8Title": "Lanzamiento del ecosistema",
     "item8L1": "Blogpost",
-    "item9Date": "4º Trimestre de 2021 ",
-    "item9Description": "Todos los dueños del token podrán votar en la primer Asamblea General de la Asociación HOPR.",
-    "item9Title": "Elección a base de Token",
+    "item9Date": "Q3 2021",
+    "item9Description": "Programa de staking de HOPR gamificado con un sistema de incentivación por NFT.",
+    "item9Title": "Gamificación del Programa de Staking",
     "item9L1": "Blogpost",
+    "item10Date": "Q4 2021",
+    "item10Description": "Lanzamiento de la primera aplicación descentralizada y ejecutada sobre la red HOPR.",
+    "item10Title": "Lanzamiento de la primera dApp de HOPR",
+    "item10L1": "Blogpost",
     "title": " MAPA VIAL"
   },
   "modal": {

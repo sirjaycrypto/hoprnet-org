@@ -95,6 +95,12 @@ const data = [
     name: 'Josh Schmitz',
     label: 'Online Marketing Specialist',
   },
+  {
+    link: '#',
+    img: '/assets/images/team/ELEONÓRA_SZANYI.png',
+    name: 'Eleonóra Szanyi',
+    label: 'Data Scientist Intern',
+  },
 ];
 
 export default function PeopleBuild() {
