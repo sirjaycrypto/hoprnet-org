@@ -20,6 +20,7 @@ export default function ItemsMenu() {
     {
       path: 'https://stake.hoprnet.org/',
       name: 'Staking',
+      target: '_blank',
     },
     {
       path: '/jungfrau',
@@ -28,10 +29,12 @@ export default function ItemsMenu() {
     {
       path: 'https://github.com/hoprnet/hopr-sh/blob/main/README.md',
       name: 'Run Node',
+      target: '_blank',
     },
     {
       path: 'https://docs.hoprnet.org/',
       name: 'Docs',
+      target: '_blank',
     },
     {
       path: '/blog',
@@ -40,6 +43,7 @@ export default function ItemsMenu() {
     {
       path: 'https://forum.hoprnet.org/',
       name: 'Forum',
+      target: '_blank',
     },
   ];
 
@@ -47,10 +51,10 @@ export default function ItemsMenu() {
     <>
       <div className="menu-desktop">
         {linkLocal.map((e, index) => {
-          const { path, name } = e;
+          const { path, name, target } = e;
           return (
             <Link key={index} href={path}>
-              <a className={router.pathname === path ? 'active' : ''}>{name}</a>
+              <a className={router.pathname === path ? 'active' : ''} target={target}>{name}</a>
             </Link>
           );
         })}
