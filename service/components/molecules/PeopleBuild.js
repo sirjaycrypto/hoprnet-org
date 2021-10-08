@@ -93,7 +93,7 @@ const data = [
     link: '#',
     img: '/assets/images/team/JOSH_SCHMITZ.png',
     name: 'Josh Schmitz',
-    label: 'Online Marketing Specialist',
+    label: 'Marketing Specialist',
   },
   {
     link: '#',
