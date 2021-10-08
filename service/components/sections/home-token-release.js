@@ -338,7 +338,7 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
           </div>
         </div>
         <br />
-        <p>{t('home:token.tokenLaunch')}</p>
+        <p className="token-launch">{t('home:token.tokenLaunch')}</p>
       </div>
     </section>
   );
