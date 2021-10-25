@@ -187,7 +187,7 @@ export default function Index() {
             <div className="container">
               <p>
                 {t('about:association.paragraphA')}
-                <a href="https://hopr.swiss/who-is-HOPR#z">
+                <a href="https://hopr.swiss/#board-section" target="_blank">
                   {t('common:HOPRServices')}
                 </a>
               </p>
