@@ -30,7 +30,7 @@ export default function ContactPlus() {
     },
 
     {
-      link: 'https://docs.hoprnet.org/home/',
+      link: 'http://docs.hoprnet.org/en/latest/',
       img: 'assets/images/icons/original/outdoors-mining.png',
       label: 'common:miners&Stakers',
       delayTime: '300',
