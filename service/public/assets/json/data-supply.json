@@ -1,6 +1,6 @@
 [
   {
-    "Date": 1,
+    "Date": "Jan 2021",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "0",
     "Bounties": "13,333,333",
@@ -9,7 +9,7 @@
     "Treasury": "31,875,000"
   },
   {
-    "Date": 2,
+    "Date": "Feb 2021",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "0",
     "Bounties": "13,333,333",
@@ -18,7 +18,7 @@
     "Treasury": "31,875,000"
   },
   {
-    "Date": 3,
+    "Date": "Mar 2021",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "0",
     "Bounties": "13,333,333",
@@ -27,7 +27,7 @@
     "Treasury": "31,875,000"
   },
   {
-    "Date": 4,
+    "Date": "Apr 2021",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "10,417,000",
     "Bounties": "16,666,666",
@@ -36,7 +36,7 @@
     "Treasury": "31,875,000"
   },
   {
-    "Date": 5,
+    "Date": "May 2021",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "20,834,000",
     "Bounties": "16,666,666",
@@ -45,7 +45,7 @@
     "Treasury": "31,875,000"
   },
   {
-    "Date": 6,
+    "Date": "June 2021",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "31,251,000",
     "Bounties": "16,666,666",
@@ -54,7 +54,7 @@
     "Treasury": "31,875,000"
   },
   {
-    "Date": 7,
+    "Date": "July 2021",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "41,668,000",
     "Bounties": "19,999,999",
@@ -63,7 +63,7 @@
     "Treasury": "31,875,000"
   },
   {
-    "Date": 8,
+    "Date": "Aug 2021",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "52,085,000",
     "Bounties": "19,999,999",
@@ -72,7 +72,7 @@
     "Treasury": "31,875,000"
   },
   {
-    "Date": 9,
+    "Date": "Sept 2021",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "62,502,000",
     "Bounties": "19,999,999",
@@ -81,7 +81,7 @@
     "Treasury": "31,875,000"
   },
   {
-    "Date": 10,
+    "Date": "Oct 2021",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "72,919,000",
     "Bounties": "23,333,332",
@@ -90,7 +90,7 @@
     "Treasury": "31,875,000"
   },
   {
-    "Date": 11,
+    "Date": "Nov 2021",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "83,336,000",
     "Bounties": "23,333,332",
@@ -99,7 +99,7 @@
     "Treasury": "31,875,000"
   },
   {
-    "Date": 12,
+    "Date": "Dec 2021",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "93,753,000",
     "Bounties": "23,333,332",
@@ -108,7 +108,7 @@
     "Treasury": "31,875,000"
   },
   {
-    "Date": 13,
+    "Date": "Jan 2022",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "104,170,000",
     "Bounties": "26,666,665",
@@ -117,7 +117,7 @@
     "Treasury": "63,750,000"
   },
   {
-    "Date": 14,
+    "Date": "Feb 2022",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "114,587,000",
     "Bounties": "26,666,665",
@@ -126,7 +126,7 @@
     "Treasury": "63,750,000"
   },
   {
-    "Date": 15,
+    "Date": "Mar 2022",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "125,004,000",
     "Bounties": "26,666,665",
@@ -135,7 +135,7 @@
     "Treasury": "63,750,000"
   },
   {
-    "Date": 16,
+    "Date": "Apr 2022",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "135,421,000",
     "Bounties": "29,999,998",
@@ -144,7 +144,7 @@
     "Treasury": "63,750,000"
   },
   {
-    "Date": 17,
+    "Date": "May 2022",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "145,838,000",
     "Bounties": "29,999,998",
@@ -153,7 +153,7 @@
     "Treasury": "63,750,000"
   },
   {
-    "Date": 18,
+    "Date": "June 2022",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "156,255,000",
     "Bounties": "29,999,998",
@@ -162,7 +162,7 @@
     "Treasury": "63,750,000"
   },
   {
-    "Date": 19,
+    "Date": "July 2022",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "166,672,000",
     "Bounties": "33,333,332",
@@ -171,7 +171,7 @@
     "Treasury": "95,625,000"
   },
   {
-    "Date": 20,
+    "Date": "Aug 2022",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "177,088,000",
     "Bounties": "33,333,332",
@@ -180,7 +180,7 @@
     "Treasury": "95,625,000"
   },
   {
-    "Date": 21,
+    "Date": "Sept 2022",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "187,504,000",
     "Bounties": "36,666,665",
@@ -189,7 +189,7 @@
     "Treasury": "95,625,000"
   },
   {
-    "Date": 22,
+    "Date": "Oct 2022",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "197,920,000",
     "Bounties": "36,666,665",
@@ -198,7 +198,7 @@
     "Treasury": "95,625,000"
   },
   {
-    "Date": 23,
+    "Date": "Nov 2022",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "208,336,000",
     "Bounties": "36,666,665",
@@ -207,7 +207,7 @@
     "Treasury": "95,625,000"
   },
   {
-    "Date": 24,
+    "Date": "Dec 2022",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "218,752,000",
     "Bounties": "36,666,665",
@@ -216,7 +216,7 @@
     "Treasury": "95,625,000"
   },
   {
-    "Date": 25,
+    "Date": "Jan 2023",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "229,168,000",
     "Bounties": "39,999,999",
@@ -225,7 +225,7 @@
     "Treasury": "127,500,000"
   },
   {
-    "Date": 26,
+    "Date": "Feb 2023",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "239,584,000",
     "Bounties": "39,999,999",
@@ -234,7 +234,7 @@
     "Treasury": "127,500,000"
   },
   {
-    "Date": 27,
+    "Date": "Mar 2023",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "39,999,999",
@@ -243,7 +243,7 @@
     "Treasury": "127,500,000"
   },
   {
-    "Date": 28,
+    "Date": "Apr 2023",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "43,333,332",
@@ -252,7 +252,7 @@
     "Treasury": "127,500,000"
   },
   {
-    "Date": 29,
+    "Date": "May 2023",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "43,333,332",
@@ -261,7 +261,7 @@
     "Treasury": "127,500,000"
   },
   {
-    "Date": 30,
+    "Date": "June 2023",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "43,333,332",
@@ -270,7 +270,7 @@
     "Treasury": "127,500,000"
   },
   {
-    "Date": 31,
+    "Date": "July 2023",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "46,666,666",
@@ -279,7 +279,7 @@
     "Treasury": "159,375,000"
   },
   {
-    "Date": 32,
+    "Date": "Aug 2023",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "46,666,666",
@@ -288,7 +288,7 @@
     "Treasury": "159,375,000"
   },
   {
-    "Date": 33,
+    "Date": "Sept 2023",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "46,666,666",
@@ -297,7 +297,7 @@
     "Treasury": "159,375,000"
   },
   {
-    "Date": 34,
+    "Date": "Nov 2023",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "49,999,999",
@@ -306,7 +306,7 @@
     "Treasury": "159,375,000"
   },
   {
-    "Date": 35,
+    "Date": "Dec 2023",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "49,999,999",
@@ -315,7 +315,7 @@
     "Treasury": "159,375,000"
   },
   {
-    "Date": 36,
+    "Date": "Jan 2024",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "49,999,999",
@@ -324,7 +324,7 @@
     "Treasury": "159,375,000"
   },
   {
-    "Date": 37,
+    "Date": "Feb 2024",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "53,333,333",
@@ -333,7 +333,7 @@
     "Treasury": "191,250,000"
   },
   {
-    "Date": 38,
+    "Date": "Mar 2024",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "53,333,333",
@@ -342,7 +342,7 @@
     "Treasury": "191,250,000"
   },
   {
-    "Date": 39,
+    "Date": "April 2024",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "53,333,333",
@@ -351,7 +351,7 @@
     "Treasury": "191,250,000"
   },
   {
-    "Date": 40,
+    "Date": "May 2024",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "56,666,666",
@@ -360,7 +360,7 @@
     "Treasury": "191,250,000"
   },
   {
-    "Date": 41,
+    "Date": "June 2024",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "56,666,666",
@@ -369,7 +369,7 @@
     "Treasury": "191,250,000"
   },
   {
-    "Date": 42,
+    "Date": "July 2024",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "56,666,666",
@@ -378,7 +378,7 @@
     "Treasury": "191,250,000"
   },
   {
-    "Date": 43,
+    "Date": "Aug 2024",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "60,000,000",
@@ -387,7 +387,7 @@
     "Treasury": "223,125,000"
   },
   {
-    "Date": 44,
+    "Date": "Sept 2024",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "60,000,000",
@@ -396,7 +396,7 @@
     "Treasury": "223,125,000"
   },
   {
-    "Date": 45,
+    "Date": "Oct 2024",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "60,000,000",
@@ -405,7 +405,7 @@
     "Treasury": "223,125,000"
   },
   {
-    "Date": 46,
+    "Date": "Nov 2024",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "60,000,000",
@@ -414,7 +414,7 @@
     "Treasury": "223,125,000"
   },
   {
-    "Date": 47,
+    "Date": "Dec 2024",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "60,000,000",
@@ -423,7 +423,7 @@
     "Treasury": "223,125,000"
   },
   {
-    "Date": 48,
+    "Date": "Jan 2025",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "60,000,000",
@@ -432,7 +432,7 @@
     "Treasury": "223,125,000"
   },
   {
-    "Date": 49,
+    "Date": "Feb 2025",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "60,000,000",
@@ -441,7 +441,7 @@
     "Treasury": "255,000,000"
   },
   {
-    "Date": 50,
+    "Date": "Mar 2025",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "60,000,000",
@@ -450,7 +450,7 @@
     "Treasury": "255,000,000"
   },
   {
-    "Date": 51,
+    "Date": "April 2025",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "60,000,000",
@@ -459,7 +459,7 @@
     "Treasury": "255,000,000"
   },
   {
-    "Date": 52,
+    "Date": "May 2025",
     "Public Distribution": "85,000,000",
     "Cover Traffic": "250,000,000",
     "Bounties": "60,000,000",
