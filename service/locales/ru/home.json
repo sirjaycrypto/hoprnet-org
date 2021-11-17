@@ -25,7 +25,8 @@
     "btnCommunity2": "ДЛЯ КОМЬЮНИТИ",
     "btnPublic1":"ПУБЛИЧНАЯ",
     "btnPublic2": "ПРОДАЖА",
-    "disclaimer": "ОТКАЗ ОТ ОТВЕТСТВЕННОСТИ"
+    "disclaimer": "ОТКАЗ ОТ ОТВЕТСТВЕННОСТИ",
+    "stake": "КАК СТЕКАТЬ HOPR"
   },
   "features": {
     "pay": "Оплата",
@@ -93,7 +94,8 @@
     "thirdSubTitle": "Распределение токенов",
     "title": "Выпуск токена",
     "textEnding": "home_token_textEnding",
-    "additionalInfo": "Additional information on "
+    "additionalInfo": "Additional information on ",
+    "tokenLaunch": "Токены выпускаются 27 числа каждого месяца"
   },
   "why": {
     "btnLabel": "home_why_btnLabel",
@@ -135,22 +137,26 @@
     "item5Description": "Релиз HOPR Jungfrau это первая полнофункциональная версия узла HOPR и токена HOPR.",
     "item5Title": "Релиз Jungfrau",
     "item5L1": "Страница продажи",
-    "item6Date": "В III квартале 2021 года.",
-    "item6Description": "Релиз HOPR Eiger вводит покрытие трафика, делая функцию протокола полноценной.",
+    "item6Date": "Q1 2022.",
+    "item6Description": "Релиз Eiger на HOPR вводит трафик покрытия, делая функцию протокола полной.",
     "item6Title": "Релиз Eiger",
     "item6L1": "сообщение в блоге",
     "item7Date": " Во II квартале 2021 года.",
     "item7Description": "Акцент HOPR на децентрализованном сообществе, обеспечивающем управление, подтверждается запуском проекта HOPR DAO.",
     "item7Title": "Запуск HOPR DAO",
     "item7L1": "DecenGov",
-    "item8Date": "Во II квартале 2021 года.",
-    "item8Description": "Надежный API позволяет другим создавать dApps и сервисы с частными метаданными поверх протокола HOPR.",
+    "item8Date": "Q2 2022.",
+    "item8Description": "Надежный API позволяет другим создавать приватные dApp и сервисы на основе протокола HOPR.",
     "item8Title": "Запуск экосистемы",
     "item8L1": "Blogpost",
-    "item9Date": "В IV квартале 2021 года.",
-    "item9Description": "Все держатели токенов получат право голоса на первом собрании HOPR Association.",
-    "item9Title": "Голосование на основе токенов",
+    "item9Date": "Q3 2021.",
+    "item9Description": "Игровая программа стекинга HOPR с системой NFT boost.",
+    "item9Title": "Игровая программа стекинга",
     "item9L1": "Blogpost",
+    "item10Date": "Q4 2021",
+    "item10Description": "Запуск первого децентрализованного приложения в сети HOPR.",
+    "item10Title": "Запуск первого dApp на HOPR",
+    "item10L1": "Blogpost",
     "title": "ДОРОЖНАЯ КАРТА"
   },
   "modal": {

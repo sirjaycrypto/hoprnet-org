@@ -46,15 +46,19 @@
       font-weight: 300;
     }
   }
-  .links-exp{
-    color:  #1100b4;
+  .links-exp {
+    color: #1100b4;
+    align-self: flex-start;
   }
 
   .container {
     > .road-map-element {
+      p.style-about {
+        align-self: flex-start;
+      }
       &:last-child {
         .area-info {
-          padding-bottom: 0;
+          padding-bottom: 0px;
         }
       }
     }
@@ -80,7 +84,7 @@
     align-items: flex-start;
     margin: 0 4rem 0 2rem;
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       width: 24px;
       height: 24px;
@@ -88,7 +92,7 @@
       background: #1100b4;
     }
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       width: 2px;
       background: #1100b4;
@@ -102,7 +106,13 @@
     flex-direction: column;
     text-align: start;
     padding-bottom: 2rem;
-    h4,
+
+    h4 {
+      align-self: flex-start;
+      margin: 0px;
+      color: $hopr_greySp;
+    }
+
     p,
     a {
       padding: 0;
@@ -130,7 +140,7 @@
 .road-map-element:last-of-type {
   .line-help {
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       width: 0;
       background: #1100b4;

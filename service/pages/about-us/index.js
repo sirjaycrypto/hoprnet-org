@@ -57,13 +57,13 @@ const dataBoard = [
 const dataCommittee = [
   {
     link: 'https://www.linkedin.com/in/cluchsinger/',
-    img: '/assets/images/team/catrina_luchsinger.jpg',
+    img: '/assets/images/team/luchsinger.png',
     name: 'Dr. Catrina Luchsinger',
     label: 'Board Member',
   },
   {
     link: 'https://www.linkedin.com/in/ronald-kogens/',
-    img: '/assets/images/team/ronald_kogens.jpg',
+    img: '/assets/images/team/kogens.png',
     name: 'Ronald Kogens',
     label: 'Board Member',
   },
@@ -187,7 +187,7 @@ export default function Index() {
             <div className="container">
               <p>
                 {t('about:association.paragraphA')}
-                <a href="https://hopr.swiss/who-is-HOPR#team">
+                <a href="https://hopr.swiss/#board-section" target="_blank">
                   {t('common:HOPRServices')}
                 </a>
               </p>

@@ -49,12 +49,6 @@ const data = [
   },
   {
     link: '#',
-    img: '/assets/images/team/hopr_Amira_Bouguera.png',
-    name: 'Amira Bouguera',
-    label: 'Cryptographer and protocol engineer',
-  },
-  {
-    link: '#',
     img: '/assets/images/team/HOPRNET_Andrius.jpg',
     name: 'Andrius Stepaitis',
     label: 'Community Manager',
@@ -88,6 +82,24 @@ const data = [
     img: '/assets/images/team/HOPRNET_Andrey.jpg',
     name: 'Andrey Kiryushkin',
     label: 'Protocol Engineer',
+  },
+  {
+    link: '#',
+    img: '/assets/images/team/LUKAS_POHANKA.png',
+    name: 'Lukas Pohanka',
+    label: 'Protocol engineer',
+  },
+  {
+    link: '#',
+    img: '/assets/images/team/JOSH_SCHMITZ.png',
+    name: 'Josh Schmitz',
+    label: 'Marketing Specialist',
+  },
+  {
+    link: '#',
+    img: '/assets/images/team/ELEONÓRA_SZANYI.png',
+    name: 'Eleonóra Szanyi',
+    label: 'Data Scientist Intern',
   },
 ];
 

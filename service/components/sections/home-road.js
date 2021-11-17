@@ -12,7 +12,8 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
         {
           link: 'https://hoprnet.org/book-of-hopr',
           text: t('home:roadMap.item1L1'),
-        }, {
+        },
+        {
           link: '#',
           text: t('home:roadMap.item1L2'),
         },
@@ -37,7 +38,8 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
         {
           link: 'https://ava.do/checkout/hopr',
           text: t('home:roadMap.item3L1'),
-        }, {
+        },
+        {
           link: 'https://github.com/hoprnet',
           text: t('home:roadMap.item3L2'),
         },
@@ -51,10 +53,12 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
         {
           link: 'https://medium.com/hoprnet/hopr-introduces-first-proof-of-relay-data-privacy-mechanism-to-run-on-matic-d45bb5624e5b',
           text: t('home:roadMap.item4L1'),
-        }, {
+        },
+        {
           link: 'https://www.xdaichain.com/',
           text: t('home:roadMap.item4L2'),
-        }, {
+        },
+        {
           link: 'https://www.binance.org/en/smartChain',
           text: t('home:roadMap.item4L3'),
         },
@@ -71,9 +75,14 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
       about: t('home:roadMap.item7Description'),
     },
     {
-      date: t('home:roadMap.item8Date'),
-      title: t('home:roadMap.item8Title'),
-      about: t('home:roadMap.item8Description'),
+      date: t('home:roadMap.item9Date'),
+      title: t('home:roadMap.item9Title'),
+      about: t('home:roadMap.item9Description'),
+    },
+    {
+      date: t('home:roadMap.item10Date'),
+      title: t('home:roadMap.item10Title'),
+      about: t('home:roadMap.item10Description'),
     },
     {
       date: t('home:roadMap.item6Date'),
@@ -81,10 +90,11 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
       about: t('home:roadMap.item6Description'),
     },
     {
-      date: t('home:roadMap.item9Date'),
-      title: t('home:roadMap.item9Title'),
-      about: t('home:roadMap.item9Description'),
+      date: t('home:roadMap.item8Date'),
+      title: t('home:roadMap.item8Title'),
+      about: t('home:roadMap.item8Description'),
     },
+    
   ];
 
   return (
@@ -105,7 +115,7 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
                 </div>
                 <div className="area-info">
                   <h4>{title}</h4>
-                  <p>{about}</p>
+                  <p className="style-about">{about}</p>
                   {links && (
                     <div className="links-exp">
                       {'('}
@@ -113,7 +123,7 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
                         return (
                           <span key={index + '-' + i}>
                             <a href={item.link}>{item.text}</a>
-                            {i < (links.length - 1) ? ', ' : ''}
+                            {i < links.length - 1 ? ', ' : ''}
                           </span>
                         );
                       })}

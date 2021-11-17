@@ -25,7 +25,8 @@
     "btnCommunity2": "ÖN-LANSMANI",
     "btnPublic1":"GENEL",
     "btnPublic2": "LANSMAN",
-    "disclaimer": "SORUMLULUK REDDİ"
+    "disclaimer": "SORUMLULUK REDDİ",
+    "stake": "NASIL STAKE YAPILIR?"
   },
   "features": {
     "pay": "Ödeme Yap",
@@ -93,7 +94,8 @@
     "thirdSubTitle": "Token Arz Dağılımı",
     "title": "Token Salınımı",
     "textEnding": "home_token_textEnding",
-    "additionalInfo": "Additional information on "
+    "additionalInfo": "Additional information on ",
+    "tokenLaunch": "Jetonlar her ayın 27'sinde serbest bırakılır"
   },
   "why": {
     "btnLabel": "home_why_btnLabel",
@@ -135,22 +137,26 @@
     "item5Description": "HOPR Jungfrau sürümü, özellikler açısından tamamlanmış ilk HOPR Node & HOPR token versiyonudur.",
     "item5Title": "Jungfrau Sürümü",
     "item5L1": "SalePage",
-    "item6Date": "3. Çeyrek 2021",
-    "item6Description": "HOPR’ın Eiger sürümü, trafik güvencesini tanıtırarak, protokol özelliklerini tamamlar.",
-    "item6Title": "Eiger Sürümü",
+    "item6Date": "Q1 2022",
+    "item6Description": "HOPR'nin Eiger sürümü, koruma trafiğini tanıtarak protokol özelliğini eksiksiz hale getiriyor.",
+    "item6Title": "Eiger Edition",
     "item6L1": "Blogpost",
     "item7Date": "2. Çeyrek 2021",
     "item7Description": "HOPR’s focus on decentralized community enabling governance is solidified by the launch of the project-wide HOPR DAO.",
     "item7Title": "HOPR DAO Lansmanı",
     "item7L1": "DecenGov",
-    "item8Date": "2. Çeyrek 2021",
-    "item8Description": "Sağlam bir API, HOPR protokolü üzerine metadatalara özel uygulamalar ve hizmetler oluşturmasına olanak tanır.",
-    "item8Title": "Ekosistem Lansmanı",
+    "item8Date": "Q2 2022",
+    "item8Description": "Sağlam bir API, diğerlerinin HOPR protokolünün üzerinde meta verilere özel dApp'ler ve hizmetler oluşturmasına olanak tanır.",
+    "item8Title": "Ekosistem lansmanı",
     "item8L1": "Blogpost",
-    "item9Date": "4. Çeyrek 2021",
-    "item9Description": "Tüm token sahipleri, HOPR Topluluğu’nun ilk Genel Kurulunda oy kullanma hakkına sahip olacaktır.",
-    "item9Title": "Token Bazlı Oylama",
+    "item9Date": "Q3 2021",
+    "item9Description": "HOPR'ın NFT boost sistemli oyunlaştırılmış stake programı.",
+    "item9Title": "Oyunlaştırılmış Staking Programı",
     "item9L1": "Blogpost",
+    "item10Date": "Q4 2021",
+    "item10Description": "HOPR ağında çalışan ilk merkezi olmayan uygulama olan ttol'ün lansmanı.",
+    "item10Title": "HOPR'nin çeyreğinde ilk dApp lansmanı",
+    "item10L1": "Blogpost",
     "title": "YOL HARİTASI"
   },
   "modal": {

@@ -5,7 +5,7 @@ import { Button } from '../atoms/button';
 
 export const aPartners = [
   { url: 'https://ava.do/', image: 'assets/partners/01_avado.svg' },
-  { url: 'https://www.froriep.com/', image: 'assets/partners/02_froriep.svg' },
+  { url: 'https://mll-legal.com/', image: 'assets/partners/02_froriep.png' },
   { url: 'https://elrond.com/', image: 'assets/partners/03_elrond.svg' },
   {
     url: 'https://www.sedimentum.com/',
@@ -32,13 +32,20 @@ export const aPartners = [
     url: 'https://www.swissmadesoftware.org',
   },
   { url: 'https://blockark.io/', image: 'assets/partners/BLOCKARK-LOGO.png' },
-  { image: 'assets/partners/Rockstar_Recruiting.png', url: 'https://www.rockstarjobs.ch/' },
+  {
+    image: 'assets/partners/Rockstar_Recruiting.png',
+    url: 'https://www.rockstarjobs.ch/',
+  },
 ];
 
 export default function Partners({ invert = false }) {
   const { t } = useTranslation();
   return (
-    <section className={`section-partners padding-section-aux${invert ? ' change-bg-color invert-color': ''}`}>
+    <section
+      className={`section-partners padding-section-aux${
+        invert ? ' change-bg-color invert-color' : ''
+      }`}
+    >
       <div className="container">
         <h2 data-aos="fade-zoom-in" data-aos-easing="ease-in-back">
           {t('about:partners.title')}
@@ -53,7 +60,7 @@ export default function Partners({ invert = false }) {
                   data-aos-easing="ease-in-back"
                 >
                   {url ? (
-                    <a href={url} alt="Partners HOPR">
+                    <a href={url} alt="Partners HOPR" target="_blank">
                       <img src={image} alt="The HOPR-Token NOW" />
                     </a>
                   ) : (

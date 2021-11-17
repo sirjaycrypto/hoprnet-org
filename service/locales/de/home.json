@@ -25,7 +25,8 @@
     "btnCommunity2": "PRE-LAUNCH",
     "btnPublic1":"PUBLIC",
     "btnPublic2": "LAUNCH",
-    "disclaimer": "HAFTUNGSAUSSCHLUSS"
+    "disclaimer": "HAFTUNGSAUSSCHLUSS",
+    "stake": "Staking von HOPR-Token"
   },
   "features": {
     "pay": "Zahlen",
@@ -93,7 +94,8 @@
     "thirdSubTitle": "Distribution der Tokens",
     "title": "Token Release",
     "textEnding": "home_token_textEnding",
-    "additionalInfo": "Additional information on "
+    "additionalInfo": "Additional information on ",
+    "tokenLaunch": "Token werden am 27. jedes Monats freigegeben."
   },
   "why": {
     "btnLabel": "home_why_btnLabel",
@@ -135,22 +137,26 @@
     "item5Description": "Das HOPR Jungfrau-Release ist die erste voll funktionsfähige Version des HOPR Nodes & des HOPR Tokens.",
     "item5Title": "Jungfrau Release",
     "item5L1": "VerkaufsSeite",
-    "item6Date": "Q3 2021",
-    "item6Description": "Das Eiger-Release von HOPR führt Cover Traffic ein und vervollständigt damit das HOPR Protokoll.",
-    "item6Title": "Eiger Release",
+    "item6Date": "Q1 2022",
+    "item6Description": "Das Eiger-Release von HOPR führt Cover-Traffic ein und vervollständigt damit die Protokollfunktion.",
+    "item6Title": "Eiger-Launch",
     "item6L1": "Blogpost",
     "item7Date": "Q2 2021",
     "item7Description": "Der Fokus von HOPR auf dezentralisierte Entscheidungsfindung durch die Community wird durch den Start der projektweiten HOPR DAO gefestigt.",
     "item7Title": "Launch HOPR DAO",
     "item7L1": "DecenGov",
-    "item8Date": "Q2 2021",
-    "item8Description": "Eine robuste API ermöglicht es anderen Entwicklerinnen, metadaten-geschützte dApps und Dienste auf dem HOPR-Protokoll aufzubauen.",
-    "item8Title": "Launch des Ecosystems",
+    "item8Date": "Q2 2022",
+    "item8Description": "Eine robuste API ermöglicht es anderen Entwicklern, auf dem HOPR-Protokoll aufbauende und Metadaten-anonymisierte dApps und Dienste zu erstellen.",
+    "item8Title": "Launch des Ökosystems",
     "item8L1": "Blogpost",
-    "item9Date": "Q4 2021",
-    "item9Description": "Alle Token-Inhaber sind in der ersten Generalversammlung der HOPR Assoziation abstimmungsfähig.",
-    "item9Title": "Token-basiertes Voting",
+    "item9Date": "Q3 2021",
+    "item9Description": "Release des Staking-Programms mit implementiertem NFT-Boost-System.",
+    "item9Title": "Gamified Staking Program",
     "item9L1": "Blogpost",
+    "item10Date": "Q4 2021",
+    "item10Description": "Die erste HOPR-basierte dApp geht an den Start.",
+    "item10Title": "Erster App-Launch auf HOPR",
+    "item10L1": "Blogpost",
     "title": "ROADMAP"
   },
   "modal": {
