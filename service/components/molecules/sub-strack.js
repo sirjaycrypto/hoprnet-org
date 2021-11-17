@@ -15,7 +15,7 @@ export default function SubStrack() {
           border: '1px solid #EEE',
           background: 'white',
           width: '100%',
-          height: '100%',
+          height: '92%',
         }}
       />
     </div>
