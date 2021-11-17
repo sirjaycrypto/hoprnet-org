@@ -65,7 +65,7 @@
     "team": "팀 & 어드바이저",
     "treasury": "금고",
     "votes": "home_graphic_votes",
-    "month": "{{nMonth}} 개월차"
+    "month": "{{nMonth}}"
   },
   "hero": {
     "subtitle": "HOPR 토큰이 곧 출시됩니다.",

@@ -65,7 +65,7 @@
     "team": "团队和顾问",
     "treasury": "金库",
     "votes": "home_graphic_votes",
-    "month": "第{{nMonth}}个月"
+    "month": "{{nMonth}}"
   },
   "hero": {
     "subtitle": "代币发行:",

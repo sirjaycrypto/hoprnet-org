@@ -64,7 +64,7 @@
     "team": "Equipe & Assessores",
     "treasury": "Tesouraria",
     "votes": "home_graphic_votes",
-    "month": "Mês {{nMonth}}"
+    "month": "{{nMonth}}"
   },
   "hero": {
     "subtitle": "O LANÇAMENTO DO TOKEN HOPR TERMINA EM:",

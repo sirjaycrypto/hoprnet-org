@@ -65,7 +65,7 @@
     "team": "Ekip & Danışmanlar",
     "treasury": "Hazine",
     "votes": "home_graphic_votes",
-    "month": "{{nMonth}}. ay"
+    "month": "{{nMonth}}"
   },
   "hero": {
     "subtitle": "HOPR TOKEN LANSMAN BAŞLANGICI:",

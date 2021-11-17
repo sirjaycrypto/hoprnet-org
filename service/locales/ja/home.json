@@ -65,7 +65,7 @@
     "team": "チームとアドバイザー",
     "treasury": "財務部署",
     "votes": "home_graphic_votes",
-    "month": "{{nMonth}}か月目"
+    "month": "{{nMonth}}"
   },
   "hero": {
     "subtitle": "トークンの限定リリース開始まで：",
