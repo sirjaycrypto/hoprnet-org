@@ -65,7 +65,7 @@
     "team": "Team & Advisors",
     "treasury": "Treasury",
     "votes": "home_graphic_votes",
-    "month": "Month {{nMonth}}"
+    "month": "{{nMonth}}"
   },
   "hero": {
     "subtitle": "THE HOPR TOKEN LAUNCH BEGINS IN:",

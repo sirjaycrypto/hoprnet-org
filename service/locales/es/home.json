@@ -65,7 +65,7 @@
     "team": "Equipo y Consejeros",
     "treasury": "Tesorería",
     "votes": "# de votos",
-    "month": "Mes {{nMonth}}"
+    "month": "{{nMonth}}"
   },
   "hero": {
     "subtitle": "EL LANZAMIENTO DEL HOPR TOKEN COMIENZA EN:",
