@@ -19,6 +19,7 @@
     z-index: 10;
 
     @include responsive(tablet) {
+      display: initial;
       height: 52px;
     }
 
@@ -217,6 +218,7 @@
 
   @include responsive(tablet) {
     display: block;
+    right: 5%;
   }
 
   span {
