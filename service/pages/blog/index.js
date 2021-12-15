@@ -91,13 +91,6 @@ export default function Index() {
 
         {active ? (
           <>
-            <section className="section-hopr-blog">
-              <motion.iframe
-                src="https://medium.com/hoprhunt"
-                height="475"
-                frameBorder="0"
-              />
-            </section>
             <section
               id="post-blog"
               className="section-posts padding-section-aux"

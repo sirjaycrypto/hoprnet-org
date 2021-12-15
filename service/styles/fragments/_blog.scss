@@ -26,8 +26,8 @@
     li {
       box-sizing: border-box;
       padding: 0 12px 40px 12px;
-      width: calc(100% / 3);
       text-align: left;
+      width: calc(100% / 3);
 
       &.first-element {
         width: 100%;
@@ -41,8 +41,8 @@
         }
 
         img {
-          width: 50%;
           margin: 0;
+          width: 50%;
         }
 
         h1 {
@@ -87,10 +87,10 @@
         cursor: pointer;
         display: inline-block;
         font-size: 16px;
-        text-decoration: none;
         font-weight: 500;
-        text-transform: lowercase;
         margin: 0px 0px 25px;
+        text-decoration: none;
+        text-transform: lowercase;
       }
 
       h2::first-letter {
@@ -103,8 +103,8 @@
         cursor: pointer;
         display: inline-block;
         font-size: 16px;
-        text-decoration: none;
         margin: 0px 0px 0px 10px;
+        text-decoration: none;
       }
 
       .date {
