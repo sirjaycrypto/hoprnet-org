@@ -80,21 +80,20 @@ const HomeRoadMap = forwardRef(({ setVisibleNow }, ref) => {
       about: t('home:roadMap.item9Description'),
     },
     {
-      date: t('home:roadMap.item10Date'),
-      title: t('home:roadMap.item10Title'),
-      about: t('home:roadMap.item10Description'),
-    },
-    {
       date: t('home:roadMap.item6Date'),
       title: t('home:roadMap.item6Title'),
       about: t('home:roadMap.item6Description'),
+    },
+    {
+      date: t('home:roadMap.item10Date'),
+      title: t('home:roadMap.item10Title'),
+      about: t('home:roadMap.item10Description'),
     },
     {
       date: t('home:roadMap.item8Date'),
       title: t('home:roadMap.item8Title'),
       about: t('home:roadMap.item8Description'),
     },
-    
   ];
 
   return (
