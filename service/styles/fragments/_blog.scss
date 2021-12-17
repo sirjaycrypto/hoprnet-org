@@ -9,6 +9,14 @@
       border: none;
       justify-content: center;
       width: 50%;
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      p{
+        color: #414141;
+      }
     }
   }
 }
@@ -28,6 +36,11 @@
       padding: 0 12px 40px 12px;
       text-align: left;
       width: calc(100% / 3);
+
+      .date,
+      h2 {
+        color: #414141 !important;
+      }
 
       &.first-element {
         width: 100%;
@@ -60,7 +73,8 @@
         img {
           border-radius: 50%;
           display: inline-block;
-          max-width: 30px;
+          height: 30px;
+          width: 30px;
         }
       }
 
@@ -117,6 +131,14 @@
       }
     }
   }
+
+  @media screen and (max-width: 767px) {
+    ul {
+      li {
+        width: 100%;
+      }
+    }
+  }
 }
 
 .tabs {
@@ -125,8 +147,22 @@
   }
 }
 
-.section-hopr-blog {
-  iframe {
-    width: 100%;
+@media screen and (max-width: 767px) {
+  .section-posts {
+    ul {
+      li {
+        width: 100%;
+      }
+    }
+  }
+
+  .section-blog {
+    .tabs {
+      button {
+        p {
+          font-size: 24px;
+        }
+      }
+    }
   }
 }
