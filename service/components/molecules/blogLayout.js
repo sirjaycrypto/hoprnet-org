@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
+import { Button } from '../atoms/button';
 
-export const BlogLayout = ({ url }) => {
+export const BlogLayout = ({ url, setLimit, limit }) => {
   const [posts, setPosts] = useState([]);
 
   const loadPosts = async () => {
@@ -87,6 +88,14 @@ export const BlogLayout = ({ url }) => {
             </li>
           ))}
         </ul>
+        <center>
+          <Button
+            content="Add more posts"
+            onClick={() => setLimit(limit + 6)}
+            type="button"
+            className="button-add-more"
+          />
+        </center>
       </div>
     </section>
   );
