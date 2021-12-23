@@ -88,14 +88,16 @@ export const BlogLayout = ({ url, setLimit, limit }) => {
             </li>
           ))}
         </ul>
-        <center>
-          <Button
-            content="Add more posts"
-            onClick={() => setLimit(limit + 6)}
-            type="button"
-            className="button-add-more"
-          />
-        </center>
+        {posts.length === limit ? (
+          <center>
+            <Button
+              content="Add more posts"
+              onClick={() => setLimit(limit + 6)}
+              type="button"
+              className="button-add-more"
+            />
+          </center>
+        ) : null}
       </div>
     </section>
   );
