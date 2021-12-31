@@ -45,6 +45,10 @@ export default function ItemsMenu() {
       name: 'Forum',
       target: '_blank',
     },
+    /* {
+      path: '/hop-on-board',
+      name: 'Hop on board',
+    }, */
   ];
 
   return (

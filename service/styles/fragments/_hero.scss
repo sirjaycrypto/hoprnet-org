@@ -48,12 +48,16 @@
   }
 }
 
+
 .section-hero {
   .text-wrapper {
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
+  }
+  .text-video-hop {
+    font-size: 120px;
   }
   h1,
   span,

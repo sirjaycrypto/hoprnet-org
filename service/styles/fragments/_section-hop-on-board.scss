@@ -1,0 +1,22 @@
+.section-hop-on-board {
+  .container {
+    .hop-on-board-information {
+      h2 {
+        color: $hopr_grey;
+        font-size: 60px;
+        font-weight: 400;
+        padding: 120px 0;
+        text-align: center;
+      }
+
+      p {
+        color: $hopr_greySp;
+        font-size: 25px;
+        letter-spacing: 0.208333px;
+        line-height: 37px;
+        padding-bottom: 120px;
+        padding-top: 0;
+      }
+    }
+  }
+}
