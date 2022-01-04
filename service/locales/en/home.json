@@ -185,7 +185,7 @@
   "welcome": {
     "leftSection": "JUNGFRAU RELEASE",
     "rightSection": "HOPR TOKEN",
-    "subTitle": "The HOPR-protocol has control of their privacy, data, and identity.",
+    "subTitle": "Whether it’s individuals, companies or institutions – the HOPR protocol provides full control over privacy, data and metadata. HOPR lays the groundwork for a more sovereign and safe internet. For everyone.",
     "title": "Changing Data Privacy For Good"
   },
   "news": {
@@ -240,54 +240,88 @@
       "title1": "HOP ON BOARD"
     },
     "sectionHopOnBoard": {
-      "title": "HOP ON BOARD",
-      "description": "Filler text is text that shares some characteristics of a real written text, but is random or otherwise generated. It may be used to display a sample of fonts, generate text for testing, or to spoof an e-mail spam filter.",
-      "element1Title": "From the ground up",
-      "element1Paragraph": "Lock HOPR tokens in your node to relay user data and cover traffic. The more you stake, the more data you can relay, and the more you earn. A quarter of all HOPR tokens are available only to stakers as a reward for relaying cover traffic.",
-      "element2Title": "Ready",
-      "element2Paragraph": "Lock HOPR tokens in your node to relay user data and cover traffic. The more you stake, the more data you can relay, and the more you earn. A quarter of all HOPR tokens are available only to stakers as a reward for relaying cover traffic."
+      "title": "Hop on Board the HOPR Express",
+      "description1": "Participate in testnets, bounties, hackathons and more. Earn HOPR Boost NFTs to grow your stake and gain exclusive access to the cover traffic test network: each milestone we hit, the network will grow and so will the rewards.",
+      "description2": "It’s going to be an amazing journey, so Hop on Board with us as we stake, test, govern, buidl, and scale to new heights!",
+      "element1Paragraph": "Over the last year, we’ve built the HOPR protocol from the ground up. We launched our token fairly via the HOPR DAO, built a strong network of HOPR nodes, and started our gamified staking program with APY boosting NFTs at the core.",
+      "element2Paragraph": "With all these components in place, it’s now time to expand the HOPR ecosystem. Each week from now until April, the HOPR train will pull into a new destination with a brand new event. Some are revealed in advance, but others will be a surprise."
     },
     "sectionProgramme": {
       "title": "Programme",
       "description": "Filler text is text that shares some characteristics of a real written text, but is random or otherwise generated. It may be used to display a sample of fonts, generate text for testing, or to spoof an e-mail spam filter."
     },
     "sectionRoadMap": {
-      "titleJourney": "Journey",
-      "titlePreparation": "Preparation",
+      "title1": "GET READY…",
+      "title2": "WE’RE OFF!",
       "description": "Filler text is text that shares some characteristics of a real written text, but is random or otherwise generated. It may be used to display a sample of fonts, generate text for testing, or to spoof an e-mail spam filter.",
-      "element1Title1": "Week 4",
-      "element1Title2": "ZURICH",
-      "element1Title3": "Launch of Covertraffic",
-      "element1Week": "4",
-      "element2Title1": "Week 5",
-      "element2Title3": "First dAPP",
-      "element2Week": "5",
-      "element3Title1": "Week 6",
-      "element3Title3": "Testnet",
-      "element3Week": "6",
-      "element4Title1": "Week 7",
-      "element4Week": "7",
-      "element5Title1": "Week 8",
-      "element5Week": "8",
-      "element6Title1": "Week 9",
-      "element6Week": "9",
-      "element6Title3": "Mainnet Launch (Eiger)",
-      "element7Title1": "Week 10",
-      "element7Week": "10",
-      "element8Title1": "Week 11",
-      "element8Week": "11",
-      "element8Title2": "ZERMATT",
-      "element8Title3": "ETH Amsterdam",
-      "element9Title1": "Week 12",
-      "element9Week": "12",
-      "element10Title1": "Week 13",
-      "element10Week": "13",
-      "element11Title1": "Week 14",
-      "element11Week": "14",
-      "element12Title1": "Week 15",
-      "element12Week": "15",
-      "element13Title1": "Week 16",
-      "element13Week": "16"
+      "element1Title2": "Get Your Tickets",
+      "element1Title3": "Staking 2.0 and DAO Fulfilment",
+
+      "element2Title1": "Week 2",
+      "element2Title2": "All Aboard!",
+      "element2Title3": "New Staking Program / DAO Fulfilment Plan",
+
+      "element4Title1": "Week 1",
+      "element4Title2": "ZURICH",
+      "element4Title3": "Matterhorn Public Testnet",
+      "element4Week": "1",
+
+      "element5Title1": "Week 2",
+      "element5Title2": "ZUG",
+      "element5Week": "2",
+
+      "element6Title1": "Week 3",
+      "element6Title2": "ROTKREUZ",
+      "element6Title3": "First HOPR dApp",
+      "element6Week": "3",
+
+      "element7Title1": "Week 4",
+      "element7Title2": "LUZERN",
+      "element7Title3": "BUIDL Week @ETHDenver",
+      "element7Week": "4",
+
+      "element8Title1": "Week 5",
+      "element8Title2": "ALTDORF",
+      "element8Week": "5",
+
+      "element9Title1": "Week 6",
+      "element9Title2": "CHUR",
+      "element9Week": "6",
+
+      "element10Title1": "Week 7",
+      "element10Title2": "DISENTIS/MUSTER",
+      "element10Week": "10",
+
+      "element11Title1": "Week 8",
+      "element11Title2": "ANDERMATT (arr)",
+      "element11Title3": "HOPR DAO v0.3",
+      "element11Week": "8",
+
+      "element12Title1": "Week 9",
+      "element12Title2": "ANDERMATT (dep)",
+      "element12Title3": "HOPR DAO v0.3",
+      "element12Week": "9",
+
+      "element13Title1": "Week 10",
+      "element13Title2": "GOMS",
+      "element13Week": "10",
+
+      "element14Title1": "Week 11",
+      "element14Title2": "FIESCH",
+      "element14Week": "11",
+
+      "element15Title1": "Week 12",
+      "element15Title2": "BRIG",
+      "element15Week": "12",
+
+      "element16Title1": "Week 13",
+      "element16Title2": "RANDA",
+      "element16Title3": "Mega BUIDL Week @ETHAmsterdam",
+      "element16Week": "13",
+
+      "element3Title1": "Week 14",
+      "element3Title2": "ZERMATT",
+      "element3Week": "14"
     }
   }
 }

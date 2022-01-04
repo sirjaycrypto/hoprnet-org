@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from '../../hooks/translation';
 import Marquee from 'react-fast-marquee';
+import Link from 'next/link';
 
 export default function Welcome() {
   const [initialAni, setInitialAni] = useState(false);
@@ -26,29 +27,31 @@ export default function Welcome() {
           </div>
         </div>
       </div>
-      <div className="section-bottom">
-        <Marquee className="welcome" speed={100} gradient={false}>
-          <div className="welcome-text">
-            <h1>HOP ON BOARD</h1>
-            <div className="bubble"></div>
-          </div>
-          <div className="welcome-text">
-            <h1>HOP ON BOARD</h1>
-            <div className="bubble"></div>
-          </div>
-          <div className="welcome-text">
-            <h1>HOP ON BOARD</h1>
-            <div className="bubble"></div>
-          </div>
-          <div className="welcome-text">
-            <h1>HOP ON BOARD</h1>
-            <div className="bubble"></div>
-          </div>
-        </Marquee>
-        <Marquee speed={100} gradient={false}>
-          <img src='/assets/images/hopr-train.jpg'/>
-        </Marquee>
-      </div>
+      <Link href='/hop-on-board'>
+        <div className="section-bottom">
+          <Marquee className="welcome" speed={100} gradient={false}>
+            <div className="welcome-text">
+              <h1>HOP ON BOARD</h1>
+              <div className="bubble"></div>
+            </div>
+            <div className="welcome-text">
+              <h1>HOP ON BOARD</h1>
+              <div className="bubble"></div>
+            </div>
+            <div className="welcome-text">
+              <h1>HOP ON BOARD</h1>
+              <div className="bubble"></div>
+            </div>
+            <div className="welcome-text">
+              <h1>HOP ON BOARD</h1>
+              <div className="bubble"></div>
+            </div>
+          </Marquee>
+          <Marquee speed={100} gradient={false}>
+            <img src="/assets/images/hopr-train.png" height="200"/>
+          </Marquee>
+        </div>
+      </Link>
     </div>
   );
 }

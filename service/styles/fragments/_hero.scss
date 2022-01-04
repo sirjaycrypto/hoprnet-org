@@ -1,3 +1,13 @@
+@keyframes fadeInTextVideo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
 .section-hero {
   align-items: center;
   display: flex;
@@ -57,7 +67,21 @@
     flex-direction: column;
   }
   .text-video-hop {
+    animation-delay: 11s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-name: fadeInTextVideo;
     font-size: 120px;
+    opacity: 0;
+
+    .date-text-hopr {
+      background: linear-gradient(#000050, #0000b4);
+      border-radius: 30px;
+      font-size: 36px;
+      height: 44px;
+      max-width: 495px;
+      width: 90%;
+    }
   }
   h1,
   span,
@@ -194,5 +218,26 @@
     transition: all 350ms ease-in-out;
     background-color: $hopr_blue;
     color: #fff;
+  }
+}
+
+
+@media screen and (max-width: 530px) {
+  .section-hero {
+    .text-video-hop {
+      .date-text-hopr {
+        height: 95px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 288px) {
+  .section-hero {
+    .text-video-hop {
+      .date-text-hopr {
+        height: 190px;
+      }
+    }
   }
 }

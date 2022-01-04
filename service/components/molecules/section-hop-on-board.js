@@ -6,14 +6,12 @@ const SectionHopOnBoard = () => {
 
   const dataInfo = [
     {
-      img: '/assets/images/hopr_Private.gif',
-      title: t('home:hopOnBoard.sectionHopOnBoard.element1Title'),
+      img: '/assets/images/gif_1_hop_on_board.gif',
       paragraph: t('home:hopOnBoard.sectionHopOnBoard.element1Paragraph'),
       mirrorBox: true,
     },
     {
-      img: '/assets/images/hopr_Profitable.gif',
-      title: t('home:hopOnBoard.sectionHopOnBoard.element2Title'),
+      img: '/assets/images/gif_2_hop_on_board.gif.gif',
       paragraph: t('home:hopOnBoard.sectionHopOnBoard.element2Paragraph'),
       mirrorBox: false,
     },
@@ -25,7 +23,10 @@ const SectionHopOnBoard = () => {
         <div className="container">
           <div className="hop-on-board-information">
             <h2>{t('home:hopOnBoard.sectionHopOnBoard.title')}</h2>
-            <p>{t('home:hopOnBoard.sectionHopOnBoard.description')}</p>
+            <p>{t('home:hopOnBoard.sectionHopOnBoard.description1')}</p>
+            <p className="padding-bottom-description2">
+              {t('home:hopOnBoard.sectionHopOnBoard.description2')}
+            </p>
           </div>
 
           {dataInfo.map((x, i) => (
@@ -34,7 +35,6 @@ const SectionHopOnBoard = () => {
               className={`info-box-line ${x.mirrorBox ? 'flex-line' : ''}`}
             >
               <div className="info-cont aux-padding-box-read">
-                <h3>{x.title}</h3>
                 <p className="padding-bottom">{x.paragraph}</p>
               </div>
               <div>

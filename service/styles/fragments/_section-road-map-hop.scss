@@ -82,6 +82,16 @@
         }
       }
     }
+
+    .road-map-hop-preparation,
+    .road-map-hop-journey { 
+      .road-map-element {
+        .line-help::before {
+          height: 18px;
+          width: 18px;
+        }
+      }
+    }
   }
 }
 
@@ -90,8 +100,9 @@
     .container {
       .road-map-hop {
         span {
-          word-break: break-word;
+          font-size: 12px;
           white-space: normal;
+          word-break: break-word;
         }
 
         .road-map-titles-left {

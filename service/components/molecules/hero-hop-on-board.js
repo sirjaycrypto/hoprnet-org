@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-const HeroHoprOnBoard = ({ src, text, isAssetVideo, controls, loop, muted, autoplay }) => {
+const HeroHoprOnBoard = ({
+  src,
+  text,
+  isAssetVideo,
+  controls,
+  loop,
+  muted,
+  autoplay,
+}) => {
   return (
     <>
       <section className="section-hero section-hop-on-board">
@@ -30,6 +38,7 @@ const HeroHoprOnBoard = ({ src, text, isAssetVideo, controls, loop, muted, autop
           <div className="container">
             <div className="text-wrapper text-video-hop">
               <span>{text}</span>
+              <span className="date-text-hopr">6th Jan. - 27th Apr.</span>
             </div>
           </div>
         ) : null}
