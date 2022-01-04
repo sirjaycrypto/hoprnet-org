@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
 import { useTranslation } from '../../hooks/translation';
+import Marquee from 'react-fast-marquee';
 
 export default function Welcome() {
   const [initialAni, setInitialAni] = useState(false);
@@ -13,7 +13,11 @@ export default function Welcome() {
   }, []);
 
   return (
-    <div className={'welcome-section invert-color ' + (initialAni ? 'show-hi' : '')}>
+    <div
+      className={
+        'welcome-section invert-color ' + (initialAni ? 'show-hi' : '')
+      }
+    >
       <div className="section-top center-on-the-box container ">
         <div className="main-labels ">
           <h1>{t('home:welcome.title')}</h1>
@@ -23,20 +27,27 @@ export default function Welcome() {
         </div>
       </div>
       <div className="section-bottom">
-        <Link href="/token">
-          <a className="right-container center-on-the-box welcome welcome--left">
-            <div className="text-area">
-              <h2>{t('home:welcome.rightSection')}</h2>
-            </div>
-          </a>
-        </Link>
-        <Link href="/win">
-          <a className="left-container center-on-the-box welcome welcome--right">
-            <div className="text-area">
-              <h2>{t('home:welcome.leftSection')}</h2>
-            </div>
-          </a>
-        </Link>
+        <Marquee className="welcome" speed={100} gradient={false}>
+          <div className="welcome-text">
+            <h1>HOP ON BOARD</h1>
+            <div className="bubble"></div>
+          </div>
+          <div className="welcome-text">
+            <h1>HOP ON BOARD</h1>
+            <div className="bubble"></div>
+          </div>
+          <div className="welcome-text">
+            <h1>HOP ON BOARD</h1>
+            <div className="bubble"></div>
+          </div>
+          <div className="welcome-text">
+            <h1>HOP ON BOARD</h1>
+            <div className="bubble"></div>
+          </div>
+        </Marquee>
+        <Marquee speed={100} gradient={false}>
+          <img src='/assets/images/hopr-train.jpg'/>
+        </Marquee>
       </div>
     </div>
   );

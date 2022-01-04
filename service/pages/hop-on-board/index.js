@@ -2,7 +2,7 @@ import React from 'react';
 import HeroHoprOnBoard from '../../components/molecules/hero-hop-on-board';
 import SectionHopOnBoard from '../../components/molecules/section-hop-on-board';
 import SectionPorgrammeHop from '../../components/molecules/section-programme-hop';
-import SectionRoadMapHop from '../../components/molecules/section-road-map-hop';
+import SectionRoadMapHop from '../../components/organisms/section-road-map-hop';
 import Layout from '../../components/organisms/layout';
 import { loadNamespaces } from '../_app';
 import useTranslation from 'next-translate/useTranslation';
@@ -12,17 +12,23 @@ export default function Index({}) {
   return (
     <Layout>
       <HeroHoprOnBoard
-        src={
-          'https://player.vimeo.com/video/508834454?background=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false&app_id=122963'
-        }
+        src={require('../../public/assets/video/Hop_on_board.mp4')}
+        isAssetVideo={true}
         text={t('home:hopOnBoard.titleVideos.title1')}
+        controls={false}
+        loop={true}
+        muted={true}
+        autoplay={true}
       />
       <SectionHopOnBoard />
       <SectionPorgrammeHop />
       <HeroHoprOnBoard
-        src={
-          'https://player.vimeo.com/video/508840889?background=1&loop=1&muted=true&responsive=true&controls=false&app_id=122963'
-        }
+        src={require('../../public/assets/video/Animation_HOP_ON_BOARD.mp4')}
+        isAssetVideo={true}
+        controls={false}
+        loop={true}
+        muted={true}
+        autoplay={true}
       />
       <SectionRoadMapHop />
     </Layout>

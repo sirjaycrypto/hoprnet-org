@@ -5,7 +5,7 @@
         color: $hopr_grey;
         font-size: 60px;
         font-weight: 400;
-        padding: 120px 0;
+        padding: 120px 0px 0px;
         text-align: center;
       }
 
@@ -16,13 +16,89 @@
         line-height: 37px;
         padding: 80px 0px;
       }
+
+      .title-journey {
+        padding: 0px;
+      }
     }
 
     .road-map-hop {
       margin-bottom: 80px;
+
+      .road-map-element-week {
+        span {
+          color: #1100b4;
+        }
+      }
+
+      .road-map-element-rectangle {
+        background: linear-gradient(#000050, #0000b4);
+        border-radius: 15px;
+        height: 24px;
+        max-width: 226px;
+        width: 90%;
+      }
+
       .road-map-titles-left {
         display: flex;
         justify-content: space-between;
+        width: 30%;
+
+        .roap-map-title-1 {
+          flex: 0 0 100px;
+        }
+
+        .roap-map-title-2 {
+          flex: 1 1 auto;
+        }
+      }
+
+      span {
+        align-self: flex-start;
+        color: $hopr_greySp;
+        font-weight: normal;
+      }
+    }
+
+    .road-map-hop-preparation {
+      .line-help {
+        &::after {
+          content: '';
+          background: 0;
+          height: auto;
+          position: static;
+          width: auto;
+        }
+      }
+    }
+
+    .road-map-hop-journey {
+      .road-map-element:last-of-type {
+        .line-help {
+          &::before {
+            content: '';
+            height: 3px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 674px) {
+  .section-road-map-hop {
+    .container {
+      .road-map-hop {
+        span {
+          word-break: break-word;
+          white-space: normal;
+        }
+
+        .road-map-titles-left {
+          .roap-map-title-1 {
+            flex: 0 0 47px;
+          }
+        }
       }
     }
   }

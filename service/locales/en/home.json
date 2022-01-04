@@ -185,7 +185,7 @@
   "welcome": {
     "leftSection": "JUNGFRAU RELEASE",
     "rightSection": "HOPR TOKEN",
-    "subTitle": "Whether it’s individuals, companies or institutions – the HOPR protocol provides full control over privacy, data and metadata. HOPR lays the groundwork for a more sovereign and safe internet. For everyone.",
+    "subTitle": "The HOPR-protocol has control of their privacy, data, and identity.",
     "title": "Changing Data Privacy For Good"
   },
   "news": {
@@ -252,22 +252,42 @@
       "description": "Filler text is text that shares some characteristics of a real written text, but is random or otherwise generated. It may be used to display a sample of fonts, generate text for testing, or to spoof an e-mail spam filter."
     },
     "sectionRoadMap": {
+      "titleJourney": "Journey",
+      "titlePreparation": "Preparation",
       "description": "Filler text is text that shares some characteristics of a real written text, but is random or otherwise generated. It may be used to display a sample of fonts, generate text for testing, or to spoof an e-mail spam filter.",
-      "element1Title1": "Week 1",
+      "element1Title1": "Week 4",
       "element1Title2": "ZURICH",
       "element1Title3": "Launch of Covertraffic",
-      "element2Title1": "Week 3",
+      "element1Week": "4",
+      "element2Title1": "Week 5",
       "element2Title3": "First dAPP",
-      "element3Title1": "Week 5",
+      "element2Week": "5",
+      "element3Title1": "Week 6",
       "element3Title3": "Testnet",
-      "element4Title1": "Week 6",
-      "element5Title1": "Week 7",
-      "element6Title1": "Week 8",
+      "element3Week": "6",
+      "element4Title1": "Week 7",
+      "element4Week": "7",
+      "element5Title1": "Week 8",
+      "element5Week": "8",
+      "element6Title1": "Week 9",
+      "element6Week": "9",
       "element6Title3": "Mainnet Launch (Eiger)",
-      "element7Title1": "Week 9",
-      "element8Title1": "Week 14",
+      "element7Title1": "Week 10",
+      "element7Week": "10",
+      "element8Title1": "Week 11",
+      "element8Week": "11",
       "element8Title2": "ZERMATT",
-      "element8Title3": "ETH Amsterdam"
+      "element8Title3": "ETH Amsterdam",
+      "element9Title1": "Week 12",
+      "element9Week": "12",
+      "element10Title1": "Week 13",
+      "element10Week": "13",
+      "element11Title1": "Week 14",
+      "element11Week": "14",
+      "element12Title1": "Week 15",
+      "element12Week": "15",
+      "element13Title1": "Week 16",
+      "element13Week": "16"
     }
   }
 }

@@ -2,7 +2,6 @@
   background: $hopr_yellow;
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 54px);
   overflow: hidden;
   padding-top: 24px;
   position: relative;
@@ -106,23 +105,44 @@
   }
 
   .section-bottom {
-    display: flex;
-    flex: 0 auto;
-    flex-wrap: nowrap;
-    justify-content: stretch;
-    transform: translateY(100%);
-
     .welcome {
-      background-repeat: no-repeat;
-      background-position: top;
-      background-size: cover;
-      @at-root #{&}--left {
-        background-image: url('/assets/images/welcomeLeft.jpg');
-        background-position: center;
+      background: linear-gradient($hopr_dark_blue, $hopr_bright_blue);
+      display: block;
+      float: left;
+      width: 100%;
+      .welcome-text {
+        display: inline-block;
+        float: none;
+        padding: 10px 0px 10px 50px;
+        white-space: nowrap;
+
+        h1,
+        .bubble {
+          display: inline-block;
+          float: none;
+          margin: 0;
+          vertical-align: middle;
+        }
+
+        h1 {
+          color: $hopr_white;
+          font-weight: normal;
+          font-size: 3em;
+        }
+  
+        .bubble {
+          background: $hopr_yellow;
+          border-radius: 50%;
+          height: 20px;
+          margin-left: 50px;
+          width: 20px;
+        }
       }
 
-      @at-root #{&}--right {
-        background-image: url('/assets/images/Bildschirmfoto.jpg');
+      .single {
+        display: inline-block;
+        float: none;
+        padding: 20px;
       }
     }
 
