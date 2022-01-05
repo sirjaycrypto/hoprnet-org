@@ -37,7 +37,7 @@ const HeroHoprOnBoard = ({
         {text ? (
           <div className="container">
             <div className="text-wrapper text-video-hop">
-              <span>{text}</span>
+              <span className="main-title">{text}</span>
               <span className="date-text-hopr">6th Jan. - 27th Apr.</span>
             </div>
           </div>

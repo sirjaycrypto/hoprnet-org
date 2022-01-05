@@ -9,6 +9,7 @@ const SectionRoadMapHop = () => {
     {
       title_2: t('home:hopOnBoard.sectionRoadMap.element1Title2'),
       title_3: t('home:hopOnBoard.sectionRoadMap.element1Title3'),
+      customClass: 'road-map-element-week',
     },
     {
       title_2: t('home:hopOnBoard.sectionRoadMap.element2Title2'),
@@ -100,7 +101,7 @@ const SectionRoadMapHop = () => {
       <section className="section-road-map-hop">
         <div className="container">
           <div className="road-map-information">
-            <p>{t('home:hopOnBoard.sectionRoadMap.description')}</p>
+            <h1>{t('home:hopOnBoard.sectionRoadMap.mainTitle')}</h1>
             <h2>{t('home:hopOnBoard.sectionRoadMap.title1')}</h2>
           </div>
 

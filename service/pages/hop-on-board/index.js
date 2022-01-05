@@ -21,7 +21,6 @@ export default function Index({}) {
         autoplay={true}
       />
       <SectionHopOnBoard />
-      <SectionPorgrammeHop />
       <HeroHoprOnBoard
         src={require('../../public/assets/video/Animation_HOP_ON_BOARD.mp4')}
         isAssetVideo={true}

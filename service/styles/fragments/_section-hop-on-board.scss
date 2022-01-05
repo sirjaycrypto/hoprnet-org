@@ -2,9 +2,20 @@
   .background-video {
     height: 65.25vw
   }
+
+  &.gif-content {
+    margin-bottom: 120px;
+  }
+
   .container {
+    .text-video-hop {
+      span.main-title {
+        line-height: 115px;
+      }
+    }
+
     .hop-on-board-information {
-      h2 {
+      h1 {
         color: $hopr_grey;
         font-size: 60px;
         font-weight: 400;

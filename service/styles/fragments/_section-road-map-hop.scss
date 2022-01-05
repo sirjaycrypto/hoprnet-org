@@ -1,12 +1,21 @@
 .section-road-map-hop {
   .container {
     .road-map-information {
-      h2 {
+      h1, h2 {
         color: $hopr_grey;
-        font-size: 60px;
         font-weight: 400;
-        padding: 120px 0px 0px;
         text-align: center;
+      }
+
+      h1 {
+        font-size: 60px;
+        padding: 120px 0;
+      }
+
+      h2 {
+        font-size: 36px;
+        margin: 0;
+        padding-bottom: 20px;
       }
 
       p {
@@ -15,10 +24,6 @@
         letter-spacing: 0.208333px;
         line-height: 37px;
         padding: 80px 0px;
-      }
-
-      .title-journey {
-        padding: 0px;
       }
     }
 
@@ -84,7 +89,7 @@
     }
 
     .road-map-hop-preparation,
-    .road-map-hop-journey { 
+    .road-map-hop-journey {
       .road-map-element {
         .line-help::before {
           height: 18px;

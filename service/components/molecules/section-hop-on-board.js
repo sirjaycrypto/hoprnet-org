@@ -19,10 +19,10 @@ const SectionHopOnBoard = () => {
 
   return (
     <>
-      <section className="section-hop-on-board">
+      <section className="gif-content section-hop-on-board">
         <div className="container">
           <div className="hop-on-board-information">
-            <h2>{t('home:hopOnBoard.sectionHopOnBoard.title')}</h2>
+            <h1>{t('home:hopOnBoard.sectionHopOnBoard.title')}</h1>
             <p>{t('home:hopOnBoard.sectionHopOnBoard.description1')}</p>
             <p className="padding-bottom-description2">
               {t('home:hopOnBoard.sectionHopOnBoard.description2')}

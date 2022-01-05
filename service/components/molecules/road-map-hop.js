@@ -1,11 +1,11 @@
 import React from 'react';
-import Moment from 'moment'
+import Moment from 'moment';
 
 const RoadMapHop = ({data, className}) => {
   return (
     <div className={`road-map-hop ${className}`} >
       {data.map((x, i) => (
-        <div className={`road-map-element ${x.week == Moment().week() - 1 ? "road-map-element-week" : ""}`} key={i}>
+        <div className={`road-map-element ${x.customClass ? x.customClass : ''}`} key={i}>
           <div className="road-map-titles-left">
             <div className="roap-map-title-1">
               <span>{x.title_1}</span>
@@ -18,7 +18,7 @@ const RoadMapHop = ({data, className}) => {
             <span></span>
           </div>
           <div className="area-info">
-            <span className={x.title_3 ? "" : "road-map-element-rectangle"}>{x.title_3}</span>
+            <span className={x.title_3 ? '' : 'road-map-element-rectangle'}>{x.title_3}</span>
           </div>
         </div>
       ))}
