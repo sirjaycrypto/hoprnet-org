@@ -1,8 +1,9 @@
 {
   "association": {
-    "itemA":"Avado, CH",
-    "itemB":"S.N. NONI CORPORATION LTD, CY",
-    "itemC":"The Wandering Editor, UK",
+    "itemA":"Lyons Communications, CH",
+    "itemB":"Avado, CH",
+    "itemC":"S.N. NONI CORPORATION LTD, CY",
+    "itemD":"The Wandering Editor, UK",
     "paragraphA":"The HOPR protocol is a digital commons that is currently being built by ",
     "paragraphB":"Do you want to become a member of the association?",
     "subtitle":"Grant Receivers",

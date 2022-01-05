@@ -37,12 +37,6 @@ const data = [
   },
   {
     link: '#',
-    img: '/assets/images/team/peter_braden.png',
-    name: 'Peter Braden',
-    label: 'Software Engineer',
-  },
-  {
-    link: '#',
     img: '/assets/images/team/quianchen.jpg',
     name: 'Qianchen "Q" Yu',
     label: 'Decentralized Technology Architect',
