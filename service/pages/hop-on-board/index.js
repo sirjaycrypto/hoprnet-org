@@ -13,20 +13,11 @@ export default function Index({}) {
     <Layout>
       <HeroHoprOnBoard
         src="https://player.vimeo.com/video/662893165?autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false&app_id=122963"
-        isAssetVideo={false}
         text={t('home:hopOnBoard.titleVideos.title1')}
-        controls={false}
-        loop={true}
-        muted={true}
-        autoplay={true}
       />
       <SectionHopOnBoard />
       <MapVideoOnBoard
         src="https://player.vimeo.com/video/662893108?autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false&app_id=122963"
-        controls={false}
-        loop={true}
-        muted={true}
-        autoplay={true}
       />
       <SectionRoadMapHop />
     </Layout>

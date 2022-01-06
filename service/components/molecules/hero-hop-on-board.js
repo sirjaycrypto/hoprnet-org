@@ -3,35 +3,20 @@ import React, { useEffect } from 'react';
 const HeroHoprOnBoard = ({
   src,
   text,
-  isAssetVideo,
-  controls,
-  loop,
-  muted,
-  autoplay,
 }) => {
   return (
     <>
-      <section className="section-hero section-hop-on-board section-board-video">
-        {isAssetVideo ? (
-          <video
-            controls={controls}
-            loop={loop}
-            muted={muted}
-            autoPlay={autoplay}
-            width="100%"
-          >
-            <source src={src} type="video/mp4" />
-          </video>
-        ) : (
-          <iframe
-            allow="autoplay; fullscreen"
-            className="background-video"
-            src={src}
-            frameBorder="0"
-            allowFullScreen
-            width="100%"
-          ></iframe>
-        )}
+      {/* section-board-top-video */}
+      <section className="section-hero section-hop-on-board">
+        <iframe
+          allow="autoplay; fullscreen"
+          src={src}
+          frameBorder="0"
+          className="background-video"
+          allowFullScreen
+          height="100%"
+          width="100%"
+        ></iframe>
 
         {text ? (
           <div className="container">

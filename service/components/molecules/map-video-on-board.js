@@ -1,12 +1,6 @@
 import React from 'react';
 
-const MapVideoOnBoard = ({
-  src,
-  controls,
-  loop,
-  muted,
-  autoplay,
-}) => {
+const MapVideoOnBoard = ({ src }) => {
   return (
     <>
       <section className="section-hop-on-board section-map-video">
