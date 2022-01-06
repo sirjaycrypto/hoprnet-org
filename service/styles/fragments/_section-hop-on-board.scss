@@ -16,15 +16,14 @@
   }
 
   &.section-map-video {
-    align-items: center;
-    background-color: #222;
-    display: flex;
-    justify-content: center;
-    line-height: 0;
-    width: 100%;
+    padding-bottom: 56.25%;
+    position: relative;
 
-    video {
-      max-width: 1920px;
+    iframe {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
       width: 100%;
     }
   }

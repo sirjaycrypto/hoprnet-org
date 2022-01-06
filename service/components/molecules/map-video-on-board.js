@@ -9,10 +9,9 @@ const MapVideoOnBoard = ({
 }) => {
   return (
     <>
-      <section className="section-hero section-hop-on-board section-map-video">
+      <section className="section-hop-on-board section-map-video">
         <iframe
           allow="autoplay; fullscreen"
-          className="background-video"
           src={src}
           frameBorder="0"
           allowFullScreen
