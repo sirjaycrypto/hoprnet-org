@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
 import { useTranslation } from '../../hooks/translation';
+import Marquee from 'react-fast-marquee';
+import Link from 'next/link';
 
 export default function Welcome() {
   const [initialAni, setInitialAni] = useState(false);
@@ -13,8 +14,12 @@ export default function Welcome() {
   }, []);
 
   return (
-    <div className={'welcome-section invert-color ' + (initialAni ? 'show-hi' : '')}>
-      <div className="section-top center-on-the-box container ">
+    <div
+      className={
+        'welcome-section invert-color ' + (initialAni ? 'show-hi' : '')
+      }
+    >
+      <div className="section-top container ">
         <div className="main-labels ">
           <h1>{t('home:welcome.title')}</h1>
           <div className="help-box">
@@ -22,22 +27,35 @@ export default function Welcome() {
           </div>
         </div>
       </div>
-      <div className="section-bottom">
-        <Link href="/token">
-          <a className="right-container center-on-the-box welcome welcome--left">
-            <div className="text-area">
-              <h2>{t('home:welcome.rightSection')}</h2>
+      <Link href="/hop-on-board">
+        <div className="section-bottom">
+          <Marquee className="welcome" speed={100} gradient={false}>
+            <div className="welcome-text">
+              <h1>HOP ON BOARD</h1>
+              <div className="bubble"></div>
             </div>
-          </a>
-        </Link>
-        <Link href="/win">
-          <a className="left-container center-on-the-box welcome welcome--right">
-            <div className="text-area">
-              <h2>{t('home:welcome.leftSection')}</h2>
+            <div className="welcome-text">
+              <h1>HOP ON BOARD</h1>
+              <div className="bubble"></div>
             </div>
-          </a>
-        </Link>
-      </div>
+            <div className="welcome-text">
+              <h1>HOP ON BOARD</h1>
+              <div className="bubble"></div>
+            </div>
+            <div className="welcome-text">
+              <h1>HOP ON BOARD</h1>
+              <div className="bubble"></div>
+            </div>
+          </Marquee>
+          <Marquee speed={100} gradient={false}>
+            <img
+              src="/assets/images/hopr-train.png"
+              height="200"
+              className="train-hop-on-board"
+            />
+          </Marquee>
+        </div>
+      </Link>
     </div>
   );
 }

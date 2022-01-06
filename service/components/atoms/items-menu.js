@@ -14,6 +14,10 @@ export default function ItemsMenu() {
       name: 'Technology',
     },
     {
+      path: '/hop-on-board',
+      name: 'Hop on board',
+    },
+    {
       path: '/token',
       name: 'Token',
     },
