@@ -1,12 +1,10 @@
 .welcome-section {
   background: $hopr_yellow;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   height: auto;
   min-height: 100vh;
   overflow: hidden;
-  padding-top: 40px;
   position: relative;
   top: 0;
 
@@ -42,6 +40,8 @@
     box-sizing: border-box;
     display: flex;
     flex: 1;
+    text-align: center;
+    margin-top: 40px;
     width: 100%;
 
     @include responsive(phone) {
@@ -108,9 +108,17 @@
   }
 
   .section-bottom {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(100%);
+    width: 100%;
+    -os-transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+
     @media screen and (max-width: 768px) {
       .train-hop-on-board {
-        height: 200px;
+        height: 160px;
       }
     }
 
@@ -270,5 +278,6 @@
   .section-bottom {
     transform: translateY(0%);
     transition: all 800ms ease-in-out;
+    opacity: 1;
   }
 }

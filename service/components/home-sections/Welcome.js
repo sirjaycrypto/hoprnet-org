@@ -19,7 +19,7 @@ export default function Welcome() {
         'welcome-section invert-color ' + (initialAni ? 'show-hi' : '')
       }
     >
-      <div className="section-top center-on-the-box container ">
+      <div className="section-top container ">
         <div className="main-labels ">
           <h1>{t('home:welcome.title')}</h1>
           <div className="help-box">
