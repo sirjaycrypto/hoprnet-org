@@ -1,7 +1,7 @@
 import React from 'react';
 import HeroHoprOnBoard from '../../components/molecules/hero-hop-on-board';
+import MapVideoOnBoard from '../../components/molecules/map-video-on-board';
 import SectionHopOnBoard from '../../components/molecules/section-hop-on-board';
-import SectionPorgrammeHop from '../../components/molecules/section-programme-hop';
 import SectionRoadMapHop from '../../components/organisms/section-road-map-hop';
 import Layout from '../../components/organisms/layout';
 import { loadNamespaces } from '../_app';
@@ -21,9 +21,8 @@ export default function Index({}) {
         autoplay={true}
       />
       <SectionHopOnBoard />
-      <HeroHoprOnBoard
+      <MapVideoOnBoard
         src={require('../../public/assets/video/Animation_HOP_ON_BOARD.mp4')}
-        isAssetVideo={true}
         controls={false}
         loop={true}
         muted={true}

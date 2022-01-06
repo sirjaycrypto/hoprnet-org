@@ -18,7 +18,6 @@ const HeroHoprOnBoard = ({
             loop={loop}
             muted={muted}
             autoPlay={autoplay}
-            className="background-video"
             width="100%"
           >
             <source src={src} type="video/mp4" />

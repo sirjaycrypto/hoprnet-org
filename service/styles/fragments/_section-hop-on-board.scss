@@ -2,6 +2,31 @@
 
   &.section-board-video {
     height: 100vh;
+
+    video {
+      left: 50%;
+      min-height: 100vh;
+      min-width: 177.77vh;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 100vw;
+      z-index: 1;
+    }
+  }
+
+  &.section-map-video {
+    align-items: center;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    line-height: 0;
+    width: 100%;
+
+    video {
+      max-width: 1920px;
+      width: 100%;
+    }
   }
 
   &.gif-content {

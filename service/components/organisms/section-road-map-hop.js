@@ -20,7 +20,7 @@ const SectionRoadMapHop = () => {
     {
       title_1: t('home:hopOnBoard.sectionRoadMap.element3Title1'),
       title_2: t('home:hopOnBoard.sectionRoadMap.element3Title2'),
-      week: t('home:hopOnBoard.sectionRoadMap.element3Week'),
+      title_3: t('home:hopOnBoard.sectionRoadMap.element3Title3'),
     },
   ];
 
