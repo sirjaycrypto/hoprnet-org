@@ -18,6 +18,10 @@
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -os-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
     transition: all 400ms ease-in-out;
     width: 80vh;
 
@@ -51,6 +55,10 @@
     .main-labels {
       opacity: 0;
       transform: translateY(100%);
+      -moz-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+      -os-transform: translateY(100%);
+      -webkit-transform: translateY(100%);
       z-index: 3;
 
       .help-box {
@@ -112,9 +120,11 @@
     flex-direction: column;
     opacity: 0;
     transform: translateY(100%);
-    width: 100%;
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
     -os-transform: translateY(100%);
     -webkit-transform: translateY(100%);
+    width: 100%;
 
     @media screen and (max-width: 768px) {
       .train-hop-on-board {
@@ -270,6 +280,10 @@
   .section-top {
     .main-labels {
       transform: translateY(0%);
+      -moz-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+      -os-transform: translateY(0%);
+      -webkit-transform: translateY(0%);
       opacity: 1;
       transition: all 800ms ease-in-out;
     }
@@ -277,6 +291,10 @@
 
   .section-bottom {
     transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -os-transform: translateY(0%);
+    -webkit-transform: translateY(0%);
     transition: all 800ms ease-in-out;
     opacity: 1;
   }
