@@ -11,7 +11,7 @@ const HeroHoprOnBoard = ({
 }) => {
   return (
     <>
-      <section className="section-hero section-hop-on-board">
+      <section className="section-hero section-hop-on-board section-board-video">
         {isAssetVideo ? (
           <video
             controls={controls}
