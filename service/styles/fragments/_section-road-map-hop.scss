@@ -45,16 +45,11 @@
       }
 
       .road-map-titles-left {
-        display: flex;
         justify-content: space-between;
-        width: 30%;
-
-        .roap-map-title-1 {
-          flex: 0 0 100px;
-        }
+        width: 22%;
 
         .roap-map-title-2 {
-          flex: 1 1 auto;
+          padding-bottom: 20px;
         }
       }
 
@@ -116,9 +111,7 @@
         }
 
         .road-map-titles-left {
-          .roap-map-title-1 {
-            flex: 0 0 47px;
-          }
+          width: 26%;
         }
       }
     }
