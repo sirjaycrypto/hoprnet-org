@@ -9,15 +9,15 @@ const MapVideoOnBoard = ({
 }) => {
   return (
     <>
-      <section className="section-hop-on-board section-map-video">
-        <video
-          controls={controls}
-          loop={loop}
-          muted={muted}
-          autoPlay={autoplay}
-        >
-          <source src={src} type="video/mp4" />
-        </video>
+      <section className="section-hero section-hop-on-board section-map-video">
+        <iframe
+          allow="autoplay; fullscreen"
+          className="background-video"
+          src={src}
+          frameBorder="0"
+          allowFullScreen
+          width="100%"
+        ></iframe>
       </section>
     </>
   );

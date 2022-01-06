@@ -12,8 +12,8 @@ export default function Index({}) {
   return (
     <Layout>
       <HeroHoprOnBoard
-        src={require('../../public/assets/video/Hop_on_board.mp4')}
-        isAssetVideo={true}
+        src="https://player.vimeo.com/video/662893165?autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false&app_id=122963"
+        isAssetVideo={false}
         text={t('home:hopOnBoard.titleVideos.title1')}
         controls={false}
         loop={true}
@@ -22,7 +22,7 @@ export default function Index({}) {
       />
       <SectionHopOnBoard />
       <MapVideoOnBoard
-        src={require('../../public/assets/video/Animation_HOP_ON_BOARD.mp4')}
+        src="https://player.vimeo.com/video/662893108?autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false&app_id=122963"
         controls={false}
         loop={true}
         muted={true}
