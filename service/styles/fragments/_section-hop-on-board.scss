@@ -1,6 +1,6 @@
 .section-hop-on-board {
   .background-video {
-    height: 65.25vw
+    height: 65.25vw;
   }
 
   &.gif-content {
@@ -31,8 +31,16 @@
         padding-top: 0;
       }
 
-      .padding-bottom-description2{
+      .padding-bottom-description2 {
         padding-bottom: 120px;
+      }
+
+      .paragraph-hop-on-board {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 33px;
+        letter-spacing: 0.15000000596046448px;
       }
     }
   }

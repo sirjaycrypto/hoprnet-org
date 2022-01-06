@@ -41,7 +41,7 @@ export default function News() {
           data-aos="fade-zoom-in"
           data-aos-easing="ease-in-back"
         >
-          <h2 className="in-the-news-title">{t('home:news.title')}</h2>
+          <h2>{t('home:news.title')}</h2>
         </div>
         <div className="items">
           {data.map((e, index) => {

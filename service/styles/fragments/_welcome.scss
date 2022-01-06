@@ -108,11 +108,26 @@
   }
 
   .section-bottom {
+    @media screen and (max-width: 768px) {
+      .train-hop-on-board {
+        height: 200px;
+      }
+    }
+
     .welcome {
       background: linear-gradient($hopr_dark_blue, $hopr_bright_blue);
       display: block;
       float: left;
       width: 100%;
+
+      @media screen and (max-width: 480px) {
+        .welcome-text {
+          h1 {
+            font-size: 38px !important;
+          }
+        }
+      }
+
       .welcome-text {
         display: inline-block;
         float: none;

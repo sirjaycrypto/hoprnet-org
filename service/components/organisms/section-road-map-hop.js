@@ -7,13 +7,20 @@ const SectionRoadMapHop = () => {
 
   const preparationData = [
     {
+      title_1: t('home:hopOnBoard.sectionRoadMap.element1Title1'),
       title_2: t('home:hopOnBoard.sectionRoadMap.element1Title2'),
       title_3: t('home:hopOnBoard.sectionRoadMap.element1Title3'),
       customClass: 'road-map-element-week',
     },
     {
+      title_1: t('home:hopOnBoard.sectionRoadMap.element2Title1'),
       title_2: t('home:hopOnBoard.sectionRoadMap.element2Title2'),
       title_3: t('home:hopOnBoard.sectionRoadMap.element2Title3'),
+    },
+    {
+      title_1: t('home:hopOnBoard.sectionRoadMap.element3Title1'),
+      title_2: t('home:hopOnBoard.sectionRoadMap.element3Title2'),
+      week: t('home:hopOnBoard.sectionRoadMap.element3Week'),
     },
   ];
 
@@ -88,11 +95,6 @@ const SectionRoadMapHop = () => {
       title_2: t('home:hopOnBoard.sectionRoadMap.element16Title2'),
       title_3: t('home:hopOnBoard.sectionRoadMap.element16Title3'),
       week: t('home:hopOnBoard.sectionRoadMap.element16Week'),
-    },
-    {
-      title_1: t('home:hopOnBoard.sectionRoadMap.element3Title1'),
-      title_2: t('home:hopOnBoard.sectionRoadMap.element3Title2'),
-      week: t('home:hopOnBoard.sectionRoadMap.element3Week'),
     },
   ];
 

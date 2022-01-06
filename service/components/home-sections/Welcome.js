@@ -27,7 +27,7 @@ export default function Welcome() {
           </div>
         </div>
       </div>
-      <Link href='/hop-on-board'>
+      <Link href="/hop-on-board">
         <div className="section-bottom">
           <Marquee className="welcome" speed={100} gradient={false}>
             <div className="welcome-text">
@@ -48,7 +48,11 @@ export default function Welcome() {
             </div>
           </Marquee>
           <Marquee speed={100} gradient={false}>
-            <img src="/assets/images/hopr-train.png" height="200"/>
+            <img
+              src="/assets/images/hopr-train.png"
+              height="200"
+              className="train-hop-on-board"
+            />
           </Marquee>
         </div>
       </Link>

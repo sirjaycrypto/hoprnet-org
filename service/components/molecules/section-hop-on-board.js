@@ -42,6 +42,13 @@ const SectionHopOnBoard = () => {
               </div>
             </div>
           ))}
+
+          <div className="hop-on-board-information">
+            <p className="paragraph-hop-on-board">
+              You can join the journey at any time, but the rewards are higher
+              for those who get on board early…
+            </p>
+          </div>
         </div>
       </section>
     </>

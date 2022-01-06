@@ -104,6 +104,11 @@
   .section-road-map-hop {
     .container {
       .road-map-hop {
+        .road-map-element {
+          .line-help-hop-on-board {
+            margin: 0 2rem 0 2rem;
+          }
+        }
         span {
           font-size: 12px;
           white-space: normal;
