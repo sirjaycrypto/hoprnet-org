@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 import { Button } from '../atoms/button';
+import { useWindowSize } from '../hooks/useMobile';
 
 export const BlogLayout = ({ url, setLimit, limit }) => {
   const [posts, setPosts] = useState([]);
+  const { width } = useWindowSize();
 
   const loadPosts = async () => {
     await fetch(url, {
@@ -69,7 +71,12 @@ export const BlogLayout = ({ url, setLimit, limit }) => {
       <div className="container-sm">
         <ul>
           {posts.map((post, i) => (
-            <li key={i} className={i === 0 ? 'first-element' : ''}>
+            <li
+              key={i}
+              className={
+                i === 0 && width >= 767 ? 'first-element' : ''
+              }
+            >
               <a href={post.url} target="_blank">
                 <img src={post.picture} />
                 <div className="content-first-element">
