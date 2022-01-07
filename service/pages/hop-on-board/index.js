@@ -12,12 +12,12 @@ export default function Index({}) {
   return (
     <Layout>
       <HeroHoprOnBoard
-        src="https://player.vimeo.com/video/663035309?h=3fb2e9f5d0&autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false&app_id=122963"
+        src="https://player.vimeo.com/video/663035309?background=1&autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false&app_id=122963"
         text={t('home:hopOnBoard.titleVideos.title1')}
       />
       <SectionHopOnBoard />
       <MapVideoOnBoard
-        src="https://player.vimeo.com/video/662893108?autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false&app_id=122963"
+        src="https://player.vimeo.com/video/662893108?background=1&autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false&app_id=122963"
       />
       <SectionRoadMapHop />
     </Layout>
