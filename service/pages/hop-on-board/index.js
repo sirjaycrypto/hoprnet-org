@@ -7,7 +7,7 @@ import Layout from '../../components/organisms/layout';
 import { loadNamespaces } from '../_app';
 import useTranslation from 'next-translate/useTranslation';
 
-export default function Index({}) {
+export default function Index() {
   const { t } = useTranslation();
   return (
     <Layout>
