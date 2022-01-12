@@ -17,7 +17,7 @@ export default function ContactPlus() {
       delayTime: '150',
     },
     {
-      link: 'https://docs.hoprnet.org/home/',
+      link: 'https://docs.hoprnet.org/',
       img: 'assets/images/icons/original/programming-team-chat-3.png',
       label: 'common:techies',
       delayTime: '200',
@@ -30,7 +30,7 @@ export default function ContactPlus() {
     },
 
     {
-      link: 'http://docs.hoprnet.org/en/latest/',
+      link: 'https://docs.hoprnet.org/staking/how-to-stake',
       img: 'assets/images/icons/original/outdoors-mining.png',
       label: 'common:miners&Stakers',
       delayTime: '300',
