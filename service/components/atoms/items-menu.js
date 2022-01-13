@@ -31,7 +31,7 @@ export default function ItemsMenu() {
       name: 'Jungfrau',
     },
     {
-      path: 'https://github.com/hoprnet/hopr-sh/blob/main/README.md',
+      path: 'https://docs.hoprnet.org/node/start-here',
       name: 'Run Node',
       target: '_blank',
     },

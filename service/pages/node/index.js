@@ -64,7 +64,7 @@ export default function Index() {
                 </motion.p>
                 <div className="btn-align">
                   <a
-                    href="https://docs.hoprnet.org/en/latest/src/install-hoprd/index.html"
+                    href="https://docs.hoprnet.org/node/start-here"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="link-out"

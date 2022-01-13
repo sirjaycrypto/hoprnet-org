@@ -129,7 +129,7 @@ const aItems = [
           hoprnet.org/quest
         </a>
         ? Our jobs are also listed{' '}
-        <a className="text-color-high underline" href="/who-is-HOPR#jobs">
+        <a className="text-color-high underline" href="/about-us#jobs">
           here
         </a>
         .
