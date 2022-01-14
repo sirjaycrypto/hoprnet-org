@@ -3,7 +3,7 @@ name: Website bug
 about: Anything related to spacings, wrong implementation, etc.
 title: "[ website bug ] Update title"
 labels: type:design, workflow:new issue
-assignees: jjperezaguinaga
+assignees: ''
 
 ---
 
