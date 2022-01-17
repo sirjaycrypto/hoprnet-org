@@ -10,7 +10,6 @@ const SectionRoadMapHop = () => {
       title_1: t('home:hopOnBoard.sectionRoadMap.element1Title1'),
       title_2: t('home:hopOnBoard.sectionRoadMap.element1Title2'),
       title_3: t('home:hopOnBoard.sectionRoadMap.element1Title3'),
-      customClass: 'road-map-element-week',
     },
     {
       title_1: t('home:hopOnBoard.sectionRoadMap.element2Title1'),
@@ -21,6 +20,7 @@ const SectionRoadMapHop = () => {
       title_1: t('home:hopOnBoard.sectionRoadMap.element3Title1'),
       title_2: t('home:hopOnBoard.sectionRoadMap.element3Title2'),
       title_3: t('home:hopOnBoard.sectionRoadMap.element3Title3'),
+      customClass: 'road-map-element-week',
     },
   ];
 
