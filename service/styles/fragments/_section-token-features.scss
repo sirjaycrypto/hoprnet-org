@@ -55,18 +55,14 @@
 
     .icon-toke-show {
       display: flex;
-      height: 114px;
-      justify-content: center;
-      margin-bottom: 0;
-      position: relative;
-      width: 114px;
 
       @include responsive(tablet) {
         margin: auto;
       }
 
       img {
-        z-index: 1;
+        height: 114px;
+        width: auto;
       }
     }
     .info-cont {
