@@ -49,12 +49,6 @@ const data = [
   },
   {
     link: '#',
-    img: '/assets/images/team/Gregory_Babincev.png',
-    name: 'Gregory Babintcev',
-    label: 'Chinese Community Manager',
-  },
-  {
-    link: '#',
     img: '/assets/images/team/Jakob.jpg',
     name: 'Jakob Leonard',
     label: 'Business Development Manager',
