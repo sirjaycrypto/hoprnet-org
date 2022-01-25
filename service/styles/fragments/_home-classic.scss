@@ -79,9 +79,13 @@
     }
   }
 
+  .section-UseCases-only{
+    padding: 120px 0 !important;
+  }
+
   .section-UseCases {
     h2 {
-      margin: 0 !important;
+      margin: 0px 0px 120px !important;
       &:last-of-type {
         @include responsive(tablet) {
           font-size: 32px;
