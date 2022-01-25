@@ -25,6 +25,7 @@ export default function UseCases() {
           <div className="container-sm sub-title">
             <h2>{t('home:useCases.title')}</h2>
           </div>
+          <div className="read-text">{t('home:useCases.content')}</div>
         </div>
 
         {data.map((x, i) => (
