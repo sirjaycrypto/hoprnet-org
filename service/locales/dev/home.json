@@ -112,18 +112,6 @@
     "title": "home_modal_title",
     "about": "home_modal_about"
   },
-  "useCases": {
-    "title": "home_usecases_title",
-    "content": "home_usecases_content"
-  },
-  "connectDevices": {
-    "title": "home_connectdevices_title",
-    "content": "home_connectdevices_content"
-  },
-  "makeCrypto": {
-    "title": "home_makecrypto_title",
-    "content": "home_makecrypto_content"
-  },
   "digiWithout": {
     "title": "home_digiwithout_title",
     "content": "home_digiwithout_content"
