@@ -308,7 +308,7 @@ const HomeTokenRelease = forwardRef(({ start }, ref) => {
               <span className="external-link">
                 {t('home:token.additionalInfo')}
                 <a
-                  href="https://coinmarketcap.com/es/currencies/hopr/"
+                  href="https://coinmarketcap.com/currencies/hopr/"
                   target="_blank"
                 >
                   COINMARKETCAP.
