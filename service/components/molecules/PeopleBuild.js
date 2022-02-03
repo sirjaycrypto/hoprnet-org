@@ -69,7 +69,7 @@ const data = [
     link: '#',
     img: '/assets/images/team/LUKAS_POHANKA.png',
     name: 'Lukas Pohanka',
-    label: 'Protocol engineer',
+    label: 'Protocol Engineer',
   },
   {
     link: '#',
