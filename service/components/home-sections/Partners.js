@@ -29,7 +29,7 @@ export const aPartners = [
   },
   {
     image: 'assets/partners/09_swissmade_software_logo.png',
-    url: 'https://www.swissmadesoftware.org',
+    url: 'https://www.swissmadesoftware.org/home.html',
   },
   { url: 'https://blockark.io/', image: 'assets/partners/BLOCKARK-LOGO.png' },
   {
