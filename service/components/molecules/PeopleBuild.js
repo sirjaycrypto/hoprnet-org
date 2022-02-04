@@ -49,12 +49,6 @@ const data = [
   },
   {
     link: '#',
-    img: '/assets/images/team/Gregory_Babincev.png',
-    name: 'Gregory Babintcev',
-    label: 'Chinese Community Manager',
-  },
-  {
-    link: '#',
     img: '/assets/images/team/Jakob.jpg',
     name: 'Jakob Leonard',
     label: 'Business Development Manager',
@@ -73,15 +67,9 @@ const data = [
   },
   {
     link: '#',
-    img: '/assets/images/team/HOPRNET_Andrey.jpg',
-    name: 'Andrey Kiryushkin',
-    label: 'Protocol Engineer',
-  },
-  {
-    link: '#',
     img: '/assets/images/team/LUKAS_POHANKA.png',
     name: 'Lukas Pohanka',
-    label: 'Protocol engineer',
+    label: 'Protocol Engineer',
   },
   {
     link: '#',

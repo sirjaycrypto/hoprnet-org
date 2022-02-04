@@ -31,11 +31,6 @@ const HomeBacked = forwardRef(({ setVisibleNow }, ref) => {
       title: 'focus-labs',
     },
     {
-      img: '/assets/backed_by_logo/04_AU21CAPITAL_Logo.svg',
-      url: 'https://au21.capital/',
-      title: 'au21',
-    },
-    {
       img: '/assets/backed_by_logo/vendetta_capital.png',
       url: 'https://www.vendetta.capital/',
       title: 'Vendetta',

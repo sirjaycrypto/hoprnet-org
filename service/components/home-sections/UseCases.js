@@ -3,35 +3,23 @@ import { useTranslation } from '../../hooks/translation';
 
 const data = [
   {
-    link:
-      'https://www.coindesk.com/binance-labs-leads-1m-seed-round-in-crypto-tor-alternative-hopr',
-    img: '/assets/images/icons/with-blue-stroke/cloud-data-transfer.png',
+    img: '/assets/images/HOPR_USE_CASE_MEDTECH.gif',
     title: 'home:connectDevices.title',
     main: 'home:connectDevices.content',
-    delayTime: '100',
+    mirrorBox: true,
   },
   {
-    link:
-      'https://cointelegraph.com/news/hopr-data-privacy-testnet-to-launch-following-investment-by-binance',
-    img: '/assets/images/icons/with-blue-stroke/iris-scan-lock.png',
+    img: '/assets/images/HOPR_USE_CASE_CRYPTO.gif',
     title: 'home:makeCrypto.title',
     main: 'home:makeCrypto.content',
-    delayTime: '150',
-  },
-  {
-    link:
-      'https://www.moneytoday.ch/news/das-schweizer-tech-startup-hopr-sammelt-1-million-dollar-ein-binance-labs-fuehrt-die-investitionsru/',
-    img: '/assets/images/icons/with-blue-stroke/hierarchy-8.png',
-    title: 'home:digiWithout.title',
-    main: 'home:digiWithout.content',
-    delayTime: '200',
+    mirrorBox: false,
   },
 ];
 
 export default function UseCases() {
   const { t } = useTranslation();
   return (
-    <section className="section-UseCases change-bg-color the-aux-padding invert-color">
+    <section className="section-UseCases change-bg-color the-aux-padding invert-color section-UseCases-only">
       <div className="container">
         <div data-aos="fade-up">
           <div className="container-sm sub-title">
@@ -40,30 +28,20 @@ export default function UseCases() {
           <div className="read-text">{t('home:useCases.content')}</div>
         </div>
 
-        <div className="items-list">
-          {data.map((e, index) => {
-            const { title, main, img, about, delayTime } = e;
-            return (
-              <div
-                key={index}
-                data-aos="fade-up"
-                data-aos-delay={delayTime}
-                className="element-item"
-              >
-                <div className="main">
-                  <div className="container-img mb-12">
-                    <img src={img} alt={about} />
-                  </div>
-
-                  <div>
-                    <h4>{t(title)}</h4>
-                    <div className="list-text">{t(main)}</div>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+        {data.map((x, i) => (
+          <div
+            key={i}
+            className={`info-box-line ${x.mirrorBox ? 'flex-line' : ''}`}
+          >
+            <div className="info-cont aux-padding-box-read">
+              <h3>{t(x.title)}</h3>
+              <p className="padding-bottom">{t(x.main)}</p>
+            </div>
+            <div>
+              <img src={x.img} alt={x.title} />
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

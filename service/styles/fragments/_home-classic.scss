@@ -79,27 +79,26 @@
     }
   }
 
+  .section-UseCases-only{
+    padding: 120px 0 !important;
+  }
+
   .section-UseCases {
     h2 {
-      margin: 0 !important;
-      &:last-of-type {
-        @include responsive(tablet) {
-          font-size: 32px;
-          margin-top: 3rem !important;
-        }
-      }
+      margin: 0;
     }
+
     .read-text {
       text-align: center;
-      @include responsive(tablet) {
-        margin-bottom: 80px;
-      }
+      margin: 60px 0;
+
       p {
-        font-weight: 400;
         color: #414141;
         font-size: 20px;
-        line-height: 30px;
+        font-weight: 400;
         letter-spacing: -0.1px;
+        line-height: 30px;
+        margin: 0;
       }
     }
 

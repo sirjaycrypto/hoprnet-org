@@ -3,7 +3,8 @@ import { useTranslation } from '../../hooks/translation';
 import Marquee from 'react-fast-marquee';
 import Link from 'next/link';
 
-export default function Welcome() {
+const arrayWelcome = Array(14).fill(0);
+export default function Welcome() { 
   const [initialAni, setInitialAni] = useState(false);
   const { t } = useTranslation();
 
@@ -12,6 +13,15 @@ export default function Welcome() {
       setInitialAni(true);
     }, 400);
   }, []);
+
+  const welcomeTextElement = (i) => {
+    return (
+      <div className="welcome-text" key={i}>
+        <h1>HOP ON BOARD </h1>
+        <div className="bubble"></div>
+      </div>
+    );
+  };
 
   return (
     <div
@@ -30,22 +40,9 @@ export default function Welcome() {
       <Link href="/hop-on-board">
         <div className="section-bottom">
           <Marquee className="welcome" speed={100} gradient={false}>
-            <div className="welcome-text">
-              <h1>HOP ON BOARD</h1>
-              <div className="bubble"></div>
-            </div>
-            <div className="welcome-text">
-              <h1>HOP ON BOARD</h1>
-              <div className="bubble"></div>
-            </div>
-            <div className="welcome-text">
-              <h1>HOP ON BOARD</h1>
-              <div className="bubble"></div>
-            </div>
-            <div className="welcome-text">
-              <h1>HOP ON BOARD</h1>
-              <div className="bubble"></div>
-            </div>
+            {arrayWelcome.map((x, i) => (
+              welcomeTextElement(i)
+            ))}
           </Marquee>
           <Marquee speed={100} gradient={false}>
             <img

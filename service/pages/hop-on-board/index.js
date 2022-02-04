@@ -7,17 +7,17 @@ import Layout from '../../components/organisms/layout';
 import { loadNamespaces } from '../_app';
 import useTranslation from 'next-translate/useTranslation';
 
-export default function Index({}) {
+export default function Index() {
   const { t } = useTranslation();
   return (
     <Layout>
       <HeroHoprOnBoard
-        src="https://player.vimeo.com/video/663035309?background=1&autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false&app_id=122963"
+        src="https://player.vimeo.com/video/673666043?background=1&autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false&app_id=122963"
         text={t('home:hopOnBoard.titleVideos.title1')}
       />
       <SectionHopOnBoard />
       <MapVideoOnBoard
-        src="https://player.vimeo.com/video/662893108?background=1&autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false&app_id=122963"
+        src="https://player.vimeo.com/video/673669586?background=1&autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false&app_id=122963"
       />
       <SectionRoadMapHop />
     </Layout>

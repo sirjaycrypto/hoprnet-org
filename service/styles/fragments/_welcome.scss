@@ -286,6 +286,9 @@
       -webkit-transform: translateY(0%);
       opacity: 1;
       transition: all 800ms ease-in-out;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
   }
 
