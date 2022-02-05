@@ -1,70 +1,28 @@
 import { useEffect, useState } from 'react';
-import { Button } from '../atoms/button';
 import { useWindowSize } from '../hooks/useMobile';
 
-export const BlogLayout = ({ url, setLimit, limit }) => {
+export const BlogLayout = ({ type }) => {
   const [posts, setPosts] = useState([]);
   const { width } = useWindowSize();
 
   const loadPosts = async () => {
-    await fetch(url, {
-      method: 'GET',
+    await fetch('/api/blog', {
+      method: 'POST',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
       },
+      body: JSON.stringify({ type }),
     })
-      .then((res) => res.json())
-      .then((res) => {
-        replaceSize(res);
-        convertTimestamp(res);
-        setPosts(res);
+      .then(res => res.json())
+      .then(res => {
+        setPosts(res.data);
       });
-  };
-
-  const replaceSize = (array = []) => {
-    if (array) {
-      array.map((x) => {
-        x.picture = x.picture.replace('max', 'fit');
-        x.picture = x.picture.replace('${size}', `${551}/${309}`);
-      });
-    }
-  };
-
-  const convertTimestamp = (array = []) => {
-    if (array) {
-      const monthNames = [
-        'Jan',
-        'Feb',
-        'Mar',
-        'Apr',
-        'May',
-        'Jun',
-        'Jul',
-        'Aug',
-        'Sep',
-        'Oct',
-        'Nov',
-        'Dec',
-      ];
-
-      array.map((x) => {
-        if (x.publishAt) {
-          let date = new Date(x.publishAt);
-          x.publishAt =
-            monthNames[date.getMonth()] +
-            ' ' +
-            date.getDay() +
-            ', ' +
-            date.getFullYear();
-        }
-      });
-    }
   };
 
   useEffect(() => {
     loadPosts();
-  }, [url]);
+  }, [type]);
 
   return (
     <section id="post-blog" className="section-posts padding-section-aux">
@@ -74,37 +32,19 @@ export const BlogLayout = ({ url, setLimit, limit }) => {
             <li
               key={i}
               className={
-                i === 0 && width >= 767 ? 'first-element' : ''
+                i === 0 && width >= 767 ? 'first-element' : 'grid-element'
               }
             >
               <a href={post.url} target="_blank">
-                <img src={post.picture} />
+                <img src={post.imageUrl} />
                 <div className="content-first-element">
-                  <h1>{post.title}</h1>
+                  <h1>{post.name}</h1>
                   <h2>{post.description}</h2>
-                  <div className="avatar">
-                    <img src={post.avatar} />
-                    <div className="author-and-date">
-                      <h3 className="author-green">{post.author}</h3>
-                      <br></br>
-                      <h3 className="date">{post.publishAt}</h3>
-                    </div>
-                  </div>
                 </div>
               </a>
             </li>
           ))}
         </ul>
-        {posts.length === limit ? (
-          <center>
-            <Button
-              content="Add more posts"
-              onClick={() => setLimit(limit + 6)}
-              type="button"
-              className="button-add-more"
-            />
-          </center>
-        ) : null}
       </div>
     </section>
   );
