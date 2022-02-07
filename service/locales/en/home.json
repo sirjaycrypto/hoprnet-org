@@ -219,7 +219,7 @@
     },
     "professional": {
       "for": "Professional",
-      "main": "HOPR is providing worry-free privacy to everyone. <a href=\"/partners\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-color-high underline\">Reach out to us</a> if you and your customers deserve the best.",
+      "main": "HOPR is providing worry-free privacy to everyone. <a href=\"mailto:contact@hoprnet.org" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-color-high underline\">Reach out to us</a> if you and your customers deserve the best.",
       "title": "Your company"
     },
     "title": "HOPR Is",
