@@ -71,7 +71,7 @@ const Footer = forwardRef(({ setVisibleNow }, ref) => {
             <div className="footer-menu">
               <ul>
                 <li>
-                  <Link href="/about-us">Contact</Link>
+                  <Link href="mailto:contact@hoprnet.org">Contact</Link>
                 </li>
                 <li>
                   <Link href="/about-us">About us</Link>
