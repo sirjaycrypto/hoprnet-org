@@ -5,14 +5,19 @@
     background-color: rgb(238, 238, 238);
     padding: 54px 0 0px 0;
 
+    .container-sm {
+      display: flex;
+      justify-content: space-around;
+    }
+
     button {
       align-items: center;
       background-color: inherit;
       border: none;
       color: #414141;
+      cursor: pointer;
       justify-content: center;
-      padding: 12px 0;
-      width: 50%;
+      padding: 12px;
 
       &.active {
         text-decoration-line: underline;
@@ -37,46 +42,8 @@
       text-align: left;
       width: calc(100% / 3);
 
-      &.first-element {
-        width: 100%;
-
-        a {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          text-align: left;
-          text-decoration: none;
-        }
-
-        img {
-          margin: 0;
-          width: 50%;
-        }
-
-        h1 {
-          align-items: flex-end;
-        }
-
-        h2 {
-          color: #414141;
-        }
-
-        .content-first-element {
-          width: 46%;
-        }
-      }
-
-      &.grid-element {
-        a {
-          display: flex;
-          flex-direction: column;
-          text-decoration: none;
-        }
-      }
-
       img {
-        border-style: none;
+        border: 0;
         margin: 0;
         width: 100%;
       }
@@ -88,6 +55,7 @@
         font-size: 24px;
         font-weight: 700;
         text-decoration: none;
+        margin: 0;
       }
 
       h2 {
@@ -104,6 +72,67 @@
       h2::first-letter {
         text-transform: uppercase;
       }
+
+      p {
+        color: rgba(0, 0, 0, 0.5);
+        margin-top: 0;
+      }
+
+      figure {
+        line-height: 0;
+        margin: 0;
+        width: 50%;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      &.first-element {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        text-align: left;
+        text-decoration: none;
+        width: 100%;
+
+        h1 {
+          align-items: flex-end;
+        }
+
+        h2 {
+          color: #414141;
+        }
+
+        .content-element {
+          width: 46%;
+        }
+      }
+
+      &.grid-element {
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+
+        figure {
+          width: 100%;
+        }
+      }
+
+      .avatar {
+        h3 {
+          color: rgba(0, 0, 0, 0.5);
+          font-size: 16px;
+          font-weight: 400;
+          margin: 0;
+          text-decoration: none;
+        }
+
+        .author-green {
+          color: rgb(34, 80, 34);
+        }
+      }
     }
   }
 }
@@ -113,16 +142,6 @@
     ul {
       li {
         width: 100%;
-      }
-    }
-  }
-
-  .section-blog {
-    .tabs {
-      button {
-        p {
-          font-size: 24px;
-        }
       }
     }
   }

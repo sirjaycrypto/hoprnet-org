@@ -1,22 +1,25 @@
 import axios from 'axios';
-require('dotenv').config();
+import { XMLParser } from 'fast-xml-parser';
 
 const apiBlog = async (req, res) => {
-  const { type } = req.body,
-    huntToken = process.env.BLOG_HUNT_TOKEN,
-    urlStr = type === 'hunt' ?
-      'https://api.medium.com/v1/users/1d748625f832f58bf6dba2a895a78c2f39bed9a861f0030d35438df48d68af93f/publications' : '';
+  try {
+    const { type } = req.body,
+      urlStr = type === 'hunt' ? 'https://medium.com/feed/hoprhunt' : 'https://medium.com/feed/hoprnet',
+      parser = new XMLParser();
 
-  const response = await axios({
-    method: 'GET',
-    url: urlStr,
-    headers: {
-      Accept: 'application/json',
-      'Authorization': `Bearer ${type === 'hunt' ? huntToken : ''}`,
-    }
-  });
+    const response = await axios({
+      method: 'GET',
+      url: urlStr,
+      headers: {
+        Accept: 'application/xml',
+      }
+    });
 
-  res.status(200).json(response.data);
+    const data = parser.parse(response.data);
+    res.status(200).json({ data: data?.rss?.channel?.item || [] });
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
 };
 
 export default apiBlog;
