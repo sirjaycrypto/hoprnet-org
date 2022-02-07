@@ -94,8 +94,8 @@ export default function Index() {
                     rel="noopener noreferrer"
                   >
                     {t('node:second.rightLink-1')}
-                  </a>
-                  {' '}and{' '}
+                  </a>{' '}
+                  and{' '}
                   <a
                     href="https://cointelegraph.com/news/hopr-data-privacy-testnet-to-launch-following-investment-by-binance"
                     className="text-color-high underline"
@@ -103,7 +103,8 @@ export default function Index() {
                     rel="noopener noreferrer"
                   >
                     {t('node:second.rightLink-2')}
-                  </a>{t('node:second.rightParagraphB')}
+                  </a>
+                  {t('node:second.rightParagraphB')}
                 </motion.p>
                 <div className="btn-align">
                   <a
@@ -128,14 +129,14 @@ export default function Index() {
           <div className="container-sm">
             <p>
               {t('node:specifications.paragraphA')}
-              <a
+              {/* <a
                 href="https://ava.do/avado-i2"
                 className="text-color-high underline"
                 target="_blank"
                 rel="noopener noreferrer"
-              >
-                {t('node:specifications.link')}
-              </a>
+              > */}
+              {t('node:specifications.link')}
+              {/* </a> */}
               {t('node:specifications.paragraphB')}
             </p>
           </div>
