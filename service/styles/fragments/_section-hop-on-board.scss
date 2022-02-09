@@ -33,6 +33,8 @@
       }
 
       .bottom-buttons {
+        bottom: 0;
+        position: absolute;
         a {
           text-decoration: none;
         }
