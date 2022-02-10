@@ -118,7 +118,6 @@ export default function Index() {
               <br />
               {t('about:hero.paragraphE')}
               <a
-                className="link-out"
                 href="https://hoprnet.org/de/book-of-hopr"
                 target="_blank"
                 rel="noopener"
