@@ -32,6 +32,10 @@
         line-height: 115px;
       }
 
+      .bottom-buttons-fixed {
+        position: fixed !important;
+      }
+
       .bottom-buttons {
         bottom: 0;
         position: absolute;
