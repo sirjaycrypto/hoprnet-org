@@ -27,13 +27,13 @@
   }
 
   .container {
-    .text-video-hop {
+    .text-wrapper {
       span.main-title {
         line-height: 115px;
       }
 
-      .bottom-buttons-fixed {
-        position: fixed !important;
+      .middle-information-hero {
+        display: contents;
       }
 
       .bottom-buttons {
@@ -44,6 +44,7 @@
         }
         span{
           margin-right: 10px;
+          font-size: 27px;
         }
       }
     }

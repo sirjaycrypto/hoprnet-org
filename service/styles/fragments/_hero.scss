@@ -7,7 +7,6 @@
   }
 }
 
-
 .section-hero {
   align-items: center;
   display: flex;
@@ -58,22 +57,23 @@
   }
 }
 
-
 .section-hero {
   .text-wrapper {
     align-items: center;
-    justify-content: center;
     display: flex;
     flex-direction: column;
-  }
-  .text-video-hop {
-    animation-delay: 11s;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-name: fadeInTextVideo;
     font-size: 120px;
-    opacity: 0;
+    justify-content: center;
 
+    .middle-information-hero {
+      span {
+        animation-delay: 11s;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-name: fadeInTextVideo;
+        opacity: 0;
+      }
+    }
   }
   h1,
   span,
@@ -215,7 +215,7 @@
 
 @media screen and (max-width: 500px) {
   .section-hero {
-    .text-video-hop {
+    .text-wrapper {
       .main-title {
         font-size: 75px;
         line-height: 95px !important;
@@ -223,19 +223,31 @@
       .buttons-hero {
         font-size: 16px;
       }
+
+      .bottom-buttons {
+        span {
+          font-size: 19px !important;
+        }
+      }
     }
   }
 }
 
 @media screen and (max-width: 360px) {
   .section-hero {
-    .text-video-hop {
+    .text-wrapper {
       .main-title {
         font-size: 40px;
         line-height: 60px !important;
       }
       .buttons-hero {
         font-size: 10px;
+      }
+
+      .bottom-buttons {
+        span {
+          font-size: 15px !important;
+        }
       }
     }
   }

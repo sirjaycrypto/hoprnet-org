@@ -1,23 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 const HeroHoprOnBoard = ({ src, text }) => {
-  const [bottomButtons, setBottomButtons] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-
-  const onScroll = () => {
-    const scrollY = window.pageYOffset;
-
-    if (scrollY > 0) {
-      setBottomButtons(true);
-    } else {
-      setBottomButtons(false);
-    }
-  };
-
   return (
     <>
       {/* section-board-top-video */}
@@ -34,14 +17,12 @@ const HeroHoprOnBoard = ({ src, text }) => {
 
         {text ? (
           <div className="container">
-            <div className="text-wrapper text-video-hop">
-              <span className="main-title">{text}</span>
-              <span className="buttons-hero">6th Jan. - 27th Apr.</span>
-              <div
-                className={`bottom-buttons ${
-                  bottomButtons ? 'bottom-buttons-fixed' : ''
-                } `}
-              >
+            <div className="text-wrapper">
+              <div className="middle-information-hero">
+                <span className="main-title">{text}</span>
+                <span className="buttons-hero">6th Jan. - 27th Apr.</span>
+              </div>
+              <div className="bottom-buttons">
                 <a href="#road-map-hop">
                   <span className="buttons-hero">Programme</span>
                 </a>
