@@ -7,6 +7,8 @@ import SectionJobsHopOnBoard from '../../components/molecules/jobs-hop-on-board'
 import Layout from '../../components/organisms/layout';
 import { loadNamespaces } from '../_app';
 import useTranslation from 'next-translate/useTranslation';
+import SectionBuildHop from '../../components/molecules/section-build';
+import SectionBountiesHop from '../../components/molecules/section-bounties';
 
 export default function Index() {
   const { t } = useTranslation();
@@ -21,6 +23,8 @@ export default function Index() {
         src="https://player.vimeo.com/video/673669586?background=1&autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false&app_id=122963"
       />
       <SectionRoadMapHop />
+      <SectionBuildHop />
+      <SectionBountiesHop />
       <SectionJobsHopOnBoard />
     </Layout>
   );
