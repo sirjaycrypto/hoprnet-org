@@ -23,14 +23,14 @@ const HeroHoprOnBoard = ({ src, text }) => {
                 <span className="buttons-hero">6th Jan. - 27th Apr.</span>
               </div>
               <div className="bottom-buttons">
-                <a href="#road-map-hop">
-                  <span className="buttons-hero">Programme</span>
-                </a>
-                <a href="https://gitcoin.co/hoprnet/active" target="_blank">
-                  <span className="buttons-hero">Bounties</span>
+                <a href="#build-hop-on-board">
+                  <span className="buttons-hero">BUILD</span>
                 </a>
                 <a href="#jobs-hop-on-board">
-                  <span className="buttons-hero">Jobs</span>
+                  <span className="buttons-hero">JOBS</span>
+                </a>
+                <a href="#bounties-hop-on-board">
+                  <span className="buttons-hero">BOUNTIES</span>
                 </a>
               </div>
             </div>

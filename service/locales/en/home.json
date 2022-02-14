@@ -329,6 +329,44 @@
       "element16Title2": "RANDA",
       "element16Title3": "Mega BUIDL Week @ETHAmsterdam",
       "element16Week": "16"
+    },
+    "sectionBuild": {
+      "mainTitle": "How to BUIDL a HOPR dapp in < 10min",
+      "paragraph1": "The easiest way to develop a HOPR dapp is to run a cluster of 5 HOPR nodes either on your own machine or in a browser-based cloud environment.",
+      "title1": "1. HOPR Cluster Development Setup",
+      "title2": "Option 1: Local setup on macOS/Linux",
+      "paragraph2": "Please ensure that you have",
+      "paragraph3": "NodeJS 16",
+      "paragraph4": "and",
+      "paragraph5": "yarn",
+      "paragraph6": "installed. This works for typical development setups on macOS or Linux. If that does not work for you, consider working with the Gipod setup (see below).",
+      "code1": "$ wget https://github.com/hoprnet/hoprnet/archive/refs/heads/master.zip",
+      "code2": "$ unzip http://master.zip",
+      "code3": "$ cd hoprnet-master",
+      "code4": "$ yarn && yarn build",
+      "title3": "Option 2: Browser-based setup in Gitpod with zero overhead",
+      "paragraph7": "Launch our Gitpod environment.",
+      "title4": "2. Launch HOPR Development Cluster",
+      "code5": "$ ./scripts/setup-local-cluster.sh -i scripts/topologies/full_interconnected_cluster.sh",
+      "paragraph8": "Now wait aproximately 3 minutes for the setup script to complete. It will show you the links for all nodes",
+      "title5": "3. Code your privacy-first dApp on top of HOPR",
+      "paragraph9": "You now have compeleted your development setup with which you can run",
+      "paragraph10": " this simple Hello World app",
+      "paragraph11": ". Your 5 local (or Gitpod) nodes also come with an ",
+      "paragraph12": "admin web UI",
+      "paragraph13": "through which you can use the nodes, or you can check out the",
+      "paragraph14": "Swagger API documentation",
+      "paragraph15": "through which you can also use every API endpoint. Make sure to use the API Key for authentication: ",
+      "code6": "^^LOCAL-testing-123^^"
+    },
+    "sectionBounties": {
+      "mainTitle": "HOPR Bounties",
+      "paragraph1": " HOPR is free and open source privacy infrastructure for the Web3. The HOPR protocol is built by the community for the community. HOPR Association offers bounties for software developers who help us BUIDL the protocol and for developers of privacy-first apps running on top of the HOPR protocol",
+      "paragraph2": "There is a total of 8 HOPR bounties at ETH Denver, split into 4 bounties for on-site participants in Denver and the same 4 bounties again for online participants. You can read more about our",
+      "paragraph3": "ETH Denver bounty blog",
+      "paragraph4": "We continuously offer a range of",
+      "paragraph5": "HOPR bounties on Gitcoin",
+      "paragraph6": ". We usually add bounties every week, so make sure to check back on Gitcoin."
     }
   }
 }
