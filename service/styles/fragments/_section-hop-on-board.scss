@@ -20,31 +20,6 @@
       top: 0;
       width: 100%;
     }
-
-    .text-wrapper {
-      align-items: center;
-      justify-content: center;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .text-video-hop {
-      animation-delay: 11s;
-      animation-duration: 2s;
-      animation-fill-mode: forwards;
-      animation-name: fadeInTextVideo;
-      font-size: 120px;
-      opacity: 0;
-
-      .date-text-hopr {
-        background: linear-gradient(#000050, #0000b4);
-        border-radius: 30px;
-        font-size: 36px;
-        height: 44px;
-        max-width: 495px;
-        width: 90%;
-      }
-    }
   }
 
   &.gif-content {
@@ -52,9 +27,25 @@
   }
 
   .container {
-    .text-video-hop {
+    .text-wrapper {
       span.main-title {
         line-height: 115px;
+      }
+
+      .middle-information-hero {
+        display: contents;
+      }
+
+      .bottom-buttons {
+        bottom: 0;
+        position: absolute;
+        a {
+          text-decoration: none;
+        }
+        span{
+          margin-right: 10px;
+          font-size: 27px;
+        }
       }
     }
 
@@ -86,6 +77,30 @@
         line-height: 33px;
         letter-spacing: 0.15000000596046448px;
       }
+    }
+  }
+  .buttons-hero {
+    background: linear-gradient(#000050, #0000b4);
+    border-radius: 30px;
+    font-size: 36px;
+    padding: 10px;
+  }
+
+  .jobs{
+    h1 {
+      color: $hopr_grey;
+      font-size: 60px;
+      font-weight: 400;
+      text-align: center;
+    }
+
+    p {
+      color: $hopr_greySp;
+      font-size: 25px;
+      letter-spacing: 0.208333px;
+      line-height: 37px;
+      padding-top: 0;
+      text-align: center;
     }
   }
 }
