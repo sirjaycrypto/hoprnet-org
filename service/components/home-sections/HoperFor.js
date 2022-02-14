@@ -5,7 +5,7 @@ export default function HoperFor() {
   const { t } = useTranslation();
   const data = [
     {
-      link: 'https://github.com/hoprnet',
+      link: 'https://medium.com/hoprnet',
       img: '/assets/icons/with-yellow-ball/shield.png',
       label: 'common:privacyBlog',
       delayTime: '100',
@@ -17,20 +17,20 @@ export default function HoperFor() {
       delayTime: '150',
     },
     {
-      link: 'https://github.com/hoprnet/hoprnet',
+      link: 'https://discord.gg/dEAWC4G',
       img: '/assets/icons/with-yellow-ball/programming-team-chat-3.png',
       label: 'common:techies',
       delayTime: '200',
     },
     {
-      link: '',
+      link: 't.me/hoprnet',
       img: '/assets/icons/with-yellow-ball/light-bulb-shine.png',
       label: 'common:entrepreneurs',
       delayTime: '250',
     },
 
     {
-      link: 'http://docs.hoprnet.org/en/latest/src/install-hoprd/using-avado.html?highlight=node#installing-your-avado-node',
+      link: 'https://docs.hoprnet.org/node/start-here',
       img: '/assets/icons/with-yellow-ball/outdoors-mining.png',
       label: 'common:miners&Stakers',
       delayTime: '300',
