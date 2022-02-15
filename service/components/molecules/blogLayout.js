@@ -1,70 +1,82 @@
 import { useEffect, useState } from 'react';
-import { Button } from '../atoms/button';
 import { useWindowSize } from '../hooks/useMobile';
+import parse, { domToReact } from 'html-react-parser';
 
-export const BlogLayout = ({ url, setLimit, limit }) => {
+export const BlogLayout = ({ type, setLoading }) => {
   const [posts, setPosts] = useState([]);
   const { width } = useWindowSize();
 
+  const options = {
+    replace: domNode => {
+      if (!domNode.attribs) {
+        return;
+      }
+
+      if (domNode.attribs.class) {
+        domNode.attribs['className'] = domNode.attribs.class;
+        delete domNode.attribs.class;
+      }
+
+      if (domNode.attribs.classname) {
+        domNode.attribs['className'] = domNode.attribs.classname;
+        delete domNode.attribs.classname;
+      }
+
+      return domToReact(domNode);
+    },
+  };
+
+  const getFirstImage = content => {
+    const htmlContent = parse(content, options);
+
+    for (let single of htmlContent) {
+      if (single.type === 'figure') {
+        return single;
+      }
+    }
+
+    return false;
+  };
+
+  const getResume = content => {
+    const htmlContent = parse(content, options);
+
+    for (let single of htmlContent) {
+      if (single.type === 'p') {
+        return single;
+      }
+    }
+
+    return false;
+  };
+
   const loadPosts = async () => {
-    await fetch(url, {
-      method: 'GET',
+    setLoading(true);
+    await fetch('/api/blog', {
+      method: 'POST',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
       },
+      body: JSON.stringify({ type }),
     })
-      .then((res) => res.json())
-      .then((res) => {
-        replaceSize(res);
-        convertTimestamp(res);
-        setPosts(res);
-      });
-  };
-
-  const replaceSize = (array = []) => {
-    if (array) {
-      array.map((x) => {
-        x.picture = x.picture.replace('max', 'fit');
-        x.picture = x.picture.replace('${size}', `${551}/${309}`);
-      });
-    }
-  };
-
-  const convertTimestamp = (array = []) => {
-    if (array) {
-      const monthNames = [
-        'Jan',
-        'Feb',
-        'Mar',
-        'Apr',
-        'May',
-        'Jun',
-        'Jul',
-        'Aug',
-        'Sep',
-        'Oct',
-        'Nov',
-        'Dec',
-      ];
-
-      array.map((x) => {
-        if (x.publishAt) {
-          let date = new Date(x.publishAt);
-          x.publishAt =
-            monthNames[date.getMonth()] +
-            ' ' +
-            date.getDay() +
-            ', ' +
-            date.getFullYear();
+      .then(res => res.json())
+      .then(res => {
+        if (res.data) {
+          for (let single of res.data) {
+            single.resume = getResume(single['content:encoded']);
+            single.image = getFirstImage(single['content:encoded']);
+          }
         }
+
+        setPosts(res.data);
+        setLoading(false);
       });
-    }
   };
 
   useEffect(() => {
     loadPosts();
-  }, [url]);
+  }, [type]);
 
   return (
     <section id="post-blog" className="section-posts padding-section-aux">
@@ -74,37 +86,23 @@ export const BlogLayout = ({ url, setLimit, limit }) => {
             <li
               key={i}
               className={
-                i === 0 && width >= 767 ? 'first-element' : ''
+                i === 0 && width >= 767 ? 'first-element' : 'grid-element'
               }
             >
-              <a href={post.url} target="_blank">
-                <img src={post.picture} />
-                <div className="content-first-element">
+              { post.image && post.image }
+              <div className="content-element">
+                <a href={post.link} target="_blank">
                   <h1>{post.title}</h1>
-                  <h2>{post.description}</h2>
-                  <div className="avatar">
-                    <img src={post.avatar} />
-                    <div className="author-and-date">
-                      <h3 className="author-green">{post.author}</h3>
-                      <br></br>
-                      <h3 className="date">{post.publishAt}</h3>
-                    </div>
-                  </div>
+                </a>
+                <div className="description">{post.resume}</div>
+                <div className="avatar">
+                  <h3 className="author-green">{post['dc:creator']}</h3>
+                  <h3 className="date">{post.pubDate}</h3>
                 </div>
-              </a>
+              </div>
             </li>
           ))}
         </ul>
-        {posts.length === limit ? (
-          <center>
-            <Button
-              content="Add more posts"
-              onClick={() => setLimit(limit + 6)}
-              type="button"
-              className="button-add-more"
-            />
-          </center>
-        ) : null}
       </div>
     </section>
   );
