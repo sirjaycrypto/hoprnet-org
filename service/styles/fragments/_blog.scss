@@ -1,21 +1,26 @@
 .section-blog {
   text-align: center;
+
   .tabs {
     background-color: rgb(238, 238, 238);
     padding: 54px 0 0px 0;
+
+    .container-sm {
+      display: flex;
+      justify-content: space-around;
+    }
+
     button {
       align-items: center;
       background-color: inherit;
       border: none;
+      color: #414141;
+      cursor: pointer;
       justify-content: center;
-      width: 50%;
+      padding: 12px;
 
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-      p {
-        color: #414141;
+      &.active {
+        text-decoration-line: underline;
       }
     }
   }
@@ -37,51 +42,9 @@
       text-align: left;
       width: calc(100% / 3);
 
-      .date,
-      h2 {
-        color: #414141 !important;
-      }
-
-      &.first-element {
-        width: 100%;
-
-        a {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          text-align: left;
-        }
-
-        img {
-          margin: 0;
-          width: 50%;
-        }
-
-        h1 {
-          align-items: flex-end;
-        }
-
-        .content-first-element {
-          width: 46%;
-        }
-      }
-
-      .avatar {
-        display: flex;
-        text-align: left;
-        img {
-          border-radius: 50%;
-          display: inline-block;
-          height: 30px;
-          width: 30px;
-        }
-      }
-
       img {
-        border-style: none;
-        margin-bottom: 10px;
-        margin-right: 15px;
+        border: 0;
+        margin: 0;
         width: 100%;
       }
 
@@ -89,20 +52,19 @@
         border: none;
         color: rgba(0, 0, 0, 0.9);
         cursor: pointer;
-        display: inline-block;
         font-size: 24px;
         font-weight: 700;
         text-decoration: none;
+        margin: 0;
       }
 
       h2 {
         border: none;
         color: rgba(0, 0, 0, 0.5);
         cursor: pointer;
-        display: inline-block;
         font-size: 16px;
         font-weight: 500;
-        margin: 0px 0px 25px;
+        margin: 0;
         text-decoration: none;
         text-transform: lowercase;
       }
@@ -111,40 +73,67 @@
         text-transform: uppercase;
       }
 
-      h3 {
-        border: none;
+      p {
         color: rgba(0, 0, 0, 0.5);
-        cursor: pointer;
-        display: inline-block;
-        font-size: 16px;
-        margin: 0px 0px 0px 10px;
+        margin-top: 0;
+      }
+
+      figure {
+        line-height: 0;
+        margin: 0;
+        width: 50%;
+      }
+
+      a {
         text-decoration: none;
       }
 
-      .date {
-        font-weight: 400;
+      &.first-element {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        text-align: left;
+        text-decoration: none;
+        width: 100%;
+
+        h1 {
+          align-items: flex-end;
+        }
+
+        h2 {
+          color: #414141;
+        }
+
+        .content-element {
+          width: 46%;
+        }
       }
 
-      .author-green {
-        color: rgb(34, 80, 34);
-        font-weight: 400;
+      &.grid-element {
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+
+        figure {
+          width: 100%;
+        }
+      }
+
+      .avatar {
+        h3 {
+          color: rgba(0, 0, 0, 0.5);
+          font-size: 16px;
+          font-weight: 400;
+          margin: 0;
+          text-decoration: none;
+        }
+
+        .author-green {
+          color: rgb(34, 80, 34);
+        }
       }
     }
-  }
-
-  .button-add-more {
-    background: linear-gradient(90deg, #0000db 0%, #292941 100%);
-    border-radius: 100px;
-    color: #fff;
-    justify-content: center;
-    line-height: 67px;
-    padding: 0 1rem;
-  }
-}
-
-.tabs {
-  button.active {
-    text-decoration-line: underline;
   }
 }
 
@@ -153,16 +142,6 @@
     ul {
       li {
         width: 100%;
-      }
-    }
-  }
-
-  .section-blog {
-    .tabs {
-      button {
-        p {
-          font-size: 24px;
-        }
       }
     }
   }
