@@ -335,7 +335,7 @@
       "paragraph1": "The easiest way to develop a HOPR dapp is to run a cluster of 5 HOPR nodes either on your own machine or in a browser-based cloud environment.",
       "title1": "1. HOPR Cluster Development Setup",
       "title2": "Option 1: Local setup on macOS/Linux",
-      "paragraph2": "Please ensure that you have",
+      "paragraph2": "Please ensure that you have ",
       "paragraph3": "NodeJS 16",
       "paragraph4": "and",
       "paragraph5": "yarn",

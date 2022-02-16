@@ -1,19 +1,23 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-const HeroHoprOnBoard = ({ src, text }) => {
+const HeroHoprOnBoard = ({ src, text, img }) => {
   return (
     <>
       {/* section-board-top-video */}
       <section className="section-hero section-hop-on-board">
-        <iframe
-          allow="autoplay; fullscreen"
-          src={src}
-          frameBorder="0"
-          className="background-video"
-          allowFullScreen
-          height="100%"
-          width="100%"
-        ></iframe>
+        {src ? (
+          <iframe
+            allow="autoplay; fullscreen"
+            src={src}
+            frameBorder="0"
+            className="background-video"
+            allowFullScreen
+            height="100%"
+            width="100%"
+          ></iframe>
+        ) : (
+          <img src={img} alt="img" className="background-video"/>
+        )}
 
         {text ? (
           <div className="container">
