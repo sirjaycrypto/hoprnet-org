@@ -58,6 +58,12 @@ const data = [
     name: 'Josh Schmitz',
     label: 'Marketing Specialist',
   },
+    {
+    link: '#',
+    img: '/assets/images/team/melissa.png',
+    name: 'Melissa Günthardt',
+    label: 'Marketing Specialist',
+  },
   {
     link: '#',
     img: '/assets/images/team/meredith_bachma.png',
