@@ -23,6 +23,7 @@ const SectionRoadMapHop = () => {
     },
   ];
 
+
   const journeyData = [
     {
       title_1: t('home:hopOnBoard.sectionRoadMap.element4Title1'),
@@ -34,6 +35,7 @@ const SectionRoadMapHop = () => {
     {
       title_1: t('home:hopOnBoard.sectionRoadMap.element5Title1'),
       title_2: t('home:hopOnBoard.sectionRoadMap.element5Title2'),
+      title_3: t('home:hopOnBoard.sectionRoadMap.element5Title3'),
       week: t('home:hopOnBoard.sectionRoadMap.element5Week'),
     },
     {
@@ -51,6 +53,7 @@ const SectionRoadMapHop = () => {
     {
       title_1: t('home:hopOnBoard.sectionRoadMap.element8Title1'),
       title_2: t('home:hopOnBoard.sectionRoadMap.element8Title2'),
+      title_3: t('home:hopOnBoard.sectionRoadMap.element8Title3'),
       week: t('home:hopOnBoard.sectionRoadMap.element8Week'),
     },
     {
@@ -72,7 +75,6 @@ const SectionRoadMapHop = () => {
     {
       title_1: t('home:hopOnBoard.sectionRoadMap.element12Title1'),
       title_2: t('home:hopOnBoard.sectionRoadMap.element12Title2'),
-      title_3: t('home:hopOnBoard.sectionRoadMap.element12Title3'),
       week: t('home:hopOnBoard.sectionRoadMap.element12Week'),
     },
     {
@@ -100,7 +102,7 @@ const SectionRoadMapHop = () => {
 
   return (
     <>
-      <section className="section-road-map-hop">
+      <section className="section-road-map-hop" id="road-map-hop">
         <div className="container">
           <div className="road-map-information">
             <h1>{t('home:hopOnBoard.sectionRoadMap.mainTitle')}</h1>

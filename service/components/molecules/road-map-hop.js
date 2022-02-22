@@ -1,14 +1,16 @@
 import React from 'react';
-import Moment from 'moment-timezone';
+import moment from 'moment-timezone';
 
 const RoadMapHop = ({ data, className }) => {
-  let MomentZurich = Moment().tz("Europe/Zurich");
+  let MomentZurich = moment().tz('Europe/Zurich');
 
   return (
     <div className={`road-map-hop ${className}`}>
       {data.map((x, i) => (
         <div
-          className={`road-map-element ${x.week == MomentZurich.week() - 1 ? "road-map-element-week" : ""}`}
+          className={`road-map-element ${
+            x.week === MomentZurich.week() - 1 ? 'road-map-element-week' : ''
+          }`}
           key={i}
         >
           <div className="road-map-titles-left">
