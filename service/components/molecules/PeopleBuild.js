@@ -60,7 +60,7 @@ const data = [
   },
     {
     link: '#',
-    img: '/assets/images/team/melissa.png',
+    img: '/assets/images/team/HOPR_melissa.png',
     name: 'Melissa Günthardt',
     label: 'Marketing Specialist',
   },
