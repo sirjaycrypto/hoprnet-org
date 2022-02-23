@@ -23,7 +23,7 @@ const Modal = forwardRef(({ showModal, setShowModal, url }, ref) => {
               </div>
               <Button
                 className="btn-modal"
-                target="_blank"
+                target="https://app.uniswap.org/#/swap?outputCurrency=0xf5581dfefd8fb0e4aec526be659cfab1f8c781da&chain=mainnet"
                 content={t('home:modal.btnIAgree')}
                 onClick={() => setShowModal(false)}
                 to={url}
