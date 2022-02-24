@@ -51,6 +51,7 @@ export default function Index() {
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
+            loading="lazy"
           />
         </SectionContainer>
         <SectionContainer align="center" containerSize='sm'>

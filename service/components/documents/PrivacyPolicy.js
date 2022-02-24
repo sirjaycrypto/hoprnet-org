@@ -6,10 +6,8 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 export default function PrivacyPolicyDoc() {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
-  const [loading, setLoading] = useState(true);
   function onDocumentLoadSuccess(body) {
     setNumPages(body.numPages);
-    setLoading(false);
   }
   function previousPage() {
     window.scrollTo(0, 0);

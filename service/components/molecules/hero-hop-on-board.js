@@ -14,6 +14,7 @@ const HeroHoprOnBoard = ({ src, text, img }) => {
             allowFullScreen
             height="100%"
             width="100%"
+            loading="lazy"
           ></iframe>
         ) : (
           <img src={img} alt="img" className="background-video"/>

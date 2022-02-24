@@ -5,20 +5,11 @@ import HeroInfo from '../molecules/hero-info';
 import { AlertMsg } from '..';
 
 const Hero = forwardRef(
-  (
-    {
-      launchMode,
-      modePreSales,
-      setLoading,
-      setShowModal,
-    },
-    ref
-  ) => {
+  ({ launchMode, modePreSales , setShowModal }, ref) => {
     const [videoMobile, setVideoMobile] = useState(false);
     const [videoTablet, setVideoTablet] = useState(false);
     const [showMsg, setShowMsg] = useState(false);
     const theAreaBtn = useRef(null);
-    const frameRef = useRef();
     const area = useRef(null);
     const { t } = useTranslation();
 
@@ -41,16 +32,6 @@ const Hero = forwardRef(
       setDeviceType();
     }, []);
 
-    useEffect(() => {
-      if (frameRef) {
-        frameRef.current?.addEventListener('ready', onFinishFrame);
-      }
-    }, [frameRef]);
-
-    const onFinishFrame = () => {
-      setLoading(false);
-    };
-
     return (
       <>
         <section ref={area} className="section-hero">
@@ -64,6 +45,7 @@ const Hero = forwardRef(
               frameBorder="0"
               allowFullScreen
               width="100%"
+              loading="lazy"
             ></iframe>
           ) : videoTablet ? (
             <iframe
@@ -73,16 +55,17 @@ const Hero = forwardRef(
               frameBorder="0"
               allowFullScreen
               width="100%"
+              loading="lazy"
             ></iframe>
           ) : (
             <iframe
-              ref={frameRef}
               allow="autoplay; fullscreen"
               className="background-video"
               src="https://player.vimeo.com/video/508834454?autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false&app_id=122963"
               frameBorder="0"
               allowFullScreen
               width="100%"
+              loading="lazy"
             ></iframe>
           )}
 
@@ -94,7 +77,7 @@ const Hero = forwardRef(
                     ? t('home:hero.subtitlePre')
                     : t('home:hero.subtitle')}
                 </h4> */}
-                <Countdown title="Now available on Uniswap!"/>
+                <Countdown title="Now available on Uniswap!" />
                 {modePreSales && (
                   <div className="helperSpaceBtn">
                     {showMsg ? (

@@ -21,7 +21,7 @@ import Footer from '../../components/molecules/footer';
 
 import Modal from '../../components/atoms/modal';
 
-export default function Index({ setLoading }) {
+export default function Index() {
   const [visibleNow, setVisibleNow] = useState('');
   const [modePreSales, setModePreSales] = useState(false);
   const [launchMode, setLaunchMode] = useState(false);
@@ -72,7 +72,6 @@ export default function Index({ setLoading }) {
   }, [visibleNow]);
 
   useEffect(() => {
-    setLoading(true);
     if (!stage || stage === '') {
       setStage();
     }
@@ -168,7 +167,6 @@ export default function Index({ setLoading }) {
         modePreSales={modePreSales}
         launchMode={launchMode}
         ref={heroInfo}
-        setLoading={setLoading}
         setShowModal={setShowModal}
         setVisibleNow={setVisibleNow}
       />
@@ -182,6 +180,7 @@ export default function Index({ setLoading }) {
           src={`${getVideoByLang()}?title=0&byline=0&portrait=0&playsinline=0&controls=1&loop=1&app_id=122963`}
           frameBorder="0"
           allowFullScreen
+          loading="lazy"
         ></iframe>
       </section>
       <HomeTokenFeatures setVisibleNow={setVisibleNow} />

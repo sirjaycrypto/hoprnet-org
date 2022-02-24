@@ -10,6 +10,7 @@ const MapVideoOnBoard = ({ src }) => {
           frameBorder="0"
           allowFullScreen
           width="100%"
+          loading="lazy"
         ></iframe>
       </section>
     </>
