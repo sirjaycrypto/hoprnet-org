@@ -60,6 +60,7 @@ function MyApp({ Component, pageProps }) {
   };
 
   const onFinishLoading = () => {
+    console.log("PINCHE BETO");
     setLoading(false);
   };
 
@@ -70,14 +71,14 @@ function MyApp({ Component, pageProps }) {
       offset: 50,
     });
 
-    window.addEventListener('load', onFinishLoading);
+    document.addEventListener('DOMContentLoaded', onFinishLoading);
 
     // add fathom analytics
     const script = insertScript('https://panther.hoprnet.org/script.js');
     script.setAttribute('site', 'ZXTSKLDN');
     script.setAttribute('spa', 'auto');
 
-    return () => window.removeEventListener('load', onFinishLoading);
+    return () => document.removeEventListener('DOMContentLoaded', onFinishLoading);
   }, []);
 
   return (
