@@ -10,12 +10,11 @@ import Blog from '../components/home-sections/Blogs';
 import Partners from '../components/home-sections/Partners';
 import Team from '../components/home-sections/Team';
 import Contact from '../components/home-sections/Contact';
-export default function Home({ setLoading }) {
+export default function Home() {
   const [welcomeAnimate, setWelcomeAnimate] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
-      setLoading(false);
       setWelcomeAnimate(false);
     }, 500);
   }, []);

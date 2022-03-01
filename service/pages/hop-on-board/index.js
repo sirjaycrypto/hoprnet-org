@@ -14,15 +14,17 @@ export default function Index() {
   const { t } = useTranslation();
   return (
     <Layout>
-      {/* https://player.vimeo.com/video/673666043?background=1&autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false&app_id=122963 */}
       <HeroHoprOnBoard
         img="/assets/images/HOP_ON_BOARD_HERO.jpg"
         text={t('home:hopOnBoard.titleVideos.title1')}
+        src="https://player.vimeo.com/video/673666043?background=1&autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false&app_id=122963"
       />
       <SectionHopOnBoard />
       <MapVideoOnBoard
         src="https://player.vimeo.com/video/673669586?background=1&autoplay=1&loop=1&title=0&byline=0&muted=true&responsive=true&controls=false&app_id=122963"
+        img="/assets/images/image-load-video-hopr-map.jpg"
       />
+
       <SectionRoadMapHop />
       <SectionBuildHop />
       <SectionBountiesHop />

@@ -1,12 +1,36 @@
 import React, { useEffect, useRef, useState } from 'react';
+import Vimeo from '@vimeo/player';
 
 const HeroHoprOnBoard = ({ src, text, img }) => {
+  const frameRef = useRef();
+  const [loadVideo, setLoadVideo] = useState(true);
+
+  useEffect(() => {
+    if (frameRef) {
+      onPlayVideo();
+    }
+  }, [frameRef]);
+
+  const onPlayVideo = () => {
+    const player = new Vimeo(frameRef.current);
+
+    player.on('play', function () {
+      setLoadVideo(false);
+    });
+  };
+
   return (
     <>
       {/* section-board-top-video */}
+
+      {loadVideo ? (
+        <img src={img} alt="img" className="background-video" />
+      ) : null}
+
       <section className="section-hero section-hop-on-board">
         {src ? (
           <iframe
+            ref={frameRef}
             allow="autoplay; fullscreen"
             src={src}
             frameBorder="0"
@@ -14,10 +38,9 @@ const HeroHoprOnBoard = ({ src, text, img }) => {
             allowFullScreen
             height="100%"
             width="100%"
+            loading="lazy"
           ></iframe>
-        ) : (
-          <img src={img} alt="img" className="background-video"/>
-        )}
+        ) : null}
 
         {text ? (
           <div className="container">

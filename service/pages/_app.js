@@ -12,11 +12,13 @@ export async function loadNamespaces(namespaces, lang) {
   let res = {};
   for (let ns of namespaces) {
     let oCurrent;
-    const oDev = await import(`../locales/en/${ns}.json`)
-      .then(m => m.default);
+    const oDev = await import(`../locales/en/${ns}.json`).then(
+      (m) => m.default
+    );
     try {
-      oCurrent = await import(`../locales/${lang}/${ns}.json`)
-      .then(m => m.default);
+      oCurrent = await import(`../locales/${lang}/${ns}.json`).then(
+        (m) => m.default
+      );
       verifyEntries(oDev, oCurrent);
       res[ns] = oCurrent;
     } catch (e) {
@@ -59,10 +61,6 @@ function MyApp({ Component, pageProps }) {
     setLoading(false);
   };
 
-  const onFinishLoading = () => {
-    setLoading(false);
-  };
-
   useEffect(() => {
     AOS.init({
       easing: 'ease-out-cubic',
@@ -70,21 +68,22 @@ function MyApp({ Component, pageProps }) {
       offset: 50,
     });
 
-    window.addEventListener('load', onFinishLoading);
-
     // add fathom analytics
     const script = insertScript('https://panther.hoprnet.org/script.js');
     script.setAttribute('site', 'ZXTSKLDN');
     script.setAttribute('spa', 'auto');
 
-    return () => window.removeEventListener('load', onFinishLoading);
+    setLoading(false);
   }, []);
 
   return (
     <I18nProvider lang={router.locale} namespaces={pageProps._ns}>
       <>
-        {loading && <Loader />}
-        <Component {...pageProps} setLoading={setLoading} />
+        {loading ? (
+          <Loader />
+        ) : (
+          <Component {...pageProps} setLoading={setLoading} />
+        )}
       </>
     </I18nProvider>
   );

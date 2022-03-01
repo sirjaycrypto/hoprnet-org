@@ -29,6 +29,7 @@ export const GameItem = ({
             frameBorder="0"
             src={`${video}?autoplay=0&loop=1&title=0&byline=0&portrait=0&muted=0&responsive=1&controls=1&app_id=122963`}
             width="100%"
+            loading="lazy"
           ></iframe>
         </div>
       )}
